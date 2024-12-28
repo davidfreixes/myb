@@ -92,7 +92,6 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
           {/* Language Selector */}
           <div className="flex items-center">
             <Button
-              variant="contained"
               className="bg-primary hover:bg-primary/90 text-white min-w-[48px]"
             >
               ES
