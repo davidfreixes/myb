@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -65,14 +65,12 @@ export default function Hero() {
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
                   <Button
-                    className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
-                    size="large"
+                    className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                   >
                     Explora Nuestros Servicios
                   </Button>
                   <Button
-                    className="w-full sm:w-auto border-primary border-2 z-1 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
-                    size="large"
+                    className="w-full rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >
                     Contactar
                   </Button>

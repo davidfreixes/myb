@@ -1,10 +1,4 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import { Button, Card } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -102,39 +96,30 @@ export default function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="flex"
             >
-              <Card className="h-full w-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
-                <CardMedia
-                  component="div"
-                  className="relative h-48 sm:h-56 md:h-64"
-                >
+              <Card className="h-full w-full flex flex-col shadow-md hover:shadow-2xl transition-shadow duration-300">
+                <div className="relative h-48 sm:h-56 md:h-64">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     className="object-cover"
                   />
-                </CardMedia>
-                <CardContent className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
-                  <Typography
-                    variant="h5"
-                    component="h3"
-                    className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4"
-                  >
+                </div>
+                <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
+                  <h3 className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4">
                     {service.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
+                  </h3>
+                  <div
                     className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6"
                   >
                     {service.description}
-                  </Typography>
+                  </div>
                   <Button
-                    variant="outlined"
-                    className="border-primary text-primary hover:bg-primary hover:text-white normal-case text-sm sm:text-base w-full sm:w-auto"
+                    className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
                   >
                     Accede al servicio
                   </Button>
-                </CardContent>
+                </div>
               </Card>
             </motion.div>
           ))}

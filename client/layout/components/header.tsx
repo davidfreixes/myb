@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -92,7 +92,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
           {/* Language Selector */}
           <div className="flex items-center">
             <Button
-              className="bg-primary hover:bg-primary/90 text-white min-w-[48px]"
+              className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
             >
               ES
             </Button>
