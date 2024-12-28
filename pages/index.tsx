@@ -10,8 +10,8 @@ export default function Home() {
       <Header sticky={false} isTransparent={true} />
       <Hero />
       <ServicesSection />
-      <FeaturesSection />
       <VideoSection />
+      <FeaturesSection />
     </>
   );
 }

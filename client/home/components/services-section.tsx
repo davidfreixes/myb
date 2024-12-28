@@ -77,54 +77,60 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl font-montserrat font-medium text-primary mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-3 sm:mb-4">
             Nuestros Servicios
           </h2>
-          <p className="text-gray-600 max-w-2xl lg:text-lg mx-auto">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Descubre nuestra amplia gama de servicios náuticos profesionales
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="flex"
             >
-              <Card className="h-full hover:shadow-2xl transition-shadow duration-300">
-                <CardMedia component="div" className="relative h-64">
+              <Card className="h-full w-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                <CardMedia
+                  component="div"
+                  className="relative h-48 sm:h-56 md:h-64"
+                >
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-co
-                    er"
+                    className="object-cover"
                   />
                 </CardMedia>
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
                   <Typography
                     variant="h5"
                     component="h3"
-                    className="font-montserrat text-primary mb-4"
+                    className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4"
                   >
                     {service.title}
                   </Typography>
-                  <Typography variant="body1" className="text-gray-600 mb-6">
+                  <Typography
+                    variant="body1"
+                    className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6"
+                  >
                     {service.description}
                   </Typography>
                   <Button
                     variant="outlined"
-                    className="border-primary text-primary hover:bg-primary hover:text-white normal-case"
+                    className="border-primary text-primary hover:bg-primary hover:text-white normal-case text-sm sm:text-base w-full sm:w-auto"
                   >
                     Accede al servicio
                   </Button>
