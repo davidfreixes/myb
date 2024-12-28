@@ -1,6 +1,8 @@
-import Hero from "@/client/home/Hero";
-import ServicesSection from "@/client/home/services-section";
-import { Header } from "@/client/layout/header";
+import FeaturesSection from "@/client/home/components/features-section";
+import Hero from "@/client/home/components/hero";
+import ServicesSection from "@/client/home/components/services-section";
+import VideoSection from "@/client/home/components/video-section";
+import { Header } from "@/client/layout/components/header";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Header sticky={false} isTransparent={true} />
       <Hero />
       <ServicesSection />
+      <FeaturesSection />
+      <VideoSection />
     </>
   );
 }

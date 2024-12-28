@@ -51,7 +51,7 @@ export default function Hero() {
               className="flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-8 text-white"
             >
               <div className="space-y-6">
-              <h2 className="text-2xl font-light text-white sm:text-3xl">
+                <h2 className="text-2xl font-light text-white sm:text-3xl">
                   Bienvenido a Menorca Yacht Brokers
                 </h2>
                 <div className="space-y-4 text-gray-200">
@@ -71,11 +71,11 @@ export default function Hero() {
                   </p> */}
                 </div>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                  <Button className="bg-primary hover:bg-primary-600 text-primary-foreground font-semibold">
+                  <Button className="bg-primary hover:bg-primary/75 text-black font-normal">
                     Explora Nuestros Servicios
                     {/* <ChevronRight className="ml-2 h-4 w-4" /> */}
                   </Button>
-                  <Button className="border-white text-white hover:bg-white/10 hover:border-primary hover:text-primary">
+                  <Button className="border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary">
                     Contactar
                   </Button>
                 </div>
@@ -100,8 +100,8 @@ export default function Hero() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button className="bg-primary hover:bg-primary-600 text-primary-foreground font-semibold">
                 Explora Nuestros Servicios */}
-                {/* <ChevronRight className="ml-2 h-4 w-4" /> */}
-              {/* </Button>
+          {/* <ChevronRight className="ml-2 h-4 w-4" /> */}
+          {/* </Button>
               <Button className="border-white text-white hover:bg-white/10 hover:border-primary hover:text-primary">
                 Contactar
               </Button>

@@ -69,9 +69,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               >
                 {/* Main Menu Button */}
                 <Link href={item.href} passHref>
-                  <Button
-                    className="text-white hover:text-primary transition-colors py-2"
-                  >
+                  <Button className="text-white hover:text-primary transition-colors py-2">
                     {item.label}
                   </Button>
                 </Link>

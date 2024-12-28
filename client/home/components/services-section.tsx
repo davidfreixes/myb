@@ -1,9 +1,9 @@
 import {
-    Button,
-    Card,
-    CardContent,
-    CardMedia,
-    Typography,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -88,7 +88,7 @@ export default function ServicesSection() {
           <h2 className="text-4xl font-montserrat font-medium text-primary mb-4">
             Nuestros Servicios
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl lg:text-lg mx-auto">
             Descubre nuestra amplia gama de servicios náuticos profesionales
           </p>
         </motion.div>
