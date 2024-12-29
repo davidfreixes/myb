@@ -1,5 +1,17 @@
 import { Button, Menu, Text } from "@mantine/core";
-import { Anchor, AnchorIcon, Building2, HelpCircle, MenuIcon, Package, Plus, Scale, Ship, Truck, X } from 'lucide-react';
+import {
+  Anchor,
+  AnchorIcon,
+  Building2,
+  HelpCircle,
+  MenuIcon,
+  Package,
+  Plus,
+  Scale,
+  Ship,
+  Truck,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -107,7 +119,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
         isTransparent && !isMobileMenuOpen ? "bg-transparent" : "bg-black"
       } z-50 transition-colors duration-300`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-8xl lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -135,7 +147,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                     <Menu.Target>
                       <Button
                         unstyled
-                        className="text-white hover:text-primary transition-colors py-2"
+                        className="text-white hover:text-primary transition-colors py-2 hover:underline"
                       >
                         {item.label}
                       </Button>
@@ -146,10 +158,16 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                       </Menu.Label>
                       <div className="grid grid-cols-2 gap-2 mb-2">
                         {item.items.map((subItem) => (
-                          <Link key={subItem.label} href={subItem.href} passHref>
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            passHref
+                          >
                             <Menu.Item
                               leftSection={
-                                <div className="text-primary">{subItem.icon}</div>
+                                <div className="text-primary">
+                                  {subItem.icon}
+                                </div>
                               }
                               className="hover:bg-primary/10"
                             >
@@ -173,7 +191,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                   <Link href={item.href} passHref>
                     <Button
                       unstyled
-                      className="text-white hover:text-primary transition-colors py-2"
+                      className="text-white hover:text-primary transition-colors py-2 hover:underline"
                     >
                       {item.label}
                     </Button>
@@ -207,11 +225,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               className="lg:hidden text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? (
-                <X size={24} />
-              ) : (
-                <MenuIcon size={24} />
-              )}
+              {isMobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
             </Button>
           </div>
         </div>
@@ -238,7 +252,11 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                         </Menu.Label>
                         <div className="grid grid-cols-1 gap-2 mb-2">
                           {item.items.map((subItem) => (
-                            <Link key={subItem.label} href={subItem.href} passHref>
+                            <Link
+                              key={subItem.label}
+                              href={subItem.href}
+                              passHref
+                            >
                               <Menu.Item
                                 leftSection={
                                   <div className="text-primary">
@@ -289,4 +307,3 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
     </header>
   );
 };
-
