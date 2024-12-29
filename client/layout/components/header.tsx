@@ -1,40 +1,115 @@
-import { Button, Menu, Text, rem } from "@mantine/core";
+"use client";
+
+import { Button, Menu, Text } from "@mantine/core";
 import {
-  IconArrowsLeftRight,
-  IconMessageCircle,
-  IconPhoto,
-  IconSearch,
-  IconSettings,
-  IconTrash,
-} from "@tabler/icons-react";
+  Anchor,
+  AnchorIcon,
+  Building2,
+  HelpCircle,
+  Package,
+  Plus,
+  Scale,
+  Ship,
+  Truck,
+} from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 interface NavItem {
   label: string;
   href: string;
-  items?: { label: string; href: string }[];
+  width?: string;
+  items?: {
+    label: string;
+    href: string;
+    icon?: React.ReactNode;
+    description?: string;
+  }[];
 }
 
 const navigation: NavItem[] = [
-  { label: "Inicio", href: "/" },
+  { label: "INICIO", href: "/" },
   {
-    label: "Servicios",
+    label: "SERVICIOS",
     href: "/servicios",
+    width: "550",
     items: [
-      { label: "Compra de Yates", href: "/servicios/compra" },
-      { label: "Venta de Yates", href: "/servicios/venta" },
-      { label: "Alquiler de Yates", href: "/servicios/alquiler" },
+      {
+        label: "Yacht Broker",
+        href: "/servicios/yacht-broker",
+        icon: <Ship size={20} />,
+        description: "Compra y venta de embarcaciones",
+      },
+      {
+        label: "Yacht Charter",
+        href: "/servicios/yacht-charter",
+        icon: <Anchor size={20} />,
+        description: "Alquiler de embarcaciones",
+      },
+      {
+        label: "Inspecciones y Tasaciones",
+        href: "/servicios/inspecciones",
+        icon: <Scale size={20} />,
+        description: "Evaluación profesional de embarcaciones",
+      },
+      {
+        label: "Cargo & Logística",
+        href: "/servicios/logistica",
+        icon: <Truck size={20} />,
+        description: "Servicios de transporte y logística",
+      },
+      {
+        label: "Asesoría Náutica",
+        href: "/servicios/asesoria",
+        icon: <HelpCircle size={20} />,
+        description: "Consultoría especializada",
+      },
+      {
+        label: "Ship Broker & Charterer",
+        href: "/servicios/ship-broker",
+        icon: <AnchorIcon size={20} />,
+        description: "Servicios de intermediación",
+      },
+      {
+        label: "Servicios de Valor Añadido",
+        href: "/servicios/valor-anadido",
+        icon: <Plus size={20} />,
+        description: "Servicios complementarios",
+      },
     ],
   },
   {
-    label: "Quiénes somos",
-    href: "/quienes-somos",
+    label: "EMPRESA",
+    href: "/empresa",
+    width: "550",
     items: [
-      { label: "Nuestra Historia", href: "/quienes-somos/historia" },
-      { label: "Equipo", href: "/quienes-somos/equipo" },
+      {
+        label: "Proveedores y distribuidores",
+        href: "/empresa/proveedores-y-distribuidores",
+        icon: <Building2 size={20} />,
+        description: "Red de colaboradores y partners",
+      },
+      {
+        label: "Diario del Puerto de Mahón",
+        href: "/empresa/diario-del-puerto-de-mahon",
+        icon: <Package size={20} />,
+        description: "Noticias y actualidad portuaria",
+      },
     ],
+  },
+  {
+    label: "QUIÉNES SOMOS",
+    href: "/quienes-somos",
+    width: "300",
+    // items: [
+    //   {
+    //     label: "Equipo",
+    //     href: "/quienes-somos/equipo",
+    //     icon: <Users2 size={20} />,
+    //     description: "Profesionales a tu servicio",
+    //   },
+    // ],
   },
 ];
 
@@ -44,8 +119,6 @@ interface HeaderProps {
 }
 
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
   return (
     <header
       className={`${sticky ? "fixed" : "absolute"} w-full ${
@@ -62,118 +135,82 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               width={150}
               height={60}
               className="h-12 w-auto"
-              priority
             />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8 relative">
-            <Menu trigger="hover" shadow="md" width={200}>
-              <Menu.Target>
-                <Button
-                  unstyled
-                  className="text-white hover:text-primary transition-colors py-2"
-                >
-                  Toggle menu
-                </Button>
-              </Menu.Target>
-
-              <Menu.Dropdown>
-                <Menu.Label>Application</Menu.Label>
-                <Menu.Item
-                  leftSection={
-                    <IconSettings style={{ width: rem(14), height: rem(14) }} />
-                  }
-                >
-                  Settings
-                </Menu.Item>
-                <Menu.Item
-                  leftSection={
-                    <IconMessageCircle
-                      style={{ width: rem(14), height: rem(14) }}
-                    />
-                  }
-                >
-                  Messages
-                </Menu.Item>
-                <Menu.Item
-                  leftSection={
-                    <IconPhoto style={{ width: rem(14), height: rem(14) }} />
-                  }
-                >
-                  Gallery
-                </Menu.Item>
-                <Menu.Item
-                  leftSection={
-                    <IconSearch style={{ width: rem(14), height: rem(14) }} />
-                  }
-                  rightSection={
-                    <Text size="xs" c="dimmed">
-                      ⌘K
-                    </Text>
-                  }
-                >
-                  Search
-                </Menu.Item>
-
-                <Menu.Divider />
-
-                <Menu.Label>Danger zone</Menu.Label>
-                <Menu.Item
-                  leftSection={
-                    <IconArrowsLeftRight
-                      style={{ width: rem(14), height: rem(14) }}
-                    />
-                  }
-                >
-                  Transfer my data
-                </Menu.Item>
-                <Menu.Item
-                  color="red"
-                  leftSection={
-                    <IconTrash style={{ width: rem(14), height: rem(14) }} />
-                  }
-                >
-                  Delete my account
-                </Menu.Item>
-              </Menu.Dropdown>
-            </Menu>
+          <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <div
-                key={item.label}
-                className="relative group"
-                onMouseEnter={() => setHoveredItem(item.label)}
-                onMouseLeave={() => setHoveredItem(null)}
-              >
-                {/* Main Menu Button */}
-                <Link href={item.href} passHref>
-                  <Button
-                    unstyled
-                    className="text-white hover:text-primary transition-colors py-2"
+              <div key={item.label}>
+                {item.items ? (
+                  <Menu
+                    trigger="hover"
+                    openDelay={100}
+                    closeDelay={100}
+                    shadow="md"
+                    width={item.width}
                   >
-                    {item.label}
-                  </Button>
-                </Link>
-                {/* Dropdown Menu */}
-                {item.items && (
-                  <div
-                    className={`absolute left-0 bg-white text-gray-800 shadow-lg min-w-[200px] z-50 transition-opacity duration-300 ${
-                      hoveredItem === item.label
-                        ? "opacity-100 visible"
-                        : "opacity-0 invisible"
-                    }`}
-                  >
-                    {item.items.map((subItem) => (
-                      <Link key={subItem.label} href={subItem.href} passHref>
-                        <div className="px-4 py-2 hover:bg-gray-100 hover:text-primary transition-all cursor-pointer">
-                          {subItem.label}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+                    <Menu.Target>
+                      <Button
+                        unstyled
+                        className="text-white hover:text-primary transition-colors py-2"
+                      >
+                        {item.label}
+                      </Button>
+                    </Menu.Target>
+                    <Menu.Dropdown>
+                      <Menu.Label className="font-semibold text-lg">
+                        {item.label.toUpperCase()}
+                      </Menu.Label>
+                      <div className="grid grid-cols-2 gap-2 mb-2">
+                        {item.items.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            passHref
+                          >
+                            <Menu.Item
+                              leftSection={
+                                <div className="text-primary">
+                                  {subItem.icon}
+                                </div>
+                              }
+                              className="hover:bg-primary/10"
+                            >
+                              <div>
+                                <Text size="md" fw={450}>
+                                  {subItem.label}
+                                </Text>
+                                {subItem.description && (
+                                  <Text size="xs" c="dimmed">
+                                    {subItem.description}
+                                  </Text>
+                                )}
+                              </div>
+                            </Menu.Item>
+                          </Link>
+                        ))}
+                      </div>
+                    </Menu.Dropdown>
+                  </Menu>
+                ) : (
+                  <Link href={item.href} passHref>
+                    <Button
+                      unstyled
+                      className="text-white hover:text-primary transition-colors py-2"
+                    >
+                      {item.label}
+                    </Button>
+                  </Link>
                 )}
               </div>
             ))}
+            <Button
+              unstyled
+              className="bg-primary hover:bg-primary/90 text-black min-w-[48px] font-medium px-5 rounded-md"
+            >
+              CONTACTO
+            </Button>
           </nav>
 
           {/* Language Selector */}

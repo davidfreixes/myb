@@ -35,8 +35,11 @@ export default function Hero() {
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white">
                   Tu Broker de Yates de confianza
                 </h2>
-                <h2 className="text-base sm:text-lg md:text-xl text-white">
-                  Compra, vende o alquila tu Yate con Menorca Yacht Brokers
+                <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
+                  <span className="text-primary">Compra</span>,
+                  <span className="text-primary"> vende</span> o
+                  <span className="text-primary"> alquila</span> tu Yate con
+                  Menorca Yacht Brokers{" "}
                 </h2>
               </div>
             </motion.div>
@@ -64,10 +67,16 @@ export default function Hero() {
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
-                  <Button unstyled className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4">
+                  <Button
+                    unstyled
+                    className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
+                  >
                     Explora Nuestros Servicios
                   </Button>
-                  <Button unstyled className="w-full rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4">
+                  <Button
+                    unstyled
+                    className="w-full rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
+                  >
                     Contactar
                   </Button>
                 </div>

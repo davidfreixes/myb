@@ -77,7 +77,7 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 sm:mb-12 md:mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-14"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-3 sm:mb-4">
             Nuestros Servicios
