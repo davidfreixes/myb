@@ -112,6 +112,7 @@ interface HeaderProps {
 
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
     <header
@@ -143,11 +144,17 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                     closeDelay={100}
                     shadow="md"
                     width={item.width}
+                    onOpen={() => setActiveMenu(item.label)}
+                    onClose={() => setActiveMenu(null)}
                   >
                     <Menu.Target>
                       <Button
                         unstyled
-                        className="text-white hover:text-primary transition-colors py-2 hover:underline"
+                        className={`hover:text-primary transition-colors py-2 ${
+                          activeMenu === item.label
+                            ? "underline text-primary"
+                            : "hover:underline text-white"
+                        }`}
                       >
                         {item.label}
                       </Button>
