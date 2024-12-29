@@ -1,14 +1,15 @@
 import { Text } from "@mantine/core";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0B2847] text-white py-16">
+    <footer className="bg-[#0B2847] text-white py-8 md:py-12 lg:py-16">
       <div className="container mx-auto px-4">
-        <div className="flex w-full">
-          <div className="w-[40%] flex flex-col items-center mb-12">
+        <div className="flex flex-col w-full lg:flex-row">
+          {/* Logo and Address Section */}
+          <div className="w-full lg:w-[40%] flex flex-col items-center mb-8 lg:mb-12">
             <Link href="/" className="mb-4">
               <Image
                 src="/img/logo.png"
@@ -24,15 +25,16 @@ export function Footer() {
             </Text>
           </div>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Navigation Links Section */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 lg:mb-12">
             {/* Servicios Náuticos */}
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">SERVICIOS NÁUTICOS</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/servicios/yacht-broker"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Yacht Broker
                   </Link>
@@ -40,7 +42,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/yacht-charter"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Yacht Charter
                   </Link>
@@ -48,7 +50,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/inspecciones"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Inspecciones y Tasaciones
                   </Link>
@@ -56,7 +58,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/asesoria"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Asesoría Náutica
                   </Link>
@@ -65,13 +67,13 @@ export function Footer() {
             </div>
 
             {/* Servicios */}
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">SERVICIOS</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/servicios/compra"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Compra de Yates
                   </Link>
@@ -79,7 +81,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/venta"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Venta de Yates
                   </Link>
@@ -87,7 +89,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/alquiler"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Alquiler de Yates
                   </Link>
@@ -95,7 +97,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/servicios/valor-anadido"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Servicios de Valor Añadido
                   </Link>
@@ -104,13 +106,13 @@ export function Footer() {
             </div>
 
             {/* Empresa */}
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">EMPRESA</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/quienes-somos"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Sobre nosotros
                   </Link>
@@ -118,7 +120,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/quienes-somos/historia"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Nuestra Historia
                   </Link>
@@ -126,7 +128,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/quienes-somos/equipo"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Nuestro Equipo
                   </Link>
@@ -134,7 +136,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/contacto"
-                    className="text-gray-300 hover:text-primary"
+                    className="text-gray-300 hover:text-primary block"
                   >
                     Contacto
                   </Link>
@@ -143,13 +145,17 @@ export function Footer() {
             </div>
           </div>
         </div>
-        {/* Social Links and Copyright */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-400">
+
+        {/* Footer Bottom Section */}
+        <div className="border-t border-gray-700 pt-6 md:pt-8">
+          <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
+            {/* Copyright */}
+            <div className="text-sm text-gray-400 order-3 md:order-1">
               2024 © Menorca Yacht Brokers
             </div>
-            <div className="flex gap-4">
+
+            {/* Legal Links */}
+            <div className="flex flex-col sm:flex-row gap-4 text-center order-2">
               <Link
                 href="/legal"
                 className="text-sm text-gray-400 hover:text-primary"
@@ -169,7 +175,9 @@ export function Footer() {
                 Aviso legal
               </Link>
             </div>
-            <div className="flex gap-4">
+
+            {/* Social Links */}
+            <div className="flex gap-4 order-1 md:order-3">
               <Link
                 href="https://linkedin.com"
                 className="text-gray-400 hover:text-primary"
@@ -201,3 +209,4 @@ export function Footer() {
     </footer>
   );
 }
+

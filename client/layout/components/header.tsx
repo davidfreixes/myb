@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Menu, Text } from "@mantine/core";
 import { Anchor, AnchorIcon, Building2, HelpCircle, MenuIcon, Package, Plus, Scale, Ship, Truck, X } from 'lucide-react';
 import Image from "next/image";
