@@ -43,19 +43,18 @@ export default function FeaturesSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`flex flex-col gap-8 sm:gap-10 md:gap-12 ${
+              className={`flex flex-col justify-center gap-8 sm:gap-10 md:gap-24 ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
               } items-center`}
             >
               {/* Image Container */}
-              <div className="w-full sm:w-4/5 md:w-3/4 lg:w-1/3 mx-auto lg:mx-0">
+              <div className="w-full sm:w-4/5 md:w-3/4 lg:w-[400px] mx-auto lg:mx-0">
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src={feature.image}
                     alt={feature.imageAlt}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 90vw, (max-width: 768px) 75vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </div>

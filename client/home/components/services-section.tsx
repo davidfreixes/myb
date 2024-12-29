@@ -96,7 +96,7 @@ export default function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="flex"
             >
-              <Card className="h-full w-full flex flex-col shadow-md hover:shadow-2xl transition-shadow duration-300">
+              <Card className="h-full w-full flex flex-col shadow-md hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
                 <div className="relative h-48 sm:h-56 md:h-64">
                   <Image
                     src={service.image}
@@ -109,12 +109,11 @@ export default function ServicesSection() {
                   <h3 className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4">
                     {service.title}
                   </h3>
-                  <div
-                    className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6"
-                  >
+                  <div className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6">
                     {service.description}
                   </div>
                   <Button
+                    unstyled
                     className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
                   >
                     Accede al servicio

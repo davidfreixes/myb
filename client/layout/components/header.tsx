@@ -1,4 +1,12 @@
-import { Button } from "@mantine/core";
+import { Button, Menu, Text, rem } from "@mantine/core";
+import {
+  IconArrowsLeftRight,
+  IconMessageCircle,
+  IconPhoto,
+  IconSearch,
+  IconSettings,
+  IconTrash,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -60,6 +68,76 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8 relative">
+            <Menu trigger="hover" shadow="md" width={200}>
+              <Menu.Target>
+                <Button
+                  unstyled
+                  className="text-white hover:text-primary transition-colors py-2"
+                >
+                  Toggle menu
+                </Button>
+              </Menu.Target>
+
+              <Menu.Dropdown>
+                <Menu.Label>Application</Menu.Label>
+                <Menu.Item
+                  leftSection={
+                    <IconSettings style={{ width: rem(14), height: rem(14) }} />
+                  }
+                >
+                  Settings
+                </Menu.Item>
+                <Menu.Item
+                  leftSection={
+                    <IconMessageCircle
+                      style={{ width: rem(14), height: rem(14) }}
+                    />
+                  }
+                >
+                  Messages
+                </Menu.Item>
+                <Menu.Item
+                  leftSection={
+                    <IconPhoto style={{ width: rem(14), height: rem(14) }} />
+                  }
+                >
+                  Gallery
+                </Menu.Item>
+                <Menu.Item
+                  leftSection={
+                    <IconSearch style={{ width: rem(14), height: rem(14) }} />
+                  }
+                  rightSection={
+                    <Text size="xs" c="dimmed">
+                      ⌘K
+                    </Text>
+                  }
+                >
+                  Search
+                </Menu.Item>
+
+                <Menu.Divider />
+
+                <Menu.Label>Danger zone</Menu.Label>
+                <Menu.Item
+                  leftSection={
+                    <IconArrowsLeftRight
+                      style={{ width: rem(14), height: rem(14) }}
+                    />
+                  }
+                >
+                  Transfer my data
+                </Menu.Item>
+                <Menu.Item
+                  color="red"
+                  leftSection={
+                    <IconTrash style={{ width: rem(14), height: rem(14) }} />
+                  }
+                >
+                  Delete my account
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
             {navigation.map((item) => (
               <div
                 key={item.label}
@@ -69,16 +147,25 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               >
                 {/* Main Menu Button */}
                 <Link href={item.href} passHref>
-                  <Button className="text-white hover:text-primary transition-colors py-2">
+                  <Button
+                    unstyled
+                    className="text-white hover:text-primary transition-colors py-2"
+                  >
                     {item.label}
                   </Button>
                 </Link>
                 {/* Dropdown Menu */}
-                {item.items && hoveredItem === item.label && (
-                  <div className="absolute left-0 mt-2 bg-white text-gray-800 shadow-lg rounded-md min-w-[200px] z-50">
+                {item.items && (
+                  <div
+                    className={`absolute left-0 bg-white text-gray-800 shadow-lg min-w-[200px] z-50 transition-opacity duration-300 ${
+                      hoveredItem === item.label
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible"
+                    }`}
+                  >
                     {item.items.map((subItem) => (
                       <Link key={subItem.label} href={subItem.href} passHref>
-                        <div className="px-4 py-2 hover:bg-gray-100 hover:text-primary transition-all">
+                        <div className="px-4 py-2 hover:bg-gray-100 hover:text-primary transition-all cursor-pointer">
                           {subItem.label}
                         </div>
                       </Link>
@@ -92,6 +179,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
           {/* Language Selector */}
           <div className="flex items-center">
             <Button
+              unstyled
               className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
             >
               ES
