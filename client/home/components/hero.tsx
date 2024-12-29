@@ -32,7 +32,7 @@ export default function Hero() {
                 Menorca Yacht Brokers
               </h1>
               <div className="space-y-2 md:space-y-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-white">
                   Tu Broker de Yates de confianza
                 </h2>
                 <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
