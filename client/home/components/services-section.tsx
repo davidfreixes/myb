@@ -1,6 +1,8 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Card } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -16,6 +18,7 @@ const services = [
       </>
     ),
     image: "/img/yacht-broker.jpg",
+    link: `${NAVIGATION_LINKS.YACHT_BROKER}`,
   },
   {
     title: "Yacht Charter",
@@ -31,6 +34,7 @@ const services = [
       </>
     ),
     image: "/img/yacht-charter.jpg",
+    link: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
   },
   {
     title: "Inspecciones y Tasaciones de Yates",
@@ -42,30 +46,35 @@ const services = [
       </>
     ),
     image: "/img/inspections.jpg",
+    link: `${NAVIGATION_LINKS.INSPECCIONES}`,
   },
   {
     title: "Gestión de Carga y Logística",
     description:
       "En fusión con On Line Traders & Shipping, gestionamos cargas con las empresas de la isla con el fin de ayudar y optimizar los procesos.",
     image: "/img/logistics.jpg",
+    link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
   },
   {
     title: "Asesoría Náutica",
     description:
       "Gestión de documentación, matriculaciones o dudas. Nuestros asesores estan aquí para ayudar cualquier duda o gestión del sector.",
     image: "/img/nautical-consulting.jpg",
+    link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
   },
   {
     title: "Ship Broker & Charterer",
     description:
       "Actuamos de Ship Broker y Charterer. Consulta nuestro daily y contáctanos si quieres cerrar un fixture.",
     image: "/img/ship-broker.jpg",
+    link: `${NAVIGATION_LINKS.SHIP_BROKER}`,
   },
   {
     title: "Servicios de Valor Añadido",
     description:
       "A parte de todos los servicios, podemos añadir recogidas en el aeropuerto o aerodrómo, en el puerto o desplazamientos. También excursiones, visitas sofisticadas o rutas por la isla segun el gusto del cliente.",
     image: "/img/value-added-services.jpg",
+    link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
   },
 ];
 
@@ -96,30 +105,33 @@ export default function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="flex"
             >
-              <Card className="h-full w-full flex flex-col shadow-md hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
-                <div className="relative h-48 sm:h-56 md:h-64">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
-                  <h3 className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4">
-                    {service.title}
-                  </h3>
-                  <div className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6">
-                    {service.description}
+              <Link href={service.link} className="w-full shadow-md">
+                <Card className="h-full w-full flex flex-col shadow-md hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+                  <div className="relative h-48 sm:h-56 md:h-64">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <Button
-                    unstyled
-                    className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
-                  >
-                    Accede al servicio
-                  </Button>
-                </div>
-              </Card>
+                  <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
+                    <h3 className="font-montserrat text-primary text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4">
+                      {service.title}
+                    </h3>
+                    <div className="text-gray-600 text-sm sm:text-base flex-grow mb-4 sm:mb-6">
+                      {service.description}
+                    </div>
+                    <Button
+                      unstyled
+                      className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Accede al servicio
+                    </Button>
+                  </div>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>
