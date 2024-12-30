@@ -46,14 +46,6 @@ export default function YachtBroker() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="prose prose-lg max-w-none"
         >
-          <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-8">
-            En Menorca Yacht Brokers, transformamos la compra y venta de yates
-            en una experiencia fluida, profesional y personalizada. Nuestro
-            equipo de expertos combina un profundo conocimiento del mercado
-            náutico con un enfoque centrado en el cliente, garantizando que cada
-            transacción sea un éxito.
-          </p>
-
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-12">
             Consulta nuestro stock de Yates en venta a continuación o descubre
             nuestras claves y contáctarnos más abajo. Contamos con Yates de
@@ -121,6 +113,13 @@ export default function YachtBroker() {
               </div>
             </motion.div>
           </div>
+          <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-8">
+            En Menorca Yacht Brokers, transformamos la compra y venta de yates
+            en una experiencia fluida, profesional y personalizada. Nuestro
+            equipo de expertos combina un profundo conocimiento del mercado
+            náutico con un enfoque centrado en el cliente, garantizando que cada
+            transacción sea un éxito.
+          </p>
         </motion.div>
       </div>
       {/* CTA Section */}

@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
@@ -37,13 +38,13 @@ const navigation: NavItem[] = [
     items: [
       {
         label: "Yacht Broker",
-        href: "/servicios/yacht-broker",
+        href: `${NAVIGATION_LINKS.YACHT_BROKER}`,
         icon: <Ship size={20} />,
         description: "Compra y venta de embarcaciones",
       },
       {
         label: "Yacht Charter",
-        href: "/servicios/yacht-charter",
+        href: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
         icon: <Anchor size={20} />,
         description: "Alquiler de embarcaciones",
       },
