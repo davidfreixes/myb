@@ -11,8 +11,8 @@ export default {
     extend: {
       colors: {
         primary: '#f1c001',
-        'gray-light': '#d0d1ce',
-        'gray-medium': '#cbcbc9',
+        darkTitle: '#1f2937',
+        darkDescription: '#4b5563',
         'gray-dark': '#c5c5c2',
         'gray-green': '#c4c5c0',
         background: "var(--background)",

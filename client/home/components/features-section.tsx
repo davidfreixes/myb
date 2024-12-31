@@ -36,7 +36,7 @@ export default function FeaturesSection() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-16 sm:space-y-20 md:space-y-24">
+        <div className="space-y-16 sm:space-y-16 md:space-y-16">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
