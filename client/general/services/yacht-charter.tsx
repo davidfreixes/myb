@@ -47,7 +47,7 @@ export default function YachtCharter() {
       </div>
 
       {/* Services Section with Background */}
-      <div className="container px-4 sm:px-6 py-12 sm:py-16 md:py-24 mx-auto bg-gray-50 md:max-w-8xl">
+      <div className="container px-4 sm:px-6 py-12 sm:py-16 md:py-18 mx-auto bg-gray-50 md:max-w-8xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export default function YachtCharter() {
 
       {/* Introduction Section with Image */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
-        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-8xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
