@@ -1,3 +1,15 @@
+import {
+  BoxIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  CurrencyIcon,
+  DocumentIcon,
+  GlobeIcon,
+  LightningIcon,
+  LocationIcon,
+  ShieldIcon,
+  UserIcon,
+} from "@/public/svg/logistics-icons";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -53,134 +65,271 @@ export default function Logistics() {
             gestionamos cada paso del proceso con precisión y profesionalismo.
           </p>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
-            >
-              <h3 className="text-2xl text-primary font-montserrat mb-6">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl font-montserrat font-medium text-primary text-center mb-12"
+              >
                 Servicios de Logística &quot;Door to Door&quot;
-              </h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  Recogida en origen: Coordinamos el transporte terrestre
-                  inicial
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  Gestión de documentos: Garantizamos que todos los permisos y
-                  trámites aduaneros estén en regla
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  Transporte internacional: Ofrecemos soluciones eficientes por
-                  mar, tierra o aire
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  Entrega en destino: Llevamos tu carga directamente a la puerta
-                  de tu cliente
-                </li>
-              </ul>
-            </motion.div>
+              </motion.h2>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
-            >
-              <h3 className="text-2xl text-primary font-montserrat mb-6">
-                Incoterms: Tu Transporte, Tus Reglas
-              </h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  <strong>EXW (Ex Works):</strong> Coordinamos todo el
-                  transporte desde el origen hasta el destino
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  <strong>FOB (Free On Board):</strong> Supervisamos la carga en
-                  el puerto de origen
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  <strong>CIF (Cost, Insurance, and Freight):</strong>{" "}
-                  Aseguramos la protección de tu mercancía
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
-                  <strong>DAP (Delivered at Place):</strong> Entregamos
-                  directamente en la ubicación acordada
-                </li>
-              </ul>
-            </motion.div>
-          </div>
+              {/* Services Grid */}
 
-          {/* Why Choose Us Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gray-50 p-8 rounded-lg mb-12"
-          >
-            <h3 className="text-2xl text-primary font-montserrat mb-6">
-              ¿Por Qué Elegir Menorca Brokers?
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 border p-5 rounded-lg shadow-lg">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <DocumentIcon />
+                  </div>
                   <div>
-                    <strong>Cobertura global:</strong>
-                    <p>
-                      Una red de socios estratégicos que nos permite operar en
-                      todo el mundo.
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      Recogida en origen
+                    </h4>
+                    <p className="text-gray-600">
+                      Coordinamos el transporte terrestre inicial para asegurar
+                      que tu carga comience su viaje de manera eficiente.
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <CheckCircleIcon />
+                  </div>
                   <div>
-                    <strong>Soporte 24/7:</strong>
-                    <p>
-                      Estamos disponibles para resolver cualquier incidencia
-                      durante el transporte.
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      Gestión de documentos
+                    </h4>
+                    <p className="text-gray-600">
+                      Garantizamos que todos los permisos y trámites aduaneros
+                      estén en regla para un proceso sin contratiempos.
                     </p>
                   </div>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <LightningIcon />
+                  </div>
                   <div>
-                    <strong>Optimización de costos:</strong>
-                    <p>
-                      Diseñamos soluciones logísticas que se ajustan a tu
-                      presupuesto y necesidades.
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      Transporte internacional
+                    </h4>
+                    <p className="text-gray-600">
+                      Ofrecemos soluciones eficientes por mar, tierra o aire
+                      adaptadas a tus necesidades específicas.
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start">
-                  <span className="font-medium mr-2">•</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <LocationIcon />
+                  </div>
                   <div>
-                    <strong>Atención personalizada:</strong>
-                    <p>
-                      Adaptamos cada envío a las características específicas de
-                      tu carga.
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      Entrega en destino
+                    </h4>
+                    <p className="text-gray-600">
+                      Llevamos tu carga directamente a la puerta de tu cliente,
+                      garantizando una entrega puntual y segura.
                     </p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
-          </motion.div>
+            <div>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl font-montserrat font-medium text-primary text-center mb-12"
+              >
+                Incoterms: Tu Transporte, Tus Reglas
+              </motion.h2>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 border p-5 rounded-lg shadow-lg">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <BoxIcon />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      EXW (Ex Works)
+                    </h4>
+                    <p className="text-gray-600">
+                      Coordinamos todo el transporte desde el origen hasta el
+                      destino.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <CheckCircleIcon />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      FOB (Free On Board)
+                    </h4>
+                    <p className="text-gray-600">
+                      Supervisamos la carga en el puerto de origen.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <ShieldIcon />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      CIF (Cost, Insurance, and Freight)
+                    </h4>
+                    <p className="text-gray-600">
+                      Aseguramos la protección de tu mercancía.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                    <LocationIcon />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                      DAP (Delivered at Place)
+                    </h4>
+                    <p className="text-gray-600">
+                      Entregamos directamente en la ubicación acordada.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
+      {/* Why Choose Us Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="py-14 rounded-lg mb-12 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]"
+      >
+        <h3 className="text-3xl text-darkTitle font-montserrat mb-8 flex justify-center">
+          ¿Por Qué Elegir Menorca Brokers?
+        </h3>
+        <div className="flex justify-center">
+          <div className="grid sm:grid-cols-1 gap-8 max-w-4xl">
+            {/* Icono a la izquierda */}
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                <GlobeIcon />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  Cobertura global
+                </h4>
+                <p className="text-gray-600">
+                  Una red de socios estratégicos que nos permite operar en todo
+                  el mundo.
+                </p>
+              </div>
+            </div>
+
+            {/* Icono a la derecha */}
+            <div className="flex flex-row-reverse gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                <ClockIcon />
+              </div>
+              <div className="text-right">
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  Soporte 24/7
+                </h4>
+                <p className="text-gray-600">
+                  Estamos disponibles para resolver cualquier incidencia durante
+                  el transporte.
+                </p>
+              </div>
+            </div>
+
+            {/* Icono a la izquierda */}
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                <CurrencyIcon />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  Optimización de costos
+                </h4>
+                <p className="text-gray-600">
+                  Diseñamos soluciones logísticas que se ajustan a tu
+                  presupuesto y necesidades.
+                </p>
+              </div>
+            </div>
+
+            {/* Icono a la derecha */}
+            <div className="flex flex-row-reverse gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
+                <UserIcon />
+              </div>
+              <div className="text-right">
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  Atención personalizada
+                </h4>
+                <p className="text-gray-600">
+                  Adaptamos cada envío a las características específicas de tu
+                  carga.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
 
       {/* CTA Section */}
       <motion.div
