@@ -59,10 +59,12 @@ export default function Logistics() {
           className="prose prose-lg max-w-none"
         >
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-12">
-            En Menorca Yacht Brokers, ofrecemos un servicio logístico completo y
-            personalizado para la importación y exportación de cualquier tipo de
-            carga. Desde mercancías generales hasta envíos especializados,
-            gestionamos cada paso del proceso con precisión y profesionalismo.
+            En Menorca Yacht Brokers, ofrecemos un servicio logístico{" "}
+            <span className="text-primary">completo </span> y{" "}
+            <span className="text-primary">personalizado </span>para la
+            importación y exportación de cualquier tipo de carga. Desde
+            mercancías generales hasta envíos especializados, gestionamos cada
+            paso del proceso con precisión y profesionalismo.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
