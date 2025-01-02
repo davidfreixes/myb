@@ -1,19 +1,10 @@
-import {
-  BoxIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  CurrencyIcon,
-  DocumentIcon,
-  GlobeIcon,
-  LightningIcon,
-  LocationIcon,
-  ShieldIcon,
-  UserIcon,
-} from "@/public/svg/logistics-icons";
-import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+"use client"
+
+import { Button } from "@mantine/core"
+import { motion } from "framer-motion"
+import { Box, CheckCircle, Clock, DollarSign, FileText, Globe, CloudLightningIcon as Lightning, MapPin, Shield, User } from 'lucide-react'
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Logistics() {
   return (
@@ -80,7 +71,6 @@ export default function Logistics() {
 
               {/* Services Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 border p-4 sm:p-5 rounded-lg shadow-lg">
-                {/* Service items */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -88,7 +78,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <DocumentIcon />
+                    <FileText className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -101,7 +91,6 @@ export default function Logistics() {
                   </div>
                 </motion.div>
 
-                {/* Repeat similar pattern for other service items */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -109,7 +98,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <CheckCircleIcon />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -122,7 +111,6 @@ export default function Logistics() {
                   </div>
                 </motion.div>
 
-                {/* Additional service items... */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -130,7 +118,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <LightningIcon />
+                    <Lightning className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -150,7 +138,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <LocationIcon />
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -177,7 +165,6 @@ export default function Logistics() {
               </motion.h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 border p-4 sm:p-5 rounded-lg shadow-lg">
-                {/* Incoterm items */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -185,7 +172,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <BoxIcon />
+                    <Box className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -198,7 +185,6 @@ export default function Logistics() {
                   </div>
                 </motion.div>
 
-                {/* Additional Incoterm items... */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -206,7 +192,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <CheckCircleIcon />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -225,7 +211,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <ShieldIcon />
+                    <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -244,7 +230,7 @@ export default function Logistics() {
                   className="flex gap-3 sm:gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                    <LocationIcon />
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -273,10 +259,9 @@ export default function Logistics() {
         </h3>
         <div className="flex justify-center px-4">
           <div className="grid grid-cols-1 gap-6 sm:gap-8 max-w-4xl">
-            {/* Features with alternating layouts */}
             <div className="flex gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <GlobeIcon />
+                <Globe className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -291,7 +276,7 @@ export default function Logistics() {
 
             <div className="flex flex-row sm:flex-row-reverse gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <ClockIcon />
+                <Clock className="w-6 h-6 text-primary" />
               </div>
               <div className="text-left sm:text-right">
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -306,7 +291,7 @@ export default function Logistics() {
 
             <div className="flex gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <CurrencyIcon />
+                <DollarSign className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -321,7 +306,7 @@ export default function Logistics() {
 
             <div className="flex flex-row sm:flex-row-reverse gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <UserIcon />
+                <User className="w-6 h-6 text-primary" />
               </div>
               <div className="text-left sm:text-right">
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -360,5 +345,6 @@ export default function Logistics() {
         </Button>
       </motion.div>
     </div>
-  );
+  )
 }
+
