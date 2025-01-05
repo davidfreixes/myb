@@ -11,7 +11,7 @@ export const NAVIGATION_LINKS = {
   LOGÍSTICA: "/logistics",
   ASESORIA_NAUTICA: "nautical-consulting",
   SHIP_BROKER: "ship-broker",
-  VALOR_AÑADIDO: "value-added",
+  VALOR_AÑADIDO: "added-value-services",
   BLOG_CATEGORY: (slug: string) => `/blog/category/${slug}`,
   AREA_CLIENTE: "/app",
   SEGUROS_TRANSPORTES: "/legal#seguros-transportes",

@@ -161,9 +161,9 @@ export default function NauticalConsulting() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="p-6 rounded-lg text-center mb-10"
+        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-6 rounded-lg text-center md:py-20"
       >
-        <h2 className="text-2xl md:text-3xl font-montserrat text-primary mb-4">
+        <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
           ¿Necesitas asesoramiento náutico profesional?
         </h2>
         <p className="text-lg text-gray-700 mb-6">
@@ -174,8 +174,8 @@ export default function NauticalConsulting() {
           component={Link}
           href="/contact"
           unstyled
-          className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4"
-        >
+          className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-lg py-3 px-6 rounded-lg transition-colors"
+          >
           Contactar
         </Button>
       </motion.div>
