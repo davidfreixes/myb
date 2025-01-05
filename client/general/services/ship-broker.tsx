@@ -2,12 +2,20 @@
 
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  BarChart2,
+  Download,
+  FileText,
+  Ship,
+  Truck,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ShipBroker() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full">
         <Image
@@ -17,8 +25,8 @@ export default function ShipBroker() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
+        <div className="relative z-10 mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +38,10 @@ export default function ShipBroker() {
                 Ship Sale and Purchase Broker, Charterer & Bunker Trader
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
-                Especialistas en <span className="text-primary">conectar armadores</span> y <span className="text-primary">fletadores</span>, ofreciendo soluciones integrales
+                Especialistas en{" "}
+                <span className="text-primary">conectar armadores</span> y{" "}
+                <span className="text-primary">fletadores</span>, ofreciendo
+                soluciones integrales
               </h2>
             </div>
           </motion.div>
@@ -38,73 +49,103 @@ export default function ShipBroker() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12 md:py-12 max-w-8xl">
+      <div className="py-12 md:py-0 md:pt-16">
         {/* Daily Position Feature */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          className="mb-16 mx-auto px-4 max-w-[1400px]"
         >
-          <div className="flex gap-4">
-            <div className="w-1/2 justify-center md:flex">
-              <div className="flex w-1/2 justify-center bg-gray-50 rounded-2xl overflow-hidden relative h-[200px] w[300px] md:h-[300px] md:w-[400px]">
-                <Image
-                  src="/img/port-sunset.jpg"
-                  alt="Puerto al atardecer"
-                  fill
-                />
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/img/port-sunset.jpg"
+                alt="Puerto al atardecer"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-white text-xl font-montserrat mb-2">
+                  Daily Position
+                </h3>
+                <p className="text-white/80 text-sm">Actualizado diariamente</p>
               </div>
             </div>
-            <div className="w-1/2 p-8 md:p-12 flex flex-col justify-center">
-              <h2 className="font-montserrat text-2xl md:text-3xl lg:text-4xl text-primary mb-6">
+            <div className="space-y-6">
+              <h2 className="font-montserrat text-2xl md:text-3xl lg:text-4xl text-primary">
                 Menorca Brokers - Daily Position
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-700">
                 A continuación, puedes descargarte nuestro daily, consultar
                 nuestro contrato tipo y consultar las navieras españolas en
                 activo.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                //   component={Link}
-                //   href="/ship-broker/daily"
                   unstyled
-                  className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-lg py-3 px-6 rounded"
+                  className="bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-base py-3 px-6 rounded-lg transition-colors"
                 >
-                  Descargar Daily Position
+                  <div className="flex items-center gap-2">
+                    <Download className="w-4 h-4" />
+                    Descargar Daily Position
+                  </div>
                 </Button>
                 <Button
-                //   component={Link}
-                //   href="/ship-broker/contract"
                   unstyled
-                  className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-white font-normal text-sm md:text-lg py-3 px-6 rounded"
+                  className="flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white font-normal text-sm md:text-base py-3 px-6 rounded-lg transition-colors"
                 >
-                  Ver Contrato Tipo
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Ver Contrato Tipo
+                  </div>
                 </Button>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Introduction */}
+        {/* Introduction with Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="prose prose-lg max-w-none mb-12"
+          className="mb-16"
         >
-          <div className="space-y-6">
-            <h3 className="font-montserrat text-lg md:text-2xl text-gray-700">
-              En Menorca Brokers, somos especialistas en conectar armadores y
-              fletadores, ofreciendo soluciones integrales para la compra, venta
-              y alquiler de buques o charter por tiempo.
-            </h3>
-            <h3 className="font-montserrat text-lg md:text-2xl text-gray-700">
-              Combinamos un profundo conocimiento del sector marítimo con una
-              red global de contactos, lo que nos permite garantizar acuerdos
-              eficientes y personalizados.
-            </h3>
+          <div className="bg-gray-50 p-8 md:p-12 md:py-16">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 mx-auto px-4 max-w-[1400px]">
+              <div className="space-y-4">
+                <h3 className="font-montserrat text-xl md:text-2xl text-primary">
+                  Experiencia Global
+                </h3>
+                <p className="text-gray-700">
+                  En Menorca Brokers, somos especialistas en conectar armadores
+                  y fletadores, ofreciendo soluciones integrales para la compra,
+                  venta y alquiler de buques o charter por tiempo.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-montserrat text-xl md:text-2xl text-primary">
+                  Conocimiento Experto
+                </h3>
+                <p className="text-gray-700">
+                  Combinamos un profundo conocimiento del sector marítimo con
+                  una red global de contactos, lo que nos permite garantizar
+                  acuerdos eficientes y personalizados.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1400px] mx-auto px-4">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -113,32 +154,39 @@ export default function ShipBroker() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-white rounded-xl p-8 shadow-sm mb-12"
+          className="mb-16 mx-auto px-4 max-w-[1400px]"
         >
-          <h3 className="font-montserrat text-2xl text-primary mb-6">
+          <h3 className="font-montserrat text-2xl md:text-3xl text-primary mb-8 text-center">
             Servicios Especializados
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-montserrat text-xl mb-4">
-                Ship Sale & Purchase
-              </h4>
-              <p className="text-gray-700">
-                Desde buques de carga hasta yates de lujo, te guiamos en cada
-                paso del proceso, asegurándonos de que cada operación sea
-                fluida, rentable y satisfactoria.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-montserrat text-xl mb-4">
-                Dry & Liquid Bulk Cargo
-              </h4>
-              <p className="text-gray-700">
-                Gracias a la formación recibida en el Institute of Chartered
-                Shipbrokers, somos especialistas en Dry y Liquid Bulk Cargo
-                Brokerage.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 * index }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <h4 className="font-montserrat text-xl text-primary mb-3">
+                    {service.title}
+                  </h4>
+                </div>
+                <p className="text-gray-700 mb-4">{service.description}</p>
+                <Button
+                  component={Link}
+                  href={service.link}
+                  unstyled
+                  className="inline-flex items-center text-primary hover:text-primary/75 font-medium"
+                >
+                  Saber más <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
@@ -147,25 +195,56 @@ export default function ShipBroker() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mb-10"
+          className="bg-primary/10 rounded-2xl p-8 md:py-12 text-center"
         >
-          <h2 className="text-2xl md:text-3xl font-montserrat text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-montserrat text-primary mb-4  mx-4 max-w-[1400px] lg:mx-auto">
             ¿Buscas un Ship Broker?
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
             Contáctanos para cerrar fixtures o saber más sobre nuestros
-            servicios
+            servicios. Nuestro equipo está listo para ayudarte.
           </p>
           <Button
             component={Link}
             href="/contact"
             unstyled
-            className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4"
+            className="bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-lg py-3 px-6 rounded-lg transition-colors"
           >
-            Contactar
+            Contactar Ahora
           </Button>
         </motion.div>
       </div>
     </div>
   );
 }
+
+const stats = [
+  { value: "15+", label: "Años de Experiencia" },
+  { value: "200+", label: "Operaciones Completadas" },
+  { value: "50+", label: "Socios Globales" },
+  { value: "24/7", label: "Soporte Disponible" },
+];
+
+const services = [
+  {
+    title: "Ship Sale & Purchase",
+    description:
+      "Desde buques de carga hasta yates de lujo, te guiamos en cada paso del proceso, asegurándonos de que cada operación sea fluida, rentable y satisfactoria.",
+    icon: <Ship className="w-6 h-6 text-primary" />,
+    link: "/services/ship-broker/sale-purchase",
+  },
+  {
+    title: "Dry Bulk Cargo",
+    description:
+      "Especialistas certificados por el Institute of Chartered Shipbrokers en el manejo y gestión de cargas secas a granel.",
+    icon: <Truck className="w-6 h-6 text-primary" />,
+    link: "/services/ship-broker/dry-bulk",
+  },
+  {
+    title: "Liquid Bulk Cargo",
+    description:
+      "Expertos en el transporte de cargas líquidas a granel, ofreciendo soluciones especializadas y seguras para cada tipo de carga.",
+    icon: <BarChart2 className="w-6 h-6 text-primary" />,
+    link: "/services/ship-broker/liquid-bulk",
+  },
+];
