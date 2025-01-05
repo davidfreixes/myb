@@ -1,12 +1,12 @@
-import NauticalConsulting from "@/client/general/services/nautical-consulting";
+import Partners from "@/client/general/company/suppliers-distributors";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 
-export default function NauticalConsultingPage() {
+export default function PartnersPage() {
   return (
     <>
       <Header sticky={false} isTransparent={true} />
-      <NauticalConsulting />
+      <Partners />
       <Footer />
     </>
   );

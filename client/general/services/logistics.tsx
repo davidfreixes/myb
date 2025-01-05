@@ -1,10 +1,19 @@
-"use client"
-
-import { Button } from "@mantine/core"
-import { motion } from "framer-motion"
-import { Box, CheckCircle, Clock, DollarSign, FileText, Globe, CloudLightningIcon as Lightning, MapPin, Shield, User } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
+import { Button } from "@mantine/core";
+import { motion } from "framer-motion";
+import {
+  Box,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  FileText,
+  Globe,
+  CloudLightningIcon as Lightning,
+  MapPin,
+  Shield,
+  User,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Logistics() {
   return (
@@ -345,6 +354,5 @@ export default function Logistics() {
         </Button>
       </motion.div>
     </div>
-  )
+  );
 }
-

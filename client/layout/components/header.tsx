@@ -87,7 +87,7 @@ const navigation: NavItem[] = [
     items: [
       {
         label: "Proveedores y distribuidores",
-        href: "/empresa/proveedores-y-distribuidores",
+        href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
         icon: <Building2 size={20} />,
         description: "Red de colaboradores y partners",
       },
