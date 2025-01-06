@@ -1,5 +1,6 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Text } from "@mantine/core";
-import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,7 +34,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/servicios/yacht-broker"
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Yacht Broker
@@ -41,7 +42,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/yacht-charter"
+                    href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Yacht Charter
@@ -49,7 +50,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/inspecciones"
+                    href={`${NAVIGATION_LINKS.INSPECCIONES}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Inspecciones y Tasaciones
@@ -57,7 +58,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/asesoria"
+                    href={`${NAVIGATION_LINKS.ASESORIA_NAUTICA}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Asesoría Náutica
@@ -72,7 +73,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/servicios/compra"
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Compra de Yates
@@ -80,7 +81,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/venta"
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Venta de Yates
@@ -88,7 +89,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/alquiler"
+                    href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Alquiler de Yates
@@ -96,7 +97,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/valor-anadido"
+                    href={`${NAVIGATION_LINKS.VALOR_AÑADIDO}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Servicios de Valor Añadido
@@ -209,4 +210,3 @@ export function Footer() {
     </footer>
   );
 }
-

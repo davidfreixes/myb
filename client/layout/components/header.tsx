@@ -93,7 +93,7 @@ const navigation: NavItem[] = [
       },
       {
         label: "Diario del Puerto de Mahón",
-        href: "/empresa/diario-del-puerto-de-mahon",
+        href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
         icon: <Package size={20} />,
         description: "Noticias y actualidad portuaria",
       },
