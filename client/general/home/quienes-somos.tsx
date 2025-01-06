@@ -21,6 +21,7 @@ const teamMembers = [
   },
 ];
 
+
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
