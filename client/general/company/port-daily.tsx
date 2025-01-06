@@ -96,7 +96,7 @@ export default function PortDaily() {
       </div>
 
       {/* Submit News Section */}
-      <div className="py-16 md:py-24 bg-white inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] py-12 sm:py-16 md:py-20">
+      <div className="py-16 md:py-24 bg-white inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
