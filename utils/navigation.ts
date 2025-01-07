@@ -14,6 +14,8 @@ export const NAVIGATION_LINKS = {
   VALOR_AÑADIDO: "added-value-services",
   PROVEEDORES_Y_DISTRIBUIDORES: "/proveedores-y-distribuidores",
   DIARIO_PUERTO_MAHON: "/diario",
+  CONDICIONES_Y_TARIFAS: "/condiciones-y-tarifas",
+  CONTRATOS_COMPRAVENTA: "/contratos-compraventa",
 
   PUBLIC_INSTANT_RATE: "/my-rate?instantRate=true",
   ENVIO_BY_ID: (id: string) => `/app/orders/${id}`,
