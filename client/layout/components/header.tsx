@@ -102,11 +102,6 @@ const navigation: NavItem[] = [
     ],
   },
   {
-    label: "QUIÉNES SOMOS",
-    href: "/quienes-somos",
-    width: "300",
-  },
-  {
     label: "CONTRATACIÓN",
     href: "/contratacion",
     width: "650",
@@ -115,15 +110,22 @@ const navigation: NavItem[] = [
         label: "Condiciones y Tarifas",
         href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS}`,
         icon: <FileText size={20} />,
-        description: "Términos, condiciones y tarifas detalladas de nuestros servicios",
+        description:
+          "Términos, condiciones y tarifas detalladas de nuestros servicios",
       },
       {
         label: "Contratos de Compraventa de Yates",
         href: `${NAVIGATION_LINKS.CONTRATOS_COMPRAVENTA}`,
         icon: <ScrollText size={20} />,
-        description: "Documentación oficial y contratos MYBA para transacciones seguras",
+        description:
+          "Documentación oficial y contratos MYBA para transacciones seguras",
       },
     ],
+  },
+  {
+    label: "QUIÉNES SOMOS",
+    href: "/quienes-somos",
+    width: "300",
   },
 ];
 
