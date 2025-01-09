@@ -115,7 +115,7 @@ const navigation: NavItem[] = [
       },
       {
         label: "Contratos de Compraventa de Yates",
-        href: `${NAVIGATION_LINKS.CONTRATOS_COMPRAVENTA}`,
+        href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA}`,
         icon: <ScrollText size={20} />,
         description:
           "Documentación oficial y contratos MYBA para transacciones seguras",
