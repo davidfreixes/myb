@@ -300,7 +300,7 @@ function YatesContent() {
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2">
                       {plan.title}
                     </h3>
-                    <p className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-4">
+                    <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
                       {plan.price}
                     </p>
                     <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
@@ -349,7 +349,7 @@ function YatesContent() {
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2">
                       {plan.title}
                     </h3>
-                    <p className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-4">
+                    <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
                       {plan.price}
                     </p>
                     <p className="text-sm sm:text-base text-gray-600">
@@ -387,7 +387,7 @@ function YatesContent() {
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-4">
+                    <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
                       {service.price}
                       <span className="text-gray-700 text-base sm:text-lg font-normal">
                         {" "}
