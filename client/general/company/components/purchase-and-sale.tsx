@@ -76,8 +76,8 @@ export default function PurchaseAndSale() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative py-8 sm:py-12 md:py-16 lg:py-16">
-        <Image
-          src="/img/conditions-and-rates.jpg"
+      <Image
+          src="/img/purchase-and-sale.jpg"
           alt="Corporate building"
           fill
           className="object-cover"
@@ -90,7 +90,7 @@ export default function PurchaseAndSale() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center mb-16"
+            className="max-w-4xl mx-auto text-center mb-8"
           >
             <h1 className="text-4xl md:text-5xl font-montserrat text-primary mb-6">
               Contratos de Compraventa de Yates
