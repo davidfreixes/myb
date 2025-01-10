@@ -237,6 +237,8 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             {/* Contact button - desktop */}
             <Button
               unstyled
+              component={Link}
+              href={`${NAVIGATION_LINKS.CONTACTO}`}
               className="hidden lg:block bg-primary hover:bg-primary/90 text-black min-w-[48px] font-medium py-1 px-5 rounded-lg"
             >
               CONTACTO
@@ -327,6 +329,8 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               {/* Contact button - mobile */}
               <Button
                 unstyled
+                component={Link}
+                href={`${NAVIGATION_LINKS.CONTACTO}`}
                 className="w-full bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
               >
                 CONTACTO

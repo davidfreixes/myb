@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -232,7 +233,7 @@ export default function ValueAddedServices() {
         <Button
           unstyled
           component={Link}
-          href="/contact"
+          href={`${NAVIGATION_LINKS.CONTACTO}`}
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
           Contactar

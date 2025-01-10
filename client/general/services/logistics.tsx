@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -346,7 +347,7 @@ export default function Logistics() {
         </p>
         <Button
           component={Link}
-          href="/contact"
+          href={`${NAVIGATION_LINKS.CONTACTO}`}
           unstyled
           className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
         >

@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -204,7 +205,7 @@ export default function YachtCharter() {
             </p>
             <Button
               component={Link}
-              href="/contact"
+              href={`${NAVIGATION_LINKS.CONTACTO}`}
               unstyled
               className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded w-full sm:w-auto"
             >

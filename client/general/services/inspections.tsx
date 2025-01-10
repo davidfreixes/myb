@@ -1,5 +1,6 @@
 "use client";
 
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -163,14 +164,14 @@ export default function Inspections() {
           contactarnos directamente a través del formulario en nuestra página de
           contacto o llamarnos al número indicado.
         </p>
-        <Link href="/contact">
-          <Button
-            unstyled
-            className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4"
-          >
-            Contactar
-          </Button>
-        </Link>
+        <Button
+          component={Link}
+          href={`${NAVIGATION_LINKS.CONTACTO}`}
+          unstyled
+          className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4"
+        >
+          Contactar
+        </Button>
       </motion.div>
     </div>
   );

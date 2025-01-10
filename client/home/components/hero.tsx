@@ -1,6 +1,8 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -74,6 +76,8 @@ export default function Hero() {
                     Explora Nuestros Servicios
                   </Button>
                   <Button
+                    component={Link}
+                    href={`${NAVIGATION_LINKS.CONTACTO}`}
                     unstyled
                     className="w-full rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >

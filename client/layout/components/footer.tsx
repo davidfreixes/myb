@@ -136,7 +136,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/contacto"
+                    href={`${NAVIGATION_LINKS.CONTACTO}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Contacto
