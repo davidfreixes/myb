@@ -79,7 +79,7 @@ export default function Hero() {
                     component={Link}
                     href={`${NAVIGATION_LINKS.CONTACTO}`}
                     unstyled
-                    className="w-full rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
+                    className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >
                     Contactar
                   </Button>
