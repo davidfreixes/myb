@@ -1,5 +1,3 @@
-"use client";
-
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
@@ -22,12 +20,11 @@ const teamMembers = [
   },
 ];
 
-
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <div className="relative h-[60vh] w-full">
+      {/* Hero Section - Adjusted height for mobile */}
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/yacht-1.jpg"
           alt="Interior de yate de lujo"
@@ -36,18 +33,18 @@ export default function AboutUs() {
           priority
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl mt-5">
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl flex items-center justify-center mx-auto"
           >
-            <div className="space-y-3 sm:space-y-4 flex flex-col items-center ">
-              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary mb-4 text-center">
+            <div className="space-y-3 sm:space-y-4 flex flex-col items-center px-4">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary mb-2 sm:mb-4 text-center">
                 Quiénes Somos en Menorca Brokers
               </h1>
-              <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white px-2 text-center">
+              <h2 className="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white px-2 text-center">
                 Estamos listos para ofrecerte la mejor asesoría y garantizar una
                 experiencia de compra exitosa.
               </h2>
@@ -55,7 +52,7 @@ export default function AboutUs() {
                 component={Link}
                 href={`${NAVIGATION_LINKS.CONTACTO}`}
                 unstyled
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors mt-4"
               >
                 ¡Conócenos!
               </Button>
@@ -64,43 +61,19 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Main Content Section */}
-      {/* <div className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="font-montserrat text-3xl md:text-4xl text-primary mb-4">
-              Menorca Brokers
-            </h2>
-            <h3 className="text-xl md:text-2xl text-gray-600 mb-8">
-              Tu Consultora de Confianza
-            </h3>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              En Menorca Brokers, nos dedicamos a facilitar la compraventa de
-              yates y barcos mediante un servicio de brokeraje innovador y
-              confiable.
-            </p>
-          </motion.div>
-        </div>
-      </div> */}
-
-      {/* Team Section */}
-      <div className="bg-white py-16 md:py-20">
+      {/* Team Section - Improved responsive layout */}
+      <div className="bg-white py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12 lg:mb-16"
           >
-            <h2 className="font-montserrat text-3xl md:text-4xl text-primary mb-4">
+            <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary mb-2 sm:mb-4">
               Un mar de conocimiento
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               Conoce a nuestro equipo de expertos en el sector náutico
             </p>
           </motion.div>
@@ -112,11 +85,11 @@ export default function AboutUs() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden mb-12"
+                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8 sm:mb-12"
               >
-                <div className="md:grid md:grid-cols-3 gap-8 p-8 bg-primary/20 border rounded-lg shadow-lg overflow-hidden">
-                  <div className="col-span-1 mb-8 md:mb-0">
-                    <div className="relative w-48 h-48 mx-auto md:w-full md:h-72">
+                <div className="flex flex-col md:grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 bg-primary/20 border rounded-lg shadow-lg overflow-hidden">
+                  <div className="md:col-span-1 flex flex-col items-center mb-6 md:mb-0">
+                    <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-full md:h-72">
                       <Image
                         src={member.image}
                         alt={member.name}
@@ -125,15 +98,20 @@ export default function AboutUs() {
                       />
                     </div>
                     <div className="text-center mt-4">
-                      <h3 className="font-montserrat text-2xl text-primary mb-2">
+                      <h3 className="font-montserrat text-xl sm:text-2xl text-primary mb-2">
                         {member.name}
                       </h3>
-                      <p className="text-gray-600 font-medium">{member.role}</p>
+                      <p className="text-gray-600 font-medium text-sm sm:text-base">
+                        {member.role}
+                      </p>
                     </div>
                   </div>
-                  <div className="col-span-2 space-y-4">
+                  <div className="md:col-span-2 space-y-3 sm:space-y-4">
                     {member.bio.map((paragraph, i) => (
-                      <p key={i} className="text-gray-700 leading-relaxed">
+                      <p
+                        key={i}
+                        className="text-sm sm:text-base text-gray-700 leading-relaxed"
+                      >
                         {paragraph}
                       </p>
                     ))}
@@ -145,37 +123,36 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Contact Section */}
-      <div className="relative bg-gray-50 py-16 md:py-24 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] ">
-        <div className="container mx-auto px-4 max-w-6xl ">
-          
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="space-y-6 flex flex-col justify-center items-center "
+      {/* Contact Section - Responsive adjustments */}
+      <div className="relative bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-24 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="space-y-4 sm:space-y-6 flex flex-col justify-center items-center"
+          >
+            <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary font-semibold text-center">
+              ¿Listo Para Empezar Tu Viaje?
+            </h2>
+            <h3 className="text-lg sm:text-xl md:text-2xl text-gray-600 text-center">
+              Contáctanos Hoy
+            </h3>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed text-center px-4 sm:px-6 md:px-8 max-w-2xl">
+              Descubre cómo Menorca Brokers puede ayudarte a alcanzar tus
+              objetivos en la compraventa de embarcaciones. Nuestro equipo está
+              disponible para responder a tus preguntas y ofrecerte una consulta
+              personalizada.
+            </p>
+            <Button
+              component={Link}
+              href="/contact"
+              unstyled
+              className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/90 transition-colors mt-4"
             >
-              <h2 className="font-montserrat text-3xl md:text-4xl text-primary font-semibold">
-                ¿Listo Para Empezar Tu Viaje?
-              </h2>
-              <h3 className="text-xl md:text-2xl text-gray-600">
-                Contáctanos Hoy
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                Descubre cómo Menorca Brokers puede ayudarte a alcanzar tus
-                objetivos en la compraventa de embarcaciones. Nuestro equipo
-                está disponible para responder a tus preguntas y ofrecerte una
-                consulta personalizada.
-              </p>
-              <Button
-                component={Link}
-                href="/contact"
-                unstyled
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/90 transition-colors"
-              >
-                Contáctanos
-              </Button>
-            </motion.div>
+              Contáctanos
+            </Button>
+          </motion.div>
         </div>
       </div>
     </div>
