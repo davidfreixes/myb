@@ -327,14 +327,16 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                 </div>
               ))}
               {/* Contact button - mobile */}
-              <Button
-                unstyled
-                component={Link}
-                href={`${NAVIGATION_LINKS.CONTACTO}`}
-                className="w-full bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
-              >
-                CONTACTO
-              </Button>
+              <div className="flex justify-center items-center">
+                <Button
+                  unstyled
+                  component={Link}
+                  href={`${NAVIGATION_LINKS.CONTACTO}`}
+                  className="w-full text-center bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
+                >
+                  CONTACTO
+                </Button>
+              </div>
             </div>
           </div>
         )}
