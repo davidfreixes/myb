@@ -10,7 +10,7 @@ export const NAVIGATION_LINKS = {
   INSPECCIONES: "/inspections",
   LOGÍSTICA: "/logistics",
   ASESORIA_NAUTICA: "nautical-consulting",
-  SHIP_BROKER: "ship-broker",
+  BUNKER_SUPPLY: "bunker-supply",
   VALOR_AÑADIDO: "added-value-services",
   PROVEEDORES_Y_DISTRIBUIDORES: "/proveedores-y-distribuidores",
   DIARIO_PUERTO_MAHON: "/diario",

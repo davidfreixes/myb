@@ -181,24 +181,32 @@ export function Footer() {
             <div className="flex gap-4 order-1 md:order-3">
               <Link
                 href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
               >
                 <Linkedin size={20} />
               </Link>
               <Link
                 href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
               >
                 <Facebook size={20} />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/menorca_yacht_brokers/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
               >
                 <Instagram size={20} />
               </Link>
               <Link
                 href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
               >
                 <Youtube size={20} />

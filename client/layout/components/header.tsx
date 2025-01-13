@@ -2,7 +2,6 @@ import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
-  AnchorIcon,
   Building2,
   FileText,
   HelpCircle,
@@ -12,8 +11,9 @@ import {
   Scale,
   ScrollText,
   Ship,
+  ShipWheel,
   Truck,
-  X,
+  X
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,6 +51,12 @@ const navigation: NavItem[] = [
         description: "Alquiler de embarcaciones",
       },
       {
+        label: "Bunker Supply",
+        href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+        icon: <ShipWheel size={20} />,
+        description: "Servicios de intermediación",
+      },
+      {
         label: "Inspecciones y Tasaciones",
         href: `${NAVIGATION_LINKS.INSPECCIONES}`,
         icon: <Scale size={20} />,
@@ -68,12 +74,7 @@ const navigation: NavItem[] = [
         icon: <HelpCircle size={20} />,
         description: "Consultoría especializada",
       },
-      {
-        label: "Ship Broker & Charterer",
-        href: `${NAVIGATION_LINKS.SHIP_BROKER}`,
-        icon: <AnchorIcon size={20} />,
-        description: "Servicios de intermediación",
-      },
+
       {
         label: "Servicios de Valor Añadido",
         href: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
