@@ -415,7 +415,7 @@ export default function ContactPage() {
               {steps.map((step, index) => (
                 <div
                   key={step.id}
-                  className={`flex items-start flex-none ${
+                  className={`flex items-start ${
                     index < steps.length - 1 ? "flex-1" : ""
                   }`}
                 >
