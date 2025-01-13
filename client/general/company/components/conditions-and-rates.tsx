@@ -158,12 +158,12 @@ function YatesContent() {
     {
       title: "Tasación avanzada",
       price: "600€",
-      description: "Yate hasta 20 metros",
+      description: "Yate hasta 24 metros",
     },
     {
       title: "Tasación completa",
       price: "1,200€",
-      description: "Yate superior a 20 metros",
+      description: "Yate superior a 24 metros",
     },
   ];
 
