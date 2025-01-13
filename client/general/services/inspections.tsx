@@ -92,8 +92,7 @@ export default function Inspections() {
                     Convenios Internacionales
                   </h4>
                   <p className="text-gray-700">
-                    Trabajamos en cumplimiento con Lloyd&apos;s Register e ISO
-                    9001, garantizando una evaluación precisa y confiable.
+                    Trabajamos en cumplimiento con Lloyd&apos;s Register, garantizando una evaluación precisa y confiable.
                   </p>
                 </div>
               </div>
