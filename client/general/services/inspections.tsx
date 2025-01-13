@@ -121,6 +121,7 @@ export default function Inspections() {
                     <li>Condiciones del motor y sistemas</li>
                     <li>Estado del casco y sistemas de seguridad</li>
                     <li>Equipamiento adicional y personalización</li>
+                    <li>Situación del mercado</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
