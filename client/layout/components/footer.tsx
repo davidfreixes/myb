@@ -112,23 +112,23 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/quienes-somos"
+                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Sobre nosotros
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
-                    href="/quienes-somos/historia"
+                    href=""
                     className="text-gray-300 hover:text-primary block"
                   >
                     Nuestra Historia
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
-                    href="/quienes-somos/equipo"
+                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     Nuestro Equipo
@@ -152,25 +152,25 @@ export function Footer() {
           <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
             {/* Copyright */}
             <div className="text-sm text-gray-400 order-3 md:order-1">
-              2024 © Menorca Yacht Brokers
+              2025 © Menorca Yacht Brokers
             </div>
 
             {/* Legal Links */}
             <div className="flex flex-col sm:flex-row gap-4 text-center order-2">
-              <Link
+              {/* <Link
                 href="/legal"
                 className="text-sm text-gray-400 hover:text-primary"
               >
                 Condiciones generales de uso
-              </Link>
+              </Link> */}
               <Link
-                href="/privacidad"
+                href={`${NAVIGATION_LINKS.POLITICA_DE_PRIVACIDAD}`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
                 Política de privacidad
               </Link>
               <Link
-                href="/aviso-legal"
+                href={`${NAVIGATION_LINKS.AVISO_LEGAL}`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
                 Aviso legal

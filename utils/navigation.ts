@@ -16,6 +16,8 @@ export const NAVIGATION_LINKS = {
   DIARIO_PUERTO_MAHON: "/diario",
   CONDICIONES_Y_TARIFAS: "/condiciones-y-tarifas",
   CONTRATOS_DE_COMPRAVENTA: "/contratos-de-compraventa",
+  POLITICA_DE_PRIVACIDAD: "/politica-de-privacidad",
+  AVISO_LEGAL: "/aviso-legal",
 
   PUBLIC_INSTANT_RATE: "/my-rate?instantRate=true",
   ENVIO_BY_ID: (id: string) => `/app/orders/${id}`,

@@ -132,130 +132,63 @@ export default function BunkerSupplyPage() {
           </p>
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
-            {/* Ship & Bunker */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="relative h-32 mb-6">
-                <Image
-                  src="/img/bunker-supply/ship-bunker.png"
-                  alt="Ship and Bunker"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-montserrat text-primary mb-4">
-                Shipandbunker
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Consulta los precios del mercado de combustibles marinos en los
-                principales puertos del mundo.
-              </p>
-              <Button
-                component="a"
-                href="https://shipandbunker.com/prices"
-                target="_blank"
-                rel="noopener noreferrer"
-                unstyled
-                className="inline-flex items-center text-primary hover:text-primary/75"
+            {marketIndices.map((item, index) => (
+              <Link
+                key={item.title}
+                href={item.link || "#"}
+                target={item.link ? "_blank" : undefined}
+                rel={item.link ? "noopener noreferrer" : undefined}
               >
-                Visitar <ExternalLink className="ml-2 w-4 h-4" />
-              </Button>
-            </motion.div>
-
-            {/* Baltic Exchange */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="relative h-32 mb-6">
-                <Image
-                  src="/img/bunker-supply/baltic-exchange.png"
-                  alt="Baltic Exchange"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-montserrat text-primary mb-4">
-                Baltic Exchange
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Consulta el mercado de la carga actualizado a diario con el
-                Baltic Exchange.
-              </p>
-              <Button
-                component="a"
-                href="https://www.balticexchange.com/en/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                unstyled
-                className="inline-flex items-center text-primary hover:text-primary/75"
-              >
-                Visitar <ExternalLink className="ml-2 w-4 h-4" />
-              </Button>
-            </motion.div>
-
-          {/* Providers Section */}
-            {/* CEPSA & MOEVE */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="flex gap-4 h-32 mb-6">
-                <div className="relative flex-1">
-                  <Image
-                    src="/img/bunker-supply/cepsa.jpg"
-                    alt="CEPSA"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="relative flex-1">
-                  <Image
-                    src="/img/bunker-supply/moeve.png"
-                    alt="MOEVE"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <h3 className="text-xl font-montserrat text-primary mb-4">
-                CEPSA & MOEVE
-              </h3>
-              <p className="text-gray-600">
-                Cargamos combustible CEPSA - MOEVE
-              </p>
-            </motion.div>
-
-            {/* STABIAOIL */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="relative h-32 mb-6">
-                <Image
-                  src="/img/bunker-supply/stabia-oil.jpg"
-                  alt="STABIAOIL"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-montserrat text-primary mb-4">
-                STABIAOIL
-              </h3>
-              <p className="text-gray-600">
-                STABIAOIL es nuestro proveedor de servicios.
-              </p>
-            </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between"
+                >
+                  <div className="relative h-32 mb-6">
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-contain"
+                      />
+                    ) : item.images ? (
+                      <div className="flex gap-4 h-full">
+                        {item.images.map((img) => (
+                          <div key={img.alt} className="relative flex-1">
+                            <Image
+                              src={img.src}
+                              alt={img.alt}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                  <h3 className="text-xl font-montserrat text-primary mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{item.description}</p>
+                  {item.link && (
+                    <div className="flex justify-center items-end">
+                      <Button
+                        component="a"
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        unstyled
+                        className="inline-flex items-center text-primary hover:text-primary/75"
+                      >
+                        Visitar <ExternalLink className="ml-2 w-4 h-4" />
+                      </Button>
+                    </div>
+                  )}
+                </motion.div>
+              </Link>
+            ))}
           </div>
         </div>
       </motion.div>
@@ -285,7 +218,7 @@ export default function BunkerSupplyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
-              className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-primary/5 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow border"
             >
               <div className="flex items-center gap-2">
                 <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
@@ -309,106 +242,104 @@ export default function BunkerSupplyPage() {
             </motion.div>
           ))}
         </div>
-        <section className="bg-gradient-to-b from-white to-gray-50">
-          <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-24 max-w-[1400px]">
+        <div className="container mx-auto px-4 py-10 sm:py-12 lg:py-14 max-w-[1400px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
+              Nuestra Experiencia
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Más de una década de experiencia en el sector marítimo nos
+              respalda
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Global Experience Card */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
+              className="bg-primary/5 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
             >
-              <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
-                Nuestra Experiencia
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Más de una década de experiencia en el sector marítimo nos
-                respalda
+              <div className="flex items-center gap-4 mb-6">
+                <h3 className="font-montserrat text-2xl text-primary">
+                  Experiencia Global
+                </h3>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                En Menorca Brokers, somos especialistas en conectar armadores y
+                fletadores, ofreciendo soluciones integrales para la compra,
+                venta y alquiler de buques o charter por tiempo.
               </p>
+              <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                {features1.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className=" backdrop-blur-sm rounded-xl p-6 text-center"
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+                      {feature.icon}
+                    </div>
+                    <h4 className="font-montserrat text-lg text-primary mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 text-md">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              {/* Global Experience Card */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <h3 className="font-montserrat text-2xl text-primary">
-                    Experiencia Global
-                  </h3>
-                </div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  En Menorca Brokers, somos especialistas en conectar armadores
-                  y fletadores, ofreciendo soluciones integrales para la compra,
-                  venta y alquiler de buques o charter por tiempo.
-                </p>
-                <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                  {features1.map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center"
-                    >
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                        {feature.icon}
-                      </div>
-                      <h4 className="font-montserrat text-lg text-primary mb-2">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        {feature.description}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Expert Knowledge Card */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <h3 className="font-montserrat text-2xl text-primary">
-                    Conocimiento Experto
-                  </h3>
-                </div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Combinamos un profundo conocimiento del sector marítimo con
-                  una red global de contactos, lo que nos permite garantizar
-                  acuerdos eficientes y personalizados.
-                </p>
-                <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                  {features2.map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center"
-                    >
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                        {feature.icon}
-                      </div>
-                      <h4 className="font-montserrat text-lg text-primary mb-2">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        {feature.description}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+            {/* Expert Knowledge Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-primary/5 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <h3 className="font-montserrat text-2xl text-primary">
+                  Conocimiento Experto
+                </h3>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Combinamos un profundo conocimiento del sector marítimo con una
+                red global de contactos, lo que nos permite garantizar acuerdos
+                eficientes y personalizados.
+              </p>
+              <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                {features2.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className=" backdrop-blur-sm rounded-xl p-6 text-center"
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+                      {feature.icon}
+                    </div>
+                    <h4 className="font-montserrat text-lg text-primary mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 text-md">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
-        </section>
+        </div>
       </motion.div>
 
       {/* CTA Section */}
@@ -444,6 +375,44 @@ export default function BunkerSupplyPage() {
 //   { value: "50+", label: "Socios Globales" },
 //   { value: "24/7", label: "Soporte Disponible" },
 // ];
+
+const marketIndices = [
+  {
+    title: "Shipandbunker",
+    description:
+      "Consulta los precios del mercado de combustibles marinos en los principales puertos del mundo.",
+    image: "/img/bunker-supply/ship-bunker.png",
+    link: "https://shipandbunker.com/prices",
+  },
+  {
+    title: "Baltic Exchange",
+    description:
+      "Consulta el mercado de la carga actualizado a diario con el Baltic Exchange.",
+    image: "/img/bunker-supply/baltic-exchange.png",
+    link: "https://www.balticexchange.com/en/index.html",
+  },
+  {
+    title: "CEPSA & MOEVE",
+    description: "Cargamos combustible CEPSA - MOEVE",
+    images: [
+      {
+        src: "/img/bunker-supply/cepsa.jpg",
+        alt: "CEPSA",
+      },
+      {
+        src: "/img/bunker-supply/moeve.png",
+        alt: "MOEVE",
+      },
+    ],
+    link: "https://rafamoreno.es/rebranding-cepsa-moeve/",
+  },
+  {
+    title: "STABIAOIL",
+    description: "STABIAOIL es nuestro proveedor de servicios.",
+    image: "/img/bunker-supply/stabia-oil.jpg",
+    link: "http://www.stabiaoil.com/",
+  },
+];
 
 export const features1 = [
   {
