@@ -33,6 +33,23 @@ export default function ContactPage() {
 
   const services = [
     {
+      id: "reunion",
+      title: "Reunión Presencial",
+      duration: "30 min",
+    },
+    {
+      id: "presentation",
+      title: "Llamada de presentación",
+      duration: "30 min",
+    },
+    {
+      id: "appraisal",
+      title: "Tasación básica",
+      duration: "2h",
+      price: "€300.00",
+
+    },
+    {
       id: "market-analysis",
       title: "Análisis de mercado de compraventa",
       duration: "1h",
@@ -48,6 +65,36 @@ export default function ContactPage() {
     {
       id: "yacht-purchase",
       title: "Compra de Yate o embarcación",
+      duration: "30m",
+      category: "yacht-broker",
+    },
+    {
+      id: "charter",
+      title: "Solicitud de charter",
+      duration: "30m",
+      category: "yacht-charter",
+    },
+    {
+      id: "consultancy",
+      title: "Consultoría Náutica",
+      duration: "30m",
+      category: "yacht-broker",
+    },
+    {
+      id: "added-value",
+      title: "Solicitud de Servicios de Valor Añadido",
+      duration: "30m",
+      category: "yacht-broker",
+    },
+    {
+      id: "ship-sale",
+      title: "Ship Sale & Purchase analysis and service request",
+      duration: "30m",
+      category: "yacht-broker",
+    },
+    {
+      id: "charter-service",
+      title: "Charter Service",
       duration: "30m",
       category: "yacht-broker",
     },
