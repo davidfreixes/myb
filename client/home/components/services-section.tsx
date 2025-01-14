@@ -67,7 +67,7 @@ const services = [
     description:
       "Actuamos de Ship Broker y Charterer. Consulta nuestro daily y contáctanos si quieres cerrar un fixture.",
     image: "/img/ship-broker.jpg",
-    link: `${NAVIGATION_LINKS.SHIP_BROKER}`,
+    link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
   },
   {
     title: "Servicios de Valor Añadido",
