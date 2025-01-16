@@ -1,4 +1,4 @@
-import AboutUs from "@/client/general/home/quienes-somos";
+import AboutUs from "@/client/general/home/about-us";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 

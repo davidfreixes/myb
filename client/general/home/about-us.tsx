@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Andreu Martinez",
     role: "Yacht Broker & Charterer",
-    image: "/img/team/andreu-martinez.jpg",
+    image: "/img/team/andreu.jpeg",
     bio: [
       "Andreu Martínez Parera es un broker con una sólida formación académica en el ámbito marítimo.",
       "Formado en el Instituto Marítimo Español y en el Institute of Chartered Shipbrokers de Londres. Además, cuenta con una carrera en Náutica, habiendo obtenido su título en Ciencias Náuticas con especialización en Transporte Marítimo. Su educación se complementa con un Máster en Gestión del Transporte Marítimo y una formación de Postgrado en Logística y Supply Chain, lo que le ha permitido desarrollar una visión integral del sector.",
