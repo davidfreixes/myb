@@ -2,11 +2,11 @@ import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
-  Fuel,
-  Building2,
+  Database,
+  Building,
   FileText,
   MenuIcon,
-  Package,
+  Newspaper,
   Plus,
   Scale,
   ScrollText,
@@ -53,7 +53,7 @@ const navigation: NavItem[] = [
       {
         label: "Bunker Supply",
         href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
-        icon: <Fuel size={20} />,
+        icon: <Database size={20} />,
         description: "Servicios de intermediación",
       },
       {
@@ -91,13 +91,13 @@ const navigation: NavItem[] = [
       {
         label: "Proveedores y distribuidores",
         href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
-        icon: <Building2 size={20} />,
+        icon: <Building size={20} />,
         description: "Red de colaboradores y partners",
       },
       {
         label: "Diario del Puerto de Mahón",
         href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
-        icon: <Package size={20} />,
+        icon: <Newspaper size={20} />,
         description: "Noticias y actualidad portuaria",
       },
     ],

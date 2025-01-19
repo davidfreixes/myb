@@ -35,7 +35,7 @@ export default function Contact() {
 
       {/* Contact Options */}
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16 max-w-[1400px]">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="flex w-full gap-8 md:gap-12">
           <ContactForm />
           <Appointment />
         </div>
