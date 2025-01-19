@@ -1,14 +1,44 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, MapPin } from "lucide-react";
+import { useRef } from "react";
 
 const teamMembers = [
+  {
+    name: "Daniel Ortega",
+    role: "Freelance Yacht Broker & Event Planning",
+    location: "Belgium",
+    email: "daniel@menorcabrokers.com",
+    image: "/img/team/daniel-ortega.jpg",
+  },
+  {
+    name: "Grigoris Psomas",
+    role: "Freelance Yacht & Charter Broker",
+    location: "The Netherlands",
+    email: "grigoris@menorcabrokers.com",
+    image: "/img/team/grigoris-psomas.jpg",
+  },
+  {
+    name: "Christine Giannouli",
+    role: "Freelance Yacht & Charter Broker",
+    location: "Greece",
+    email: "christine@menorcabrokers.com",
+    image: "/img/team/christine-giannouli.jpg",
+  },
+  {
+    name: "David Freixes",
+    role: "IT Developer & Co-Owner",
+    location: "Spain",
+    image: "/img/team/david-freixes.jpg",
+  },
   {
     name: "Andreu Martinez",
     role: "Yacht Broker & Charterer",
     image: "/img/team/andreu.jpeg",
+    location: "Spain",
+    email: "contact@menorcabrokers.com",
     bio: [
       "Andreu Martínez Parera es un broker con una sólida formación académica en el ámbito marítimo.",
       "Formado en el Instituto Marítimo Español y en el Institute of Chartered Shipbrokers de Londres. Además, cuenta con una carrera en Náutica, habiendo obtenido su título en Ciencias Náuticas con especialización en Transporte Marítimo. Su educación se complementa con un Máster en Gestión del Transporte Marítimo y una formación de Postgrado en Logística y Supply Chain, lo que le ha permitido desarrollar una visión integral del sector.",
@@ -21,10 +51,21 @@ const teamMembers = [
 ];
 
 export default function AboutUs() {
+  const teamSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = () => {
+    if (teamSectionRef.current) {
+      teamSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Adjusted height for mobile */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[55vh] w-full">
         <Image
           src="/img/yacht-1.jpg"
           alt="Interior de yate de lujo"
@@ -40,7 +81,7 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl flex items-center justify-center mx-auto"
           >
-            <div className="space-y-3 sm:space-y-4 flex flex-col items-center px-4">
+            <div className="space-y-3 sm:space-y-4 flex flex-col items-center px-4 mt-12">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary mb-2 sm:mb-4 text-center">
                 Quiénes Somos en Menorca Brokers
               </h1>
@@ -49,8 +90,7 @@ export default function AboutUs() {
                 experiencia de compra exitosa.
               </h2>
               <Button
-                component={Link}
-                href={`${NAVIGATION_LINKS.CONTACTO}`}
+                onClick={scrollToSection}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors mt-4"
               >
@@ -60,68 +100,85 @@ export default function AboutUs() {
           </motion.div>
         </div>
       </div>
-
-      {/* Team Section - Improved responsive layout */}
-      <div className="bg-white py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 bg-white max-w-[1400px] mx-auto">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-8 sm:mb-12 lg:mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary mb-2 sm:mb-4">
-              Un mar de conocimiento
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4">
+              Nuestro equipo
             </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              Conoce a nuestro equipo de expertos en el sector náutico
+            <p className="text-gray-600 max-w-3xl mx-auto text-base sm:text-lg">
+              Nuestro equipo está formado por profesionales altamente
+              cualificados y motivados, todos ellos expertos en su campo. Con
+              muchos años de experiencia en la industria, tienen la experiencia
+              para proporcionar servicios completos y de primera clase a
+              nuestros clientes.
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto">
+          <div
+            ref={teamSectionRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8 sm:mb-12"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
               >
-                <div className="flex flex-col md:grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 bg-primary/20 border rounded-lg shadow-lg overflow-hidden">
-                  <div className="md:col-span-1 flex flex-col items-center mb-6 md:mb-0">
-                    <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-full md:h-72">
+                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div className="flex justify-center">
+                    <div className="relative h-40 w-40">
                       <Image
-                        src={member.image}
+                        src={member.image || "/placeholder.svg"}
                         alt={member.name}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-cover object-center rounded-full group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="text-center mt-4">
-                      <h3 className="font-montserrat text-xl sm:text-2xl text-primary mb-2">
-                        {member.name}
-                      </h3>
-                      <p className="text-gray-600 font-medium text-sm sm:text-base">
-                        {member.role}
-                      </p>
-                    </div>
                   </div>
-                  <div className="md:col-span-2 space-y-3 sm:space-y-4">
-                    {member.bio.map((paragraph, i) => (
-                      <p
-                        key={i}
-                        className="text-sm sm:text-base text-gray-700 leading-relaxed"
+                  <div className="p-6">
+                    <h3 className="text-xl font-montserrat font-medium text-gray-900 mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-primary font-medium mb-4">
+                      {member.role}
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center text-gray-600">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span className="text-sm">{member.location}</span>
+                      </div>
+                      {member.email && (
+                        <div className="flex items-center text-gray-600">
+                          <Mail className="w-4 h-4 mr-2" />
+                          <span className="text-sm">{member.email}</span>
+                        </div>
+                      )}
+                    </div>
+                    {member.email && (
+                      <Button
+                        component="a"
+                        href={`mailto:${member.email}`}
+                        variant="outline"
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
                       >
-                        {paragraph}
-                      </p>
-                    ))}
+                        Contáctame
+                      </Button>
+                    )}
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Contact Section - Responsive adjustments */}
       <div className="relative bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-24 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
