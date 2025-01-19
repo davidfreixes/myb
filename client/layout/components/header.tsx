@@ -2,9 +2,9 @@ import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
+  Fuel,
   Building2,
   FileText,
-  HelpCircle,
   MenuIcon,
   Package,
   Plus,
@@ -53,7 +53,7 @@ const navigation: NavItem[] = [
       {
         label: "Bunker Supply",
         href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
-        icon: <ShipWheel size={20} />,
+        icon: <Fuel size={20} />,
         description: "Servicios de intermediación",
       },
       {
@@ -71,7 +71,7 @@ const navigation: NavItem[] = [
       {
         label: "Asesoría Náutica",
         href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
-        icon: <HelpCircle size={20} />,
+        icon: <ShipWheel size={20} />,
         description: "Consultoría especializada",
       },
 

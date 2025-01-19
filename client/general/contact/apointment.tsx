@@ -1,48 +1,49 @@
-import { Button, Radio, TextInput } from "@mantine/core";
-import { motion } from "framer-motion";
-import { Calendar, Clock, Mail, Phone, User } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+
+
+import { Button, Radio, TextInput } from "@mantine/core"
+import { motion } from "framer-motion"
+import { Calendar, Clock, Mail, Phone, User, Anchor, Ship, Clipboard, Building2, PackageSearch, ShipWheel, PlaneTakeoff } from 'lucide-react'
+import { useState } from "react"
 
 const services = [
-//   {
-//     id: "reunion",
-//     title: "Reunión Presencial",
-//     duration: "30 min",
-//     category: "all",
-//   },
-//   {
-//     id: "presentation",
-//     title: "Llamada de presentación",
-//     duration: "30 min",
-//     category: "all",
-//   },
+  // {
+  //   id: "reunion",
+  //   title: "Reunión Presencial",
+  //   duration: "30 min",
+  //   category: "all"
+  // },
+  // {
+  //   id: "presentation",
+  //   title: "Llamada de presentación",
+  //   duration: "30 min",
+  //   category: "all"
+  // },
   // Yacht Broker services
   {
     id: "market-analysis",
     title: "Análisis de mercado de compraventa",
     duration: "1h",
     price: "€50.00",
-    category: "yacht-broker",
+    category: "yacht-broker"
   },
   {
     id: "yacht-sale",
     title: "Oferta de venta de un Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker",
+    category: "yacht-broker"
   },
   {
     id: "yacht-purchase",
     title: "Compra de Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker",
+    category: "yacht-broker"
   },
   // Yacht Charter services
   {
     id: "charter-request",
     title: "Solicitud de charter",
     duration: "30m",
-    category: "yacht-charter",
+    category: "yacht-charter"
   },
   // Inspecciones y Tasaciones
   {
@@ -50,37 +51,37 @@ const services = [
     title: "Tasación básica",
     duration: "2h",
     price: "€300.00",
-    category: "inspections",
+    category: "inspections"
   },
   // Consultoría Náutica
   {
     id: "nautical-consulting",
     title: "Consultoría náutica",
     duration: "1h",
-    category: "consulting",
+    category: "consulting"
   },
   // Servicios de Valor Añadido
   {
     id: "value-added-services",
     title: "Solicitud de Servicios de Valor Añadido",
     duration: "30m",
-    category: "value-added",
+    category: "value-added"
   },
   // Ship Sale & Purchase Broker
   {
     id: "ship-sale-purchase",
     title: "Ship Sale & Purchase analysis and service request",
     duration: "1h",
-    category: "ship-broker",
+    category: "ship-broker"
   },
   // Charter Broker
   {
     id: "charter-service",
     title: "Charter service",
     duration: "30m",
-    category: "charter-broker",
-  },
-];
+    category: "charter-broker"
+  }
+]
 
 const categories = [
   { value: "all", label: "TODO" },
@@ -90,18 +91,18 @@ const categories = [
   { value: "consulting", label: "Consultoría Náutica" },
   { value: "value-added", label: "Servicios de Valor Añadido" },
   { value: "ship-broker", label: "Ship Sale & Purchase Broker" },
-  { value: "charter-broker", label: "Charter Broker" },
-];
+  { value: "charter-broker", label: "Charter Broker" }
+]
 
 const steps = [
   { id: "service", label: "Servicio" },
   { id: "datetime", label: "Fecha & Hora" },
   { id: "details", label: "Detalles básicos" },
-  { id: "summary", label: "Resumen" },
-];
+  { id: "summary", label: "Resumen" }
+]
 
 export default function Appointment() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0)
   const [scheduleData, setScheduleData] = useState({
     category: "",
     service: "",
@@ -109,23 +110,23 @@ export default function Appointment() {
     time: "",
     name: "",
     email: "",
-    phone: "",
-  });
+    phone: ""
+  })
 
   const handleNext = () => {
-    setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
-  };
+    setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))
+  }
 
   const handleBack = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 0));
-  };
+    setCurrentStep((prev) => Math.max(prev - 1, 0))
+  }
 
   const filteredServices = services.filter(
     (service) =>
       scheduleData.category === "all" ||
       service.category === scheduleData.category ||
       service.category === "all"
-  );
+  )
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -150,7 +151,7 @@ export default function Appointment() {
                       setScheduleData({
                         ...scheduleData,
                         category: category.value,
-                        service: "", // Reset service when category changes
+                        service: "" // Reset service when category changes
                       })
                     }
                   >
@@ -176,19 +177,32 @@ export default function Appointment() {
                     onClick={() =>
                       setScheduleData({
                         ...scheduleData,
-                        service: service.id,
+                        service: service.id
                       })
                     }
                   >
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                        <Image
-                          src="/placeholder.svg"
-                          alt=""
-                          width={20}
-                          height={20}
-                          className="w-4 h-4 sm:w-5 sm:h-5"
-                        />
+                        {(() => {
+                          switch (service.category) {
+                            case 'yacht-broker':
+                              return <Ship className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'yacht-charter':
+                              return <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'inspections':
+                              return <Clipboard className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'consulting':
+                              return <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'value-added':
+                              return <PackageSearch className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'ship-broker':
+                              return <ShipWheel className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            case 'charter-broker':
+                              return <PlaneTakeoff className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                            default:
+                              return <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                          }
+                        })()}
                       </div>
                       <div className="flex-1">
                         <h4 className="font-medium text-sm sm:text-base">
@@ -210,7 +224,7 @@ export default function Appointment() {
               </div>
             </div>
           </div>
-        );
+        )
       case 1:
         return (
           <div className="space-y-4">
@@ -236,7 +250,7 @@ export default function Appointment() {
               }
             />
           </div>
-        );
+        )
       case 2:
         return (
           <div className="space-y-4">
@@ -271,7 +285,7 @@ export default function Appointment() {
               }
             />
           </div>
-        );
+        )
       case 3:
         return (
           <div className="space-y-4">
@@ -309,11 +323,11 @@ export default function Appointment() {
               </dl>
             </div>
           </div>
-        );
+        )
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   return (
     <motion.div
@@ -363,9 +377,7 @@ export default function Appointment() {
         ))}
       </div>
 
-      <div className="min-h-[300px] sm:min-h-[400px]">
-        {renderStepContent()}
-      </div>
+      <div className="min-h-[300px] sm:min-h-[400px]">{renderStepContent()}</div>
 
       <div className="flex justify-between mt-6 sm:mt-8">
         {currentStep > 0 && (
@@ -387,5 +399,6 @@ export default function Appointment() {
         </Button>
       </div>
     </motion.div>
-  );
+  )
 }
+

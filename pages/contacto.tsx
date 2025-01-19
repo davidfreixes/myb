@@ -1,4 +1,4 @@
-import Contact from "@/client/general/home/contact";
+import Contact from "@/client/general/contact/contact";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 
