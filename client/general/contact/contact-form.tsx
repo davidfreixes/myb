@@ -162,7 +162,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full h-full flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border"
+      className="w-full flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border"
     >
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
         Formulario de Contacto
@@ -273,12 +273,11 @@ export default function ContactForm() {
             {submitStatus.message}
           </div>
         )}
-
         <Button
           type="submit"
           fullWidth
           unstyled
-          className={`bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-sm sm:text-base transition-all ${
+          className={`w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-sm sm:text-base transition-all ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLoading}

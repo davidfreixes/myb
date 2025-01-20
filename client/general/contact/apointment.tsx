@@ -124,15 +124,15 @@ const steps = [
 const serviceIcons = {
   reunion: User,
   presentation: Phone,
-  "market-analysis": PackageSearch,
-  "yacht-sale": Ship,
-  "yacht-purchase": Anchor,
-  "charter-request": ShipWheel,
-  "basic-appraisal": Clipboard,
-  "nautical-consulting": Building2,
-  "value-added-services": PlaneTakeoff,
-  "ship-sale-purchase": Ship,
-  "charter-service": ShipWheel,
+  "Análisis de mercado de compraventa": PackageSearch,
+  "Oferta de venta de un Yate o embarcación": Ship,
+  "Compra de Yate o embarcación": Anchor,
+  "Solicitud de charter": ShipWheel,
+  "Tasación básica": Clipboard,
+  "Consultoría náutica": Building2,
+  "Solicitud de Servicios de Valor Añadido": PlaneTakeoff,
+  "Ship Sale & Purchase analysis and service request": Ship,
+  "Charter service": ShipWheel,
 };
 
 export default function Appointment() {
@@ -373,7 +373,10 @@ export default function Appointment() {
               {errors.service && (
                 <p className="text-red-500 text-sm mb-2">{errors.service}</p>
               )}
-              <div className="space-y-3">
+              <div
+                className="space-y-3 overflow-y-auto max-h-[400px]"
+              >
+                {" "}
                 {filteredServices.map((service) => (
                   <div
                     key={service.id}
@@ -427,7 +430,7 @@ export default function Appointment() {
             <TextInput
               required
               type="date"
-              label="Fecha Preferida"
+              label="Fecha"
               value={scheduleData.date}
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, date: e.target.value })
@@ -436,7 +439,7 @@ export default function Appointment() {
               error={errors.date}
             />
             <div className="space-y-2">
-              <label className="text-sm font-medium">Hora Preferida</label>
+              <label className="text-sm font-medium">Hora</label>
               {errors.time && (
                 <p className="text-red-500 text-sm">{errors.time}</p>
               )}
