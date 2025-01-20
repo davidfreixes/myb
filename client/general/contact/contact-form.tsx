@@ -4,6 +4,7 @@ import { Mail, Phone, User } from "lucide-react";
 import { useState } from "react";
 
 interface FormData {
+  type: string;
   name: string;
   email: string;
   phone: string;
@@ -20,6 +21,7 @@ interface FormErrors {
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
+    type: "FORMULARIO DE CONTACTO",
     name: "",
     email: "",
     phone: "",
@@ -131,6 +133,7 @@ export default function ContactForm() {
             "¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.",
         });
         setFormData({
+          type: "",
           name: "",
           email: "",
           phone: "",

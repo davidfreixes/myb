@@ -14,84 +14,84 @@ import {
   ShipWheel,
   PlaneTakeoff,
 } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const services = [
   {
-    id: "reunion",
+    id: "Reunión Presencial",
     title: "Reunión Presencial",
     duration: "30 min",
     category: "TODO",
   },
   {
-    id: "presentation",
+    id: "Llamada de presentación",
     title: "Llamada de presentación",
     duration: "30 min",
     category: "TODO",
   },
   // Yacht Broker services
   {
-    id: "market-analysis",
+    id: "Análisis de mercado de compraventa",
     title: "Análisis de mercado de compraventa",
     duration: "1h",
     price: "€50.00",
-    category: "yacht-broker",
+    category: "Yacht Broker",
   },
   {
-    id: "yacht-sale",
+    id: "Oferta de venta de un Yate o embarcación",
     title: "Oferta de venta de un Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker",
+    category: "Yacht Broker",
   },
   {
-    id: "yacht-purchase",
+    id: "Compra de Yate o embarcación",
     title: "Compra de Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker",
+    category: "Yacht Broker",
   },
   // Yacht Charter services
   {
-    id: "charter-request",
+    id: "Solicitud de charter",
     title: "Solicitud de charter",
     duration: "30m",
-    category: "yacht-charter",
+    category: "Yacht Charter",
   },
   // Inspecciones y Tasaciones
   {
-    id: "basic-appraisal",
+    id: "Tasación básica",
     title: "Tasación básica",
     duration: "2h",
     price: "€300.00",
-    category: "inspections",
+    category: "Inspecciones y Tasaciones",
   },
   // Consultoría Náutica
   {
-    id: "nautical-consulting",
+    id: "Consultoría náutica",
     title: "Consultoría náutica",
     duration: "1h",
-    category: "consulting",
+    category: "Consultoría náutica",
   },
   // Servicios de Valor Añadido
   {
-    id: "value-added-services",
+    id: "Solicitud de Servicios de Valor Añadido",
     title: "Solicitud de Servicios de Valor Añadido",
     duration: "30m",
-    category: "value-added",
+    category: "Servicios de Valor Añadido",
   },
   // Ship Sale & Purchase Broker
   {
-    id: "ship-sale-purchase",
+    id: "Ship Sale & Purchase analysis and service request",
     title: "Ship Sale & Purchase analysis and service request",
     duration: "1h",
-    category: "ship-broker",
+    category: "Ship broker",
   },
   // Charter Broker
   {
-    id: "charter-service",
+    id: "Charter service",
     title: "Charter service",
     duration: "30m",
-    category: "charter-broker",
+    category: "Charter broker",
   },
 ];
 
@@ -104,13 +104,13 @@ const timeSlots = [
 
 const categories = [
   { value: "all", label: "TODO" },
-  { value: "yacht-broker", label: "Yacht Broker" },
-  { value: "yacht-charter", label: "Yacht Charter" },
-  { value: "inspections", label: "Inspecciones y Tasaciones" },
-  { value: "consulting", label: "Consultoría Náutica" },
-  { value: "value-added", label: "Servicios de Valor Añadido" },
-  { value: "ship-broker", label: "Ship Sale & Purchase Broker" },
-  { value: "charter-broker", label: "Charter Broker" },
+  { value: "Yacht Broker", label: "Yacht Broker" },
+  { value: "Yacht Charter", label: "Yacht Charter" },
+  { value: "Inspecciones y Tasaciones", label: "Inspecciones y Tasaciones" },
+  { value: "Consultoría náutica", label: "Consultoría Náutica" },
+  { value: "Servicios de Valor Añadido", label: "Servicios de Valor Añadido" },
+  { value: "Ship broker", label: "Ship Sale & Purchase Broker" },
+  { value: "Charter broker", label: "Charter Broker" },
 ];
 
 const steps = [
@@ -150,6 +150,7 @@ export default function Appointment() {
   });
 
   const [scheduleData, setScheduleData] = useState({
+    type: "RESERVA DE UNA CITA",
     category: "",
     service: "",
     date: "",
@@ -159,8 +160,49 @@ export default function Appointment() {
     phone: "",
   });
 
+  // Add useEffect for real-time validation
+  useEffect(() => {
+    const newErrors = { ...errors };
+
+    // Validate current step fields in real-time
+    switch (currentStep) {
+      case 0:
+        if (scheduleData.category) {
+          delete newErrors.category;
+        }
+        if (scheduleData.service) {
+          delete newErrors.service;
+        }
+        break;
+      case 1:
+        if (scheduleData.date) {
+          delete newErrors.date;
+        }
+        if (scheduleData.time) {
+          delete newErrors.time;
+        }
+        break;
+      case 2:
+        if (scheduleData.name) {
+          delete newErrors.name;
+        }
+        if (scheduleData.email) {
+          if (/\S+@\S+\.\S+/.test(scheduleData.email)) {
+            delete newErrors.email;
+          }
+        }
+        if (scheduleData.phone) {
+          delete newErrors.phone;
+        }
+        break;
+    }
+
+    setErrors(newErrors);
+  }, [scheduleData, currentStep, errors]); // Only re-run when scheduleData, currentStep, or errors changes
+
+  // Modified validateStep to handle validation without clearing previous errors
   const validateStep = (step: number): boolean => {
-    const newErrors: { [key: string]: string } = {};
+    const newErrors: { [key: string]: string } = { ...errors };
 
     switch (step) {
       case 0:
@@ -220,11 +262,8 @@ export default function Appointment() {
         const selectedService = services.find(
           (s) => s.id === scheduleData.service
         );
-        if (selectedService) {
-          submitFormData.append("service_title", selectedService.title);
-          if (selectedService.price) {
-            submitFormData.append("service_price", selectedService.price);
-          }
+        if (selectedService && selectedService.price) {
+          submitFormData.append("service_price", selectedService.price);
         }
 
         const object = Object.fromEntries(submitFormData);
@@ -247,6 +286,7 @@ export default function Appointment() {
             message: "¡Cita reservada correctamente!",
           });
           setScheduleData({
+            type: "",
             category: "",
             service: "",
             date: "",
@@ -267,6 +307,7 @@ export default function Appointment() {
         });
       } finally {
         setIsLoading(false);
+        setConfirmData(false);
       }
     }
   };
@@ -550,9 +591,7 @@ export default function Appointment() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
-        <div className="flex-1">
-          {renderStepContent()}
-        </div>
+        <div className="flex-1">{renderStepContent()}</div>
 
         {submitStatus.type && (
           <div
