@@ -1,11 +1,10 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
-import { Button } from "@mantine/core";
+import { Button, Tooltip } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
   Anchor,
   BarChart2,
   Download,
-  ExternalLink,
   Globe2,
   ShieldCheck,
   Ship,
@@ -133,17 +132,21 @@ export default function BunkerSupplyPage() {
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {marketIndices.map((item, index) => (
-              <Link
+              <Tooltip.Floating
+                label="Visitar página web"
+                position="right"
                 key={item.title}
-                href={item.link || "#"}
-                target={item.link ? "_blank" : undefined}
-                rel={item.link ? "noopener noreferrer" : undefined}
               >
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between"
+                  onClick={() => {
+                    if (item.link) {
+                      window.open(item.link, "_blank", "noopener noreferrer");
+                    }
+                  }}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between cursor-pointer"
                 >
                   <div className="relative h-32 mb-6">
                     {item.image ? (
@@ -172,22 +175,8 @@ export default function BunkerSupplyPage() {
                     {item.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  {item.link && (
-                    <div className="flex justify-center items-end">
-                      <Button
-                        component="a"
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        unstyled
-                        className="inline-flex items-center text-primary hover:text-primary/75"
-                      >
-                        Visitar <ExternalLink className="ml-2 w-4 h-4" />
-                      </Button>
-                    </div>
-                  )}
                 </motion.div>
-              </Link>
+              </Tooltip.Floating>
             ))}
           </div>
         </div>
