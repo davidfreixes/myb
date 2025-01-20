@@ -1,49 +1,61 @@
+"use client";
 
-
-import { Button, Radio, TextInput } from "@mantine/core"
-import { motion } from "framer-motion"
-import { Calendar, Clock, Mail, Phone, User, Anchor, Ship, Clipboard, Building2, PackageSearch, ShipWheel, PlaneTakeoff } from 'lucide-react'
-import { useState } from "react"
+import { Button, Radio, TextInput } from "@mantine/core";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  User,
+  Anchor,
+  Ship,
+  Clipboard,
+  Building2,
+  PackageSearch,
+  ShipWheel,
+  PlaneTakeoff,
+} from "lucide-react";
+import React from "react";
+import { useState } from "react";
 
 const services = [
-  // {
-  //   id: "reunion",
-  //   title: "Reunión Presencial",
-  //   duration: "30 min",
-  //   category: "all"
-  // },
-  // {
-  //   id: "presentation",
-  //   title: "Llamada de presentación",
-  //   duration: "30 min",
-  //   category: "all"
-  // },
+  {
+    id: "reunion",
+    title: "Reunión Presencial",
+    duration: "30 min",
+    category: "TODO",
+  },
+  {
+    id: "presentation",
+    title: "Llamada de presentación",
+    duration: "30 min",
+    category: "TODO",
+  },
   // Yacht Broker services
   {
     id: "market-analysis",
     title: "Análisis de mercado de compraventa",
     duration: "1h",
     price: "€50.00",
-    category: "yacht-broker"
+    category: "yacht-broker",
   },
   {
     id: "yacht-sale",
     title: "Oferta de venta de un Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker"
+    category: "yacht-broker",
   },
   {
     id: "yacht-purchase",
     title: "Compra de Yate o embarcación",
     duration: "30m",
-    category: "yacht-broker"
+    category: "yacht-broker",
   },
   // Yacht Charter services
   {
     id: "charter-request",
     title: "Solicitud de charter",
     duration: "30m",
-    category: "yacht-charter"
+    category: "yacht-charter",
   },
   // Inspecciones y Tasaciones
   {
@@ -51,37 +63,44 @@ const services = [
     title: "Tasación básica",
     duration: "2h",
     price: "€300.00",
-    category: "inspections"
+    category: "inspections",
   },
   // Consultoría Náutica
   {
     id: "nautical-consulting",
     title: "Consultoría náutica",
     duration: "1h",
-    category: "consulting"
+    category: "consulting",
   },
   // Servicios de Valor Añadido
   {
     id: "value-added-services",
     title: "Solicitud de Servicios de Valor Añadido",
     duration: "30m",
-    category: "value-added"
+    category: "value-added",
   },
   // Ship Sale & Purchase Broker
   {
     id: "ship-sale-purchase",
     title: "Ship Sale & Purchase analysis and service request",
     duration: "1h",
-    category: "ship-broker"
+    category: "ship-broker",
   },
   // Charter Broker
   {
     id: "charter-service",
     title: "Charter service",
     duration: "30m",
-    category: "charter-broker"
-  }
-]
+    category: "charter-broker",
+  },
+];
+
+// Define available time slots
+const timeSlots = [
+  { id: "13:15-14:15", label: "13:15 - 14:15" },
+  { id: "14:15-15:15", label: "14:15 - 15:15" },
+  { id: "15:15-16:15", label: "15:15 - 16:15" },
+];
 
 const categories = [
   { value: "all", label: "TODO" },
@@ -91,18 +110,43 @@ const categories = [
   { value: "consulting", label: "Consultoría Náutica" },
   { value: "value-added", label: "Servicios de Valor Añadido" },
   { value: "ship-broker", label: "Ship Sale & Purchase Broker" },
-  { value: "charter-broker", label: "Charter Broker" }
-]
+  { value: "charter-broker", label: "Charter Broker" },
+];
 
 const steps = [
   { id: "service", label: "Servicio" },
   { id: "datetime", label: "Fecha & Hora" },
   { id: "details", label: "Detalles básicos" },
-  { id: "summary", label: "Resumen" }
-]
+  { id: "summary", label: "Resumen" },
+];
+
+// First, let's add the service icons mapping
+const serviceIcons = {
+  reunion: User,
+  presentation: Phone,
+  "market-analysis": PackageSearch,
+  "yacht-sale": Ship,
+  "yacht-purchase": Anchor,
+  "charter-request": ShipWheel,
+  "basic-appraisal": Clipboard,
+  "nautical-consulting": Building2,
+  "value-added-services": PlaneTakeoff,
+  "ship-sale-purchase": Ship,
+  "charter-service": ShipWheel,
+};
 
 export default function Appointment() {
-  const [currentStep, setCurrentStep] = useState(0)
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({
+    type: null,
+    message: "",
+  });
+
   const [scheduleData, setScheduleData] = useState({
     category: "",
     service: "",
@@ -110,23 +154,140 @@ export default function Appointment() {
     time: "",
     name: "",
     email: "",
-    phone: ""
-  })
+    phone: "",
+  });
+
+  const validateStep = (step: number): boolean => {
+    const newErrors: { [key: string]: string } = {};
+
+    switch (step) {
+      case 0:
+        if (!scheduleData.category) {
+          newErrors.category = "Seleccione una categoría";
+        }
+        if (!scheduleData.service) {
+          newErrors.service = "Seleccione un servicio";
+        }
+        break;
+      case 1:
+        if (!scheduleData.date) {
+          newErrors.date = "Seleccione una fecha";
+        }
+        if (!scheduleData.time) {
+          newErrors.time = "Seleccione una hora";
+        }
+        break;
+      case 2:
+        if (!scheduleData.name) {
+          newErrors.name = "Ingrese su nombre";
+        }
+        if (!scheduleData.email) {
+          newErrors.email = "Ingrese su email";
+        } else if (!/\S+@\S+\.\S+/.test(scheduleData.email)) {
+          newErrors.email = "Ingrese un email válido";
+        }
+        if (!scheduleData.phone) {
+          newErrors.phone = "Ingrese su teléfono";
+        }
+        break;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    if (currentStep !== steps.length - 1) return;
+
+    if (!validateStep(2)) return; // Validate all fields before final submission
+
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const submitFormData = new FormData();
+      submitFormData.append(
+        "access_key",
+        "9ad33da4-1059-4457-9fd4-c21eeb8d1e37"
+      );
+
+      Object.entries(scheduleData).forEach(([key, value]) => {
+        submitFormData.append(key, value);
+      });
+
+      const selectedService = services.find(
+        (s) => s.id === scheduleData.service
+      );
+      if (selectedService) {
+        submitFormData.append("service_title", selectedService.title);
+        if (selectedService.price) {
+          submitFormData.append("service_price", selectedService.price);
+        }
+      }
+
+      const object = Object.fromEntries(submitFormData);
+      const json = JSON.stringify(object);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "¡Cita reservada correctamente!",
+        });
+        setScheduleData({
+          category: "",
+          service: "",
+          date: "",
+          time: "",
+          name: "",
+          email: "",
+          phone: "",
+        });
+        setCurrentStep(0);
+      } else {
+        throw new Error("Error al procesar la reserva");
+      }
+    } catch {
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Ha ocurrido un error al procesar la reserva. Por favor, inténtalo de nuevo.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleNext = () => {
-    setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))
-  }
+    if (validateStep(currentStep)) {
+      setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
+    }
+  };
 
   const handleBack = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 0))
-  }
+    setCurrentStep((prev) => Math.max(prev - 1, 0));
+    setErrors({}); // Clear errors when going back
+  };
 
   const filteredServices = services.filter(
     (service) =>
       scheduleData.category === "all" ||
       service.category === scheduleData.category ||
       service.category === "all"
-  )
+  );
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -137,6 +298,9 @@ export default function Appointment() {
               <h3 className="text-base sm:text-lg font-medium mb-4">
                 Seleccione la categoría
               </h3>
+              {errors.category && (
+                <p className="text-red-500 text-sm mb-2">{errors.category}</p>
+              )}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {categories.map((category) => (
                   <Button
@@ -151,7 +315,7 @@ export default function Appointment() {
                       setScheduleData({
                         ...scheduleData,
                         category: category.value,
-                        service: "" // Reset service when category changes
+                        service: "", // Reset service when category changes
                       })
                     }
                   >
@@ -165,6 +329,9 @@ export default function Appointment() {
               <h3 className="text-base sm:text-lg font-medium mb-4">
                 Seleccione el servicio
               </h3>
+              {errors.service && (
+                <p className="text-red-500 text-sm mb-2">{errors.service}</p>
+              )}
               <div className="space-y-3">
                 {filteredServices.map((service) => (
                   <div
@@ -177,32 +344,20 @@ export default function Appointment() {
                     onClick={() =>
                       setScheduleData({
                         ...scheduleData,
-                        service: service.id
+                        service: service.id,
                       })
                     }
                   >
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                        {(() => {
-                          switch (service.category) {
-                            case 'yacht-broker':
-                              return <Ship className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'yacht-charter':
-                              return <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'inspections':
-                              return <Clipboard className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'consulting':
-                              return <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'value-added':
-                              return <PackageSearch className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'ship-broker':
-                              return <ShipWheel className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            case 'charter-broker':
-                              return <PlaneTakeoff className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                            default:
-                              return <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                        {React.createElement(
+                          serviceIcons[
+                            service.id as keyof typeof serviceIcons
+                          ] || User,
+                          {
+                            className: "w-4 h-4 sm:w-5 sm:h-5",
                           }
-                        })()}
+                        )}
                       </div>
                       <div className="flex-1">
                         <h4 className="font-medium text-sm sm:text-base">
@@ -224,7 +379,7 @@ export default function Appointment() {
               </div>
             </div>
           </div>
-        )
+        );
       case 1:
         return (
           <div className="space-y-4">
@@ -232,25 +387,39 @@ export default function Appointment() {
               required
               type="date"
               label="Fecha Preferida"
-              rightSection={<Calendar size={16} />}
               value={scheduleData.date}
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, date: e.target.value })
               }
               min={new Date().toISOString().split("T")[0]}
+              error={errors.date}
             />
-            <TextInput
-              required
-              type="time"
-              label="Hora Preferida"
-              rightSection={<Clock size={16} />}
-              value={scheduleData.time}
-              onChange={(e) =>
-                setScheduleData({ ...scheduleData, time: e.target.value })
-              }
-            />
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Hora Preferida</label>
+              {errors.time && (
+                <p className="text-red-500 text-sm">{errors.time}</p>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {timeSlots.map((slot) => (
+                  <Button
+                    key={slot.id}
+                    unstyled
+                    className={`p-2 text-sm rounded border ${
+                      scheduleData.time === slot.id
+                        ? "border-primary bg-primary/10 text-primary"
+                        : "border-gray-200 hover:border-primary"
+                    }`}
+                    onClick={() =>
+                      setScheduleData({ ...scheduleData, time: slot.id })
+                    }
+                  >
+                    {slot.label}
+                  </Button>
+                ))}
+              </div>
+            </div>
           </div>
-        )
+        );
       case 2:
         return (
           <div className="space-y-4">
@@ -263,6 +432,7 @@ export default function Appointment() {
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, name: e.target.value })
               }
+              error={errors.name}
             />
             <TextInput
               required
@@ -273,6 +443,7 @@ export default function Appointment() {
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, email: e.target.value })
               }
+              error={errors.email}
             />
             <TextInput
               required
@@ -283,9 +454,10 @@ export default function Appointment() {
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, phone: e.target.value })
               }
+              error={errors.phone}
             />
           </div>
-        )
+        );
       case 3:
         return (
           <div className="space-y-4">
@@ -323,11 +495,11 @@ export default function Appointment() {
               </dl>
             </div>
           </div>
-        )
+        );
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <motion.div
@@ -377,28 +549,56 @@ export default function Appointment() {
         ))}
       </div>
 
-      <div className="min-h-[300px] sm:min-h-[400px]">{renderStepContent()}</div>
+      <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+        <div className="flex-1 min-h-[300px] sm:min-h-[400px]">
+          {renderStepContent()}
+        </div>
 
-      <div className="flex justify-between mt-6 sm:mt-8">
-        {currentStep > 0 && (
-          <Button
-            unstyled
-            onClick={handleBack}
-            className="px-3 sm:px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 text-sm sm:text-base"
+        {submitStatus.type && (
+          <div
+            className={`mb-4 p-4 rounded-lg text-sm sm:text-base ${
+              submitStatus.type === "success"
+                ? "bg-green-50 text-green-800"
+                : "bg-red-50 text-red-800"
+            }`}
           >
-            Anterior
-          </Button>
+            {submitStatus.message}
+          </div>
         )}
-        <Button
-          unstyled
-          onClick={currentStep === steps.length - 1 ? undefined : handleNext}
-          type={currentStep === steps.length - 1 ? "submit" : "button"}
-          className="ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base"
-        >
-          {currentStep === steps.length - 1 ? "Confirmar Reserva" : "Siguiente"}
-        </Button>
-      </div>
+        <div className="flex justify-between mt-6 sm:mt-8">
+          {currentStep > 0 && (
+            <Button
+              unstyled
+              onClick={handleBack}
+              className="px-3 sm:px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 text-sm sm:text-base"
+              disabled={isLoading}
+            >
+              Anterior
+            </Button>
+          )}
+          {currentStep === steps.length - 1 ? (
+            <Button
+              unstyled
+              type="submit"
+              className={`ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition-opacity ${
+                isLoading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              disabled={isLoading}
+            >
+              {isLoading ? "Procesando..." : "Confirmar Reserva"}
+            </Button>
+          ) : (
+            <Button
+              unstyled
+              onClick={handleNext}
+              type="button"
+              className="ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base"
+            >
+              Siguiente
+            </Button>
+          )}
+        </div>
+      </form>
     </motion.div>
-  )
+  );
 }
-

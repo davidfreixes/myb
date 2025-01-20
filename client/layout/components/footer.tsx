@@ -20,7 +20,7 @@ export function Footer() {
               />
             </Link>
             <Text className="text-center text-gray-300">
-              Moll de Llevant, 3, 07701 Maó, Illes Balears
+              07701 Maó, Illes Balears
               <br />
               España
             </Text>

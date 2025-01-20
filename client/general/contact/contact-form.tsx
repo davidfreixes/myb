@@ -12,8 +12,76 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({
+    type: null,
+    message: "",
+  });
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const submitFormData = new FormData();
+      // Añadir la access key de Web3Forms
+      submitFormData.append(
+        "access_key",
+        "9ad33da4-1059-4457-9fd4-c21eeb8d1e37"
+      );
+
+      // Añadir los datos del formulario
+      Object.entries(formData).forEach(([key, value]) => {
+        submitFormData.append(key, value);
+      });
+
+      const object = Object.fromEntries(submitFormData);
+      const json = JSON.stringify(object);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          country: "ES",
+          message: "",
+        });
+      } else {
+        throw new Error("Error al enviar el formulario");
+      }
+    } catch {
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-    /* Contact Form */
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
@@ -42,7 +110,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <form className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <TextInput
           required
           label="Nombre"
@@ -50,6 +118,7 @@ export default function ContactForm() {
           rightSection={<User size={16} />}
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          disabled={isLoading}
         />
 
         <TextInput
@@ -59,6 +128,7 @@ export default function ContactForm() {
           rightSection={<Mail size={16} />}
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          disabled={isLoading}
         />
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -76,6 +146,7 @@ export default function ContactForm() {
               setFormData({ ...formData, country: value || "ES" })
             }
             className="flex-1"
+            disabled={isLoading}
           />
           <TextInput
             required
@@ -87,6 +158,7 @@ export default function ContactForm() {
               setFormData({ ...formData, phone: e.target.value })
             }
             className="flex-1"
+            disabled={isLoading}
           />
         </div>
 
@@ -99,15 +171,31 @@ export default function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
+          disabled={isLoading}
         />
+
+        {submitStatus.type && (
+          <div
+            className={`mb-4 p-4 rounded-lg text-sm sm:text-base ${
+              submitStatus.type === "success"
+                ? "bg-green-50 text-green-800"
+                : "bg-red-50 text-red-800"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
 
         <Button
           type="submit"
           fullWidth
           unstyled
-          className="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-sm sm:text-base"
+          className={`bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-sm sm:text-base transition-opacity ${
+            isLoading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          disabled={isLoading}
         >
-          Enviar Mensaje
+          {isLoading ? "Enviando..." : "Enviar Mensaje"}
         </Button>
       </form>
     </motion.div>
