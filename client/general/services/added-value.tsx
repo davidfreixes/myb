@@ -8,7 +8,7 @@ export default function ValueAddedServices() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Adjusted height and padding for mobile */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full ">
         <Image
           src="/img/value-added-services.jpg"
           alt="Servicios de valor añadido"
@@ -17,7 +17,7 @@ export default function ValueAddedServices() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl">
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function ValueAddedServices() {
       </div>
 
       {/* Main Content - Adjusted padding and grid for mobile */}
-      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12 lg:py-16 max-w-8xl">
+      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12 lg:py-16 max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

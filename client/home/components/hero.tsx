@@ -5,6 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
+  const scrollToServices = () => {
+    // Navegar a la sección de servicios
+    const servicesSection = document.getElementById("services-section");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative min-h-[600px] md:min-h-[500px] w-full">
       {/* Background Image with Overlay */}
@@ -71,6 +78,7 @@ export default function Hero() {
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
                   <Button
                     unstyled
+                    onClick={scrollToServices}
                     className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                   >
                     Explora Nuestros Servicios
