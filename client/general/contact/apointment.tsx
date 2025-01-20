@@ -138,6 +138,8 @@ const serviceIcons = {
 export default function Appointment() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [confirmData, setConfirmData] = useState(false);
+
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
@@ -199,75 +201,73 @@ export default function Appointment() {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (currentStep !== steps.length - 1) return;
+    // Only proceed if we're on the final step and all validations pass
+    if (confirmData && currentStep === steps.length - 1 && validateStep(2)) {
+      setIsLoading(true);
+      setSubmitStatus({ type: null, message: "" });
 
-    if (!validateStep(2)) return; // Validate all fields before final submission
+      try {
+        const submitFormData = new FormData();
+        submitFormData.append(
+          "access_key",
+          "9ad33da4-1059-4457-9fd4-c21eeb8d1e37"
+        );
 
-    setIsLoading(true);
-    setSubmitStatus({ type: null, message: "" });
+        Object.entries(scheduleData).forEach(([key, value]) => {
+          submitFormData.append(key, value);
+        });
 
-    try {
-      const submitFormData = new FormData();
-      submitFormData.append(
-        "access_key",
-        "9ad33da4-1059-4457-9fd4-c21eeb8d1e37"
-      );
-
-      Object.entries(scheduleData).forEach(([key, value]) => {
-        submitFormData.append(key, value);
-      });
-
-      const selectedService = services.find(
-        (s) => s.id === scheduleData.service
-      );
-      if (selectedService) {
-        submitFormData.append("service_title", selectedService.title);
-        if (selectedService.price) {
-          submitFormData.append("service_price", selectedService.price);
+        const selectedService = services.find(
+          (s) => s.id === scheduleData.service
+        );
+        if (selectedService) {
+          submitFormData.append("service_title", selectedService.title);
+          if (selectedService.price) {
+            submitFormData.append("service_price", selectedService.price);
+          }
         }
-      }
 
-      const object = Object.fromEntries(submitFormData);
-      const json = JSON.stringify(object);
+        const object = Object.fromEntries(submitFormData);
+        const json = JSON.stringify(object);
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      });
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        });
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (result.success) {
+        if (result.success) {
+          setSubmitStatus({
+            type: "success",
+            message: "¡Cita reservada correctamente!",
+          });
+          setScheduleData({
+            category: "",
+            service: "",
+            date: "",
+            time: "",
+            name: "",
+            email: "",
+            phone: "",
+          });
+          setCurrentStep(0);
+        } else {
+          throw new Error("Error al procesar la reserva");
+        }
+      } catch {
         setSubmitStatus({
-          type: "success",
+          type: "error",
           message:
-            "¡Cita reservada correctamente!",
+            "Ha ocurrido un error al procesar la reserva. Por favor, inténtalo de nuevo.",
         });
-        setScheduleData({
-          category: "",
-          service: "",
-          date: "",
-          time: "",
-          name: "",
-          email: "",
-          phone: "",
-        });
-        setCurrentStep(0);
-      } else {
-        throw new Error("Error al procesar la reserva");
+      } finally {
+        setIsLoading(false);
       }
-    } catch {
-      setSubmitStatus({
-        type: "error",
-        message:
-          "Ha ocurrido un error al procesar la reserva. Por favor, inténtalo de nuevo.",
-      });
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -550,13 +550,13 @@ export default function Appointment() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
-        <div className="flex-1 min-h-[300px] sm:min-h-[400px]">
+        <div className="flex-1">
           {renderStepContent()}
         </div>
 
         {submitStatus.type && (
           <div
-            className={`mb-4 p-4 rounded-lg text-sm sm:text-base ${
+            className={`mt-2 mb-4 p-4 rounded-lg text-sm sm:text-base ${
               submitStatus.type === "success"
                 ? "bg-green-50 text-green-800"
                 : "bg-red-50 text-red-800"
@@ -565,7 +565,7 @@ export default function Appointment() {
             {submitStatus.message}
           </div>
         )}
-        <div className="flex justify-between mt-6 sm:mt-8">
+        <div className="flex justify-between mt-4 sm:mt-4">
           {currentStep > 0 && (
             <Button
               unstyled
@@ -579,13 +579,14 @@ export default function Appointment() {
           {currentStep === steps.length - 1 ? (
             <Button
               unstyled
+              onClick={() => setConfirmData(true)}
               type="submit"
               className={`ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition-opacity ${
                 isLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isLoading}
             >
-              {isLoading ? "Procesando..." : "Confirmar Reserva"}
+              {isLoading && confirmData ? "Procesando..." : "Confirmar Reserva"}
             </Button>
           ) : (
             <Button
