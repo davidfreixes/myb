@@ -235,7 +235,7 @@ export default function ValueAddedServices() {
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
-          className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+          className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
           Contactar
         </Button>

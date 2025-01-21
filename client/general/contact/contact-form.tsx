@@ -277,7 +277,8 @@ export default function ContactForm() {
           fullWidth
           unstyled
 
-          className={`w-full bg-primary hover:bg-white hover:text-black hover:border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 ${
+          className={`w-full bg-primary hover:bg-white hover:text-black hover:border-primary hover:border border-primary border text-white py-2
+             px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLoading}

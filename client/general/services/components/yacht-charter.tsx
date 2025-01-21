@@ -125,14 +125,8 @@ export default function YachtCharter() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
                   unstyled
-                  className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-base py-2 px-4 rounded w-full sm:w-auto text-center"
-                >
-                  Ver Flota
-                </Button>
-                <Button
-                  unstyled
-                  className="border border-primary text-black hover:bg-primary hover:text-white font-normal text-sm md:text-base py-2 px-4 rounded w-full sm:w-auto text-center"
-                >
+                  className="bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 "
+                > 
                   Explorar Rutas
                 </Button>
               </div>

@@ -138,9 +138,9 @@ export default function YachtBroker() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center mb-6 sm:mb-10"
+        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 rounded-lg text-center py-8 sm:py-12 md:py-20"
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4">
           ¿Interesado en nuestros servicios?
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
@@ -150,7 +150,7 @@ export default function YachtBroker() {
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
-          className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
+          className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
           Contactar
         </Button>
