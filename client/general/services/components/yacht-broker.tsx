@@ -203,16 +203,20 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
 export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const [activeTab, setActiveTab] = useState<string | null>("new");
-
   const newBoatsSectionRef = useRef<HTMLDivElement>(null);
   const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (
-    sectionRef: React.RefObject<HTMLDivElement | null>
-  ) => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToSection = (type: "new" | "used") => {
+    setActiveTab(type);
+
+    // Pequeño timeout para asegurar que el tab ha cambiado antes de hacer scroll
+    setTimeout(() => {
+      const sectionRef =
+        type === "new" ? newBoatsSectionRef : usedBoatsSectionRef;
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -248,17 +252,14 @@ export default function YachtBroker() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button
                 unstyled
-                onClick={() => scrollToSection(newBoatsSectionRef)}
+                onClick={() => scrollToSection("new")}
                 className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
               >
                 Yates Nuevos
               </Button>
               <Button
                 unstyled
-                onClick={() => {
-                  setActiveTab("used")
-                  scrollToSection(usedBoatsSectionRef)
-                }}
+                onClick={() => scrollToSection("used")}
                 className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
               >
                 Yates de Segunda Mano
@@ -318,13 +319,12 @@ export default function YachtBroker() {
               </div>
 
               <AnimatePresence mode="wait">
-                <Tabs.Panel value="new">
+                <Tabs.Panel value="new" ref={newBoatsSectionRef}>
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
-                    ref={newBoatsSectionRef}
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
@@ -334,13 +334,12 @@ export default function YachtBroker() {
                   </motion.div>
                 </Tabs.Panel>
 
-                <Tabs.Panel value="used">
+                <Tabs.Panel value="used" ref={usedBoatsSectionRef}>
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
-                    ref={usedBoatsSectionRef}
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
