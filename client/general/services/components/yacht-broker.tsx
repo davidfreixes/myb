@@ -106,16 +106,15 @@ const sampleYachts: YachtDetails[] = [
 
   // Add more sample yachts here
 ];
-
 function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
   return (
     <>
       {yachts.map((yacht) => (
         <Card
           key={yacht.id}
-          className="overflow-hidden border shadow-sm hover:shadow-lg "
+          className="overflow-hidden border shadow-sm hover:shadow-lg transition-shadow duration-300"
         >
-          <div className="relative h-48">
+          <div className="relative h-48 sm:h-56 md:h-64">
             <Image
               src={yacht.imageUrl || "/placeholder.svg"}
               alt={yacht.model}
@@ -124,27 +123,28 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
             />
           </div>
 
-          <div className="p-4">
-            <h3 className="text-xl font-montserrat font-medium mb-2">
+          <div className="p-3 sm:p-4 md:p-5">
+            <h3 className="text-lg sm:text-xl font-montserrat font-medium mb-2">
               {yacht.model}
             </h3>
-            <p className="text-lg font-semibold text-primary mb-4">
+            <p className="text-base sm:text-lg font-semibold text-primary mb-3 sm:mb-4">
               {yacht.price.toLocaleString()} €
             </p>
 
             <Accordion className="shadow-sm">
               <Accordion.Item value="details">
                 <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
-                  Ver Detalles
+                  <span className="text-sm sm:text-base">Ver Detalles</span>
                 </Accordion.Control>
                 <Accordion.Panel>
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2 text-xs sm:text-sm">
                     {yacht.name && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Nombre del barco:</span>
                         <span>{yacht.name}</span>
                       </div>
                     )}
+                    {/* Other yacht details remain the same, with text-xs sm:text-sm classes */}
                     {yacht.year && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Año:</span>
@@ -157,7 +157,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Ubicación:</span>
-                      <span>{yacht.location}</span>
+                      <span className="text-right">{yacht.location}</span>
                     </div>
                     {yacht.displacement && (
                       <div className="flex justify-between">
@@ -186,7 +186,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                     {yacht.category && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Categoría:</span>
-                        <span>{yacht.category}</span>
+                        <span className="text-right">{yacht.category}</span>
                       </div>
                     )}
                   </div>
@@ -208,8 +208,6 @@ export default function YachtBroker() {
 
   const scrollToSection = (type: "new" | "used") => {
     setActiveTab(type);
-
-    // Pequeño timeout para asegurar que el tab ha cambiado antes de hacer scroll
     setTimeout(() => {
       const sectionRef =
         type === "new" ? newBoatsSectionRef : usedBoatsSectionRef;
@@ -221,8 +219,8 @@ export default function YachtBroker() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
+      {/* Hero Section - Now more responsive */}
+      <div className="relative h-[45vh] sm:h-[60vh] lg:h-[70vh] w-full">
         <Image
           src="/img/yacht-broker.jpg"
           alt="Yacht broker service"
@@ -231,36 +229,36 @@ export default function YachtBroker() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center items-start md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl space-y-4"
+            className="max-w-3xl space-y-4 w-full"
           >
-            <div className="space-y-2 sm:space-y-4">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="font-montserrat text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
                 Yacht Broker | Compra de Barcos y Yates en Menorca
               </h1>
-              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
+              <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white">
                 Especialistas en <span className="text-primary">compra</span> y{" "}
                 <span className="text-primary">venta</span> de yates en Menorca.
                 Amplia gama de embarcaciones de lujo y asesoramiento
                 personalizado.
               </h2>
             </div>
-            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+            <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
               <Button
                 unstyled
                 onClick={() => scrollToSection("new")}
-                className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
               >
                 Yates Nuevos
               </Button>
               <Button
                 unstyled
                 onClick={() => scrollToSection("used")}
-                className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
               >
                 Yates de Segunda Mano
               </Button>
@@ -269,15 +267,15 @@ export default function YachtBroker() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 md:max-w-[1400px]">
+      {/* Main Content - Improved spacing and responsiveness */}
+      <div className="container mx-auto px-0 sm:px-6 py-6 sm:py-8 md:py-12 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="prose prose-lg max-w-none"
+          className="prose prose-sm sm:prose-base lg:prose-lg max-w-none"
         >
-          <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8">
+          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
             Consulta nuestro stock de Yates en venta a continuación o descubre
             nuestras claves y contáctarnos más abajo. Contamos con Yates de
             <span className="text-primary"> segunda mano </span>o se pueden
@@ -285,12 +283,12 @@ export default function YachtBroker() {
             <span className="text-primary"> nueva construcción</span>.
           </p>
 
-          {/* Yacht Catalog */}
+          {/* Yacht Catalog - Responsive grid and spacing */}
           <div className="container mx-auto py-4">
             <Tabs
               value={activeTab}
               onChange={setActiveTab}
-              className="mb-8"
+              className="mb-6 sm:mb-8"
               color="#f1c001"
             >
               <div className="w-full sticky top-0 z-10 bg-white">
@@ -302,7 +300,9 @@ export default function YachtBroker() {
                       }`}
                     >
                       <Tabs.Tab value="new">
-                        <h2 className="text-lg text-black">Yates Nuevos</h2>
+                        <h2 className="text-base sm:text-lg text-black">
+                          Yates Nuevos
+                        </h2>
                       </Tabs.Tab>
                     </div>
                     <div
@@ -311,7 +311,9 @@ export default function YachtBroker() {
                       }`}
                     >
                       <Tabs.Tab value="used">
-                        <h2 className="text-lg">Yates de Segunda Mano</h2>
+                        <h2 className="text-base sm:text-lg">
+                          Yates de Segunda Mano
+                        </h2>
                       </Tabs.Tab>
                     </div>
                   </div>
@@ -324,7 +326,7 @@ export default function YachtBroker() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6"
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
@@ -339,7 +341,7 @@ export default function YachtBroker() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6"
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
@@ -352,7 +354,7 @@ export default function YachtBroker() {
             </Tabs>
           </div>
 
-          <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8">
+          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
             En Menorca Yacht Brokers, transformamos la compra y venta de yates
             en una experiencia fluida, profesional y personalizada. Nuestro
             equipo de expertos combina un profundo conocimiento del mercado
@@ -362,24 +364,24 @@ export default function YachtBroker() {
         </motion.div>
       </div>
 
-      {/* CTA Section */}
+      {/* CTA Section - Improved responsive design */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 rounded-lg text-center py-8 sm:py-12 md:py-20"
+        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12"
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4">
+        <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
           ¿Interesado en nuestros servicios?
         </h2>
-        <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-3 sm:mb-4 md:mb-6">
           Contáctanos para descubrir cómo podemos ayudarte a encontrar el yate
           perfecto
         </p>
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
-          className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
+          className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
         >
           Contactar
         </Button>
