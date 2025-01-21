@@ -1,8 +1,7 @@
 import { Accordion, Button, Card, Tabs } from "@mantine/core";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import ContactModal from "../../contact/modal/contactModal";
 
@@ -11,6 +10,7 @@ interface YachtDetails {
   type: "new" | "used";
   model: string;
   price: number;
+  name?: string;
   year?: number;
   length: number;
   location: string;
@@ -28,6 +28,7 @@ const sampleYachts: YachtDetails[] = [
     type: "used",
     model: "Salthouse 58ft Cutter",
     price: 310098,
+    name: "Rory Mhor",
     year: 1989,
     length: 17.68,
     location: "South Pacific, Fiji",
@@ -38,6 +39,71 @@ const sampleYachts: YachtDetails[] = [
     designer: "Salthouse",
     category: "Used sail boat for sale",
   },
+  {
+    id: "2",
+    type: "new",
+    model: "Salthouse 58ft Cutter",
+    price: 310098,
+    name: "Rory Mhor",
+    year: 1989,
+    length: 17.68,
+    location: "South Pacific, Fiji",
+    displacement: 28000,
+    hull: "Steel",
+    keel: "Winged Keel",
+    imageUrl: "/img/yacht-broker.jpg",
+    designer: "Salthouse",
+    category: "Used sail boat for sale",
+  },
+  {
+    id: "3",
+    type: "used",
+    model: "Salthouse 58ft Cutter",
+    price: 500000,
+    name: "Rory Mhor",
+    year: 1989,
+    length: 17.68,
+    location: "South Pacific, Fiji",
+    displacement: 28000,
+    hull: "Steel",
+    keel: "Winged Keel",
+    imageUrl: "/img/yacht-broker.jpg",
+    designer: "Salthouse",
+    category: "Used sail boat for sale",
+  },
+  {
+    id: "4",
+    type: "new",
+    model: "Salthouse 58ft Cutter",
+    price: 310098,
+    name: "Rory Mhor",
+    year: 1989,
+    length: 17.68,
+    location: "South Pacific, Fiji",
+    displacement: 28000,
+    hull: "Steel",
+    keel: "Winged Keel",
+    imageUrl: "/img/yacht-broker.jpg",
+    designer: "Salthouse",
+    category: "Used sail boat for sale",
+  },
+  {
+    id: "5",
+    type: "new",
+    model: "Salthouse 58ft Cutter",
+    price: 310098,
+    name: "Rory Mhor",
+    year: 1989,
+    length: 17.68,
+    location: "South Pacific, Fiji",
+    displacement: 28000,
+    hull: "Steel",
+    keel: "Winged Keel",
+    imageUrl: "/img/yacht-broker.jpg",
+    designer: "Salthouse",
+    category: "Used sail boat for sale",
+  },
+
   // Add more sample yachts here
 ];
 
@@ -45,7 +111,10 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
   return (
     <>
       {yachts.map((yacht) => (
-        <Card key={yacht.id} className="overflow-hidden">
+        <Card
+          key={yacht.id}
+          className="overflow-hidden border shadow-sm hover:shadow-lg "
+        >
           <div className="relative h-48">
             <Image
               src={yacht.imageUrl || "/placeholder.svg"}
@@ -60,16 +129,22 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               {yacht.model}
             </h3>
             <p className="text-lg font-semibold text-primary mb-4">
-              €{yacht.price.toLocaleString()}
+              {yacht.price.toLocaleString()} €
             </p>
 
-            <Accordion>
+            <Accordion className="shadow-sm">
               <Accordion.Item value="details">
                 <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
                   Ver Detalles
                 </Accordion.Control>
                 <Accordion.Panel>
                   <div className="space-y-2 text-sm">
+                    {yacht.name && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Nombre del barco:</span>
+                        <span>{yacht.name}</span>
+                      </div>
+                    )}
                     {yacht.year && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Año:</span>
@@ -129,6 +204,17 @@ export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const [activeTab, setActiveTab] = useState<string | null>("new");
 
+  const newBoatsSectionRef = useRef<HTMLDivElement>(null);
+  const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (
+    sectionRef: React.RefObject<HTMLDivElement | null>
+  ) => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -159,6 +245,25 @@ export default function YachtBroker() {
                 personalizado.
               </h2>
             </div>
+            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Button
+                unstyled
+                onClick={() => scrollToSection(newBoatsSectionRef)}
+                className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
+              >
+                Yates Nuevos
+              </Button>
+              <Button
+                unstyled
+                onClick={() => {
+                  setActiveTab("used")
+                  scrollToSection(usedBoatsSectionRef)
+                }}
+                className="bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
+              >
+                Yates de Segunda Mano
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -171,86 +276,46 @@ export default function YachtBroker() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="prose prose-lg max-w-none"
         >
-          <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12">
+          <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8">
             Consulta nuestro stock de Yates en venta a continuación o descubre
             nuestras claves y contáctarnos más abajo. Contamos con Yates de
-            segunda mano o se pueden realizar contactos con astilleros para
-            entrar en contratos de nueva construcción.
+            <span className="text-primary"> segunda mano </span>o se pueden
+            realizar contactos con astilleros para entrar en contratos de{" "}
+            <span className="text-primary"> nueva construcción</span>.
           </p>
 
-          {/* Yacht Categories */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative h-[300px] sm:h-[350px] md:h-[400px] group cursor-pointer"
-            >
-              <Link
-                href="/yacht-broker/new"
-                className="block w-full h-full shadow-md"
-              >
-                <Image
-                  src="/img/new-construction.jpg"
-                  alt="Yates de Nueva Construcción"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors rounded-lg" />
-                <div className="absolute inset-0 flex flex-col p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl text-primary font-montserrat mb-4">
-                    Yates de Nueva Construcción
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
-                  <Button
-                    unstyled
-                    className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white py-2 px-4 text-sm sm:text-base w-full sm:w-auto transition-colors duration-200"
-                  >
-                    Visitar
-                  </Button>
-                </div>
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="relative h-[300px] sm:h-[350px] md:h-[400px] group cursor-pointer"
-            >
-              <div className="w-full h-full shadow-md">
-                <Image
-                  src="/img/second-hand.jpg"
-                  alt="Yates de Segunda Mano"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors rounded-lg" />
-                <div className="absolute inset-0 flex flex-col p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl text-primary font-montserrat mb-4">
-                    Yates de Segunda Mano
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
-                  <Button
-                    unstyled
-                    className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white py-2 px-4 text-sm sm:text-base w-full sm:w-auto transition-colors duration-200"
-                  >
-                    Visitar
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
           {/* Yacht Catalog */}
-          <div className="container mx-auto px-4 py-8">
-            <Tabs value={activeTab} onChange={setActiveTab} className="mb-8">
-              <Tabs.List grow>
-                <Tabs.Tab value="new">Yates Nuevos</Tabs.Tab>
-                <Tabs.Tab value="used">Yates de Segunda Mano</Tabs.Tab>
-              </Tabs.List>
+          <div className="container mx-auto py-4">
+            <Tabs
+              value={activeTab}
+              onChange={setActiveTab}
+              className="mb-8"
+              color="#f1c001"
+            >
+              <div className="w-full sticky top-0 z-10 bg-white">
+                <Tabs.List grow>
+                  <div className="flex w-full">
+                    <div
+                      className={`flex w-full ${
+                        activeTab === "new" && "bg-primary/10 rounded-tl-lg"
+                      }`}
+                    >
+                      <Tabs.Tab value="new">
+                        <h2 className="text-lg text-black">Yates Nuevos</h2>
+                      </Tabs.Tab>
+                    </div>
+                    <div
+                      className={`flex w-full ${
+                        activeTab === "used" && "bg-primary/10 rounded-tr-lg"
+                      }`}
+                    >
+                      <Tabs.Tab value="used">
+                        <h2 className="text-lg">Yates de Segunda Mano</h2>
+                      </Tabs.Tab>
+                    </div>
+                  </div>
+                </Tabs.List>
+              </div>
 
               <AnimatePresence mode="wait">
                 <Tabs.Panel value="new">
@@ -259,6 +324,7 @@ export default function YachtBroker() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                    ref={newBoatsSectionRef}
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
@@ -274,6 +340,7 @@ export default function YachtBroker() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                    ref={usedBoatsSectionRef}
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
