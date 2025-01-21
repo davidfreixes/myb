@@ -21,7 +21,7 @@ export default function BunkerSupplyPage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/ship-broker.jpg"
           alt="Ship broker service"
@@ -37,7 +37,7 @@ export default function BunkerSupplyPage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <div className="space-y-2 md:space-y-4">
+            <div className="space-y-2 md:space-y-4 mt-8 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
                 Suministro de Combustible Marino en Menorca
               </h1>

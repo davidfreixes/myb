@@ -26,35 +26,43 @@ export default function ContactModal({
       <Modal
         opened={opened}
         onClose={onClose}
-        size={"750px"}
+        size="lg"
         withCloseButton={false}
       >
-        <div className="px-4">
+        <div className="px-2 xs:px-3 lg:px-4 relative">
           {contactFormOpened ? (
             <>
               <div
                 onClick={() => setcontactFormOpened(false)}
-                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-4 sm:mb-6 cursor-pointer"
+                className="absolute top-2 sm:top-0.5 right-2 xs:right-3 sm:right-4 text-base xs:text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-2 xs:mb-3 sm:mb-6 cursor-pointer transition-colors duration-200"
               >
-                <div className="flex gap-2 items-center">
-                  Reserva una Cita
-                  <MoveRight />
+                <div className="flex gap-1 xs:gap-2 items-center">
+                  <span className="hidden xs:inline">Reserva una Cita</span>
+                  <span className="xs:hidden">Cita</span>
+                  <MoveRight className="w-4 h-4 xs:w-5 xs:h-5" />
                 </div>
               </div>
-              <ContactForm />
+              <div className="pt-12 sm:pt-0">
+                <ContactForm />
+              </div>
             </>
           ) : (
             <>
               <div
                 onClick={() => setcontactFormOpened(true)}
-                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-4 sm:mb-6 cursor-pointer"
+                className="absolute top-2 sm:top-0.5 right-2 xs:right-3 sm:right-4 text-base xs:text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-2 xs:mb-3 sm:mb-6 cursor-pointer transition-colors duration-200"
               >
-                <div className="flex gap-2 items-center">
-                  Formulario de Contacto
-                  <MoveRight />
+                <div className="flex gap-1 xs:gap-2 items-center">
+                  <span className="hidden xs:inline">
+                    Formulario de Contacto
+                  </span>
+                  <span className="xs:hidden">Contacto</span>
+                  <MoveRight className="w-4 h-4 xs:w-5 xs:h-5" />
                 </div>
               </div>
-              <Appointment />
+              <div className="pt-12 sm:pt-0">
+                <Appointment />
+              </div>
             </>
           )}
         </div>
@@ -66,15 +74,19 @@ export default function ContactModal({
         centered
         withCloseButton={false}
       >
-        <div className="text-center">
-          <Check className="text-green-500 mx-auto mb-4" />
-          <Text size="xl" className="mb-2">
-            ¡Gracias contactar!
+        <div className="text-center p-4">
+          <Check className="text-green-500 mx-auto mb-3 sm:mb-4 w-8 h-8 sm:w-10 sm:h-10" />
+          <Text size="lg" className="mb-2 font-medium">
+            ¡Gracias por contactar!
           </Text>
-          <Text size="md" color="dimmed" className="mb-4">
+          <Text size="sm" color="dimmed" className="mb-4">
             Tu sugerencia ha sido enviada correctamente.
           </Text>
-          <Button onClick={closeSuccessModal} fullWidth>
+          <Button
+            onClick={closeSuccessModal}
+            fullWidth
+            className="mt-2 sm:mt-4"
+          >
             Cerrar
           </Button>
         </div>
