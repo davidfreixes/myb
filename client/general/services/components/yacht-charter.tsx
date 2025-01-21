@@ -26,7 +26,7 @@ export default function YachtCharter() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center md:max-w-8xl">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function YachtCharter() {
       </div>
 
       {/* Services Section with Background */}
-      <div className="container px-4 sm:px-6 py-12 sm:py-16 md:py-18 mx-auto bg-gray-50 md:max-w-8xl">
+      <div className="container px-4 sm:px-6 py-12 sm:py-16 md:py-18 mx-auto bg-gray-50 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function YachtCharter() {
 
       {/* Introduction Section with Image */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
-        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-8xl">
+        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -140,7 +140,7 @@ export default function YachtCharter() {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-8xl">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

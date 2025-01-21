@@ -17,7 +17,7 @@ export default function YachtBroker() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center md:max-w-8xl ">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function YachtBroker() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 md:max-w-8xl">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

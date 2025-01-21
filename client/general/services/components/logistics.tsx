@@ -29,7 +29,7 @@ export default function Logistics() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-8xl">
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function Logistics() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8 sm:py-12 md:max-w-8xl">
+      <div className="container mx-auto px-4 py-8 sm:py-12 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -271,7 +271,7 @@ export default function Logistics() {
           <div className="grid grid-cols-1 gap-6 sm:gap-8 max-w-4xl">
             <div className="flex gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <Globe className="w-6 h-6 text-primary" />
+                <Globe className="w-6 h-6 text-darkTitle" />
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -286,7 +286,7 @@ export default function Logistics() {
 
             <div className="flex flex-row sm:flex-row-reverse gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <Clock className="w-6 h-6 text-primary" />
+                <Clock className="w-6 h-6 text-darkTitle" />
               </div>
               <div className="text-left sm:text-right">
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -301,7 +301,7 @@ export default function Logistics() {
 
             <div className="flex gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <DollarSign className="w-6 h-6 text-primary" />
+                <DollarSign className="w-6 h-6 text-darkTitle" />
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
@@ -316,7 +316,7 @@ export default function Logistics() {
 
             <div className="flex flex-row sm:flex-row-reverse gap-3 sm:gap-4 items-start">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
-                <User className="w-6 h-6 text-primary" />
+                <User className="w-6 h-6 text-darkTitle" />
               </div>
               <div className="text-left sm:text-right">
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">

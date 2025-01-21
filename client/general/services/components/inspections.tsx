@@ -10,7 +10,7 @@ export default function Inspections() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[60vh] w-full">
+      <div className="relative h-[50vh] w-full">
         <Image
           src="/img/inspections.jpg"
           alt="Inspecciones y tasaciones de barcos"
@@ -19,7 +19,7 @@ export default function Inspections() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl">
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center mt-2 md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function Inspections() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12 md:py-12 max-w-8xl">
+      <div className="container mx-auto px-4 py-12 md:py-12 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,9 +66,9 @@ export default function Inspections() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
-              <h3 className="text-2xl text-primary font-montserrat mb-4">
+              <h2 className="text-3xl text-primary font-montserrat mb-4">
                 Inspecciones Marítimas
-              </h3>
+              </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
                   Las inspecciones marítimas son fundamentales para evaluar el
@@ -104,9 +104,9 @@ export default function Inspections() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
-              <h3 className="text-2xl text-primary font-montserrat mb-4">
+              <h2 className="text-3xl text-primary font-montserrat mb-4">
                 Tasaciones Marítimas
-              </h3>
+              </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
                   Realizamos tasaciones precisas y actualizadas basadas en

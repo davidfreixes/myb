@@ -45,7 +45,7 @@ export default function Partners() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="relative py-12 sm:py-16 md:py-20">
         <Image
           src="/img/corporate-building.jpg"
           alt="Corporate building"
