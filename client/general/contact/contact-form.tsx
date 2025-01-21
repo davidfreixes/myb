@@ -162,13 +162,12 @@ export default function ContactForm() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border"
     >
-      <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
+      <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-4  ">
         Formulario de Contacto
       </h2>
 
-      <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+      <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-6">
         <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
           <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
           <a href="tel:+34608577091" className="hover:text-primary">
@@ -277,7 +276,8 @@ export default function ContactForm() {
           type="submit"
           fullWidth
           unstyled
-          className={`w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-sm sm:text-base transition-all ${
+
+          className={`w-full bg-primary hover:bg-white hover:text-black hover:border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLoading}

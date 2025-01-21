@@ -34,13 +34,13 @@ export default function Contact() {
       </div>
 
       {/* Contact Options */}
-      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12 lg:py-16 max-w-[1400px]">
+      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12 lg:py-14 max-w-[1400px]">
         <div className="flex flex-col lg:flex-row w-full gap-6 sm:gap-8 md:gap-10 lg:gap-10">
           {/* ContactForm and Appointment will be full width on mobile/tablet and side by side on desktop */}
-          <div className="w-full h-full lg:w-1/2">
+          <div className="w-full h-full lg:w-1/2 flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border">
             <ContactForm />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border">
             <Appointment />
           </div>
         </div>

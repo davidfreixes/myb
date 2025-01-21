@@ -1,10 +1,13 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 export default function YachtBroker() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen ">
       {/* Hero Section */}
@@ -146,13 +149,18 @@ export default function YachtBroker() {
         </p>
         <Button
           unstyled
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
+          onClick={() => setContactModalOpened(true)}
+          // component={Link}
+          // href={`${NAVIGATION_LINKS.CONTACTO}`}
           className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
           Contactar
         </Button>
       </motion.div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

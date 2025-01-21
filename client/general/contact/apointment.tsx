@@ -373,9 +373,7 @@ export default function Appointment() {
               {errors.service && (
                 <p className="text-red-500 text-sm mb-2">{errors.service}</p>
               )}
-              <div
-                className="space-y-3 overflow-y-auto max-h-[400px]"
-              >
+              <div className="space-y-3 overflow-y-auto max-h-[400px]">
                 {" "}
                 {filteredServices.map((service) => (
                   <div
@@ -550,13 +548,13 @@ export default function Appointment() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full flex flex-col bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border"
+      className=""
     >
-      <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
+      <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-7">
         Reserva una Cita
       </h2>
 
-      <div className="flex mb-6 sm:mb-8 overflow-x-auto pb-2">
+      <div className="flex my-auto mb-6 overflow-x-auto pb-2">
         {steps.map((step, index) => (
           <div
             key={step.id}
@@ -623,7 +621,7 @@ export default function Appointment() {
               unstyled
               onClick={() => setConfirmData(true)}
               type="submit"
-              className={`ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition-opacity ${
+              className={`ml-auto bg-primary hover:bg-white hover:text-black hover:border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 ${
                 isLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isLoading}
@@ -635,7 +633,7 @@ export default function Appointment() {
               unstyled
               onClick={handleNext}
               type="button"
-              className="ml-auto bg-primary hover:bg-primary/90 text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base"
+              className="ml-auto bg-primary hover:bg-white hover:text-black hover:border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
             >
               Siguiente
             </Button>
