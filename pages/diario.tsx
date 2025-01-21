@@ -1,4 +1,4 @@
-import PortDaily from "@/client/general/company/port-daily";
+import PortDaily from "@/client/general/company/components/port-daily";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 

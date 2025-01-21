@@ -1,4 +1,4 @@
-import BunkerSupplyPage from "@/client/general/services/bunker-supply";
+import BunkerSupplyPage from "@/client/general/services/components/bunker-supply";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 

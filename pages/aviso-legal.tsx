@@ -1,4 +1,4 @@
-import LegalNotice from "@/client/general/company/legal-notice";
+import LegalNotice from "@/client/general/company/components/legal-notice";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 

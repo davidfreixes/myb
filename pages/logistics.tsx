@@ -1,4 +1,4 @@
-import Logistics from "@/client/general/services/logistics";
+import Logistics from "@/client/general/services/components/logistics";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 
