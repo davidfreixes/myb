@@ -1,4 +1,3 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -14,9 +13,12 @@ import {
   User,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 export default function Logistics() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -262,7 +264,7 @@ export default function Logistics() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="py-8 sm:py-14 rounded-lg mb-8 sm:mb-12 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]"
+        className="py-8 sm:py-14 rounded-lg inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]"
       >
         <h3 className="text-2xl sm:text-3xl text-darkTitle font-montserrat mb-6 sm:mb-8 text-center px-4">
           ¿Por Qué Elegir Menorca Brokers?
@@ -333,27 +335,40 @@ export default function Logistics() {
       </motion.div>
 
       {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="p-4 sm:p-6 rounded-lg text-center mb-8 sm:mb-10"
-      >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
-          ¿Necesitas una solución logística personalizada?
-        </h2>
-        <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Contáctanos para diseñar una solución logística hecha a medida para ti
-        </p>
-        <Button
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
-          unstyled
-          className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+      <div className="relative py-12 sm:py-16 md:py-24">
+        <Image
+          src="/img/CTA-logistics.jpg"
+          alt="Yacht at sunset"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="relative z-10 container mx-auto px-4 sm:px-6 text-center"
         >
-          Contactar
-        </Button>
-      </motion.div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
+            ¿Necesitas una solución logística personalizada?
+          </h2>
+          <p className="text-base sm:text-lg text-white mb-4 sm:mb-6">
+            Contáctanos para diseñar una solución logística hecha a medida para
+            ti
+          </p>
+          <Button
+            onClick={() => setContactModalOpened(true)}
+            unstyled
+            className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+          >
+            Contactar
+          </Button>
+        </motion.div>
+        <ContactModal
+          opened={contactModalOpened}
+          onClose={() => setContactModalOpened(false)}
+        />
+      </div>
     </div>
   );
 }

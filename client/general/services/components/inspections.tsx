@@ -1,12 +1,12 @@
-"use client";
-
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 export default function Inspections() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -92,7 +92,8 @@ export default function Inspections() {
                     Convenios Internacionales
                   </h4>
                   <p className="text-gray-700">
-                    Trabajamos en cumplimiento con Lloyd&apos;s Register, garantizando una evaluación precisa y confiable.
+                    Trabajamos en cumplimiento con Lloyd&apos;s Register,
+                    garantizando una evaluación precisa y confiable.
                   </p>
                 </div>
               </div>
@@ -153,26 +154,31 @@ export default function Inspections() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="p-6 rounded-lg text-center mb-10 max-w-4xl mx-auto"
+        className="p-6 rounded-lg text-center inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:p-8 md:py-20"
       >
-        <h2 className="text-2xl md:text-3xl font-montserrat text-primary mb-4">
-          ¿Necesitas una Inspección o Tasación en Menorca?
-        </h2>
-        <p className="text-lg text-gray-700 mb-6">
-          Si deseas obtener más información sobre nuestras inspecciones o
-          tasaciones, o para solicitar nuestros servicios, no dudes en
-          contactarnos directamente a través del formulario en nuestra página de
-          contacto o llamarnos al número indicado.
-        </p>
-        <Button
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
-          unstyled
-          className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4"
-        >
-          Contactar
-        </Button>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
+            ¿Necesitas una Inspección o Tasación en Menorca?
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Si deseas obtener más información sobre nuestras inspecciones o
+            tasaciones, o para solicitar nuestros servicios, no dudes en
+            contactarnos directamente a través del formulario en nuestra página
+            de contacto o llamarnos al número indicado.
+          </p>
+          <Button
+            onClick={() => setContactModalOpened(true)}
+            unstyled
+            className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+          >
+            Contactar
+          </Button>
+        </div>
       </motion.div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

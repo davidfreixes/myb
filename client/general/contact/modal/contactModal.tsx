@@ -34,7 +34,7 @@ export default function ContactModal({
             <>
               <div
                 onClick={() => setcontactFormOpened(false)}
-                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary mb-4 sm:mb-6 cursor-pointer"
+                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-4 sm:mb-6 cursor-pointer"
               >
                 <div className="flex gap-2 items-center">
                   Reserva una Cita
@@ -47,7 +47,7 @@ export default function ContactModal({
             <>
               <div
                 onClick={() => setcontactFormOpened(true)}
-                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary mb-4 sm:mb-6 cursor-pointer"
+                className="absolute top-5 right-4 text-lg sm:text-xl font-montserrat text-primary hover:text-darkTitle mb-4 sm:mb-6 cursor-pointer"
               >
                 <div className="flex gap-2 items-center">
                   Formulario de Contacto

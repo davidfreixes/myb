@@ -1,4 +1,3 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Tooltip } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -13,12 +12,16 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function BunkerSupplyPage() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <div className="relative h-[50vh] sm:h-[50vh] w-full">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/ship-broker.jpg"
           alt="Ship broker service"
@@ -346,14 +349,17 @@ export default function BunkerSupplyPage() {
           Nuestro equipo está listo para ayudarte.
         </p>
         <Button
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
+          onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
           Contactar Ahora
         </Button>
       </motion.div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -14,11 +13,12 @@ import {
   Star,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function ConditionsAndRates() {
   const [activeTab, setActiveTab] = useState("yates");
+  const [contactModalOpened, setContactModalOpened] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -97,8 +97,7 @@ export default function ConditionsAndRates() {
           nuestras condiciones y tarifas.
         </p>
         <Button
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
+          onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-black font-normal text-base sm:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded inline-flex items-center"
         >
@@ -108,6 +107,10 @@ export default function ConditionsAndRates() {
           </div>
         </Button>
       </div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

@@ -1,11 +1,13 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Compass, FileText, Route, Scale, Wrench } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 export default function NauticalConsulting() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -17,7 +19,7 @@ export default function NauticalConsulting() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,14 +172,17 @@ export default function NauticalConsulting() {
           personalizada
         </p>
         <Button
-          component={Link}
-          href={`${NAVIGATION_LINKS.CONTACTO}`}
+          onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-lg py-3 px-6 rounded-lg transition-colors"
         >
           Contactar
         </Button>
       </motion.div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

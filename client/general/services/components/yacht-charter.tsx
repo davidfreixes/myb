@@ -1,4 +1,3 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -11,9 +10,12 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function YachtCharter() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -204,8 +206,7 @@ export default function YachtCharter() {
               escondidas y déjate llevar por la belleza natural de Menorca.
             </p>
             <Button
-              component={Link}
-              href={`${NAVIGATION_LINKS.CONTACTO}`}
+              onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded w-full sm:w-auto"
             >
@@ -214,6 +215,10 @@ export default function YachtCharter() {
           </div>
         </motion.div>
       </div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

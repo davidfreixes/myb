@@ -1,9 +1,9 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import ContactModal from "../../contact/modal/contactModal";
 
 const teamMembers = [
   {
@@ -51,6 +51,8 @@ const teamMembers = [
 ];
 
 export default function AboutUs() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   const teamSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = () => {
@@ -181,7 +183,7 @@ export default function AboutUs() {
       </section>
 
       {/* Contact Section - Responsive adjustments */}
-      <div className="relative bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-24 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
+      <div className="relative bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-18 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -192,7 +194,7 @@ export default function AboutUs() {
             <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary font-semibold text-center">
               ¿Listo Para Empezar Tu Viaje?
             </h2>
-            <h3 className="text-lg sm:text-xl md:text-2xl text-gray-600 text-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl text-darkTitle text-center">
               Contáctanos Hoy
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed text-center px-4 sm:px-6 md:px-8 max-w-2xl">
@@ -202,14 +204,17 @@ export default function AboutUs() {
               personalizada.
             </p>
             <Button
-              component={Link}
-              href="/contact"
+              onClick={() => setContactModalOpened(true)}
               unstyled
-              className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/90 transition-colors mt-4"
+              className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
             >
               Contáctanos
             </Button>
           </motion.div>
+          <ContactModal
+            opened={contactModalOpened}
+            onClose={() => setContactModalOpened(false)}
+          />
         </div>
       </div>
     </div>

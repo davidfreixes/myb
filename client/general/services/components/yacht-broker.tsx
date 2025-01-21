@@ -150,8 +150,6 @@ export default function YachtBroker() {
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
-          // component={Link}
-          // href={`${NAVIGATION_LINKS.CONTACTO}`}
           className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
           Contactar

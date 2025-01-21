@@ -1,7 +1,10 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 const partners = [
   {
@@ -42,6 +45,8 @@ const partners = [
 ];
 
 export default function Partners() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -71,7 +76,7 @@ export default function Partners() {
               </h2>
               <Button
                 component={Link}
-                href="/contact"
+                href={`${NAVIGATION_LINKS.CONTACTO}`}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors"
               >
@@ -131,14 +136,17 @@ export default function Partners() {
               Contáctanos para explorar oportunidades de colaboración.
             </p>
             <Button
-              component={Link}
-              href="/contact"
+              onClick={() => setContactModalOpened(true)}
               unstyled
-              className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/90 transition-colors"
+              className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
             >
               Solicitar Información
             </Button>
           </motion.div>
+          <ContactModal
+            opened={contactModalOpened}
+            onClose={() => setContactModalOpened(false)}
+          />
         </div>
       </div>
     </div>
