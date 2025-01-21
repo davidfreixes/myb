@@ -1,15 +1,136 @@
-import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
+import { Accordion, Button, Card, Tabs } from "@mantine/core";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import ContactModal from "../../contact/modal/contactModal";
+
+interface YachtDetails {
+  id: string;
+  type: "new" | "used";
+  model: string;
+  price: number;
+  year?: number;
+  length: number;
+  location: string;
+  displacement?: number;
+  hull?: string;
+  keel?: string;
+  imageUrl: string;
+  designer?: string;
+  category?: string;
+}
+
+const sampleYachts: YachtDetails[] = [
+  {
+    id: "1",
+    type: "used",
+    model: "Salthouse 58ft Cutter",
+    price: 310098,
+    year: 1989,
+    length: 17.68,
+    location: "South Pacific, Fiji",
+    displacement: 28000,
+    hull: "Steel",
+    keel: "Winged Keel",
+    imageUrl: "/img/yacht-broker.jpg",
+    designer: "Salthouse",
+    category: "Used sail boat for sale",
+  },
+  // Add more sample yachts here
+];
+
+function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
+  return (
+    <>
+      {yachts.map((yacht) => (
+        <Card key={yacht.id} className="overflow-hidden">
+          <div className="relative h-48">
+            <Image
+              src={yacht.imageUrl || "/placeholder.svg"}
+              alt={yacht.model}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="p-4">
+            <h3 className="text-xl font-montserrat font-medium mb-2">
+              {yacht.model}
+            </h3>
+            <p className="text-lg font-semibold text-primary mb-4">
+              €{yacht.price.toLocaleString()}
+            </p>
+
+            <Accordion>
+              <Accordion.Item value="details">
+                <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
+                  Ver Detalles
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <div className="space-y-2 text-sm">
+                    {yacht.year && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Año:</span>
+                        <span>{yacht.year}</span>
+                      </div>
+                    )}
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Eslora:</span>
+                      <span>{yacht.length} metros</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Ubicación:</span>
+                      <span>{yacht.location}</span>
+                    </div>
+                    {yacht.displacement && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Desplazamiento:</span>
+                        <span>{yacht.displacement} kg</span>
+                      </div>
+                    )}
+                    {yacht.hull && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Casco:</span>
+                        <span>{yacht.hull}</span>
+                      </div>
+                    )}
+                    {yacht.keel && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Quilla:</span>
+                        <span>{yacht.keel}</span>
+                      </div>
+                    )}
+                    {yacht.designer && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Diseñador:</span>
+                        <span>{yacht.designer}</span>
+                      </div>
+                    )}
+                    {yacht.category && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Categoría:</span>
+                        <span>{yacht.category}</span>
+                      </div>
+                    )}
+                  </div>
+                </Accordion.Panel>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+        </Card>
+      ))}
+    </>
+  );
+}
 
 export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const [activeTab, setActiveTab] = useState<string | null>("new");
 
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
@@ -121,6 +242,48 @@ export default function YachtBroker() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          {/* Yacht Catalog */}
+          <div className="container mx-auto px-4 py-8">
+            <Tabs value={activeTab} onChange={setActiveTab} className="mb-8">
+              <Tabs.List grow>
+                <Tabs.Tab value="new">Yates Nuevos</Tabs.Tab>
+                <Tabs.Tab value="used">Yates de Segunda Mano</Tabs.Tab>
+              </Tabs.List>
+
+              <AnimatePresence mode="wait">
+                <Tabs.Panel value="new">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                  >
+                    <YachtCards
+                      yachts={sampleYachts.filter(
+                        (yacht) => yacht.type === "new"
+                      )}
+                    />
+                  </motion.div>
+                </Tabs.Panel>
+
+                <Tabs.Panel value="used">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+                  >
+                    <YachtCards
+                      yachts={sampleYachts.filter(
+                        (yacht) => yacht.type === "used"
+                      )}
+                    />
+                  </motion.div>
+                </Tabs.Panel>
+              </AnimatePresence>
+            </Tabs>
           </div>
 
           <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8">
