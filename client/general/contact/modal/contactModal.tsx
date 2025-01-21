@@ -50,7 +50,7 @@ export default function ContactModal({
             <>
               <div
                 onClick={() => setcontactFormOpened(true)}
-                className="absolute top-2 sm:top-0.5 right-2 xs:right-3 sm:right-4 text-base xs:text-lg sm:text-md font-montserrat text-primary hover:text-darkTitle mb-2 xs:mb-3 sm:mb-6 cursor-pointer transition-colors duration-200"
+                className="absolute top-2 sm:top-1 right-2 xs:right-3 sm:right-4 text-base xs:text-lg sm:text-md font-montserrat text-primary hover:text-darkTitle mb-2 xs:mb-3 sm:mb-6 cursor-pointer transition-colors duration-200"
               >
                 <div className="flex gap-1 xs:gap-2 items-center">
                   <span className="hidden xs:inline">
