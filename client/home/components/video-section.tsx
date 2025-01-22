@@ -1,5 +1,6 @@
 "use client";
 
+import { Text } from "@mantine/core";
 import { motion } from "framer-motion";
 
 export default function AboutVideoSection() {
@@ -48,12 +49,12 @@ export default function AboutVideoSection() {
               Tu Consultora de Confianza
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-darkDescription leading-relaxed">
+            <Text size="lg" className="text-base sm:text-lg md:text-xl text-darkDescription leading-relaxed">
               En Menorca Brokers, nos dedicamos a facilitar la compraventa de
               yates y barcos mediante un servicio de brokerage innovador y
               confiable. Nuestro equipo profesional está listo para ofrecerte la
               mejor asesoría y garantizar una experiencia de compra exitosa.
-            </p>
+            </Text>
           </motion.div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import ArticlePerfectYacht from "@/client/home/components/article-perfect-yacht";
 import FeaturesSection from "@/client/home/components/features-section";
 import Hero from "@/client/home/components/hero";
 import ServicesSection from "@/client/home/components/services-section";
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesSection />
       <VideoSection />
       <FeaturesSection />
+      <ArticlePerfectYacht />
       <Footer />
     </>
   );

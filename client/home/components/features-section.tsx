@@ -1,3 +1,4 @@
+import { Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -34,7 +35,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-16 sm:space-y-16 md:space-y-16">
           {features.map((feature, index) => (
@@ -64,9 +65,9 @@ export default function FeaturesSection() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
                   {feature.title}
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                <Text size="lg" className="text-base sm:text-lg text-gray-600 leading-relaxed">
                   {feature.description}
-                </p>
+                </Text>
               </div>
             </motion.div>
           ))}
