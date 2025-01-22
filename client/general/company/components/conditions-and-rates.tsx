@@ -99,8 +99,8 @@ export default function ConditionsAndRates() {
         <Button
           onClick={() => setContactModalOpened(true)}
           unstyled
-          className="bg-primary hover:bg-primary/75 text-black font-normal text-base sm:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded inline-flex items-center"
-        >
+          className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded-lg transition-colors"
+          >
           <div className="flex gap-2 items-center">
             <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
             Contactar

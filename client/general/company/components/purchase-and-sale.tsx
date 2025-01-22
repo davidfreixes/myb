@@ -1,4 +1,3 @@
-import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -8,73 +7,74 @@ import {
   Clock,
   FileText,
   Globe,
+  Mail,
   MessageSquareMore,
   Scale,
   Shield,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
+
+const benefits = [
+  {
+    title: "Claridad y transparencia",
+    description: "Los términos y condiciones están claramente definidos.",
+    icon: <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Protección legal",
+    description:
+      "Garantiza la protección de todas las partes involucradas en la transacción.",
+    icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Flexibilidad",
+    description:
+      "Se adapta a diversas necesidades, desde alquileres de corta duración hasta acuerdos completos de compraventa.",
+    icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Estándares internacionales",
+    description:
+      "Reconocido globalmente por brokers, operadores y propietarios de yates.",
+    icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+];
+
+const components = [
+  {
+    title: "Detalles del yate",
+    description:
+      "Incluye especificaciones como nombre, eslora, tripulación y equipamiento.",
+    icon: <ClipboardCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Duración y términos del acuerdo",
+    description: "Fechas específicas de alquiler o condiciones de compraventa.",
+    icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Política de cancelaciones",
+    description:
+      "Establece las condiciones en caso de fuerza mayor o cancelación.",
+    icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Costos y depósitos",
+    description: "Define los precios, tarifas adicionales y pagos iniciales.",
+    icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+  {
+    title: "Términos de uso",
+    description:
+      "Describe cómo se utilizará el yate y las responsabilidades del cliente.",
+    icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+  },
+];
 
 export default function PurchaseAndSale() {
-  const benefits = [
-    {
-      title: "Claridad y transparencia",
-      description: "Los términos y condiciones están claramente definidos.",
-      icon: (
-        <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-      ),
-    },
-    {
-      title: "Protección legal",
-      description:
-        "Garantiza la protección de todas las partes involucradas en la transacción.",
-      icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Flexibilidad",
-      description:
-        "Se adapta a diversas necesidades, desde alquileres de corta duración hasta acuerdos completos de compraventa.",
-      icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Estándares internacionales",
-      description:
-        "Reconocido globalmente por brokers, operadores y propietarios de yates.",
-      icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-  ];
-
-  const components = [
-    {
-      title: "Detalles del yate",
-      description:
-        "Incluye especificaciones como nombre, eslora, tripulación y equipamiento.",
-      icon: <ClipboardCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Duración y términos del acuerdo",
-      description:
-        "Fechas específicas de alquiler o condiciones de compraventa.",
-      icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Política de cancelaciones",
-      description:
-        "Establece las condiciones en caso de fuerza mayor o cancelación.",
-      icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Costos y depósitos",
-      description: "Define los precios, tarifas adicionales y pagos iniciales.",
-      icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-    {
-      title: "Términos de uso",
-      description:
-        "Describe cómo se utilizará el yate y las responsabilidades del cliente.",
-      icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-    },
-  ];
+  const [contactModalOpened, setContactModalOpened] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -261,15 +261,21 @@ export default function PurchaseAndSale() {
           <div className="flex justify-center">
             <Button
               unstyled
-              component={Link}
-              href={`${NAVIGATION_LINKS.CONTACTO}`}
-              className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm sm:text-base md:text-lg py-3 px-6 sm:px-8 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+              onClick={() => setContactModalOpened(true)}
+              className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded-lg transition-colors"
             >
-              Contactar ahora
+              <div className="flex gap-2 items-center">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                Contactar ahora
+              </div>
             </Button>
           </div>
         </motion.div>
       </div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

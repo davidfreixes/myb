@@ -1,6 +1,6 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Text } from "@mantine/core";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -178,8 +178,8 @@ export function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 order-1 md:order-3">
-              <Link
+            <div className="flex gap-3 order-1 md:order-3">
+              {/* <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -194,7 +194,8 @@ export function Footer() {
                 className="text-gray-400 hover:text-primary"
               >
                 <Facebook size={20} />
-              </Link>
+              </Link> */}
+
               <Link
                 href="https://www.instagram.com/menorca_yacht_brokers/"
                 target="_blank"
@@ -204,13 +205,21 @@ export function Footer() {
                 <Instagram size={20} />
               </Link>
               <Link
+                href="mailto:contact@menorcabrokers.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary"
+              >
+                <Mail size={21} />
+              </Link>
+              {/* <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
               >
                 <Youtube size={20} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

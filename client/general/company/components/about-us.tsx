@@ -46,7 +46,7 @@ const teamMembers = [
     name: "David Freixes",
     role: "IT Developer & Co-Owner",
     location: "Spain",
-    image: "/img/team/david-freixes.jpg",
+    image: "/img/logo.png",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function AboutUs() {
               <Button
                 onClick={scrollToSection}
                 unstyled
-                className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors mt-4"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-5 py-2 text-md font-medium text-white shadow-lg hover:bg-primary/90 transition-colors mt-4"
               >
                 ¡Conócenos!
               </Button>
@@ -152,7 +152,7 @@ export default function AboutUs() {
                     <p className="text-primary font-medium mb-4">
                       {member.role}
                     </p>
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-7">
                       <div className="flex items-center text-gray-600">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span className="text-sm">{member.location}</span>
@@ -169,7 +169,7 @@ export default function AboutUs() {
                         component="a"
                         href={`mailto:${member.email}`}
                         variant="outline"
-                        className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+                        color="#f1c001"
                       >
                         Contáctame
                       </Button>
@@ -206,7 +206,7 @@ export default function AboutUs() {
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
-              className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+              className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
             >
               Contáctanos
             </Button>
