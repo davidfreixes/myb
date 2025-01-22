@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ContactModal from "../../contact/modal/contactModal";
+import { useState } from "react";
 
 const newsArticles = [
   {
@@ -22,6 +24,8 @@ const newsArticles = [
 ];
 
 export default function PortDaily() {
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -114,15 +118,14 @@ export default function PortDaily() {
             <div className="flex justify-center gap-4">
               <Button
                 component={Link}
-                href="/contact"
+                href="mailto:contact@menorcabrokers.com"
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/50 transition-colors"
               >
                 Enviar Noticia
               </Button>
               <Button
-                component={Link}
-                href="/contact"
+                onClick={() => setContactModalOpened(true)}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-darkTitle border-2 border-primary hover:bg-primary/50 transition-colors"
               >
@@ -132,6 +135,10 @@ export default function PortDaily() {
           </motion.div>
         </div>
       </div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

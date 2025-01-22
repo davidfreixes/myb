@@ -81,7 +81,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services-section" className="py-12 sm:py-16 md:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-20">
+      <div className="container mx-auto px-0 sm:px-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
