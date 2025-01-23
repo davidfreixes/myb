@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ArticlePerfectYacht() {
   return (
-    <Container className="py-12 max-w-[1400px]">
+    <Container className="py-12 max-w-[1400px] border-b-2 border-t-2 border-primary">
       {/* Hero Section */}
       <div className="relative w-full h-[400px] mb-8 rounded-xl overflow-hidden">
         <Image
