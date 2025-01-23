@@ -1,4 +1,5 @@
 import ArticlePerfectYacht from "@/client/home/components/article-perfect-yacht";
+import CTASection from "@/client/home/components/cta-section";
 import FAQSection from "@/client/home/components/faq-section";
 import FeaturesSection from "@/client/home/components/features-section";
 import Hero from "@/client/home/components/hero";
@@ -17,6 +18,7 @@ export default function Home() {
       <FeaturesSection />
       <ArticlePerfectYacht />
       <FAQSection />
+      <CTASection />
       <Footer />
     </>
   );
