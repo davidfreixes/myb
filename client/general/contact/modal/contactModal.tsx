@@ -29,7 +29,7 @@ export default function ContactModal({
         size="lg"
         withCloseButton={false}
       >
-        <div className="px-2 xs:px-3 lg:px-4 relative">
+        <div className="px-2 xs:px-3 relative">
           {contactFormOpened ? (
             <>
               <div

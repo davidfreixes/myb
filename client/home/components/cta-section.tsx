@@ -2,6 +2,7 @@ import ContactModal from "@/client/general/contact/modal/contactModal";
 import { Text } from "@mantine/core";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 
 export default function CTASection() {
@@ -17,8 +18,8 @@ export default function CTASection() {
       <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
         ¿Tienes alguna pregunta adicional?
       </h2>
-      <div className=" mb-3 sm:mb-4 md:mb-6">
-        <Text className="text-sm sm:text-base md:text-lg text-gray-700">
+      <div className=" mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto">
+        <Text className="text-sm sm:text-base md:text-lg text-gray-700 ">
           Nuestro equipo de expertos está listo para ayudarte a encontrar la
           mejor solución para tus necesidades náuticas. Contáctanos hoy mismo y
           descubre cómo podemos ayudarte.
@@ -27,9 +28,12 @@ export default function CTASection() {
       <Button
         unstyled
         onClick={() => setContactModalOpened(true)}
-        className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded transition-colors duration-200"
+        className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 rounded transition-colors duration-200"
       >
-        Contactar con un experto
+        <div className="flex gap-2 items-center">
+          <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+          Contactar con un experto
+        </div>
       </Button>
 
       <ContactModal

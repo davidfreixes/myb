@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Button, Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
   BookOpen,
@@ -244,20 +244,23 @@ export default function PurchaseAndSale() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-white py-8 sm:py-12 md:py-16">
+      <div className="bg-white py-8 sm:py-12 md:py-16 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center"
+          className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center "
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
             ¿Interesado en nuestros servicios?
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Contáctanos para descubrir cómo podemos ayudarte a encontrar el yate
-            perfecto para tus necesidades
-          </p>
+          <div className=" mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto">
+            <Text className="text-sm sm:text-base md:text-lg text-gray-700 ">
+              Contáctanos para descubrir cómo podemos ayudarte a encontrar el
+              yate perfecto para tus necesidades
+            </Text>
+          </div>
+
           <div className="flex justify-center">
             <Button
               unstyled
