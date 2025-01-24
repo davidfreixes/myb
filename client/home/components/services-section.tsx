@@ -1,8 +1,9 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Card } from "@mantine/core";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 const services = [
   {
@@ -79,6 +80,9 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const refs = services.map(() => useRef(null));
+  const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
+
   return (
     <section id="services-section" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-0 sm:px-20">
@@ -99,10 +103,15 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
+              ref={refs[index]}
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              animate={
+                inViewStates[index]
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
+              transition={{ duration: 0.3, delay: index * 0.1 }}
               className="flex"
             >
               <Link href={service.link} className="w-full shadow-md">

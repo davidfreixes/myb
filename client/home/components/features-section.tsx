@@ -1,6 +1,7 @@
 import { Text } from "@mantine/core";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 const features = [
   {
@@ -23,8 +24,8 @@ const features = [
       <>
         En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht
         Brokers se está destacando como una empresa pionera con una combinación
-        única de <strong>&quot;Experiencia local, alcance global&quot;</strong>. Esta
-        innovadora compañía menorquina ha logrado establecer una presencia
+        única de <strong>&quot;Experiencia local, alcance global&quot;</strong>.
+        Esta innovadora compañía menorquina ha logrado establecer una presencia
         significativa en el sector.
       </>
     ),
@@ -34,15 +35,33 @@ const features = [
 ];
 
 export default function FeaturesSection() {
+  // const refs = features.map(() => useRef(null));
+  // const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
+
+  // Create individual refs and inView states for each feature
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const refs = [ref1, ref2, ref3];
+
+  const isInView1 = useInView(ref1, { amount: 0.3 });
+  const isInView2 = useInView(ref2, { amount: 0.3 });
+  const isInView3 = useInView(ref3, { amount: 0.3 });
+  const inViewStates = [isInView1, isInView2, isInView3];
   return (
     <section className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-16 sm:space-y-16 md:space-y-16">
           {features.map((feature, index) => (
             <motion.div
+              ref={refs[index]}
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={
+                inViewStates[index]
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`flex flex-col justify-center gap-8 sm:gap-10 md:gap-24 ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
@@ -52,7 +71,7 @@ export default function FeaturesSection() {
               <div className="w-full sm:w-4/5 md:w-3/4 lg:w-[400px] mx-auto lg:mx-0">
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={feature.image}
+                    src={feature.image || "/placeholder.svg"}
                     alt={feature.imageAlt}
                     fill
                     className="object-cover"
@@ -65,7 +84,10 @@ export default function FeaturesSection() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
                   {feature.title}
                 </h2>
-                <Text size="lg" className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                <Text
+                  size="lg"
+                  className="text-base sm:text-lg text-gray-600 leading-relaxed"
+                >
                   {feature.description}
                 </Text>
               </div>
