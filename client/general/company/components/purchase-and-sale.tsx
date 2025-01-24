@@ -188,7 +188,7 @@ export default function PurchaseAndSale() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className="bg-primary/10 p-4 sm:p-6 rounded-xl border-2 border-primary/20 hover:bg-primary/15 transition-all duration-300"
+              className="bg-primary/10 p-4 sm:p-6 rounded-xl border-2 border-primary/20 hover:bg-primary/15 transition-all duration-300 hover:shadow-md"
             >
               <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                 <div className="p-2 sm:p-3 bg-white rounded-lg">
