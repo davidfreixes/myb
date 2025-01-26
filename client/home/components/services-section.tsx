@@ -38,6 +38,22 @@ const services = [
     link: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
   },
   {
+    title: "Bunker Supply",
+    description: (
+      <>
+        Ofrecemos servicios de Ship Broker y Charterer para suministros de
+        combustible marino.
+        <br />
+        <br />
+        Consulta nuestro reporte diario para obtener información actualizada
+        sobre precios y disponibilidad, y contáctanos para gestionar tus
+        necesidades de bunker.
+      </>
+    ),
+    image: "/img/ship-broker.jpg",
+    link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+  },
+  {
     title: "Inspecciones y Tasaciones de Yates",
     description: (
       <>
@@ -63,13 +79,7 @@ const services = [
     image: "/img/nautical-consulting.jpg",
     link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
   },
-  {
-    title: "Ship Broker & Charterer",
-    description:
-      "Actuamos de Ship Broker y Charterer. Consulta nuestro daily y contáctanos si quieres cerrar un fixture.",
-    image: "/img/ship-broker.jpg",
-    link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
-  },
+
   {
     title: "Servicios de Valor Añadido",
     description:
