@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Radio, TextInput } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -134,6 +132,17 @@ const serviceIcons = {
   "Charter service": ShipWheel,
 };
 
+interface FormData {
+  type: string;
+  category: string;
+  service: string;
+  date: string;
+  time: string;
+  name: string;
+  email: string;
+  phone: string;
+}
+
 export default function Appointment() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -148,7 +157,7 @@ export default function Appointment() {
     message: "",
   });
 
-  const [scheduleData, setScheduleData] = useState({
+  const [scheduleData, setScheduleData] = useState<FormData>({
     type: "RESERVA DE UNA CITA",
     category: "",
     service: "",
@@ -161,9 +170,9 @@ export default function Appointment() {
 
   // Add useEffect for real-time validation
   useEffect(() => {
-    const newErrors = { ...errors };
+    const newErrors = { ...errors }; // Base para la validación
 
-    // Validate current step fields in real-time
+    // Validar los campos del paso actual
     switch (currentStep) {
       case 0:
         if (scheduleData.category) {
@@ -196,8 +205,9 @@ export default function Appointment() {
         break;
     }
 
-    setErrors(newErrors);
-  }, [scheduleData, currentStep, errors]); // Only re-run when scheduleData, currentStep, or errors changes
+    setErrors(newErrors); // Actualiza los errores
+  }, [scheduleData, currentStep]); // Excluir `errors`
+  // Only re-run when scheduleData, currentStep, or errors changes
 
   // Modified validateStep to handle validation without clearing previous errors
   const validateStep = (step: number): boolean => {
@@ -285,7 +295,7 @@ export default function Appointment() {
             message: "¡Cita reservada correctamente!",
           });
           setScheduleData({
-            type: "",
+            type: "RESERVA DE UNA CITA",
             category: "",
             service: "",
             date: "",
@@ -373,7 +383,6 @@ export default function Appointment() {
                 <p className="text-red-500 text-sm mb-2">{errors.service}</p>
               )}
               <div className="space-y-3 overflow-y-auto max-h-[400px]">
-                {" "}
                 {filteredServices.map((service) => (
                   <div
                     key={service.id}
@@ -546,8 +555,7 @@ export default function Appointment() {
     <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className=""
+      transition={{ duration: 0.5 }}
     >
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-7">
         Reserva una Cita

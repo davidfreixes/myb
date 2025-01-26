@@ -2,8 +2,8 @@ import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
-  Database,
   Building,
+  Database,
   FileText,
   MenuIcon,
   Newspaper,
@@ -125,7 +125,7 @@ const navigation: NavItem[] = [
   },
   {
     label: "QUIÉNES SOMOS",
-    href: "/quienes-somos",
+    href: `${NAVIGATION_LINKS.QUIENES_SOMOS }`,
     width: "300",
   },
 ];

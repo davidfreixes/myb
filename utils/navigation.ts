@@ -4,7 +4,6 @@ export const NAVIGATION_LINKS = {
   SERVICIOS: "/servicios",
   CONTACTO: "/contacto",
   BLOG: "/blog",
-  PROFILE_PLANS: "app/profile?tab=api",
   YACHT_BROKER: "/yacht-broker",
   YACHT_CHARTER: "/yacht-charter",
   INSPECCIONES: "/inspections",

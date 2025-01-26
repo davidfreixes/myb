@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactForm from "./contact-form";
 import Appointment from "./apointment";
+import ContactForm from "./contact-form";
 
 export default function Contact() {
   return (

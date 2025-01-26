@@ -28,8 +28,9 @@ export default function BunkerSupplyPage() {
           fill
           className="object-cover"
           priority
+          objectPosition="bottom"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 mx-auto px-4 sm:px-6 h-full flex flex-col justify-center max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
