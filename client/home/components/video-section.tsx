@@ -1,8 +1,10 @@
 import { Text } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutVideoSection() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -22,7 +24,7 @@ export default function AboutVideoSection() {
           <motion.div
             ref={ref}
             initial="hidden"
-            animate={isInView ? 'visible' : 'hidden'}
+            animate={isInView ? "visible" : "hidden"}
             variants={fadeUp}
             transition={{ duration: 1 }}
             className="w-full lg:w-3/5 relative"
@@ -54,17 +56,14 @@ export default function AboutVideoSection() {
             className="w-full lg:w-2/5 mt-4 sm:mt-6 lg:mt-0 px-2 sm:px-0"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-medium text-darkTitle mb-3 sm:mb-4 md:mb-6">
-              Tu Consultora de Confianza
+              {t("aboutVideoSection.title")}
             </h2>
 
             <Text
               size="lg"
               className="text-base sm:text-lg md:text-xl text-darkDescription leading-relaxed"
             >
-              En Menorca Brokers, nos dedicamos a facilitar la compraventa de
-              yates y barcos mediante un servicio de brokerage innovador y
-              confiable. Nuestro equipo profesional está listo para ofrecerte la
-              mejor asesoría y garantizar una experiencia de compra exitosa.
+              {t("aboutVideoSection.description")}
             </Text>
           </motion.div>
         </div>

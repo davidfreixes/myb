@@ -78,8 +78,6 @@ export default function ServicesSection() {
   const refs = services.map(() => useRef(null));
   const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
 
-
-
   return (
     <section id="services-section" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-0 sm:px-20">

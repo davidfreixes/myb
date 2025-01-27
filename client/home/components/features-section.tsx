@@ -2,42 +2,42 @@ import { Text } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-
-const features = [
-  {
-    title: "Navegando tu éxito en Menorca",
-    description:
-      "Menorca Yacht Brokers no solo se enfoca en conectar a sus clientes con oportunidades de calidad en la compra, venta y gestión de yates, sino que también se compromete a brindar un servicio integral que destaca la esencia única de la isla. La empresa se ha ganado una reputación por su conocimiento profundo del mercado menorquín, permitiendo a sus clientes encontrar embarcaciones que se ajusten perfectamente a sus necesidades y disfrutar de una experiencia de navegación excepcional.",
-    image: "/img/sail-menorca.jpg",
-    imageAlt: "Navegar Menorca",
-  },
-  {
-    title: "Conectando oportunidades en el Mediterráneo",
-    description:
-      "Otro de los lemas que define a Menorca Yacht Brokers y refleja su misión de unir a personas y empresas con una misma pasión por el mar. Desde la primera consulta hasta el cierre de cada operación, MenorcaBrokers.com acompaña a sus clientes en cada paso, ofreciendo un servicio de calidad con un enfoque en el detalle y la satisfacción total del cliente.",
-    image: "/img/mediterranean.jpg",
-    imageAlt: "Mediterráneo",
-  },
-  {
-    title: "Experiencia local, alcance global",
-    description: (
-      <>
-        En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht
-        Brokers se está destacando como una empresa pionera con una combinación
-        única de <strong>&quot;Experiencia local, alcance global&quot;</strong>.
-        Esta innovadora compañía menorquina ha logrado establecer una presencia
-        significativa en el sector.
-      </>
-    ),
-    image: "/img/maritime-manage.jpg",
-    imageAlt: "Gestión Marítima",
-  },
-];
+import { Trans, useTranslation } from "react-i18next";
 
 export default function FeaturesSection() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      title: t("featuresSection.features.0.title"),
+      description: t("featuresSection.features.0.description"),
+      image: "/img/sail-menorca.jpg",
+      imageAlt: t("featuresSection.features.0.imageAlt"),
+    },
+    {
+      title: t("featuresSection.features.1.title"),
+      description: t("featuresSection.features.1.description"),
+      image: "/img/mediterranean.jpg",
+      imageAlt: t("featuresSection.features.1.imageAlt"),
+    },
+    {
+      title: t("featuresSection.features.2.title"),
+      description: (
+        <Trans i18nKey="featuresSection.features.2.description">
+          En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht
+          Brokers se está destacando como una empresa pionera con una
+          combinación única de{" "}
+          <strong>&quot;Experiencia local, alcance global&quot;</strong>. Esta
+          innovadora compañía menorquina ha logrado establecer una presencia
+          significativa en el sector.
+        </Trans>
+      ),
+      image: "/img/maritime-manage.jpg",
+      imageAlt: t("featuresSection.features.2.imageAlt"),
+    },
+  ];
   // const refs = features.map(() => useRef(null));
   // const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
-
   // Create individual refs and inView states for each feature
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -55,7 +55,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <motion.div
               ref={refs[index]}
-              key={feature.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={
                 inViewStates[index]

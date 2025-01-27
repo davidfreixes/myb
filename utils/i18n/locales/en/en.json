@@ -61,5 +61,28 @@
       }
     ],
     "button": "Access the service"
+  },
+  "aboutVideoSection": {
+    "title": "Your Trusted Consultant",
+    "description": "At Menorca Brokers, we are dedicated to facilitating the purchase and sale of yachts and boats through an innovative and reliable brokerage service. Our professional team is ready to provide you with the best advice and ensure a successful buying experience."
+  },
+  "featuresSection": {
+    "features": [
+      {
+        "title": "Navigating Your Success in Menorca",
+        "description": "Menorca Yacht Brokers not only focuses on connecting its clients with quality opportunities in the purchase, sale, and management of yachts, but it also commits to providing a comprehensive service that highlights the unique essence of the island. The company has earned a reputation for its deep knowledge of the Menorcan market, helping its clients find vessels perfectly tailored to their needs and enjoy an exceptional sailing experience.",
+        "imageAlt": "Sailing Menorca"
+      },
+      {
+        "title": "Connecting Opportunities in the Mediterranean",
+        "description": "One of the mottos that defines Menorca Yacht Brokers and reflects its mission to unite people and companies with the same passion for the sea. From the first consultation to the closing of each transaction, MenorcaBrokers.com accompanies its clients at every step, offering quality service with a focus on detail and total customer satisfaction.",
+        "imageAlt": "Mediterranean"
+      },
+      {
+        "title": "Local Expertise, Global Reach",
+        "description": "In the Mediterranean nautical services market, Menorca Yacht Brokers is emerging as a pioneering company with a unique combination of <2>Local Expertise, Global Reach</2>. This innovative Menorcan company has managed to establish a significant presence in the sector.",
+        "imageAlt": "Maritime Management"
+      }
+    ]
   }
 }
