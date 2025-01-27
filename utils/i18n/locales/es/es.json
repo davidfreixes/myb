@@ -14,75 +14,167 @@
         "explore_services": "Explora Nuestros Servicios",
         "contact_us": "Contactar"
       }
-    }
-  },
-  "servicesSection": {
-    "header": {
-      "title": "Nuestros Servicios",
-      "description": "Descubre nuestra amplia gama de servicios náuticos profesionales"
     },
-    "services": [
-      {
-        "title": "Yacht Broker",
-        "description": {
-          "parte1": "Te ayudamos a encontrar el mejor Yate para ti. Según tus gustos, te daremos las opciones más posibles de compra de Yates.",
-          "parte2": "Yates de nueva construcción o de segunda mano. Las dos opciones son buenas y te ayudamos a descubrirlas."
+    "servicesSection": {
+      "header": {
+        "title": "Nuestros Servicios",
+        "description": "Descubre nuestra amplia gama de servicios náuticos profesionales"
+      },
+      "services": [
+        {
+          "title": "Yacht Broker",
+          "description": {
+            "parte1": "Te ayudamos a encontrar el mejor Yate para ti. Según tus gustos, te daremos las opciones más posibles de compra de Yates.",
+            "parte2": "Yates de nueva construcción o de segunda mano. Las dos opciones son buenas y te ayudamos a descubrirlas."
+          }
+        },
+        {
+          "title": "Yacht Charter",
+          "description": {
+            "parte1": "¿Buscas pasar una semana por las Baleares?",
+            "parte2": "Contáctanos y usando todos los recursos a nuestro alcanze podemos organiarlo todo desde el aeropuerto hasta la marcha de tus vacaciones. Dinos qué necesitas y encontraremos un barco (con patrón si hace falta) para que tus vacaciones sean perfectas."
+          }
+        },
+        {
+          "title": "Bunker Supply",
+          "description": {
+            "parte1": "Ofrecemos servicios de Ship Broker y Charterer para suministros de combustible marino.",
+            "parte2": "Consulta nuestro reporte diario para obtener información actualizada sobre precios y disponibilidad, y contáctanos para gestionar tus necesidades de bunker."
+          }
+        },
+        {
+          "title": "Inspecciones y Tasaciones de Yates",
+          "description": "Realizamos inspecciones de Yates previas a Ports State Control, ventas o pruebas de mar. También realizamos tasaciones previas a compraventas para asegurar el valor de la embarcación o buque."
+        },
+        {
+          "title": "Gestión de Carga y Logística",
+          "description": "En fusión con On Line Traders & Shipping, gestionamos cargas con las empresas de la isla con el fin de ayudar y optimizar los procesos."
+        },
+        {
+          "title": "Asesoría Náutica",
+          "description": "Gestión de documentación, matriculaciones o dudas. Nuestros asesores están aquí para ayudar cualquier duda o gestión del sector."
+        },
+        {
+          "title": "Servicios de Valor Añadido",
+          "description": "A parte de todos los servicios, podemos añadir recogidas en el aeropuerto o aeródromo, en el puerto o desplazamientos. También excursiones, visitas sofisticadas o rutas por la isla según el gusto del cliente."
         }
-      },
-      {
-        "title": "Yacht Charter",
-        "description": {
-          "parte1": "¿Buscas pasar una semana por las Baleares?",
-          "parte2": "Contáctanos y usando todos los recursos a nuestro alcanze podemos organiarlo todo desde el aeropuerto hasta la marcha de tus vacaciones. Dinos qué necesitas y encontraremos un barco (con patrón si hace falta) para que tus vacaciones sean perfectas."
+      ],
+      "button": "Accede al servicio"
+    },
+    "aboutVideoSection": {
+      "title": "Tu Consultora de Confianza",
+      "description": "En Menorca Brokers, nos dedicamos a facilitar la compraventa de yates y barcos mediante un servicio de brokerage innovador y confiable. Nuestro equipo profesional está listo para ofrecerte la mejor asesoría y garantizar una experiencia de compra exitosa."
+    },
+    "featuresSection": {
+      "features": [
+        {
+          "title": "Navegando tu éxito en Menorca",
+          "description": "Menorca Yacht Brokers no solo se enfoca en conectar a sus clientes con oportunidades de calidad en la compra, venta y gestión de yates, sino que también se compromete a brindar un servicio integral que destaca la esencia única de la isla. La empresa se ha ganado una reputación por su conocimiento profundo del mercado menorquín, permitiendo a sus clientes encontrar embarcaciones que se ajusten perfectamente a sus necesidades y disfrutar de una experiencia de navegación excepcional.",
+          "imageAlt": "Navegar Menorca"
+        },
+        {
+          "title": "Conectando oportunidades en el Mediterráneo",
+          "description": "Otro de los lemas que define a Menorca Yacht Brokers y refleja su misión de unir a personas y empresas con una misma pasión por el mar. Desde la primera consulta hasta el cierre de cada operación, MenorcaBrokers.com acompaña a sus clientes en cada paso, ofreciendo un servicio de calidad con un enfoque en el detalle y la satisfacción total del cliente.",
+          "imageAlt": "Mediterráneo"
+        },
+        {
+          "title": "Experiencia local, alcance global",
+          "description": "En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht Brokers se está destacando como una empresa pionera con una combinación única de <2>Experiencia local, alcance global</2>. Esta innovadora compañía menorquina ha logrado establecer una presencia significativa en el sector.",
+          "imageAlt": "Gestión Marítima"
         }
+      ]
+    },
+    "articlePerfectYacht": {
+      "hero": {
+        "alt": "Yate navegando al atardecer",
+        "title": "Cómo elegir el yate perfecto: el sueño de navegar hecho realidad"
       },
-      {
-        "title": "Bunker Supply",
-        "description": {
-          "parte1": "Ofrecemos servicios de Ship Broker y Charterer para suministros de combustible marino.",
-          "parte2": "Consulta nuestro reporte diario para obtener información actualizada sobre precios y disponibilidad, y contáctanos para gestionar tus necesidades de bunker."
-        }
+      "author": {
+        "label": "Escrito por",
+        "name": "Martin Scholz"
       },
-      {
-        "title": "Inspecciones y Tasaciones de Yates",
-        "description": "Realizamos inspecciones de Yates previas a Ports State Control, ventas o pruebas de mar. También realizamos tasaciones previas a compraventas para asegurar el valor de la embarcación o buque."
-      },
-      {
-        "title": "Gestión de Carga y Logística",
-        "description": "En fusión con On Line Traders & Shipping, gestionamos cargas con las empresas de la isla con el fin de ayudar y optimizar los procesos."
-      },
-      {
-        "title": "Asesoría Náutica",
-        "description": "Gestión de documentación, matriculaciones o dudas. Nuestros asesores están aquí para ayudar cualquier duda o gestión del sector."
-      },
-      {
-        "title": "Servicios de Valor Añadido",
-        "description": "A parte de todos los servicios, podemos añadir recogidas en el aeropuerto o aeródromo, en el puerto o desplazamientos. También excursiones, visitas sofisticadas o rutas por la isla según el gusto del cliente."
+      "content": {
+        "intro": "La brisa marina acaricia tu rostro mientras observas el horizonte interminable, rodeado de azul y de calma. Tener un yate propio es mucho más que una cuestión de lujo: es un sueño de libertad, de aventuras compartidas y de una relación íntima con el mar...",
+        "image1": {
+          "alt": "Yate en una cala de Menorca"
+        },
+        "section1": {
+          "title": "Una decisión personal",
+          "text": "Elegir un yate es, ante todo, una decisión profundamente personal. Cada navegante tiene su propia visión de lo que significa surcar los mares: algunos buscan velocidad y adrenalina, mientras que otros anhelan la tranquilidad de largas jornadas fondeados en calas escondidas..."
+        },
+        "section2": {
+          "title": "Infinitas opciones",
+          "text": "En el mundo de los yates, las opciones son infinitas. Desde los estilizados yates a motor que evocan velocidad y sofisticación hasta los clásicos veleros que susurran historias de exploradores y navegantes intrépidos, cada embarcación tiene su propia alma..."
+        },
+        "image2": {
+          "alt": "Interior de un yate de lujo"
+        },
+        "section3": {
+          "title": "Mantenimiento y cuidados",
+          "text": "Un aspecto clave al comprar un yate es considerar su mantenimiento. La vida en el mar es tan maravillosa como desafiante, y cada embarcación requiere un cuidado constante para mantenerse en óptimas condiciones..."
+        },
+        "section4": {
+          "title": "La dimensión cultural de Menorca",
+          "text": "En Menorca, donde el mar es parte esencial de la identidad local, la selección de un yate adquiere una dimensión cultural. La isla, con sus calas idílicas y sus aguas cristalinas, es el escenario perfecto para disfrutar de una embarcación propia..."
+        },
+        "image3": {
+          "alt": "Vista aérea de una cala de Menorca"
+        },
+        "section5": {
+          "title": "La importancia de probar",
+          "text": "Es también fundamental probar antes de decidir. A menudo, los compradores primerizos subestiman la importancia de experimentar el yate en acción."
+        },
+        "section6": {
+          "title": "Aprendizaje continuo",
+          "text": "El momento de la compra es también una oportunidad para aprender. Durante el proceso, cada conversación con un broker es una lección sobre técnica, navegación y estilo de vida..."
+        },
+        "section7": {
+          "title": "La dimensión emocional",
+          "text": "Comprar un yate es una inversión en sueños y en recuerdos futuros. Es imaginarse navegando al atardecer, compartiendo risas con amigos o disfrutando de la soledad del mar abierto..."
+        },
+        "conclusion": "Elegir el yate perfecto es un proceso que combina razón y pasión, práctica y sueño. En Menorca, el mar siempre ha sido un testigo silencioso de grandes aventuras, y empresas como Menorca Yacht Brokers están allí para asegurarse de que cada navegante encuentre su propio camino en el azul infinito..."
       }
-    ],
-    "button": "Accede al servicio"
-  },
-  "aboutVideoSection": {
-    "title": "Tu Consultora de Confianza",
-    "description": "En Menorca Brokers, nos dedicamos a facilitar la compraventa de yates y barcos mediante un servicio de brokerage innovador y confiable. Nuestro equipo profesional está listo para ofrecerte la mejor asesoría y garantizar una experiencia de compra exitosa."
-  },
-  "featuresSection": {
-    "features": [
-      {
-        "title": "Navegando tu éxito en Menorca",
-        "description": "Menorca Yacht Brokers no solo se enfoca en conectar a sus clientes con oportunidades de calidad en la compra, venta y gestión de yates, sino que también se compromete a brindar un servicio integral que destaca la esencia única de la isla. La empresa se ha ganado una reputación por su conocimiento profundo del mercado menorquín, permitiendo a sus clientes encontrar embarcaciones que se ajusten perfectamente a sus necesidades y disfrutar de una experiencia de navegación excepcional.",
-        "imageAlt": "Navegar Menorca"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Resolvemos tus dudas sobre la compra, venta y gestión de yates en Menorca",
+      "bestTimeToBuy": {
+        "question": "¿Cuál es el mejor momento para comprar un yate en Menorca?",
+        "answer": "La temporada baja (octubre a marzo) suele ser el mejor momento para comprar, ya que los precios pueden ser más competitivos. Sin embargo, en Menorca Yacht Brokers te ayudamos a encontrar las mejores oportunidades durante todo el año, adaptándonos a tus necesidades y presupuesto."
       },
-      {
-        "title": "Conectando oportunidades en el Mediterráneo",
-        "description": "Otro de los lemas que define a Menorca Yacht Brokers y refleja su misión de unir a personas y empresas con una misma pasión por el mar. Desde la primera consulta hasta el cierre de cada operación, MenorcaBrokers.com acompaña a sus clientes en cada paso, ofreciendo un servicio de calidad con un enfoque en el detalle y la satisfacción total del cliente.",
-        "imageAlt": "Mediterráneo"
+      "servicesOffered": {
+        "question": "¿Qué servicios ofrece Menorca Yacht Brokers?",
+        "answer": "Ofrecemos una gama completa de servicios que incluyen: compraventa de yates, servicios de charter, inspecciones y tasaciones, gestión de carga y logística, y asesoría náutica integral. Nuestro enfoque personalizado garantiza que cada cliente reciba la atención y el servicio que necesita."
       },
-      {
-        "title": "Experiencia local, alcance global",
-        "description": "En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht Brokers se está destacando como una empresa pionera con una combinación única de <2>Experiencia local, alcance global</2>. Esta innovadora compañía menorquina ha logrado establecer una presencia significativa en el sector.",
-        "imageAlt": "Gestión Marítima"
+      "purchaseProcess": {
+        "question": "¿Cómo es el proceso de compra de un yate?",
+        "answer": "El proceso comienza con una consulta inicial donde entendemos tus necesidades, seguido por la búsqueda y selección de embarcaciones, inspecciones, negociación, y finalmente el cierre de la compra. Te acompañamos en cada paso, asegurando una transacción segura y satisfactoria."
+      },
+      "maintenanceCosts": {
+        "question": "¿Qué costes de mantenimiento debo considerar al comprar un yate?",
+        "answer": "Los principales costes incluyen: amarre, seguros, mantenimiento regular, combustible, y posibles reparaciones. En Menorca Yacht Brokers te asesoramos sobre estos aspectos para que puedas planificar adecuadamente y disfrutar de tu embarcación sin preocupaciones."
+      },
+      "financingOptions": {
+        "question": "¿Ofrecen opciones de financiación para la compra de yates?",
+        "answer": "Sí, trabajamos con diferentes entidades financieras y podemos ayudarte a encontrar la mejor opción de financiación que se adapte a tu situación. Te asesoramos sobre las diferentes alternativas disponibles y los requisitos necesarios."
+      },
+      "requiredDocuments": {
+        "question": "¿Qué documentación necesito para comprar un yate en Menorca?",
+        "answer": "La documentación básica incluye identificación personal, documentación fiscal, y dependiendo del tipo de embarcación, pueden requerirse licencias específicas. Nuestro equipo te guiará en todo el proceso de documentación para asegurar que todo esté en orden."
+      },
+      "prePurchaseInspection": {
+        "question": "¿Por qué es importante realizar una inspección antes de comprar?",
+        "answer": "La inspección previa a la compra es fundamental para evaluar el estado real de la embarcación, identificar posibles problemas y verificar que la inversión sea segura. Nuestros expertos realizan inspecciones detalladas para garantizar tu tranquilidad en la compra."
+      },
+      "charterService": {
+        "question": "¿Cómo funciona el servicio de charter de yates?",
+        "answer": "Nuestro servicio de charter te permite alquilar yates por días o semanas, con o sin patrón. Nos encargamos de toda la logística, desde la selección de la embarcación ideal hasta la planificación de tu ruta por las mejores calas de Menorca."
       }
-    ]
+    },
+    "ctaSection": {
+      "title": "¿Tienes alguna pregunta adicional?",
+      "description": "Nuestro equipo de expertos está listo para ayudarte a encontrar la mejor solución para tus necesidades náuticas. Contáctanos hoy mismo y descubre cómo podemos ayudarte.",
+      "button": "Contactar con un experto"
+    }
   }
 }

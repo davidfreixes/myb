@@ -9,21 +9,21 @@ export default function FeaturesSection() {
 
   const features = [
     {
-      title: t("featuresSection.features.0.title"),
-      description: t("featuresSection.features.0.description"),
+      title: t("mainPage.featuresSection.features.0.title"),
+      description: t("mainPage.featuresSection.features.0.description"),
       image: "/img/sail-menorca.jpg",
-      imageAlt: t("featuresSection.features.0.imageAlt"),
+      imageAlt: t("mainPage.featuresSection.features.0.imageAlt"),
     },
     {
-      title: t("featuresSection.features.1.title"),
-      description: t("featuresSection.features.1.description"),
+      title: t("mainPage.featuresSection.features.1.title"),
+      description: t("mainPage.featuresSection.features.1.description"),
       image: "/img/mediterranean.jpg",
-      imageAlt: t("featuresSection.features.1.imageAlt"),
+      imageAlt: t("mainPage.featuresSection.features.1.imageAlt"),
     },
     {
-      title: t("featuresSection.features.2.title"),
+      title: t("mainPage.featuresSection.features.2.title"),
       description: (
-        <Trans i18nKey="featuresSection.features.2.description">
+        <Trans i18nKey="mainPage.featuresSection.features.2.description">
           En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht
           Brokers se está destacando como una empresa pionera con una
           combinación única de{" "}
@@ -33,7 +33,7 @@ export default function FeaturesSection() {
         </Trans>
       ),
       image: "/img/maritime-manage.jpg",
-      imageAlt: t("featuresSection.features.2.imageAlt"),
+      imageAlt: t("mainPage.featuresSection.features.2.imageAlt"),
     },
   ];
   // const refs = features.map(() => useRef(null));

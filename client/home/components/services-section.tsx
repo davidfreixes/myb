@@ -14,10 +14,10 @@ export default function ServicesSection() {
       title: "Yacht Broker",
       description: (
         <>
-          {t("servicesSection.services.0.description.parte1")}
+          {t("mainPage.servicesSection.services.0.description.parte1")}
           <br />
           <br />
-          {t("servicesSection.services.0.description.parte2")}
+          {t("mainPage.servicesSection.services.0.description.parte2")}
         </>
       ),
       image: "/img/yacht-broker.jpg",
@@ -27,10 +27,10 @@ export default function ServicesSection() {
       title: "Yacht Charter",
       description: (
         <>
-          {t("servicesSection.services.1.description.parte1")}
+          {t("mainPage.servicesSection.services.1.description.parte1")}
           <br />
           <br />
-          {t("servicesSection.services.1.description.parte2")}
+          {t("mainPage.servicesSection.services.1.description.parte2")}
         </>
       ),
       image: "/img/yacht-charter.jpg",
@@ -40,36 +40,36 @@ export default function ServicesSection() {
       title: "Bunker Supply",
       description: (
         <>
-          {t("servicesSection.services.2.description.parte1")}
+          {t("mainPage.servicesSection.services.2.description.parte1")}
           <br />
           <br />
-          {t("servicesSection.services.2.description.parte2")}
+          {t("mainPage.servicesSection.services.2.description.parte2")}
         </>
       ),
       image: "/img/ship-broker.jpg",
       link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
     },
     {
-      title: t("servicesSection.services.3.title"),
-      description: t("servicesSection.services.3.description"),
+      title: t("mainPage.servicesSection.services.3.title"),
+      description: t("mainPage.servicesSection.services.3.description"),
       image: "/img/inspections.jpg",
       link: `${NAVIGATION_LINKS.INSPECCIONES}`,
     },
     {
-      title: t("servicesSection.services.4.title"),
-      description: t("servicesSection.services.4.description"),
+      title: t("mainPage.servicesSection.services.4.title"),
+      description: t("mainPage.servicesSection.services.4.description"),
       image: "/img/logistics.jpg",
       link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
     },
     {
-      title: t("servicesSection.services.5.title"),
-      description: t("servicesSection.services.5.description"),
+      title: t("mainPage.servicesSection.services.5.title"),
+      description: t("mainPage.servicesSection.services.5.description"),
       image: "/img/nautical-consulting.jpg",
       link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
     },
     {
-      title: t("servicesSection.services.6.title"),
-      description: t("servicesSection.services.6.description"),
+      title: t("mainPage.servicesSection.services.6.title"),
+      description: t("mainPage.servicesSection.services.6.description"),
       image: "/img/value-added-services.jpg",
       link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
     },
@@ -88,10 +88,10 @@ export default function ServicesSection() {
           className="text-center mb-8 sm:mb-12 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-3 sm:mb-3">
-            {t("servicesSection.header.title")}
+            {t("mainPage.servicesSection.header.title")}
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-            {t("servicesSection.header.description")}
+            {t("mainPage.servicesSection.header.description")}
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function ServicesSection() {
                       className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {t("servicesSection.button")}
+                      {t("mainPage.servicesSection.button")}
                     </Button>
                   </div>
                 </Card>

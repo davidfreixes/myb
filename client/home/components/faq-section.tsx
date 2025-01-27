@@ -1,48 +1,41 @@
-import { Container, Text, Accordion } from "@mantine/core";
+import { Accordion, Container, Text } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 export default function FAQSection() {
+  const { t } = useTranslation();
+
   const questions = [
     {
-      question: "¿Cuál es el mejor momento para comprar un yate en Menorca?",
-      answer:
-        "La temporada baja (octubre a marzo) suele ser el mejor momento para comprar, ya que los precios pueden ser más competitivos. Sin embargo, en Menorca Yacht Brokers te ayudamos a encontrar las mejores oportunidades durante todo el año, adaptándonos a tus necesidades y presupuesto.",
+      question: t("mainPage.faq.bestTimeToBuy.question"),
+      answer: t("mainPage.faq.bestTimeToBuy.answer"),
     },
     {
-      question: "¿Qué servicios ofrece Menorca Yacht Brokers?",
-      answer:
-        "Ofrecemos una gama completa de servicios que incluyen: compraventa de yates, servicios de charter, inspecciones y tasaciones, gestión de carga y logística, y asesoría náutica integral. Nuestro enfoque personalizado garantiza que cada cliente reciba la atención y el servicio que necesita.",
+      question: t("mainPage.faq.servicesOffered.question"),
+      answer: t("mainPage.faq.servicesOffered.answer"),
     },
     {
-      question: "¿Cómo es el proceso de compra de un yate?",
-      answer:
-        "El proceso comienza con una consulta inicial donde entendemos tus necesidades, seguido por la búsqueda y selección de embarcaciones, inspecciones, negociación, y finalmente el cierre de la compra. Te acompañamos en cada paso, asegurando una transacción segura y satisfactoria.",
+      question: t("mainPage.faq.purchaseProcess.question"),
+      answer: t("mainPage.faq.purchaseProcess.answer"),
     },
     {
-      question:
-        "¿Qué costes de mantenimiento debo considerar al comprar un yate?",
-      answer:
-        "Los principales costes incluyen: amarre, seguros, mantenimiento regular, combustible, y posibles reparaciones. En Menorca Yacht Brokers te asesoramos sobre estos aspectos para que puedas planificar adecuadamente y disfrutar de tu embarcación sin preocupaciones.",
+      question: t("mainPage.faq.maintenanceCosts.question"),
+      answer: t("mainPage.faq.maintenanceCosts.answer"),
     },
     {
-      question: "¿Ofrecen opciones de financiación para la compra de yates?",
-      answer:
-        "Sí, trabajamos con diferentes entidades financieras y podemos ayudarte a encontrar la mejor opción de financiación que se adapte a tu situación. Te asesoramos sobre las diferentes alternativas disponibles y los requisitos necesarios.",
+      question: t("mainPage.faq.financingOptions.question"),
+      answer: t("mainPage.faq.financingOptions.answer"),
     },
     {
-      question: "¿Qué documentación necesito para comprar un yate en Menorca?",
-      answer:
-        "La documentación básica incluye identificación personal, documentación fiscal, y dependiendo del tipo de embarcación, pueden requerirse licencias específicas. Nuestro equipo te guiará en todo el proceso de documentación para asegurar que todo esté en orden.",
+      question: t("mainPage.faq.requiredDocuments.question"),
+      answer: t("mainPage.faq.requiredDocuments.answer"),
     },
     {
-      question:
-        "¿Por qué es importante realizar una inspección antes de comprar?",
-      answer:
-        "La inspección previa a la compra es fundamental para evaluar el estado real de la embarcación, identificar posibles problemas y verificar que la inversión sea segura. Nuestros expertos realizan inspecciones detalladas para garantizar tu tranquilidad en la compra.",
+      question: t("mainPage.faq.prePurchaseInspection.question"),
+      answer: t("mainPage.faq.prePurchaseInspection.answer"),
     },
     {
-      question: "¿Cómo funciona el servicio de charter de yates?",
-      answer:
-        "Nuestro servicio de charter te permite alquilar yates por días o semanas, con o sin patrón. Nos encargamos de toda la logística, desde la selección de la embarcación ideal hasta la planificación de tu ruta por las mejores calas de Menorca.",
+      question: t("mainPage.faq.charterService.question"),
+      answer: t("mainPage.faq.charterService.answer"),
     },
   ];
 
@@ -51,11 +44,10 @@ export default function FAQSection() {
       <Container size="lg">
         <div className="text-center mb-12">
           <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
-            Preguntas Frecuentes
+            {t("mainPage.faq.title")}
           </h1>
           <Text className="text-gray-600 text-lg">
-            Resolvemos tus dudas sobre la compra, venta y gestión de yates en
-            Menorca
+            {t("mainPage.faq.description")}
           </Text>
         </div>
 

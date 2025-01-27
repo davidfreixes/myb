@@ -56,14 +56,14 @@ export default function AboutVideoSection() {
             className="w-full lg:w-2/5 mt-4 sm:mt-6 lg:mt-0 px-2 sm:px-0"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-medium text-darkTitle mb-3 sm:mb-4 md:mb-6">
-              {t("aboutVideoSection.title")}
+              {t("mainPage.aboutVideoSection.title")}
             </h2>
 
             <Text
               size="lg"
               className="text-base sm:text-lg md:text-xl text-darkDescription leading-relaxed"
             >
-              {t("aboutVideoSection.description")}
+              {t("mainPage.aboutVideoSection.description")}
             </Text>
           </motion.div>
         </div>
