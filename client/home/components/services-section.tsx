@@ -4,94 +4,81 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
-const services = [
-  {
-    title: "Yacht Broker",
-    description: (
-      <>
-        Te ayudamos a encontrar el mejor Yate para ti. Según tus gustos, te
-        daremos las opciones más posibles de compra de Yates.
-        <br />
-        <br />
-        Yates de nueva construcción o de segunda mano. Las dos opciones son
-        buenas y te ayudamos a descubrirlas.
-      </>
-    ),
-    image: "/img/yacht-broker.jpg",
-    link: `${NAVIGATION_LINKS.YACHT_BROKER}`,
-  },
-  {
-    title: "Yacht Charter",
-    description: (
-      <>
-        ¿Buscas pasar una semana por las Baleares?
-        <br />
-        <br />
-        Contáctanos y usando todos los recursos a nuestro alcanze podemos
-        organiarlo todo des del aeropuerto hasta marcha de tus vaciones. Dinos
-        que necesitas y encontraremos un barco (con patrón si hace falta) para
-        que tus vacacioens sean perfectas
-      </>
-    ),
-    image: "/img/yacht-charter.jpg",
-    link: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
-  },
-  {
-    title: "Bunker Supply",
-    description: (
-      <>
-        Ofrecemos servicios de Ship Broker y Charterer para suministros de
-        combustible marino.
-        <br />
-        <br />
-        Consulta nuestro reporte diario para obtener información actualizada
-        sobre precios y disponibilidad, y contáctanos para gestionar tus
-        necesidades de bunker.
-      </>
-    ),
-    image: "/img/ship-broker.jpg",
-    link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
-  },
-  {
-    title: "Inspecciones y Tasaciones de Yates",
-    description: (
-      <>
-        Realizamos inspecciones de Yates previas a Ports State Control, ventas o
-        pruebas de mar. También realizamos tasaciones previas a compraventas
-        para asegurar el valor de la embarcación o buque.
-      </>
-    ),
-    image: "/img/inspections.jpg",
-    link: `${NAVIGATION_LINKS.INSPECCIONES}`,
-  },
-  {
-    title: "Gestión de Carga y Logística",
-    description:
-      "En fusión con On Line Traders & Shipping, gestionamos cargas con las empresas de la isla con el fin de ayudar y optimizar los procesos.",
-    image: "/img/logistics.jpg",
-    link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
-  },
-  {
-    title: "Asesoría Náutica",
-    description:
-      "Gestión de documentación, matriculaciones o dudas. Nuestros asesores estan aquí para ayudar cualquier duda o gestión del sector.",
-    image: "/img/nautical-consulting.jpg",
-    link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
-  },
-
-  {
-    title: "Servicios de Valor Añadido",
-    description:
-      "A parte de todos los servicios, podemos añadir recogidas en el aeropuerto o aerodrómo, en el puerto o desplazamientos. También excursiones, visitas sofisticadas o rutas por la isla segun el gusto del cliente.",
-    image: "/img/value-added-services.jpg",
-    link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function ServicesSection() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      title: "Yacht Broker",
+      description: (
+        <>
+          {t("servicesSection.services.0.description.parte1")}
+          <br />
+          <br />
+          {t("servicesSection.services.0.description.parte2")}
+        </>
+      ),
+      image: "/img/yacht-broker.jpg",
+      link: `${NAVIGATION_LINKS.YACHT_BROKER}`,
+    },
+    {
+      title: "Yacht Charter",
+      description: (
+        <>
+          {t("servicesSection.services.1.description.parte1")}
+          <br />
+          <br />
+          {t("servicesSection.services.1.description.parte2")}
+        </>
+      ),
+      image: "/img/yacht-charter.jpg",
+      link: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
+    },
+    {
+      title: "Bunker Supply",
+      description: (
+        <>
+          {t("servicesSection.services.2.description.parte1")}
+          <br />
+          <br />
+          {t("servicesSection.services.2.description.parte2")}
+        </>
+      ),
+      image: "/img/ship-broker.jpg",
+      link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+    },
+    {
+      title: t("servicesSection.services.3.title"),
+      description: t("servicesSection.services.3.description"),
+      image: "/img/inspections.jpg",
+      link: `${NAVIGATION_LINKS.INSPECCIONES}`,
+    },
+    {
+      title: t("servicesSection.services.4.title"),
+      description: t("servicesSection.services.4.description"),
+      image: "/img/logistics.jpg",
+      link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
+    },
+    {
+      title: t("servicesSection.services.5.title"),
+      description: t("servicesSection.services.5.description"),
+      image: "/img/nautical-consulting.jpg",
+      link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
+    },
+    {
+      title: t("servicesSection.services.6.title"),
+      description: t("servicesSection.services.6.description"),
+      image: "/img/value-added-services.jpg",
+      link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
+    },
+  ];
+
   const refs = services.map(() => useRef(null));
   const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
+
+
 
   return (
     <section id="services-section" className="py-12 sm:py-16 md:py-20 bg-white">
@@ -103,10 +90,10 @@ export default function ServicesSection() {
           className="text-center mb-8 sm:mb-12 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-3 sm:mb-3">
-            Nuestros Servicios
+            {t("servicesSection.header.title")}
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-            Descubre nuestra amplia gama de servicios náuticos profesionales
+            {t("servicesSection.header.description")}
           </p>
         </motion.div>
 
@@ -146,7 +133,7 @@ export default function ServicesSection() {
                       className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Accede al servicio
+                      {t("servicesSection.button")}
                     </Button>
                   </div>
                 </Card>

@@ -1,0 +1,65 @@
+{
+  "mainPage": {
+    "hero": {
+      "title": "Welcome to Menorca Yacht Brokers",
+      "subtitle": {
+        "part1": "Your Trusted Yacht Broker",
+        "part2": "<2>Buy</2>, <2> sell</2> or <2> rent</2> your Yacht with Menorca Yacht Brokers"
+      },
+      "description": {
+        "part1": "At Menorca Yacht Brokers, we offer comprehensive solutions for yacht buying and selling in Menorca, charters, cargo management, and nautical consultancy.",
+        "part2": "We are ready to guide you every step of the way with professionalism and dedication."
+      },
+      "buttons": {
+        "explore_services": "Explore Our Services",
+        "contact_us": "Contact Us"
+      }
+    }
+  },
+  "servicesSection": {
+    "header": {
+      "title": "Our Services",
+      "description": "Discover our wide range of professional nautical services"
+    },
+    "services": [
+      {
+        "title": "Yacht Broker",
+        "description": {
+          "parte1": "We help you find the best Yacht for you. According to your preferences, we will provide you with the most possible purchase options.",
+          "parte2": "New or second-hand yachts. Both are good options, and we help you discover them."
+        }
+      },
+      {
+        "title": "Yacht Charter",
+        "description": {
+          "parte1": "Looking to spend a week in the Balearic Islands?",
+          "parte2": "Contact us, and using all the resources at our disposal, we can organize everything from the airport to the end of your vacation. Tell us what you need, and we will find a boat (with a skipper if needed) to make your vacation perfect."
+        }
+      },
+      {
+        "title": "Bunker Supply",
+        "description": {
+          "parte1": "We offer Ship Broker and Charterer services for marine fuel supplies.",
+          "parte2": "Check our daily report for updated pricing and availability information, and contact us to manage your bunker needs."
+        }
+      },
+      {
+        "title": "Yacht Inspections and Valuations",
+        "description": "We conduct pre-Port State Control, sale, or sea trial inspections. We also provide valuations before sales and purchases to ensure the value of the boat or vessel."
+      },
+      {
+        "title": "Cargo Management and Logistics",
+        "description": "In collaboration with On Line Traders & Shipping, we manage cargo with local companies to help optimize processes."
+      },
+      {
+        "title": "Nautical Consulting",
+        "description": "Documentation management, registrations, or inquiries. Our consultants are here to help with any doubts or needs in the sector."
+      },
+      {
+        "title": "Value-Added Services",
+        "description": "In addition to all the services, we can include pickups at the airport or aerodrome, port transportation, and transfers. We also organize excursions, sophisticated visits, or island tours tailored to the client’s taste."
+      }
+    ],
+    "button": "Access the service"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "mainPage": {
+    "hero": {
+      "title": "Bienvenido a Menorca Yacht Brokers",
+      "subtitle": {
+        "part1": "Tu Broker de Yates de confianza",
+        "part2": "<2>Compra</2>, <2> vende</2> o <2> alquila</2> tu Yate con Menorca Yacht Brokers"
+      },
+      "description": {
+        "part1": "En Menorca Yacht Brokers, te ofrecemos soluciones completas para la compraventa de yates en Menorca, charters, gestión de cargas y asesoría náutica.",
+        "part2": "Estamos listos para guiarte en cada paso del proceso con profesionalismo y dedicación."
+      },
+      "buttons": {
+        "explore_services": "Explora Nuestros Servicios",
+        "contact_us": "Contactar"
+      }
+    }
+  },
+  "servicesSection": {
+    "header": {
+      "title": "Nuestros Servicios",
+      "description": "Descubre nuestra amplia gama de servicios náuticos profesionales"
+    },
+    "services": [
+      {
+        "title": "Yacht Broker",
+        "description": {
+          "parte1": "Te ayudamos a encontrar el mejor Yate para ti. Según tus gustos, te daremos las opciones más posibles de compra de Yates.",
+          "parte2": "Yates de nueva construcción o de segunda mano. Las dos opciones son buenas y te ayudamos a descubrirlas."
+        }
+      },
+      {
+        "title": "Yacht Charter",
+        "description": {
+          "parte1": "¿Buscas pasar una semana por las Baleares?",
+          "parte2": "Contáctanos y usando todos los recursos a nuestro alcanze podemos organiarlo todo desde el aeropuerto hasta la marcha de tus vacaciones. Dinos qué necesitas y encontraremos un barco (con patrón si hace falta) para que tus vacaciones sean perfectas."
+        }
+      },
+      {
+        "title": "Bunker Supply",
+        "description": {
+          "parte1": "Ofrecemos servicios de Ship Broker y Charterer para suministros de combustible marino.",
+          "parte2": "Consulta nuestro reporte diario para obtener información actualizada sobre precios y disponibilidad, y contáctanos para gestionar tus necesidades de bunker."
+        }
+      },
+      {
+        "title": "Inspecciones y Tasaciones de Yates",
+        "description": "Realizamos inspecciones de Yates previas a Ports State Control, ventas o pruebas de mar. También realizamos tasaciones previas a compraventas para asegurar el valor de la embarcación o buque."
+      },
+      {
+        "title": "Gestión de Carga y Logística",
+        "description": "En fusión con On Line Traders & Shipping, gestionamos cargas con las empresas de la isla con el fin de ayudar y optimizar los procesos."
+      },
+      {
+        "title": "Asesoría Náutica",
+        "description": "Gestión de documentación, matriculaciones o dudas. Nuestros asesores están aquí para ayudar cualquier duda o gestión del sector."
+      },
+      {
+        "title": "Servicios de Valor Añadido",
+        "description": "A parte de todos los servicios, podemos añadir recogidas en el aeropuerto o aeródromo, en el puerto o desplazamientos. También excursiones, visitas sofisticadas o rutas por la isla según el gusto del cliente."
+      }
+    ],
+    "button": "Accede al servicio"
+  }
+}

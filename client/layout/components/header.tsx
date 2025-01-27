@@ -1,8 +1,10 @@
+import i18n from "@/utils/i18n";
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
   Anchor,
   Building,
+  ChevronDown,
   Database,
   FileText,
   MenuIcon,
@@ -13,11 +15,11 @@ import {
   Ship,
   ShipWheel,
   Truck,
-  X
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NavItem {
   label: string;
@@ -125,7 +127,7 @@ const navigation: NavItem[] = [
   },
   {
     label: "QUIÉNES SOMOS",
-    href: `${NAVIGATION_LINKS.QUIENES_SOMOS }`,
+    href: `${NAVIGATION_LINKS.QUIENES_SOMOS}`,
     width: "300",
   },
 ];
@@ -138,6 +140,19 @@ interface HeaderProps {
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+
+  const [language, setLanguage] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Determina el idioma en el cliente (SSR no tiene esta información)
+    setLanguage(i18n.language || "es");
+  }, []);
+
+  if (!language) return null; // Evita renderizar en el servidor
+  const handleChangeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setLanguage(lng)
+  };
 
   return (
     <header
@@ -246,12 +261,27 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             </Button>
 
             {/* Language Selector */}
-            <Button
-              unstyled
-              className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
-            >
-              ES
-            </Button>
+            <Menu>
+              <Menu.Target>
+                <Button
+                  unstyled
+                  className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
+                >
+                  <div className="flex gap-2 px-2 items-center">
+                    <span>{i18n.language.toUpperCase()}</span>
+                    <ChevronDown size={16} />
+                  </div>
+                </Button>
+              </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Item onClick={() => handleChangeLanguage("es")}>
+                  Español
+                </Menu.Item>
+                <Menu.Item onClick={() => handleChangeLanguage("en")}>
+                  English
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
 
             {/* Mobile menu button */}
             <Button

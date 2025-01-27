@@ -3,8 +3,21 @@ import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+
 
 export default function Hero() {
+  const { t } = useTranslation();
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true); // Aseguramos que i18next esté cargado
+  }, []);
+  if (!isLoaded) return null;
+
+
   const scrollToServices = () => {
     // Navegar a la sección de servicios
     const servicesSection = document.getElementById("services-section");
@@ -12,8 +25,9 @@ export default function Hero() {
       servicesSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <div className="relative min-h-[600px] md:min-h-[500px] w-full">
+    <div className="relative h-[100vh] md:h-[500px] w-full">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
@@ -28,8 +42,8 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="flex min-h-[600px] md:min-h-[500px] flex-col justify-center py-8 md:py-12">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="flex h-[100vh] md:h-[500px] flex-col py-8 md:py-12">
+          <div className="grid md:grid-cols-2 gap-20 md:gap-12 mt-10">
             {/* Left Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -37,18 +51,20 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="flex flex-col justify-center space-y-4 md:space-y-6 text-white order-1 pt-16 md:pt-0"
             >
-              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
                 Menorca Yacht Brokers
               </h1>
               <div className="space-y-2 md:space-y-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-white">
-                  Tu Broker de Yates de confianza
+                <h2 className="text-2xl md:text-3xl font-montserrat text-white">
+                  {t("mainPage.hero.subtitle.part1")}
                 </h2>
-                <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
-                  <span className="text-primary">Compra</span>,
-                  <span className="text-primary"> vende</span> o
-                  <span className="text-primary"> alquila</span> tu Yate con
-                  Menorca Yacht Brokers{" "}
+                <h2 className="font-montserrat text-lg md:text-xl text-white">
+                  <Trans i18nKey="mainPage.hero.subtitle.part2">
+                    <span className="text-primary">Compra</span>,
+                    <span className="text-primary"> vende</span> o
+                    <span className="text-primary"> alquila</span> tu Yate con
+                    Menorca Yacht Brokers
+                  </Trans>
                 </h2>
               </div>
             </motion.div>
@@ -61,18 +77,15 @@ export default function Hero() {
               className="flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2"
             >
               <div className="space-y-4 md:space-y-6">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white">
-                  Bienvenido a Menorca Yacht Brokers
+                <h2 className="text-3xl font-light text-white">
+                  {t("mainPage.hero.title")}
                 </h2>
                 <div className="space-y-3 md:space-y-4 text-gray-200">
-                  <p className="text-sm md:text-base">
-                    En Menorca Yacht Brokers, te ofrecemos soluciones completas
-                    para la compraventa de yates en Menorca, charters, gestión
-                    de cargas y asesoría náutica.
+                  <p className="text-md md:text-base">
+                    {t("mainPage.hero.description.part1")}
                   </p>
-                  <p className="text-sm md:text-base">
-                    Estamos listos para guiarte en cada paso del proceso con
-                    profesionalismo y dedicación.
+                  <p className="text-md md:text-base">
+                    {t("mainPage.hero.description.part2")}
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -81,7 +94,7 @@ export default function Hero() {
                     onClick={scrollToServices}
                     className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                   >
-                    Explora Nuestros Servicios
+                    {t("mainPage.hero.buttons.explore_services")}
                   </Button>
                   <Button
                     component={Link}
@@ -89,7 +102,7 @@ export default function Hero() {
                     unstyled
                     className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >
-                    Contactar
+                    {t("mainPage.hero.buttons.contact_us")}
                   </Button>
                 </div>
               </div>
