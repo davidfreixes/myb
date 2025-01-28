@@ -1,11 +1,13 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function ValueAddedServices() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -28,12 +30,10 @@ export default function ValueAddedServices() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                Servicios de Valor Añadido | Más que Chartering en Menorca
+                {t("valueAddedServices.hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                Disfruta de Menorca al máximo con nuestros servicios
-                adicionales: traslados, catering, rutas turísticas y
-                planificación de eventos exclusivos.
+                {t("valueAddedServices.hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -52,61 +52,66 @@ export default function ValueAddedServices() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12">
             {[
               {
-                title: "Recogida y Traslado al Aeropuerto",
+                title: t("valueAddedServices.services.airportTransfer.title"),
                 image: "/img/airport-transfer.jpg",
-                description:
-                  "Disfruta de un inicio sin preocupaciones. Ofrecemos servicios de traslado privados y puntuales desde el aeropuerto hasta tu embarcación, hotel o cualquier destino en Menorca.",
+                description: t(
+                  "valueAddedServices.services.airportTransfer.description"
+                ),
                 features: [
-                  "Flota de vehículos de lujo",
-                  "Conductores multilingües y profesionales",
-                  "Opciones de traslado de ida y vuelta",
+                  t("valueAddedServices.services.airportTransfer.features.0"),
+                  t("valueAddedServices.services.airportTransfer.features.1"),
+                  t("valueAddedServices.services.airportTransfer.features.2"),
                 ],
                 delay: 0.4,
               },
               {
-                title: "Rutas Turísticas Privadas",
+                title: t("valueAddedServices.services.touristRoutes.title"),
                 image: "/img/tourist-routes.jpg",
-                description:
-                  "Descubre Menorca desde una nueva perspectiva. Organizamos visitas guiadas exclusivas a:",
+                description: t(
+                  "valueAddedServices.services.touristRoutes.description"
+                ),
                 features: [
-                  "Calas escondidas y playas paradisíacas",
-                  "Parapente",
-                  "Monumentos históricos y culturales",
-                  "Experiencias de senderismo y ciclismo guiado",
+                  t("valueAddedServices.services.touristRoutes.features.0"),
+                  t("valueAddedServices.services.touristRoutes.features.1"),
+                  t("valueAddedServices.services.touristRoutes.features.2"),
+                  t("valueAddedServices.services.touristRoutes.features.3"),
                 ],
                 delay: 0.5,
               },
               {
-                title: "Catering Personalizado a Bordo",
+                title: t("valueAddedServices.services.catering.title"),
                 image: "/img/catering.jpg",
-                description:
-                  "Saborea Menorca desde el mar con menús personalizados que se adaptan a tus gustos y necesidades.",
+                description: t(
+                  "valueAddedServices.services.catering.description"
+                ),
                 features: [
-                  "Chefs locales y cocina mediterránea",
-                  "Opciones veganas, vegetarianas y sin gluten",
-                  "Bebidas premium y catas de vinos",
+                  t("valueAddedServices.services.catering.features.0"),
+                  t("valueAddedServices.services.catering.features.1"),
+                  t("valueAddedServices.services.catering.features.2"),
                 ],
                 delay: 0.6,
               },
               {
-                title: "Asistencia 24/7 Durante tu Viaje",
+                title: t("valueAddedServices.services.assistance.title"),
                 image: "/img/assistance.jpg",
-                description:
-                  "Nuestro equipo está disponible en todo momento para garantizar que tu experiencia sea perfecta. Te ayudamos con:",
+                description: t(
+                  "valueAddedServices.services.assistance.description"
+                ),
                 features: [
-                  "Reservas de última hora",
-                  "Resolución de cualquier inconveniente durante el viaje",
+                  t("valueAddedServices.services.assistance.features.0"),
+                  t("valueAddedServices.services.assistance.features.1"),
                 ],
                 delay: 0.7,
               },
               {
-                title: "Planificación de Eventos Exclusivos",
+                title: t("valueAddedServices.services.events.title"),
                 image: "/img/events.jpg",
-                description:
-                  "Celebra momentos especiales a bordo de un yate o en los lugares más emblemáticos de Menorca.",
+                description: t(
+                  "valueAddedServices.services.events.description"
+                ),
                 features: [
-                  "Bodas, aniversarios y eventos corporativos",
-                  "Decoración temática y entretenimiento en vivo",
+                  t("valueAddedServices.services.events.features.0"),
+                  t("valueAddedServices.services.events.features.1"),
                 ],
                 delay: 0.8,
               },
@@ -160,23 +165,27 @@ export default function ValueAddedServices() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div className="space-y-4 sm:space-y-6">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary">
-                  ¿Por qué elegir Menorca Brokers.com?
+                  {t("valueAddedServices.whyChooseUs.title")}
                 </h2>
                 <ul className="space-y-3 sm:space-y-4">
                   {[
                     {
-                      title: "Atención al cliente excepcional:",
-                      description:
-                        "Se enfocan en cada detalle para garantizar que disfrutes de un servicio impecable.",
+                      title: t("valueAddedServices.whyChooseUs.points.0.title"),
+                      description: t(
+                        "valueAddedServices.whyChooseUs.points.0.description"
+                      ),
                     },
                     {
-                      title: "Experiencia local con alcance global:",
-                      description:
-                        "Son expertos en Menorca y ofrecen conexiones internacionales.",
+                      title: t("valueAddedServices.whyChooseUs.points.1.title"),
+                      description: t(
+                        "valueAddedServices.whyChooseUs.points.1.description"
+                      ),
                     },
                     {
-                      title: "Flexibilidad y personalización:",
-                      description: "Adaptan cada servicio a tus preferencias.",
+                      title: t("valueAddedServices.whyChooseUs.points.2.title"),
+                      description: t(
+                        "valueAddedServices.whyChooseUs.points.2.description"
+                      ),
                     },
                   ].map((item, index) => (
                     <li key={index} className="flex flex-col space-y-1">
@@ -190,10 +199,10 @@ export default function ValueAddedServices() {
                   ))}
                 </ul>
                 <div className="text-xs sm:text-sm text-gray-600 mt-3 sm:mt-4 italic">
-                  &quot;Un servicio excepcional que superó todas mis
-                  expectativas&quot;
+                  &quot;{t("valueAddedServices.whyChooseUs.testimonial.quote")}
+                  &quot;
                   <p className="font-semibold mt-1 sm:mt-2">
-                    Charles Grange, 28 años
+                    {t("valueAddedServices.whyChooseUs.testimonial.author")}
                   </p>
                 </div>
               </div>
@@ -227,17 +236,17 @@ export default function ValueAddedServices() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 rounded-lg text-center py-8 sm:py-12 md:py-20"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-4">
-          ¿Interesado en nuestros servicios?
+          {t("valueAddedServices.cta.title")}
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Contáctanos para personalizar tu experiencia en Menorca
+          {t("valueAddedServices.cta.description")}
         </p>
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
           className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
-          Contactar
+          {t("valueAddedServices.cta.button")}
         </Button>
       </motion.div>
       <ContactModal

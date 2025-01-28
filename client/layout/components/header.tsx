@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Database,
   FileText,
+  Globe,
   MenuIcon,
   Newspaper,
   Plus,
@@ -20,6 +21,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface NavItem {
   label: string;
@@ -33,105 +35,6 @@ interface NavItem {
   }[];
 }
 
-const navigation: NavItem[] = [
-  { label: "INICIO", href: "/" },
-  {
-    label: "SERVICIOS",
-    href: "/servicios",
-    width: "550",
-    items: [
-      {
-        label: "Yacht Broker",
-        href: `${NAVIGATION_LINKS.YACHT_BROKER}`,
-        icon: <Ship size={20} />,
-        description: "Compra y venta de embarcaciones",
-      },
-      {
-        label: "Yacht Charter",
-        href: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
-        icon: <Anchor size={20} />,
-        description: "Alquiler de embarcaciones",
-      },
-      {
-        label: "Bunker Supply",
-        href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
-        icon: <Database size={20} />,
-        description: "Servicios de intermediación",
-      },
-      {
-        label: "Inspecciones y Tasaciones",
-        href: `${NAVIGATION_LINKS.INSPECCIONES}`,
-        icon: <Scale size={20} />,
-        description: "Evaluación profesional de embarcaciones",
-      },
-      {
-        label: "Cargo & Logística",
-        href: `${NAVIGATION_LINKS.LOGÍSTICA}`,
-        icon: <Truck size={20} />,
-        description: "Servicios de transporte y logística",
-      },
-      {
-        label: "Asesoría Náutica",
-        href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
-        icon: <ShipWheel size={20} />,
-        description: "Consultoría especializada",
-      },
-
-      {
-        label: "Servicios de Valor Añadido",
-        href: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
-        icon: <Plus size={20} />,
-        description: "Servicios complementarios",
-      },
-    ],
-  },
-  {
-    label: "EMPRESA",
-    href: "/empresa",
-    width: "550",
-    items: [
-      {
-        label: "Proveedores y distribuidores",
-        href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
-        icon: <Building size={20} />,
-        description: "Red de colaboradores y partners",
-      },
-      {
-        label: "Diario del Puerto de Mahón",
-        href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
-        icon: <Newspaper size={20} />,
-        description: "Noticias y actualidad portuaria",
-      },
-    ],
-  },
-  {
-    label: "CONTRATACIÓN",
-    href: "/contratacion",
-    width: "650",
-    items: [
-      {
-        label: "Condiciones y Tarifas",
-        href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS}`,
-        icon: <FileText size={20} />,
-        description:
-          "Términos, condiciones y tarifas detalladas de nuestros servicios",
-      },
-      {
-        label: "Contratos de Compraventa de Yates",
-        href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA}`,
-        icon: <ScrollText size={20} />,
-        description:
-          "Documentación oficial y contratos MYBA para transacciones seguras",
-      },
-    ],
-  },
-  {
-    label: "QUIÉNES SOMOS",
-    href: `${NAVIGATION_LINKS.QUIENES_SOMOS}`,
-    width: "300",
-  },
-];
-
 interface HeaderProps {
   sticky: boolean;
   isTransparent?: boolean;
@@ -140,8 +43,105 @@ interface HeaderProps {
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-
   const [language, setLanguage] = useState<string | null>(null);
+  const { t } = useTranslation();
+
+  const navigation: NavItem[] = [
+    { label: t("header.navigation.home"), href: "/" },
+    {
+      label: t("header.navigation.services"),
+      href: "/servicios",
+      width: "550",
+      items: [
+        {
+          label: t("header.services.yachtBroker.label"),
+          href: `${NAVIGATION_LINKS.YACHT_BROKER}`,
+          icon: <Ship size={20} />,
+          description: t("header.services.yachtBroker.description"),
+        },
+        {
+          label: t("header.services.yachtCharter.label"),
+          href: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
+          icon: <Anchor size={20} />,
+          description: t("header.services.yachtCharter.description"),
+        },
+        {
+          label: t("header.services.bunkerSupply.label"),
+          href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+          icon: <Database size={20} />,
+          description: t("header.services.bunkerSupply.description"),
+        },
+        {
+          label: t("header.services.inspections.label"),
+          href: `${NAVIGATION_LINKS.INSPECCIONES}`,
+          icon: <Scale size={20} />,
+          description: t("header.services.inspections.description"),
+        },
+        {
+          label: t("header.services.logistics.label"),
+          href: `${NAVIGATION_LINKS.LOGÍSTICA}`,
+          icon: <Truck size={20} />,
+          description: t("header.services.logistics.description"),
+        },
+        {
+          label: t("header.services.nauticalAdvisory.label"),
+          href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
+          icon: <ShipWheel size={20} />,
+          description: t("header.services.nauticalAdvisory.description"),
+        },
+
+        {
+          label: t("header.services.valueAddedServices.label"),
+          href: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
+          icon: <Plus size={20} />,
+          description: t("header.services.valueAddedServices.description"),
+        },
+      ],
+    },
+    {
+      label: t("header.navigation.company"),
+      href: "/empresa",
+      width: "550",
+      items: [
+        {
+          label: t("header.company.suppliers.label"),
+          href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
+          icon: <Building size={20} />,
+          description: t("header.company.suppliers.description"),
+        },
+        {
+          label: t("header.company.news.label"),
+          href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
+          icon: <Newspaper size={20} />,
+          description: t("header.company.news.description"),
+        },
+      ],
+    },
+    {
+      label: t("header.navigation.contracting"),
+      href: "/contratacion",
+      width: "650",
+      items: [
+        {
+          label: t("header.contracting.conditionsRates.label"),
+          href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS}`,
+          icon: <FileText size={20} />,
+          description: t("header.contracting.conditionsRates.description"),
+        },
+        {
+          label: t("header.contracting.yachtContracts.label"),
+          href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA}`,
+          icon: <ScrollText size={20} />,
+          description: t("header.contracting.yachtContracts.description"),
+        },
+      ],
+    },
+    {
+      label: t("header.navigation.aboutUs"),
+      href: `${NAVIGATION_LINKS.QUIENES_SOMOS}`,
+      width: "300",
+    },
+  ];
 
   useEffect(() => {
     // Determina el idioma en el cliente (SSR no tiene esta información)
@@ -151,7 +151,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   if (!language) return null; // Evita renderizar en el servidor
   const handleChangeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-    setLanguage(lng)
+    setLanguage(lng);
   };
 
   return (
@@ -268,6 +268,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                   className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
                 >
                   <div className="flex gap-2 px-2 items-center">
+                    <Globe size={20}/>
                     <span>{i18n.language.toUpperCase()}</span>
                     <ChevronDown size={16} />
                   </div>
@@ -365,7 +366,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                   href={`${NAVIGATION_LINKS.CONTACTO}`}
                   className="w-full text-center bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
                 >
-                  CONTACTO
+                  {t("header.navigation.contact")}
                 </Button>
               </div>
             </div>
