@@ -11,10 +11,53 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function YachtCharter() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
+
+  const whyChooseUs = [
+    {
+      title: t("yachtCharter.whyChooseUs.reasons.fleet.title"),
+      description: t("yachtCharter.whyChooseUs.reasons.fleet.description"),
+      icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtCharter.whyChooseUs.reasons.experience.title"),
+      description: t("whyChooseUs.reasons.experience.description"),
+      icon: <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtCharter.whyChooseUs.reasons.crew.title"),
+      description: t("whyChooseUs.reasons.crew.description"),
+      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtCharter.whyChooseUs.reasons.routes.title"),
+      description: t("yachtCharter.whyChooseUs.reasons.routes.description"),
+      icon: <Compass className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
+
+  const services = [
+    {
+      title: t("yachtCharter.services.list.dailyRental.title"),
+      description: t("yachtCharter.services.list.dailyRental.description"),
+      icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtCharter.services.list.thematicExcursions.title"),
+      description: t("yachtCharter.services.list.thematicExcursions.description"),
+      icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtCharter.services.list.support.title"),
+      description: t("services.list.support.description"),
+      icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -37,12 +80,10 @@ export default function YachtCharter() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                Yacht Charter | Alquila tu Barco y Yate en Menorca
+                {t("yachtCharter.hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                Alquila yates de lujo en Menorca con Menorca Yacht Brokers.
-                Disfruta de rutas personalizadas, tripulación profesional y
-                servicios premium.
+                {t("yachtCharter.hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -58,7 +99,7 @@ export default function YachtCharter() {
           className="text-center mb-8 sm:mb-10"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary">
-            Nuestros Servicios de Charter
+            {t("yachtCharter.services.title")}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -112,22 +153,17 @@ export default function YachtCharter() {
               className="space-y-4 sm:space-y-6"
             >
               <h2 className="text-2xl sm:text-3xl font-montserrat text-black">
-                Descubre el Lujo en el Mar
+                {t("yachtCharter.discover.title")}
               </h2>
               <p className="text-base sm:text-lg text-gray-700">
-                En Menorca Brokers, te ofrecemos la oportunidad de descubrir
-                Menorca desde una perspectiva única: a bordo de una embarcación
-                de lujo. Nuestro servicio de chartering está diseñado para
-                brindarte una experiencia personalizada y exclusiva, en la que
-                cada detalle se ajusta a tus preferencias para que disfrutes de
-                unas vacaciones inolvidables en el mar.
+                {t("yachtCharter.discover.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
                   unstyled
-                  className="bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300 "
-                > 
-                  Explorar Rutas
+                  className="bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
+                >
+                  {t("yachtCharter.discover.button")}
                 </Button>
               </div>
             </motion.div>
@@ -144,7 +180,7 @@ export default function YachtCharter() {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
-            ¿Por qué elegir Menorca Brokers para tu charter náutico?
+            {t("yachtCharter.whyChooseUs.title")}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -191,20 +227,17 @@ export default function YachtCharter() {
         >
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4 sm:mb-6">
-              Haz de Tus Vacaciones una Aventura Única en el Mar
+              {t("yachtCharter.cta.title")}
             </h2>
             <p className="text-base sm:text-lg text-white mb-6 sm:mb-8">
-              Con Menorca Brokers, puedes relajarte sabiendo que te ofrecemos un
-              charter sin preocupaciones y repleto de experiencias inolvidables.
-              Navega por aguas cristalinas, disfruta de la tranquilidad de calas
-              escondidas y déjate llevar por la belleza natural de Menorca.
+              {t("yachtCharter.cta.description")}
             </p>
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded w-full sm:w-auto"
             >
-              Reserva Tu Charter
+              {t("yachtCharter.cta.button")}
             </Button>
           </div>
         </motion.div>
@@ -216,51 +249,3 @@ export default function YachtCharter() {
     </div>
   );
 }
-
-const whyChooseUs = [
-  {
-    title: "Flota de Embarcaciones de Alta Gama",
-    description:
-      "Contamos con una amplia selección de yates, catamaranes y embarcaciones de lujo, cuidadosamente seleccionados para satisfacer diferentes gustos y presupuestos.",
-    icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Experiencia Personalizada",
-    description:
-      "Desde rutas privadas y deportes acuáticos hasta cenas exclusivas a bordo, diseñamos cada charter para que tengas una experiencia totalmente adaptada a tus deseos.",
-    icon: <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Tripulación Profesional y Atención al Detalle",
-    description:
-      "Nuestras tripulaciones están capacitadas para ofrecerte un servicio de calidad, mientras te guían a los rincones más hermosos y menos explorados de Menorca.",
-    icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Rutas a Medida y Lugares Icónicos",
-    description:
-      "Te llevamos a explorar calas escondidas, playas vírgenes y otros puntos emblemáticos, creando una aventura única y memorable en cada charter.",
-    icon: <Compass className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-];
-
-const services = [
-  {
-    title: "Alquiler por Día, Semana o Temporada",
-    description:
-      "Flexibilidad para que disfrutes del charter el tiempo que prefieras, desde una escapada de un día hasta unas vacaciones completas en el mar.",
-    icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Excursiones Temáticas y Actividades Exclusivas",
-    description:
-      "Ofrecemos opciones como excursiones para ver el atardecer, rutas de buceo, y experiencias gastronómicas a bordo, para hacer de cada charter algo especial.",
-    icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Soporte 24/7 Durante Tu Charter",
-    description:
-      "Nos aseguramos de que tengas un soporte dedicado para resolver cualquier necesidad o consulta durante toda tu travesía.",
-    icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-];

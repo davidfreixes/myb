@@ -269,60 +269,95 @@
       "button": "Contactar con un experto"
     }
   },
-  "inspections": {
+  "yachtBroker": {
     "hero": {
-      "title": "Inspecciones y Tasaciones de Barcos en Menorca",
-      "subtitle": "Servicios especializados de <2>inspección</2> y <2>tasación</2> marítima para compradores y vendedores"
+      "title": "Yacht Broker | Compra de Barcos y Yates en Menorca",
+      "subtitle": "Especialistas en <1>compra</1> y <1>venta</1> de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado."
     },
-    "intro": "En Menorca Yacht Brokers, contamos con una experiencia sólida en la realización de <2>inspecciones</2> y <2>tasaciones marítimas</2>. Como parte de nuestro compromiso con la calidad y la transparencia, ofrecemos servicios especializados tanto para compradores comopara vendedores de yates y embarcaciones.",
-    "services": {
-      "maritimeInspections": {
-        "title": "Inspecciones Marítimas",
-        "description": "Las inspecciones marítimas son fundamentales para evaluar el estado y la seguridad de cualquier embarcación. Seguimos rigurosos procedimientos técnicos con estándares internacionales.",
-        "process": {
-          "title": "¿Cómo realizamos las inspecciones?",
-          "items": [
-            "Revisión detallada del casco",
-            "Sistemas mecánicos, eléctricos y de seguridad",
-            "Prueba de navegación",
-            "Verificación de certificaciones SOLAS e IMO"
-          ]
-        },
-        "conventions": {
-          "title": "Convenios Internacionales",
-          "description": "Trabajamos en cumplimiento con Lloyd's Register, garantizando una evaluación precisa y confiable."
-        }
+    "navigation": {
+      "newYachts": "Yates Nuevos",
+      "usedYachts": "Yates de Segunda Mano"
+    },
+    "description": {
+      "intro": "Consulta nuestro stock de Yates en venta a continuación o descubre nuestras claves y contáctarnos más abajo. Contamos con Yates de <1>segunda mano</1> o se pueden realizar contactos con astilleros para entrar en contratos de <1>nueva construcción</1>.",
+      "expertise": "En Menorca Yacht Brokers, transformamos la compra y venta de yates en una experiencia fluida, profesional y personalizada. Nuestro equipo de expertos combina un profundo conocimiento del mercado náutico con un enfoque centrado en el cliente, garantizando que cada transacción sea un éxito."
+    },
+    "yachtDetails": {
+      "viewDetails": "Ver Detalles",
+      "fields": {
+        "boatName": "Nombre del barco",
+        "year": "Año",
+        "length": "Eslora",
+        "location": "Ubicación",
+        "displacement": "Desplazamiento",
+        "hull": "Casco",
+        "keel": "Quilla",
+        "designer": "Diseñador",
+        "category": "Categoría"
       },
-      "maritimeValuations": {
-        "title": "Tasaciones Marítimas",
-        "description": "Realizamos tasaciones precisas y actualizadas basadas en nuestra experiencia y en las tendencias actuales del mercado.",
-        "factors": {
-          "title": "Factores de Tasación",
-          "items": [
-            "Año de fabricación y modelo",
-            "Condiciones del motor y sistemas",
-            "Estado del casco y sistemas de seguridad",
-            "Equipamiento adicional y personalización",
-            "Situación del mercado"
-          ]
+      "units": {
+        "meters": "metros",
+        "kg": "kg"
+      }
+    },
+    "cta": {
+      "title": "¿Interesado en nuestros servicios?",
+      "description": "Contáctanos para descubrir cómo podemos ayudarte a encontrar el yate perfecto",
+      "button": "Contactar"
+    }
+  },
+  "yachtCharter": {
+    "hero": {
+      "title": "Yacht Charter | Alquila tu Barco y Yate en Menorca",
+      "subtitle": "Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium."
+    },
+    "services": {
+      "title": "Nuestros Servicios de Charter",
+      "list": {
+        "dailyRental": {
+          "title": "Alquiler por Día, Semana o Temporada",
+          "description": "Flexibilidad para que disfrutes del charter el tiempo que prefieras, desde una escapada de un día hasta unas vacaciones completas en el mar."
         },
-        "types": {
-          "title": "Tipos de Valoraciones",
-          "items": [
-            "Valoraciones para Compra o Venta",
-            "Valoraciones para Seguros",
-            "Informes Detallados de Estado"
-          ]
+        "thematicExcursions": {
+          "title": "Excursiones Temáticas y Actividades Exclusivas",
+          "description": "Ofrecemos opciones como excursiones para ver el atardecer, rutas de buceo, y experiencias gastronómicas a bordo, para hacer de cada charter algo especial."
+        },
+        "support": {
+          "title": "Soporte 24/7 Durante Tu Charter",
+          "description": "Nos aseguramos de que tengas un soporte dedicado para resolver cualquier necesidad o consulta durante toda tu travesía."
         }
       }
     },
-    "outro": {
-      "description": "Nos enorgullece ofrecer un servicio completo y profesional de inspecciones y tasaciones marítimas. Nuestro equipo de expertos está disponible para asesorarte en cada paso del proceso, garantizando que tomes decisiones informadas y seguras al comprar, vender o asegurar tu yate."
+    "discover": {
+      "title": "Descubre el Lujo en el Mar",
+      "description": "En Menorca Brokers, te ofrecemos la oportunidad de descubrir Menorca desde una perspectiva única: a bordo de una embarcación de lujo. Nuestro servicio de chartering está diseñado para brindarte una experiencia personalizada y exclusiva, en la que cada detalle se ajusta a tus preferencias para que disfrutes de unas vacaciones inolvidables en el mar.",
+      "button": "Explorar Rutas"
+    },
+    "whyChooseUs": {
+      "title": "¿Por qué elegir Menorca Brokers para tu charter náutico?",
+      "reasons": {
+        "fleet": {
+          "title": "Flota de Embarcaciones de Alta Gama",
+          "description": "Contamos con una amplia selección de yates, catamaranes y embarcaciones de lujo, cuidadosamente seleccionados para satisfacer diferentes gustos y presupuestos."
+        },
+        "experience": {
+          "title": "Experiencia Personalizada",
+          "description": "Desde rutas privadas y deportes acuáticos hasta cenas exclusivas a bordo, diseñamos cada charter para que tengas una experiencia totalmente adaptada a tus deseos."
+        },
+        "crew": {
+          "title": "Tripulación Profesional y Atención al Detalle",
+          "description": "Nuestras tripulaciones están capacitadas para ofrecerte un servicio de calidad, mientras te guían a los rincones más hermosos y menos explorados de Menorca."
+        },
+        "routes": {
+          "title": "Rutas a Medida y Lugares Icónicos",
+          "description": "Te llevamos a explorar calas escondidas, playas vírgenes y otros puntos emblemáticos, creando una aventura única y memorable en cada charter."
+        }
+      }
     },
     "cta": {
-      "title": "¿Necesitas una Inspección o Tasación en Menorca?",
-      "description": "Si deseas obtener más información sobre nuestras inspecciones o tasaciones, o para solicitar nuestros servicios, no dudes en contactarnos directamente a través del formulario en nuestra página de contacto o llamarnos al número indicado.",
-      "button": "Contactar"
+      "title": "Haz de Tus Vacaciones una Aventura Única en el Mar",
+      "description": "Con Menorca Brokers, puedes relajarte sabiendo que te ofrecemos un charter sin preocupaciones y repleto de experiencias inolvidables. Navega por aguas cristalinas, disfruta de la tranquilidad de calas escondidas y déjate llevar por la belleza natural de Menorca.",
+      "button": "Reserva Tu Charter"
     }
   },
   "bunkerSupply": {
@@ -413,6 +448,62 @@
       "title": "¿Buscas un Ship Broker?",
       "description": "Contáctanos para cerrar fixtures o saber más sobre nuestros servicios. Nuestro equipo está listo para ayudarte.",
       "button": "Contactar Ahora"
+    }
+  },
+  "inspections": {
+    "hero": {
+      "title": "Inspecciones y Tasaciones de Barcos en Menorca",
+      "subtitle": "Servicios especializados de <2>inspección</2> y <2>tasación</2> marítima para compradores y vendedores"
+    },
+    "intro": "En Menorca Yacht Brokers, contamos con una experiencia sólida en la realización de <2>inspecciones</2> y <2>tasaciones marítimas</2>. Como parte de nuestro compromiso con la calidad y la transparencia, ofrecemos servicios especializados tanto para compradores comopara vendedores de yates y embarcaciones.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Inspecciones Marítimas",
+        "description": "Las inspecciones marítimas son fundamentales para evaluar el estado y la seguridad de cualquier embarcación. Seguimos rigurosos procedimientos técnicos con estándares internacionales.",
+        "process": {
+          "title": "¿Cómo realizamos las inspecciones?",
+          "items": [
+            "Revisión detallada del casco",
+            "Sistemas mecánicos, eléctricos y de seguridad",
+            "Prueba de navegación",
+            "Verificación de certificaciones SOLAS e IMO"
+          ]
+        },
+        "conventions": {
+          "title": "Convenios Internacionales",
+          "description": "Trabajamos en cumplimiento con Lloyd's Register, garantizando una evaluación precisa y confiable."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Tasaciones Marítimas",
+        "description": "Realizamos tasaciones precisas y actualizadas basadas en nuestra experiencia y en las tendencias actuales del mercado.",
+        "factors": {
+          "title": "Factores de Tasación",
+          "items": [
+            "Año de fabricación y modelo",
+            "Condiciones del motor y sistemas",
+            "Estado del casco y sistemas de seguridad",
+            "Equipamiento adicional y personalización",
+            "Situación del mercado"
+          ]
+        },
+        "types": {
+          "title": "Tipos de Valoraciones",
+          "items": [
+            "Valoraciones para Compra o Venta",
+            "Valoraciones para Seguros",
+            "Informes Detallados de Estado"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "Nos enorgullece ofrecer un servicio completo y profesional de inspecciones y tasaciones marítimas. Nuestro equipo de expertos está disponible para asesorarte en cada paso del proceso, garantizando que tomes decisiones informadas y seguras al comprar, vender o asegurar tu yate."
+    },
+    "cta": {
+      "title": "¿Necesitas una Inspección o Tasación en Menorca?",
+      "description": "Si deseas obtener más información sobre nuestras inspecciones o tasaciones, o para solicitar nuestros servicios, no dudes en contactarnos directamente a través del formulario en nuestra página de contacto o llamarnos al número indicado.",
+      "button": "Contactar"
     }
   },
   "logistics": {

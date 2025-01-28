@@ -269,60 +269,95 @@
       "button": "Contact an Expert"
     }
   },
-  "inspections": {
+  "yachtBroker": {
     "hero": {
-      "title": "Boat Inspections and Valuations in Menorca",
-      "subtitle": "Specialized <2>inspection</2> and <2>appraisal</2> maritime services for buyers and sellers"
+      "title": "Yacht Broker | Boat and Yacht Sales in Menorca",
+      "subtitle": "Specialists in <1>buying</1> and <1>selling</1> of yachts in Menorca. Wide range of luxury vessels and personalized advice."
     },
-    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <2>inspections</2> and <2>marine appraisals</2>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
-    "services": {
-      "maritimeInspections": {
-        "title": "Maritime Inspections",
-        "description": "Maritime inspections are fundamental for evaluating the condition and safety of any vessel. We follow rigorous technical procedures with international standards.",
-        "process": {
-          "title": "How do we conduct inspections?",
-          "items": [
-            "Detailed hull review",
-            "Mechanical, electrical, and safety systems",
-            "Sea trial",
-            "SOLAS and IMO certification verification"
-          ]
-        },
-        "conventions": {
-          "title": "International Conventions",
-          "description": "We work in compliance with Lloyd's Register, ensuring accurate and reliable assessment."
-        }
+    "navigation": {
+      "newYachts": "New Yachts",
+      "usedYachts": "Used Yachts"
+    },
+    "description": {
+      "intro": "Check our stock of Yachts for sale below or discover our key features and contact us below. We have <1>used</1> Yachts or we can make contacts with shipyards to enter into <1>new construction</1> contracts.",
+      "expertise": "At Menorca Yacht Brokers, we transform the buying and selling of yachts into a smooth, professional, and personalized experience. Our team of experts combines deep knowledge of the nautical market with a customer-focused approach, ensuring that every transaction is a success."
+    },
+    "yachtDetails": {
+      "viewDetails": "View Details",
+      "fields": {
+        "boatName": "Boat name",
+        "year": "Year",
+        "length": "Length",
+        "location": "Location",
+        "displacement": "Displacement",
+        "hull": "Hull",
+        "keel": "Keel",
+        "designer": "Designer",
+        "category": "Category"
       },
-      "maritimeValuations": {
-        "title": "Maritime Valuations",
-        "description": "We perform precise and up-to-date valuations based on our experience and current market trends.",
-        "factors": {
-          "title": "Valuation Factors",
-          "items": [
-            "Year of manufacture and model",
-            "Engine and systems condition",
-            "Hull condition and safety systems",
-            "Additional equipment and customization",
-            "Market situation"
-          ]
+      "units": {
+        "meters": "meters",
+        "kg": "kg"
+      }
+    },
+    "cta": {
+      "title": "Interested in our services?",
+      "description": "Contact us to discover how we can help you find the perfect yacht",
+      "button": "Contact"
+    }
+  },
+  "yachtCharter": {
+    "hero": {
+      "title": "Yacht Charter | Rent Your Boat and Yacht in Menorca",
+      "subtitle": "Rent luxury yachts in Menorca with Menorca Yacht Brokers. Enjoy personalized routes, professional crew, and premium services."
+    },
+    "services": {
+      "title": "Our Charter Services",
+      "list": {
+        "dailyRental": {
+          "title": "Daily, Weekly, or Seasonal Rental",
+          "description": "Flexibility to enjoy the charter for as long as you prefer, from a one-day getaway to a complete vacation at sea."
         },
-        "types": {
-          "title": "Types of Valuations",
-          "items": [
-            "Purchase or Sale Valuations",
-            "Insurance Valuations",
-            "Detailed Condition Reports"
-          ]
+        "thematicExcursions": {
+          "title": "Thematic Excursions and Exclusive Activities",
+          "description": "We offer options such as sunset excursions, diving routes, and gastronomic experiences on board, to make each charter special."
+        },
+        "support": {
+          "title": "24/7 Support During Your Charter",
+          "description": "We ensure you have dedicated support to resolve any needs or queries throughout your journey."
         }
       }
     },
-    "outro": {
-      "description": "We take pride in offering a complete and professional maritime inspection and valuation service. Our team of experts is available to guide you through every step of the process, ensuring you make informed and safe decisions when buying, selling, or insuring your yacht."
+    "discover": {
+      "title": "Discover Luxury at Sea",
+      "description": "At Menorca Brokers, we offer you the opportunity to discover Menorca from a unique perspective: aboard a luxury vessel. Our chartering service is designed to provide you with a personalized and exclusive experience, where every detail is adjusted to your preferences so you can enjoy unforgettable holidays at sea.",
+      "button": "Explore Routes"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers for Your Nautical Charter?",
+      "reasons": {
+        "fleet": {
+          "title": "High-End Vessel Fleet",
+          "description": "We have a wide selection of yachts, catamarans, and luxury vessels, carefully selected to satisfy different tastes and budgets."
+        },
+        "experience": {
+          "title": "Personalized Experience",
+          "description": "From private routes and water sports to exclusive dinners on board, we design each charter to give you an experience totally adapted to your desires."
+        },
+        "crew": {
+          "title": "Professional Crew and Attention to Detail",
+          "description": "Our crews are trained to offer you quality service while guiding you to the most beautiful and least explored corners of Menorca."
+        },
+        "routes": {
+          "title": "Custom Routes and Iconic Locations",
+          "description": "We take you to explore hidden coves, virgin beaches, and other emblematic points, creating a unique and memorable adventure in each charter."
+        }
+      }
     },
     "cta": {
-      "title": "Need an Inspection or Valuation in Menorca?",
-      "description": "If you would like more information about our inspections or valuations, or to request our services, don't hesitate to contact us directly through the form on our contact page or call us at the number provided.",
-      "button": "Contact Us"
+      "title": "Make Your Vacation a Unique Adventure at Sea",
+      "description": "With Menorca Brokers, you can relax knowing that we offer you a worry-free charter full of unforgettable experiences. Navigate through crystal-clear waters, enjoy the tranquility of hidden coves, and let yourself be carried away by the natural beauty of Menorca.",
+      "button": "Book Your Charter"
     }
   },
   "bunkerSupply": {
@@ -413,6 +448,62 @@
       "title": "Looking for a Ship Broker?",
       "description": "Contact us to close fixtures or learn more about our services. Our team is ready to help you.",
       "button": "Contact Now"
+    }
+  },
+  "inspections": {
+    "hero": {
+      "title": "Boat Inspections and Valuations in Menorca",
+      "subtitle": "Specialized <2>inspection</2> and <2>appraisal</2> maritime services for buyers and sellers"
+    },
+    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <2>inspections</2> and <2>marine appraisals</2>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Maritime Inspections",
+        "description": "Maritime inspections are fundamental for evaluating the condition and safety of any vessel. We follow rigorous technical procedures with international standards.",
+        "process": {
+          "title": "How do we conduct inspections?",
+          "items": [
+            "Detailed hull review",
+            "Mechanical, electrical, and safety systems",
+            "Sea trial",
+            "SOLAS and IMO certification verification"
+          ]
+        },
+        "conventions": {
+          "title": "International Conventions",
+          "description": "We work in compliance with Lloyd's Register, ensuring accurate and reliable assessment."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Maritime Valuations",
+        "description": "We perform precise and up-to-date valuations based on our experience and current market trends.",
+        "factors": {
+          "title": "Valuation Factors",
+          "items": [
+            "Year of manufacture and model",
+            "Engine and systems condition",
+            "Hull condition and safety systems",
+            "Additional equipment and customization",
+            "Market situation"
+          ]
+        },
+        "types": {
+          "title": "Types of Valuations",
+          "items": [
+            "Purchase or Sale Valuations",
+            "Insurance Valuations",
+            "Detailed Condition Reports"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "We take pride in offering a complete and professional maritime inspection and valuation service. Our team of experts is available to guide you through every step of the process, ensuring you make informed and safe decisions when buying, selling, or insuring your yacht."
+    },
+    "cta": {
+      "title": "Need an Inspection or Valuation in Menorca?",
+      "description": "If you would like more information about our inspections or valuations, or to request our services, don't hesitate to contact us directly through the form on our contact page or call us at the number provided.",
+      "button": "Contact Us"
     }
   },
   "logistics": {

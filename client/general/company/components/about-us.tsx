@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import ContactModal from "../../contact/modal/contactModal";
 
