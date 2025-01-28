@@ -26,12 +26,12 @@ export default function YachtCharter() {
     },
     {
       title: t("yachtCharter.whyChooseUs.reasons.experience.title"),
-      description: t("whyChooseUs.reasons.experience.description"),
+      description: t("yachtCharter.whyChooseUs.reasons.experience.description"),
       icon: <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
       title: t("yachtCharter.whyChooseUs.reasons.crew.title"),
-      description: t("whyChooseUs.reasons.crew.description"),
+      description: t("yachtCharter.whyChooseUs.reasons.crew.description"),
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
@@ -54,7 +54,7 @@ export default function YachtCharter() {
     },
     {
       title: t("yachtCharter.services.list.support.title"),
-      description: t("services.list.support.description"),
+      description: t("yachtCharter.services.list.support.description"),
       icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
