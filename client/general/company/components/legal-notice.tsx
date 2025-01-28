@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function LegalNotice() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -21,7 +24,7 @@ export default function LegalNotice() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-primary mb-2 sm:mb-4 text-center">
-              Aviso Legal
+              {t("legalNotice.hero.title")}
             </h1>
           </motion.div>
         </div>
@@ -39,18 +42,17 @@ export default function LegalNotice() {
             {/* Section 1 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                1. Identificación del titular del sitio web
+                {t("legalNotice.sections.identification.title")}
               </h2>
               <div className="space-y-3 sm:space-y-4">
                 <p className="text-sm sm:text-base">
-                  El presente sitio web, MenorcaBrokers.com.
+                  {t("legalNotice.sections.identification.content.0")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  Menorca Yacht Brokers se identifica como la marca comercial de
-                  www.menorcabrokers.com
+                  {t("legalNotice.sections.identification.content.1")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  Domicilio social: Menorca, Islas Baleares, España.
+                  {t("legalNotice.sections.identification.content.2")}
                 </p>
               </div>
             </section>
@@ -58,28 +60,20 @@ export default function LegalNotice() {
             {/* Section 2 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                2. Propiedad intelectual e industrial
+                {t("legalNotice.sections.intellectualProperty.title")}
               </h2>
               <div className="space-y-3 sm:space-y-4">
                 <p className="text-sm sm:text-base">
-                  Todos los contenidos del sitio web, incluyendo textos,
-                  imágenes, gráficos, logotipos, iconos, software y demás
-                  elementos de este sitio, son propiedad de Menorca Brokers o de
-                  sus licenciantes, y están protegidos por las leyes de
-                  propiedad intelectual e industrial. Queda prohibida la
-                  reproducción, distribución, modificación, transformación,
-                  comunicación pública o cualquier otra actividad similar sin la
-                  previa autorización expresa de Menorca Brokers.
+                  {t("legalNotice.sections.intellectualProperty.content.0")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  La propiedad del dominio www.menorcabrokers.com así como de
-                  todos sus derivados y de la propia página web son de:
+                  {t("legalNotice.sections.intellectualProperty.content.1")}
                 </p>
                 <p className="font-semibold text-sm sm:text-base">
-                  Andreu Martínez Parera.
+                  {t("legalNotice.sections.intellectualProperty.content.2")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  Contactar mediante los canales oficiales para más información.
+                  {t("legalNotice.sections.intellectualProperty.content.3")}
                 </p>
               </div>
             </section>
@@ -87,65 +81,50 @@ export default function LegalNotice() {
             {/* Section 3 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                3. Uso del sitio web
+                {t("legalNotice.sections.usage.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                El usuario se compromete a utilizar este sitio web conforme a la
-                ley, el presente Aviso Legal y las condiciones que en su caso se
-                establezcan para cada servicio. Asimismo, el usuario se
-                compromete a no utilizar el sitio web para fines ilícitos o
-                lesivos de los derechos e intereses de Menorca Brokers o de
-                terceros.
+                {t("legalNotice.sections.usage.content")}
               </p>
             </section>
 
             {/* Section 4 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                4. Exoneración de responsabilidad
+                {t("legalNotice.sections.liability.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                Menorca Brokers no se hace responsable de los daños derivados
-                del uso del sitio web o de sus contenidos. Asimismo, no
-                garantiza la disponibilidad continua de los servicios del sitio
-                web, pudiendo suspender temporalmente el acceso por tareas de
-                mantenimiento o por causas ajenas a su control.
+                {t("legalNotice.sections.liability.content")}
               </p>
             </section>
 
             {/* Section 5 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                5. Política de privacidad
+                {t("legalNotice.sections.privacy.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                La información personal que se reciba a través de este sitio web
-                será tratada conforme a nuestra Política de Privacidad, la cual
-                está disponible en la página web.
+                {t("legalNotice.sections.privacy.content")}
               </p>
             </section>
 
             {/* Section 6 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                6. Enlaces a otros sitios web
+                {t("legalNotice.sections.links.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                Este sitio web puede contener enlaces a otros sitios externos.
-                Menorca Brokers S.L. no se responsabiliza de los contenidos,
-                políticas de privacidad o prácticas de otros sitios web.
+                {t("legalNotice.sections.links.content")}
               </p>
             </section>
 
             {/* Section 7 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                7. Ley aplicable y jurisdicción
+                {t("legalNotice.sections.jurisdiction.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                La relación entre Menorca Brokers y el usuario se regirá por la
-                normativa española. En caso de disputa, las partes se someterán
-                a los tribunales competentes de Menorca, Islas Baleares, España.
+                {t("legalNotice.sections.jurisdiction.content")}
               </p>
             </section>
           </div>

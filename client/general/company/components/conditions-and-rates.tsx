@@ -14,11 +14,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function ConditionsAndRates() {
   const [activeTab, setActiveTab] = useState("yates");
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -40,10 +42,10 @@ export default function ConditionsAndRates() {
             className="max-w-4xl mx-auto text-center px-4"
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
-              Condiciones de Contratación y Tarifas
+              {t("conditionsAndRates.hero.title")}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8">
-              Información detallada sobre nuestros servicios y tarifas
+              {t("conditionsAndRates.hero.subtitle")}
             </h2>
           </motion.div>
         </div>
@@ -63,7 +65,7 @@ export default function ConditionsAndRates() {
             }`}
           >
             <Ship className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline-block" />
-            Ámbito de Yates
+            {t("conditionsAndRates.tabs.yachts.label")}
           </Button>
           <Button
             unstyled
@@ -75,7 +77,7 @@ export default function ConditionsAndRates() {
             }`}
           >
             <Building2 className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline-block" />
-            Ship Brokerage y Charterer
+            {t("conditionsAndRates.tabs.brokerage.label")}
           </Button>
         </div>
 
@@ -89,21 +91,20 @@ export default function ConditionsAndRates() {
       <div className="mt-8 sm:mt-12 md:mt-16 p-4 sm:p-6 md:p-8 text-center inset-0 bg-primary/30 py-8 sm:py-12 md:py-16">
         <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
           <h2 className="text-xl sm:text-2xl font-montserrat font-semibold text-primary mb-2 sm:mb-4">
-            ¿Tienes alguna pregunta?
+            {t("conditionsAndRates.contact.title")}
           </h2>
         </div>
         <p className="text-gray-700 mb-4 sm:mb-6 px-4">
-          Nuestro equipo está disponible para resolver cualquier duda sobre
-          nuestras condiciones y tarifas.
+          {t("conditionsAndRates.contact.description")}
         </p>
         <Button
           onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded-lg transition-colors"
-          >
+        >
           <div className="flex gap-2 items-center">
             <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-            Contactar
+            {t("conditionsAndRates.contact.button")}
           </div>
         </Button>
       </div>
@@ -116,97 +117,122 @@ export default function ConditionsAndRates() {
 }
 
 function YatesContent() {
+  const { t } = useTranslation();
+
   const inspectionPlans = [
     {
-      title: "Inspección básica",
-      price: "500€",
-      description: "Yate hasta 12 metros",
+      title: t("conditionsAndRates.yachts.inspections.plans.0.title"),
+      price: t("conditionsAndRates.yachts.inspections.plans.0.price"),
+      description: t(
+        "conditionsAndRates.yachts.inspections.plans.0.description"
+      ),
       features: [
-        "Inspección visual del casco",
-        "Revisión del motor",
-        "Sistema eléctrico",
-        "Sistema de navegación",
+        t("conditionsAndRates.yachts.inspections.plans.0.features.0"),
+        t("conditionsAndRates.yachts.inspections.plans.0.features.1"),
+        t("conditionsAndRates.yachts.inspections.plans.0.features.2"),
+        t("conditionsAndRates.yachts.inspections.plans.0.features.3"),
       ],
     },
     {
-      title: "Inspección avanzada",
-      price: "1,000€",
-      description: "Yate hasta 24 metros",
+      title: t("conditionsAndRates.yachts.inspections.plans.1.title"),
+      price: t("conditionsAndRates.yachts.inspections.plans.1.price"),
+      description: t(
+        "conditionsAndRates.yachts.inspections.plans.1.description"
+      ),
       features: [
-        "Todo lo de inspección básica",
-        "Sistemas de seguridad",
-        "Prueba de navegación",
-        "Evaluación completa",
+        t("conditionsAndRates.yachts.inspections.plans.1.features.0"),
+        t("conditionsAndRates.yachts.inspections.plans.1.features.1"),
+        t("conditionsAndRates.yachts.inspections.plans.1.features.2"),
+        t("conditionsAndRates.yachts.inspections.plans.1.features.3"),
       ],
     },
     {
-      title: "Inspección completa",
-      price: "2,000€",
-      description: "Yate superior a 24 metros",
+      title: t("conditionsAndRates.yachts.inspections.plans.2.title"),
+      price: t("conditionsAndRates.yachts.inspections.plans.2.price"),
+      description: t(
+        "conditionsAndRates.yachts.inspections.plans.2.description"
+      ),
       features: [
-        "Informe completo",
-        "Pruebas exhaustivas",
-        "Sistemas hidráulicos",
-        "Sistemas de propulsión",
+        t("conditionsAndRates.yachts.inspections.plans.2.features.0"),
+        t("conditionsAndRates.yachts.inspections.plans.2.features.1"),
+        t("conditionsAndRates.yachts.inspections.plans.2.features.2"),
+        t("conditionsAndRates.yachts.inspections.plans.2.features.3"),
       ],
     },
   ];
 
   const valuationPlans = [
     {
-      title: "Tasación básica",
-      price: "300€",
-      description: "Yate hasta 12 metros",
+      title: t("conditionsAndRates.yachts.valuations.plans.0.title"),
+      price: t("conditionsAndRates.yachts.valuations.plans.0.price"),
+      description: t(
+        "conditionsAndRates.yachts.valuations.plans.0.description"
+      ),
     },
     {
-      title: "Tasación avanzada",
-      price: "600€",
-      description: "Yate hasta 24 metros",
+      title: t("conditionsAndRates.yachts.valuations.plans.1.title"),
+      price: t("conditionsAndRates.yachts.valuations.plans.1.price"),
+      description: t(
+        "conditionsAndRates.yachts.valuations.plans.1.description"
+      ),
     },
     {
-      title: "Tasación completa",
-      price: "1,200€",
-      description: "Yate superior a 24 metros",
+      title: t("conditionsAndRates.yachts.valuations.plans.2.title"),
+      price: t("conditionsAndRates.yachts.valuations.plans.2.price"),
+      description: t(
+        "conditionsAndRates.yachts.valuations.plans.2.description"
+      ),
     },
   ];
 
   const otherServices = [
     {
-      title: "Asesoría y Consultoría Náutica",
-      price: "150€",
-      unit: "/ hora",
+      title: t("conditionsAndRates.yachts.otherServices.services.0.title"),
+      price: t("conditionsAndRates.yachts.otherServices.services.0.price"),
+      unit: t("conditionsAndRates.yachts.otherServices.services.0.unit"),
     },
     {
-      title: "Gestión de documentación",
-      price: "300€",
-      unit: "por transacción",
+      title: t("conditionsAndRates.yachts.otherServices.services.1.title"),
+      price: t("conditionsAndRates.yachts.otherServices.services.1.price"),
+      unit: t("conditionsAndRates.yachts.otherServices.services.1.unit"),
     },
   ];
 
   const conditions = [
     {
-      title: "Métodos de pago",
-      description:
-        "Aceptamos pagos por transferencia bancaria, tarjeta de crédito o PayPal. Los pagos deben realizarse antes de la entrega de los informes finales.",
+      title: t("conditionsAndRates.yachts.conditions.items.0.title"),
+      description: t(
+        "conditionsAndRates.yachts.conditions.items.0.description"
+      ),
       icon: <CreditCard className="w-6 h-6 text-primary" />,
-      benefits: ["Transferencia bancaria", "Tarjeta de crédito", "PayPal"],
+      benefits: [
+        t("conditionsAndRates.yachts.conditions.items.0.benefits.0"),
+        t("conditionsAndRates.yachts.conditions.items.0.benefits.1"),
+        t("conditionsAndRates.yachts.conditions.items.0.benefits.2"),
+      ],
     },
     {
-      title: "Política de Cancelaciones",
-      description:
-        "En caso de cancelación con menos de 24 horas de antelación, se cobrará el 50% de la tarifa acordada.",
+      title: t("conditionsAndRates.yachts.conditions.items.1.title"),
+      description: t(
+        "conditionsAndRates.yachts.conditions.items.1.description"
+      ),
       icon: <Info className="w-6 h-6 text-primary" />,
-      benefits: ["Flexibilidad", "Transparencia", "Sin costes ocultos"],
+      benefits: [
+        t("conditionsAndRates.yachts.conditions.items.1.benefits.0"),
+        t("conditionsAndRates.yachts.conditions.items.1.benefits.1"),
+        t("conditionsAndRates.yachts.conditions.items.1.benefits.2"),
+      ],
     },
     {
-      title: "Validez y Garantías",
-      description:
-        "Las tarifas están sujetas a cambios anuales según la revisión de precios del mercado.",
+      title: t("conditionsAndRates.yachts.conditions.items.2.title"),
+      description: t(
+        "conditionsAndRates.yachts.conditions.items.2.description"
+      ),
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
       benefits: [
-        "Precios competitivos",
-        "Revisión anual",
-        "Garantía de servicio",
+        t("conditionsAndRates.yachts.conditions.items.2.benefits.0"),
+        t("conditionsAndRates.yachts.conditions.items.2.benefits.1"),
+        t("conditionsAndRates.yachts.conditions.items.2.benefits.2"),
       ],
     },
   ];
@@ -224,11 +250,7 @@ function YatesContent() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-base sm:text-lg text-gray-700">
-            En Menorca Yacht Brokers, ofrecemos una amplia gama de servicios
-            relacionados con la compra, venta y alquiler de yates, incluyendo
-            inspecciones y tasaciones marítimas. A continuación, detallamos
-            nuestras tarifas y condiciones para cada uno de los servicios que
-            ofrecemos.
+            {t("conditionsAndRates.tabs.yachts.intro")}
           </p>
         </motion.div>
 
@@ -241,37 +263,46 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                1. Servicios de Brokeraje de Yates
+                {t("conditionsAndRates.yachts.brokerage.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2">
                   <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  Compra y Venta de Yates:
+                  {t(
+                    "conditionsAndRates.yachts.brokerage.saleAndPurchase.title"
+                  )}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                  <li>Comisión del 5% sobre el precio de venta.</li>
                   <li>
-                    Comisión mínima de €2,000 para transacciones por debajo de
-                    €40,000.
+                    {t(
+                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.0"
+                    )}
                   </li>
                   <li>
-                    El pago de la comisión se realiza al cierre de la
-                    transacción.
+                    {t(
+                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.1"
+                    )}
+                  </li>
+                  <li>
+                    {t(
+                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.2"
+                    )}
                   </li>
                 </ul>
               </div>
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2">
                   <Ship className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  Alquiler y Charter de Yates:
+                  {t("conditionsAndRates.yachts.brokerage.charter.title")}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                  <li>Comisión del 10% sobre el precio de alquiler.</li>
                   <li>
-                    Condiciones específicas para alquileres de larga duración
-                    (más de 30 días).
+                    {t("conditionsAndRates.yachts.brokerage.charter.points.0")}
+                  </li>
+                  <li>
+                    {t("conditionsAndRates.yachts.brokerage.charter.points.1")}
                   </li>
                 </ul>
               </div>
@@ -288,7 +319,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                2. Inspecciones Marítimas
+                {t("conditionsAndRates.yachts.inspections.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -337,7 +368,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                3. Tasaciones Marítimas
+                {t("conditionsAndRates.yachts.valuations.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -375,7 +406,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                4. Otros Servicios
+                {t("conditionsAndRates.yachts.otherServices.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -414,7 +445,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                5. Condiciones Generales
+                {t("conditionsAndRates.yachts.conditions.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -461,38 +492,73 @@ function YatesContent() {
 }
 
 function BrokerageContent() {
+  const { t } = useTranslation();
+
   const conditions = [
     {
-      title: "Duración del Contrato",
-      description:
-        "Vigente hasta la finalización del acuerdo comercial, salvo otro plazo establecido.",
+      title: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.title"
+      ),
+      description: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.description"
+      ),
       icon: <CalendarClock className="w-6 h-6 text-primary" />,
       benefits: [
-        "Flexibilidad temporal",
-        "Adaptable a necesidades",
-        "Renovación automática opcional",
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.0"
+        ),
+
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.1"
+        ),
+        ,
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.2"
+        ),
       ],
     },
     {
-      title: "Exclusividad",
-      description:
-        "Puede establecerse según los términos acordados en cada caso particular.",
+      title: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.title"
+      ),
+      description: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.description"
+      ),
       icon: <Star className="w-6 h-6 text-primary" />,
       benefits: [
-        "Acuerdos personalizados",
-        "Términos negociables",
-        "Garantía de servicio",
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.0"
+        ),
+
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.1"
+        ),
+        ,
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.2"
+        ),
       ],
     },
     {
-      title: "Modificaciones",
-      description:
-        "Cualquier modificación debe ser acordada por escrito entre las partes.",
+      title: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.title"
+      ),
+      description: t(
+        "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.description"
+      ),
       icon: <FileSignature className="w-6 h-6 text-primary" />,
       benefits: [
-        "Transparencia total",
-        "Documentación formal",
-        "Seguridad jurídica",
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.0"
+        ),
+
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.1"
+        ),
+        ,
+        t(
+          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.2"
+        ),
       ],
     },
   ];
@@ -505,40 +571,47 @@ function BrokerageContent() {
     >
       <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
         <p className="text-base sm:text-lg text-gray-700 px-4 sm:px-0">
-          En Menorca Brokers, seguimos las normativas internacionales
-          reconocidas por BIMCO (Baltic and International Maritime Council) para
-          garantizar que todos nuestros acuerdos sean claros, justos y
-          transparentes.
+          {t("conditionsAndRates.tabs.brokerage.intro")}
         </p>
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            1. Comisiones para Ship Broker
+            {t("conditionsAndRates.shipBrokerage.commissions.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Comisión Estándar:
+                {t(
+                  "conditionsAndRates.shipBrokerage.commissions.standard.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
-                La comisión habitual es del 1.25% al 2.5% del flete bruto,
-                precio de venta del buque o valor del contrato de fletamento.
+                {t(
+                  "conditionsAndRates.shipBrokerage.commissions.standard.description"
+                )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Pago de la Comisión:
+                {t(
+                  "conditionsAndRates.shipBrokerage.commissions.payment.title"
+                )}
               </h3>
               <ul className="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
                 <li>
-                  Fletamento: Al cobro del primer flete o inicio del contrato.
+                  {t(
+                    "conditionsAndRates.shipBrokerage.commissions.payment.points.0"
+                  )}
                 </li>
                 <li>
-                  Venta de Buques: Tras la firma del MOA y entrega del buque.
+                  {t(
+                    "conditionsAndRates.shipBrokerage.commissions.payment.points.1"
+                  )}
                 </li>
                 <li>
-                  Renovaciones y Extensiones: Comisión adicional según acuerdo
-                  previo.
+                  {t(
+                    "conditionsAndRates.shipBrokerage.commissions.payment.points.2"
+                  )}
                 </li>
               </ul>
             </div>
@@ -547,24 +620,31 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            2. Responsabilidades del Ship Broker
+            {t("conditionsAndRates.shipBrokerage.responsibilities.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Intermediación
+                {t(
+                  "conditionsAndRates.shipBrokerage.responsibilities.intermediation.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Actuamos como intermediario imparcial entre las partes,
-                facilitando la negociación.
+                {t(
+                  "conditionsAndRates.shipBrokerage.responsibilities.intermediation.description"
+                )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Confidencialidad
+                {t(
+                  "conditionsAndRates.shipBrokerage.responsibilities.confidentiality.title"
+                )}{" "}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Mantenemos la confidencialidad de toda la información sensible.
+                {t(
+                  "conditionsAndRates.shipBrokerage.responsibilities.confidentiality.description"
+                )}
               </p>
             </div>
           </div>
@@ -572,24 +652,31 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            3. Comisiones para Charterer
+            {t("conditionsAndRates.shipBrokerage.chartererCommissions.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Comisión de Fletamento:
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererCommissions.charter.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
-                Varía entre 1% a 2% del valor total del fletamento acordado.
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererCommissions.charter.description"
+                )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Compensación por Ingreso Adicional:
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererCommissions.additional.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Compensación adicional en caso de renovación o modificación del
-                contrato.
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererCommissions.additional.description"
+                )}
               </p>
             </div>
           </div>
@@ -597,25 +684,33 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            4. Responsabilidades del Charterer
+            {t(
+              "conditionsAndRates.shipBrokerage.chartererResponsibilities.title"
+            )}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Negociación y Fletamento
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.negotiation.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                El Charterer se encarga de negociar las condiciones del contrato
-                y asegurar el cumplimiento normativo.
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.negotiation.description"
+                )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
-                Cumplimiento de Contrato
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.compliance.title"
+                )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Garantizar el cumplimiento de las condiciones establecidas y
-                gestionar posibles disputas.
+                {t(
+                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.compliance.description"
+                )}
               </p>
             </div>
           </div>
@@ -630,10 +725,12 @@ function BrokerageContent() {
               className="mb-8 sm:mb-12"
             >
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
-                Condiciones del Contrato
+                {t("conditionsAndRates.shipBrokerage.contractConditions.title")}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
-                Aspectos fundamentales que rigen nuestros acuerdos comerciales.
+                {t(
+                  "conditionsAndRates.shipBrokerage.contractConditions.subtitle"
+                )}
               </p>
             </motion.div>
 

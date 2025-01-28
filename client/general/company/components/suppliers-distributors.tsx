@@ -3,8 +3,9 @@ import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import ContactModal from "../../contact/modal/contactModal";
 
 const partners = [
   {
@@ -46,6 +47,7 @@ const partners = [
 
 export default function Partners() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -68,11 +70,10 @@ export default function Partners() {
           >
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                Empresas Náuticas en Menorca: Proveedores y Distribuidores
+                {t("partners.hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white px-2">
-                Aquí encontrarás nuestros socios y proveedores de productos. Si
-                quieres ser uno de ellos contáctanos.
+                {t("partners.hero.subtitle")}
               </h2>
               <Button
                 component={Link}
@@ -80,7 +81,7 @@ export default function Partners() {
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors"
               >
-                Contáctanos
+                {t("partners.hero.contactButton")}
               </Button>
             </div>
           </motion.div>
@@ -129,18 +130,17 @@ export default function Partners() {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-darkTitle mb-4 sm:mb-6">
-              ¿Quieres formar parte de nuestra Red de Proveedores?
+              {t("partners.cta.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-2">
-              Únete a nuestra red de socios y proveedores náuticos en Menorca.
-              Contáctanos para explorar oportunidades de colaboración.
+              {t("partners.cta.description")}
             </p>
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
             >
-              Solicitar Información
+              {t("partners.cta.button")}
             </Button>
           </motion.div>
           <ContactModal

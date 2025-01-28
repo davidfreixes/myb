@@ -704,6 +704,263 @@
       "button": "Contact"
     }
   },
+  "partners": {
+    "hero": {
+      "title": "Nautical Companies in Menorca: Suppliers and Distributors",
+      "subtitle": "Here you will find our partners and product suppliers. If you want to be one of them, contact us.",
+      "contactButton": "Contact Us"
+    },
+    "cta": {
+      "title": "Want to Join Our Supplier Network?",
+      "description": "Join our network of nautical partners and suppliers in Menorca. Contact us to explore collaboration opportunities.",
+      "button": "Request Information"
+    }
+  },
+  "portDaily": {
+    "hero": {
+      "title": "Port of Mahón Daily",
+      "subtitle": "The daily maritime activity journal in the Port of Mahón."
+    },
+    "news": {
+      "articles": [
+        {
+          "title": "APB releases 20-year management of mooring posts at Poniente dock in Mahón port"
+        },
+        {
+          "title": "Moll de Ponent moorings in Mahón go out to concession for 6 million euros for 20 years"
+        }
+      ],
+      "readMore": "Read more"
+    },
+    "submitNews": {
+      "title": "Want to send us your news?",
+      "description": "Share with us the latest updates from the maritime sector in Mahón.",
+      "submitButton": "Submit News",
+      "contactButton": "Contact"
+    }
+  },
+  "conditionsAndRates": {
+    "hero": {
+      "title": "Terms and Rates",
+      "subtitle": "Detailed information about our services and rates"
+    },
+    "tabs": {
+      "yachts": {
+        "label": "Yachts",
+        "intro": "At Menorca Yacht Brokers, we offer a wide range of services related to the purchase, sale, and rental of yachts, including marine inspections and valuations. Below, we detail our rates and conditions for each of the services we offer."
+      },
+      "brokerage": {
+        "label": "Ship Brokerage and Charterer",
+        "intro": "At Menorca Brokers, we follow international regulations recognized by BIMCO (Baltic and International Maritime Council) to ensure that all our agreements are clear, fair, and transparent."
+      }
+    },
+    "yachts": {
+      "brokerage": {
+        "title": "1. Yacht Brokerage Services",
+        "saleAndPurchase": {
+          "title": "Yacht Sale and Purchase:",
+          "points": [
+            "5% commission on the sale price.",
+            "Minimum commission of €2,000 for transactions below €40,000.",
+            "Commission payment is made at the closing of the transaction."
+          ]
+        },
+        "charter": {
+          "title": "Yacht Rental and Charter:",
+          "points": [
+            "10% commission on the rental price.",
+            "Specific conditions for long-term rentals (more than 30 days)."
+          ]
+        }
+      },
+      "inspections": {
+        "title": "2. Marine Inspections",
+        "plans": [
+          {
+            "title": "Basic Inspection",
+            "price": "500€",
+            "description": "Yacht up to 12 meters",
+            "features": [
+              "Visual hull inspection",
+              "Engine review",
+              "Electrical system",
+              "Navigation system"
+            ]
+          },
+          {
+            "title": "Advanced Inspection",
+            "price": "1,000€",
+            "description": "Yacht up to 24 meters",
+            "features": [
+              "All basic inspection features",
+              "Safety systems",
+              "Navigation test",
+              "Complete evaluation"
+            ]
+          },
+          {
+            "title": "Complete Inspection",
+            "price": "2,000€",
+            "description": "Yacht over 24 meters",
+            "features": [
+              "Complete report",
+              "Exhaustive testing",
+              "Hydraulic systems",
+              "Propulsion systems"
+            ]
+          }
+        ]
+      },
+      "valuations": {
+        "title": "3. Marine Valuations",
+        "plans": [
+          {
+            "title": "Basic Valuation",
+            "price": "300€",
+            "description": "Yacht up to 12 meters"
+          },
+          {
+            "title": "Advanced Valuation",
+            "price": "600€",
+            "description": "Yacht up to 24 meters"
+          },
+          {
+            "title": "Complete Valuation",
+            "price": "1,200€",
+            "description": "Yacht over 24 meters"
+          }
+        ]
+      },
+      "otherServices": {
+        "title": "4. Other Services",
+        "services": [
+          {
+            "title": "Nautical Consulting and Advisory",
+            "price": "150€",
+            "unit": "/ hour"
+          },
+          {
+            "title": "Documentation Management",
+            "price": "300€",
+            "unit": "per transaction"
+          }
+        ]
+      },
+      "conditions": {
+        "title": "5. General Conditions",
+        "items": [
+          {
+            "title": "Payment Methods",
+            "description": "We accept payments by bank transfer, credit card, or PayPal. Payments must be made before the delivery of final reports.",
+            "benefits": ["Bank transfer", "Credit card", "PayPal"]
+          },
+          {
+            "title": "Cancellation Policy",
+            "description": "In case of cancellation with less than 24 hours notice, 50% of the agreed rate will be charged.",
+            "benefits": ["Flexibility", "Transparency", "No hidden costs"]
+          },
+          {
+            "title": "Validity and Guarantees",
+            "description": "Rates are subject to annual changes according to market price review.",
+            "benefits": [
+              "Competitive prices",
+              "Annual review",
+              "Service guarantee"
+            ]
+          }
+        ]
+      }
+    },
+    "shipBrokerage": {
+      "commissions": {
+        "title": "1. Ship Broker Commissions",
+        "standard": {
+          "title": "Standard Commission:",
+          "description": "The usual commission is 1.25% to 2.5% of the gross freight, vessel sale price, or charter contract value."
+        },
+        "payment": {
+          "title": "Commission Payment:",
+          "points": [
+            "Charter: Upon collection of first freight or contract start.",
+            "Vessel Sales: After MOA signing and vessel delivery.",
+            "Renewals and Extensions: Additional commission as per prior agreement."
+          ]
+        }
+      },
+      "responsibilities": {
+        "title": "2. Ship Broker Responsibilities",
+        "intermediation": {
+          "title": "Intermediation",
+          "description": "We act as an impartial intermediary between parties, facilitating negotiation."
+        },
+        "confidentiality": {
+          "title": "Confidentiality",
+          "description": "We maintain the confidentiality of all sensitive information."
+        }
+      },
+      "chartererCommissions": {
+        "title": "3. Charterer Commissions",
+        "charter": {
+          "title": "Charter Commission:",
+          "description": "Varies between 1% to 2% of the total agreed charter value."
+        },
+        "additional": {
+          "title": "Additional Income Compensation:",
+          "description": "Additional compensation in case of contract renewal or modification."
+        }
+      },
+      "chartererResponsibilities": {
+        "title": "4. Charterer Responsibilities",
+        "negotiation": {
+          "title": "Negotiation and Chartering",
+          "description": "The Charterer is responsible for negotiating contract terms and ensuring regulatory compliance."
+        },
+        "compliance": {
+          "title": "Contract Compliance",
+          "description": "Ensure compliance with established conditions and manage potential disputes."
+        }
+      },
+      "contractConditions": {
+        "title": "Contract Conditions",
+        "subtitle": "Fundamental aspects governing our commercial agreements.",
+        "conditions": [
+          {
+            "title": "Contract Duration",
+            "description": "Valid until the completion of the commercial agreement, unless another term is established.",
+            "benefits": [
+              "Temporal flexibility",
+              "Adaptable to needs",
+              "Optional automatic renewal"
+            ]
+          },
+          {
+            "title": "Exclusivity",
+            "description": "Can be established according to the terms agreed in each particular case.",
+            "benefits": [
+              "Customized agreements",
+              "Negotiable terms",
+              "Service guarantee"
+            ]
+          },
+          {
+            "title": "Modifications",
+            "description": "Any modification must be agreed in writing between the parties.",
+            "benefits": [
+              "Total transparency",
+              "Formal documentation",
+              "Legal security"
+            ]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Do you have any questions?",
+      "description": "Our team is available to resolve any doubts about our conditions and rates.",
+      "button": "Contact"
+    }
+  },
+
   "aboutUs": {
     "hero": {
       "title": "Who We Are at Menorca Brokers",
@@ -759,6 +1016,50 @@
       "subtitle": "Contact Us Today",
       "description": "Discover how Menorca Brokers can help you achieve your vessel buying and selling goals. Our team is available to answer your questions and offer you a personalized consultation.",
       "button": "Contact Us"
+    }
+  },
+  "legalNotice": {
+    "hero": {
+      "title": "Legal Notice"
+    },
+    "sections": {
+      "identification": {
+        "title": "1. Website Owner Identification",
+        "content": [
+          "This website, MenorcaBrokers.com.",
+          "Menorca Yacht Brokers is identified as the commercial brand of www.menorcabrokers.com",
+          "Registered office: Menorca, Balearic Islands, Spain."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "2. Intellectual and Industrial Property",
+        "content": [
+          "All website contents, including texts, images, graphics, logos, icons, software, and other elements of this site, are property of Menorca Brokers or its licensors, and are protected by intellectual and industrial property laws. Reproduction, distribution, modification, transformation, public communication, or any other similar activity is prohibited without the express prior authorization of Menorca Brokers.",
+          "The ownership of the domain www.menorcabrokers.com as well as all its derivatives and the website itself belongs to:",
+          "Andreu Martínez Parera.",
+          "Contact through official channels for more information."
+        ]
+      },
+      "usage": {
+        "title": "3. Website Usage",
+        "content": "The user agrees to use this website in accordance with the law, this Legal Notice, and any conditions established for each service. Additionally, the user agrees not to use the website for illegal purposes or purposes that harm the rights and interests of Menorca Brokers or third parties."
+      },
+      "liability": {
+        "title": "4. Disclaimer of Liability",
+        "content": "Menorca Brokers is not responsible for damages arising from the use of the website or its contents. Furthermore, it does not guarantee continuous availability of website services, and may temporarily suspend access for maintenance tasks or causes beyond its control."
+      },
+      "privacy": {
+        "title": "5. Privacy Policy",
+        "content": "Personal information received through this website will be processed in accordance with our Privacy Policy, which is available on the website."
+      },
+      "links": {
+        "title": "6. Links to Other Websites",
+        "content": "This website may contain links to other external sites. Menorca Brokers S.L. is not responsible for the content, privacy policies, or practices of other websites."
+      },
+      "jurisdiction": {
+        "title": "7. Applicable Law and Jurisdiction",
+        "content": "The relationship between Menorca Brokers and the user will be governed by Spanish law. In case of dispute, the parties will submit to the competent courts of Menorca, Balearic Islands, Spain."
+      }
     }
   }
 }

@@ -1,30 +1,28 @@
-"use client";
-
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
-
-const newsArticles = [
-  {
-    title:
-      "La APB saca para 20 años la gestión de los puestos de amarre del muelle de Poniente en el puerto de Maó",
-    image: "/img/diary.jpg",
-    url: "https://www.portsdebalears.com/es/noticias/la-apb-saca-para-20-anos-la-gestion-de-los-puestos-de-amarre-del-muelle-de-poniente-en-el",
-  },
-  {
-    title:
-      "Los amarres del Moll de Ponent de Maó salen a concesión por 6 millones de euros para 20 años",
-    image: "/img/diary.jpg",
-    url: "https://www.menorca.info/menorca/local/2024/12/25/2295825/amarres-del-moll-ponent-salen-concesion-por-millones-euros-para-anos.html",
-  },
-];
+import { useTranslation } from "react-i18next";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function PortDaily() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
+
+  const newsArticles = [
+    {
+      title: t("portDaily.news.articles.0.title"),
+      image: "/img/diary.jpg",
+      url: "https://www.portsdebalears.com/es/noticias/la-apb-saca-para-20-anos-la-gestion-de-los-puestos-de-amarre-del-muelle-de-poniente-en-el",
+    },
+    {
+      title: t("portDaily.news.articles.1.title"),
+      image: "/img/diary.jpg",
+      url: "https://www.menorca.info/menorca/local/2024/12/25/2295825/amarres-del-moll-ponent-salen-concesion-por-millones-euros-para-anos.html",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -47,10 +45,10 @@ export default function PortDaily() {
           >
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                Diario del Puerto de Mahón
+                {t("portDaily.hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white px-2">
-                El diario de la actividad diaria marítima en el Puerto de Mahón.
+                {t("portDaily.hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -88,7 +86,9 @@ export default function PortDaily() {
                       {article.title}
                     </h2>
                     <div className="flex items-center text-primary">
-                      <span className="text-sm">Leer más</span>
+                      <span className="text-sm">
+                        {t("portDaily.news.readMore")}
+                      </span>
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </div>
                   </div>
@@ -109,11 +109,10 @@ export default function PortDaily() {
             className="max-w-3xl mx-auto text-center "
           >
             <h2 className="font-montserrat text-2xl md:text-3xl text-darkTitle mb-6">
-              ¿Quieres mandarnos tu noticia?
+              {t("portDaily.submitNews.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Comparte con nosotros las últimas novedades del sector marítimo en
-              Mahón.
+              {t("portDaily.submitNews.description")}
             </p>
             <div className="flex justify-center gap-4">
               <Button
@@ -122,14 +121,14 @@ export default function PortDaily() {
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/50 transition-colors"
               >
-                Enviar Noticia
+                {t("portDaily.submitNews.submitButton")}
               </Button>
               <Button
                 onClick={() => setContactModalOpened(true)}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-darkTitle border-2 border-primary hover:bg-primary/50 transition-colors"
               >
-                Contactar
+                {t("portDaily.submitNews.contactButton")}
               </Button>
             </div>
           </motion.div>

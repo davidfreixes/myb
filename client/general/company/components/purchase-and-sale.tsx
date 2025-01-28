@@ -13,8 +13,8 @@ import {
   Shield,
 } from "lucide-react";
 import Image from "next/image";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
+import ContactModal from "../../contact/modal/contactModal";
 
 const benefits = [
   {
