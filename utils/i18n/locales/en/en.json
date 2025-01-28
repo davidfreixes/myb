@@ -703,5 +703,62 @@
       "description": "Contact us to customize your Menorca experience",
       "button": "Contact"
     }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "Who We Are at Menorca Brokers",
+      "subtitle": "We are ready to offer you the best advice and ensure a successful buying experience.",
+      "button": "Meet Us!"
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Our team consists of highly qualified and motivated professionals, all experts in their field. With many years of industry experience, they have the expertise to provide comprehensive, first-class services to our clients.",
+      "members": {
+        "andreuMartinez": {
+          "name": "Andreu Martinez",
+          "role": "Yacht Broker & Charterer",
+          "location": "Spain",
+          "email": "contact@menorcabrokers.com",
+          "bio": [
+            "Andreu Martínez Parera is a broker with a solid academic background in the maritime field.",
+            "Trained at the Spanish Maritime Institute and the Institute of Chartered Shipbrokers in London. Additionally, he holds a degree in Nautical Science with a specialization in Maritime Transport. His education is complemented by a Master's in Maritime Transport Management and Postgraduate training in Logistics and Supply Chain, which has allowed him to develop a comprehensive vision of the sector.",
+            "Since 2017, Andreu has accumulated significant experience in the maritime and logistics world. His career began at APM Terminals, part of the MAERSK Group, where he was a member of the operations department in Barcelona. During this stage, he was actively involved in optimizing logistics processes and managing port operations, which gave him a deep understanding of the global supply chain.",
+            "In 2019, Andreu took on the responsibility of operations management at the shipping company CMA CGM in Marseille. For more than 4 and a half years, he optimized operations efficiency and coordinated cargo activities, resulting in great productivity and stowage results.",
+            "Simultaneously with his professional career, Andreu shared his experience and knowledge as a university professor in the Maritime Business area at the Polytechnic University of Catalonia. Throughout his career, he trained new generations of industry professionals, transmitting his knowledge of logistics and maritime operations.",
+            "Currently, Andreu leads Menorca Yacht Brokers, a project that offers a wide range of ship brokerage, charter, and nautical consulting services. Thanks to his academic training and practical experience, Andreu has developed a deep understanding of the maritime sector and its specific needs."
+          ]
+        },
+        "danielOrtega": {
+          "name": "Daniel Ortega",
+          "role": "Freelance Yacht Broker & Event Planning",
+          "location": "Belgium",
+          "email": "daniel@menorcabrokers.com"
+        },
+        "grigoris": {
+          "name": "Grigoris Psomas",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "The Netherlands",
+          "email": "grigoris@menorcabrokers.com"
+        },
+        "christine": {
+          "name": "Christine Giannouli",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Greece",
+          "email": "christine@menorcabrokers.com"
+        },
+        "david": {
+          "name": "David Freixes",
+          "role": "IT Developer & Co-Owner",
+          "location": "Spain"
+        }
+      },
+      "contactButton": "Contact Me"
+    },
+    "contact": {
+      "title": "Ready to Start Your Journey?",
+      "subtitle": "Contact Us Today",
+      "description": "Discover how Menorca Brokers can help you achieve your vessel buying and selling goals. Our team is available to answer your questions and offer you a personalized consultation.",
+      "button": "Contact Us"
+    }
   }
 }

@@ -703,5 +703,62 @@
       "description": "Contáctanos para personalizar tu experiencia en Menorca",
       "button": "Contactar"
     }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "Quiénes Somos en Menorca Brokers",
+      "subtitle": "Estamos listos para ofrecerte la mejor asesoría y garantizar una experiencia de compra exitosa.",
+      "button": "¡Conócenos!"
+    },
+    "team": {
+      "title": "Nuestro equipo",
+      "description": "Nuestro equipo está formado por profesionales altamente cualificados y motivados, todos ellos expertos en su campo. Con muchos años de experiencia en la industria, tienen la experiencia para proporcionar servicios completos y de primera clase a nuestros clientes.",
+      "members": {
+        "andreuMartinez": {
+          "name": "Andreu Martinez",
+          "role": "Yacht Broker & Charterer",
+          "location": "España",
+          "email": "contact@menorcabrokers.com",
+          "bio": [
+            "Andreu Martínez Parera es un broker con una sólida formación académica en el ámbito marítimo.",
+            "Formado en el Instituto Marítimo Español y en el Institute of Chartered Shipbrokers de Londres. Además, cuenta con una carrera en Náutica, habiendo obtenido su título en Ciencias Náuticas con especialización en Transporte Marítimo. Su educación se complementa con un Máster en Gestión del Transporte Marítimo y una formación de Postgrado en Logística y Supply Chain, lo que le ha permitido desarrollar una visión integral del sector.",
+            "Desde 2017, Andreu ha acumulado una experiencia significativa en el mundo marítimo y logístico. Su carrera comenzó en APM Terminals, parte del Grupo MAERSK, donde fue miembro del departamento de operaciones en Barcelona. En esta etapa, se involucró activamente en la optimización de procesos logísticos y la gestión de operaciones portuarias, lo que le brindó una comprensión profunda de la cadena de suministro global.",
+            "En 2019, Andreu asumió la responsabilidad de la gestión de operaciones en la naviera CMA CGM en Marsella. Durante más de 4 años y medio, optimizó la eficiencia de las operaciones así como la coordinación de las actividades de carga resultando en grandes resultados de productividad y stowage.",
+            "Simultáneamente a su carrera profesional, Andreu compartió su experiencia y conocimientos como profesor universitario en el área de Negocios Marítimos de la Universitat Politécnica de Catalunya. A lo largo de su trayectoria, formó a nuevas generaciones de profesionales del sector, transmitiendo sus conocimientos sobre logística y operaciones marítimas.",
+            "Actualmente, Andreu dirige Menorca Yacht Brokers, un proyecto que ofrece una amplia gama de servicios de ship brokerage, charter y asesoría náutica. Gracias a su formación académica y su experiencia práctica, Andreu ha desarrollado una comprensión profunda del sector marítimo y sus necesidades específicas."
+          ]
+        },
+        "danielOrtega": {
+          "name": "Daniel Ortega",
+          "role": "Freelance Yacht Broker & Event Planning",
+          "location": "Bélgica",
+          "email": "daniel@menorcabrokers.com"
+        },
+        "grigoris": {
+          "name": "Grigoris Psomas",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Países Bajos",
+          "email": "grigoris@menorcabrokers.com"
+        },
+        "christine": {
+          "name": "Christine Giannouli",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Grecia",
+          "email": "christine@menorcabrokers.com"
+        },
+        "david": {
+          "name": "David Freixes",
+          "role": "IT Developer & Co-Owner",
+          "location": "España"
+        }
+      },
+      "contactButton": "Contáctame"
+    },
+    "contact": {
+      "title": "¿Listo Para Empezar Tu Viaje?",
+      "subtitle": "Contáctanos Hoy",
+      "description": "Descubre cómo Menorca Brokers puede ayudarte a alcanzar tus objetivos en la compraventa de embarcaciones. Nuestro equipo está disponible para responder a tus preguntas y ofrecerte una consulta personalizada.",
+      "button": "Contáctanos"
+    }
   }
 }
