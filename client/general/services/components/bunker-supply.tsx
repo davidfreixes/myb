@@ -13,10 +13,127 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function BunkerSupplyPage() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
+
+  const marketIndices = [
+    {
+      title: t("bunkerSupply.marketIndices.providers.shipAndBunker.title"),
+      description: t(
+        "bunkerSupply.marketIndices.providers.shipAndBunker.description"
+      ),
+      image: "/img/bunker-supply/ship-bunker.png",
+      link: "https://shipandbunker.com/prices",
+    },
+    {
+      title: t("bunkerSupply.marketIndices.providers.balticExchange.title"),
+      description: t(
+        "bunkerSupply.marketIndices.providers.balticExchange.description"
+      ),
+      image: "/img/bunker-supply/baltic-exchange.png",
+      link: "https://www.balticexchange.com/en/index.html",
+    },
+    {
+      title: t("bunkerSupply.marketIndices.providers.cepsaMoeve.title"),
+      description: t(
+        "bunkerSupply.marketIndices.providers.cepsaMoeve.description"
+      ),
+      images: [
+        {
+          src: "/img/bunker-supply/cepsa.jpg",
+          alt: "CEPSA",
+        },
+        {
+          src: "/img/bunker-supply/moeve.png",
+          alt: "MOEVE",
+        },
+      ],
+      link: "https://rafamoreno.es/rebranding-cepsa-moeve/",
+    },
+    {
+      title: t("bunkerSupply.marketIndices.providers.stabiaOil.title"),
+      description: t(
+        "bunkerSupply.marketIndices.providers.stabiaOil.description"
+      ),
+      image: "/img/bunker-supply/stabia-oil.jpg",
+      link: "http://www.stabiaoil.com/",
+    },
+  ];
+
+  const features1 = [
+    {
+      title: t(
+        "bunkerSupply.experience.globalExperience.features.globalCoverage.title"
+      ),
+      description: t(
+        "bunkerSupply.experience.globalExperience.features.globalCoverage.description"
+      ),
+      icon: <Globe2 className="w-6 h-6 text-primary" />,
+    },
+    {
+      title: t(
+        "bunkerSupply.experience.globalExperience.features.service247.title"
+      ),
+      description: t(
+        "bunkerSupply.experience.globalExperience.features.service247.description"
+      ),
+      icon: <Anchor className="w-6 h-6 text-primary" />,
+    },
+  ];
+
+  const features2 = [
+    {
+      title: t(
+        "bunkerSupply.experience.expertKnowledge.features.expertTeam.title"
+      ),
+      description: t(
+        "bunkerSupply.experience.expertKnowledge.features.expertTeam.description"
+      ),
+      icon: <Users className="w-6 h-6 text-primary" />,
+    },
+    {
+      title: t(
+        "bunkerSupply.experience.expertKnowledge.features.qualityGuarantee.title"
+      ),
+      description: t(
+        "bunkerSupply.experience.expertKnowledge.features.qualityGuarantee.description"
+      ),
+      icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+    },
+  ];
+
+  const services = [
+    {
+      title: t(
+        "bunkerSupply.specializedServices.services.shipSalePurchase.title"
+      ),
+      description: t(
+        "bunkerSupply.specializedServices.services.shipSalePurchase.description"
+      ),
+      icon: <Ship className="w-6 h-6 text-primary" />,
+      link: "/services/ship-broker/sale-purchase",
+    },
+    {
+      title: t("bunkerSupply.specializedServices.services.dryBulk.title"),
+      description: t(
+        "bunkerSupply.specializedServices.services.dryBulk.description"
+      ),
+      icon: <Truck className="w-6 h-6 text-primary" />,
+      link: "/services/ship-broker/dry-bulk",
+    },
+    {
+      title: t("bunkerSupply.specializedServices.services.liquidBulk.title"),
+      description: t(
+        "bunkerSupply.specializedServices.services.liquidBulk.description"
+      ),
+      icon: <BarChart2 className="w-6 h-6 text-primary" />,
+      link: "/services/ship-broker/liquid-bulk",
+    },
+  ];
 
   return (
     <div className="overflow-x-hidden">
@@ -40,17 +157,19 @@ export default function BunkerSupplyPage() {
           >
             <div className="space-y-2 md:space-y-4 mt-8 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                Suministro de Combustible Marino en Menorca
+                {t("bunkerSupply.hero.title")}
               </h1>
               {/* <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
                 Suministramos combustible marino en la isla de Menorca.
               </h2> */}
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                Mediante nuestro partner{" "}
-                <span className="text-primary">Stabia Oil</span> y{" "}
-                <span className="text-primary">CEPSA</span>. Podemos
-                subministrar todo tipo de combustible marino en la isla de
-                Menorca.
+                <Trans i18nKey="bunkerSupply.hero.subtitle">
+                  Mediante nuestro partner{" "}
+                  <span className="text-primary">Stabia Oil</span> y{" "}
+                  <span className="text-primary">CEPSA</span>. Podemos
+                  subministrar todo tipo de combustible marino en la isla de
+                  Menorca.
+                </Trans>
               </h2>
             </div>
           </motion.div>
@@ -76,21 +195,19 @@ export default function BunkerSupplyPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-4 sm:p-6">
               <h3 className="text-white text-lg sm:text-xl font-montserrat mb-2">
-                Daily Position
+                {t("bunkerSupply.dailyPosition.title")}
               </h3>
               <p className="text-white/80 text-xs sm:text-sm">
-                Actualizado diariamente
+                {t("bunkerSupply.dailyPosition.updateStatus")}
               </p>
             </div>
           </div>
           <div className="space-y-4 sm:space-y-6">
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
-              Menorca Brokers - Daily Position
+              {t("bunkerSupply.dailyPosition.sectionTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-700">
-              A continuación, puedes descargarte nuestro daily, consultar
-              nuestro contrato tipo y consultar las navieras españolas en
-              activo.
+              {t("bunkerSupply.dailyPosition.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
@@ -101,7 +218,7 @@ export default function BunkerSupplyPage() {
               >
                 <div className="flex items-center justify-center gap-2">
                   <Download className="w-4 h-4" />
-                  Descargar Daily Position
+                  {t("bunkerSupply.dailyPosition.downloadButton")}
                 </div>
               </Button>
               {/* <Button
@@ -127,17 +244,16 @@ export default function BunkerSupplyPage() {
       >
         <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] ">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-8 text-center">
-            Nuestros índices y proveedores del mercado marítimo
+            {t("bunkerSupply.marketIndices.title")}
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Obtenemos los últimos precios usando los datos proporcionados por
-            nuestros partners.
+            {t("bunkerSupply.marketIndices.subtitle")}
           </p>
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {marketIndices.map((item, index) => (
               <Tooltip.Floating
-                label="Visitar página web"
+                label={t("bunkerSupply.marketIndices.tooltip")}
                 position="right"
                 key={item.title}
               >
@@ -202,7 +318,7 @@ export default function BunkerSupplyPage() {
         className="mb-12 sm:mb-16 md:mb-20 mx-auto px-4 sm:px-6 max-w-[1400px]"
       >
         <h3 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-primary mb-6 sm:mb-8 text-center">
-          Servicios Especializados
+          {t("bunkerSupply.specializedServices.title")}{" "}
         </h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
@@ -243,11 +359,10 @@ export default function BunkerSupplyPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
-              Nuestra Experiencia
+              {t("bunkerSupply.experience.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Más de una década de experiencia en el sector marítimo nos
-              respalda
+              {t("bunkerSupply.experience.subtitle")}
             </p>
           </motion.div>
 
@@ -261,13 +376,11 @@ export default function BunkerSupplyPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="font-montserrat text-2xl text-primary">
-                  Experiencia Global
+                  {t("bunkerSupply.experience.globalExperience.title")}
                 </h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                En Menorca Brokers, somos especialistas en conectar armadores y
-                fletadores, ofreciendo soluciones integrales para la compra,
-                venta y alquiler de buques o charter por tiempo.
+                {t("bunkerSupply.experience.globalExperience.description")}
               </p>
               <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {features1.map((feature, index) => (
@@ -301,13 +414,11 @@ export default function BunkerSupplyPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="font-montserrat text-2xl text-primary">
-                  Conocimiento Experto
+                  {t("bunkerSupply.experience.expertKnowledge.title")}
                 </h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Combinamos un profundo conocimiento del sector marítimo con una
-                red global de contactos, lo que nos permite garantizar acuerdos
-                eficientes y personalizados.
+                {t("bunkerSupply.experience.expertKnowledge.description")}
               </p>
               <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {features2.map((feature, index) => (
@@ -343,18 +454,17 @@ export default function BunkerSupplyPage() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-8 sm:p-8 md:py-20 text-center"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4 max-w-[1400px] lg:mx-auto">
-          ¿Buscas un Ship Broker?
+          {t("bunkerSupply.cta.title")}¿Buscas un Ship Broker?
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto">
-          Contáctanos para cerrar fixtures o saber más sobre nuestros servicios.
-          Nuestro equipo está listo para ayudarte.
+          {t("bunkerSupply.cta.description")}
         </p>
         <Button
           onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
-          Contactar Ahora
+          {t("bunkerSupply.cta.button")}
         </Button>
       </motion.div>
       <ContactModal
@@ -371,91 +481,3 @@ export default function BunkerSupplyPage() {
 //   { value: "50+", label: "Socios Globales" },
 //   { value: "24/7", label: "Soporte Disponible" },
 // ];
-
-const marketIndices = [
-  {
-    title: "Shipandbunker",
-    description:
-      "Consulta los precios del mercado de combustibles marinos en los principales puertos del mundo.",
-    image: "/img/bunker-supply/ship-bunker.png",
-    link: "https://shipandbunker.com/prices",
-  },
-  {
-    title: "Baltic Exchange",
-    description:
-      "Consulta el mercado de la carga actualizado a diario con el Baltic Exchange.",
-    image: "/img/bunker-supply/baltic-exchange.png",
-    link: "https://www.balticexchange.com/en/index.html",
-  },
-  {
-    title: "CEPSA & MOEVE",
-    description: "Cargamos combustible CEPSA - MOEVE",
-    images: [
-      {
-        src: "/img/bunker-supply/cepsa.jpg",
-        alt: "CEPSA",
-      },
-      {
-        src: "/img/bunker-supply/moeve.png",
-        alt: "MOEVE",
-      },
-    ],
-    link: "https://rafamoreno.es/rebranding-cepsa-moeve/",
-  },
-  {
-    title: "STABIAOIL",
-    description: "STABIAOIL es nuestro proveedor de servicios.",
-    image: "/img/bunker-supply/stabia-oil.jpg",
-    link: "http://www.stabiaoil.com/",
-  },
-];
-
-export const features1 = [
-  {
-    title: "Cobertura Global",
-    description: "Operaciones en los principales puertos internacionales",
-    icon: <Globe2 className="w-6 h-6 text-primary" />,
-  },
-  {
-    title: "Servicio 24/7",
-    description: "Soporte continuo para todas tus necesidades",
-    icon: <Anchor className="w-6 h-6 text-primary" />,
-  },
-];
-
-export const features2 = [
-  {
-    title: "Equipo Experto",
-    description: "Profesionales altamente cualificados",
-    icon: <Users className="w-6 h-6 text-primary" />,
-  },
-  {
-    title: "Garantía de Calidad",
-    description: "Cumplimiento de estándares internacionales",
-    icon: <ShieldCheck className="w-6 h-6 text-primary" />,
-  },
-];
-
-const services = [
-  {
-    title: "Ship Sale & Purchase",
-    description:
-      "Desde buques de carga hasta yates de lujo, te guiamos en cada paso del proceso, asegurándonos de que cada operación sea fluida, rentable y satisfactoria.",
-    icon: <Ship className="w-6 h-6 text-primary" />,
-    link: "/services/ship-broker/sale-purchase",
-  },
-  {
-    title: "Dry Bulk Cargo",
-    description:
-      "Especialistas certificados por el Institute of Chartered Shipbrokers en el manejo y gestión de cargas secas a granel.",
-    icon: <Truck className="w-6 h-6 text-primary" />,
-    link: "/services/ship-broker/dry-bulk",
-  },
-  {
-    title: "Liquid Bulk Cargo",
-    description:
-      "Expertos en el transporte de cargas líquidas a granel, ofreciendo soluciones especializadas y seguras para cada tipo de carga.",
-    icon: <BarChart2 className="w-6 h-6 text-primary" />,
-    link: "/services/ship-broker/liquid-bulk",
-  },
-];

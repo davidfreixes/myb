@@ -269,6 +269,272 @@
       "button": "Contact an Expert"
     }
   },
+  "inspections": {
+    "hero": {
+      "title": "Boat Inspections and Valuations in Menorca",
+      "subtitle": "Specialized <2>inspection</2> and <2>appraisal</2> maritime services for buyers and sellers"
+    },
+    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <2>inspections</2> and <2>marine appraisals</2>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Maritime Inspections",
+        "description": "Maritime inspections are fundamental for evaluating the condition and safety of any vessel. We follow rigorous technical procedures with international standards.",
+        "process": {
+          "title": "How do we conduct inspections?",
+          "items": [
+            "Detailed hull review",
+            "Mechanical, electrical, and safety systems",
+            "Sea trial",
+            "SOLAS and IMO certification verification"
+          ]
+        },
+        "conventions": {
+          "title": "International Conventions",
+          "description": "We work in compliance with Lloyd's Register, ensuring accurate and reliable assessment."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Maritime Valuations",
+        "description": "We perform precise and up-to-date valuations based on our experience and current market trends.",
+        "factors": {
+          "title": "Valuation Factors",
+          "items": [
+            "Year of manufacture and model",
+            "Engine and systems condition",
+            "Hull condition and safety systems",
+            "Additional equipment and customization",
+            "Market situation"
+          ]
+        },
+        "types": {
+          "title": "Types of Valuations",
+          "items": [
+            "Purchase or Sale Valuations",
+            "Insurance Valuations",
+            "Detailed Condition Reports"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "We take pride in offering a complete and professional maritime inspection and valuation service. Our team of experts is available to guide you through every step of the process, ensuring you make informed and safe decisions when buying, selling, or insuring your yacht."
+    },
+    "cta": {
+      "title": "Need an Inspection or Valuation in Menorca?",
+      "description": "If you would like more information about our inspections or valuations, or to request our services, don't hesitate to contact us directly through the form on our contact page or call us at the number provided.",
+      "button": "Contact Us"
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Marine Fuel Supply in Menorca",
+      "subtitle": "Through our partner <2>Stabia Oil</2> and <2>CEPSA</2>. We can supply all types of marine fuel on the island of Menorca."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Updated daily",
+      "sectionTitle": "Menorca Brokers - Daily Position",
+      "description": "Below, you can download our daily, consult our standard contract and check active Spanish shipping companies.",
+      "downloadButton": "Download Daily Position"
+    },
+    "marketIndices": {
+      "title": "Our Maritime Market Indices and Providers",
+      "subtitle": "We obtain the latest prices using data provided by our partners.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Check marine fuel market prices in major ports worldwide."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Check the cargo market updated daily with the Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "We load CEPSA - MOEVE fuel"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL is our service provider."
+        }
+      },
+      "tooltip": "Visit website"
+    },
+    "specializedServices": {
+      "title": "Specialized Services",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Ship Sale & Purchase",
+          "description": "From cargo vessels to luxury yachts, we guide you through every step of the process, ensuring each operation is smooth, profitable, and satisfactory."
+        },
+        "dryBulk": {
+          "title": "Dry Bulk Cargo",
+          "description": "Specialists certified by the Institute of Chartered Shipbrokers in handling and managing dry bulk cargo."
+        },
+        "liquidBulk": {
+          "title": "Liquid Bulk Cargo",
+          "description": "Experts in bulk liquid cargo transportation, offering specialized and safe solutions for each type of cargo."
+        }
+      }
+    },
+    "experience": {
+      "title": "Our Experience",
+      "subtitle": "More than a decade of experience in the maritime sector backs us",
+      "globalExperience": {
+        "title": "Global Experience",
+        "description": "At Menorca Brokers, we specialize in connecting shipowners and charterers, offering comprehensive solutions for the purchase, sale, and charter of vessels.",
+        "features": {
+          "globalCoverage": {
+            "title": "Global Coverage",
+            "description": "Operations in major international ports"
+          },
+          "service247": {
+            "title": "24/7 Service",
+            "description": "Continuous support for all your needs"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Expert Knowledge",
+        "description": "We combine deep maritime industry knowledge with a global network of contacts, allowing us to ensure efficient and personalized agreements.",
+        "features": {
+          "expertTeam": {
+            "title": "Expert Team",
+            "description": "Highly qualified professionals"
+          },
+          "qualityGuarantee": {
+            "title": "Quality Guarantee",
+            "description": "Compliance with international standards"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Looking for a Ship Broker?",
+      "description": "Contact us to close fixtures or learn more about our services. Our team is ready to help you.",
+      "button": "Contact Now"
+    }
+  },
+  "logistics": {
+    "hero": {
+      "title": "Maritime Logistics in Menorca | Cargo and Customized Services",
+      "subtitle": {
+        "question": "Want to import or export any type of cargo?",
+        "answer": "We'll manage it for you!"
+      }
+    },
+    "intro": {
+      "text": "At Menorca Yacht Brokers, we offer a complete and personalized logistics service for importing and exporting any type of cargo. From general merchandise to specialized shipments, we manage every step of the process with precision and professionalism."
+    },
+    "doorToDoor": {
+      "title": "\"Door to Door\" Logistics Services",
+      "services": {
+        "pickup": {
+          "title": "Origin Pickup",
+          "description": "We coordinate initial ground transportation to ensure your cargo begins its journey efficiently."
+        },
+        "documentation": {
+          "title": "Documentation Management",
+          "description": "We ensure all permits and customs procedures are in order for a smooth process."
+        },
+        "international": {
+          "title": "International Transport",
+          "description": "We offer efficient solutions by sea, land, or air adapted to your specific needs."
+        },
+        "delivery": {
+          "title": "Destination Delivery",
+          "description": "We deliver your cargo directly to your customer's door, ensuring timely and secure delivery."
+        }
+      }
+    },
+    "incoterms": {
+      "title": "Incoterms: Your Transport, Your Rules",
+      "terms": {
+        "exw": {
+          "title": "EXW (Ex Works)",
+          "description": "We coordinate all transport from origin to destination."
+        },
+        "fob": {
+          "title": "FOB (Free On Board)",
+          "description": "We supervise loading at the port of origin."
+        },
+        "cif": {
+          "title": "CIF (Cost, Insurance, and Freight)",
+          "description": "We ensure the protection of your merchandise."
+        },
+        "dap": {
+          "title": "DAP (Delivered at Place)",
+          "description": "We deliver directly to the agreed location."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers?",
+      "reasons": {
+        "globalCoverage": {
+          "title": "Global Coverage",
+          "description": "A network of strategic partners that allows us to operate worldwide."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "We are available to resolve any incidents during transport."
+        },
+        "costOptimization": {
+          "title": "Cost Optimization",
+          "description": "We design logistics solutions that fit your budget and needs."
+        },
+        "personalizedAttention": {
+          "title": "Personalized Attention",
+          "description": "We adapt each shipment to the specific characteristics of your cargo."
+        }
+      }
+    },
+    "cta": {
+      "title": "Need a customized logistics solution?",
+      "description": "Contact us to design a logistics solution tailored to you",
+      "button": "Contact"
+    }
+  },
+  "nauticalConsulting": {
+    "hero": {
+      "title": "Maritime and Nautical Consulting: Experts at Your Service",
+      "subtitle": {
+        "text": "Comprehensive solutions and",
+        "highlight": "specialized advice",
+        "text2": "for the maritime and nautical sector in Menorca"
+      }
+    },
+    "intro": {
+      "description": "At Menorca Yacht Brokers, we offer comprehensive maritime and nautical consulting services designed to help you make strategic decisions in the maritime world. Our experience and technical knowledge make us the ideal partner to solve any challenge related to the naval industry and maritime transport."
+    },
+    "services": {
+      "technicalConsulting": {
+        "title": "Technical Consulting",
+        "description": "We evaluate and recommend customized solutions to optimize your maritime operations, from vessel purchase to advanced technology implementation."
+      },
+      "legalAssistance": {
+        "title": "Legal and Regulatory Assistance",
+        "description": "We guide you in compliance with international regulations, such as the SOLAS Convention, IMDG Code, and local regulations."
+      },
+      "feasibilityAnalysis": {
+        "title": "Feasibility Analysis",
+        "description": "We conduct economic and technical studies for new maritime projects, ensuring that each decision is based on solid data."
+      },
+      "vesselValuation": {
+        "title": "Vessel Valuation",
+        "description": "We offer precise and objective appraisals for buying, selling, renting, or financing yachts and commercial vessels."
+      },
+      "routePlanning": {
+        "title": "Route Planning and Logistics",
+        "description": "We design strategies to optimize time and costs in your maritime transport operations."
+      }
+    },
+    "cta": {
+      "title": "Need professional nautical advice?",
+      "description": "Contact our team of experts for a personalized consultation",
+      "button": "Contact Us"
+    }
+  },
   "valueAddedServices": {
     "hero": {
       "title": "Value-Added Services | More Than Chartering in Menorca",

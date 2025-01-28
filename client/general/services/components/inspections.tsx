@@ -1,11 +1,13 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactModal from "../../contact/modal/contactModal";
 import { useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import ContactModal from "../../contact/modal/contactModal";
 
 export default function Inspections() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -28,13 +30,15 @@ export default function Inspections() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
-                Inspecciones y Tasaciones de Barcos en Menorca
+                {t("inspections.hero.title")}
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
-                Servicios especializados de{" "}
-                <span className="text-primary">inspección</span> y{" "}
-                <span className="text-primary">tasación</span> marítima para
-                compradores y vendedores
+                <Trans i18nKey="inspections.hero.subtitle">
+                  Servicios especializados de{" "}
+                  <span className="text-primary">inspección</span> y{" "}
+                  <span className="text-primary">tasación</span> marítima para
+                  compradores y vendedores
+                </Trans>
               </h2>
             </div>
           </motion.div>
@@ -50,12 +54,15 @@ export default function Inspections() {
           className="prose prose-lg max-w-none"
         >
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-12">
-            En Menorca Yacht Brokers, contamos con una experiencia sólida en la
-            realización de <span className="text-primary">inspecciones</span> y{" "}
-            <span className="text-primary">tasaciones marítimas</span>. Como
-            parte de nuestro compromiso con la calidad y la transparencia,
-            ofrecemos servicios especializados tanto para compradores como para
-            vendedores de yates y embarcaciones.
+            <Trans i18nKey="inspections.intro">
+              En Menorca Yacht Brokers, contamos con una experiencia sólida en
+              la realización de{" "}
+              <span className="text-primary">inspecciones</span> y{" "}
+              <span className="text-primary">tasaciones marítimas</span>. Como
+              parte de nuestro compromiso con la calidad y la transparencia,
+              ofrecemos servicios especializados tanto para compradores como
+              para vendedores de yates y embarcaciones.
+            </Trans>
           </p>
 
           {/* Services Grid */}
@@ -67,33 +74,51 @@ export default function Inspections() {
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
               <h2 className="text-3xl text-primary font-montserrat mb-4">
-                Inspecciones Marítimas
+                {t("inspections.services.maritimeInspections.title")}
               </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
-                  Las inspecciones marítimas son fundamentales para evaluar el
-                  estado y la seguridad de cualquier embarcación. Seguimos
-                  rigurosos procedimientos técnicos con estándares
-                  internacionales.
+                  {t("inspections.services.maritimeInspections.description")}
                 </p>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    ¿Cómo realizamos las inspecciones?
+                    {t(
+                      "inspections.services.maritimeInspections.process.title"
+                    )}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>Revisión detallada del casco</li>
-                    <li>Sistemas mecánicos, eléctricos y de seguridad</li>
-                    <li>Prueba de navegación</li>
-                    <li>Verificación de certificaciones SOLAS e IMO</li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeInspections.process.items.0"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeInspections.process.items.1"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeInspections.process.items.2"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeInspections.process.items.3"
+                      )}
+                    </li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    Convenios Internacionales
+                    {t(
+                      "inspections.services.maritimeInspections.conventions.title"
+                    )}
                   </h4>
                   <p className="text-gray-700">
-                    Trabajamos en cumplimiento con Lloyd&apos;s Register,
-                    garantizando una evaluación precisa y confiable.
+                    {t(
+                      "inspections.services.maritimeInspections.conventions.description"
+                    )}
                   </p>
                 </div>
               </div>
@@ -106,33 +131,64 @@ export default function Inspections() {
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
               <h2 className="text-3xl text-primary font-montserrat mb-4">
-                Tasaciones Marítimas
+                {t("inspections.services.maritimeValuations.title")}
               </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
-                  Realizamos tasaciones precisas y actualizadas basadas en
-                  nuestra experiencia y en las tendencias actuales del mercado.
+                  {t("inspections.services.maritimeValuations.description")}
                 </p>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    Factores de Tasación
+                    {t("inspections.services.maritimeValuations.factors.title")}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>Año de fabricación y modelo</li>
-                    <li>Condiciones del motor y sistemas</li>
-                    <li>Estado del casco y sistemas de seguridad</li>
-                    <li>Equipamiento adicional y personalización</li>
-                    <li>Situación del mercado</li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.factors.items.0"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.factors.items.1"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.factors.items.2"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.factors.items.3"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.factors.items.4"
+                      )}
+                    </li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    Tipos de Valoraciones
+                    {t("inspections.services.maritimeValuations.types.title")}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>Valoraciones para Compra o Venta</li>
-                    <li>Valoraciones para Seguros</li>
-                    <li>Informes Detallados de Estado</li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.types.items.0"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.types.items.1"
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "inspections.services.maritimeValuations.types.items.2"
+                      )}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -140,11 +196,7 @@ export default function Inspections() {
           </div>
 
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-8">
-            Nos enorgullece ofrecer un servicio completo y profesional de
-            inspecciones y tasaciones marítimas. Nuestro equipo de expertos está
-            disponible para asesorarte en cada paso del proceso, garantizando
-            que tomes decisiones informadas y seguras al comprar, vender o
-            asegurar tu yate.
+            {t("inspections.outro.description")}
           </p>
         </motion.div>
       </div>
@@ -158,20 +210,17 @@ export default function Inspections() {
       >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
-            ¿Necesitas una Inspección o Tasación en Menorca?
+            {t("inspections.cta.title")}
           </h2>
           <p className="text-lg text-gray-700 mb-6">
-            Si deseas obtener más información sobre nuestras inspecciones o
-            tasaciones, o para solicitar nuestros servicios, no dudes en
-            contactarnos directamente a través del formulario en nuestra página
-            de contacto o llamarnos al número indicado.
+            {t("inspections.cta.description")}
           </p>
           <Button
             onClick={() => setContactModalOpened(true)}
             unstyled
             className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
           >
-            Contactar
+            {t("inspections.cta.button")}
           </Button>
         </div>
       </motion.div>

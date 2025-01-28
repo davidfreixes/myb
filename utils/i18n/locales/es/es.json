@@ -269,6 +269,272 @@
       "button": "Contactar con un experto"
     }
   },
+  "inspections": {
+    "hero": {
+      "title": "Inspecciones y Tasaciones de Barcos en Menorca",
+      "subtitle": "Servicios especializados de <2>inspección</2> y <2>tasación</2> marítima para compradores y vendedores"
+    },
+    "intro": "En Menorca Yacht Brokers, contamos con una experiencia sólida en la realización de <2>inspecciones</2> y <2>tasaciones marítimas</2>. Como parte de nuestro compromiso con la calidad y la transparencia, ofrecemos servicios especializados tanto para compradores comopara vendedores de yates y embarcaciones.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Inspecciones Marítimas",
+        "description": "Las inspecciones marítimas son fundamentales para evaluar el estado y la seguridad de cualquier embarcación. Seguimos rigurosos procedimientos técnicos con estándares internacionales.",
+        "process": {
+          "title": "¿Cómo realizamos las inspecciones?",
+          "items": [
+            "Revisión detallada del casco",
+            "Sistemas mecánicos, eléctricos y de seguridad",
+            "Prueba de navegación",
+            "Verificación de certificaciones SOLAS e IMO"
+          ]
+        },
+        "conventions": {
+          "title": "Convenios Internacionales",
+          "description": "Trabajamos en cumplimiento con Lloyd's Register, garantizando una evaluación precisa y confiable."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Tasaciones Marítimas",
+        "description": "Realizamos tasaciones precisas y actualizadas basadas en nuestra experiencia y en las tendencias actuales del mercado.",
+        "factors": {
+          "title": "Factores de Tasación",
+          "items": [
+            "Año de fabricación y modelo",
+            "Condiciones del motor y sistemas",
+            "Estado del casco y sistemas de seguridad",
+            "Equipamiento adicional y personalización",
+            "Situación del mercado"
+          ]
+        },
+        "types": {
+          "title": "Tipos de Valoraciones",
+          "items": [
+            "Valoraciones para Compra o Venta",
+            "Valoraciones para Seguros",
+            "Informes Detallados de Estado"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "Nos enorgullece ofrecer un servicio completo y profesional de inspecciones y tasaciones marítimas. Nuestro equipo de expertos está disponible para asesorarte en cada paso del proceso, garantizando que tomes decisiones informadas y seguras al comprar, vender o asegurar tu yate."
+    },
+    "cta": {
+      "title": "¿Necesitas una Inspección o Tasación en Menorca?",
+      "description": "Si deseas obtener más información sobre nuestras inspecciones o tasaciones, o para solicitar nuestros servicios, no dudes en contactarnos directamente a través del formulario en nuestra página de contacto o llamarnos al número indicado.",
+      "button": "Contactar"
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Suministro de Combustible Marino en Menorca",
+      "subtitle": "Mediante nuestro partner <2>Stabia Oil</2> y <2>CEPSA</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Actualizado diariamente",
+      "sectionTitle": "Menorca Brokers - Daily Position",
+      "description": "A continuación, puedes descargarte nuestro daily, consultar nuestro contrato tipo y consultar las navieras españolas en activo.",
+      "downloadButton": "Descargar Daily Position"
+    },
+    "marketIndices": {
+      "title": "Nuestros índices y proveedores del mercado marítimo",
+      "subtitle": "Obtenemos los últimos precios usando los datos proporcionados por nuestros partners.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Consulta los precios del mercado de combustibles marinos en los principales puertos del mundo."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Consulta el mercado de la carga actualizado a diario con el Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "Cargamos combustible CEPSA - MOEVE"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL es nuestro proveedor de servicios."
+        }
+      },
+      "tooltip": "Visitar página web"
+    },
+    "specializedServices": {
+      "title": "Servicios Especializados",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Ship Sale & Purchase",
+          "description": "Desde buques de carga hasta yates de lujo, te guiamos en cada paso del proceso, asegurándonos de que cada operación sea fluida, rentable y satisfactoria."
+        },
+        "dryBulk": {
+          "title": "Dry Bulk Cargo",
+          "description": "Especialistas certificados por el Institute of Chartered Shipbrokers en el manejo y gestión de cargas secas a granel."
+        },
+        "liquidBulk": {
+          "title": "Liquid Bulk Cargo",
+          "description": "Expertos en el transporte de cargas líquidas a granel, ofreciendo soluciones especializadas y seguras para cada tipo de carga."
+        }
+      }
+    },
+    "experience": {
+      "title": "Nuestra Experiencia",
+      "subtitle": "Más de una década de experiencia en el sector marítimo nos respalda",
+      "globalExperience": {
+        "title": "Experiencia Global",
+        "description": "En Menorca Brokers, somos especialistas en conectar armadores y fletadores, ofreciendo soluciones integrales para la compra, venta y alquiler de buques o charter por tiempo.",
+        "features": {
+          "globalCoverage": {
+            "title": "Cobertura Global",
+            "description": "Operaciones en los principales puertos internacionales"
+          },
+          "service247": {
+            "title": "Servicio 24/7",
+            "description": "Soporte continuo para todas tus necesidades"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Conocimiento Experto",
+        "description": "Combinamos un profundo conocimiento del sector marítimo con una red global de contactos, lo que nos permite garantizar acuerdos eficientes y personalizados.",
+        "features": {
+          "expertTeam": {
+            "title": "Equipo Experto",
+            "description": "Profesionales altamente cualificados"
+          },
+          "qualityGuarantee": {
+            "title": "Garantía de Calidad",
+            "description": "Cumplimiento de estándares internacionales"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Buscas un Ship Broker?",
+      "description": "Contáctanos para cerrar fixtures o saber más sobre nuestros servicios. Nuestro equipo está listo para ayudarte.",
+      "button": "Contactar Ahora"
+    }
+  },
+  "logistics": {
+    "hero": {
+      "title": "Logística Marítima en Menorca | Cargo y Servicios Personalizados",
+      "subtitle": {
+        "question": "¿Quieres importar o exportar cualquier tipo de carga?",
+        "answer": "¡Nosotros te lo gestionamos!"
+      }
+    },
+    "intro": {
+      "text": "En Menorca Yacht Brokers, ofrecemos un servicio logístico completo y personalizado para la importación y exportación de cualquier tipo de carga. Desde mercancías generales hasta envíos especializados, gestionamos cada paso del proceso con precisión y profesionalismo."
+    },
+    "doorToDoor": {
+      "title": "Servicios de Logística \"Door to Door\"",
+      "services": {
+        "pickup": {
+          "title": "Recogida en origen",
+          "description": "Coordinamos el transporte terrestre inicial para asegurar que tu carga comience su viaje de manera eficiente."
+        },
+        "documentation": {
+          "title": "Gestión de documentos",
+          "description": "Garantizamos que todos los permisos y trámites aduaneros estén en regla para un proceso sin contratiempos."
+        },
+        "international": {
+          "title": "Transporte internacional",
+          "description": "Ofrecemos soluciones eficientes por mar, tierra o aire adaptadas a tus necesidades específicas."
+        },
+        "delivery": {
+          "title": "Entrega en destino",
+          "description": "Llevamos tu carga directamente a la puerta de tu cliente, garantizando una entrega puntual y segura."
+        }
+      }
+    },
+    "incoterms": {
+      "title": "Incoterms: Tu Transporte, Tus Reglas",
+      "terms": {
+        "exw": {
+          "title": "EXW (Ex Works)",
+          "description": "Coordinamos todo el transporte desde el origen hasta el destino."
+        },
+        "fob": {
+          "title": "FOB (Free On Board)",
+          "description": "Supervisamos la carga en el puerto de origen."
+        },
+        "cif": {
+          "title": "CIF (Cost, Insurance, and Freight)",
+          "description": "Aseguramos la protección de tu mercancía."
+        },
+        "dap": {
+          "title": "DAP (Delivered at Place)",
+          "description": "Entregamos directamente en la ubicación acordada."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "¿Por Qué Elegir Menorca Brokers?",
+      "reasons": {
+        "globalCoverage": {
+          "title": "Cobertura global",
+          "description": "Una red de socios estratégicos que nos permite operar en todo el mundo."
+        },
+        "support": {
+          "title": "Soporte 24/7",
+          "description": "Estamos disponibles para resolver cualquier incidencia durante el transporte."
+        },
+        "costOptimization": {
+          "title": "Optimización de costos",
+          "description": "Diseñamos soluciones logísticas que se ajustan a tu presupuesto y necesidades."
+        },
+        "personalizedAttention": {
+          "title": "Atención personalizada",
+          "description": "Adaptamos cada envío a las características específicas de tu carga."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas una solución logística personalizada?",
+      "description": "Contáctanos para diseñar una solución logística hecha a medida para ti",
+      "button": "Contactar"
+    }
+  },
+  "nauticalConsulting": {
+    "hero": {
+      "title": "Asesoría Marítima y Náutica: Expertos a Tu Servicio",
+      "subtitle": {
+        "text": "Soluciones integrales y",
+        "highlight": "asesoramiento especializado",
+        "text2": "para el sector marítimo y náutico en Menorca"
+      }
+    },
+    "intro": {
+      "description": "En Menorca Yacht Brokers, ofrecemos un servicio integral de asesoría marítima y náutica diseñado para ayudarte a tomar decisiones estratégicas en el mundo marítimo. Nuestra experiencia y conocimiento técnico nos convierten en el socio ideal para resolver cualquier desafío relacionado con la industria naval y el transporte marítimo."
+    },
+    "services": {
+      "technicalConsulting": {
+        "title": "Consultoría Técnica",
+        "description": "Evaluamos y recomendamos soluciones personalizadas para optimizar tus operaciones marítimas, desde la compra de embarcaciones hasta la implementación de tecnologías avanzadas."
+      },
+      "legalAssistance": {
+        "title": "Asistencia Legal y Reglamentaria",
+        "description": "Te guiamos en el cumplimiento de normativas internacionales, como el Convenio SOLAS, el Código IMDG, y regulaciones locales."
+      },
+      "feasibilityAnalysis": {
+        "title": "Análisis de Viabilidad",
+        "description": "Realizamos estudios económicos y técnicos para nuevos proyectos marítimos, asegurando que cada decisión esté basada en datos sólidos."
+      },
+      "vesselValuation": {
+        "title": "Valoración de Embarcaciones",
+        "description": "Ofrecemos tasaciones precisas y objetivas para compraventa, alquiler o financiación de yates y barcos comerciales."
+      },
+      "routePlanning": {
+        "title": "Planificación de Rutas y Logística",
+        "description": "Diseñamos estrategias para optimizar el tiempo y costos en tus operaciones de transporte marítimo."
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas asesoramiento náutico profesional?",
+      "description": "Contacta con nuestro equipo de expertos para una consulta personalizada",
+      "button": "Contactar"
+    }
+  },
   "valueAddedServices": {
     "hero": {
       "title": "Servicios de Valor Añadido | Más que Chartering en Menorca",
