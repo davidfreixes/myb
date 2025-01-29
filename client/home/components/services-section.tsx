@@ -46,7 +46,7 @@ export default function ServicesSection() {
           {t("mainPage.servicesSection.services.2.description.parte2")}
         </>
       ),
-      image: "/img/ship-broker.jpg",
+      image: "/img/bunker-supply.jpg",
       link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
     },
     {

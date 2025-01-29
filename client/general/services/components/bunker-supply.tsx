@@ -115,7 +115,6 @@ export default function BunkerSupplyPage() {
         "bunkerSupply.specializedServices.services.shipSalePurchase.description"
       ),
       icon: <Ship className="w-6 h-6 text-primary" />,
-      link: "/services/ship-broker/sale-purchase",
     },
     {
       title: t("bunkerSupply.specializedServices.services.dryBulk.title"),
@@ -123,7 +122,6 @@ export default function BunkerSupplyPage() {
         "bunkerSupply.specializedServices.services.dryBulk.description"
       ),
       icon: <Truck className="w-6 h-6 text-primary" />,
-      link: "/services/ship-broker/dry-bulk",
     },
     {
       title: t("bunkerSupply.specializedServices.services.liquidBulk.title"),
@@ -131,7 +129,6 @@ export default function BunkerSupplyPage() {
         "bunkerSupply.specializedServices.services.liquidBulk.description"
       ),
       icon: <BarChart2 className="w-6 h-6 text-primary" />,
-      link: "/services/ship-broker/liquid-bulk",
     },
   ];
 
@@ -316,7 +313,7 @@ export default function BunkerSupplyPage() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-12 sm:mb-16 md:mb-20 mx-auto px-4 sm:px-6 max-w-[1400px]"
       >
-        <h3 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-primary mb-6 sm:mb-8 text-center">
+        <h3 className="font-montserrat text-xl sm:text-2xl md:text-4xl text-primary mb-6 sm:mb-8 text-center">
           {t("bunkerSupply.specializedServices.title")}{" "}
         </h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -453,7 +450,7 @@ export default function BunkerSupplyPage() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-8 sm:p-8 md:py-20 text-center"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4 max-w-[1400px] lg:mx-auto">
-          {t("bunkerSupply.cta.title")}¿Buscas un Ship Broker?
+          {t("bunkerSupply.cta.title")}
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto">
           {t("bunkerSupply.cta.description")}
