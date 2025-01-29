@@ -238,13 +238,13 @@ export default function YachtBroker() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl space-y-4 w-full"
+            className="space-y-4 w-full"
           >
-            <div className="space-y-3 sm:space-y-4">
-              <h1 className="font-montserrat text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
+            <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
                 {t("yachtBroker.hero.title")}
               </h1>
-              <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white">
+              <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl ">
                 <Trans i18nKey="yachtBroker.hero.subtitle">
                   Especialistas en <span className="text-primary">compra</span>{" "}
                   y <span className="text-primary">venta</span> de yates en

@@ -78,8 +78,8 @@ export default function YachtCharter() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <div className="space-y-2 md:space-y-4">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+            <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
+            <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
                 {t("yachtCharter.hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">

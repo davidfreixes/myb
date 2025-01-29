@@ -133,7 +133,7 @@ export default function BunkerSupplyPage() {
   ];
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
@@ -145,13 +145,14 @@ export default function BunkerSupplyPage() {
           objectPosition="bottom"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-4xl"
           >
-            <div className="space-y-2 md:space-y-4 mt-8 md:mt-0">
+            <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
                 {t("bunkerSupply.hero.title")}
               </h1>
