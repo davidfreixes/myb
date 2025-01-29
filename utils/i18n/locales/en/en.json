@@ -960,6 +960,73 @@
       "button": "Contact"
     }
   },
+  "purchaseAndSale": {
+    "hero": {
+      "title": "Yacht Purchase and Sale Contracts",
+      "subtitle": "Information Page: MYBA Contracts at Menorca Brokers"
+    },
+    "introduction": {
+      "title": "What is a MYBA Contract?",
+      "paragraph1": "At Menorca Brokers, we ensure that every yacht transaction is conducted under the highest industry standards. To guarantee transparency, security, and trust, we use MYBA Contracts, one of the most recognized and accepted contractual forms in the yacht rental and sale world.",
+      "paragraph2": "The MYBA (Mediterranean Yacht Brokers Association) contract is a standard document that regulates the terms and conditions of yacht-related transactions, such as rentals and sales. This contract clearly establishes the rights and obligations of both the owner and the client, minimizing risks and potential misunderstandings."
+    },
+    "benefits": {
+      "title": "Main Benefits",
+      "items": [
+        {
+          "title": "Clarity and transparency",
+          "description": "Terms and conditions are clearly defined."
+        },
+        {
+          "title": "Legal protection",
+          "description": "Guarantees protection for all parties involved in the transaction."
+        },
+        {
+          "title": "Flexibility",
+          "description": "Adapts to various needs, from short-term rentals to complete purchase agreements."
+        },
+        {
+          "title": "International standards",
+          "description": "Globally recognized by brokers, operators, and yacht owners."
+        }
+      ]
+    },
+    "components": {
+      "title": "MYBA Contract Components",
+      "items": [
+        {
+          "title": "Yacht details",
+          "description": "Includes specifications such as name, length, crew, and equipment."
+        },
+        {
+          "title": "Agreement duration and terms",
+          "description": "Specific rental dates or purchase conditions."
+        },
+        {
+          "title": "Cancellation policy",
+          "description": "Establishes conditions in case of force majeure or cancellation."
+        },
+        {
+          "title": "Costs and deposits",
+          "description": "Defines prices, additional fees, and initial payments."
+        },
+        {
+          "title": "Terms of use",
+          "description": "Describes how the yacht will be used and client responsibilities."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers",
+      "paragraph1": "Our industry experience allows us to guide you through every step of the process, ensuring your MYBA contract is tailored to your specific needs. Whether you're looking to rent or purchase a yacht, we work to ensure you enjoy a worry-free experience.",
+      "paragraph2": "Contact us for more information about how MYBA contracts can support your next nautical transaction."
+    },
+    "cta": {
+      "title": "Interested in our services?",
+      "description": "Contact us to discover how we can help you find the perfect yacht for your needs",
+      "button": "Contact now"
+    }
+  },
   "aboutUs": {
     "hero": {
       "title": "Who We Are at Menorca Brokers",
@@ -1058,6 +1125,83 @@
       "jurisdiction": {
         "title": "7. Applicable Law and Jurisdiction",
         "content": "The relationship between Menorca Brokers and the user will be governed by Spanish law. In case of dispute, the parties will submit to the competent courts of Menorca, Balearic Islands, Spain."
+      }
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Privacy Policy"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "1. General Information",
+        "content": "At Menorca Brokers S.L., located at C/ Ramón y Cajal, 45, 07760, Menorca, Balearic Islands, Spain, we are responsible for processing our users' personal data, in accordance with current personal data protection regulations, especially Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (GDPR)."
+      },
+      "personalData": {
+        "title": "2. Personal Data We Collect",
+        "intro": "We collect the following types of personal data when users interact with our website:",
+        "items": [
+          "Identification data (name, surname, email, phone number, address).",
+          "Data related to commercial activity and transactions.",
+          "Information related to web browsing (IP address, cookies, etc.)."
+        ]
+      },
+      "purposes": {
+        "title": "3. Purposes of Processing",
+        "intro": "The personal data we collect will be used for the following purposes:",
+        "items": [
+          "Managing services offered through our website.",
+          "Responding to inquiries and information requests.",
+          "Sending commercial communications related to our services (if the user has consented to it).",
+          "Conducting statistical analysis and improving website browsing experience.",
+          "Complying with legal and tax obligations."
+        ]
+      },
+      "legalBasis": {
+        "title": "4. Legal Basis for Processing",
+        "intro": "The legal basis for processing personal data is:",
+        "items": [
+          "User consent, where necessary.",
+          "Execution of a contract or pre-contractual measures, in case the user has requested any service.",
+          "Compliance with legal obligations by Menorca Brokers S.L.."
+        ]
+      },
+      "dataRecipients": {
+        "title": "5. Data Recipients",
+        "content": "Menorca Brokers S.L. will not transfer personal data to third parties, except where necessary to comply with the law, or if the user has consented to it. However, data may be shared with service providers who help us operate our business, such as web hosting providers or email services."
+      },
+      "internationalTransfers": {
+        "title": "6. International Data Transfers",
+        "content": "If necessary, personal data may be transferred to countries outside the European Economic Area (EEA), in which case appropriate protection measures will be guaranteed in accordance with applicable legislation."
+      },
+      "userRights": {
+        "title": "7. User Rights",
+        "intro": "Users have the right to:",
+        "items": [
+          "Access their personal data.",
+          "Rectify their data if it is incorrect or incomplete.",
+          "Delete their personal data when it is no longer necessary for the purposes for which it was collected.",
+          "Limit the processing of their data in certain circumstances.",
+          "Object to the processing of their data for reasons related to their particular situation.",
+          "Request the portability of their data in a structured and commonly used format."
+        ],
+        "contact": "To exercise these rights, users can contact us via email."
+      },
+      "dataRetention": {
+        "title": "8. Data Retention",
+        "content": "Personal data will be retained for the time necessary to fulfill the purposes for which it was collected and in accordance with the periods established by current legislation."
+      },
+      "dataSecurity": {
+        "title": "9. Data Security",
+        "content": "Menorca Brokers S.L. implements technical and organizational security measures to protect personal data against unauthorized access, alteration, loss, or destruction."
+      },
+      "policyChanges": {
+        "title": "10. Changes to the Privacy Policy",
+        "content": "We reserve the right to modify this Privacy Policy at any time, with any changes being published on this website. We recommend reviewing this policy periodically to stay informed about how we protect your data."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "content": "If you have any questions about our Privacy Policy or about the processing of your personal data, you can contact us."
       }
     }
   }

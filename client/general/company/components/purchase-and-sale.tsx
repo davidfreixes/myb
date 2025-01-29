@@ -14,67 +14,65 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
-
-const benefits = [
-  {
-    title: "Claridad y transparencia",
-    description: "Los términos y condiciones están claramente definidos.",
-    icon: <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Protección legal",
-    description:
-      "Garantiza la protección de todas las partes involucradas en la transacción.",
-    icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Flexibilidad",
-    description:
-      "Se adapta a diversas necesidades, desde alquileres de corta duración hasta acuerdos completos de compraventa.",
-    icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Estándares internacionales",
-    description:
-      "Reconocido globalmente por brokers, operadores y propietarios de yates.",
-    icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-];
-
-const components = [
-  {
-    title: "Detalles del yate",
-    description:
-      "Incluye especificaciones como nombre, eslora, tripulación y equipamiento.",
-    icon: <ClipboardCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Duración y términos del acuerdo",
-    description: "Fechas específicas de alquiler o condiciones de compraventa.",
-    icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Política de cancelaciones",
-    description:
-      "Establece las condiciones en caso de fuerza mayor o cancelación.",
-    icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Costos y depósitos",
-    description: "Define los precios, tarifas adicionales y pagos iniciales.",
-    icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-  {
-    title: "Términos de uso",
-    description:
-      "Describe cómo se utilizará el yate y las responsabilidades del cliente.",
-    icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
-  },
-];
 
 export default function PurchaseAndSale() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const { t } = useTranslation();
+
+  const benefits = [
+    {
+      title: t("purchaseAndSale.benefits.items.0.title"),
+      description: t("purchaseAndSale.benefits.items.0.description"),
+      icon: (
+        <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+      ),
+    },
+    {
+      title: t("purchaseAndSale.benefits.items.1.title"),
+      description: t("purchaseAndSale.benefits.items.1.description"),
+      icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.benefits.items.2.title"),
+      description: t("purchaseAndSale.benefits.items.2.description"),
+      icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.benefits.items.3.title"),
+      description: t("purchaseAndSale.benefits.items.3.description"),
+      icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
+
+  const components = [
+    {
+      title: t("purchaseAndSale.components.items.0.title"),
+      description: t("purchaseAndSale.components.items.0.description"),
+      icon: <ClipboardCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.components.items.1.title"),
+      description: t("purchaseAndSale.components.items.1.description"),
+      icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.components.items.2.title"),
+      description: t("purchaseAndSale.components.items.2.description"),
+      icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.components.items.3.title"),
+      description: t("purchaseAndSale.components.items.3.description"),
+      icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("purchaseAndSale.components.items.4.title"),
+      description: t("purchaseAndSale.components.items.4.description"),
+      icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -96,10 +94,10 @@ export default function PurchaseAndSale() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-4 sm:mb-6">
-              Contratos de Compraventa de Yates
+              {t("purchaseAndSale.hero.title")}
             </h1>
             <p className="text-xl sm:text-2xl text-white">
-              Página Informativa: Contratos MYBA en Menorca Brokers
+              {t("purchaseAndSale.hero.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -114,22 +112,13 @@ export default function PurchaseAndSale() {
       >
         <div className="bg-primary/10 p-4 sm:p-8 rounded-xl border-2 border-primary/20">
           <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4">
-            ¿Qué es un Contrato MYBA?
+            {t("purchaseAndSale.introduction.title")}
           </h2>
           <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-            En Menorca Brokers, nos aseguramos de que cada transacción de yates
-            se realice bajo los más altos estándares de la industria. Para
-            garantizar transparencia, seguridad y confianza, utilizamos los
-            Contratos MYBA, una de las formas contractuales más reconocidas y
-            aceptadas en el mundo del alquiler y la venta de yates.
+            {t("purchaseAndSale.introduction.paragraph1")}
           </p>
           <p className="text-gray-700 text-sm sm:text-base">
-            El contrato MYBA (Mediterranean Yacht Brokers Association) es un
-            documento estándar que regula los términos y condiciones de las
-            transacciones relacionadas con yates, como alquileres y ventas. Este
-            contrato establece de manera clara los derechos y obligaciones tanto
-            del propietario como del cliente, minimizando riesgos y posibles
-            malentendidos.
+            {t("purchaseAndSale.introduction.paragraph2")}
           </p>
         </div>
       </motion.div>
@@ -143,7 +132,7 @@ export default function PurchaseAndSale() {
           className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
-            Principales Beneficios
+            {t("purchaseAndSale.benefits.title")}
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {benefits.map((benefit, index) => (
@@ -179,7 +168,7 @@ export default function PurchaseAndSale() {
         className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6 py-6 sm:py-10"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
-          Componentes del Contrato MYBA
+          {t("purchaseAndSale.components.title")}
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {components.map((component, index) => (
@@ -225,18 +214,13 @@ export default function PurchaseAndSale() {
           >
             <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg border border-gray-100">
               <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
-                Por qué elegir Menorca Brokers
+                {t("purchaseAndSale.whyChooseUs.title")}
               </h2>
               <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-                Nuestra experiencia en el sector nos permite asesorarte en cada
-                paso del proceso, garantizando que tu contrato MYBA esté
-                adaptado a tus necesidades específicas. Ya sea que busques
-                alquilar o adquirir un yate, trabajamos para que disfrutes de
-                una experiencia sin preocupaciones.
+                {t("purchaseAndSale.whyChooseUs.paragraph1")}
               </p>
               <p className="text-gray-700 text-sm sm:text-base">
-                Contacta con nosotros para más información sobre cómo los
-                contratos MYBA pueden respaldar tu próxima transacción náutica.
+                {t("purchaseAndSale.whyChooseUs.paragraph2")}
               </p>
             </div>
           </motion.div>
@@ -252,12 +236,11 @@ export default function PurchaseAndSale() {
           className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center "
         >
           <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
-            ¿Interesado en nuestros servicios?
+            {t("purchaseAndSale.cta.title")}
           </h2>
           <div className=" mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto">
             <Text className="text-sm sm:text-base md:text-lg text-gray-700 ">
-              Contáctanos para descubrir cómo podemos ayudarte a encontrar el
-              yate perfecto para tus necesidades
+              {t("purchaseAndSale.cta.description")}
             </Text>
           </div>
 
@@ -269,7 +252,7 @@ export default function PurchaseAndSale() {
             >
               <div className="flex gap-2 items-center">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                Contactar ahora
+                {t("purchaseAndSale.cta.button")}
               </div>
             </Button>
           </div>
