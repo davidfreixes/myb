@@ -70,9 +70,13 @@ export default function ContactForm() {
 
     // Validación del mensaje
     if (!formData.message.trim()) {
-      newErrors.message = t("contact.contactForm.form.validation.message.required");
+      newErrors.message = t(
+        "contact.contactForm.form.validation.message.required"
+      );
     } else if (formData.message.length < 4) {
-      newErrors.message = t("contact.contactForm.form.validation.message.minLength");
+      newErrors.message = t(
+        "contact.contactForm.form.validation.message.minLength"
+      );
     }
 
     setErrors(newErrors);
@@ -152,7 +156,9 @@ export default function ContactForm() {
       setSubmitStatus({
         type: "error",
         message:
-          error instanceof Error ? error.message : t("contact.contactForm.form.submit.error"),
+          error instanceof Error
+            ? error.message
+            : t("contact.contactForm.form.submit.error"),
       });
     } finally {
       setIsLoading(false);
