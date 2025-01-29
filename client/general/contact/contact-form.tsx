@@ -2,6 +2,7 @@ import { Button, Select, TextInput, Textarea } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Mail, Phone, User } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface FormData {
   type: string;
@@ -20,6 +21,8 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState<FormData>({
     type: "FORMULARIO DE CONTACTO",
     name: "",
@@ -44,32 +47,32 @@ export default function ContactForm() {
 
     // Validación del nombre
     if (!formData.name.trim()) {
-      newErrors.name = "El nombre es requerido";
+      newErrors.name = t("contact.contactForm.form.validation.name.required");
     } else if (formData.name.length < 2) {
-      newErrors.name = "El nombre debe tener al menos 2 caracteres";
+      newErrors.name = t("contact.contactForm.form.validation.name.minLength");
     }
 
     // Validación del email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "El email es requerido";
+      newErrors.email = t("contact.contactForm.form.validation.email.required");
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Por favor, introduce un email válido";
+      newErrors.email = t("contact.contactForm.form.validation.email.invalid");
     }
 
     // Validación del teléfono
     const phoneRegex = /^\+?[\d\s-]{6,}$/;
     if (!formData.phone.trim()) {
-      newErrors.phone = "El teléfono es requerido";
+      newErrors.phone = t("contact.contactForm.form.validation.phone.required");
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Por favor, introduce un número de teléfono válido";
+      newErrors.phone = t("contact.contactForm.form.validation.phone.invalid");
     }
 
     // Validación del mensaje
     if (!formData.message.trim()) {
-      newErrors.message = "El mensaje es requerido";
+      newErrors.message = t("contact.contactForm.form.validation.message.required");
     } else if (formData.message.length < 4) {
-      newErrors.message = "El mensaje debe tener al menos 4 caracteres";
+      newErrors.message = t("contact.contactForm.form.validation.message.minLength");
     }
 
     setErrors(newErrors);
@@ -129,8 +132,7 @@ export default function ContactForm() {
       if (result.success) {
         setSubmitStatus({
           type: "success",
-          message:
-            "¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.",
+          message: t("contact.contactForm.form.submit.success"),
         });
         setFormData({
           type: "",
@@ -142,20 +144,27 @@ export default function ContactForm() {
         });
         setErrors({});
       } else {
-        throw new Error(result.message || "Error al enviar el formulario");
+        throw new Error(
+          result.message || t("contact.contactForm.form.submit.error")
+        );
       }
     } catch (error) {
       setSubmitStatus({
         type: "error",
         message:
-          error instanceof Error
-            ? error.message
-            : "Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+          error instanceof Error ? error.message : t("contact.contactForm.form.submit.error"),
       });
     } finally {
       setIsLoading(false);
     }
   };
+
+  const countryData = [
+    { value: "ES", label: t("contact.contactForm.form.countries.ES") },
+    { value: "UK", label: t("contact.contactForm.form.countries.UK") },
+    { value: "DE", label: t("contact.contactForm.form.countries.DE") },
+    { value: "FR", label: t("contact.contactForm.form.countries.FR") },
+  ];
 
   return (
     <motion.div
@@ -164,7 +173,7 @@ export default function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-4  ">
-        Formulario de Contacto
+        {t("contact.contactForm.title")}
       </h2>
 
       <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-6">
@@ -188,8 +197,8 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <TextInput
           required
-          label="Nombre"
-          placeholder="Tu nombre completo"
+          label={t("contact.contactForm.form.labels.name")}
+          placeholder={t("contact.contactForm.form.placeholders.name")}
           rightSection={<User size={16} />}
           value={formData.name}
           onChange={(e) => {
@@ -202,8 +211,8 @@ export default function ContactForm() {
 
         <TextInput
           required
-          label="Email"
-          placeholder="tu@email.com"
+          label={t("contact.contactForm.form.labels.email")}
+          placeholder={t("contact.contactForm.form.placeholders.email")}
           rightSection={<Mail size={16} />}
           value={formData.email}
           onChange={(e) => {
@@ -216,14 +225,9 @@ export default function ContactForm() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Select
-            label="País"
-            placeholder="Seleccionar"
-            data={[
-              { value: "ES", label: "España (+34)" },
-              { value: "UK", label: "Reino Unido (+44)" },
-              { value: "DE", label: "Alemania (+49)" },
-              { value: "FR", label: "Francia (+33)" },
-            ]}
+            label={t("contact.contactForm.form.labels.country")}
+            placeholder={t("contact.contactForm.form.placeholders.country")}
+            data={countryData}
             value={formData.country}
             onChange={(value) =>
               setFormData({ ...formData, country: value || "ES" })
@@ -233,8 +237,8 @@ export default function ContactForm() {
           />
           <TextInput
             required
-            label="Teléfono"
-            placeholder="Tu número de teléfono"
+            label={t("contact.contactForm.form.labels.phone")}
+            placeholder={t("contact.contactForm.form.placeholders.phone")}
             rightSection={<Phone size={16} />}
             value={formData.phone}
             onChange={(e) => {
@@ -249,8 +253,8 @@ export default function ContactForm() {
 
         <Textarea
           required
-          label="Mensaje"
-          placeholder="¿En qué podemos ayudarte?"
+          label={t("contact.contactForm.form.labels.message")}
+          placeholder={t("contact.contactForm.form.placeholders.message")}
           rows={4}
           value={formData.message}
           onChange={(e) => {
@@ -282,7 +286,9 @@ export default function ContactForm() {
              }`}
           disabled={isLoading}
         >
-          {isLoading ? "Enviando..." : "Enviar Mensaje"}
+          {isLoading
+            ? t("contact.contactForm.form.submit.sending")
+            : t("contact.contactForm.form.submit.button")}{" "}
         </Button>
       </form>
     </motion.div>

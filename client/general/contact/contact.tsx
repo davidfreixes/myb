@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import Appointment from "./apointment";
 import ContactForm from "./contact-form";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -23,11 +26,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-2 sm:mb-4 text-center">
-              Contacto
+              {t("contact.hero.title")}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl text-center px-4">
-              Estamos aquí para ayudarte. Elige cómo prefieres contactar con
-              nosotros.
+              {t("contact.hero.subtitle")}
             </h2>
           </motion.div>
         </div>
