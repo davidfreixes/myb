@@ -115,7 +115,7 @@ export default function YachtCharter() {
                 <div className="bg-primary/10 p-2 sm:p-3 rounded-full w-fit mb-4 sm:mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-montserrat text-black mb-2 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
                   {service.title}
                 </h3>
               </div>
@@ -197,7 +197,7 @@ export default function YachtCharter() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-montserrat text-black mb-2 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
                     {item.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-700">

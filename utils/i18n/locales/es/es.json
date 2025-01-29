@@ -363,7 +363,8 @@
   "bunkerSupply": {
     "hero": {
       "title": "Suministro de Combustible Marino en Menorca",
-      "subtitle": "Mediante nuestro partner <2>Stabia Oil</2> y <2>CEPSA</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
+      "subtitle":"Suministramos combustible para barcos en la isla de Menorca y el resto de España.",
+      "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2> y <2>CEPSA</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
     },
     "dailyPosition": {
       "title": "Daily Position",

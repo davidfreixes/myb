@@ -140,7 +140,7 @@ export default function BunkerSupplyPage() {
       {/* Hero Section */}
       <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
-          src="/img/ship-broker.jpg"
+          src="/img/bunker-supply.jpg"
           alt="Ship broker service"
           fill
           className="object-cover"
@@ -148,22 +148,21 @@ export default function BunkerSupplyPage() {
           objectPosition="bottom"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 mx-auto px-4 sm:px-6 h-full flex flex-col justify-center max-w-[1400px]">
+        <div className="relative z-10 mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
           >
             <div className="space-y-2 md:space-y-4 mt-8 md:mt-0">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
                 {t("bunkerSupply.hero.title")}
               </h1>
-              {/* <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                Suministramos combustible marino en la isla de Menorca.
-              </h2> */}
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                <Trans i18nKey="bunkerSupply.hero.subtitle">
+                {t("bunkerSupply.hero.subtitle")}
+              </h2>
+              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white max-w-4xl">
+                <Trans i18nKey="bunkerSupply.hero.subtitle2">
                   Mediante nuestro partner{" "}
                   <span className="text-primary">Stabia Oil</span> y{" "}
                   <span className="text-primary">CEPSA</span>. Podemos
@@ -214,7 +213,7 @@ export default function BunkerSupplyPage() {
                 unstyled
                 component={Link}
                 href="https://drive.google.com/drive/folders/1ZWu3DTd9eiAOyjdhFq1MpZsxdDt4K8ho"
-                className="bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
+                className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
               >
                 <div className="flex items-center justify-center gap-2">
                   <Download className="w-4 h-4" />

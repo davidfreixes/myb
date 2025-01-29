@@ -363,7 +363,8 @@
   "bunkerSupply": {
     "hero": {
       "title": "Marine Fuel Supply in Menorca",
-      "subtitle": "Through our partner <2>Stabia Oil</2> and <2>CEPSA</2>. We can supply all types of marine fuel on the island of Menorca."
+      "subtitle": "We supply fuel for boats on the island of Menorca and the rest of Spain.",
+      "subtitle2": "Through our partner <2>Stabia Oil</2> and <2>CEPSA</2>. We can supply all types of marine fuel on the island of Menorca."
     },
     "dailyPosition": {
       "title": "Daily Position",
