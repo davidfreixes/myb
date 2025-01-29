@@ -12,7 +12,7 @@ export default function Inspections() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[45vh] sm:h-[60vh] lg:h-[70vh] w-full">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/inspections.jpg"
           alt="Inspecciones y tasaciones de barcos"
@@ -21,7 +21,7 @@ export default function Inspections() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-0 h-full flex flex-col justify-center mt-2 md:max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function Inspections() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-0 py-12 md:py-12 md:max-w-[1400px]">
+      <div className="container mx-auto px-0 sm:px-4 py-12 md:py-12 md:max-w-[1400px] ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -97,7 +97,7 @@ export default function Logistics() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[50vh] sm:h-[60vh] w-full">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/logistics.jpg"
           alt="Logística marítima service"
@@ -106,12 +106,12 @@ export default function Logistics() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
