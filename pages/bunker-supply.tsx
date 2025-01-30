@@ -35,7 +35,7 @@ export default function ShipBrokerPage() {
                 process.env.VERCEL_URL
                   ? "https://" + process.env.VERCEL_URL
                   : process.env.NEXT_PUBLIC_APP_URL
-              }/img/yacht-broker.jpg`,
+              }/img/bynker-supply.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

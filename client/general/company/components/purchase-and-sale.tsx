@@ -147,7 +147,7 @@ export default function PurchaseAndSale() {
                   <div className="p-2 sm:p-3 bg-primary/10 rounded-lg">
                     {benefit.icon}
                   </div>
-                  <h3 className="font-montserrat font-semibold text-lg sm:text-xl">
+                  <h3 className="font-montserrat font-medium text-lg sm:text-xl">
                     {benefit.title}
                   </h3>
                 </div>
@@ -183,7 +183,7 @@ export default function PurchaseAndSale() {
                 <div className="p-2 sm:p-3 bg-white rounded-lg">
                   {component.icon}
                 </div>
-                <h3 className="font-montserrat font-semibold text-sm sm:text-base">
+                <h3 className="font-montserrat font-medium text-lg sm:text-xl">
                   {component.title}
                 </h3>
               </div>

@@ -43,7 +43,7 @@ export default function NauticalConsulting() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full">
         <Image
@@ -101,7 +101,7 @@ export default function NauticalConsulting() {
               >
                 <div className="flex gap-2">
                   {service.icon}
-                  <h3 className="text-xl font-montserrat text-primary mb-3">
+                  <h3 className="text-xl font-montserrat font-medium text-black mb-3">
                     {service.title}
                   </h3>
                 </div>

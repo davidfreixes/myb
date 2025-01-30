@@ -133,7 +133,7 @@ export default function BunkerSupplyPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
@@ -324,13 +324,13 @@ export default function BunkerSupplyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
-              className="bg-primary/5 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow border"
+              className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow border"
             >
               <div className="flex items-center gap-2">
                 <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                   {service.icon}
                 </div>
-                <h4 className="font-montserrat text-lg sm:text-xl text-primary mb-2 sm:mb-3">
+                <h4 className="font-montserrat text-lg sm:text-xl font-medium text-black mb-2 sm:mb-3">
                   {service.title}
                 </h4>
               </div>
@@ -369,10 +369,10 @@ export default function BunkerSupplyPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-primary/5 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border"
             >
               <div className="flex items-center gap-4 mb-6">
-                <h3 className="font-montserrat text-2xl text-primary">
+                <h3 className="font-montserrat text-2xl font-medium text-black">
                   {t("bunkerSupply.experience.globalExperience.title")}
                 </h3>
               </div>
@@ -391,7 +391,7 @@ export default function BunkerSupplyPage() {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                       {feature.icon}
                     </div>
-                    <h4 className="font-montserrat text-lg text-primary mb-2">
+                    <h4 className="font-montserrat text-lg font-medium text-black mb-2">
                       {feature.title}
                     </h4>
                     <p className="text-gray-600 text-md">
@@ -407,10 +407,10 @@ export default function BunkerSupplyPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-primary/5 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border"
             >
               <div className="flex items-center gap-4 mb-6">
-                <h3 className="font-montserrat text-2xl text-primary">
+                <h3 className="font-montserrat text-2xl font-medium text-black">
                   {t("bunkerSupply.experience.expertKnowledge.title")}
                 </h3>
               </div>
@@ -424,12 +424,12 @@ export default function BunkerSupplyPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className=" backdrop-blur-sm rounded-xl p-6 text-center"
+                    className="backdrop-blur-sm rounded-xl p-6 text-center"
                   >
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                       {feature.icon}
                     </div>
-                    <h4 className="font-montserrat text-lg text-primary mb-2">
+                    <h4 className="font-montserrat text-lg font-medium text-black mb-2">
                       {feature.title}
                     </h4>
                     <p className="text-gray-600 text-md">
