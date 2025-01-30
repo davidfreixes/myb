@@ -248,10 +248,11 @@ export default function YachtCharter() {
         </div>
       </div>
 
+      {/*Faq Section */}
       <section className="py-16">
-        <Container size="lg">
+        <Container>
           <div className="text-center mb-12">
-            <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
               {t("yachtCharter.faq.title")}
             </h1>
             <Text className="text-gray-600 text-lg">
