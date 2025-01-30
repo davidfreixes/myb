@@ -12,7 +12,7 @@ export default function ValueAddedServices() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Adjusted height and padding for mobile */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full ">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full ">
         <Image
           src="/img/value-added-services.jpg"
           alt="Servicios de valor añadido"
@@ -20,16 +20,16 @@ export default function ValueAddedServices() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <div className="space-y-2 md:space-y-4">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-medium tracking-tight text-primary">
                 {t("valueAddedServices.hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">

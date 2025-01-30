@@ -90,7 +90,7 @@ export default function ConditionsAndRates() {
       {/* FAQ and Contact Section */}
       <div className="mt-8 sm:mt-12 md:mt-16 p-4 sm:p-6 md:p-8 text-center inset-0 bg-primary/30 py-8 sm:py-12 md:py-16">
         <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-          <h2 className="text-xl sm:text-2xl font-montserrat font-semibold text-primary mb-2 sm:mb-4">
+          <h2 className="text-xl sm:text-3xl font-montserrat font-semibold text-primary mb-2 sm:mb-4">
             {t("conditionsAndRates.contact.title")}
           </h2>
         </div>
@@ -268,7 +268,7 @@ function YatesContent() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2 font-medium">
                   <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   {t(
                     "conditionsAndRates.yachts.brokerage.saleAndPurchase.title"
@@ -293,7 +293,7 @@ function YatesContent() {
                 </ul>
               </div>
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2 font-medium">
                   <Ship className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   {t("conditionsAndRates.yachts.brokerage.charter.title")}
                 </h3>
@@ -332,7 +332,7 @@ function YatesContent() {
                   className="group"
                 >
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <h3 className="text-lg sm:text-xl font-montserrat mb-2">
+                    <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {plan.title}
                     </h3>
                     <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
@@ -381,7 +381,7 @@ function YatesContent() {
                   className="group"
                 >
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <h3 className="text-lg sm:text-xl font-montserrat mb-2">
+                    <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {plan.title}
                     </h3>
                     <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
@@ -419,7 +419,7 @@ function YatesContent() {
                   className="group"
                 >
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <h3 className="text-lg sm:text-xl font-montserrat mb-2">
+                    <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {service.title}
                     </h3>
                     <p className="text-2xl sm:text-3xl font-semibold text-primary mb-3 sm:mb-4">
@@ -462,7 +462,7 @@ function YatesContent() {
                       <div className="p-2 sm:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                         {condition.icon}
                       </div>
-                      <h3 className="font-montserrat font-semibold text-lg sm:text-xl">
+                      <h3 className="font-montserrat font-medium text-lg sm:text-xl">
                         {condition.title}
                       </h3>
                     </div>
@@ -580,7 +580,7 @@ function BrokerageContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.commissions.standard.title"
                 )}
@@ -592,7 +592,7 @@ function BrokerageContent() {
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.commissions.payment.title"
                 )}
@@ -624,7 +624,7 @@ function BrokerageContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.responsibilities.intermediation.title"
                 )}
@@ -636,7 +636,7 @@ function BrokerageContent() {
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.responsibilities.confidentiality.title"
                 )}{" "}
@@ -656,7 +656,7 @@ function BrokerageContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.chartererCommissions.charter.title"
                 )}
@@ -668,7 +668,7 @@ function BrokerageContent() {
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.chartererCommissions.additional.title"
                 )}
@@ -690,7 +690,7 @@ function BrokerageContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.chartererResponsibilities.negotiation.title"
                 )}
@@ -702,7 +702,7 @@ function BrokerageContent() {
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
                   "conditionsAndRates.shipBrokerage.chartererResponsibilities.compliance.title"
                 )}
@@ -748,7 +748,7 @@ function BrokerageContent() {
                       <div className="p-2 sm:p-3 bg-white rounded-lg group-hover:bg-primary/10 transition-colors">
                         {condition.icon}
                       </div>
-                      <h3 className="font-montserrat font-semibold text-lg sm:text-xl">
+                      <h3 className="font-montserrat font-medium text-lg sm:text-xl">
                         {condition.title}
                       </h3>
                     </div>
