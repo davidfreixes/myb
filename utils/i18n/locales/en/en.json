@@ -358,6 +358,38 @@
         }
       }
     },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "We answer your questions about boat rentals in Menorca.",
+      "licenseRequired": {
+        "question": "Do I need a license to rent a boat in Menorca?",
+        "answer": "Not always. We offer no-license boats that you can operate without prior experience. For larger vessels, a navigation license is required."
+      },
+      "bestTimeToRent": {
+        "question": "What's the best time to rent a boat in Menorca?",
+        "answer": "High season runs from June to September, with ideal temperatures and calm seas. During spring and fall, there are fewer crowds and more competitive prices."
+      },
+      "boatTypes": {
+        "question": "What types of boats can I rent?",
+        "answer": "We offer traditional llauts, motorboats, catamarans, sailboats, and luxury yachts, with or without a skipper."
+      },
+      "rentalDuration": {
+        "question": "Can I rent a boat for a few hours or only full days?",
+        "answer": "We offer hourly rentals, half-day, full-day, and weekly options to suit your preferences."
+      },
+      "recommendedRoutes": {
+        "question": "What are the best boating routes around Menorca?",
+        "answer": "Top routes include Cala Galdana, Cala’n Bosch, Fornells, and Mahón Bay."
+      },
+      "includedServices": {
+        "question": "What's included in the boat rental?",
+        "answer": "Depending on the boat, it may include fuel, snorkeling gear, drinks, and an optional skipper."
+      },
+      "howToBook": {
+        "question": "How do I book a boat in Menorca?",
+        "answer": "You can book directly through our website or contact us for personalized assistance."
+      }
+    },
     "cta": {
       "title": "Live an Unforgettable Experience at Sea",
       "description": "Book your boat in Menorca and sail through its most iconic coves. Enjoy a no-license rental, catamaran excursions, or a luxury yacht with exclusive services.",

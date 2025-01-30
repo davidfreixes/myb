@@ -358,6 +358,38 @@
         }
       }
     },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Resolvemos tus dudas sobre el alquiler de barcos en Menorca.",
+      "licenseRequired": {
+        "question": "¿Necesito licencia para alquilar un barco en Menorca?",
+        "answer": "No siempre. Disponemos de barcos sin licencia que puedes manejar sin experiencia previa. Para embarcaciones más grandes, se requiere licencia de navegación."
+      },
+      "bestTimeToRent": {
+        "question": "¿Cuál es la mejor época para alquilar un barco en Menorca?",
+        "answer": "La temporada alta es de junio a septiembre, con temperaturas ideales y mar en calma. En primavera y otoño, hay menos afluencia y precios más competitivos."
+      },
+      "boatTypes": {
+        "question": "¿Qué tipos de embarcaciones puedo alquilar?",
+        "answer": "Ofrecemos llauts tradicionales, lanchas, catamaranes, veleros y yates de lujo, con o sin patrón."
+      },
+      "rentalDuration": {
+        "question": "¿Puedo alquilar un barco por unas horas o solo por días completos?",
+        "answer": "Disponemos de alquileres por horas, medio día, día completo y semanas, según tu preferencia."
+      },
+      "recommendedRoutes": {
+        "question": "¿Cuáles son las mejores rutas en barco por Menorca?",
+        "answer": "Algunas de las mejores rutas incluyen Cala Galdana, Cala’n Bosch, Fornells y la Bahía de Mahón."
+      },
+      "includedServices": {
+        "question": "¿Qué incluye el alquiler de un barco?",
+        "answer": "Dependiendo del barco, puede incluir combustible, equipo de snorkel, bebidas y patrón opcional."
+      },
+      "howToBook": {
+        "question": "¿Cómo reservo un barco en Menorca?",
+        "answer": "Puedes reservar directamente en nuestra web o contactarnos para asesoramiento personalizado."
+      }
+    },
     "cta": {
       "title": "Vive una Experiencia Inolvidable en el Mar",
       "description": "Reserva tu barco en Menorca y navega por sus calas más emblemáticas. Disfruta de un alquiler sin licencia, excursiones en catamarán o un yate de lujo con servicios exclusivos.",

@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Accordion, Button, Container, Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
   Anchor,
@@ -49,7 +49,9 @@ export default function YachtCharter() {
     },
     {
       title: t("yachtCharter.services.list.thematicExcursions.title"),
-      description: t("yachtCharter.services.list.thematicExcursions.description"),
+      description: t(
+        "yachtCharter.services.list.thematicExcursions.description"
+      ),
       icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
@@ -61,6 +63,37 @@ export default function YachtCharter() {
       title: t("yachtCharter.services.list.support.title"),
       description: t("yachtCharter.services.list.support.description"),
       icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
+
+  const questions = [
+    {
+      question: t("yachtCharter.faq.licenseRequired.question"),
+      answer: t("yachtCharter.faq.licenseRequired.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.bestTimeToRent.question"),
+      answer: t("yachtCharter.faq.bestTimeToRent.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.boatTypes.question"),
+      answer: t("yachtCharter.faq.boatTypes.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.rentalDuration.question"),
+      answer: t("yachtCharter.faq.rentalDuration.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.recommendedRoutes.question"),
+      answer: t("yachtCharter.faq.recommendedRoutes.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.includedServices.question"),
+      answer: t("yachtCharter.faq.includedServices.answer"),
+    },
+    {
+      question: t("yachtCharter.faq.howToBook.question"),
+      answer: t("yachtCharter.faq.howToBook.answer"),
     },
   ];
 
@@ -84,7 +117,7 @@ export default function YachtCharter() {
             className="max-w-3xl"
           >
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
-            <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
                 {t("yachtCharter.hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
@@ -214,6 +247,54 @@ export default function YachtCharter() {
           ))}
         </div>
       </div>
+
+      <section className="py-16">
+        <Container size="lg">
+          <div className="text-center mb-12">
+            <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
+              {t("yachtCharter.faq.title")}
+            </h1>
+            <Text className="text-gray-600 text-lg">
+              {t("yachtCharter.faq.description")}
+            </Text>
+          </div>
+
+          <Accordion
+            className="max-w-5xl mx-auto"
+            styles={{
+              item: {
+                borderRadius: "8px",
+                marginBottom: "12px",
+                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderBottom: "1px solid #FFB800",
+              },
+              control: {
+                padding: "10px",
+              },
+              content: {
+                padding: "0 20px 20px",
+              },
+            }}
+          >
+            {questions.map((item, index) => (
+              <Accordion.Item key={`faq-${index}`} value={`question-${index}`}>
+                <Accordion.Control>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#FFB800] font-mono text-lg">
+                      {String(index + 1).padStart(2, "0")}.
+                    </span>
+                    <h2 className="font-semibold">{item.question}</h2>
+                  </div>
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <Text className="text-gray-600">{item.answer}</Text>
+                </Accordion.Panel>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </Container>
+      </section>
 
       {/* Final CTA Section with Background Image */}
       <div className="relative py-12 sm:py-16 md:py-20">
