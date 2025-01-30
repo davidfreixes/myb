@@ -308,62 +308,66 @@
   },
   "yachtCharter": {
     "hero": {
-      "title": "Yacht Charter | Alquila tu Barco y Yate en Menorca",
-      "subtitle": "Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium."
+      "title": "Yacht Charter | Alquiler de Barcos y Catamaranes en Menorca",
+      "subtitle": "Alquila yates, catamaranes y lanchas en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, barcos sin licencia y servicios premium con o sin patrón."
     },
     "services": {
-      "title": "Nuestros Servicios de Charter",
+      "title": "Nuestros Servicios de Charter Náutico en Menorca",
       "list": {
         "dailyRental": {
           "title": "Alquiler por Día, Semana o Temporada",
-          "description": "Flexibilidad para que disfrutes del charter el tiempo que prefieras, desde una escapada de un día hasta unas vacaciones completas en el mar."
+          "description": "Flexibilidad total para alquilar un barco en Menorca, desde escapadas de un día en Cala Galdana hasta vacaciones completas en el mar con un yate de lujo."
         },
         "thematicExcursions": {
-          "title": "Excursiones Temáticas y Actividades Exclusivas",
-          "description": "Ofrecemos opciones como excursiones para ver el atardecer, rutas de buceo, y experiencias gastronómicas a bordo, para hacer de cada charter algo especial."
+          "title": "Excursiones y Rutas Personalizadas",
+          "description": "Explora Menorca con rutas exclusivas: puestas de sol en catamarán, excursiones en llaut tradicional, buceo en aguas cristalinas y experiencias gastronómicas a bordo."
+        },
+        "withoutLicense": {
+          "title": "Alquiler de Barcos sin Licencia",
+          "description": "Si no tienes licencia, no hay problema. Disponemos de barcos sin licencia en Menorca para que navegues libremente por calas paradisíacas como Cala’n Bosch o Fornells."
         },
         "support": {
           "title": "Soporte 24/7 Durante Tu Charter",
-          "description": "Nos aseguramos de que tengas un soporte dedicado para resolver cualquier necesidad o consulta durante toda tu travesía."
+          "description": "Garantizamos asistencia en todo momento para que disfrutes de una experiencia náutica sin preocupaciones."
         }
       }
     },
     "discover": {
-      "title": "Descubre el Lujo en el Mar",
-      "description": "En Menorca Brokers, te ofrecemos la oportunidad de descubrir Menorca desde una perspectiva única: a bordo de una embarcación de lujo. Nuestro servicio de chartering está diseñado para brindarte una experiencia personalizada y exclusiva, en la que cada detalle se ajusta a tus preferencias para que disfrutes de unas vacaciones inolvidables en el mar.",
+      "title": "Descubre el Lujo y la Libertad en el Mar",
+      "description": "Menorca Brokers te ofrece una experiencia única en el mar con alquiler de barcos, lanchas y catamaranes. Navega sin licencia, con patrón o en un yate de lujo, explorando calas vírgenes y playas de ensueño como Cala Galdana y Ciudadela.",
       "button": "Explorar Rutas"
     },
     "whyChooseUs": {
-      "title": "¿Por qué elegir Menorca Brokers para tu charter náutico?",
+      "title": "¿Por qué elegir Menorca Brokers para tu alquiler de barcos?",
       "reasons": {
         "fleet": {
-          "title": "Flota de Embarcaciones de Alta Gama",
-          "description": "Contamos con una amplia selección de yates, catamaranes y embarcaciones de lujo, cuidadosamente seleccionados para satisfacer diferentes gustos y presupuestos."
+          "title": "Flota Variada: Yates, Catamaranes y Lanchas",
+          "description": "Desde llauts tradicionales hasta modernos catamaranes, contamos con opciones para todos los gustos y necesidades."
         },
         "experience": {
           "title": "Experiencia Personalizada",
-          "description": "Desde rutas privadas y deportes acuáticos hasta cenas exclusivas a bordo, diseñamos cada charter para que tengas una experiencia totalmente adaptada a tus deseos."
+          "description": "Diseñamos cada alquiler a medida: excursiones en Cala Galdana, navegación en velero por Fornells o rutas de snorkel en Menorca."
         },
         "crew": {
-          "title": "Tripulación Profesional y Atención al Detalle",
-          "description": "Nuestras tripulaciones están capacitadas para ofrecerte un servicio de calidad, mientras te guían a los rincones más hermosos y menos explorados de Menorca."
+          "title": "Tripulación Profesional o Navegación sin Patrón",
+          "description": "Elige entre alquilar con un patrón experto o navegar tú mismo en un barco sin licencia."
         },
         "routes": {
-          "title": "Rutas a Medida y Lugares Icónicos",
-          "description": "Te llevamos a explorar calas escondidas, playas vírgenes y otros puntos emblemáticos, creando una aventura única y memorable en cada charter."
+          "title": "Las Mejores Rutas y Destinos",
+          "description": "Desde la Ciudadela hasta Mahón, ofrecemos itinerarios únicos para descubrir Menorca desde el mar."
         }
       }
     },
     "cta": {
-      "title": "Haz de Tus Vacaciones una Aventura Única en el Mar",
-      "description": "Con Menorca Brokers, puedes relajarte sabiendo que te ofrecemos un charter sin preocupaciones y repleto de experiencias inolvidables. Navega por aguas cristalinas, disfruta de la tranquilidad de calas escondidas y déjate llevar por la belleza natural de Menorca.",
-      "button": "Reserva Tu Charter"
+      "title": "Vive una Experiencia Inolvidable en el Mar",
+      "description": "Reserva tu barco en Menorca y navega por sus calas más emblemáticas. Disfruta de un alquiler sin licencia, excursiones en catamarán o un yate de lujo con servicios exclusivos.",
+      "button": "Reserva Ahora"
     }
   },
   "bunkerSupply": {
     "hero": {
       "title": "Suministro de Combustible Marino en Menorca",
-      "subtitle":"Suministramos combustible para barcos en la isla de Menorca y el resto de España.",
+      "subtitle": "Suministramos combustible para barcos en la isla de Menorca y el resto de España.",
       "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2> y <2>CEPSA</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
     },
     "dailyPosition": {

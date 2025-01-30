@@ -53,6 +53,11 @@ export default function YachtCharter() {
       icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
+      title: t("yachtCharter.services.list.withoutLicense.title"),
+      description: t("yachtCharter.services.list.withoutLicense.description"),
+      icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
       title: t("yachtCharter.services.list.support.title"),
       description: t("yachtCharter.services.list.support.description"),
       icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,

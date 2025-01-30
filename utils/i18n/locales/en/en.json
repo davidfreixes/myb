@@ -308,56 +308,60 @@
   },
   "yachtCharter": {
     "hero": {
-      "title": "Yacht Charter | Rent Your Boat and Yacht in Menorca",
-      "subtitle": "Rent luxury yachts in Menorca with Menorca Yacht Brokers. Enjoy personalized routes, professional crew, and premium services."
+      "title": "Yacht Charter | Boat and Catamaran Rentals in Menorca",
+      "subtitle": "Rent yachts, catamarans, and motorboats in Menorca with Menorca Yacht Brokers. Enjoy custom routes, no-license boats, and premium services with or without a skipper."
     },
     "services": {
-      "title": "Our Charter Services",
+      "title": "Our Yacht Charter Services in Menorca",
       "list": {
         "dailyRental": {
-          "title": "Daily, Weekly, or Seasonal Rental",
-          "description": "Flexibility to enjoy the charter for as long as you prefer, from a one-day getaway to a complete vacation at sea."
+          "title": "Daily, Weekly, or Seasonal Rentals",
+          "description": "Total flexibility to rent a boat in Menorca, from day trips in Cala Galdana to full sea vacations aboard a luxury yacht."
         },
         "thematicExcursions": {
-          "title": "Thematic Excursions and Exclusive Activities",
-          "description": "We offer options such as sunset excursions, diving routes, and gastronomic experiences on board, to make each charter special."
+          "title": "Themed Excursions and Custom Routes",
+          "description": "Explore Menorca with exclusive routes: catamaran sunsets, traditional llaut excursions, diving in crystal-clear waters, and onboard dining experiences."
+        },
+        "withoutLicense": {
+          "title": "No-License Boat Rentals",
+          "description": "No license? No problem. We offer no-license boats in Menorca so you can sail freely through paradisiacal coves like Cala’n Bosch or Fornells."
         },
         "support": {
           "title": "24/7 Support During Your Charter",
-          "description": "We ensure you have dedicated support to resolve any needs or queries throughout your journey."
+          "description": "We guarantee assistance at all times for a worry-free nautical experience."
         }
       }
     },
     "discover": {
-      "title": "Discover Luxury at Sea",
-      "description": "At Menorca Brokers, we offer you the opportunity to discover Menorca from a unique perspective: aboard a luxury vessel. Our chartering service is designed to provide you with a personalized and exclusive experience, where every detail is adjusted to your preferences so you can enjoy unforgettable holidays at sea.",
+      "title": "Discover Luxury and Freedom at Sea",
+      "description": "Menorca Brokers offers you a unique sea experience with boat, motorboat, and catamaran rentals. Sail without a license, with a skipper, or aboard a luxury yacht while exploring pristine coves and dream beaches like Cala Galdana and Ciudadela.",
       "button": "Explore Routes"
     },
     "whyChooseUs": {
-      "title": "Why Choose Menorca Brokers for Your Nautical Charter?",
+      "title": "Why Choose Menorca Brokers for Your Boat Rental?",
       "reasons": {
         "fleet": {
-          "title": "High-End Vessel Fleet",
-          "description": "We have a wide selection of yachts, catamarans, and luxury vessels, carefully selected to satisfy different tastes and budgets."
+          "title": "Varied Fleet: Yachts, Catamarans, and Boats",
+          "description": "From traditional llauts to modern catamarans, we have options for all tastes and needs."
         },
         "experience": {
           "title": "Personalized Experience",
-          "description": "From private routes and water sports to exclusive dinners on board, we design each charter to give you an experience totally adapted to your desires."
+          "description": "We tailor every rental: excursions in Cala Galdana, sailing trips in Fornells, or snorkeling routes in Menorca."
         },
         "crew": {
-          "title": "Professional Crew and Attention to Detail",
-          "description": "Our crews are trained to offer you quality service while guiding you to the most beautiful and least explored corners of Menorca."
+          "title": "Professional Crew or Bareboat Navigation",
+          "description": "Choose between renting with an expert skipper or sailing independently with a no-license boat."
         },
         "routes": {
-          "title": "Custom Routes and Iconic Locations",
-          "description": "We take you to explore hidden coves, virgin beaches, and other emblematic points, creating a unique and memorable adventure in each charter."
+          "title": "Best Routes and Destinations",
+          "description": "From Ciudadela to Mahón, we offer unique itineraries to discover Menorca from the sea."
         }
       }
     },
     "cta": {
-      "title": "Make Your Vacation a Unique Adventure at Sea",
-      "description": "With Menorca Brokers, you can relax knowing that we offer you a worry-free charter full of unforgettable experiences. Navigate through crystal-clear waters, enjoy the tranquility of hidden coves, and let yourself be carried away by the natural beauty of Menorca.",
-      "button": "Book Your Charter"
+      "title": "Live an Unforgettable Experience at Sea",
+      "description": "Book your boat in Menorca and sail through its most iconic coves. Enjoy a no-license rental, catamaran excursions, or a luxury yacht with exclusive services.",
+      "button": "Book Now"
     }
   },
   "bunkerSupply": {
