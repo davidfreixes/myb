@@ -224,7 +224,7 @@ export default function YachtBroker() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Now more responsive */}
-      <div className="relative h-[45vh] sm:h-[60vh] lg:h-[70vh] w-full">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/yacht-broker.jpg"
           alt="Yacht broker service"
