@@ -1,6 +1,6 @@
 import { Accordion, Button, Card, Tabs } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { Anchor, ChevronDown, Ship, Users } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -107,6 +107,19 @@ const sampleYachts: YachtDetails[] = [
 
   // Add more sample yachts here
 ];
+
+interface Category {
+  title: string;
+  description: string;
+  image: string;
+  keywords: string[];
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
   const { t } = useTranslation();
 
@@ -137,58 +150,83 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
             <Accordion className="shadow-sm">
               <Accordion.Item value="details">
                 <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
-                  <span className="text-sm sm:text-base">{t("yachtBroker.yachtDetails.viewDetails")}</span>
+                  <span className="text-sm sm:text-base">
+                    {t("yachtBroker.yachtDetails.viewDetails")}
+                  </span>
                 </Accordion.Control>
                 <Accordion.Panel>
                   <div className="space-y-2 text-xs sm:text-sm">
                     {yacht.name && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.boatName")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.boatName")}:
+                        </span>
                         <span>{yacht.name}</span>
                       </div>
                     )}
                     {/* Other yacht details remain the same, with text-xs sm:text-sm classes */}
                     {yacht.year && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.year")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.year")}:
+                        </span>
                         <span>{yacht.year}</span>
                       </div>
                     )}
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.length")}:</span>
-                      <span>{yacht.length} {t("yachtDetails.units.meters")}</span>
+                      <span className="text-gray-600">
+                        {t("yachtBroker.yachtDetails.fields.length")}:
+                      </span>
+                      <span>
+                        {yacht.length} {t("yachtDetails.units.meters")}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.location")}:</span>
+                      <span className="text-gray-600">
+                        {t("yachtBroker.yachtDetails.fields.location")}:
+                      </span>
                       <span className="text-right">{yacht.location}</span>
                     </div>
                     {yacht.displacement && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.displacement")}:</span>
-                        <span>{yacht.displacement} {t("yachtBroker.yachtDetails.units.kg")}</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.displacement")}:
+                        </span>
+                        <span>
+                          {yacht.displacement}{" "}
+                          {t("yachtBroker.yachtDetails.units.kg")}
+                        </span>
                       </div>
                     )}
                     {yacht.hull && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.hull")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.hull")}:
+                        </span>
                         <span>{yacht.hull}</span>
                       </div>
                     )}
                     {yacht.keel && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.keel")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.keel")}:
+                        </span>
                         <span>{yacht.keel}</span>
                       </div>
                     )}
                     {yacht.designer && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.designer")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.designer")}:
+                        </span>
                         <span>{yacht.designer}</span>
                       </div>
                     )}
                     {yacht.category && (
                       <div className="flex justify-between">
-                        <span className="text-gray-600">{t("yachtBroker.yachtDetails.fields.category")}:</span>
+                        <span className="text-gray-600">
+                          {t("yachtBroker.yachtDetails.fields.category")}:
+                        </span>
                         <span className="text-right">{yacht.category}</span>
                       </div>
                     )}
@@ -210,6 +248,108 @@ export default function YachtBroker() {
   const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
+  const popularCategories: Category[] = [
+    {
+      title: t("yachtBroker.categories.usedBoats.title"),
+      description:
+        "Amplia selección de embarcaciones verificadas y en excelente estado. Encuentra barcos de segunda mano baratos, desde barcas open hasta veleros usados. Todas nuestras embarcaciones pasan por un riguroso proceso de inspección para garantizar su calidad.",
+      image: "/img/yacht-broker/second-hand.jpg",
+      keywords: [
+        "barcos segunda mano",
+        "embarcaciones segunda mano",
+        "barcos usados",
+        "barcas open segunda mano",
+      ],
+    },
+    {
+      title: t("yachtBroker.categories.usedSailboats.title"),
+      description: t("yachtBroker.categories.usedSailboats.description"),
+      image: "/img/yacht-broker/used-sailboats.jpg",
+      keywords: [
+        "veleros segunda mano",
+        "comprar velero usado",
+        "venta de veleros",
+      ],
+    },
+    {
+      title: t("yachtBroker.categories.catamarans.title"),
+      description: t("yachtBroker.categories.catamarans.description"),
+      image: "/img/yacht-broker/catamarans.jpg",
+      keywords: [
+        "comprar catamarán",
+        "catamaranes segunda mano",
+        "venta catamaranes",
+      ],
+    },
+    {
+      title: t("yachtBroker.categories.luxuryYachts.title"),
+      description: t("yachtBroker.categories.luxuryYachts.description"),
+      image: "/img/yacht-broker/luxury-yacht.jpg",
+      keywords: ["comprar yate de lujo", "yates segunda mano", "venta yates"],
+    },
+    {
+      title: t("yachtBroker.categories.openBoats.title"),
+      description: t("yachtBroker.categories.openBoats.description"),
+      image: "/img/yacht-broker/open-boats.jpg",
+      keywords: [
+        "barca open segunda mano",
+        "barcas quicksilver segunda mano",
+        "barca de recreo",
+      ],
+    },
+    {
+      title: t("yachtBroker.categories.newBoats.title"),
+      description: t("yachtBroker.categories.newBoats.description"),
+      image: "/img/yacht-1.jpg",
+      keywords: [
+        "comprar barco nuevo",
+        "embarcaciones nuevas",
+        "venta barcos nuevos",
+      ],
+    },
+  ];
+
+  const advantages = [
+    {
+      title: t("yachtBroker.advantages.experience"),
+      description: t("yachtBroker.advantages.experienceDesc"),
+      icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtBroker.advantages.selection"),
+      description: t("yachtBroker.advantages.selectionDesc"),
+      icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      title: t("yachtBroker.advantages.support"),
+      description: t("yachtBroker.advantages.supportDesc"),
+      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+  ];
+
+  const faqs: FAQ[] = [
+    {
+      question: t("yachtBroker.faq.questions.usedBoatConsiderations.question"),
+      answer: t("yachtBroker.faq.questions.usedBoatConsiderations.answer"),
+    },
+    {
+      question: t("yachtBroker.faq.questions.usedSailboatProcess.question"),
+      answer: t("yachtBroker.faq.questions.usedSailboatProcess.answer"),
+    },
+    {
+      question: t("yachtBroker.faq.questions.availableBoats.question"),
+      answer: t("yachtBroker.faq.questions.availableBoats.answer"),
+    },
+    {
+      question: t("yachtBroker.faq.questions.sellBoat.question"),
+      answer: t("yachtBroker.faq.questions.sellBoat.answer"),
+    },
+    {
+      question: t("yachtBroker.faq.questions.financing.question"),
+      answer: t("yachtBroker.faq.questions.financing.answer"),
+    },
+  ];
+
   const scrollToSection = (type: "new" | "used") => {
     setActiveTab(type);
     setTimeout(() => {
@@ -222,7 +362,7 @@ export default function YachtBroker() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section - Now more responsive */}
       <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
@@ -272,7 +412,6 @@ export default function YachtBroker() {
           </motion.div>
         </div>
       </div>
-
       {/* Main Content - Improved spacing and responsiveness */}
       <div className="container mx-auto px-0 sm:px-6 py-6 sm:py-8 md:py-12 md:max-w-[1400px]">
         <motion.div
@@ -367,7 +506,127 @@ export default function YachtBroker() {
           </p>
         </motion.div>
       </div>
+      {/* Nueva sección de categorías populares */}
+      <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-8 sm:mb-12"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
+            {t("yachtBroker.categories.title")}
+          </h2>
+        </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          {popularCategories.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 * index }}
+              className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={category.image || "/placeholder.svg"}
+                  alt={category.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
+                {category.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-700">
+                {category.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      {/* Advantages Section */};
+      <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
+        <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-4">
+              {t("yachtBroker.advantages.title")}
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {advantages.map((advantage, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 * index }}
+                className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                  {advantage.icon}
+                </div>
+                <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
+                  {advantage.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
+                  {advantage.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* FAQ Section */};
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
+            {t("yachtBroker.faq.title")}
+          </h2>
+          <p className="text-gray-600 text-lg">
+            {t("yachtBroker.faq.description")}
+          </p>
+        </div>
 
+        <Accordion
+          className="max-w-5xl mx-auto"
+          styles={{
+            item: {
+              borderRadius: "8px",
+              marginBottom: "12px",
+              border: "1px solid #e5e7eb",
+              backgroundColor: "white",
+              borderBottom: "1px solid #FFB800",
+            },
+            control: {
+              padding: "10px",
+            },
+            content: {
+              padding: "0 20px 20px",
+            },
+          }}
+        >
+          {faqs.map((item, index) => (
+            <Accordion.Item key={`faq-${index}`} value={`question-${index}`}>
+              <Accordion.Control>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#FFB800] font-mono text-lg">
+                    {String(index + 1).padStart(2, "0")}.
+                  </span>
+                  <h2 className="font-semibold">{item.question}</h2>
+                </div>
+              </Accordion.Control>
+              <Accordion.Panel>
+                <p className="text-gray-600">{item.answer}</p>
+              </Accordion.Panel>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      </div>
       {/* CTA Section - Improved responsive design */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

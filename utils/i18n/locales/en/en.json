@@ -271,7 +271,7 @@
   },
   "yachtBroker": {
     "hero": {
-      "title": "Yacht Broker | Boat and Yacht Sales in Menorca",
+      "title": "Yacht Broker | Boat Sales and Vessel Specialists in Menorca",
       "subtitle": "Specialists in <1>buying</1> and <1>selling</1> of yachts in Menorca. Wide range of luxury vessels and personalized advice."
     },
     "navigation": {
@@ -279,31 +279,75 @@
       "usedYachts": "Used Yachts"
     },
     "description": {
-      "intro": "Check our stock of Yachts for sale below or discover our key features and contact us below. We have <1>used</1> Yachts or we can make contacts with shipyards to enter into <1>new construction</1> contracts.",
-      "expertise": "At Menorca Yacht Brokers, we transform the buying and selling of yachts into a smooth, professional, and personalized experience. Our team of experts combines deep knowledge of the nautical market with a customer-focused approach, ensuring that every transaction is a success."
+      "intro": "Browse our stock of Yachts for sale below or discover our key services and contact us. We have <1>pre-owned</1> Yachts available, or we can arrange contracts with shipyards for <1>new construction</1>.",
+      "expertise": "Our team of experts will guide you through the entire process of buying or selling your vessel, ensuring a professional and transparent experience."
     },
-    "yachtDetails": {
-      "viewDetails": "View Details",
-      "fields": {
-        "boatName": "Boat name",
-        "year": "Year",
-        "length": "Length",
-        "location": "Location",
-        "displacement": "Displacement",
-        "hull": "Hull",
-        "keel": "Keel",
-        "designer": "Designer",
-        "category": "Category"
+    "categories": {
+      "title": "Popular Categories",
+      "usedBoats": {
+        "title": "Used Boats",
+        "description": "Wide selection of verified vessels in excellent condition. Find affordable used boats, from open boats to used sailboats. All our vessels undergo a rigorous inspection process to ensure their quality."
       },
-      "units": {
-        "meters": "meters",
-        "kg": "kg"
+      "usedSailboats": {
+        "title": "Used Sailboats",
+        "description": "Extensive range of used sailboats selected and reviewed by experts. We offer the best options for buying used sailboats, from small vessels to large-length sailboats, all in excellent condition."
+      },
+      "catamarans": {
+        "title": "New and Used Catamarans",
+        "description": "Specialists in catamaran sales. We have a premium selection of new and used catamarans, ideal for family navigation and charter. Personalized advice on your catamaran purchase."
+      },
+      "luxuryYachts": {
+        "title": "Luxury Yachts",
+        "description": "The best deals on new and used luxury yachts. Extensive catalog of premium yachts and high-end vessels. Exclusive yacht buying and selling service with personalized advice."
+      },
+      "openBoats": {
+        "title": "Open Boats and Recreation",
+        "description": "Great selection of used open boats and recreational vessels. We offer premium brands like Quicksilver and other industry leaders. Perfect for enjoying safe navigation."
+      },
+      "newBoats": {
+        "title": "New Boats",
+        "description": "Comprehensive service for buying new boats with the best guarantees. We work with leading shipyards to offer you new vessels of the highest quality and performance."
+      }
+    },
+    "advantages": {
+      "title": "Why Choose Us?",
+      "experience": "Sales Experience",
+      "experienceDesc": "Over 15 years of experience in boat buying and selling. Specialists in managing the sale of all types of vessels, from used boats to luxury yachts.",
+      "selection": "Extensive Catalog",
+      "selectionDesc": "Wide selection of vessels including used sailboats, luxury yachts, catamarans, and open boats. All our vessels are verified and in excellent condition.",
+      "support": "Expert Advice",
+      "supportDesc": "We guide you through the entire process of buying a new or used boat. We offer personalized advice to find the perfect vessel according to your needs and budget."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "We answer your questions about buying and selling vessels",
+      "questions": {
+        "usedBoatConsiderations": {
+          "question": "What should I consider when buying a used boat?",
+          "answer": "When buying used boats, it's essential to verify their general condition, documentation, and perform a technical inspection. Our team handles all these verifications, ensuring a safe purchase of used vessels. Additionally, we offer expert advice to find the boat that best suits your needs and budget."
+        },
+        "usedSailboatProcess": {
+          "question": "What is the process for buying a used sailboat?",
+          "answer": "The process of buying a used sailboat includes selecting the appropriate model, technical inspection, documentation verification, and sea trial. Our experts accompany you every step of the way, from initial search to closing the purchase, ensuring you find the perfect used sailboat."
+        },
+        "availableBoats": {
+          "question": "What types of vessels do you have available?",
+          "answer": "We have a wide variety including used boats, used sailboats, luxury yachts, catamarans, open boats, and recreational vessels. We work with both new and used vessels, including premium brands like Quicksilver and other industry leaders."
+        },
+        "sellBoat": {
+          "question": "How can I sell my vessel?",
+          "answer": "We offer a comprehensive boat buying and selling service. We handle the valuation, marketing, and management of your vessel's sale, whether it's a sailboat, yacht, catamaran, or open boat. Our goal is to get the best market price for your boat."
+        },
+        "financing": {
+          "question": "Do you offer financing for vessel purchases?",
+          "answer": "Yes, we facilitate financing options for buying new and used boats. We work with different financial institutions to find the best solution that fits your budget, whether you're buying a luxury yacht or a more modest vessel."
+        }
       }
     },
     "cta": {
-      "title": "Interested in our services?",
-      "description": "Contact us to discover how we can help you find the perfect yacht",
-      "button": "Contact"
+      "title": "Interested in Buying or Selling a Vessel?",
+      "description": "Our team of experts is ready to help you",
+      "button": "Contact Now"
     }
   },
   "yachtCharter": {

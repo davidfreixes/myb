@@ -271,39 +271,83 @@
   },
   "yachtBroker": {
     "hero": {
-      "title": "Yacht Broker | Compra de Barcos y Yates en Menorca",
+      "title": "Compra y Venta de Barcos en Menorca | Especialistas en Embarcaciones",
       "subtitle": "Especialistas en <1>compra</1> y <1>venta</1> de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado."
     },
     "navigation": {
-      "newYachts": "Yates Nuevos",
-      "usedYachts": "Yates de Segunda Mano"
+      "newYachts": "Barcos Nuevos",
+      "usedYachts": "Barcos de Segunda Mano"
     },
     "description": {
       "intro": "Consulta nuestro stock de Yates en venta a continuación o descubre nuestras claves y contáctarnos más abajo. Contamos con Yates de <1>segunda mano</1> o se pueden realizar contactos con astilleros para entrar en contratos de <1>nueva construcción</1>.",
-      "expertise": "En Menorca Yacht Brokers, transformamos la compra y venta de yates en una experiencia fluida, profesional y personalizada. Nuestro equipo de expertos combina un profundo conocimiento del mercado náutico con un enfoque centrado en el cliente, garantizando que cada transacción sea un éxito."
+      "expertise": "Nuestro equipo de expertos te guiará en todo el proceso de compra o venta de tu embarcación, garantizando una experiencia profesional y transparente."
     },
-    "yachtDetails": {
-      "viewDetails": "Ver Detalles",
-      "fields": {
-        "boatName": "Nombre del barco",
-        "year": "Año",
-        "length": "Eslora",
-        "location": "Ubicación",
-        "displacement": "Desplazamiento",
-        "hull": "Casco",
-        "keel": "Quilla",
-        "designer": "Diseñador",
-        "category": "Categoría"
+    "categories": {
+      "title": "Categorías Populares",
+      "usedBoats": {
+        "title": "Barcos de Segunda Mano",
+        "description": "Amplia selección de embarcaciones verificadas y en excelente estado. Encuentra barcos de segunda mano baratos, desde barcas open hasta veleros usados. Todas nuestras embarcaciones pasan por un riguroso proceso de inspección para garantizar su calidad."
       },
-      "units": {
-        "meters": "metros",
-        "kg": "kg"
+      "usedSailboats": {
+        "title": "Veleros de Segunda Mano",
+        "description": "Extensa gama de veleros de segunda mano seleccionados y revisados por expertos. Ofrecemos las mejores opciones para comprar velero usado, desde embarcaciones pequeñas hasta veleros de gran eslora, todos en excelentes condiciones."
+      },
+      "catamarans": {
+        "title": "Catamaranes Nuevos y Usados",
+        "description": "Especialistas en compra venta de catamaranes. Disponemos de una selección premium de catamaranes nuevos y de segunda mano, ideales para navegación familiar y charter. Asesoramiento personalizado en la compra de tu catamarán."
+      },
+      "luxuryYachts": {
+        "title": "Yates de Lujo",
+        "description": "Las mejores ofertas en yates de lujo nuevos y usados. Amplio catálogo de yates premium y embarcaciones de alta gama. Servicio exclusivo de compra venta de yates con asesoramiento personalizado."
+      },
+      "openBoats": {
+        "title": "Barcas Open y Recreo",
+        "description": "Gran selección de barcas open segunda mano y embarcaciones de recreo. Disponemos de marcas premium como Quicksilver y otras líderes del sector. Perfectas para disfrutar de la navegación con total seguridad."
+      },
+      "newBoats": {
+        "title": "Barcos Nuevos",
+        "description": "Servicio integral para comprar barco nuevo con las mejores garantías. Trabajamos con los principales astilleros para ofrecerte embarcaciones nuevas de máxima calidad y rendimiento."
+      }
+    },
+    "advantages": {
+      "title": "¿Por Qué Elegirnos?",
+      "experience": "Experiencia en Compraventa",
+      "experienceDesc": "Más de 15 años de experiencia en compra venta de barcos y embarcaciones. Especialistas en gestionar la compra venta de todo tipo de embarcaciones, desde barcos de segunda mano hasta yates de lujo.",
+      "selection": "Amplio Catálogo",
+      "selectionDesc": "Extensa selección de embarcaciones que incluye veleros de segunda mano, yates de lujo, catamaranes y barcas open. Todas nuestras embarcaciones están verificadas y en excelente estado.",
+      "support": "Asesoramiento Experto",
+      "supportDesc": "Te guiamos en todo el proceso de comprar barco segunda mano o nuevo. Ofrecemos asesoramiento personalizado para encontrar la embarcación perfecta según tus necesidades y presupuesto."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Resolvemos tus dudas sobre la compra y venta de embarcaciones",
+      "questions": {
+        "usedBoatConsiderations": {
+          "question": "¿Qué debo considerar al comprar un barco de segunda mano?",
+          "answer": "Al comprar barcos de segunda mano es fundamental verificar su estado general, documentación y realizar una inspección técnica. Nuestro equipo se encarga de todas estas verificaciones, garantizando una compra segura de embarcaciones usadas. Además, ofrecemos asesoramiento experto para encontrar el barco que mejor se adapte a tus necesidades y presupuesto."
+        },
+        "usedSailboatProcess": {
+          "question": "¿Cuál es el proceso para comprar un velero usado?",
+          "answer": "El proceso de comprar velero segunda mano incluye la selección del modelo adecuado, inspección técnica, verificación de documentación y prueba de navegación. Nuestros expertos te acompañan en cada paso, desde la búsqueda inicial hasta el cierre de la compra, asegurando que encuentres el velero usado perfecto."
+        },
+        "availableBoats": {
+          "question": "¿Qué tipos de embarcaciones tienen disponibles?",
+          "answer": "Disponemos de una amplia variedad que incluye barcos de segunda mano, veleros usados, yates de lujo, catamaranes, barcas open y embarcaciones de recreo. Trabajamos tanto con embarcaciones nuevas como de segunda mano, incluyendo marcas premium como Quicksilver y otras líderes del sector."
+        },
+        "sellBoat": {
+          "question": "¿Cómo puedo vender mi embarcación?",
+          "answer": "Ofrecemos un servicio integral de compra venta de barcos. Nos encargamos de la valoración, marketing y gestión de la venta de tu embarcación, ya sea un velero, yate, catamarán o barca open. Nuestro objetivo es conseguir el mejor precio de mercado para tu barco."
+        },
+        "financing": {
+          "question": "¿Ofrecen financiación para la compra de embarcaciones?",
+          "answer": "Sí, facilitamos opciones de financiación para la compra de barcos nuevos y de segunda mano. Trabajamos con diferentes entidades financieras para encontrar la mejor solución que se adapte a tu presupuesto, ya sea para comprar un yate de lujo o una embarcación más modesta."
+        }
       }
     },
     "cta": {
-      "title": "¿Interesado en nuestros servicios?",
-      "description": "Contáctanos para descubrir cómo podemos ayudarte a encontrar el yate perfecto",
-      "button": "Contactar"
+      "title": "¿Interesado en Comprar o Vender una Embarcación?",
+      "description": "Nuestro equipo de expertos está listo para ayudarte",
+      "button": "Contactar Ahora"
     }
   },
   "yachtCharter": {
