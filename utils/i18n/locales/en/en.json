@@ -282,6 +282,24 @@
       "intro": "Browse our stock of Yachts for sale below or discover our key services and contact us. We have <1>pre-owned</1> Yachts available, or we can arrange contracts with shipyards for <1>new construction</1>.",
       "expertise": "Our team of experts will guide you through the entire process of buying or selling your vessel, ensuring a professional and transparent experience."
     },
+    "yachtDetails": {
+      "viewDetails": "View Details",
+      "fields": {
+        "boatName": "Boat name",
+        "year": "Year",
+        "length": "Length",
+        "location": "Location",
+        "displacement": "Displacement",
+        "hull": "Hull",
+        "keel": "Keel",
+        "designer": "Designer",
+        "category": "Category"
+      },
+      "units": {
+        "meters": "meters",
+        "kg": "kg"
+      }
+    },
     "categories": {
       "title": "Popular Categories",
       "usedBoats": {

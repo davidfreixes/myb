@@ -178,7 +178,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                         {t("yachtBroker.yachtDetails.fields.length")}:
                       </span>
                       <span>
-                        {yacht.length} {t("yachtDetails.units.meters")}
+                        {yacht.length} {t("yachtBroker.yachtDetails.units.meters")}
                       </span>
                     </div>
                     <div className="flex justify-between">
