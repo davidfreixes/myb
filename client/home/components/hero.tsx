@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative h-[100vh] md:h-[500px] w-full">
+    <div className="relative h-[100vh] max-h-[100vh] md:h-[500px] w-full">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
