@@ -135,7 +135,7 @@ export default function BunkerSupplyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/bunker-supply.jpg"
           alt="Ship broker service"
