@@ -26,84 +26,17 @@ interface YachtDetails {
 const sampleYachts: YachtDetails[] = [
   {
     id: "1",
-    type: "used",
-    model: "Salthouse 58ft Cutter",
-    price: 310098,
-    name: "Rory Mhor",
-    year: 1989,
-    length: 17.68,
-    location: "South Pacific, Fiji",
-    displacement: 28000,
-    hull: "Steel",
-    keel: "Winged Keel",
-    imageUrl: "/img/yacht-broker.jpg",
-    designer: "Salthouse",
-    category: "Used sail boat for sale",
-  },
-  {
-    id: "2",
     type: "new",
-    model: "Salthouse 58ft Cutter",
-    price: 310098,
-    name: "Rory Mhor",
-    year: 1989,
-    length: 17.68,
+    model: "OPEN 630",
+    price: 25500,
+
+    length: 6.3,
     location: "South Pacific, Fiji",
-    displacement: 28000,
-    hull: "Steel",
-    keel: "Winged Keel",
-    imageUrl: "/img/yacht-broker.jpg",
-    designer: "Salthouse",
-    category: "Used sail boat for sale",
+
+    imageUrl: "/img/yachts/open630.jpg",
+    designer: "View Yachting",
   },
-  {
-    id: "3",
-    type: "used",
-    model: "Salthouse 58ft Cutter",
-    price: 500000,
-    name: "Rory Mhor",
-    year: 1989,
-    length: 17.68,
-    location: "South Pacific, Fiji",
-    displacement: 28000,
-    hull: "Steel",
-    keel: "Winged Keel",
-    imageUrl: "/img/yacht-broker.jpg",
-    designer: "Salthouse",
-    category: "Used sail boat for sale",
-  },
-  {
-    id: "4",
-    type: "new",
-    model: "Salthouse 58ft Cutter",
-    price: 310098,
-    name: "Rory Mhor",
-    year: 1989,
-    length: 17.68,
-    location: "South Pacific, Fiji",
-    displacement: 28000,
-    hull: "Steel",
-    keel: "Winged Keel",
-    imageUrl: "/img/yacht-broker.jpg",
-    designer: "Salthouse",
-    category: "Used sail boat for sale",
-  },
-  {
-    id: "5",
-    type: "new",
-    model: "Salthouse 58ft Cutter",
-    price: 310098,
-    name: "Rory Mhor",
-    year: 1989,
-    length: 17.68,
-    location: "South Pacific, Fiji",
-    displacement: 28000,
-    hull: "Steel",
-    keel: "Winged Keel",
-    imageUrl: "/img/yacht-broker.jpg",
-    designer: "Salthouse",
-    category: "Used sail boat for sale",
-  },
+  
 
   // Add more sample yachts here
 ];
@@ -178,7 +111,8 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                         {t("yachtBroker.yachtDetails.fields.length")}:
                       </span>
                       <span>
-                        {yacht.length} {t("yachtBroker.yachtDetails.units.meters")}
+                        {yacht.length}{" "}
+                        {t("yachtBroker.yachtDetails.units.meters")}
                       </span>
                     </div>
                     <div className="flex justify-between">
