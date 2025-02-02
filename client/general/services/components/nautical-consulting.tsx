@@ -45,7 +45,7 @@ export default function NauticalConsulting() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[60vh] w-full">
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/nautical-consulting.jpg"
           alt="Asesoría náutica service"
