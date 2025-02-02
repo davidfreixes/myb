@@ -196,14 +196,14 @@ export default function YachtCharter() {
               <p className="text-base sm:text-lg text-gray-700">
                 {t("yachtCharter.discover.description")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
                   unstyled
                   className="bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
                 >
                   {t("yachtCharter.discover.button")}
                 </Button>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
