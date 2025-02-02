@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-[100vh] xs:h-[500px] flex-col py-8 md:py-12">
-          <div className="grid md:grid-cols-2 gap-20 md:gap-12 mt-12">
+          <div className="grid md:grid-cols-2 gap-14 md:gap-12 mt-12">
             {/* Left Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
