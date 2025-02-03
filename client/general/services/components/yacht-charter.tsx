@@ -107,7 +107,7 @@ export default function YachtCharter() {
           fill
           className="object-cover"
           priority
-          sizes="(min-width: 1024px) 800px, 100vw"
+          sizes="(min-width: 1024px) 100vw"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
@@ -182,6 +182,7 @@ export default function YachtCharter() {
                   alt="Luxury yacht interior"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 100vw"
                 />
               </div>
             </motion.div>

@@ -72,6 +72,7 @@ interface Category {
 }
 
 interface FAQ {
+  id: string;
   question: string;
   answer: string;
 }
@@ -92,7 +93,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               alt={yacht.model}
               fill
               className="object-cover"
-              sizes="(min-width: 1024px) 800px, 100vw"
+              sizes="(min-width: 1024px) 100vw"
             />
           </div>
 
@@ -106,7 +107,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
             </p>
 
             <Accordion className="shadow-sm">
-              <Accordion.Item value="details">
+              <Accordion.Item value={`details-${yacht.id}`}>
                 <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
                   <span className="text-sm sm:text-base">
                     {t("yachtBroker.yachtDetails.viewDetails")}
@@ -288,22 +289,27 @@ export default function YachtBroker() {
 
   const faqs: FAQ[] = [
     {
+      id: "1",
       question: t("yachtBroker.faq.questions.usedBoatConsiderations.question"),
       answer: t("yachtBroker.faq.questions.usedBoatConsiderations.answer"),
     },
     {
+      id: "2",
       question: t("yachtBroker.faq.questions.usedSailboatProcess.question"),
       answer: t("yachtBroker.faq.questions.usedSailboatProcess.answer"),
     },
     {
+      id: "3",
       question: t("yachtBroker.faq.questions.availableBoats.question"),
       answer: t("yachtBroker.faq.questions.availableBoats.answer"),
     },
     {
+      id: "4",
       question: t("yachtBroker.faq.questions.sellBoat.question"),
       answer: t("yachtBroker.faq.questions.sellBoat.answer"),
     },
     {
+      id: "5",
       question: t("yachtBroker.faq.questions.financing.question"),
       answer: t("yachtBroker.faq.questions.financing.answer"),
     },
@@ -330,7 +336,7 @@ export default function YachtBroker() {
           fill
           className="object-cover"
           priority
-          sizes="(min-width: 1024px) 800px, 100vw"
+          sizes="(min-width: 1024px) 100vw"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center items-start md:max-w-[1400px]">
@@ -427,7 +433,7 @@ export default function YachtBroker() {
                 </Tabs.List>
               </div>
 
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <Tabs.Panel value="new" ref={newBoatsSectionRef}>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -481,7 +487,7 @@ export default function YachtBroker() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {popularCategories.map((category, index) => (
             <motion.div
-              key={index}
+              key={category.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
@@ -493,7 +499,7 @@ export default function YachtBroker() {
                   alt={category.title}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 800px, 100vw"
+                  sizes="(min-width: 1024px 100vw"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
@@ -522,7 +528,7 @@ export default function YachtBroker() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {advantages.map((advantage, index) => (
               <motion.div
-                key={index}
+                key={advantage.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
@@ -572,7 +578,7 @@ export default function YachtBroker() {
           }}
         >
           {faqs.map((item, index) => (
-            <Accordion.Item key={`faq-${index}`} value={`question-${index}`}>
+            <Accordion.Item key={item.id} value={item.id}>
               <Accordion.Control>
                 <div className="flex items-center gap-2">
                   <span className="text-[#FFB800] font-mono text-lg">
