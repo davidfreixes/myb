@@ -75,6 +75,7 @@ export default function FeaturesSection() {
                     alt={feature.imageAlt}
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
                   />
                 </div>
               </div>

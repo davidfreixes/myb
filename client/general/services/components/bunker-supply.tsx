@@ -188,6 +188,7 @@ export default function BunkerSupplyPage() {
               alt="Puerto al atardecer"
               fill
               className="object-cover"
+              sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-4 sm:p-6">
@@ -272,6 +273,7 @@ export default function BunkerSupplyPage() {
                         alt={item.title}
                         fill
                         className="object-contain"
+                        sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
                       />
                     ) : item.images ? (
                       <div className="flex gap-4 h-full">
@@ -282,6 +284,7 @@ export default function BunkerSupplyPage() {
                               alt={img.alt}
                               fill
                               className="object-contain"
+                              sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
                             />
                           </div>
                         ))}

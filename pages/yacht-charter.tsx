@@ -40,6 +40,7 @@ export default function YachtCharterPage() {
               height: 634,
               alt: "Menorca Yacht Brokers",
               type: "image/jpg",
+              
             },
           ],
           siteName: "Menorca Yacht Brokers",

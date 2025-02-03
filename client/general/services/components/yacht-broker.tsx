@@ -92,6 +92,7 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               alt={yacht.model}
               fill
               className="object-cover"
+              sizes="(min-width: 1024px) 800px, 100vw"
             />
           </div>
 
@@ -329,6 +330,7 @@ export default function YachtBroker() {
           fill
           className="object-cover"
           priority
+          sizes="(min-width: 1024px) 800px, 100vw"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center items-start md:max-w-[1400px]">
@@ -491,6 +493,7 @@ export default function YachtBroker() {
                   alt={category.title}
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 800px, 100vw"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
