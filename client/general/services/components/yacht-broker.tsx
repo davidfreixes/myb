@@ -38,7 +38,7 @@ const sampleYachts: YachtDetails[] = [
     id: "2",
     type: "new",
     model: "SPIRIT 1500",
-    price: 900000,
+    price: 990000,
     length: 14.96,
     location: "Maó, Illes Balears, España",
     imageUrl: "/img/yachts/spirit1500.jpg",
@@ -100,7 +100,8 @@ function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               {yacht.model}
             </h3>
             <p className="text-base sm:text-lg font-semibold text-primary mb-3 sm:mb-4">
-              {yacht.price.toLocaleString()} €
+              {yacht.price.toLocaleString()} €{" "}
+              {yacht.model === "SPIRIT 1500" && "+ VAT + Transport"}
             </p>
 
             <Accordion className="shadow-sm">
