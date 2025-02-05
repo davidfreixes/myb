@@ -168,7 +168,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               src="/img/logo.png"
               alt="Menorca Yacht Brokers"
               width={150}
-              height={60}
+              height={150}
               className="h-12 w-auto"
             />
           </Link>
