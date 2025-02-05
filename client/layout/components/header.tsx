@@ -165,11 +165,10 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/img/logo.png"
+              src="/img/logo-no-title.png"
               alt="Menorca Yacht Brokers"
-              width={60}
-              height={60}
-              className="w-auto"
+              width={55}
+              height={55}
             />
           </Link>
 
