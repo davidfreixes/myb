@@ -15,6 +15,7 @@ export default function ArticlePerfectYacht() {
           fill
           className="object-cover"
           priority
+          sizes="(min-width: 1024px) 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 p-8 text-white">
@@ -51,6 +52,7 @@ export default function ArticlePerfectYacht() {
             width={800}
             height={600}
             className="rounded-lg w-[350px]"
+            sizes="(min-width: 1024px) 100vw"
           />
           <div>
             <h2 className="text-2xl text-primary font-bold mb-4">
@@ -75,6 +77,7 @@ export default function ArticlePerfectYacht() {
             alt={t("mainPage.articlePerfectYacht.content.image2.alt")}
             fill
             className="object-cover"
+            sizes="(min-width: 1024px) 100vw"
           />
         </div>
 
@@ -101,6 +104,7 @@ export default function ArticlePerfectYacht() {
               width={800}
               height={600}
               className="rounded-lg w-[350px]"
+              sizes="(min-width: 1024px), 100vw"
             />
           </div>
         </div>

@@ -167,9 +167,8 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             <Image
               src="/img/logo.png"
               alt="Menorca Yacht Brokers"
-              width={150}
-              height={150}
-              className="h-12 w-auto"
+              width={70}
+              height={70}
             />
           </Link>
 
@@ -268,7 +267,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                   className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
                 >
                   <div className="flex gap-2 px-2 items-center">
-                    <Globe size={20}/>
+                    <Globe size={20} />
                     <span>{i18n.language.toUpperCase()}</span>
                     <ChevronDown size={16} />
                   </div>
