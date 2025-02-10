@@ -9,6 +9,19 @@ export default function ContactPage() {
   useEffect(() => {
     setIsLoaded(true); // Aseguramos que i18next esté cargado
   }, []);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_CLIENT}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => console.log("reCAPTCHA cargado");
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   if (!isLoaded) return null;
 
   return (
