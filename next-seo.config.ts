@@ -1,23 +1,33 @@
 import { NextSeoProps } from "next-seo";
 
-export default {
+const SEO: NextSeoProps = {
   title: "Menorca Yacht Brokers",
-  description: "Menorca Yacht Brokers",
+  description: "Tu Broker de Yates de confianza",
   openGraph: {
     type: "website",
-    locale: "en_IE",
-    url: "https://www.url.ie/",
+    locale: "es_ES",
+    url: "https://menorcabrokers.com/",
     site_name: "Menorca Yacht Brokers",
+    images: [
+      {
+        url: `${
+          process.env.VERCEL_URL
+            ? "https://" + process.env.VERCEL_URL
+            : process.env.NEXT_PUBLIC_APP_URL
+        }/img/logo.png`,
+        width: 846,
+        height: 634,
+        alt: "Menorca Yacht Brokers",
+        type: "image/png",
+      },
+    ],
+    siteName: "Menorca Yacht Brokers",
   },
-  additionalMetaTags: [
-    {
-      property: "og:image",
-      content: "https://www.example.ie/image.jpg",
-    },
-  ],
   twitter: {
-    handle: "@handle",
-    site: "@site",
+    handle: "@MenorcaBrokers",
+    site: "@MenorcaBrokers",
     cardType: "summary_large_image",
   },
-} as NextSeoProps;
+};
+
+export default SEO;

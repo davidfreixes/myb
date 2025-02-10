@@ -23,11 +23,11 @@ export default function App({ Component, pageProps }: AppProps) {
         language="es"
         useEnterprise={true}
       > */}
-        <MantineProvider>
-          <I18nextProvider i18n={i18n}>
-            <Component {...pageProps} />
-          </I18nextProvider>
-        </MantineProvider>
+      <MantineProvider>
+        <I18nextProvider i18n={i18n}>
+          <Component {...pageProps} />
+        </I18nextProvider>
+      </MantineProvider>
       {/* </GoogleReCaptchaProvider> */}
     </>
   );
