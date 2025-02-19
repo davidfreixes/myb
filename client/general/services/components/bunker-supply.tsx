@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   Anchor,
   BarChart2,
-  Download,
   Globe2,
   ShieldCheck,
   Ship,
@@ -11,7 +10,6 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
@@ -210,12 +208,10 @@ export default function BunkerSupplyPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
                 unstyled
-                component={Link}
-                href="https://drive.google.com/drive/folders/1ZWu3DTd9eiAOyjdhFq1MpZsxdDt4K8ho"
+                onClick={() => setContactModalOpened(true)}
                 className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <Download className="w-4 h-4" />
                   {t("bunkerSupply.dailyPosition.downloadButton")}
                 </div>
               </Button>

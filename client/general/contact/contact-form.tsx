@@ -192,10 +192,10 @@ export default function ContactForm() {
         <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
           <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
           <a
-            href="mailto:contact@menorcabrokers.com"
+            href="mailto:info@menorcabrokers.com"
             className="hover:text-primary"
           >
-            contact@menorcabrokers.com
+            info@menorcabrokers.com
           </a>
         </div>
       </div>

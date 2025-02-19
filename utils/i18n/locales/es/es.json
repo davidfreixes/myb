@@ -460,16 +460,16 @@
   },
   "bunkerSupply": {
     "hero": {
-      "title": "Suministro de Combustible Marino en Menorca",
-      "subtitle": "Suministramos combustible para barcos en la isla de Menorca y el resto de España.",
-      "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2> y <2>CEPSA</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
+      "title": "Suministro de Combustible Marino",
+      "subtitle": "Suministramos combustible para barcos en la isla de Menorca, el resto de España y la mayoria de puertos comerciales del mundo.",
+      "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
     },
     "dailyPosition": {
       "title": "Daily Position",
       "updateStatus": "Actualizado diariamente",
       "sectionTitle": "Menorca Brokers - Daily Position",
-      "description": "A continuación, puedes descargarte nuestro daily, consultar nuestro contrato tipo y consultar las navieras españolas en activo.",
-      "downloadButton": "Descargar Daily Position"
+      "description": "Contáctanos para recibir información de nuestros últimos precios de suministro.",
+      "downloadButton": "Contactar"
     },
     "marketIndices": {
       "title": "Nuestros índices y proveedores del mercado marítimo",
@@ -1144,7 +1144,7 @@
           "name": "Andreu Martinez",
           "role": "Yacht Broker & Charterer",
           "location": "España",
-          "email": "contact@menorcabrokers.com",
+          "email": "info@menorcabrokers.com",
           "bio": [
             "Andreu Martínez Parera es un broker con una sólida formación académica en el ámbito marítimo.",
             "Formado en el Instituto Marítimo Español y en el Institute of Chartered Shipbrokers de Londres. Además, cuenta con una carrera en Náutica, habiendo obtenido su título en Ciencias Náuticas con especialización en Transporte Marítimo. Su educación se complementa con un Máster en Gestión del Transporte Marítimo y una formación de Postgrado en Logística y Supply Chain, lo que le ha permitido desarrollar una visión integral del sector.",

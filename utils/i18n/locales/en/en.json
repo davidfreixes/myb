@@ -460,16 +460,16 @@
   },
   "bunkerSupply": {
     "hero": {
-      "title": "Marine Fuel Supply in Menorca",
-      "subtitle": "We supply fuel for boats on the island of Menorca and the rest of Spain.",
-      "subtitle2": "Through our partner <2>Stabia Oil</2> and <2>CEPSA</2>. We can supply all types of marine fuel on the island of Menorca."
+      "title": "Marine Fuel Supply",
+      "subtitle": "We supply fuel for boats on Menorca island, the rest of Spain and most world comercial ports.",
+      "subtitle2": "Through our partner <2>Stabia Oil</2>. We can supply all types of marine fuel on the island of Menorca."
     },
     "dailyPosition": {
       "title": "Daily Position",
       "updateStatus": "Updated daily",
       "sectionTitle": "Menorca Brokers - Daily Position",
-      "description": "Below, you can download our daily, consult our standard contract and check active Spanish shipping companies.",
-      "downloadButton": "Download Daily Position"
+      "description": "Contact us to receive information on our latest supply rates.",
+      "downloadButton": "Contact us"
     },
     "marketIndices": {
       "title": "Our Maritime Market Indices and Providers",
@@ -1140,7 +1140,7 @@
           "name": "Andreu Martinez",
           "role": "Yacht Broker & Charterer",
           "location": "Spain",
-          "email": "contact@menorcabrokers.com",
+          "email": "info@menorcabrokers.com",
           "bio": [
             "Andreu Martínez Parera is a broker with a solid academic background in the maritime field.",
             "Trained at the Spanish Maritime Institute and the Institute of Chartered Shipbrokers in London. Additionally, he holds a degree in Nautical Science with a specialization in Maritime Transport. His education is complemented by a Master's in Maritime Transport Management and Postgraduate training in Logistics and Supply Chain, which has allowed him to develop a comprehensive vision of the sector.",

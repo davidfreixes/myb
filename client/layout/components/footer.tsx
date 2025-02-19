@@ -215,7 +215,7 @@ export function Footer() {
                 <Instagram size={20} />
               </Link>
               <Link
-                href="mailto:contact@menorcabrokers.com"
+                href="mailto:info@menorcabrokers.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary"
