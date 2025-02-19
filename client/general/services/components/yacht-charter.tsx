@@ -100,16 +100,18 @@ export default function YachtCharter() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full">
-        <Image
-          src="/img/yacht-charter.jpg"
-          alt="Yacht charter service"
-          fill
-          className="object-cover"
-          priority
-          sizes="(min-width: 1024px) 100vw"
-        />
-        <div className="absolute inset-0 bg-black/50" />
+      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
+        <div className="absolute inset-0">
+          <video
+            src="/videos/hero-video.mp4"
+            className="w-full h-full object-cover z-0"
+            autoPlay
+            playsInline
+            muted
+            loop
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

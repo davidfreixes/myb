@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative h-[100vh] max-h-[100vh] md:h-[500px] w-full">
+    <div className="flex relative h-[100vh] max-h-[100vh] md:h-[500px] w-full">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
@@ -39,9 +39,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div className="flex relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-[100vh] xs:h-[500px] flex-col py-8 md:py-12">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-12 mt-12">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-2 lg:gap-10 mt-12">
             {/* Left Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -65,6 +65,23 @@ export default function Hero() {
                   </Trans>
                 </h2>
               </div>
+              <div className="sm:hidden mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+                <Button
+                  unstyled
+                  onClick={scrollToServices}
+                  className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
+                >
+                  {t("mainPage.hero.buttons.explore_services")}
+                </Button>
+                <Button
+                  component={Link}
+                  href={`${NAVIGATION_LINKS.CONTACTO}`}
+                  unstyled
+                  className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
+                >
+                  {t("mainPage.hero.buttons.contact_us")}
+                </Button>
+              </div>
             </motion.div>
 
             {/* Right Column */}
@@ -72,7 +89,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2"
+              className="hidden sm:flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2"
             >
               <div className="space-y-4 md:space-y-6">
                 <h2 className="text-3xl font-light text-white">
