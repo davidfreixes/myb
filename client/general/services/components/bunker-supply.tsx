@@ -6,8 +6,8 @@ import {
   Globe2,
   ShieldCheck,
   Ship,
-  Truck,
   Users,
+  Wheat
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -119,7 +119,7 @@ export default function BunkerSupplyPage() {
       description: t(
         "bunkerSupply.specializedServices.services.dryBulk.description"
       ),
-      icon: <Truck className="w-6 h-6 text-primary" />,
+      icon: <Wheat className="w-6 h-6 text-primary" />,
     },
     {
       title: t("bunkerSupply.specializedServices.services.liquidBulk.title"),

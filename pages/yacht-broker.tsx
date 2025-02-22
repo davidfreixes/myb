@@ -17,25 +17,15 @@ export default function YachtBrokerPage() {
       <NextSeo
         title="Yacht Broker | Compra y Venta de Yates en Menorca"
         description="Especialistas en compra y venta de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado. "
-        canonical={
-          process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + '/yackt-broker'
-        }
+        canonical={process.env.VERCEL_URL + "/yackt-broker"}
         openGraph={{
-          url: process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + '/yackt-broker',
+          url: process.env.VERCEL_URL + "/yackt-broker",
           title: "Yacht Broker | Compra y Venta de Yates en Menorca",
           description:
             "Especialistas en compra y venta de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado. ",
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? "https://" + process.env.VERCEL_URL
-                  : process.env.NEXT_PUBLIC_APP_URL
-              }/img/yacht-broker.jpg`,
+              url: `/img/yacht-broker.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

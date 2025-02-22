@@ -330,7 +330,7 @@
     "advantages": {
       "title": "Why Choose Us?",
       "experience": "Sales Experience",
-      "experienceDesc": "Over 15 years of experience in boat buying and selling. Specialists in managing the sale of all types of vessels, from used boats to luxury yachts.",
+      "experienceDesc": "More than 15 years sailing boats and ships. Specialists in managing the sale of all types of vessels, from used boats to luxury yachts.",
       "selection": "Extensive Catalog",
       "selectionDesc": "Wide selection of vessels including used sailboats, luxury yachts, catamarans, and open boats. All our vessels are verified and in excellent condition.",
       "support": "Expert Advice",
@@ -503,7 +503,7 @@
         },
         "dryBulk": {
           "title": "Dry Bulk Cargo",
-          "description": "Specialists certified by the Institute of Chartered Shipbrokers in handling and managing dry bulk cargo."
+          "description": "Specialists in handling and managing dry bulk cargo."
         },
         "liquidBulk": {
           "title": "Liquid Bulk Cargo",

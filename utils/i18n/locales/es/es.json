@@ -330,7 +330,7 @@
     "advantages": {
       "title": "¿Por Qué Elegirnos?",
       "experience": "Experiencia en Compraventa",
-      "experienceDesc": "Más de 15 años de experiencia en compra venta de barcos y embarcaciones. Especialistas en gestionar la compra venta de todo tipo de embarcaciones, desde barcos de segunda mano hasta yates de lujo.",
+      "experienceDesc": "Más de 15 años navegando en barcos y embarcaciones. Especialistas en gestionar la compra venta de todo tipo de embarcaciones, desde barcos de segunda mano hasta yates de lujo.",
       "selection": "Amplio Catálogo",
       "selectionDesc": "Extensa selección de embarcaciones que incluye veleros de segunda mano, yates de lujo, catamaranes y barcas open. Todas nuestras embarcaciones están verificadas y en excelente estado.",
       "support": "Asesoramiento Experto",
@@ -503,7 +503,7 @@
         },
         "dryBulk": {
           "title": "Dry Bulk Cargo",
-          "description": "Especialistas certificados por el Institute of Chartered Shipbrokers en el manejo y gestión de cargas secas a granel."
+          "description": "Especialistas en el manejo y gestión de cargas secas a granel."
         },
         "liquidBulk": {
           "title": "Liquid Bulk Cargo",
