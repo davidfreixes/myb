@@ -1,6 +1,6 @@
-import ValueAddedServices from "@/client/general/services/components/added-value";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import ValueAddedServices from "@/client/services/components/added-value";
 import { useEffect, useState } from "react";
 
 export default function ValueAddedServicesPage() {

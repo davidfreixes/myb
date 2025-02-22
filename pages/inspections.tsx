@@ -1,6 +1,6 @@
-import Inspections from "@/client/general/services/components/inspections";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import Inspections from "@/client/services/components/inspections";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 

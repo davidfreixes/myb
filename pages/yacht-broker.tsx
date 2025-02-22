@@ -1,6 +1,6 @@
-import YachtBroker from "@/client/general/services/components/yacht-broker";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import YachtBroker from "@/client/services/yacht-broker/components/yacht-broker";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 

@@ -1,68 +1,13 @@
-import { Accordion, Button, Card, Tabs } from "@mantine/core";
+import { sampleYachts } from "@/utils/yachts";
+import { Accordion, Button, Tabs } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
-import { Anchor, ChevronDown, Ship, Users } from "lucide-react";
+import { Anchor, Ship, Users } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import ContactModal from "../../contact/modal/contactModal";
+import ContactModal from "../../../general/contact/modal/contactModal";
+import { YachtCards } from "./yachtChards";
 
-interface YachtDetails {
-  id: string;
-  type: "new" | "used";
-  model: string;
-  price: number;
-  name?: string;
-  year?: number;
-  length: number;
-  location: string;
-  displacement?: number;
-  hull?: string;
-  keel?: string;
-  imageUrl: string;
-  designer?: string;
-  category?: string;
-}
-
-const sampleYachts: YachtDetails[] = [
-  {
-    id: "1",
-    type: "new",
-    model: "OPEN 630",
-    price: 25500,
-    length: 6.3,
-    location: "Maó, Illes Balears, España",
-    imageUrl: "/img/yachts/open630.jpg",
-    designer: "View Yachting",
-  },
-  {
-    id: "2",
-    type: "new",
-    model: "SPIRIT 1500",
-    price: 990000,
-    length: 14.96,
-    location: "Maó, Illes Balears, España",
-    imageUrl: "/img/yachts/spirit1500.jpg",
-    designer: "View Yachting",
-  },
-  // {
-  //   id: "3",
-  //   type: "new",
-  //   model: "Salthouse 58ft Cutter",
-  //   price: 310098,
-  //   name: "Rory Mhor",
-  //   year: 1989,
-  //   length: 17.68,
-  //   location: "South Pacific, Fiji",
-  //   displacement: 28000,
-  //   hull: "Steel",
-  //   keel: "Winged Keel",
-  //   imageUrl: "/img/yacht-broker.jpg",
-  //   designer: "Salthouse",
-  //   category: "Used sail boat for sale",
-  // },
-
-  // Add more sample yachts here
-];
 
 interface Category {
   title: string;
@@ -77,129 +22,6 @@ interface FAQ {
   answer: string;
 }
 
-function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
-  const { t } = useTranslation();
-
-  return (
-    <>
-      {yachts.map((yacht) => (
-        <Card
-          key={yacht.id}
-          className="overflow-hidden border shadow-sm hover:shadow-lg transition-shadow duration-300"
-        >
-          <div className="relative h-48 sm:h-56 md:h-64">
-            <Image
-              src={yacht.imageUrl || "/placeholder.svg"}
-              alt={yacht.model}
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 100vw"
-            />
-          </div>
-
-          <div className="p-3 sm:p-4 md:p-5">
-            <h3 className="text-lg sm:text-xl font-montserrat font-medium mb-2">
-              {yacht.model}
-            </h3>
-            <p className="text-base sm:text-lg font-semibold text-primary mb-3 sm:mb-4">
-              {yacht.price.toLocaleString()} €{" "}
-              {yacht.model === "SPIRIT 1500" && "+ VAT + Transport"}
-            </p>
-
-            <Accordion className="shadow-sm">
-              <Accordion.Item value={`details-${yacht.id}`}>
-                <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
-                  <span className="text-sm sm:text-base">
-                    {t("yachtBroker.yachtDetails.viewDetails")}
-                  </span>
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <div className="space-y-2 text-xs sm:text-sm">
-                    {yacht.name && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.boatName")}:
-                        </span>
-                        <span>{yacht.name}</span>
-                      </div>
-                    )}
-                    {/* Other yacht details remain the same, with text-xs sm:text-sm classes */}
-                    {yacht.year && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.year")}:
-                        </span>
-                        <span>{yacht.year}</span>
-                      </div>
-                    )}
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">
-                        {t("yachtBroker.yachtDetails.fields.length")}:
-                      </span>
-                      <span>
-                        {yacht.length}{" "}
-                        {t("yachtBroker.yachtDetails.units.meters")}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">
-                        {t("yachtBroker.yachtDetails.fields.location")}:
-                      </span>
-                      <span className="text-right">{yacht.location}</span>
-                    </div>
-                    {yacht.displacement && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.displacement")}:
-                        </span>
-                        <span>
-                          {yacht.displacement}{" "}
-                          {t("yachtBroker.yachtDetails.units.kg")}
-                        </span>
-                      </div>
-                    )}
-                    {yacht.hull && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.hull")}:
-                        </span>
-                        <span>{yacht.hull}</span>
-                      </div>
-                    )}
-                    {yacht.keel && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.keel")}:
-                        </span>
-                        <span>{yacht.keel}</span>
-                      </div>
-                    )}
-                    {yacht.designer && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.designer")}:
-                        </span>
-                        <span>{yacht.designer}</span>
-                      </div>
-                    )}
-                    {yacht.category && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.category")}:
-                        </span>
-                        <span className="text-right">{yacht.category}</span>
-                      </div>
-                    )}
-                  </div>
-                </Accordion.Panel>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-        </Card>
-      ))}
-    </>
-  );
-}
 
 export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
@@ -397,7 +219,7 @@ export default function YachtBroker() {
           </p>
 
           {/* Yacht Catalog - Responsive grid and spacing */}
-          <div className="container mx-auto py-4">
+          <div className="container mx-auto border px-2 rounded-md">
             <Tabs
               value={activeTab}
               onChange={setActiveTab}

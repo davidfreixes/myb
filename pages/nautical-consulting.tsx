@@ -1,6 +1,6 @@
-import NauticalConsulting from "@/client/general/services/components/nautical-consulting";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import NauticalConsulting from "@/client/services/components/nautical-consulting";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 

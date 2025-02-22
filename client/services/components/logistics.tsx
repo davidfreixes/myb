@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import ContactModal from "../../contact/modal/contactModal";
+import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function Logistics() {
   const [contactModalOpened, setContactModalOpened] = useState(false);

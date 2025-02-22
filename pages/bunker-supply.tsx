@@ -1,6 +1,6 @@
-import BunkerSupplyPage from "@/client/general/services/components/bunker-supply";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import BunkerSupplyPage from "@/client/services/components/bunker-supply";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 

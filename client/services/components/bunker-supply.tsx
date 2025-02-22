@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import ContactModal from "../../contact/modal/contactModal";
+import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function BunkerSupplyPage() {
   const [contactModalOpened, setContactModalOpened] = useState(false);

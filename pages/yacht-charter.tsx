@@ -1,6 +1,6 @@
-import YachtCharter from "@/client/general/services/components/yacht-charter";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
+import YachtCharter from "@/client/services/components/yacht-charter";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 
