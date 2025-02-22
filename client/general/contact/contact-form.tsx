@@ -109,7 +109,7 @@ export default function ContactForm() {
       const submitFormData = new FormData();
       submitFormData.append(
         "access_key",
-        "e82ba814-9abf-4c97-9095-478a42b09660" //process.env.WEB3FORMS_ACCESS_KEY || ""
+        "ad8b8a66-1708-45fd-9f5d-68feae1da60e" //process.env.WEB3FORMS_ACCESS_KEY || ""
       );
 
       // Formatear el teléfono antes de enviarlo
@@ -192,10 +192,10 @@ export default function ContactForm() {
         <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
           <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
           <a
-            href="mailto:info@menorcabrokers.com"
+            href="mailto:contact@menorcabrokers.com"
             className="hover:text-primary"
           >
-            info@menorcabrokers.com
+            contact@menorcabrokers.com
           </a>
         </div>
       </div>

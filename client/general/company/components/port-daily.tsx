@@ -117,7 +117,7 @@ export default function PortDaily() {
             <div className="flex justify-center gap-4">
               <Button
                 component={Link}
-                href="mailto:info@menorcabrokers.com"
+                href="mailto:contact@menorcabrokers.com"
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/50 transition-colors"
               >
