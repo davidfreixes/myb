@@ -17,25 +17,15 @@ export default function YachtCharterPage() {
       <NextSeo
         title="Yacht Charter en Menorca | Alquila tu Barce en Menorca"
         description="Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium."
-        canonical={
-          process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/yacht-charter"
-        }
+        canonical={process.env.VERCEL_URL + "/yacht-charter"}
         openGraph={{
-          url: process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/yacht-charter",
+          url: process.env.VERCEL_URL + "/yacht-charter",
           title: "Yacht Charter en Menorca | Alquila tu Barce en Menorca",
           description:
             "Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium.",
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? "https://" + process.env.VERCEL_URL
-                  : process.env.NEXT_PUBLIC_APP_URL
-              }/img/yacht-charter.jpg`,
+              url: `${process.env.VERCEL_URL}/img/yacht-charter.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

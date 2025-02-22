@@ -17,25 +17,15 @@ export default function InspectionsPage() {
       <NextSeo
         title="Inspección y Tasación de Barcos y Yates en Menorca | Menorca Yacht Brokers"
         description="Servicios especializados de inspección y tasación marítima para compradores y vendedores"
-        canonical={
-          process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/inspections"
-        }
+        canonical={process.env.VERCEL_URL + "/inspections"}
         openGraph={{
-          url: process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/inspections",
+          url: process.env.VERCEL_URL + "/inspections",
           title: "Inspección y Tasación de Barcos y Yates en Menorca",
           description:
             "Servicios especializados de inspección y tasación marítima para compradores y vendedores",
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? "https://" + process.env.VERCEL_URL
-                  : process.env.NEXT_PUBLIC_APP_URL
-              }/img/inspections.jpg`,
+              url: `${process.env.VERCEL_URL}/img/inspections.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

@@ -25,7 +25,7 @@ export default function YachtBrokerPage() {
             "Especialistas en compra y venta de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado. ",
           images: [
             {
-              url: `/img/yacht-broker.jpg`,
+              url: `${process.env.VERCEL_URL}/img/yacht-broker.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

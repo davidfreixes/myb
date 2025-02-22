@@ -17,25 +17,16 @@ export default function LogisticsPage() {
       <NextSeo
         title="Logística de carga Marítima y Aérea | Menorca Yacht Brokers"
         description="¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información."
-        canonical={
-          process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/logistics"
-        }
+        canonical={process.env.VERCEL_URL + "/logistics"}
         openGraph={{
-          url: process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/logistics",
-          title: "Logística Marítima en Menorca | Cargo y Servicios Personalizados",
+          url: process.env.VERCEL_URL + "/logistics",
+          title:
+            "Logística Marítima en Menorca | Cargo y Servicios Personalizados",
           description:
             "¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información.",
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? "https://" + process.env.VERCEL_URL
-                  : process.env.NEXT_PUBLIC_APP_URL
-              }/img/logistics.jpg`,
+              url: `${process.env.VERCEL_URL}/img/logistics.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

@@ -18,24 +18,20 @@ export default function Home() {
   }, []);
   if (!isLoaded) return null;
 
-  const appUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : process.env.NEXT_PUBLIC_APP_URL ?? "https://menorcabrokers.com"; // URL de respaldo
-
   return (
     <>
       <NextSeo
         title="Menorca Yacht Brokers | Yacht Broker & Charter in Menorca"
         description="En Menorca Yacht Brokers, te ofrecemos soluciones completas para la compraventa de yates en Menorca, charters, gestíon de cargas y asesoría náutica."
-        canonical={appUrl}
+        canonical={process.env.VERCEL_URL}
         openGraph={{
-          url: appUrl,
+          url: process.env.VERCEL_URL,
           title: "Menorca Yacht Brokers | Yacht Broker & Charter in Menorca",
           description:
             "En Menorca Yacht Brokers, te ofrecemos soluciones completas para la compraventa de yates en Menorca, charters, gestíon de cargas y asesoría náutica",
           images: [
             {
-              url: `${appUrl}/img/logo.png`,
+              url: `${process.env.VERCEL_URL}/img/logo.png`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",

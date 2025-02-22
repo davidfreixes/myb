@@ -17,25 +17,15 @@ export default function ShipBrokerPage() {
       <NextSeo
         title="Menorca Brokers | Suministro de Combustible para Barcos en Menorca"
         description="Suministramos combustible para barcos en la isla de Menorca y el resto de España. Contacta con nosotros para más información."
-        canonical={
-          process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/yackt-broker"
-        }
+        canonical={process.env.VERCEL_URL + "/bunker-supply"}
         openGraph={{
-          url: process.env.VERCEL_URL
-            ? "https://" + process.env.VERCEL_URL
-            : process.env.NEXT_PUBLIC_APP_URL + "/yackt-broker",
+          url: process.env.VERCEL_URL + "/bunker-supply",
           title: "Suministro de Combustible marino en Menorca",
           description:
             "Suministramos combustible para barcos en la isla de Menorca y el resto de España. Contacta con nosotros para más información.",
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? "https://" + process.env.VERCEL_URL
-                  : process.env.NEXT_PUBLIC_APP_URL
-              }/img/bynker-supply.jpg`,
+              url: `${process.env.VERCEL_URL}/img/bunker-supply.jpg`,
               width: 846,
               height: 634,
               alt: "Menorca Yacht Brokers",
