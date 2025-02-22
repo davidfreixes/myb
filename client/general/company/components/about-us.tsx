@@ -54,7 +54,7 @@ const teamMembers = [
     name: "David Freixes",
     role: "IT Developer & Co-Owner",
     location: "Spain",
-    image: "/img/logo.png",
+    image: "/img/team/david-freixes.jpg",
   },
 ];
 
