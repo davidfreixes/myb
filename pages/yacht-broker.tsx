@@ -15,31 +15,32 @@ export default function YachtBrokerPage() {
   return (
     <>
       <NextSeo
-        title="Yacht Broker | Compra y Venta de Yates en Menorca"
-        description="Especialistas en compra y venta de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado. "
-        canonical={process.env.VERCEL_URL + "/yackt-broker"}
+        title="Yacht Broker en Menorca | Compra y Venta de Yates de Lujo"
+        description="Compra y vende yates de lujo en Menorca con el mejor asesoramiento náutico. Accede a embarcaciones exclusivas y servicios de gestión integral."
+        canonical="https://www.menorcayachtbrokers.com/yacht-broker"
         openGraph={{
-          url: process.env.VERCEL_URL + "/yackt-broker",
-          title: "Yacht Broker | Compra y Venta de Yates en Menorca",
+          url: "https://www.menorcayachtbrokers.com/yacht-broker",
+          title: "Yacht Broker en Menorca | Compra y Venta de Yates de Lujo",
           description:
-            "Especialistas en compra y venta de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado. ",
+            "Compra y vende yates de lujo en Menorca con el mejor asesoramiento náutico. Accede a embarcaciones exclusivas y servicios de gestión integral.",
           images: [
             {
               url: "https://www.menorcayachtbrokers.com/img/logo.png",
               width: 1200,
               height: 630,
-              alt: "Menorca Yacht Brokers",
+              alt: "Menorca Yacht Brokers - Compra y Venta de Yates",
               type: "image/png",
             },
           ],
           siteName: "Menorca Yacht Brokers",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@menorcayachts",
+          site: "@menorcayachts",
           cardType: "summary_large_image",
         }}
       />
+      ;
       <Header sticky={false} isTransparent={true} />
       <YachtBroker />
       <Footer />
