@@ -33,8 +33,7 @@ export default function YachtBroker() {
   const popularCategories: Category[] = [
     {
       title: t("yachtBroker.categories.usedBoats.title"),
-      description:
-        "Amplia selección de embarcaciones verificadas y en excelente estado. Encuentra barcos de segunda mano baratos, desde barcas open hasta veleros usados. Todas nuestras embarcaciones pasan por un riguroso proceso de inspección para garantizar su calidad.",
+      description: t("yachtBroker.categories.usedBoats.description"),
       image: "/img/yacht-broker/second-hand.jpg",
       keywords: [
         "barcos segunda mano",
@@ -289,13 +288,13 @@ export default function YachtBroker() {
             </Tabs>
           </div>
 
-          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
+          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 sm:pt-4">
             {t("yachtBroker.description.expertise")}
           </p>
         </motion.div>
       </div>
       {/* Nueva sección de categorías populares */}
-      <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
+      <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-14 md:max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

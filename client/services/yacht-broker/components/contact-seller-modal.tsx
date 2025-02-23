@@ -1,4 +1,6 @@
-import { YachtDetails } from "@/utils/yachts";
+import type React from "react";
+
+import type { YachtDetails } from "@/utils/yachts";
 import { Modal } from "@mantine/core";
 import Image from "next/image";
 import { useState } from "react";
@@ -9,26 +11,122 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
+interface SubmitStatus {
+  type: "success" | "error" | null;
+  message: string;
+}
+
 export function ContactSellerModal({
   yacht,
   opened,
   onClose,
 }: ContactModalProps) {
   const [formData, setFormData] = useState({
+    type: "COMPRA DE YATE",
     name: "",
     email: "",
     phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
+    type: null,
+    message: "",
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "El nombre es requerido";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "El email es requerido";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email inválido";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "El teléfono es requerido";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simular envío
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    onClose();
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const submitFormData = new FormData();
+      submitFormData.append(
+        "access_key",
+        "ad8b8a66-1708-45fd-9f5d-68feae1da60e"
+      );
+
+      // Añadir información del yate al formulario
+      const enhancedFormData = {
+        ...formData,
+        yacht_model: yacht?.model,
+        yacht_price: yacht?.price,
+        yacht_location: yacht?.location,
+      };
+
+      Object.entries(enhancedFormData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          submitFormData.append(key, value.toString());
+        }
+      });
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(submitFormData)),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: "Mensaje enviado correctamente",
+        });
+        setFormData({
+          type: "COMPRA DE YATE",
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        setErrors({});
+      } else {
+        throw new Error(
+          result.message || "Ha ocurrido un error al enviar el mensaje"
+        );
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Ha ocurrido un error al enviar el mensaje",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!yacht) return null;
@@ -97,13 +195,18 @@ export function ContactSellerModal({
                 id="name"
                 name="name"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                  errors.name ? "border-red-500" : "border-gray-300"
+                }`}
                 placeholder="Introduzca su nombre"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
               />
+              {errors.name && (
+                <p className="mt-1 text-xs text-red-500">{errors.name}</p>
+              )}
             </div>
             <div className="flex gap-4">
               <div className="w-full">
@@ -118,13 +221,18 @@ export function ContactSellerModal({
                   id="email"
                   name="email"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
                   placeholder="ejemplo@email.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                 />
+                {errors.email && (
+                  <p className="mt-1 text-xs text-red-500">{errors.email}</p>
+                )}
               </div>
 
               <div className="w-full">
@@ -139,13 +247,18 @@ export function ContactSellerModal({
                   id="phone"
                   name="phone"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                    errors.phone ? "border-red-500" : "border-gray-300"
+                  }`}
                   placeholder="+34 600 000 000"
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
                 />
+                {errors.phone && (
+                  <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
+                )}
               </div>
             </div>
             <div>
@@ -153,19 +266,24 @@ export function ContactSellerModal({
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Mensaje *
+                Mensaje
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                  errors.message ? "border-red-500" : "border-gray-300"
+                }`}
                 placeholder="Me gustaría recibir más información sobre este yate, especialmente sobre..."
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
               />
+              {errors.message && (
+                <p className="mt-1 text-xs text-red-500">{errors.message}</p>
+              )}
               <p className="mt-1 text-xs text-gray-500">
                 Indique cualquier pregunta específica o información adicional
                 que necesite.
@@ -176,7 +294,17 @@ export function ContactSellerModal({
               Al enviar este formulario, acepta que procesemos sus datos
               personales de acuerdo con nuestra política de privacidad.
             </div>
-
+            {submitStatus.type && (
+              <div
+                className={`mb-4 p-4 rounded-lg ${
+                  submitStatus.type === "success"
+                    ? "bg-green-50 text-green-700"
+                    : "bg-red-50 text-red-700"
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
             <div className="flex justify-end gap-3 pt-4">
               <button
                 type="button"
@@ -189,7 +317,7 @@ export function ContactSellerModal({
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
-                >
+              >
                 {isSubmitting ? "Enviando..." : "Enviar solicitud"}
               </button>
             </div>
