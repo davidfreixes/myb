@@ -12,7 +12,7 @@ export const NAVIGATION_LINKS = {
   BUNKER_SUPPLY: "bunker-supply",
   VALOR_AÑADIDO: "added-value-services",
   PROVEEDORES_Y_DISTRIBUIDORES: "/proveedores-y-distribuidores",
-  DIARIO_PUERTO_MAHON: "/diario",
+  DIARIO_PUERTO_MAHON: "/diario-del-puerto-de-mahon",
   CONDICIONES_Y_TARIFAS: "/condiciones-y-tarifas",
   CONTRATOS_DE_COMPRAVENTA: "/contratos-de-compraventa",
   POLITICA_DE_PRIVACIDAD: "/politica-de-privacidad",
