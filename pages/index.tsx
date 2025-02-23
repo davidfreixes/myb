@@ -31,9 +31,9 @@ export default function Home() {
             "En Menorca Yacht Brokers, te ofrecemos soluciones completas para la compraventa de yates en Menorca, charters, gestíon de cargas y asesoría náutica",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/logo.png`,
-              width: 846,
-              height: 634,
+              url: "https://www.menorcayachtbrokers.com/img/logo.png",
+              width: 1200,
+              height: 630,
               alt: "Menorca Yacht Brokers",
               type: "image/png",
             },
