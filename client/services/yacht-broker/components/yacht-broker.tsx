@@ -8,7 +8,6 @@ import { Trans, useTranslation } from "react-i18next";
 import ContactModal from "../../../general/contact/modal/contactModal";
 import { YachtCards } from "./yachtChards";
 
-
 interface Category {
   title: string;
   description: string;
@@ -21,7 +20,6 @@ interface FAQ {
   question: string;
   answer: string;
 }
-
 
 export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
@@ -217,24 +215,24 @@ export default function YachtBroker() {
             </Trans>
           </p>
 
-          {/* Yacht Catalog - Responsive grid and spacing */}
-          <div className="container mx-auto border px-2 rounded-md">
+          {/* Yacht Catalog - Enhanced responsive design */}
+          <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md">
             <Tabs
               value={activeTab}
               onChange={setActiveTab}
-              className="mb-6 sm:mb-8"
+              className="mb-4 md:mb-6 lg:mb-8"
               color="#f1c001"
             >
               <div className="w-full sticky top-0 z-10 bg-white">
                 <Tabs.List grow>
-                  <div className="flex w-full py-2 sm:py-0">
+                  <div className="flex w-full">
                     <div
                       className={`flex w-full ${
                         activeTab === "new" && "bg-primary/10 rounded-tl-lg"
                       }`}
                     >
                       <Tabs.Tab value="new">
-                        <h2 className="text-[13] sm:text-lg text-black">
+                        <h2 className="text-sm md:text-base lg:text-lg text-black">
                           {t("yachtBroker.navigation.newYachts")}
                         </h2>
                       </Tabs.Tab>
@@ -245,7 +243,7 @@ export default function YachtBroker() {
                       }`}
                     >
                       <Tabs.Tab value="used">
-                        <h2 className="text-[13] sm:text-lg">
+                        <h2 className="text-sm md:text-base lg:text-lg">
                           {t("yachtBroker.navigation.usedYachts")}
                         </h2>
                       </Tabs.Tab>
@@ -260,7 +258,7 @@ export default function YachtBroker() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 mt-3 md:mt-4 lg:mt-6"
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
@@ -275,7 +273,7 @@ export default function YachtBroker() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 mt-3 md:mt-4 lg:mt-6"
                   >
                     <YachtCards
                       yachts={sampleYachts.filter(
