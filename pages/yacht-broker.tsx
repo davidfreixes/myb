@@ -40,7 +40,6 @@ export default function YachtBrokerPage() {
           cardType: "summary_large_image",
         }}
       />
-      ;
       <Header sticky={false} isTransparent={true} />
       <YachtBroker />
       <Footer />

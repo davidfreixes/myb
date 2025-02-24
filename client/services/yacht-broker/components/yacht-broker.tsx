@@ -150,7 +150,7 @@ export default function YachtBroker() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section - Now more responsive */}
-      <div className="relative h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[55vh] md:h-[60vh] w-full">
         <Image
           src="/img/yacht-broker.jpg"
           alt="Yacht broker service"
@@ -227,14 +227,14 @@ export default function YachtBroker() {
             >
               <div className="w-full sticky top-0 z-10 bg-white">
                 <Tabs.List grow>
-                  <div className="flex w-full">
+                  <div className="flex w-full py-2 sm:py-0">
                     <div
                       className={`flex w-full ${
                         activeTab === "new" && "bg-primary/10 rounded-tl-lg"
                       }`}
                     >
                       <Tabs.Tab value="new">
-                        <h2 className="text-base sm:text-lg text-black">
+                        <h2 className="text-[13] sm:text-lg text-black">
                           {t("yachtBroker.navigation.newYachts")}
                         </h2>
                       </Tabs.Tab>
@@ -245,7 +245,7 @@ export default function YachtBroker() {
                       }`}
                     >
                       <Tabs.Tab value="used">
-                        <h2 className="text-base sm:text-lg">
+                        <h2 className="text-[13] sm:text-lg">
                           {t("yachtBroker.navigation.usedYachts")}
                         </h2>
                       </Tabs.Tab>
