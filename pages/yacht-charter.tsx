@@ -69,9 +69,6 @@ export default function YachtCharterPage() {
       <Header sticky={false} isTransparent={true} />
       <YachtCharter />
       <Footer />
-      <Header sticky={false} isTransparent={true} />
-      <YachtCharter />
-      <Footer />
     </>
   );
 }
