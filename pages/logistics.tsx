@@ -59,7 +59,7 @@ export default function LogisticsPage() {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+34608577091",
+              telephone: "+34 608 577 091",
               contactType: "customer service",
             },
           }),

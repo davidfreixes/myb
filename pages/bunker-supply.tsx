@@ -60,7 +60,7 @@ export default function ShipBrokerPage() {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+34 123 456 789",
+              telephone: "+34 608 57 70 91",
               contactType: "customer service",
             },
           }),
