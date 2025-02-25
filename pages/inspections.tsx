@@ -15,29 +15,54 @@ export default function InspectionsPage() {
   return (
     <>
       <NextSeo
-        title="Inspección y Tasación de Barcos y Yates en Menorca | Menorca Yacht Brokers"
-        description="Servicios especializados de inspección y tasación marítima para compradores y vendedores"
-        canonical={process.env.VERCEL_URL + "/inspections"}
+        title="Inspección y Tasación de Yates en Menorca | Menorca Brokers"
+        description="Expertos en inspección y tasación de yates en Menorca. Servicio profesional para compradores y vendedores. Obtén un informe detallado y preciso."
+        canonical="https://www.menorcabrokers.com/inspections"
         openGraph={{
-          url: process.env.VERCEL_URL + "/inspections",
-          title: "Inspección y Tasación de Barcos y Yates en Menorca",
+          url: "https://www.menorcabrokers.com/inspections",
+          title: "Inspección y Tasación de Yates en Menorca | Menorca Brokers",
           description:
-            "Servicios especializados de inspección y tasación marítima para compradores y vendedores",
+            "Expertos en inspección y tasación de yates en Menorca. Servicio profesional para compradores y vendedores. Obtén un informe detallado y preciso.",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/inspections.jpg`,
-              width: 846,
-              height: 634,
-              alt: "Menorca Yacht Brokers",
+              url: "https://www.menorcabrokers.com/img/inspections.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Inspección y Tasación de Yates - Menorca Brokers",
               type: "image/jpg",
             },
           ],
-          siteName: "Menorca Yacht Brokers",
+          siteName: "Menorca Brokers",
+          locale: "es_ES",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@MenorcaBrokers",
+          site: "@MenorcaBrokers",
           cardType: "summary_large_image",
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Inspección y Tasación de Yates en Menorca",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Menorca Brokers",
+              "url": "https://www.menorcabrokers.com",
+            },
+            "serviceType": "Inspección y Tasación Marítima",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Menorca, España",
+            },
+            "description":
+              "Servicios profesionales de inspección y tasación de yates en Menorca para compradores y vendedores.",
+            "image": "https://www.menorcabrokers.com/img/inspections.jpg",
+          }),
         }}
       />
       <Header sticky={false} isTransparent={true} />

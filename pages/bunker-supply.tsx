@@ -15,29 +15,55 @@ export default function ShipBrokerPage() {
   return (
     <>
       <NextSeo
-        title="Menorca Brokers | Suministro de Combustible para Barcos en Menorca"
-        description="Suministramos combustible para barcos en la isla de Menorca y el resto de España. Contacta con nosotros para más información."
-        canonical={process.env.VERCEL_URL + "/bunker-supply"}
+        title="Suministro de Combustible para Barcos en Menorca | Bunker Supply"
+        description="Menorca Brokers ofrece suministro de combustible marino en Menorca y toda España. Servicio rápido, eficiente y con la mejor calidad. ¡Contáctanos!"
+        canonical="https://www.menorcabrokers.com/bunker-supply"
         openGraph={{
-          url: process.env.VERCEL_URL + "/bunker-supply",
-          title: "Suministro de Combustible marino en Menorca",
+          url: "https://www.menorcabrokers.com/bunker-supply",
+          title:
+            "Suministro de Combustible para Barcos en Menorca | Bunker Supply",
           description:
-            "Suministramos combustible para barcos en la isla de Menorca y el resto de España. Contacta con nosotros para más información.",
+            "Menorca Brokers ofrece suministro de combustible marino en Menorca y toda España. Servicio rápido, eficiente y con la mejor calidad. ¡Contáctanos!",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/bunker-supply.jpg`,
-              width: 846,
-              height: 634,
-              alt: "Menorca Yacht Brokers",
+              url: "https://www.menorcabrokers.com/img/bunker-supply.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Suministro de Combustible para Barcos en Menorca - Menorca Brokers",
               type: "image/jpg",
             },
           ],
-          siteName: "Menorca Yacht Brokers",
+          siteName: "Menorca Brokers",
+          locale: "es_ES",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@MenorcaBrokers",
+          site: "@MenorcaBrokers",
           cardType: "summary_large_image",
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Menorca Brokers",
+            url: "https://www.menorcabrokers.com",
+            image: "https://www.menorcabrokers.com/img/bunker-supply.jpg",
+            description:
+              "Menorca Brokers ofrece suministro de combustible marino en Menorca y toda España. Servicio rápido, eficiente y con la mejor calidad.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Menorca, España",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+34 123 456 789",
+              contactType: "customer service",
+            },
+          }),
         }}
       />
       <Header sticky={false} isTransparent={true} />

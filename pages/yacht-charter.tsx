@@ -15,31 +15,60 @@ export default function YachtCharterPage() {
   return (
     <>
       <NextSeo
-        title="Yacht Charter en Menorca | Alquila tu Barce en Menorca"
-        description="Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium."
-        canonical={process.env.VERCEL_URL + "/yacht-charter"}
+        title="Alquiler de Yates en Menorca | Yacht Charter de Lujo"
+        description="Descubre el mejor alquiler de yates en Menorca con Menorca Brokers. Disfruta de un charter de lujo con rutas exclusivas, tripulación profesional y servicios VIP. Reserva ahora y vive una experiencia inolvidable."
+        canonical="https://www.menorcabrokers.com/yacht-charter"
         openGraph={{
-          url: process.env.VERCEL_URL + "/yacht-charter",
-          title: "Yacht Charter en Menorca | Alquila tu Barce en Menorca",
+          url: "https://www.menorcabrokers.com/yacht-charter",
+          title: "Alquiler de Yates en Menorca | Yacht Charter de Lujo",
           description:
-            "Alquila yates de lujo en Menorca con Menorca Yacht Brokers. Disfruta de rutas personalizadas, tripulación profesional y servicios premium.",
+            "Explora Menorca desde el mar con nuestro servicio exclusivo de alquiler de yates. Disfruta de experiencias premium, tripulación experta y rutas personalizadas.",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/yacht-charter.jpg`,
-              width: 846,
-              height: 634,
-              alt: "Menorca Yacht Brokers",
+              url: "https://www.menorcabrokers.com/img/yacht-charter.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Alquiler de Yates en Menorca - Menorca Brokers",
               type: "image/jpg",
             },
           ],
-          siteName: "Menorca Yacht Brokers",
+          siteName: "Menorca Brokers",
+          locale: "es_ES",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@MenorcaBrokers",
+          site: "@MenorcaBrokers",
           cardType: "summary_large_image",
         }}
       />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Menorca Brokers",
+            url: "https://www.menorcabrokers.com",
+            image: "https://www.menorcabrokers.com/img/yacht-charter.jpg",
+            description:
+              "Alquiler de yates de lujo en Menorca con rutas personalizadas y tripulación profesional.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Menorca, España",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+34 123 456 789",
+              contactType: "customer service",
+            },
+          }),
+        }}
+      />
+
+      <Header sticky={false} isTransparent={true} />
+      <YachtCharter />
+      <Footer />
       <Header sticky={false} isTransparent={true} />
       <YachtCharter />
       <Footer />

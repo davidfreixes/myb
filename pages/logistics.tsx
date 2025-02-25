@@ -15,30 +15,54 @@ export default function LogisticsPage() {
   return (
     <>
       <NextSeo
-        title="Logística de carga Marítima y Aérea | Menorca Yacht Brokers"
-        description="¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información."
-        canonical={process.env.VERCEL_URL + "/logistics"}
+        title="Logística Marítima y Aérea en Menorca | Menorca Brokers"
+        description="Expertos en logística marítima y aérea en Menorca. Gestionamos importación y exportación de carga con soluciones personalizadas. Contacta con nosotros."
+        canonical="https://www.menorcabrokers.com/logistics"
         openGraph={{
-          url: process.env.VERCEL_URL + "/logistics",
-          title:
-            "Logística Marítima en Menorca | Cargo y Servicios Personalizados",
+          url: "https://www.menorcabrokers.com/logistics",
+          title: "Logística Marítima y Aérea en Menorca | Servicios de Carga",
           description:
-            "¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información.",
+            "Confía en Menorca Brokers para la importación y exportación de cualquier tipo de carga. Servicios de logística marítima y aérea adaptados a tus necesidades.",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/logistics.jpg`,
-              width: 846,
-              height: 634,
-              alt: "Menorca Yacht Brokers",
+              url: "https://www.menorcabrokers.com/img/logistics.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Servicios de Logística en Menorca - Menorca Brokers",
               type: "image/jpg",
             },
           ],
-          siteName: "Menorca Yacht Brokers",
+          siteName: "Menorca Brokers",
+          locale: "es_ES",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@MenorcaBrokers",
+          site: "@MenorcaBrokers",
           cardType: "summary_large_image",
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Menorca Brokers",
+            url: "https://www.menorcabrokers.com",
+            image: "https://www.menorcabrokers.com/img/logistics.jpg",
+            description:
+              "Expertos en logística marítima y aérea en Menorca. Gestionamos importación y exportación de carga con soluciones personalizadas.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Menorca, España",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+34608577091",
+              contactType: "customer service",
+            },
+          }),
         }}
       />
       <Header sticky={false} isTransparent={true} />

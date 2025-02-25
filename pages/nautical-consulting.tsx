@@ -15,30 +15,54 @@ export default function NauticalConsultingPage() {
   return (
     <>
       <NextSeo
-        title="Logística de carga Marítima y Aérea | Menorca Yacht Brokers"
-        description="¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información."
-        canonical={process.env.VERCEL_URL + "/nautical-consulting"}
+        title="Consultoría Náutica y Logística en Menorca | Menorca Brokers"
+        description="Gestionamos la importación y exportación de carga marítima y aérea en Menorca. Servicios personalizados para embarcaciones y logística global."
+        canonical="https://www.menorcabrokers.com/nautical-consulting"
         openGraph={{
-          url: process.env.VERCEL_URL + "/nautical-consulting",
-          title:
-            "Logística Marítima en Menorca | Cargo y Servicios Personalizados",
+          url: "https://www.menorcabrokers.com/nautical-consulting",
+          title: "Consultoría Náutica y Logística en Menorca | Menorca Brokers",
           description:
-            "¿Quieres importar o exportar cualquier tipo de carga? ¡Nosotros te lo gestionamos! Contacta con nosotros para más información.",
+            "Gestionamos la importación y exportación de carga marítima y aérea en Menorca. Servicios personalizados para embarcaciones y logística global.",
           images: [
             {
-              url: `${process.env.VERCEL_URL}/img/nautical-consulting.jpg`,
-              width: 846,
-              height: 634,
-              alt: "Menorca Yacht Brokers",
+              url: "https://www.menorcabrokers.com/img/nautical-consulting.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Consultoría Náutica y Logística - Menorca Brokers",
               type: "image/jpg",
             },
           ],
-          siteName: "Menorca Yacht Brokers",
+          siteName: "Menorca Brokers",
+          locale: "es_ES",
         }}
         twitter={{
-          handle: "@handle",
-          site: "@site",
+          handle: "@MenorcaBrokers",
+          site: "@MenorcaBrokers",
           cardType: "summary_large_image",
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Menorca Brokers",
+            url: "https://www.menorcabrokers.com",
+            image: "https://www.menorcabrokers.com/img/nautical-consulting.jpg",
+            description:
+              "Especialistas en consultoría náutica y logística de carga marítima y aérea en Menorca.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Menorca, España",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+34 123 456 789",
+              contactType: "customer service",
+            },
+          }),
         }}
       />
       <Header sticky={false} isTransparent={true} />
