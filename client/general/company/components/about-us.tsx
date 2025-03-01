@@ -51,6 +51,12 @@ const teamMembers = [
     image: "/img/team/adriano-enrique.png",
   },
   {
+    name: "Gurkan Gurun",
+    role: "Freelance Yacht & Charter Broker",
+    location: "Turkey",
+    image: "/img/team/gurkan-gurun.jpeg",
+  },
+  {
     name: "David Freixes",
     role: "IT Developer & Co-Owner",
     location: "Spain",
@@ -121,7 +127,7 @@ export default function AboutUs() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4">
               {t("aboutUs.team.title")}
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-base sm:text-lg">
+            <p className="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg">
               {t("aboutUs.team.description")}
             </p>
           </motion.div>
