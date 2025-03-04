@@ -54,6 +54,7 @@ const teamMembers = [
     name: "Gurkan Gurun",
     role: "Freelance Yacht & Charter Broker",
     location: "Turkey",
+    email: "gurkan@menorcabrokers.com",
     image: "/img/team/gurkan-gurun.jpeg",
   },
   {
