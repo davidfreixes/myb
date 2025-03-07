@@ -2,9 +2,9 @@ import { sampleYachts } from "@/utils/yachts";
 import { Accordion, Button, Tabs } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
 import { Anchor, Ship, Users } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
 import ContactModal from "../../../general/contact/modal/contactModal";
 import { YachtCards } from "./yachtChards";
 
@@ -26,12 +26,12 @@ export default function YachtBroker() {
   const [activeTab, setActiveTab] = useState<string | null>("new");
   const newBoatsSectionRef = useRef<HTMLDivElement>(null);
   const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
+  const t = useTranslations("yachtBroker");
 
   const popularCategories: Category[] = [
     {
-      title: t("yachtBroker.categories.usedBoats.title"),
-      description: t("yachtBroker.categories.usedBoats.description"),
+      title: t("categories.usedBoats.title"),
+      description: t("categories.usedBoats.description"),
       image: "/img/yacht-broker/second-hand.jpg",
       keywords: [
         "barcos segunda mano",
@@ -41,8 +41,8 @@ export default function YachtBroker() {
       ],
     },
     {
-      title: t("yachtBroker.categories.usedSailboats.title"),
-      description: t("yachtBroker.categories.usedSailboats.description"),
+      title: t("categories.usedSailboats.title"),
+      description: t("categories.usedSailboats.description"),
       image: "/img/yacht-broker/used-sailboats.jpg",
       keywords: [
         "veleros segunda mano",
@@ -51,8 +51,8 @@ export default function YachtBroker() {
       ],
     },
     {
-      title: t("yachtBroker.categories.catamarans.title"),
-      description: t("yachtBroker.categories.catamarans.description"),
+      title: t("categories.catamarans.title"),
+      description: t("categories.catamarans.description"),
       image: "/img/yacht-broker/catamarans.jpg",
       keywords: [
         "comprar catamarán",
@@ -61,14 +61,14 @@ export default function YachtBroker() {
       ],
     },
     {
-      title: t("yachtBroker.categories.luxuryYachts.title"),
-      description: t("yachtBroker.categories.luxuryYachts.description"),
+      title: t("categories.luxuryYachts.title"),
+      description: t("categories.luxuryYachts.description"),
       image: "/img/yacht-broker/luxury-yacht.jpg",
       keywords: ["comprar yate de lujo", "yates segunda mano", "venta yates"],
     },
     {
-      title: t("yachtBroker.categories.openBoats.title"),
-      description: t("yachtBroker.categories.openBoats.description"),
+      title: t("categories.openBoats.title"),
+      description: t("categories.openBoats.description"),
       image: "/img/yacht-broker/open-boats.jpg",
       keywords: [
         "barca open segunda mano",
@@ -77,8 +77,8 @@ export default function YachtBroker() {
       ],
     },
     {
-      title: t("yachtBroker.categories.newBoats.title"),
-      description: t("yachtBroker.categories.newBoats.description"),
+      title: t("categories.newBoats.title"),
+      description: t("categories.newBoats.description"),
       image: "/img/yacht-1.jpg",
       keywords: [
         "comprar barco nuevo",
@@ -90,18 +90,18 @@ export default function YachtBroker() {
 
   const advantages = [
     {
-      title: t("yachtBroker.advantages.experience"),
-      description: t("yachtBroker.advantages.experienceDesc"),
+      title: t("advantages.experience"),
+      description: t("advantages.experienceDesc"),
       icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtBroker.advantages.selection"),
-      description: t("yachtBroker.advantages.selectionDesc"),
+      title: t("advantages.selection"),
+      description: t("advantages.selectionDesc"),
       icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtBroker.advantages.support"),
-      description: t("yachtBroker.advantages.supportDesc"),
+      title: t("advantages.support"),
+      description: t("advantages.supportDesc"),
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
@@ -109,28 +109,28 @@ export default function YachtBroker() {
   const faqs: FAQ[] = [
     {
       id: "1",
-      question: t("yachtBroker.faq.questions.usedBoatConsiderations.question"),
-      answer: t("yachtBroker.faq.questions.usedBoatConsiderations.answer"),
+      question: t("faq.questions.usedBoatConsiderations.question"),
+      answer: t("faq.questions.usedBoatConsiderations.answer"),
     },
     {
       id: "2",
-      question: t("yachtBroker.faq.questions.usedSailboatProcess.question"),
-      answer: t("yachtBroker.faq.questions.usedSailboatProcess.answer"),
+      question: t("faq.questions.usedSailboatProcess.question"),
+      answer: t("faq.questions.usedSailboatProcess.answer"),
     },
     {
       id: "3",
-      question: t("yachtBroker.faq.questions.availableBoats.question"),
-      answer: t("yachtBroker.faq.questions.availableBoats.answer"),
+      question: t("faq.questions.availableBoats.question"),
+      answer: t("faq.questions.availableBoats.answer"),
     },
     {
       id: "4",
-      question: t("yachtBroker.faq.questions.sellBoat.question"),
-      answer: t("yachtBroker.faq.questions.sellBoat.answer"),
+      question: t("faq.questions.sellBoat.question"),
+      answer: t("faq.questions.sellBoat.answer"),
     },
     {
       id: "5",
-      question: t("yachtBroker.faq.questions.financing.question"),
-      answer: t("yachtBroker.faq.questions.financing.answer"),
+      question: t("faq.questions.financing.question"),
+      answer: t("faq.questions.financing.answer"),
     },
   ];
 
@@ -167,15 +167,14 @@ export default function YachtBroker() {
           >
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
-                {t("yachtBroker.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl ">
-                <Trans i18nKey="yachtBroker.hero.subtitle">
-                  Especialistas en <span className="text-primary">compra</span>{" "}
-                  y <span className="text-primary">venta</span> de yates en
-                  Menorca. Amplia gama de embarcaciones de lujo y asesoramiento
-                  personalizado.
-                </Trans>
+                {t.rich("hero.subtitle", {
+                  p: (chunks) => (
+                    <span className="text-primary">{chunks}</span>
+                  ),
+                })}
               </h2>
             </div>
             <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
@@ -184,14 +183,14 @@ export default function YachtBroker() {
                 onClick={() => scrollToSection("new")}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
               >
-                {t("yachtBroker.navigation.newYachts")}
+                {t("navigation.newYachts")}
               </Button>
               <Button
                 unstyled
                 onClick={() => scrollToSection("used")}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
               >
-                {t("yachtBroker.navigation.usedYachts")}
+                {t("navigation.usedYachts")}
               </Button>
             </div>
           </motion.div>
@@ -206,13 +205,9 @@ export default function YachtBroker() {
           className="prose prose-sm sm:prose-base lg:prose-lg max-w-none"
         >
           <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
-            <Trans i18nKey="yachtBroker.description.intro">
-              Consulta nuestro stock de Yates en venta a continuación o descubre
-              nuestras claves y contáctarnos más abajo. Contamos con Yates de
-              <span className="text-primary"> segunda mano </span>o se pueden
-              realizar contactos con astilleros para entrar en contratos de{" "}
-              <span className="text-primary"> nueva construcción</span>.
-            </Trans>
+            {t.rich("description.intro", {
+              p: (chunks) => <span className="text-primary">{chunks}</span>,
+            })}
           </p>
 
           {/* Yacht Catalog - Enhanced responsive design */}
@@ -233,7 +228,7 @@ export default function YachtBroker() {
                     >
                       <Tabs.Tab value="new">
                         <h2 className="text-sm md:text-base lg:text-lg text-black">
-                          {t("yachtBroker.navigation.newYachts")}
+                          {t("navigation.newYachts")}
                         </h2>
                       </Tabs.Tab>
                     </div>
@@ -244,7 +239,7 @@ export default function YachtBroker() {
                     >
                       <Tabs.Tab value="used">
                         <h2 className="text-sm md:text-base lg:text-lg">
-                          {t("yachtBroker.navigation.usedYachts")}
+                          {t("navigation.usedYachts")}
                         </h2>
                       </Tabs.Tab>
                     </div>
@@ -287,7 +282,7 @@ export default function YachtBroker() {
           </div>
 
           <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 sm:pt-4">
-            {t("yachtBroker.description.expertise")}
+            {t("description.expertise")}
           </p>
         </motion.div>
       </div>
@@ -300,7 +295,7 @@ export default function YachtBroker() {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
-            {t("yachtBroker.categories.title")}
+            {t("categories.title")}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -341,7 +336,7 @@ export default function YachtBroker() {
             className="text-center mb-8 sm:mb-12"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-4">
-              {t("yachtBroker.advantages.title")}
+              {t("advantages.title")}
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -371,11 +366,9 @@ export default function YachtBroker() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
-            {t("yachtBroker.faq.title")}
+            {t("faq.title")}
           </h2>
-          <p className="text-gray-600 text-lg">
-            {t("yachtBroker.faq.description")}
-          </p>
+          <p className="text-gray-600 text-lg">{t("faq.description")}</p>
         </div>
 
         <Accordion
@@ -421,17 +414,17 @@ export default function YachtBroker() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12"
       >
         <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
-          {t("yachtBroker.cta.title")}
+          {t("cta.title")}
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-3 sm:mb-4 md:mb-6">
-          {t("yachtBroker.cta.description")}
+          {t("cta.description")}
         </p>
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
           className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
         >
-          {t("yachtBroker.cta.button")}
+          {t("cta.button")}
         </Button>
       </motion.div>
       <ContactModal

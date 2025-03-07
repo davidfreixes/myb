@@ -2,13 +2,13 @@ import { YachtDetails } from "@/utils/yachts";
 import { Accordion } from "@mantine/core";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { ContactSellerModal } from "./contact-seller-modal";
 
 export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
-  const { t } = useTranslation();
+  const t = useTranslations("yachtBroker.yachtDetails");
   const [selectedYacht, setSelectedYacht] = useState<YachtDetails | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
@@ -90,13 +90,13 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               <div className="grid grid-cols-2 gap-4 py-3 border-y">
                 <div className="text-center">
                   <p className="text-sm text-gray-500">
-                    {t("yachtBroker.yachtDetails.fields.length")}
+                    {t("fields.length")}
                   </p>
                   <p className="font-medium">{yacht.length} m</p>
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-gray-500">
-                    {t("yachtBroker.yachtDetails.fields.designer")}
+                    {t("fields.designer")}
                   </p>
                   <p className="font-medium">{yacht.designer || "-"}</p>
                 </div>
@@ -106,7 +106,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                 <Accordion.Item value={`details-${yacht.id}`}>
                   <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
                     <span className="text-sm">
-                      {t("yachtBroker.yachtDetails.viewDetails")}
+                      {t("viewDetails")}
                     </span>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -114,7 +114,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                       {yacht.name && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.boatName")}:
+                            {t("fields.boatName")}:
                           </span>
                           <span>{yacht.name}</span>
                         </div>
@@ -123,41 +123,41 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                       {yacht.year && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.year")}:
+                            {t("fields.year")}:
                           </span>
                           <span>{yacht.year}</span>
                         </div>
                       )}
                       <div className="flex justify-between">
                         <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.length")}:
+                          {t("fields.length")}:
                         </span>
                         <span>
                           {yacht.length}{" "}
-                          {t("yachtBroker.yachtDetails.units.meters")}
+                          {t("units.meters")}
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">
-                          {t("yachtBroker.yachtDetails.fields.location")}:
+                          {t("fields.location")}:
                         </span>
                         <span className="text-right">{yacht.location}</span>
                       </div>
                       {yacht.displacement && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.displacement")}:
+                            {t("fields.displacement")}:
                           </span>
                           <span>
                             {yacht.displacement}{" "}
-                            {t("yachtBroker.yachtDetails.units.kg")}
+                            {t("units.kg")}
                           </span>
                         </div>
                       )}
                       {yacht.hull && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.hull")}:
+                            {t("fields.hull")}:
                           </span>
                           <span>{yacht.hull}</span>
                         </div>
@@ -165,7 +165,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                       {yacht.keel && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.keel")}:
+                            {t("fields.keel")}:
                           </span>
                           <span>{yacht.keel}</span>
                         </div>
@@ -173,7 +173,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                       {yacht.designer && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.designer")}:
+                            {t("fields.designer")}:
                           </span>
                           <span>{yacht.designer}</span>
                         </div>
@@ -181,7 +181,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                       {yacht.category && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
-                            {t("yachtBroker.yachtDetails.fields.category")}:
+                            {t("fields.category")}:
                           </span>
                           <span className="text-right">{yacht.category}</span>
                         </div>

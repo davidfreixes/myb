@@ -3,6 +3,14 @@ import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
 import { useEffect, useState } from "react";
 
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`../messages/${context.locale}.json`)).default,
+    },
+  };
+}
+
 export default function ContactPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 

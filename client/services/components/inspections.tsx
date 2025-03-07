@@ -1,13 +1,13 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function Inspections() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("inspections");
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -31,15 +31,12 @@ export default function Inspections() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
-                {t("inspections.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
-                <Trans i18nKey="inspections.hero.subtitle">
-                  Servicios especializados de{" "}
-                  <span className="text-primary">inspección</span> y{" "}
-                  <span className="text-primary">tasación</span> marítima para
-                  compradores y vendedores
-                </Trans>
+                {t.rich("hero.subtitle", {
+                  p: (chunks) => <span className="text-primary">{chunks}</span>,
+                })}
               </h2>
             </div>
           </motion.div>
@@ -55,15 +52,9 @@ export default function Inspections() {
           className="prose prose-lg max-w-none"
         >
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-12">
-            <Trans i18nKey="inspections.intro">
-              En Menorca Yacht Brokers, contamos con una experiencia sólida en
-              la realización de{" "}
-              <span className="text-primary">inspecciones</span> y{" "}
-              <span className="text-primary">tasaciones marítimas</span>. Como
-              parte de nuestro compromiso con la calidad y la transparencia,
-              ofrecemos servicios especializados tanto para compradores como
-              para vendedores de yates y embarcaciones.
-            </Trans>
+            {t.rich("intro", {
+              p: (chunks) => <span className="text-primary">{chunks}</span>,
+            })}
           </p>
 
           {/* Services Grid */}
@@ -75,51 +66,29 @@ export default function Inspections() {
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
               <h2 className="text-3xl text-primary font-montserrat mb-4">
-                {t("inspections.services.maritimeInspections.title")}
+                {t("services.maritimeInspections.title")}
               </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
-                  {t("inspections.services.maritimeInspections.description")}
+                  {t("services.maritimeInspections.description")}
                 </p>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    {t(
-                      "inspections.services.maritimeInspections.process.title"
-                    )}
+                    {t("services.maritimeInspections.process.title")}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>
-                      {t(
-                        "inspections.services.maritimeInspections.process.items.0"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeInspections.process.items.1"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeInspections.process.items.2"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeInspections.process.items.3"
-                      )}
-                    </li>
+                    <li>{t("services.maritimeInspections.process.items.0")}</li>
+                    <li>{t("services.maritimeInspections.process.items.1")}</li>
+                    <li>{t("services.maritimeInspections.process.items.2")}</li>
+                    <li>{t("services.maritimeInspections.process.items.3")}</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    {t(
-                      "inspections.services.maritimeInspections.conventions.title"
-                    )}
+                    {t("services.maritimeInspections.conventions.title")}
                   </h4>
                   <p className="text-gray-700">
-                    {t(
-                      "inspections.services.maritimeInspections.conventions.description"
-                    )}
+                    {t("services.maritimeInspections.conventions.description")}
                   </p>
                 </div>
               </div>
@@ -132,64 +101,32 @@ export default function Inspections() {
               className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
             >
               <h2 className="text-3xl text-primary font-montserrat mb-4">
-                {t("inspections.services.maritimeValuations.title")}
+                {t("services.maritimeValuations.title")}
               </h2>
               <div className="space-y-4">
                 <p className="text-gray-700">
-                  {t("inspections.services.maritimeValuations.description")}
+                  {t("services.maritimeValuations.description")}
                 </p>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    {t("inspections.services.maritimeValuations.factors.title")}
+                    {t("services.maritimeValuations.factors.title")}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.factors.items.0"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.factors.items.1"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.factors.items.2"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.factors.items.3"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.factors.items.4"
-                      )}
-                    </li>
+                    <li>{t("services.maritimeValuations.factors.items.0")}</li>
+                    <li>{t("services.maritimeValuations.factors.items.1")}</li>
+                    <li>{t("services.maritimeValuations.factors.items.2")}</li>
+                    <li>{t("services.maritimeValuations.factors.items.3")}</li>
+                    <li>{t("services.maritimeValuations.factors.items.4")}</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-montserrat text-lg text-primary">
-                    {t("inspections.services.maritimeValuations.types.title")}
+                    {t("services.maritimeValuations.types.title")}
                   </h4>
                   <ul className="list-disc pl-5 text-gray-700">
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.types.items.0"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.types.items.1"
-                      )}
-                    </li>
-                    <li>
-                      {t(
-                        "inspections.services.maritimeValuations.types.items.2"
-                      )}
-                    </li>
+                    <li>{t("services.maritimeValuations.types.items.0")}</li>
+                    <li>{t("services.maritimeValuations.types.items.1")}</li>
+                    <li>{t("services.maritimeValuations.types.items.2")}</li>
                   </ul>
                 </div>
               </div>
@@ -197,7 +134,7 @@ export default function Inspections() {
           </div>
 
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-8">
-            {t("inspections.outro.description")}
+            {t("outro.description")}
           </p>
         </motion.div>
       </div>
@@ -211,17 +148,15 @@ export default function Inspections() {
       >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
-            {t("inspections.cta.title")}
+            {t("cta.title")}
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            {t("inspections.cta.description")}
-          </p>
+          <p className="text-lg text-gray-700 mb-6">{t("cta.description")}</p>
           <Button
             onClick={() => setContactModalOpened(true)}
             unstyled
             className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
           >
-            {t("inspections.cta.button")}
+            {t("cta.button")}
           </Button>
         </div>
       </motion.div>

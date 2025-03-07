@@ -1,8 +1,8 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 const partners = [
@@ -45,7 +45,7 @@ const partners = [
 
 export default function Partners() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("partners");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -68,17 +68,17 @@ export default function Partners() {
           >
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                {t("partners.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white px-2">
-                {t("partners.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
               <Button
                 onClick={() => setContactModalOpened(true)}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-medium text-white shadow-lg hover:bg-primary/90 transition-colors"
               >
-                {t("partners.hero.contactButton")}
+                {t("hero.contactButton")}
               </Button>
             </div>
           </motion.div>
@@ -127,17 +127,17 @@ export default function Partners() {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-darkTitle mb-4 sm:mb-6">
-              {t("partners.cta.title")}
+              {t("cta.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-2">
-              {t("partners.cta.description")}
+              {t("cta.description")}
             </p>
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
             >
-              {t("partners.cta.button")}
+              {t("cta.button")}
             </Button>
           </motion.div>
           <ContactModal

@@ -1,13 +1,13 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function ValueAddedServices() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("valueAddedServices");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -31,10 +31,10 @@ export default function ValueAddedServices() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-medium tracking-tight text-primary">
-                {t("valueAddedServices.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                {t("valueAddedServices.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -53,66 +53,66 @@ export default function ValueAddedServices() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12">
             {[
               {
-                title: t("valueAddedServices.services.airportTransfer.title"),
+                title: t("services.airportTransfer.title"),
                 image: "/img/airport-transfer.jpg",
                 description: t(
-                  "valueAddedServices.services.airportTransfer.description"
+                  "services.airportTransfer.description"
                 ),
                 features: [
-                  t("valueAddedServices.services.airportTransfer.features.0"),
-                  t("valueAddedServices.services.airportTransfer.features.1"),
-                  t("valueAddedServices.services.airportTransfer.features.2"),
+                  t("services.airportTransfer.features.0"),
+                  t("services.airportTransfer.features.1"),
+                  t("services.airportTransfer.features.2"),
                 ],
                 delay: 0.4,
               },
               {
-                title: t("valueAddedServices.services.touristRoutes.title"),
+                title: t("services.touristRoutes.title"),
                 image: "/img/tourist-routes.jpg",
                 description: t(
-                  "valueAddedServices.services.touristRoutes.description"
+                  "services.touristRoutes.description"
                 ),
                 features: [
-                  t("valueAddedServices.services.touristRoutes.features.0"),
-                  t("valueAddedServices.services.touristRoutes.features.1"),
-                  t("valueAddedServices.services.touristRoutes.features.2"),
-                  t("valueAddedServices.services.touristRoutes.features.3"),
+                  t("services.touristRoutes.features.0"),
+                  t("services.touristRoutes.features.1"),
+                  t("services.touristRoutes.features.2"),
+                  t("services.touristRoutes.features.3"),
                 ],
                 delay: 0.5,
               },
               {
-                title: t("valueAddedServices.services.catering.title"),
+                title: t("services.catering.title"),
                 image: "/img/catering.jpg",
                 description: t(
-                  "valueAddedServices.services.catering.description"
+                  "services.catering.description"
                 ),
                 features: [
-                  t("valueAddedServices.services.catering.features.0"),
-                  t("valueAddedServices.services.catering.features.1"),
-                  t("valueAddedServices.services.catering.features.2"),
+                  t("services.catering.features.0"),
+                  t("services.catering.features.1"),
+                  t("services.catering.features.2"),
                 ],
                 delay: 0.6,
               },
               {
-                title: t("valueAddedServices.services.assistance.title"),
+                title: t("services.assistance.title"),
                 image: "/img/assistance.jpg",
                 description: t(
-                  "valueAddedServices.services.assistance.description"
+                  "services.assistance.description"
                 ),
                 features: [
-                  t("valueAddedServices.services.assistance.features.0"),
-                  t("valueAddedServices.services.assistance.features.1"),
+                  t("services.assistance.features.0"),
+                  t("services.assistance.features.1"),
                 ],
                 delay: 0.7,
               },
               {
-                title: t("valueAddedServices.services.events.title"),
+                title: t("services.events.title"),
                 image: "/img/events.jpg",
                 description: t(
-                  "valueAddedServices.services.events.description"
+                  "services.events.description"
                 ),
                 features: [
-                  t("valueAddedServices.services.events.features.0"),
-                  t("valueAddedServices.services.events.features.1"),
+                  t("services.events.features.0"),
+                  t("services.events.features.1"),
                 ],
                 delay: 0.8,
               },
@@ -166,26 +166,26 @@ export default function ValueAddedServices() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div className="space-y-4 sm:space-y-6">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary">
-                  {t("valueAddedServices.whyChooseUs.title")}
+                  {t("whyChooseUs.title")}
                 </h2>
                 <ul className="space-y-3 sm:space-y-4">
                   {[
                     {
-                      title: t("valueAddedServices.whyChooseUs.points.0.title"),
+                      title: t("whyChooseUs.points.0.title"),
                       description: t(
-                        "valueAddedServices.whyChooseUs.points.0.description"
+                        "whyChooseUs.points.0.description"
                       ),
                     },
                     {
-                      title: t("valueAddedServices.whyChooseUs.points.1.title"),
+                      title: t("whyChooseUs.points.1.title"),
                       description: t(
-                        "valueAddedServices.whyChooseUs.points.1.description"
+                        "whyChooseUs.points.1.description"
                       ),
                     },
                     {
-                      title: t("valueAddedServices.whyChooseUs.points.2.title"),
+                      title: t("whyChooseUs.points.2.title"),
                       description: t(
-                        "valueAddedServices.whyChooseUs.points.2.description"
+                        "whyChooseUs.points.2.description"
                       ),
                     },
                   ].map((item, index) => (
@@ -200,10 +200,10 @@ export default function ValueAddedServices() {
                   ))}
                 </ul>
                 <div className="text-xs sm:text-sm text-gray-600 mt-3 sm:mt-4 italic">
-                  &quot;{t("valueAddedServices.whyChooseUs.testimonial.quote")}
+                  &quot;{t("whyChooseUs.testimonial.quote")}
                   &quot;
                   <p className="font-semibold mt-1 sm:mt-2">
-                    {t("valueAddedServices.whyChooseUs.testimonial.author")}
+                    {t("whyChooseUs.testimonial.author")}
                   </p>
                 </div>
               </div>
@@ -237,17 +237,17 @@ export default function ValueAddedServices() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 rounded-lg text-center py-8 sm:py-12 md:py-20"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-4">
-          {t("valueAddedServices.cta.title")}
+          {t("cta.title")}
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          {t("valueAddedServices.cta.description")}
+          {t("cta.description")}
         </p>
         <Button
           unstyled
           onClick={() => setContactModalOpened(true)}
           className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded transition-colors duration-200"
         >
-          {t("valueAddedServices.cta.button")}
+          {t("cta.button")}
         </Button>
       </motion.div>
       <ContactModal

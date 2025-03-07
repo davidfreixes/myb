@@ -96,7 +96,7 @@
       "title": "Welcome to Menorca Yacht Brokers",
       "subtitle": {
         "part1": "Your Trusted Yacht Broker",
-        "part2": "<2>Buy</2>, <2> sell</2> or <2> rent</2> your Yacht with Menorca Yacht Brokers"
+        "part2": "<p>Buy</p>, <p> sell</p> or <p> rent</p> your Yacht with Menorca Yacht Brokers"
       },
       "description": {
         "part1": "At Menorca Yacht Brokers, we offer comprehensive solutions for yacht buying and selling in Menorca, charters, cargo management, and nautical consultancy.",
@@ -171,7 +171,7 @@
         },
         {
           "title": "Local Expertise, Global Reach",
-          "description": "In the Mediterranean nautical services market, Menorca Yacht Brokers is emerging as a pioneering company with a unique combination of <2>Local Expertise, Global Reach</2>. This innovative Menorcan company has managed to establish a significant presence in the sector.",
+          "description": "In the Mediterranean nautical services market, Menorca Yacht Brokers is emerging as a pioneering company with a unique combination of <p>Local Expertise, Global Reach</p>. This innovative Menorcan company has managed to establish a significant presence in the sector.",
           "imageAlt": "Maritime Management"
         }
       ]
@@ -272,14 +272,14 @@
   "yachtBroker": {
     "hero": {
       "title": "Yacht Broker | Boat Sales and Vessel Specialists in Menorca",
-      "subtitle": "Specialists in <1>buying</1> and <1>selling</1> of yachts in Menorca. Wide range of luxury vessels and personalized advice."
+      "subtitle": "Specialists in <p>buying</p> and <p>selling</p> of yachts in Menorca. Wide range of luxury vessels and personalized advice."
     },
     "navigation": {
       "newYachts": "New Yachts",
       "usedYachts": "Used Yachts"
     },
     "description": {
-      "intro": "Browse our stock of Yachts for sale below or discover our key services and contact us. We have <1>pre-owned</1> Yachts available, or we can arrange contracts with shipyards for <1>new construction</1>.",
+      "intro": "Browse our stock of Yachts for sale below or discover our key services and contact us. We have <p>pre-owned</p> Yachts available, or we can arrange contracts with shipyards for <p>new construction</p>.",
       "expertise": "Our team of experts will guide you through the entire process of buying or selling your vessel, ensuring a professional and transparent experience."
     },
     "yachtDetails": {
@@ -552,9 +552,9 @@
   "inspections": {
     "hero": {
       "title": "Boat Inspections and Valuations in Menorca",
-      "subtitle": "Specialized <2>inspection</2> and <2>appraisal</2> maritime services for buyers and sellers"
+      "subtitle": "Specialized <p>inspection</p> and <p>appraisal</p> maritime services for buyers and sellers"
     },
-    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <2>inspections</2> and <2>marine appraisals</2>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
+    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <p>inspections</p> and <p>marine appraisals</p>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
     "services": {
       "maritimeInspections": {
         "title": "Maritime Inspections",

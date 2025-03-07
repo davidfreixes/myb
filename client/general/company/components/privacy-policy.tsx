@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 export default function PrivacyPolicy() {
-  const { t } = useTranslation();
+  const t = useTranslations("privacyPolicy");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-primary mb-2 sm:mb-4 text-center">
-              {t("privacyPolicy.hero.title")}
+              {t("hero.title")}
             </h1>
           </motion.div>
         </div>
@@ -42,119 +42,115 @@ export default function PrivacyPolicy() {
             {/* Section 1 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.generalInfo.title")}
+                {t("sections.generalInfo.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.generalInfo.content")}</p>
+              <p>{t("sections.generalInfo.content")}</p>
             </section>
 
             {/* Section 2 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.personalData.title")}
+                {t("sections.personalData.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.personalData.intro")}</p>
+              <p>{t("sections.personalData.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>{t("privacyPolicy.sections.personalData.items.0")}</li>
-                <li>{t("privacyPolicy.sections.personalData.items.1")}</li>
-                <li>{t("privacyPolicy.sections.personalData.items.2")}</li>
+                <li>{t("sections.personalData.items.0")}</li>
+                <li>{t("sections.personalData.items.1")}</li>
+                <li>{t("sections.personalData.items.2")}</li>
               </ul>
             </section>
 
             {/* Section 3 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.purposes.title")}
+                {t("sections.purposes.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.purposes.intro")}</p>
+              <p>{t("sections.purposes.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>{t("privacyPolicy.sections.purposes.items.0")}</li>
-                <li>{t("privacyPolicy.sections.purposes.items.1")}</li>
-                <li>{t("privacyPolicy.sections.purposes.items.2")}</li>
-                <li>{t("privacyPolicy.sections.purposes.items.3")}</li>
-                <li>{t("privacyPolicy.sections.purposes.items.4")}</li>
+                <li>{t("sections.purposes.items.0")}</li>
+                <li>{t("sections.purposes.items.1")}</li>
+                <li>{t("sections.purposes.items.2")}</li>
+                <li>{t("sections.purposes.items.3")}</li>
+                <li>{t("sections.purposes.items.4")}</li>
               </ul>
             </section>
 
             {/* Section 4 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.legalBasis.title")}
+                {t("sections.legalBasis.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.legalBasis.intro")}</p>
+              <p>{t("sections.legalBasis.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>{t("privacyPolicy.sections.legalBasis.items.0")}</li>
-                <li>{t("privacyPolicy.sections.legalBasis.items.1")}</li>
-                <li>{t("privacyPolicy.sections.legalBasis.items.2")}</li>
+                <li>{t("sections.legalBasis.items.0")}</li>
+                <li>{t("sections.legalBasis.items.1")}</li>
+                <li>{t("sections.legalBasis.items.2")}</li>
               </ul>
             </section>
 
             {/* Section 5 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.dataRecipients.title")}
+                {t("sections.dataRecipients.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.dataRecipients.content")}</p>
+              <p>{t("sections.dataRecipients.content")}</p>
             </section>
 
             {/* Section 6 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.internationalTransfers.title")}
+                {t("sections.internationalTransfers.title")}
               </h2>
-              <p>
-                {t("privacyPolicy.sections.internationalTransfers.content")}
-              </p>
+              <p>{t("sections.internationalTransfers.content")}</p>
             </section>
 
             {/* Section 7 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.userRights.title")}
+                {t("sections.userRights.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.userRights.intro")}</p>
+              <p>{t("sections.userRights.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>{t("privacyPolicy.sections.userRights.items.0")}</li>
-                <li>{t("privacyPolicy.sections.userRights.items.1")}</li>
-                <li>{t("privacyPolicy.sections.userRights.items.2")}</li>
-                <li>{t("privacyPolicy.sections.userRights.items.3")}</li>
-                <li>{t("privacyPolicy.sections.userRights.items.4")}</li>
-                <li>{t("privacyPolicy.sections.userRights.items.5")}</li>
+                <li>{t("sections.userRights.items.0")}</li>
+                <li>{t("sections.userRights.items.1")}</li>
+                <li>{t("sections.userRights.items.2")}</li>
+                <li>{t("sections.userRights.items.3")}</li>
+                <li>{t("sections.userRights.items.4")}</li>
+                <li>{t("sections.userRights.items.5")}</li>
               </ul>
-              <p className="mt-4">
-                {t("privacyPolicy.sections.userRights.contact")}
-              </p>
+              <p className="mt-4">{t("sections.userRights.contact")}</p>
             </section>
 
             {/* Section 8 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.dataRetention.title")}
+                {t("sections.dataRetention.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.dataRetention.content")}</p>
+              <p>{t("sections.dataRetention.content")}</p>
             </section>
 
             {/* Section 9 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.dataSecurity.title")}
+                {t("sections.dataSecurity.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.dataSecurity.content")}</p>
+              <p>{t("sections.dataSecurity.content")}</p>
             </section>
 
             {/* Section 10 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.policyChanges.title")}
+                {t("sections.policyChanges.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.policyChanges.content")}</p>
+              <p>{t("sections.policyChanges.content")}</p>
             </section>
 
             {/* Section 11 */}
             <section>
               <h2 className="font-montserrat text-2xl text-primary mb-4">
-                {t("privacyPolicy.sections.contact.title")}
+                {t("sections.contact.title")}
               </h2>
-              <p>{t("privacyPolicy.sections.contact.content")}</p>
+              <p>{t("sections.contact.content")}</p>
             </section>
           </div>
         </motion.div>

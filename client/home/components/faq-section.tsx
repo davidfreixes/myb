@@ -1,41 +1,41 @@
 import { Accordion, Container, Text } from "@mantine/core";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 export default function FAQSection() {
-  const { t } = useTranslation();
+  const t = useTranslations("mainPage.faq");
 
   const questions = [
     {
-      question: t("mainPage.faq.bestTimeToBuy.question"),
-      answer: t("mainPage.faq.bestTimeToBuy.answer"),
+      question: t("bestTimeToBuy.question"),
+      answer: t("bestTimeToBuy.answer"),
     },
     {
-      question: t("mainPage.faq.servicesOffered.question"),
-      answer: t("mainPage.faq.servicesOffered.answer"),
+      question: t("servicesOffered.question"),
+      answer: t("servicesOffered.answer"),
     },
     {
-      question: t("mainPage.faq.purchaseProcess.question"),
-      answer: t("mainPage.faq.purchaseProcess.answer"),
+      question: t("purchaseProcess.question"),
+      answer: t("purchaseProcess.answer"),
     },
     {
-      question: t("mainPage.faq.maintenanceCosts.question"),
-      answer: t("mainPage.faq.maintenanceCosts.answer"),
+      question: t("maintenanceCosts.question"),
+      answer: t("maintenanceCosts.answer"),
     },
     {
-      question: t("mainPage.faq.financingOptions.question"),
-      answer: t("mainPage.faq.financingOptions.answer"),
+      question: t("financingOptions.question"),
+      answer: t("financingOptions.answer"),
     },
     {
-      question: t("mainPage.faq.requiredDocuments.question"),
-      answer: t("mainPage.faq.requiredDocuments.answer"),
+      question: t("requiredDocuments.question"),
+      answer: t("requiredDocuments.answer"),
     },
     {
-      question: t("mainPage.faq.prePurchaseInspection.question"),
-      answer: t("mainPage.faq.prePurchaseInspection.answer"),
+      question: t("prePurchaseInspection.question"),
+      answer: t("prePurchaseInspection.answer"),
     },
     {
-      question: t("mainPage.faq.charterService.question"),
-      answer: t("mainPage.faq.charterService.answer"),
+      question: t("charterService.question"),
+      answer: t("charterService.answer"),
     },
   ];
 
@@ -44,10 +44,10 @@ export default function FAQSection() {
       <Container size="lg">
         <div className="text-center mb-12">
           <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
-            {t("mainPage.faq.title")}
+            {t("title")}
           </h1>
           <Text className="text-gray-600 text-lg">
-            {t("mainPage.faq.description")}
+            {t("description")}
           </Text>
         </div>
 

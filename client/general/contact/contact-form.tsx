@@ -1,8 +1,8 @@
 import { Button, Select, TextInput, Textarea } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Mail, Phone, User } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 interface FormData {
   type: string;
@@ -21,7 +21,7 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
-  const { t } = useTranslation();
+  const t = useTranslations("contact.contactForm");
 
   const [formData, setFormData] = useState<FormData>({
     type: "FORMULARIO DE CONTACTO",
@@ -47,35 +47,35 @@ export default function ContactForm() {
 
     // Validación del nombre
     if (!formData.name.trim()) {
-      newErrors.name = t("contact.contactForm.form.validation.name.required");
+      newErrors.name = t("form.validation.name.required");
     } else if (formData.name.length < 2) {
-      newErrors.name = t("contact.contactForm.form.validation.name.minLength");
+      newErrors.name = t("form.validation.name.minLength");
     }
 
     // Validación del email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = t("contact.contactForm.form.validation.email.required");
+      newErrors.email = t("form.validation.email.required");
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = t("contact.contactForm.form.validation.email.invalid");
+      newErrors.email = t("form.validation.email.invalid");
     }
 
     // Validación del teléfono
     const phoneRegex = /^\+?[\d\s-]{6,}$/;
     if (!formData.phone.trim()) {
-      newErrors.phone = t("contact.contactForm.form.validation.phone.required");
+      newErrors.phone = t("form.validation.phone.required");
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = t("contact.contactForm.form.validation.phone.invalid");
+      newErrors.phone = t("form.validation.phone.invalid");
     }
 
     // Validación del mensaje
     if (!formData.message.trim()) {
       newErrors.message = t(
-        "contact.contactForm.form.validation.message.required"
+        "form.validation.message.required"
       );
     } else if (formData.message.length < 4) {
       newErrors.message = t(
-        "contact.contactForm.form.validation.message.minLength"
+        "form.validation.message.minLength"
       );
     }
 
@@ -136,7 +136,7 @@ export default function ContactForm() {
       if (result.success) {
         setSubmitStatus({
           type: "success",
-          message: t("contact.contactForm.form.submit.success"),
+          message: t("form.submit.success"),
         });
         setFormData({
           type: "",
@@ -149,7 +149,7 @@ export default function ContactForm() {
         setErrors({});
       } else {
         throw new Error(
-          result.message || t("contact.contactForm.form.submit.error")
+          result.message || t("form.submit.error")
         );
       }
     } catch (error) {
@@ -158,7 +158,7 @@ export default function ContactForm() {
         message:
           error instanceof Error
             ? error.message
-            : t("contact.contactForm.form.submit.error"),
+            : t("form.submit.error"),
       });
     } finally {
       setIsLoading(false);
@@ -166,10 +166,10 @@ export default function ContactForm() {
   };
 
   const countryData = [
-    { value: "ES", label: t("contact.contactForm.form.countries.ES") },
-    { value: "UK", label: t("contact.contactForm.form.countries.UK") },
-    { value: "DE", label: t("contact.contactForm.form.countries.DE") },
-    { value: "FR", label: t("contact.contactForm.form.countries.FR") },
+    { value: "ES", label: t("form.countries.ES") },
+    { value: "UK", label: t("form.countries.UK") },
+    { value: "DE", label: t("form.countries.DE") },
+    { value: "FR", label: t("form.countries.FR") },
   ];
 
   return (
@@ -179,7 +179,7 @@ export default function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-4  ">
-        {t("contact.contactForm.title")}
+        {t("title")}
       </h2>
 
       <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-6">
@@ -203,8 +203,8 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <TextInput
           required
-          label={t("contact.contactForm.form.labels.name")}
-          placeholder={t("contact.contactForm.form.placeholders.name")}
+          label={t("form.labels.name")}
+          placeholder={t("form.placeholders.name")}
           rightSection={<User size={16} />}
           value={formData.name}
           onChange={(e) => {
@@ -217,8 +217,8 @@ export default function ContactForm() {
 
         <TextInput
           required
-          label={t("contact.contactForm.form.labels.email")}
-          placeholder={t("contact.contactForm.form.placeholders.email")}
+          label={t("form.labels.email")}
+          placeholder={t("form.placeholders.email")}
           rightSection={<Mail size={16} />}
           value={formData.email}
           onChange={(e) => {
@@ -231,8 +231,8 @@ export default function ContactForm() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Select
-            label={t("contact.contactForm.form.labels.country")}
-            placeholder={t("contact.contactForm.form.placeholders.country")}
+            label={t("form.labels.country")}
+            placeholder={t("form.placeholders.country")}
             data={countryData}
             value={formData.country}
             onChange={(value) =>
@@ -243,8 +243,8 @@ export default function ContactForm() {
           />
           <TextInput
             required
-            label={t("contact.contactForm.form.labels.phone")}
-            placeholder={t("contact.contactForm.form.placeholders.phone")}
+            label={t("form.labels.phone")}
+            placeholder={t("form.placeholders.phone")}
             rightSection={<Phone size={16} />}
             value={formData.phone}
             onChange={(e) => {
@@ -259,8 +259,8 @@ export default function ContactForm() {
 
         <Textarea
           required
-          label={t("contact.contactForm.form.labels.message")}
-          placeholder={t("contact.contactForm.form.placeholders.message")}
+          label={t("form.labels.message")}
+          placeholder={t("form.placeholders.message")}
           rows={4}
           value={formData.message}
           onChange={(e) => {
@@ -293,8 +293,8 @@ export default function ContactForm() {
           disabled={isLoading}
         >
           {isLoading
-            ? t("contact.contactForm.form.submit.sending")
-            : t("contact.contactForm.form.submit.button")}{" "}
+            ? t("form.submit.sending")
+            : t("form.submit.button")}{" "}
         </Button>
       </form>
     </motion.div>

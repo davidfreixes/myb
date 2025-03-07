@@ -96,7 +96,7 @@
       "title": "Bienvenido a Menorca Yacht Brokers",
       "subtitle": {
         "part1": "Tu Broker de Yates de confianza",
-        "part2": "<2>Compra</2>, <2> vende</2> o <2> alquila</2> tu Yate con Menorca Yacht Brokers"
+        "part2": "<p>Compra</p>, <p> vende</p> o <p> alquila</p> tu Yate con Menorca Yacht Brokers"
       },
       "description": {
         "part1": "En Menorca Yacht Brokers, te ofrecemos soluciones completas para la compraventa de yates en Menorca, charters, gestión de cargas y asesoría náutica.",
@@ -171,7 +171,7 @@
         },
         {
           "title": "Experiencia local, alcance global",
-          "description": "En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht Brokers se está destacando como una empresa pionera con una combinación única de <2>Experiencia local, alcance global</2>. Esta innovadora compañía menorquina ha logrado establecer una presencia significativa en el sector.",
+          "description": "En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht Brokers se está destacando como una empresa pionera con una combinación única de <p>Experiencia local, alcance global</p>. Esta innovadora compañía menorquina ha logrado establecer una presencia significativa en el sector.",
           "imageAlt": "Gestión Marítima"
         }
       ]
@@ -272,14 +272,14 @@
   "yachtBroker": {
     "hero": {
       "title": "Compra y Venta de Barcos en Menorca | Especialistas en Embarcaciones",
-      "subtitle": "Especialistas en <1>compra</1> y <1>venta</1> de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado."
+      "subtitle": "Especialistas en <p>compra</p> y <p>venta</p> de yates en Menorca. Amplia gama de embarcaciones de lujo y asesoramiento personalizado."
     },
     "navigation": {
       "newYachts": "Barcos Nuevos",
       "usedYachts": "Barcos Segunda Mano"
     },
     "description": {
-      "intro": "Consulta nuestro stock de Yates en venta a continuación o descubre nuestras claves y contáctarnos más abajo. Contamos con Yates de <1>segunda mano</1> o se pueden realizar contactos con astilleros para entrar en contratos de <1>nueva construcción</1>.",
+      "intro": "Consulta nuestro stock de Yates en venta a continuación o descubre nuestras claves y contáctarnos más abajo. Contamos con Yates de <p>segunda mano</p> o se pueden realizar contactos con astilleros para entrar en contratos de <p>nueva construcción</p>.",
       "expertise": "Nuestro equipo de expertos te guiará en todo el proceso de compra o venta de tu embarcación, garantizando una experiencia profesional y transparente."
     },
     "yachtDetails": {
@@ -552,9 +552,9 @@
   "inspections": {
     "hero": {
       "title": "Inspecciones y Tasaciones de Barcos en Menorca",
-      "subtitle": "Servicios especializados de <2>inspección</2> y <2>tasación</2> marítima para compradores y vendedores"
+      "subtitle": "Servicios especializados de <p>inspección</p> y <p>tasación</p> marítima para compradores y vendedores"
     },
-    "intro": "En Menorca Yacht Brokers, contamos con una experiencia sólida en la realización de <2>inspecciones</2> y <2>tasaciones marítimas</2>. Como parte de nuestro compromiso con la calidad y la transparencia, ofrecemos servicios especializados tanto para compradores comopara vendedores de yates y embarcaciones.",
+    "intro": "En Menorca Yacht Brokers, contamos con una experiencia sólida en la realización de <p>inspecciones</p> y <p>tasaciones marítimas</p>. Como parte de nuestro compromiso con la calidad y la transparencia, ofrecemos servicios especializados tanto para compradores comopara vendedores de yates y embarcaciones.",
     "services": {
       "maritimeInspections": {
         "title": "Inspecciones Marítimas",

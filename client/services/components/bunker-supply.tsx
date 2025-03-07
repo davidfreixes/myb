@@ -9,36 +9,37 @@ import {
   Users,
   Wheat
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function BunkerSupplyPage() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("bunkerSupply");
 
   const marketIndices = [
     {
-      title: t("bunkerSupply.marketIndices.providers.shipAndBunker.title"),
+      title: t("marketIndices.providers.shipAndBunker.title"),
       description: t(
-        "bunkerSupply.marketIndices.providers.shipAndBunker.description"
+        "marketIndices.providers.shipAndBunker.description"
       ),
       image: "/img/bunker-supply/ship-bunker.png",
       link: "https://shipandbunker.com/prices",
     },
     {
-      title: t("bunkerSupply.marketIndices.providers.balticExchange.title"),
+      title: t("marketIndices.providers.balticExchange.title"),
       description: t(
-        "bunkerSupply.marketIndices.providers.balticExchange.description"
+        "marketIndices.providers.balticExchange.description"
       ),
       image: "/img/bunker-supply/baltic-exchange.png",
       link: "https://www.balticexchange.com/en/index.html",
     },
     {
-      title: t("bunkerSupply.marketIndices.providers.cepsaMoeve.title"),
+      title: t("marketIndices.providers.cepsaMoeve.title"),
       description: t(
-        "bunkerSupply.marketIndices.providers.cepsaMoeve.description"
+        "marketIndices.providers.cepsaMoeve.description"
       ),
       images: [
         {
@@ -53,9 +54,9 @@ export default function BunkerSupplyPage() {
       link: "https://rafamoreno.es/rebranding-cepsa-moeve/",
     },
     {
-      title: t("bunkerSupply.marketIndices.providers.stabiaOil.title"),
+      title: t("marketIndices.providers.stabiaOil.title"),
       description: t(
-        "bunkerSupply.marketIndices.providers.stabiaOil.description"
+        "marketIndices.providers.stabiaOil.description"
       ),
       image: "/img/bunker-supply/stabia-oil.jpg",
       link: "http://www.stabiaoil.com/",
@@ -65,19 +66,19 @@ export default function BunkerSupplyPage() {
   const features1 = [
     {
       title: t(
-        "bunkerSupply.experience.globalExperience.features.globalCoverage.title"
+        "experience.globalExperience.features.globalCoverage.title"
       ),
       description: t(
-        "bunkerSupply.experience.globalExperience.features.globalCoverage.description"
+        "experience.globalExperience.features.globalCoverage.description"
       ),
       icon: <Globe2 className="w-6 h-6 text-primary" />,
     },
     {
       title: t(
-        "bunkerSupply.experience.globalExperience.features.service247.title"
+        "experience.globalExperience.features.service247.title"
       ),
       description: t(
-        "bunkerSupply.experience.globalExperience.features.service247.description"
+        "experience.globalExperience.features.service247.description"
       ),
       icon: <Anchor className="w-6 h-6 text-primary" />,
     },
@@ -86,19 +87,19 @@ export default function BunkerSupplyPage() {
   const features2 = [
     {
       title: t(
-        "bunkerSupply.experience.expertKnowledge.features.expertTeam.title"
+        "experience.expertKnowledge.features.expertTeam.title"
       ),
       description: t(
-        "bunkerSupply.experience.expertKnowledge.features.expertTeam.description"
+        "experience.expertKnowledge.features.expertTeam.description"
       ),
       icon: <Users className="w-6 h-6 text-primary" />,
     },
     {
       title: t(
-        "bunkerSupply.experience.expertKnowledge.features.qualityGuarantee.title"
+        "experience.expertKnowledge.features.qualityGuarantee.title"
       ),
       description: t(
-        "bunkerSupply.experience.expertKnowledge.features.qualityGuarantee.description"
+        "experience.expertKnowledge.features.qualityGuarantee.description"
       ),
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
     },
@@ -107,24 +108,24 @@ export default function BunkerSupplyPage() {
   const services = [
     {
       title: t(
-        "bunkerSupply.specializedServices.services.shipSalePurchase.title"
+        "specializedServices.services.shipSalePurchase.title"
       ),
       description: t(
-        "bunkerSupply.specializedServices.services.shipSalePurchase.description"
+        "specializedServices.services.shipSalePurchase.description"
       ),
       icon: <Ship className="w-6 h-6 text-primary" />,
     },
     {
-      title: t("bunkerSupply.specializedServices.services.dryBulk.title"),
+      title: t("specializedServices.services.dryBulk.title"),
       description: t(
-        "bunkerSupply.specializedServices.services.dryBulk.description"
+        "specializedServices.services.dryBulk.description"
       ),
       icon: <Wheat className="w-6 h-6 text-primary" />,
     },
     {
-      title: t("bunkerSupply.specializedServices.services.liquidBulk.title"),
+      title: t("specializedServices.services.liquidBulk.title"),
       description: t(
-        "bunkerSupply.specializedServices.services.liquidBulk.description"
+        "specializedServices.services.liquidBulk.description"
       ),
       icon: <BarChart2 className="w-6 h-6 text-primary" />,
     },
@@ -152,13 +153,13 @@ export default function BunkerSupplyPage() {
           >
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
-                {t("bunkerSupply.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                {t("bunkerSupply.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white max-w-4xl">
-                <Trans i18nKey="bunkerSupply.hero.subtitle2">
+                <Trans i18nKey="hero.subtitle2">
                   Mediante nuestro partner{" "}
                   <span className="text-primary">Stabia Oil</span> y{" "}
                   <span className="text-primary">CEPSA</span>. Podemos
@@ -191,19 +192,19 @@ export default function BunkerSupplyPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-4 sm:p-6">
               <h3 className="text-white text-lg sm:text-xl font-montserrat mb-2">
-                {t("bunkerSupply.dailyPosition.title")}
+                {t("dailyPosition.title")}
               </h3>
               <p className="text-white/80 text-xs sm:text-sm">
-                {t("bunkerSupply.dailyPosition.updateStatus")}
+                {t("dailyPosition.updateStatus")}
               </p>
             </div>
           </div>
           <div className="space-y-4 sm:space-y-6">
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
-              {t("bunkerSupply.dailyPosition.sectionTitle")}
+              {t("dailyPosition.sectionTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-700">
-              {t("bunkerSupply.dailyPosition.description")}
+              {t("dailyPosition.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
@@ -212,7 +213,7 @@ export default function BunkerSupplyPage() {
                 className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
               >
                 <div className="flex items-center justify-center gap-2">
-                  {t("bunkerSupply.dailyPosition.downloadButton")}
+                  {t("dailyPosition.downloadButton")}
                 </div>
               </Button>
               {/* <Button
@@ -238,16 +239,16 @@ export default function BunkerSupplyPage() {
       >
         <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] ">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-8 text-center">
-            {t("bunkerSupply.marketIndices.title")}
+            {t("marketIndices.title")}
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            {t("bunkerSupply.marketIndices.subtitle")}
+            {t("marketIndices.subtitle")}
           </p>
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {marketIndices.map((item, index) => (
               <Tooltip.Floating
-                label={t("bunkerSupply.marketIndices.tooltip")}
+                label={t("marketIndices.tooltip")}
                 position="right"
                 key={item.title}
               >
@@ -314,7 +315,7 @@ export default function BunkerSupplyPage() {
         className="mb-12 sm:mb-16 md:mb-20 mx-auto px-4 sm:px-6 max-w-[1400px]"
       >
         <h3 className="font-montserrat text-xl sm:text-2xl md:text-4xl text-primary mb-6 sm:mb-8 text-center">
-          {t("bunkerSupply.specializedServices.title")}{" "}
+          {t("specializedServices.title")}{" "}
         </h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
@@ -355,10 +356,10 @@ export default function BunkerSupplyPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
-              {t("bunkerSupply.experience.title")}
+              {t("experience.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {t("bunkerSupply.experience.subtitle")}
+              {t("experience.subtitle")}
             </p>
           </motion.div>
 
@@ -372,11 +373,11 @@ export default function BunkerSupplyPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="font-montserrat text-2xl font-medium text-black">
-                  {t("bunkerSupply.experience.globalExperience.title")}
+                  {t("experience.globalExperience.title")}
                 </h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                {t("bunkerSupply.experience.globalExperience.description")}
+                {t("experience.globalExperience.description")}
               </p>
               <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {features1.map((feature, index) => (
@@ -410,11 +411,11 @@ export default function BunkerSupplyPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="font-montserrat text-2xl font-medium text-black">
-                  {t("bunkerSupply.experience.expertKnowledge.title")}
+                  {t("experience.expertKnowledge.title")}
                 </h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                {t("bunkerSupply.experience.expertKnowledge.description")}
+                {t("experience.expertKnowledge.description")}
               </p>
               <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {features2.map((feature, index) => (
@@ -450,17 +451,17 @@ export default function BunkerSupplyPage() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-8 sm:p-8 md:py-20 text-center"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4 max-w-[1400px] lg:mx-auto">
-          {t("bunkerSupply.cta.title")}
+          {t("cta.title")}
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto">
-          {t("bunkerSupply.cta.description")}
+          {t("cta.description")}
         </p>
         <Button
           onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
-          {t("bunkerSupply.cta.button")}
+          {t("cta.button")}
         </Button>
       </motion.div>
       <ContactModal

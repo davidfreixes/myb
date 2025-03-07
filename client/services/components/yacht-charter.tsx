@@ -9,91 +9,91 @@ import {
   Sunset,
   Users,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function YachtCharter() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations('yachtCharter');
 
   const whyChooseUs = [
     {
-      title: t("yachtCharter.whyChooseUs.reasons.fleet.title"),
-      description: t("yachtCharter.whyChooseUs.reasons.fleet.description"),
+      title: t("whyChooseUs.reasons.fleet.title"),
+      description: t("whyChooseUs.reasons.fleet.description"),
       icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.whyChooseUs.reasons.experience.title"),
-      description: t("yachtCharter.whyChooseUs.reasons.experience.description"),
+      title: t("whyChooseUs.reasons.experience.title"),
+      description: t("whyChooseUs.reasons.experience.description"),
       icon: <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.whyChooseUs.reasons.crew.title"),
-      description: t("yachtCharter.whyChooseUs.reasons.crew.description"),
+      title: t("whyChooseUs.reasons.crew.title"),
+      description: t("whyChooseUs.reasons.crew.description"),
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.whyChooseUs.reasons.routes.title"),
-      description: t("yachtCharter.whyChooseUs.reasons.routes.description"),
+      title: t("whyChooseUs.reasons.routes.title"),
+      description: t("whyChooseUs.reasons.routes.description"),
       icon: <Compass className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
 
   const services = [
     {
-      title: t("yachtCharter.services.list.dailyRental.title"),
-      description: t("yachtCharter.services.list.dailyRental.description"),
+      title: t("services.list.dailyRental.title"),
+      description: t("services.list.dailyRental.description"),
       icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.services.list.thematicExcursions.title"),
+      title: t("services.list.thematicExcursions.title"),
       description: t(
-        "yachtCharter.services.list.thematicExcursions.description"
+        "services.list.thematicExcursions.description"
       ),
       icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.services.list.withoutLicense.title"),
-      description: t("yachtCharter.services.list.withoutLicense.description"),
+      title: t("services.list.withoutLicense.title"),
+      description: t("services.list.withoutLicense.description"),
       icon: <Ship className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("yachtCharter.services.list.support.title"),
-      description: t("yachtCharter.services.list.support.description"),
+      title: t("services.list.support.title"),
+      description: t("services.list.support.description"),
       icon: <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
 
   const questions = [
     {
-      question: t("yachtCharter.faq.licenseRequired.question"),
-      answer: t("yachtCharter.faq.licenseRequired.answer"),
+      question: t("faq.licenseRequired.question"),
+      answer: t("faq.licenseRequired.answer"),
     },
     {
-      question: t("yachtCharter.faq.bestTimeToRent.question"),
-      answer: t("yachtCharter.faq.bestTimeToRent.answer"),
+      question: t("faq.bestTimeToRent.question"),
+      answer: t("faq.bestTimeToRent.answer"),
     },
     {
-      question: t("yachtCharter.faq.boatTypes.question"),
-      answer: t("yachtCharter.faq.boatTypes.answer"),
+      question: t("faq.boatTypes.question"),
+      answer: t("faq.boatTypes.answer"),
     },
     {
-      question: t("yachtCharter.faq.rentalDuration.question"),
-      answer: t("yachtCharter.faq.rentalDuration.answer"),
+      question: t("faq.rentalDuration.question"),
+      answer: t("faq.rentalDuration.answer"),
     },
     {
-      question: t("yachtCharter.faq.recommendedRoutes.question"),
-      answer: t("yachtCharter.faq.recommendedRoutes.answer"),
+      question: t("faq.recommendedRoutes.question"),
+      answer: t("faq.recommendedRoutes.answer"),
     },
     {
-      question: t("yachtCharter.faq.includedServices.question"),
-      answer: t("yachtCharter.faq.includedServices.answer"),
+      question: t("faq.includedServices.question"),
+      answer: t("faq.includedServices.answer"),
     },
     {
-      question: t("yachtCharter.faq.howToBook.question"),
-      answer: t("yachtCharter.faq.howToBook.answer"),
+      question: t("faq.howToBook.question"),
+      answer: t("faq.howToBook.answer"),
     },
   ];
 
@@ -121,10 +121,10 @@ export default function YachtCharter() {
           >
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                {t("yachtCharter.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
-                {t("yachtCharter.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ export default function YachtCharter() {
           className="text-center mb-8 sm:mb-10"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary">
-            {t("yachtCharter.services.title")}
+            {t("services.title")}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -195,17 +195,17 @@ export default function YachtCharter() {
               className="space-y-4 sm:space-y-6"
             >
               <h2 className="text-2xl sm:text-3xl font-montserrat text-black">
-                {t("yachtCharter.discover.title")}
+                {t("discover.title")}
               </h2>
               <p className="text-base sm:text-lg text-gray-700">
-                {t("yachtCharter.discover.description")}
+                {t("discover.description")}
               </p>
               {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
                   unstyled
                   className="bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
                 >
-                  {t("yachtCharter.discover.button")}
+                  {t("discover.button")}
                 </Button>
               </div> */}
             </motion.div>
@@ -222,7 +222,7 @@ export default function YachtCharter() {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
-            {t("yachtCharter.whyChooseUs.title")}
+            {t("whyChooseUs.title")}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -257,10 +257,10 @@ export default function YachtCharter() {
         <Container>
           <div className="text-center mb-12">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
-              {t("yachtCharter.faq.title")}
+              {t("faq.title")}
             </h1>
             <Text className="text-gray-600 text-lg">
-              {t("yachtCharter.faq.description")}
+              {t("faq.description")}
             </Text>
           </div>
 
@@ -318,17 +318,17 @@ export default function YachtCharter() {
         >
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4 sm:mb-6">
-              {t("yachtCharter.cta.title")}
+              {t("cta.title")}
             </h2>
             <p className="text-base sm:text-lg text-white mb-6 sm:mb-8">
-              {t("yachtCharter.cta.description")}
+              {t("cta.description")}
             </p>
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 sm:px-6 rounded w-full sm:w-auto"
             >
-              {t("yachtCharter.cta.button")}
+              {t("cta.button")}
             </Button>
           </div>
         </motion.div>

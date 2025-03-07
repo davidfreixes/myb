@@ -1,9 +1,9 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 const teamMembers = [
@@ -67,7 +67,7 @@ const teamMembers = [
 
 export default function AboutUs() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("aboutUs");
 
   const teamSectionRef = useRef<HTMLDivElement>(null);
 
@@ -101,17 +101,17 @@ export default function AboutUs() {
           >
             <div className="space-y-3 sm:space-y-4 flex flex-col items-center px-4 mt-12">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary mb-2 sm:mb-4 text-center">
-                {t("aboutUs.hero.title")}{" "}
+                {t("hero.title")}{" "}
               </h1>
               <h2 className="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white px-2 text-center">
-                {t("aboutUs.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
               <Button
                 onClick={scrollToSection}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-5 py-2 text-md font-medium text-white shadow-lg hover:bg-primary/90 transition-colors mt-4"
               >
-                {t("aboutUs.hero.button")}
+                {t("hero.button")}
               </Button>
             </div>
           </motion.div>
@@ -126,10 +126,10 @@ export default function AboutUs() {
             className="text-center mb-12 sm:mb-16"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4">
-              {t("aboutUs.team.title")}
+              {t("team.title")}
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg">
-              {t("aboutUs.team.description")}
+              {t("team.description")}
             </p>
           </motion.div>
 
@@ -182,7 +182,7 @@ export default function AboutUs() {
                         variant="outline"
                         color="#f1c001"
                       >
-                        {t("aboutUs.team.contactButton")}
+                        {t("team.contactButton")}
                       </Button>
                     )}
                   </div>
@@ -203,20 +203,20 @@ export default function AboutUs() {
             className="space-y-4 sm:space-y-6 flex flex-col justify-center items-center"
           >
             <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary font-semibold text-center">
-              {t("aboutUs.contact.title")}
+              {t("contact.title")}
             </h2>
             <h3 className="text-lg sm:text-xl md:text-2xl text-darkTitle text-center">
-              {t("aboutUs.contact.subtitle")}
+              {t("contact.subtitle")}
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed text-center px-4 sm:px-6 md:px-8 max-w-2xl">
-              {t("aboutUs.contact.description")}
+              {t("contact.description")}
             </p>
             <Button
               onClick={() => setContactModalOpened(true)}
               unstyled
               className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
             >
-              {t("aboutUs.contact.button")}{" "}
+              {t("contact.button")}{" "}
             </Button>
           </motion.div>
           <ContactModal

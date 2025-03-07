@@ -12,64 +12,64 @@ import {
   Scale,
   Shield,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function PurchaseAndSale() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("purchaseAndSale");
 
   const benefits = [
     {
-      title: t("purchaseAndSale.benefits.items.0.title"),
-      description: t("purchaseAndSale.benefits.items.0.description"),
+      title: t("benefits.items.0.title"),
+      description: t("benefits.items.0.description"),
       icon: (
         <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
       ),
     },
     {
-      title: t("purchaseAndSale.benefits.items.1.title"),
-      description: t("purchaseAndSale.benefits.items.1.description"),
+      title: t("benefits.items.1.title"),
+      description: t("benefits.items.1.description"),
       icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.benefits.items.2.title"),
-      description: t("purchaseAndSale.benefits.items.2.description"),
+      title: t("benefits.items.2.title"),
+      description: t("benefits.items.2.description"),
       icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.benefits.items.3.title"),
-      description: t("purchaseAndSale.benefits.items.3.description"),
+      title: t("benefits.items.3.title"),
+      description: t("benefits.items.3.description"),
       icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
 
   const components = [
     {
-      title: t("purchaseAndSale.components.items.0.title"),
-      description: t("purchaseAndSale.components.items.0.description"),
+      title: t("components.items.0.title"),
+      description: t("components.items.0.description"),
       icon: <ClipboardCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.components.items.1.title"),
-      description: t("purchaseAndSale.components.items.1.description"),
+      title: t("components.items.1.title"),
+      description: t("components.items.1.description"),
       icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.components.items.2.title"),
-      description: t("purchaseAndSale.components.items.2.description"),
+      title: t("components.items.2.title"),
+      description: t("components.items.2.description"),
       icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.components.items.3.title"),
-      description: t("purchaseAndSale.components.items.3.description"),
+      title: t("components.items.3.title"),
+      description: t("components.items.3.description"),
       icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
-      title: t("purchaseAndSale.components.items.4.title"),
-      description: t("purchaseAndSale.components.items.4.description"),
+      title: t("components.items.4.title"),
+      description: t("components.items.4.description"),
       icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
   ];
@@ -94,10 +94,10 @@ export default function PurchaseAndSale() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-4 sm:mb-6">
-              {t("purchaseAndSale.hero.title")}
+              {t("hero.title")}
             </h1>
             <p className="text-xl sm:text-2xl text-white">
-              {t("purchaseAndSale.hero.subtitle")}
+              {t("hero.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -112,13 +112,13 @@ export default function PurchaseAndSale() {
       >
         <div className="bg-primary/10 p-4 sm:p-8 rounded-xl border-2 border-primary/20">
           <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4">
-            {t("purchaseAndSale.introduction.title")}
+            {t("introduction.title")}
           </h2>
           <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-            {t("purchaseAndSale.introduction.paragraph1")}
+            {t("introduction.paragraph1")}
           </p>
           <p className="text-gray-700 text-sm sm:text-base">
-            {t("purchaseAndSale.introduction.paragraph2")}
+            {t("introduction.paragraph2")}
           </p>
         </div>
       </motion.div>
@@ -132,7 +132,7 @@ export default function PurchaseAndSale() {
           className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
-            {t("purchaseAndSale.benefits.title")}
+            {t("benefits.title")}
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {benefits.map((benefit, index) => (
@@ -168,7 +168,7 @@ export default function PurchaseAndSale() {
         className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6 py-6 sm:py-10"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
-          {t("purchaseAndSale.components.title")}
+          {t("components.title")}
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {components.map((component, index) => (
@@ -214,13 +214,13 @@ export default function PurchaseAndSale() {
           >
             <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg border border-gray-100">
               <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
-                {t("purchaseAndSale.whyChooseUs.title")}
+                {t("whyChooseUs.title")}
               </h2>
               <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-                {t("purchaseAndSale.whyChooseUs.paragraph1")}
+                {t("whyChooseUs.paragraph1")}
               </p>
               <p className="text-gray-700 text-sm sm:text-base">
-                {t("purchaseAndSale.whyChooseUs.paragraph2")}
+                {t("whyChooseUs.paragraph2")}
               </p>
             </div>
           </motion.div>
@@ -236,11 +236,11 @@ export default function PurchaseAndSale() {
           className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center "
         >
           <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
-            {t("purchaseAndSale.cta.title")}
+            {t("cta.title")}
           </h2>
           <div className=" mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto">
             <Text className="text-sm sm:text-base md:text-lg text-gray-700 ">
-              {t("purchaseAndSale.cta.description")}
+              {t("cta.description")}
             </Text>
           </div>
 
@@ -252,7 +252,7 @@ export default function PurchaseAndSale() {
             >
               <div className="flex gap-2 items-center">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                {t("purchaseAndSale.cta.button")}
+                {t("cta.button")}
               </div>
             </Button>
           </div>

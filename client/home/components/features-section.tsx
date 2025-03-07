@@ -1,39 +1,36 @@
 import { Text } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef } from "react";
-import { Trans, useTranslation } from "react-i18next";
 
 export default function FeaturesSection() {
-  const { t } = useTranslation();
+  const t = useTranslations("mainPage.featuresSection");
 
   const features = [
     {
-      title: t("mainPage.featuresSection.features.0.title"),
-      description: t("mainPage.featuresSection.features.0.description"),
+      title: t("features.0.title"),
+      description: t("features.0.description"),
       image: "/img/sail-menorca.jpg",
-      imageAlt: t("mainPage.featuresSection.features.0.imageAlt"),
+      imageAlt: t("features.0.imageAlt"),
     },
     {
-      title: t("mainPage.featuresSection.features.1.title"),
-      description: t("mainPage.featuresSection.features.1.description"),
+      title: t("features.1.title"),
+      description: t("features.1.description"),
       image: "/img/mediterranean.jpg",
-      imageAlt: t("mainPage.featuresSection.features.1.imageAlt"),
+      imageAlt: t("features.1.imageAlt"),
     },
     {
-      title: t("mainPage.featuresSection.features.2.title"),
+      title: t("features.2.title"),
       description: (
-        <Trans i18nKey="mainPage.featuresSection.features.2.description">
-          En el mercado de servicios náuticos en el Mediterráneo, Menorca Yacht
-          Brokers se está destacando como una empresa pionera con una
-          combinación única de{" "}
-          <strong>&quot;Experiencia local, alcance global&quot;</strong>. Esta
-          innovadora compañía menorquina ha logrado establecer una presencia
-          significativa en el sector.
-        </Trans>
+        <>
+          {t.rich("features.2.description", {
+            p: (chunks) => <span className="text-primary">{chunks}</span>,
+          })}
+        </>
       ),
       image: "/img/maritime-manage.jpg",
-      imageAlt: t("mainPage.featuresSection.features.2.imageAlt"),
+      imageAlt: t("features.2.imageAlt"),
     },
   ];
   // const refs = features.map(() => useRef(null));

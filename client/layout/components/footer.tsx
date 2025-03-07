@@ -1,12 +1,12 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Text } from "@mantine/core";
 import { Instagram, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 
 export function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations("footer");
 
   return (
     <footer className="bg-[#0B2847] text-white py-8 md:py-12 lg:py-16">
@@ -23,9 +23,9 @@ export function Footer() {
               />
             </Link>
             <Text className="text-center text-gray-300">
-              {t("footer.address")}
+              {t("address")}
               <br />
-              {t("footer.country")}
+              {t("country")}
             </Text>
           </div>
 
@@ -34,7 +34,7 @@ export function Footer() {
             {/* Servicios Náuticos */}
             <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">
-                {t("footer.services_nauticos.title")}
+                {t("services_nauticos.title")}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -42,7 +42,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services_nauticos.yacht_broker")}
+                    {t("services_nauticos.yacht_broker")}
                   </Link>
                 </li>
                 <li>
@@ -50,7 +50,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services_nauticos.yacht_charter")}
+                    {t("services_nauticos.yacht_charter")}
                   </Link>
                 </li>
                 <li>
@@ -58,7 +58,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.INSPECCIONES}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services_nauticos.inspecciones")}
+                    {t("services_nauticos.inspecciones")}
                   </Link>
                 </li>
                 <li>
@@ -66,7 +66,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.ASESORIA_NAUTICA}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services_nauticos.asesoria_nautica")}
+                    {t("services_nauticos.asesoria_nautica")}
                   </Link>
                 </li>
               </ul>
@@ -75,7 +75,7 @@ export function Footer() {
             {/* Servicios */}
             <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">
-                {t("footer.services.title")}
+                {t("services.title")}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -83,7 +83,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services.compra_yates")}
+                    {t("services.compra_yates")}
                   </Link>
                 </li>
                 <li>
@@ -91,7 +91,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services.venta_yates")}
+                    {t("services.venta_yates")}
                   </Link>
                 </li>
                 <li>
@@ -99,7 +99,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services.alquiler_yates")}
+                    {t("services.alquiler_yates")}
                   </Link>
                 </li>
                 <li>
@@ -107,7 +107,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.VALOR_AÑADIDO}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.services.valor_añadido")}
+                    {t("services.valor_añadido")}
                   </Link>
                 </li>
               </ul>
@@ -117,7 +117,7 @@ export function Footer() {
             <div className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">
                 {" "}
-                {t("footer.empresa.title")}
+                {t("empresa.title")}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -125,7 +125,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.empresa.aboutUs")}
+                    {t("empresa.aboutUs")}
                   </Link>
                 </li>
                 {/* <li>
@@ -141,7 +141,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.empresa.ourTeam")}
+                    {t("empresa.ourTeam")}
                   </Link>
                 </li>
                 <li>
@@ -149,7 +149,7 @@ export function Footer() {
                     href={`${NAVIGATION_LINKS.CONTACTO}`}
                     className="text-gray-300 hover:text-primary block"
                   >
-                    {t("footer.empresa.contact")}
+                    {t("empresa.contact")}
                   </Link>
                 </li>
               </ul>
@@ -177,13 +177,13 @@ export function Footer() {
                 href={`${NAVIGATION_LINKS.POLITICA_DE_PRIVACIDAD}`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
-                {t("footer.legal.politica_privacidad")}
+                {t("legal.politica_privacidad")}
               </Link>
               <Link
                 href={`${NAVIGATION_LINKS.AVISO_LEGAL}`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
-                {t("footer.legal.aviso_legal")}
+                {t("legal.aviso_legal")}
               </Link>
             </div>
 

@@ -1,44 +1,44 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Compass, FileText, Route, Scale, Wrench } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 
 export default function NauticalConsulting() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("nauticalConsulting");
 
   const services = [
     {
       icon: <Wrench className="w-7 h-7 text-primary mb-4" />,
-      title: t("nauticalConsulting.services.technicalConsulting.title"),
+      title: t("services.technicalConsulting.title"),
       description: t(
-        "nauticalConsulting.services.technicalConsulting.description"
+        "services.technicalConsulting.description"
       ),
     },
     {
       icon: <FileText className="w-7 h-7 text-primary mb-4" />,
-      title: t("nauticalConsulting.services.legalAssistance.title"),
-      description: t("nauticalConsulting.services.legalAssistance.description"),
+      title: t("services.legalAssistance.title"),
+      description: t("services.legalAssistance.description"),
     },
     {
       icon: <Compass className="w-7 h-7 text-primary mb-4" />,
-      title: t("nauticalConsulting.services.feasibilityAnalysis.title"),
+      title: t("services.feasibilityAnalysis.title"),
       description: t(
-        "nauticalConsulting.services.feasibilityAnalysis.description"
+        "services.feasibilityAnalysis.description"
       ),
     },
     {
       icon: <Scale className="w-7 h-7 text-primary mb-4" />,
-      title: t("nauticalConsulting.services.vesselValuation.title"),
-      description: t("nauticalConsulting.services.vesselValuation.description"),
+      title: t("services.vesselValuation.title"),
+      description: t("services.vesselValuation.description"),
     },
     {
       icon: <Route className="w-7 h-7 text-primary mb-4" />,
-      title: t("nauticalConsulting.services.routePlanning.title"),
-      description: t("nauticalConsulting.services.routePlanning.description"),
+      title: t("services.routePlanning.title"),
+      description: t("services.routePlanning.description"),
     },
   ];
 
@@ -64,14 +64,14 @@ export default function NauticalConsulting() {
           >
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
-                {t("nauticalConsulting.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
-                {t("nauticalConsulting.hero.subtitle.text")}{" "}
+                {t("hero.subtitle.text")}{" "}
                 <span className="text-primary">
-                  {t("nauticalConsulting.hero.subtitle.highlight")}
+                  {t("hero.subtitle.highlight")}
                 </span>{" "}
-                {t("nauticalConsulting.hero.subtitle.text2")}
+                {t("hero.subtitle.text2")}
               </h2>
             </div>
           </motion.div>
@@ -87,7 +87,7 @@ export default function NauticalConsulting() {
           className="prose prose-lg max-w-none"
         >
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-7">
-            {t("nauticalConsulting.intro.description")}
+            {t("intro.description")}
           </p>
 
           {/* Services Grid */}
@@ -121,17 +121,17 @@ export default function NauticalConsulting() {
         className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-6 rounded-lg text-center md:py-20"
       >
         <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
-          {t("nauticalConsulting.cta.title")}
+          {t("cta.title")}
         </h2>
         <p className="text-lg text-gray-700 mb-6">
-          {t("nauticalConsulting.cta.description")}
+          {t("cta.description")}
         </p>
         <Button
           onClick={() => setContactModalOpened(true)}
           unstyled
           className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-lg py-3 px-6 rounded-lg transition-colors"
         >
-          {t("nauticalConsulting.cta.button")}
+          {t("cta.button")}
         </Button>
       </motion.div>
       <ContactModal

@@ -4,6 +4,13 @@ import Inspections from "@/client/services/components/inspections";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`../messages/${context.locale}.json`)).default,
+    },
+  };
+}
 export default function InspectionsPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 

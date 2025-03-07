@@ -1,23 +1,23 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Card } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function ServicesSection() {
-  const { t } = useTranslation();
+  const t = useTranslations("mainPage.servicesSection");
 
   const services = [
     {
       title: "Yacht Broker",
       description: (
         <>
-          {t("mainPage.servicesSection.services.0.description.parte1")}
+          {t("services.0.description.parte1")}
           <br />
           <br />
-          {t("mainPage.servicesSection.services.0.description.parte2")}
+          {t("services.0.description.parte2")}
         </>
       ),
       image: "/img/yacht-broker.jpg",
@@ -27,10 +27,10 @@ export default function ServicesSection() {
       title: "Yacht Charter",
       description: (
         <>
-          {t("mainPage.servicesSection.services.1.description.parte1")}
+          {t("services.1.description.parte1")}
           <br />
           <br />
-          {t("mainPage.servicesSection.services.1.description.parte2")}
+          {t("services.1.description.parte2")}
         </>
       ),
       image: "/img/yacht-charter.jpg",
@@ -40,36 +40,36 @@ export default function ServicesSection() {
       title: "Bunker Supply",
       description: (
         <>
-          {t("mainPage.servicesSection.services.2.description.parte1")}
+          {t("services.2.description.parte1")}
           <br />
           <br />
-          {t("mainPage.servicesSection.services.2.description.parte2")}
+          {t("services.2.description.parte2")}
         </>
       ),
       image: "/img/bunker-supply.jpg",
       link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
     },
     {
-      title: t("mainPage.servicesSection.services.3.title"),
-      description: t("mainPage.servicesSection.services.3.description"),
+      title: t("services.3.title"),
+      description: t("services.3.description"),
       image: "/img/inspections.jpg",
       link: `${NAVIGATION_LINKS.INSPECCIONES}`,
     },
     {
-      title: t("mainPage.servicesSection.services.4.title"),
-      description: t("mainPage.servicesSection.services.4.description"),
+      title: t("services.4.title"),
+      description: t("services.4.description"),
       image: "/img/logistics.jpg",
       link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
     },
     {
-      title: t("mainPage.servicesSection.services.5.title"),
-      description: t("mainPage.servicesSection.services.5.description"),
+      title: t("services.5.title"),
+      description: t("services.5.description"),
       image: "/img/nautical-consulting.jpg",
       link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
     },
     {
-      title: t("mainPage.servicesSection.services.6.title"),
-      description: t("mainPage.servicesSection.services.6.description"),
+      title: t("services.6.title"),
+      description: t("services.6.description"),
       image: "/img/value-added-services.jpg",
       link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
     },
@@ -90,10 +90,10 @@ export default function ServicesSection() {
           className="text-center mb-8 sm:mb-12 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-3 sm:mb-3">
-            {t("mainPage.servicesSection.header.title")}
+            {t("header.title")}
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-            {t("mainPage.servicesSection.header.description")}
+            {t("header.description")}
           </p>
         </motion.div>
 
@@ -134,7 +134,7 @@ export default function ServicesSection() {
                       className="border-primary border-[1px] rounded text-primary hover:bg-primary hover:text-white p-1 text-sm sm:text-base w-full sm:w-auto md:w-auto"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {t("mainPage.servicesSection.button")}
+                      {t("button")}
                     </Button>
                   </div>
                 </Card>

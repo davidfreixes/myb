@@ -1,13 +1,13 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const t = useTranslations("mainPage.hero");
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -54,15 +54,14 @@ export default function Hero() {
               </h1>
               <div className="space-y-2 md:space-y-4">
                 <h2 className="text-2xl md:text-3xl font-montserrat text-white">
-                  {t("mainPage.hero.subtitle.part1")}
+                  {t("subtitle.part1")}
                 </h2>
                 <h2 className="font-montserrat text-lg md:text-xl text-white">
-                  <Trans i18nKey="mainPage.hero.subtitle.part2">
-                    <span className="text-primary">Compra</span>,
-                    <span className="text-primary"> vende</span> o
-                    <span className="text-primary"> alquila</span> tu Yate con
-                    Menorca Yacht Brokers
-                  </Trans>
+                  {t.rich("subtitle.part2", {
+                    p: (chunks) => (
+                      <span className="text-primary">{chunks}</span>
+                    ),
+                  })}
                 </h2>
               </div>
               <div className="sm:hidden mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -71,7 +70,7 @@ export default function Hero() {
                   onClick={scrollToServices}
                   className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                 >
-                  {t("mainPage.hero.buttons.explore_services")}
+                  {t("buttons.explore_services")}
                 </Button>
                 <Button
                   component={Link}
@@ -79,7 +78,7 @@ export default function Hero() {
                   unstyled
                   className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                 >
-                  {t("mainPage.hero.buttons.contact_us")}
+                  {t("buttons.contact_us")}
                 </Button>
               </div>
             </motion.div>
@@ -92,15 +91,13 @@ export default function Hero() {
               className="hidden sm:flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2"
             >
               <div className="space-y-4 md:space-y-6">
-                <h2 className="text-3xl font-light text-white">
-                  {t("mainPage.hero.title")}
-                </h2>
+                <h2 className="text-3xl font-light text-white">{t("title")}</h2>
                 <div className="space-y-3 md:space-y-4 text-gray-200">
                   <p className="text-md md:text-base">
-                    {t("mainPage.hero.description.part1")}
+                    {t("description.part1")}
                   </p>
                   <p className="text-md md:text-base">
-                    {t("mainPage.hero.description.part2")}
+                    {t("description.part2")}
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -109,7 +106,7 @@ export default function Hero() {
                     onClick={scrollToServices}
                     className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                   >
-                    {t("mainPage.hero.buttons.explore_services")}
+                    {t("buttons.explore_services")}
                   </Button>
                   <Button
                     component={Link}
@@ -117,7 +114,7 @@ export default function Hero() {
                     unstyled
                     className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >
-                    {t("mainPage.hero.buttons.contact_us")}
+                    {t("buttons.contact_us")}
                   </Button>
                 </div>
               </div>

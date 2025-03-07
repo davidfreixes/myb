@@ -1,24 +1,24 @@
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function PortDaily() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("portDaily");
 
   const newsArticles = [
     {
-      title: t("portDaily.news.articles.0.title"),
+      title: t("news.articles.0.title"),
       image: "/img/diary.jpg",
       url: "https://www.portsdebalears.com/es/noticias/la-apb-saca-para-20-anos-la-gestion-de-los-puestos-de-amarre-del-muelle-de-poniente-en-el",
     },
     {
-      title: t("portDaily.news.articles.1.title"),
+      title: t("news.articles.1.title"),
       image: "/img/diary.jpg",
       url: "https://www.menorca.info/menorca/local/2024/12/25/2295825/amarres-del-moll-ponent-salen-concesion-por-millones-euros-para-anos.html",
     },
@@ -45,10 +45,10 @@ export default function PortDaily() {
           >
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
-                {t("portDaily.hero.title")}
+                {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white px-2">
-                {t("portDaily.hero.subtitle")}
+                {t("hero.subtitle")}
               </h2>
             </div>
           </motion.div>
@@ -87,7 +87,7 @@ export default function PortDaily() {
                     </h2>
                     <div className="flex items-center text-primary">
                       <span className="text-sm">
-                        {t("portDaily.news.readMore")}
+                        {t("news.readMore")}
                       </span>
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </div>
@@ -109,10 +109,10 @@ export default function PortDaily() {
             className="max-w-3xl mx-auto text-center "
           >
             <h2 className="font-montserrat text-2xl md:text-3xl text-darkTitle mb-6">
-              {t("portDaily.submitNews.title")}
+              {t("submitNews.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              {t("portDaily.submitNews.description")}
+              {t("submitNews.description")}
             </p>
             <div className="flex justify-center gap-4">
               <Button
@@ -121,14 +121,14 @@ export default function PortDaily() {
                 unstyled
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-darkTitle shadow-lg hover:bg-primary/50 transition-colors"
               >
-                {t("portDaily.submitNews.submitButton")}
+                {t("submitNews.submitButton")}
               </Button>
               <Button
                 onClick={() => setContactModalOpened(true)}
                 unstyled
                 className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-darkTitle border-2 border-primary hover:bg-primary/50 transition-colors"
               >
-                {t("portDaily.submitNews.contactButton")}
+                {t("submitNews.contactButton")}
               </Button>
             </div>
           </motion.div>

@@ -12,15 +12,15 @@ import {
   Ship,
   Star,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function ConditionsAndRates() {
   const [activeTab, setActiveTab] = useState("yates");
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("conditionsAndRates");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -42,10 +42,10 @@ export default function ConditionsAndRates() {
             className="max-w-4xl mx-auto text-center px-4"
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
-              {t("conditionsAndRates.hero.title")}
+              {t("hero.title")}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8">
-              {t("conditionsAndRates.hero.subtitle")}
+              {t("hero.subtitle")}
             </h2>
           </motion.div>
         </div>
@@ -65,7 +65,7 @@ export default function ConditionsAndRates() {
             }`}
           >
             <Ship className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline-block" />
-            {t("conditionsAndRates.tabs.yachts.label")}
+            {t("tabs.yachts.label")}
           </Button>
           <Button
             unstyled
@@ -77,7 +77,7 @@ export default function ConditionsAndRates() {
             }`}
           >
             <Building2 className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline-block" />
-            {t("conditionsAndRates.tabs.brokerage.label")}
+            {t("tabs.brokerage.label")}
           </Button>
         </div>
 
@@ -91,11 +91,11 @@ export default function ConditionsAndRates() {
       <div className="mt-8 sm:mt-12 md:mt-16 p-4 sm:p-6 md:p-8 text-center inset-0 bg-primary/30 py-8 sm:py-12 md:py-16">
         <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
           <h2 className="text-xl sm:text-3xl font-montserrat font-semibold text-primary mb-2 sm:mb-4">
-            {t("conditionsAndRates.contact.title")}
+            {t("contact.title")}
           </h2>
         </div>
         <p className="text-gray-700 mb-4 sm:mb-6 px-4">
-          {t("conditionsAndRates.contact.description")}
+          {t("contact.description")}
         </p>
         <Button
           onClick={() => setContactModalOpened(true)}
@@ -104,7 +104,7 @@ export default function ConditionsAndRates() {
         >
           <div className="flex gap-2 items-center">
             <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-            {t("conditionsAndRates.contact.button")}
+            {t("contact.button")}
           </div>
         </Button>
       </div>
@@ -117,122 +117,122 @@ export default function ConditionsAndRates() {
 }
 
 function YatesContent() {
-  const { t } = useTranslation();
+  const t = useTranslations("conditionsAndRates");
 
   const inspectionPlans = [
     {
-      title: t("conditionsAndRates.yachts.inspections.plans.0.title"),
-      price: t("conditionsAndRates.yachts.inspections.plans.0.price"),
+      title: t("yachts.inspections.plans.0.title"),
+      price: t("yachts.inspections.plans.0.price"),
       description: t(
-        "conditionsAndRates.yachts.inspections.plans.0.description"
+        "yachts.inspections.plans.0.description"
       ),
       features: [
-        t("conditionsAndRates.yachts.inspections.plans.0.features.0"),
-        t("conditionsAndRates.yachts.inspections.plans.0.features.1"),
-        t("conditionsAndRates.yachts.inspections.plans.0.features.2"),
-        t("conditionsAndRates.yachts.inspections.plans.0.features.3"),
+        t("yachts.inspections.plans.0.features.0"),
+        t("yachts.inspections.plans.0.features.1"),
+        t("yachts.inspections.plans.0.features.2"),
+        t("yachts.inspections.plans.0.features.3"),
       ],
     },
     {
-      title: t("conditionsAndRates.yachts.inspections.plans.1.title"),
-      price: t("conditionsAndRates.yachts.inspections.plans.1.price"),
+      title: t("yachts.inspections.plans.1.title"),
+      price: t("yachts.inspections.plans.1.price"),
       description: t(
-        "conditionsAndRates.yachts.inspections.plans.1.description"
+        "yachts.inspections.plans.1.description"
       ),
       features: [
-        t("conditionsAndRates.yachts.inspections.plans.1.features.0"),
-        t("conditionsAndRates.yachts.inspections.plans.1.features.1"),
-        t("conditionsAndRates.yachts.inspections.plans.1.features.2"),
-        t("conditionsAndRates.yachts.inspections.plans.1.features.3"),
+        t("yachts.inspections.plans.1.features.0"),
+        t("yachts.inspections.plans.1.features.1"),
+        t("yachts.inspections.plans.1.features.2"),
+        t("yachts.inspections.plans.1.features.3"),
       ],
     },
     {
-      title: t("conditionsAndRates.yachts.inspections.plans.2.title"),
-      price: t("conditionsAndRates.yachts.inspections.plans.2.price"),
+      title: t("yachts.inspections.plans.2.title"),
+      price: t("yachts.inspections.plans.2.price"),
       description: t(
-        "conditionsAndRates.yachts.inspections.plans.2.description"
+        "yachts.inspections.plans.2.description"
       ),
       features: [
-        t("conditionsAndRates.yachts.inspections.plans.2.features.0"),
-        t("conditionsAndRates.yachts.inspections.plans.2.features.1"),
-        t("conditionsAndRates.yachts.inspections.plans.2.features.2"),
-        t("conditionsAndRates.yachts.inspections.plans.2.features.3"),
+        t("yachts.inspections.plans.2.features.0"),
+        t("yachts.inspections.plans.2.features.1"),
+        t("yachts.inspections.plans.2.features.2"),
+        t("yachts.inspections.plans.2.features.3"),
       ],
     },
   ];
 
   const valuationPlans = [
     {
-      title: t("conditionsAndRates.yachts.valuations.plans.0.title"),
-      price: t("conditionsAndRates.yachts.valuations.plans.0.price"),
+      title: t("yachts.valuations.plans.0.title"),
+      price: t("yachts.valuations.plans.0.price"),
       description: t(
-        "conditionsAndRates.yachts.valuations.plans.0.description"
+        "yachts.valuations.plans.0.description"
       ),
     },
     {
-      title: t("conditionsAndRates.yachts.valuations.plans.1.title"),
-      price: t("conditionsAndRates.yachts.valuations.plans.1.price"),
+      title: t("yachts.valuations.plans.1.title"),
+      price: t("yachts.valuations.plans.1.price"),
       description: t(
-        "conditionsAndRates.yachts.valuations.plans.1.description"
+        "yachts.valuations.plans.1.description"
       ),
     },
     {
-      title: t("conditionsAndRates.yachts.valuations.plans.2.title"),
-      price: t("conditionsAndRates.yachts.valuations.plans.2.price"),
+      title: t("yachts.valuations.plans.2.title"),
+      price: t("yachts.valuations.plans.2.price"),
       description: t(
-        "conditionsAndRates.yachts.valuations.plans.2.description"
+        "yachts.valuations.plans.2.description"
       ),
     },
   ];
 
   const otherServices = [
     {
-      title: t("conditionsAndRates.yachts.otherServices.services.0.title"),
-      price: t("conditionsAndRates.yachts.otherServices.services.0.price"),
-      unit: t("conditionsAndRates.yachts.otherServices.services.0.unit"),
+      title: t("yachts.otherServices.services.0.title"),
+      price: t("yachts.otherServices.services.0.price"),
+      unit: t("yachts.otherServices.services.0.unit"),
     },
     {
-      title: t("conditionsAndRates.yachts.otherServices.services.1.title"),
-      price: t("conditionsAndRates.yachts.otherServices.services.1.price"),
-      unit: t("conditionsAndRates.yachts.otherServices.services.1.unit"),
+      title: t("yachts.otherServices.services.1.title"),
+      price: t("yachts.otherServices.services.1.price"),
+      unit: t("yachts.otherServices.services.1.unit"),
     },
   ];
 
   const conditions = [
     {
-      title: t("conditionsAndRates.yachts.conditions.items.0.title"),
+      title: t("yachts.conditions.items.0.title"),
       description: t(
-        "conditionsAndRates.yachts.conditions.items.0.description"
+        "yachts.conditions.items.0.description"
       ),
       icon: <CreditCard className="w-6 h-6 text-primary" />,
       benefits: [
-        t("conditionsAndRates.yachts.conditions.items.0.benefits.0"),
-        t("conditionsAndRates.yachts.conditions.items.0.benefits.1"),
-        t("conditionsAndRates.yachts.conditions.items.0.benefits.2"),
+        t("yachts.conditions.items.0.benefits.0"),
+        t("yachts.conditions.items.0.benefits.1"),
+        t("yachts.conditions.items.0.benefits.2"),
       ],
     },
     {
-      title: t("conditionsAndRates.yachts.conditions.items.1.title"),
+      title: t("yachts.conditions.items.1.title"),
       description: t(
-        "conditionsAndRates.yachts.conditions.items.1.description"
+        "yachts.conditions.items.1.description"
       ),
       icon: <Info className="w-6 h-6 text-primary" />,
       benefits: [
-        t("conditionsAndRates.yachts.conditions.items.1.benefits.0"),
-        t("conditionsAndRates.yachts.conditions.items.1.benefits.1"),
-        t("conditionsAndRates.yachts.conditions.items.1.benefits.2"),
+        t("yachts.conditions.items.1.benefits.0"),
+        t("yachts.conditions.items.1.benefits.1"),
+        t("yachts.conditions.items.1.benefits.2"),
       ],
     },
     {
-      title: t("conditionsAndRates.yachts.conditions.items.2.title"),
+      title: t("yachts.conditions.items.2.title"),
       description: t(
-        "conditionsAndRates.yachts.conditions.items.2.description"
+        "yachts.conditions.items.2.description"
       ),
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
       benefits: [
-        t("conditionsAndRates.yachts.conditions.items.2.benefits.0"),
-        t("conditionsAndRates.yachts.conditions.items.2.benefits.1"),
-        t("conditionsAndRates.yachts.conditions.items.2.benefits.2"),
+        t("yachts.conditions.items.2.benefits.0"),
+        t("yachts.conditions.items.2.benefits.1"),
+        t("yachts.conditions.items.2.benefits.2"),
       ],
     },
   ];
@@ -250,7 +250,7 @@ function YatesContent() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-base sm:text-lg text-gray-700">
-            {t("conditionsAndRates.tabs.yachts.intro")}
+            {t("tabs.yachts.intro")}
           </p>
         </motion.div>
 
@@ -263,7 +263,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                {t("conditionsAndRates.yachts.brokerage.title")}
+                {t("yachts.brokerage.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -271,23 +271,23 @@ function YatesContent() {
                 <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2 font-medium">
                   <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   {t(
-                    "conditionsAndRates.yachts.brokerage.saleAndPurchase.title"
+                    "yachts.brokerage.saleAndPurchase.title"
                   )}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                   <li>
                     {t(
-                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.0"
+                      "yachts.brokerage.saleAndPurchase.points.0"
                     )}
                   </li>
                   <li>
                     {t(
-                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.1"
+                      "yachts.brokerage.saleAndPurchase.points.1"
                     )}
                   </li>
                   <li>
                     {t(
-                      "conditionsAndRates.yachts.brokerage.saleAndPurchase.points.2"
+                      "yachts.brokerage.saleAndPurchase.points.2"
                     )}
                   </li>
                 </ul>
@@ -295,14 +295,14 @@ function YatesContent() {
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2 font-medium">
                   <Ship className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  {t("conditionsAndRates.yachts.brokerage.charter.title")}
+                  {t("yachts.brokerage.charter.title")}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                   <li>
-                    {t("conditionsAndRates.yachts.brokerage.charter.points.0")}
+                    {t("yachts.brokerage.charter.points.0")}
                   </li>
                   <li>
-                    {t("conditionsAndRates.yachts.brokerage.charter.points.1")}
+                    {t("yachts.brokerage.charter.points.1")}
                   </li>
                 </ul>
               </div>
@@ -319,7 +319,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                {t("conditionsAndRates.yachts.inspections.title")}
+                {t("yachts.inspections.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -368,7 +368,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                {t("conditionsAndRates.yachts.valuations.title")}
+                {t("yachts.valuations.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -406,7 +406,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                {t("conditionsAndRates.yachts.otherServices.title")}
+                {t("yachts.otherServices.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -445,7 +445,7 @@ function YatesContent() {
           >
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
-                {t("conditionsAndRates.yachts.conditions.title")}
+                {t("yachts.conditions.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -492,72 +492,72 @@ function YatesContent() {
 }
 
 function BrokerageContent() {
-  const { t } = useTranslation();
+  const t = useTranslations("conditionsAndRates");
 
   const conditions = [
     {
       title: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.title"
+        "shipBrokerage.contractConditions.conditions.0.title"
       ),
       description: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.description"
+        "shipBrokerage.contractConditions.conditions.0.description"
       ),
       icon: <CalendarClock className="w-6 h-6 text-primary" />,
       benefits: [
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.0"
+          "shipBrokerage.contractConditions.conditions.0.benefits.0"
         ),
 
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.1"
+          "shipBrokerage.contractConditions.conditions.0.benefits.1"
         ),
         ,
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.0.benefits.2"
+          "shipBrokerage.contractConditions.conditions.0.benefits.2"
         ),
       ],
     },
     {
       title: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.title"
+        "shipBrokerage.contractConditions.conditions.1.title"
       ),
       description: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.description"
+        "shipBrokerage.contractConditions.conditions.1.description"
       ),
       icon: <Star className="w-6 h-6 text-primary" />,
       benefits: [
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.0"
+          "shipBrokerage.contractConditions.conditions.1.benefits.0"
         ),
 
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.1"
+          "shipBrokerage.contractConditions.conditions.1.benefits.1"
         ),
         ,
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.1.benefits.2"
+          "shipBrokerage.contractConditions.conditions.1.benefits.2"
         ),
       ],
     },
     {
       title: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.title"
+        "shipBrokerage.contractConditions.conditions.2.title"
       ),
       description: t(
-        "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.description"
+        "shipBrokerage.contractConditions.conditions.2.description"
       ),
       icon: <FileSignature className="w-6 h-6 text-primary" />,
       benefits: [
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.0"
+          "shipBrokerage.contractConditions.conditions.2.benefits.0"
         ),
 
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.1"
+          "shipBrokerage.contractConditions.conditions.2.benefits.1"
         ),
         ,
         t(
-          "conditionsAndRates.shipBrokerage.contractConditions.conditions.2.benefits.2"
+          "shipBrokerage.contractConditions.conditions.2.benefits.2"
         ),
       ],
     },
@@ -571,46 +571,46 @@ function BrokerageContent() {
     >
       <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
         <p className="text-base sm:text-lg text-gray-700 px-4 sm:px-0">
-          {t("conditionsAndRates.tabs.brokerage.intro")}
+          {t("tabs.brokerage.intro")}
         </p>
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            {t("conditionsAndRates.shipBrokerage.commissions.title")}
+            {t("shipBrokerage.commissions.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.commissions.standard.title"
+                  "shipBrokerage.commissions.standard.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
                 {t(
-                  "conditionsAndRates.shipBrokerage.commissions.standard.description"
+                  "shipBrokerage.commissions.standard.description"
                 )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.commissions.payment.title"
+                  "shipBrokerage.commissions.payment.title"
                 )}
               </h3>
               <ul className="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
                 <li>
                   {t(
-                    "conditionsAndRates.shipBrokerage.commissions.payment.points.0"
+                    "shipBrokerage.commissions.payment.points.0"
                   )}
                 </li>
                 <li>
                   {t(
-                    "conditionsAndRates.shipBrokerage.commissions.payment.points.1"
+                    "shipBrokerage.commissions.payment.points.1"
                   )}
                 </li>
                 <li>
                   {t(
-                    "conditionsAndRates.shipBrokerage.commissions.payment.points.2"
+                    "shipBrokerage.commissions.payment.points.2"
                   )}
                 </li>
               </ul>
@@ -620,30 +620,30 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            {t("conditionsAndRates.shipBrokerage.responsibilities.title")}
+            {t("shipBrokerage.responsibilities.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.responsibilities.intermediation.title"
+                  "shipBrokerage.responsibilities.intermediation.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
-                  "conditionsAndRates.shipBrokerage.responsibilities.intermediation.description"
+                  "shipBrokerage.responsibilities.intermediation.description"
                 )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.responsibilities.confidentiality.title"
+                  "shipBrokerage.responsibilities.confidentiality.title"
                 )}{" "}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
-                  "conditionsAndRates.shipBrokerage.responsibilities.confidentiality.description"
+                  "shipBrokerage.responsibilities.confidentiality.description"
                 )}
               </p>
             </div>
@@ -652,30 +652,30 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            {t("conditionsAndRates.shipBrokerage.chartererCommissions.title")}
+            {t("shipBrokerage.chartererCommissions.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererCommissions.charter.title"
+                  "shipBrokerage.chartererCommissions.charter.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererCommissions.charter.description"
+                  "shipBrokerage.chartererCommissions.charter.description"
                 )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererCommissions.additional.title"
+                  "shipBrokerage.chartererCommissions.additional.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererCommissions.additional.description"
+                  "shipBrokerage.chartererCommissions.additional.description"
                 )}
               </p>
             </div>
@@ -685,31 +685,31 @@ function BrokerageContent() {
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
             {t(
-              "conditionsAndRates.shipBrokerage.chartererResponsibilities.title"
+              "shipBrokerage.chartererResponsibilities.title"
             )}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.negotiation.title"
+                  "shipBrokerage.chartererResponsibilities.negotiation.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.negotiation.description"
+                  "shipBrokerage.chartererResponsibilities.negotiation.description"
                 )}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.compliance.title"
+                  "shipBrokerage.chartererResponsibilities.compliance.title"
                 )}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
-                  "conditionsAndRates.shipBrokerage.chartererResponsibilities.compliance.description"
+                  "shipBrokerage.chartererResponsibilities.compliance.description"
                 )}
               </p>
             </div>
@@ -725,11 +725,11 @@ function BrokerageContent() {
               className="mb-8 sm:mb-12"
             >
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
-                {t("conditionsAndRates.shipBrokerage.contractConditions.title")}
+                {t("shipBrokerage.contractConditions.title")}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
                 {t(
-                  "conditionsAndRates.shipBrokerage.contractConditions.subtitle"
+                  "shipBrokerage.contractConditions.subtitle"
                 )}
               </p>
             </motion.div>

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 export default function LegalNotice() {
-  const { t } = useTranslation();
+  const t = useTranslations("legalNotice");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -24,7 +24,7 @@ export default function LegalNotice() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-primary mb-2 sm:mb-4 text-center">
-              {t("legalNotice.hero.title")}
+              {t("hero.title")}
             </h1>
           </motion.div>
         </div>
@@ -42,17 +42,17 @@ export default function LegalNotice() {
             {/* Section 1 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.identification.title")}
+                {t("sections.identification.title")}
               </h2>
               <div className="space-y-3 sm:space-y-4">
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.identification.content.0")}
+                  {t("sections.identification.content.0")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.identification.content.1")}
+                  {t("sections.identification.content.1")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.identification.content.2")}
+                  {t("sections.identification.content.2")}
                 </p>
               </div>
             </section>
@@ -60,20 +60,20 @@ export default function LegalNotice() {
             {/* Section 2 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.intellectualProperty.title")}
+                {t("sections.intellectualProperty.title")}
               </h2>
               <div className="space-y-3 sm:space-y-4">
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.intellectualProperty.content.0")}
+                  {t("sections.intellectualProperty.content.0")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.intellectualProperty.content.1")}
+                  {t("sections.intellectualProperty.content.1")}
                 </p>
                 <p className="font-semibold text-sm sm:text-base">
-                  {t("legalNotice.sections.intellectualProperty.content.2")}
+                  {t("sections.intellectualProperty.content.2")}
                 </p>
                 <p className="text-sm sm:text-base">
-                  {t("legalNotice.sections.intellectualProperty.content.3")}
+                  {t("sections.intellectualProperty.content.3")}
                 </p>
               </div>
             </section>
@@ -81,50 +81,50 @@ export default function LegalNotice() {
             {/* Section 3 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.usage.title")}
+                {t("sections.usage.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                {t("legalNotice.sections.usage.content")}
+                {t("sections.usage.content")}
               </p>
             </section>
 
             {/* Section 4 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.liability.title")}
+                {t("sections.liability.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                {t("legalNotice.sections.liability.content")}
+                {t("sections.liability.content")}
               </p>
             </section>
 
             {/* Section 5 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.privacy.title")}
+                {t("sections.privacy.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                {t("legalNotice.sections.privacy.content")}
+                {t("sections.privacy.content")}
               </p>
             </section>
 
             {/* Section 6 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.links.title")}
+                {t("sections.links.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                {t("legalNotice.sections.links.content")}
+                {t("sections.links.content")}
               </p>
             </section>
 
             {/* Section 7 */}
             <section>
               <h2 className="font-montserrat text-xl sm:text-2xl text-primary mb-3 sm:mb-4">
-                {t("legalNotice.sections.jurisdiction.title")}
+                {t("sections.jurisdiction.title")}
               </h2>
               <p className="text-sm sm:text-base">
-                {t("legalNotice.sections.jurisdiction.content")}
+                {t("sections.jurisdiction.content")}
               </p>
             </section>
           </div>

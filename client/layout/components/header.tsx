@@ -1,4 +1,3 @@
-import i18n from "@/utils/i18n";
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
@@ -18,10 +17,11 @@ import {
   Truck,
   X,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface NavItem {
   label: string;
@@ -40,118 +40,132 @@ interface HeaderProps {
   isTransparent?: boolean;
 }
 
+export interface Language {
+  code: string;
+  name: string;
+  flag?: string;
+}
+export const LANGUAGES: Language[] = [
+  {
+    code: "es",
+    name: "Español",
+  },
+  {
+    code: "en",
+    name: "English",
+  },
+];
+
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [language, setLanguage] = useState<string | null>(null);
-  const { t } = useTranslation();
+  const t = useTranslations("header");
+  const { locale, asPath } = router;
 
   const navigation: NavItem[] = [
-    { label: t("header.navigation.home"), href: "/" },
+    { label: t("navigation.home"), href: "/" },
     {
-      label: t("header.navigation.services"),
+      label: t("navigation.services"),
       href: "/servicios",
       width: "550",
       items: [
         {
-          label: t("header.services.yachtBroker.label"),
+          label: t("services.yachtBroker.label"),
           href: `${NAVIGATION_LINKS.YACHT_BROKER}`,
           icon: <Ship size={20} />,
-          description: t("header.services.yachtBroker.description"),
+          description: t("services.yachtBroker.description"),
         },
         {
-          label: t("header.services.yachtCharter.label"),
+          label: t("services.yachtCharter.label"),
           href: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
           icon: <Anchor size={20} />,
-          description: t("header.services.yachtCharter.description"),
+          description: t("services.yachtCharter.description"),
         },
         {
-          label: t("header.services.bunkerSupply.label"),
+          label: t("services.bunkerSupply.label"),
           href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
           icon: <Database size={20} />,
-          description: t("header.services.bunkerSupply.description"),
+          description: t("services.bunkerSupply.description"),
         },
         {
-          label: t("header.services.inspections.label"),
+          label: t("services.inspections.label"),
           href: `${NAVIGATION_LINKS.INSPECCIONES}`,
           icon: <Scale size={20} />,
-          description: t("header.services.inspections.description"),
+          description: t("services.inspections.description"),
         },
         {
-          label: t("header.services.logistics.label"),
+          label: t("services.logistics.label"),
           href: `${NAVIGATION_LINKS.LOGÍSTICA}`,
           icon: <Truck size={20} />,
-          description: t("header.services.logistics.description"),
+          description: t("services.logistics.description"),
         },
         {
-          label: t("header.services.nauticalAdvisory.label"),
+          label: t("services.nauticalAdvisory.label"),
           href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
           icon: <ShipWheel size={20} />,
-          description: t("header.services.nauticalAdvisory.description"),
+          description: t("services.nauticalAdvisory.description"),
         },
 
         {
-          label: t("header.services.valueAddedServices.label"),
+          label: t("services.valueAddedServices.label"),
           href: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
           icon: <Plus size={20} />,
-          description: t("header.services.valueAddedServices.description"),
+          description: t("services.valueAddedServices.description"),
         },
       ],
     },
     {
-      label: t("header.navigation.company"),
+      label: t("navigation.company"),
       href: "/empresa",
       width: "550",
       items: [
         {
-          label: t("header.company.suppliers.label"),
+          label: t("company.suppliers.label"),
           href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
           icon: <Building size={20} />,
-          description: t("header.company.suppliers.description"),
+          description: t("company.suppliers.description"),
         },
         {
-          label: t("header.company.news.label"),
+          label: t("company.news.label"),
           href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
           icon: <Newspaper size={20} />,
-          description: t("header.company.news.description"),
+          description: t("company.news.description"),
         },
       ],
     },
     {
-      label: t("header.navigation.contracting"),
+      label: t("navigation.contracting"),
       href: "/contratacion",
       width: "650",
       items: [
         {
-          label: t("header.contracting.conditionsRates.label"),
+          label: t("contracting.conditionsRates.label"),
           href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS}`,
           icon: <FileText size={20} />,
-          description: t("header.contracting.conditionsRates.description"),
+          description: t("contracting.conditionsRates.description"),
         },
         {
-          label: t("header.contracting.yachtContracts.label"),
+          label: t("contracting.yachtContracts.label"),
           href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA}`,
           icon: <ScrollText size={20} />,
-          description: t("header.contracting.yachtContracts.description"),
+          description: t("contracting.yachtContracts.description"),
         },
       ],
     },
     {
-      label: t("header.navigation.aboutUs"),
+      label: t("navigation.aboutUs"),
       href: `${NAVIGATION_LINKS.QUIENES_SOMOS}`,
       width: "300",
     },
   ];
 
-  useEffect(() => {
-    // Determina el idioma en el cliente (SSR no tiene esta información)
-    setLanguage(i18n.language || "es");
-  }, []);
-
-  if (!language) return null; // Evita renderizar en el servidor
-  const handleChangeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    setLanguage(lng);
+  const changeLanguage = (newLocale: string) => {
+    // Opcional: guardar preferencia en cookie
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${
+      60 * 60 * 24 * 30
+    }`;
+    router.push(asPath, asPath, { locale: newLocale });
   };
 
   return (
@@ -260,26 +274,34 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             </Button>
 
             {/* Language Selector */}
+
             <Menu>
               <Menu.Target>
-                <Button
-                  unstyled
-                  className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1"
-                >
+                <div className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1 cursor-pointer">
                   <div className="flex gap-2 px-2 items-center">
                     <Globe size={20} />
-                    <span>{i18n.language.toUpperCase()}</span>
+                    {(locale || "es").toLocaleUpperCase()}
                     <ChevronDown size={16} />
                   </div>
-                </Button>
+                </div>
               </Menu.Target>
               <Menu.Dropdown>
-                <Menu.Item onClick={() => handleChangeLanguage("es")}>
-                  Español
-                </Menu.Item>
-                <Menu.Item onClick={() => handleChangeLanguage("en")}>
-                  English
-                </Menu.Item>
+                {LANGUAGES.map((language) => (
+                  <Menu.Item
+                    key={language.code}
+                    className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+                      locale === language.code
+                        ? "bg-darkBlue text-white rounded-none hover:bg-darkBlue"
+                        : "text-darkBlue hover:bg-gray-200"
+                    }`}
+                    onClick={() => changeLanguage(language.code)}
+                  >
+                    <div className="flex items-center gap-2">
+                      {language.flag && <span>{language.flag}</span>}
+                      <span>{language.name}</span>
+                    </div>
+                  </Menu.Item>
+                ))}
               </Menu.Dropdown>
             </Menu>
 
@@ -365,7 +387,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                   href={`${NAVIGATION_LINKS.CONTACTO}`}
                   className="w-full text-center bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
                 >
-                  {t("header.navigation.contact")}
+                  {t("navigation.contact")}
                 </Button>
               </div>
             </div>

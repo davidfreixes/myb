@@ -4,6 +4,14 @@ import { Header } from "@/client/layout/components/header";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`../messages/${context.locale}.json`)).default,
+    },
+  };
+}
+
 export default function LegalNoticePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 

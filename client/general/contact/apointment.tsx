@@ -12,8 +12,8 @@ import {
   ShipWheel,
   User,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 // First, let's add the service icons mapping
 const serviceIcons = {
@@ -45,97 +45,97 @@ export default function Appointment() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [confirmData, setConfirmData] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations("contact.appointment");
 
   const steps = [
-    { id: "service", label: t("contact.appointment.steps.service") },
-    { id: "datetime", label: t("contact.appointment.steps.datetime") },
-    { id: "details", label: t("contact.appointment.steps.details") },
-    { id: "summary", label: t("contact.appointment.steps.summary") },
+    { id: "service", label: t("steps.service") },
+    { id: "datetime", label: t("steps.datetime") },
+    { id: "details", label: t("steps.details") },
+    { id: "summary", label: t("steps.summary") },
   ];
 
   const services = [
     {
       id: "Reunión Presencial",
-      title: t("contact.appointment.services.options.meeting.title"),
-      duration: t("contact.appointment.services.options.meeting.duration"),
+      title: t("services.options.meeting.title"),
+      duration: t("services.options.meeting.duration"),
       category: "TODO",
     },
     {
       id: "Llamada de presentación",
-      title: t("contact.appointment.services.options.call.title"),
-      duration: t("contact.appointment.services.options.call.duration"),
+      title: t("services.options.call.title"),
+      duration: t("services.options.call.duration"),
       category: "TODO",
     },
     {
       id: "Análisis de mercado de compraventa",
-      title: t("contact.appointment.services.options.marketAnalysis.title"),
+      title: t("services.options.marketAnalysis.title"),
       duration: t(
-        "contact.appointment.services.options.marketAnalysis.duration"
+        "services.options.marketAnalysis.duration"
       ),
-      price: t("contact.appointment.services.options.marketAnalysis.price"),
+      price: t("services.options.marketAnalysis.price"),
       category: "Yacht Broker",
     },
     {
       id: "Oferta de venta de un Yate o embarcación",
-      title: t("contact.appointment.services.options.yachtSale.title"),
-      duration: t("contact.appointment.services.options.yachtSale.duration"),
+      title: t("services.options.yachtSale.title"),
+      duration: t("services.options.yachtSale.duration"),
       category: "Yacht Broker",
     },
     {
       id: "Compra de Yate o embarcación",
-      title: t("contact.appointment.services.options.yachtPurchase.title"),
+      title: t("services.options.yachtPurchase.title"),
       duration: t(
-        "contact.appointment.services.options.yachtPurchase.duration"
+        "services.options.yachtPurchase.duration"
       ),
       category: "Yacht Broker",
     },
     {
       id: "Solicitud de charter",
-      title: t("contact.appointment.services.options.charterRequest.title"),
+      title: t("services.options.charterRequest.title"),
       duration: t(
-        "contact.appointment.services.options.charterRequest.duration"
+        "services.options.charterRequest.duration"
       ),
       category: "Yacht Charter",
     },
     {
       id: "Tasación básica",
-      title: t("contact.appointment.services.options.basicValuation.title"),
+      title: t("services.options.basicValuation.title"),
       duration: t(
-        "contact.appointment.services.options.basicValuation.duration"
+        "services.options.basicValuation.duration"
       ),
-      price: t("contact.appointment.services.options.basicValuation.price"),
+      price: t("services.options.basicValuation.price"),
       category: "Inspecciones y Tasaciones",
     },
     {
       id: "Consultoría náutica",
-      title: t("contact.appointment.services.options.nauticalConsulting.title"),
+      title: t("services.options.nauticalConsulting.title"),
       duration: t(
-        "contact.appointment.services.options.nauticalConsulting.duration"
+        "services.options.nauticalConsulting.duration"
       ),
       category: "Consultoría náutica",
     },
     {
       id: "Solicitud de Servicios de Valor Añadido",
-      title: t("contact.appointment.services.options.valueAddedServices.title"),
+      title: t("services.options.valueAddedServices.title"),
       duration: t(
-        "contact.appointment.services.options.valueAddedServices.duration"
+        "services.options.valueAddedServices.duration"
       ),
       category: "Servicios de Valor Añadido",
     },
     {
       id: "Ship Sale & Purchase analysis and service request",
-      title: t("contact.appointment.services.options.shipSalePurchase.title"),
+      title: t("services.options.shipSalePurchase.title"),
       duration: t(
-        "contact.appointment.services.options.shipSalePurchase.duration"
+        "services.options.shipSalePurchase.duration"
       ),
       category: "Ship broker",
     },
     {
       id: "Charter service",
-      title: t("contact.appointment.services.options.charterService.title"),
+      title: t("services.options.charterService.title"),
       duration: t(
-        "contact.appointment.services.options.charterService.duration"
+        "services.options.charterService.duration"
       ),
       category: "Charter broker",
     },
@@ -144,47 +144,47 @@ export default function Appointment() {
   const timeSlots = [
     {
       id: "13:15-14:15",
-      label: t("contact.appointment.datetime.time.slots.slot1"),
+      label: t("datetime.time.slots.slot1"),
     },
     {
       id: "14:15-15:15",
-      label: t("contact.appointment.datetime.time.slots.slot2"),
+      label: t("datetime.time.slots.slot2"),
     },
     {
       id: "15:15-16:15",
-      label: t("contact.appointment.datetime.time.slots.slot3"),
+      label: t("datetime.time.slots.slot3"),
     },
   ];
 
   const categories = [
-    { value: "all", label: t("contact.appointment.categories.options.all") },
+    { value: "all", label: t("categories.options.all") },
     {
       value: "Yacht Broker",
-      label: t("contact.appointment.categories.options.yachtBroker"),
+      label: t("categories.options.yachtBroker"),
     },
     {
       value: "Yacht Charter",
-      label: t("contact.appointment.categories.options.yachtCharter"),
+      label: t("categories.options.yachtCharter"),
     },
     {
       value: "Inspecciones y Tasaciones",
-      label: t("contact.appointment.categories.options.inspections"),
+      label: t("categories.options.inspections"),
     },
     {
       value: "Consultoría náutica",
-      label: t("contact.appointment.categories.options.consulting"),
+      label: t("categories.options.consulting"),
     },
     {
       value: "Servicios de Valor Añadido",
-      label: t("contact.appointment.categories.options.valueAdded"),
+      label: t("categories.options.valueAdded"),
     },
     {
       value: "Ship broker",
-      label: t("contact.appointment.categories.options.shipBroker"),
+      label: t("categories.options.shipBroker"),
     },
     {
       value: "Charter broker",
-      label: t("contact.appointment.categories.options.charterBroker"),
+      label: t("categories.options.charterBroker"),
     },
   ];
 
@@ -257,34 +257,34 @@ export default function Appointment() {
       case 0:
         if (!scheduleData.category) {
           newErrors.category = t(
-            "contact.appointment.validation.required.category"
+            "validation.required.category"
           );
         }
         if (!scheduleData.service) {
           newErrors.service = t(
-            "contact.appointment.validation.required.service"
+            "validation.required.service"
           );
         }
         break;
       case 1:
         if (!scheduleData.date) {
-          newErrors.date = t("contact.appointment.validation.required.date");
+          newErrors.date = t("validation.required.date");
         }
         if (!scheduleData.time) {
-          newErrors.time = t("contact.appointment.validation.required.time");
+          newErrors.time = t("validation.required.time");
         }
         break;
       case 2:
         if (!scheduleData.name) {
-          newErrors.name = t("contact.appointment.validation.required.name");
+          newErrors.name = t("validation.required.name");
         }
         if (!scheduleData.email) {
-          newErrors.email = t("contact.appointment.validation.required.email");
+          newErrors.email = t("validation.required.email");
         } else if (!/\S+@\S+\.\S+/.test(scheduleData.email)) {
-          newErrors.email = t("contact.appointment.validation.invalid.email");
+          newErrors.email = t("validation.invalid.email");
         }
         if (!scheduleData.phone) {
-          newErrors.phone = t("contact.appointment.validation.required.phone");
+          newErrors.phone = t("validation.required.phone");
         }
         break;
     }
@@ -336,7 +336,7 @@ export default function Appointment() {
         if (result.success) {
           setSubmitStatus({
             type: "success",
-            message: t("contact.appointment.messages.success"),
+            message: t("messages.success"),
           });
           setScheduleData({
             type: "RESERVA DE UNA CITA",
@@ -355,7 +355,7 @@ export default function Appointment() {
       } catch {
         setSubmitStatus({
           type: "error",
-          message: t("contact.appointment.messages.error"),
+          message: t("messages.error"),
         });
       } finally {
         setIsLoading(false);
@@ -389,7 +389,7 @@ export default function Appointment() {
           <div className="space-y-6">
             <div>
               <h3 className="text-base sm:text-lg font-medium mb-4">
-                {t("contact.appointment.categories.title")}
+                {t("categories.title")}
               </h3>
               {errors.category && (
                 <p className="text-red-500 text-sm mb-2">{errors.category}</p>
@@ -420,7 +420,7 @@ export default function Appointment() {
 
             <div>
               <h3 className="text-base sm:text-lg font-medium mb-4">
-                {t("contact.appointment.services.title")}
+                {t("services.title")}
               </h3>
               {errors.service && (
                 <p className="text-red-500 text-sm mb-2">{errors.service}</p>
@@ -457,10 +457,10 @@ export default function Appointment() {
                           {service.title}
                         </h4>
                         <div className="text-xs sm:text-sm text-gray-500">
-                          {t("contact.appointment.services.duration")}:{" "}
+                          {t("services.duration")}:{" "}
                           {service.duration}
                           {service.price &&
-                            ` · ${t("contact.appointment.services.price")}: ${
+                            ` · ${t("services.price")}: ${
                               service.price
                             }`}
                         </div>
@@ -483,7 +483,7 @@ export default function Appointment() {
             <TextInput
               required
               type="date"
-              label={t("contact.appointment.datetime.date.label")}
+              label={t("datetime.date.label")}
               value={scheduleData.date}
               onChange={(e) =>
                 setScheduleData({ ...scheduleData, date: e.target.value })
@@ -493,7 +493,7 @@ export default function Appointment() {
             />
             <div className="space-y-2">
               <label className="text-sm font-medium">
-                {t("contact.appointment.datetime.time.label")}
+                {t("datetime.time.label")}
               </label>
               {errors.time && (
                 <p className="text-red-500 text-sm">{errors.time}</p>
@@ -524,9 +524,9 @@ export default function Appointment() {
           <div className="space-y-4">
             <TextInput
               required
-              label={t("contact.appointment.contactDetails.name.label")}
+              label={t("contactDetails.name.label")}
               placeholder={t(
-                "contact.appointment.contactDetails.name.placeholder"
+                "contactDetails.name.placeholder"
               )}
               rightSection={<User size={16} />}
               value={scheduleData.name}
@@ -537,9 +537,9 @@ export default function Appointment() {
             />
             <TextInput
               required
-              label={t("contact.appointment.contactDetails.email.label")}
+              label={t("contactDetails.email.label")}
               placeholder={t(
-                "contact.appointment.contactDetails.email.placeholder"
+                "contactDetails.email.placeholder"
               )}
               rightSection={<Mail size={16} />}
               value={scheduleData.email}
@@ -550,9 +550,9 @@ export default function Appointment() {
             />
             <TextInput
               required
-              label={t("contact.appointment.contactDetails.phone.label")}
+              label={t("contactDetails.phone.label")}
               placeholder={t(
-                "contact.appointment.contactDetails.phone.placeholder"
+                "contactDetails.phone.placeholder"
               )}
               rightSection={<Phone size={16} />}
               value={scheduleData.phone}
@@ -568,12 +568,12 @@ export default function Appointment() {
           <div className="space-y-4">
             <div className="bg-gray-50 p-3 sm:p-4 rounded">
               <h3 className="font-medium mb-2 text-sm sm:text-base">
-                {t("contact.appointment.summary.title")}
+                {t("summary.title")}
               </h3>
               <dl className="space-y-2 text-sm sm:text-base">
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.service")}:
+                    {t("summary.fields.service")}:
                   </dt>
                   <dd>
                     {services.find((s) => s.id === scheduleData.service)?.title}
@@ -581,31 +581,31 @@ export default function Appointment() {
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.date")}:
+                    {t("summary.fields.date")}:
                   </dt>
                   <dd>{scheduleData.date}</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.time")}:
+                    {t("summary.fields.time")}:
                   </dt>
                   <dd>{scheduleData.time}</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.name")}:
+                    {t("summary.fields.name")}:
                   </dt>
                   <dd>{scheduleData.name}</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.email")}:
+                    {t("summary.fields.email")}:
                   </dt>
                   <dd>{scheduleData.email}</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-600">
-                    {t("contact.appointment.summary.fields.phone")}:
+                    {t("summary.fields.phone")}:
                   </dt>
                   <dd>{scheduleData.phone}</dd>
                 </div>
@@ -625,7 +625,7 @@ export default function Appointment() {
       transition={{ duration: 0.5 }}
     >
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-7">
-        {t("contact.appointment.title")}
+        {t("title")}
       </h2>
 
       <div className="flex my-auto mb-6 overflow-x-auto pb-2">
@@ -687,7 +687,7 @@ export default function Appointment() {
               className="px-3 sm:px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 text-sm sm:text-base"
               disabled={isLoading}
             >
-              {t("contact.appointment.buttons.previous")}
+              {t("buttons.previous")}
             </Button>
           )}
           {currentStep === steps.length - 1 ? (
@@ -701,8 +701,8 @@ export default function Appointment() {
               disabled={isLoading}
             >
               {isLoading && confirmData
-                ? t("contact.appointment.buttons.processing")
-                : t("contact.appointment.buttons.confirm")}
+                ? t("buttons.processing")
+                : t("buttons.confirm")}
             </Button>
           ) : (
             <Button
@@ -711,7 +711,7 @@ export default function Appointment() {
               type="button"
               className="ml-auto bg-primary hover:bg-white hover:text-black hover:border-primary border text-white py-2 px-3 sm:px-4 rounded text-sm sm:text-base transform transition duration-300"
             >
-              {t("contact.appointment.buttons.next")}
+              {t("buttons.next")}
             </Button>
           )}
         </div>
