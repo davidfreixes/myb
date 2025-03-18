@@ -51,7 +51,7 @@ const teamMembers = [
     image: "/img/team/adriano-enrique.png",
   },
   {
-    name: "Gurkan Gurun",
+    name: "Gürkan Gurun",
     role: "Freelance Yacht & Charter Broker",
     location: "Turkey",
     email: "gurkan@menorcabrokers.com",
