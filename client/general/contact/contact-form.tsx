@@ -183,13 +183,13 @@ export default function ContactForm() {
       </h2>
 
       <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-6">
-        <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+        <div className="flex items-center gap-2 text-gray-700 text-base font-semibold">
           <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
           <a href="tel:+34608577091" className="hover:text-primary">
             +34 608 577 091
           </a>
         </div>
-        <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+        <div className="flex items-center gap-2 text-gray-700 text-base">
           <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
           <a
             href="mailto:contact@menorcabrokers.com"
