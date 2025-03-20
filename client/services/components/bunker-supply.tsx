@@ -144,7 +144,7 @@ export default function BunkerSupplyPage() {
                 <Button
                   unstyled
                   onClick={() => setContactModalOpened(true)}
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {t("dailyPosition.downloadButton")}
@@ -153,7 +153,7 @@ export default function BunkerSupplyPage() {
                 <Button
                   unstyled
                   onClick={() => setQuoteModalOpened(true)}
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {q("title")}
