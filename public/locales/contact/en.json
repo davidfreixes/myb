@@ -1,0 +1,195 @@
+{
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "We are here to help you. Choose how you prefer to contact us.",
+      "button": "Get to Know Us!"
+    },
+    "contactForm": {
+      "title": "Contact Form",
+      "form": {
+        "labels": {
+          "name": "Name",
+          "email": "Email",
+          "country": "Country",
+          "phone": "Phone",
+          "message": "Message"
+        },
+        "placeholders": {
+          "name": "Your full name",
+          "email": "your@email.com",
+          "country": "Select",
+          "phone": "Your phone number",
+          "message": "How can we help you?"
+        },
+        "countries": {
+          "ES": "Spain (+34)",
+          "UK": "United Kingdom (+44)",
+          "DE": "Germany (+49)",
+          "FR": "France (+33)"
+        },
+        "validation": {
+          "name": {
+            "required": "Name is required",
+            "minLength": "Name must be at least 2 characters long"
+          },
+          "email": {
+            "required": "Email is required",
+            "invalid": "Please enter a valid email"
+          },
+          "phone": {
+            "required": "Phone is required",
+            "invalid": "Please enter a valid phone number"
+          },
+          "message": {
+            "required": "Message is required",
+            "minLength": "Message must be at least 4 characters long"
+          }
+        },
+        "submit": {
+          "button": "Send Message",
+          "sending": "Sending...",
+          "success": "Message sent successfully! We will contact you soon.",
+          "error": "An error occurred while sending the message. Please try again."
+        }
+      }
+    },
+    "appointment": {
+      "title": "Book an Appointment",
+      "steps": {
+        "service": "Service",
+        "datetime": "Date & Time",
+        "details": "Basic Details",
+        "summary": "Summary"
+      },
+      "categories": {
+        "title": "Select category",
+        "options": {
+          "all": "ALL",
+          "yachtBroker": "Yacht Broker",
+          "yachtCharter": "Yacht Charter",
+          "inspections": "Inspections and Valuations",
+          "consulting": "Nautical Consulting",
+          "valueAdded": "Value Added Services",
+          "shipBroker": "Ship Sale & Purchase Broker",
+          "charterBroker": "Charter Broker"
+        }
+      },
+      "services": {
+        "title": "Select service",
+        "duration": "Duration",
+        "price": "Price",
+        "options": {
+          "meeting": {
+            "title": "Face-to-face Meeting",
+            "duration": "30 min"
+          },
+          "call": {
+            "title": "Introduction Call",
+            "duration": "30 min"
+          },
+          "marketAnalysis": {
+            "title": "Sale and Purchase Market Analysis",
+            "duration": "1h",
+            "price": "€50.00"
+          },
+          "yachtSale": {
+            "title": "Yacht or Vessel Sale Offer",
+            "duration": "30m"
+          },
+          "yachtPurchase": {
+            "title": "Yacht or Vessel Purchase",
+            "duration": "30m"
+          },
+          "charterRequest": {
+            "title": "Charter Request",
+            "duration": "30m"
+          },
+          "basicValuation": {
+            "title": "Basic Valuation",
+            "duration": "2h",
+            "price": "€300.00"
+          },
+          "nauticalConsulting": {
+            "title": "Nautical Consulting",
+            "duration": "1h"
+          },
+          "valueAddedServices": {
+            "title": "Value Added Services Request",
+            "duration": "30m"
+          },
+          "shipSalePurchase": {
+            "title": "Ship Sale & Purchase analysis and service request",
+            "duration": "1h"
+          },
+          "charterService": {
+            "title": "Charter service",
+            "duration": "30m"
+          }
+        }
+      },
+      "datetime": {
+        "date": {
+          "label": "Date"
+        },
+        "time": {
+          "label": "Time",
+          "slots": {
+            "slot1": "13:15 - 14:15",
+            "slot2": "14:15 - 15:15",
+            "slot3": "15:15 - 16:15"
+          }
+        }
+      },
+      "contactDetails": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Your phone number"
+        }
+      },
+      "summary": {
+        "title": "Booking Summary",
+        "fields": {
+          "service": "Service",
+          "date": "Date",
+          "time": "Time",
+          "name": "Name",
+          "email": "Email",
+          "phone": "Phone"
+        }
+      },
+      "buttons": {
+        "next": "Next",
+        "previous": "Previous",
+        "confirm": "Confirm Booking",
+        "processing": "Processing..."
+      },
+      "validation": {
+        "required": {
+          "category": "Please select a category",
+          "service": "Please select a service",
+          "date": "Please select a date",
+          "time": "Please select a time",
+          "name": "Please enter your name",
+          "email": "Please enter your email",
+          "phone": "Please enter your phone number"
+        },
+        "invalid": {
+          "email": "Please enter a valid email"
+        }
+      },
+      "messages": {
+        "success": "Appointment booked successfully!",
+        "error": "An error occurred while processing your booking. Please try again."
+      }
+    }
+  }
+}

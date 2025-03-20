@@ -1,0 +1,94 @@
+{
+  "header": {
+    "navigation": {
+      "home": "INICIO",
+      "services": "SERVICIOS",
+      "company": "EMPRESA",
+      "contracting": "CONTRATACIÓN",
+      "aboutUs": "QUIÉNES SOMOS",
+      "contact": "CONTACTO"
+    },
+    "services": {
+      "yachtBroker": {
+        "label": "Yacht Broker",
+        "description": "Compra y venta de embarcaciones"
+      },
+      "yachtCharter": {
+        "label": "Yacht Charter",
+        "description": "Alquiler de embarcaciones"
+      },
+      "bunkerSupply": {
+        "label": "Bunker Supply",
+        "description": "Servicios de intermediación"
+      },
+      "inspections": {
+        "label": "Inspecciones y Tasaciones",
+        "description": "Evaluación profesional de embarcaciones"
+      },
+      "logistics": {
+        "label": "Cargo & Logística",
+        "description": "Servicios de transporte y logística"
+      },
+      "nauticalAdvisory": {
+        "label": "Asesoría Náutica",
+        "description": "Consultoría especializada"
+      },
+      "valueAddedServices": {
+        "label": "Servicios de Valor Añadido",
+        "description": "Servicios complementarios"
+      }
+    },
+    "company": {
+      "suppliers": {
+        "label": "Proveedores y distribuidores",
+        "description": "Red de colaboradores y partners"
+      },
+      "news": {
+        "label": "Diario del Puerto de Mahón",
+        "description": "Noticias y actualidad portuaria"
+      }
+    },
+    "contracting": {
+      "conditionsRates": {
+        "label": "Condiciones y Tarifas",
+        "description": "Términos, condiciones y tarifas detalladas de nuestros servicios"
+      },
+      "yachtContracts": {
+        "label": "Contratos de Compraventa de Yates",
+        "description": "Documentación oficial y contratos MYBA para transacciones seguras"
+      }
+    },
+    "languageSelector": {
+      "spanish": "Español",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "address": "07701 Maó, Illes Balears",
+    "country": "España",
+    "services_nauticos": {
+      "title": "SERVICIOS NÁUTICOS",
+      "yacht_broker": "Yacht Broker",
+      "yacht_charter": "Yacht Charter",
+      "inspecciones": "Inspecciones y Tasaciones",
+      "asesoria_nautica": "Asesoría Náutica"
+    },
+    "services": {
+      "title": "SERVICIOS",
+      "compra_yates": "Compra de Yates",
+      "venta_yates": "Venta de Yates",
+      "alquiler_yates": "Alquiler de Yates",
+      "valor_añadido": "Servicios de Valor Añadido"
+    },
+    "empresa": {
+      "title": "EMPRESA",
+      "aboutUs": "Sobre nosotros",
+      "ourTeam": "Nuestro Equipo",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "politica_privacidad": "Política de privacidad",
+      "aviso_legal": "Aviso legal"
+    }
+  }
+}

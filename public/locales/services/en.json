@@ -1,0 +1,536 @@
+{
+  "yachtBroker": {
+    "hero": {
+      "title": "Yacht Broker | Boat Sales and Vessel Specialists in Menorca",
+      "subtitle": "Specialists in <p>buying</p> and <p>selling</p> of yachts in Menorca. Wide range of luxury vessels and personalized advice."
+    },
+    "navigation": {
+      "newYachts": "New Yachts",
+      "usedYachts": "Used Yachts"
+    },
+    "description": {
+      "intro": "Browse our stock of Yachts for sale below or discover our key services and contact us. We have <p>pre-owned</p> Yachts available, or we can arrange contracts with shipyards for <p>new construction</p>.",
+      "expertise": "Our team of experts will guide you through the entire process of buying or selling your vessel, ensuring a professional and transparent experience."
+    },
+    "yachtDetails": {
+      "viewDetails": "View Details",
+      "fields": {
+        "boatName": "Boat name",
+        "year": "Year",
+        "length": "Length",
+        "location": "Location",
+        "displacement": "Displacement",
+        "hull": "Hull",
+        "keel": "Keel",
+        "designer": "Designer",
+        "category": "Category"
+      },
+      "units": {
+        "meters": "meters",
+        "kg": "kg"
+      }
+    },
+    "categories": {
+      "title": "Popular Categories",
+      "usedBoats": {
+        "title": "Used Boats",
+        "description": "Wide selection of verified vessels in excellent condition. Find affordable used boats, from open boats to used sailboats. All our vessels undergo a rigorous inspection process to ensure their quality."
+      },
+      "usedSailboats": {
+        "title": "Used Sailboats",
+        "description": "Extensive range of used sailboats selected and reviewed by experts. We offer the best options for buying used sailboats, from small vessels to large-length sailboats, all in excellent condition."
+      },
+      "catamarans": {
+        "title": "New and Used Catamarans",
+        "description": "Specialists in catamaran sales. We have a premium selection of new and used catamarans, ideal for family navigation and charter. Personalized advice on your catamaran purchase."
+      },
+      "luxuryYachts": {
+        "title": "Luxury Yachts",
+        "description": "The best deals on new and used luxury yachts. Extensive catalog of premium yachts and high-end vessels. Exclusive yacht buying and selling service with personalized advice."
+      },
+      "openBoats": {
+        "title": "Open Boats and Recreation",
+        "description": "Great selection of used open boats and recreational vessels. We offer premium brands like Quicksilver and other industry leaders. Perfect for enjoying safe navigation."
+      },
+      "newBoats": {
+        "title": "New Boats",
+        "description": "Comprehensive service for buying new boats with the best guarantees. We work with leading shipyards to offer you new vessels of the highest quality and performance."
+      }
+    },
+    "advantages": {
+      "title": "Why Choose Us?",
+      "experience": "Sales Experience",
+      "experienceDesc": "More than 15 years sailing boats and ships. Specialists in managing the sale of all types of vessels, from used boats to luxury yachts.",
+      "selection": "Extensive Catalog",
+      "selectionDesc": "Wide selection of vessels including used sailboats, luxury yachts, catamarans, and open boats. All our vessels are verified and in excellent condition.",
+      "support": "Expert Advice",
+      "supportDesc": "We guide you through the entire process of buying a new or used boat. We offer personalized advice to find the perfect vessel according to your needs and budget."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "We answer your questions about buying and selling vessels",
+      "questions": {
+        "usedBoatConsiderations": {
+          "question": "What should I consider when buying a used boat?",
+          "answer": "When buying used boats, it's essential to verify their general condition, documentation, and perform a technical inspection. Our team handles all these verifications, ensuring a safe purchase of used vessels. Additionally, we offer expert advice to find the boat that best suits your needs and budget."
+        },
+        "usedSailboatProcess": {
+          "question": "What is the process for buying a used sailboat?",
+          "answer": "The process of buying a used sailboat includes selecting the appropriate model, technical inspection, documentation verification, and sea trial. Our experts accompany you every step of the way, from initial search to closing the purchase, ensuring you find the perfect used sailboat."
+        },
+        "availableBoats": {
+          "question": "What types of vessels do you have available?",
+          "answer": "We have a wide variety including used boats, used sailboats, luxury yachts, catamarans, open boats, and recreational vessels. We work with both new and used vessels, including premium brands like Quicksilver and other industry leaders."
+        },
+        "sellBoat": {
+          "question": "How can I sell my vessel?",
+          "answer": "We offer a comprehensive boat buying and selling service. We handle the valuation, marketing, and management of your vessel's sale, whether it's a sailboat, yacht, catamaran, or open boat. Our goal is to get the best market price for your boat."
+        },
+        "financing": {
+          "question": "Do you offer financing for vessel purchases?",
+          "answer": "Yes, we facilitate financing options for buying new and used boats. We work with different financial institutions to find the best solution that fits your budget, whether you're buying a luxury yacht or a more modest vessel."
+        }
+      }
+    },
+    "cta": {
+      "title": "Interested in Buying or Selling a Vessel?",
+      "description": "Our team of experts is ready to help you",
+      "button": "Contact Now"
+    }
+  },
+  "yachtCharter": {
+    "hero": {
+      "title": "Yacht Charter | Boat and Yachts Rentals in Menorca",
+      "subtitle": "Rent yachts, catamarans, and motorboats in Menorca with Menorca Yacht Brokers. Enjoy custom routes and premium services with or without a skipper."
+    },
+    "services": {
+      "title": "Our Yacht Charter Services in Menorca",
+      "list": {
+        "dailyRental": {
+          "title": "Daily, Weekly, or Seasonal Rentals",
+          "description": "Total flexibility to rent a boat in Menorca, from day trips in Cala Galdana to full sea vacations aboard a luxury yacht."
+        },
+        "thematicExcursions": {
+          "title": "Themed Excursions and Custom Routes",
+          "description": "Explore Menorca with exclusive routes: catamaran sunsets, traditional llaut excursions, diving in crystal-clear waters, and onboard dining experiences."
+        },
+        "withoutLicense": {
+          "title": "No-License Boat Rentals",
+          "description": "No license? No problem. We'll provide you no-license boats in Menorca so you can sail freely through paradisiacal coves like Cala’n Bosch or Fornells."
+        },
+        "support": {
+          "title": "24/7 Support During Your Charter",
+          "description": "We guarantee assistance at all times for a worry-free nautical experience."
+        }
+      }
+    },
+    "discover": {
+      "title": "Discover Luxury and Freedom at Sea",
+      "description": "Menorca Brokers offers you a unique sea experience with boat, motorboat, and catamaran rentals. Sail without a license, with a skipper, or aboard a luxury yacht while exploring pristine coves and dream beaches like Cala Galdana and Ciudadela.",
+      "button": "Explore Routes"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers for Your Boat Rental?",
+      "reasons": {
+        "fleet": {
+          "title": "Varied Fleet: Yachts, Catamarans, and Boats",
+          "description": "From traditional llauts to modern catamarans, we have options for all tastes and needs."
+        },
+        "experience": {
+          "title": "Personalized Experience",
+          "description": "We tailor every rental: excursions in Cala Galdana, sailing trips in Fornells, or snorkeling routes in Menorca."
+        },
+        "crew": {
+          "title": "Professional Crew or Bareboat Navigation",
+          "description": "Choose between renting with an expert skipper or sailing independently with a no-license boat."
+        },
+        "routes": {
+          "title": "Best Routes and Destinations",
+          "description": "From Ciudadela to Mahón, we offer unique itineraries to discover Menorca from the sea."
+        }
+      }
+    },
+    "faq": {
+      "title": "Everything You Should Know Before Renting a Boat in Menorca",
+      "description": "We answer your questions about boat rentals in Menorca.",
+      "licenseRequired": {
+        "question": "Do I need a license to rent a boat in Menorca?",
+        "answer": "Not always. We offer no-license boats that you can operate without prior experience. For larger vessels, a navigation license is required."
+      },
+      "bestTimeToRent": {
+        "question": "What's the best time to rent a boat in Menorca?",
+        "answer": "High season runs from June to September, with ideal temperatures and calm seas. During spring and fall, there are fewer crowds and more competitive prices."
+      },
+      "boatTypes": {
+        "question": "What types of boats can I rent?",
+        "answer": "We offer traditional llauts, motorboats, catamarans, sailboats, and luxury yachts, with or without a skipper."
+      },
+      "rentalDuration": {
+        "question": "Can I rent a boat for a few hours or only full days?",
+        "answer": "We offer hourly rentals, half-day, full-day, and weekly options to suit your preferences."
+      },
+      "recommendedRoutes": {
+        "question": "What are the best boating routes around Menorca?",
+        "answer": "Top routes include Cala Galdana, Cala’n Bosch, Fornells, and Mahón Bay."
+      },
+      "includedServices": {
+        "question": "What's included in the boat rental?",
+        "answer": "Depending on the boat, it may include fuel, snorkeling gear, drinks, and an optional skipper."
+      },
+      "howToBook": {
+        "question": "How do I book a boat in Menorca?",
+        "answer": "You can book directly through our website or contact us for personalized assistance."
+      }
+    },
+    "cta": {
+      "title": "Live an Unforgettable Experience at Sea",
+      "description": "Book your boat in Menorca and sail through its most iconic coves. Enjoy a no-license rental, catamaran excursions, or a luxury yacht with exclusive services.",
+      "button": "Book Now"
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Marine Fuel Supply",
+      "subtitle": "We supply fuel for boats on Menorca island, the rest of Spain and most world comercial ports.",
+      "subtitle2": "Through our partner <2>Stabia Oil</2>. We can supply all types of marine fuel on the island of Menorca."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Updated daily",
+      "sectionTitle": "Menorca Brokers - Daily Position",
+      "description": "Contact us to receive information on our latest supply rates.",
+      "downloadButton": "Contact us"
+    },
+    "marketIndices": {
+      "title": "Our Maritime Market Indices and Providers",
+      "subtitle": "We obtain the latest prices using data provided by our partners.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Check marine fuel market prices in major ports worldwide."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Check the cargo market updated daily with the Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "We load CEPSA - MOEVE fuel"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL is our service provider."
+        }
+      },
+      "tooltip": "Visit website"
+    },
+    "specializedServices": {
+      "title": "Specialized Services",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Ship Sale & Purchase",
+          "description": "From cargo vessels to luxury yachts, we guide you through every step of the process, ensuring each operation is smooth, profitable, and satisfactory."
+        },
+        "dryBulk": {
+          "title": "Dry Bulk Cargo",
+          "description": "Specialists in handling and managing dry bulk cargo."
+        },
+        "liquidBulk": {
+          "title": "Liquid Bulk Cargo",
+          "description": "Experts in bulk liquid cargo transportation, offering specialized and safe solutions for each type of cargo."
+        }
+      }
+    },
+    "experience": {
+      "title": "Our Experience",
+      "subtitle": "More than a decade of experience in the maritime sector backs us",
+      "globalExperience": {
+        "title": "Global Experience",
+        "description": "At Menorca Brokers, we specialize in connecting shipowners and charterers, offering comprehensive solutions for the purchase, sale, and charter of vessels.",
+        "features": {
+          "globalCoverage": {
+            "title": "Global Coverage",
+            "description": "Operations in major international ports"
+          },
+          "service247": {
+            "title": "24/7 Service",
+            "description": "Continuous support for all your needs"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Expert Knowledge",
+        "description": "We combine deep maritime industry knowledge with a global network of contacts, allowing us to ensure efficient and personalized agreements.",
+        "features": {
+          "expertTeam": {
+            "title": "Expert Team",
+            "description": "Highly qualified professionals"
+          },
+          "qualityGuarantee": {
+            "title": "Quality Guarantee",
+            "description": "Compliance with international standards"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Looking for a Ship Broker?",
+      "description": "Contact us to close fixtures or learn more about our services. Our team is ready to help you.",
+      "button": "Contact Now"
+    }
+  },
+  "inspections": {
+    "hero": {
+      "title": "Boat Inspections and Valuations in Menorca",
+      "subtitle": "Specialized <p>inspection</p> and <p>appraisal</p> maritime services for buyers and sellers"
+    },
+    "intro": "At Menorca Yacht Brokers, we have solid experience in conducting <p>inspections</p> and <p>marine appraisals</p>. As part of our commitment to quality and transparency, we offer specialized services for both buyers and sellers of yachts and boats.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Maritime Inspections",
+        "description": "Maritime inspections are fundamental for evaluating the condition and safety of any vessel. We follow rigorous technical procedures with international standards.",
+        "process": {
+          "title": "How do we conduct inspections?",
+          "items": [
+            "Detailed hull review",
+            "Mechanical, electrical, and safety systems",
+            "Sea trial",
+            "SOLAS and IMO certification verification"
+          ]
+        },
+        "conventions": {
+          "title": "International Conventions",
+          "description": "We work in compliance with Lloyd's Register, ensuring accurate and reliable assessment."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Maritime Valuations",
+        "description": "We perform precise and up-to-date valuations based on our experience and current market trends.",
+        "factors": {
+          "title": "Valuation Factors",
+          "items": [
+            "Year of manufacture and model",
+            "Engine and systems condition",
+            "Hull condition and safety systems",
+            "Additional equipment and customization",
+            "Market situation"
+          ]
+        },
+        "types": {
+          "title": "Types of Valuations",
+          "items": [
+            "Purchase or Sale Valuations",
+            "Insurance Valuations",
+            "Detailed Condition Reports"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "We take pride in offering a complete and professional maritime inspection and valuation service. Our team of experts is available to guide you through every step of the process, ensuring you make informed and safe decisions when buying, selling, or insuring your yacht."
+    },
+    "cta": {
+      "title": "Need an Inspection or Valuation in Menorca?",
+      "description": "If you would like more information about our inspections or valuations, or to request our services, don't hesitate to contact us directly through the form on our contact page or call us at the number provided.",
+      "button": "Contact Us"
+    }
+  },
+  "logistics": {
+    "hero": {
+      "title": "Maritime Logistics in Menorca | Cargo and Customized Services",
+      "subtitle": {
+        "question": "Want to import or export any type of cargo?",
+        "answer": "We'll manage it for you!"
+      }
+    },
+    "intro": {
+      "text": "At Menorca Yacht Brokers, we offer a complete and personalized logistics service for importing and exporting any type of cargo. From general merchandise to specialized shipments, we manage every step of the process with precision and professionalism."
+    },
+    "doorToDoor": {
+      "title": "\"Door to Door\" Logistics Services",
+      "services": {
+        "pickup": {
+          "title": "Origin Pickup",
+          "description": "We coordinate initial ground transportation to ensure your cargo begins its journey efficiently."
+        },
+        "documentation": {
+          "title": "Documentation Management",
+          "description": "We ensure all permits and customs procedures are in order for a smooth process."
+        },
+        "international": {
+          "title": "International Transport",
+          "description": "We offer efficient solutions by sea, land, or air adapted to your specific needs."
+        },
+        "delivery": {
+          "title": "Destination Delivery",
+          "description": "We deliver your cargo directly to your customer's door, ensuring timely and secure delivery."
+        }
+      }
+    },
+    "incoterms": {
+      "title": "Incoterms: Your Transport, Your Rules",
+      "terms": {
+        "exw": {
+          "title": "EXW (Ex Works)",
+          "description": "We coordinate all transport from origin to destination."
+        },
+        "fob": {
+          "title": "FOB (Free On Board)",
+          "description": "We supervise loading at the port of origin."
+        },
+        "cif": {
+          "title": "CIF (Cost, Insurance, and Freight)",
+          "description": "We ensure the protection of your merchandise."
+        },
+        "dap": {
+          "title": "DAP (Delivered at Place)",
+          "description": "We deliver directly to the agreed location."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers?",
+      "reasons": {
+        "globalCoverage": {
+          "title": "Global Coverage",
+          "description": "A network of strategic partners that allows us to operate worldwide."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "We are available to resolve any incidents during transport."
+        },
+        "costOptimization": {
+          "title": "Cost Optimization",
+          "description": "We design logistics solutions that fit your budget and needs."
+        },
+        "personalizedAttention": {
+          "title": "Personalized Attention",
+          "description": "We adapt each shipment to the specific characteristics of your cargo."
+        }
+      }
+    },
+    "cta": {
+      "title": "Need a customized logistics solution?",
+      "description": "Contact us to design a logistics solution tailored to you",
+      "button": "Contact"
+    }
+  },
+  "nauticalConsulting": {
+    "hero": {
+      "title": "Maritime and Nautical Consulting: Experts at Your Service",
+      "subtitle": {
+        "text": "Comprehensive solutions and",
+        "highlight": "specialized advice",
+        "text2": "for the maritime and nautical sector in Menorca"
+      }
+    },
+    "intro": {
+      "description": "At Menorca Yacht Brokers, we offer comprehensive maritime and nautical consulting services designed to help you make strategic decisions in the maritime world. Our experience and technical knowledge make us the ideal partner to solve any challenge related to the naval industry and maritime transport."
+    },
+    "services": {
+      "technicalConsulting": {
+        "title": "Technical Consulting",
+        "description": "We evaluate and recommend customized solutions to optimize your maritime operations, from vessel purchase to advanced technology implementation."
+      },
+      "legalAssistance": {
+        "title": "Legal and Regulatory Assistance",
+        "description": "We guide you in compliance with international regulations, such as the SOLAS Convention, IMDG Code, and local regulations."
+      },
+      "feasibilityAnalysis": {
+        "title": "Feasibility Analysis",
+        "description": "We conduct economic and technical studies for new maritime projects, ensuring that each decision is based on solid data."
+      },
+      "vesselValuation": {
+        "title": "Vessel Valuation",
+        "description": "We offer precise and objective appraisals for buying, selling, renting, or financing yachts and commercial vessels."
+      },
+      "routePlanning": {
+        "title": "Route Planning and Logistics",
+        "description": "We design strategies to optimize time and costs in your maritime transport operations."
+      }
+    },
+    "cta": {
+      "title": "Need professional nautical advice?",
+      "description": "Contact our team of experts for a personalized consultation",
+      "button": "Contact Us"
+    }
+  },
+  "valueAddedServices": {
+    "hero": {
+      "title": "Value-Added Services | More Than Chartering in Menorca",
+      "subtitle": "Enjoy Menorca to the fullest with our additional services: transfers, catering, sightseeing tours, and exclusive event planning."
+    },
+    "services": {
+      "airportTransfer": {
+        "title": "Airport Pickup & Transfer",
+        "description": "Start your journey stress-free. We offer private and punctual transfer services from the airport to your yacht, hotel, or any destination in Menorca.",
+        "features": [
+          "Luxury vehicle fleet",
+          "Multilingual and professional drivers",
+          "Round-trip transfer options"
+        ]
+      },
+      "touristRoutes": {
+        "title": "Private Sightseeing Tours",
+        "description": "Discover Menorca from a new perspective. We organize exclusive guided tours to:",
+        "features": [
+          "Hidden coves and paradisiacal beaches",
+          "Paragliding",
+          "Historical and cultural monuments",
+          "Guided hiking and cycling experiences"
+        ]
+      },
+      "catering": {
+        "title": "Customized Onboard Catering",
+        "description": "Savor Menorca from the sea with personalized menus tailored to your tastes and needs.",
+        "features": [
+          "Local chefs and Mediterranean cuisine",
+          "Vegan, vegetarian, and gluten-free options",
+          "Premium drinks and wine tastings"
+        ]
+      },
+      "assistance": {
+        "title": "24/7 Assistance During Your Trip",
+        "description": "Our team is always available to ensure your experience is flawless. We assist with:",
+        "features": [
+          "Last-minute bookings",
+          "Resolving any issues during your trip"
+        ]
+      },
+      "events": {
+        "title": "Exclusive Event Planning",
+        "description": "Celebrate special moments aboard a yacht or at Menorca’s most iconic locations.",
+        "features": [
+          "Weddings, anniversaries, and corporate events",
+          "Themed decorations and live entertainment"
+        ]
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Menorca Brokers.com?",
+      "points": [
+        {
+          "title": "Exceptional Customer Service:",
+          "description": "They focus on every detail to ensure you enjoy impeccable service."
+        },
+        {
+          "title": "Local Expertise with a Global Reach:",
+          "description": "Experts in Menorca with international connections."
+        },
+        {
+          "title": "Flexibility and Customization:",
+          "description": "Each service is tailored to your preferences."
+        }
+      ],
+      "testimonial": {
+        "quote": "An exceptional service that exceeded all my expectations",
+        "author": "Charles Grange, 28 years old"
+      }
+    },
+    "cta": {
+      "title": "Interested in our services?",
+      "description": "Contact us to customize your Menorca experience",
+      "button": "Contact"
+    }
+  }
+}

@@ -4,9 +4,20 @@ import { Header } from "@/client/layout/components/header";
 import { useEffect, useState } from "react";
 
 export async function getStaticProps(context) {
+  const homeMessages = (
+    await import(`../public/locales/contact/${context.locale}.json`)
+  ).default;
+
+  const layoutMessages = (
+    await import(`../public/locales/layout/${context.locale}.json`)
+  ).default;
+
   return {
     props: {
-      messages: (await import(`../messages/${context.locale}.json`)).default,
+      messages: {
+        ...layoutMessages,
+        ...homeMessages,
+      },
     },
   };
 }

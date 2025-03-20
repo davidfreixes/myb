@@ -1,0 +1,507 @@
+{
+  "partners": {
+    "hero": {
+      "title": "Empresas Náuticas en Menorca: Proveedores y Distribuidores",
+      "subtitle": "Aquí encontrarás nuestros socios y proveedores de productos. Si quieres ser uno de ellos contáctanos.",
+      "contactButton": "Contáctanos"
+    },
+    "cta": {
+      "title": "¿Quieres formar parte de nuestra Red de Proveedores?",
+      "description": "Únete a nuestra red de socios y proveedores náuticos en Menorca. Contáctanos para explorar oportunidades de colaboración.",
+      "button": "Solicitar Información"
+    }
+  },
+  "portDaily": {
+    "hero": {
+      "title": "Diario del Puerto de Mahón",
+      "subtitle": "El diario de la actividad diaria marítima en el Puerto de Mahón."
+    },
+    "news": {
+      "articles": [
+        {
+          "title": "La APB saca para 20 años la gestión de los puestos de amarre del muelle de Poniente en el puerto de Maó"
+        },
+        {
+          "title": "Los amarres del Moll de Ponent de Maó salen a concesión por 6 millones de euros para 20 años"
+        }
+      ],
+      "readMore": "Leer más"
+    },
+    "submitNews": {
+      "title": "¿Quieres mandarnos tu noticia?",
+      "description": "Comparte con nosotros las últimas novedades del sector marítimo en Mahón.",
+      "submitButton": "Enviar Noticia",
+      "contactButton": "Contactar"
+    }
+  },
+  "conditionsAndRates": {
+    "hero": {
+      "title": "Condiciones de Contratación y Tarifas",
+      "subtitle": "Información detallada sobre nuestros servicios y tarifas"
+    },
+    "tabs": {
+      "yachts": {
+        "label": "Ámbito de Yates",
+        "intro": "En Menorca Yacht Brokers, ofrecemos una amplia gama de servicios relacionados con la compra, venta y alquiler de yates, incluyendo inspecciones y tasaciones marítimas. A continuación, detallamos nuestras tarifas y condiciones para cada uno de los servicios que ofrecemos."
+      },
+      "brokerage": {
+        "label": "Ship Brokerage y Charterer",
+        "intro": "En Menorca Brokers, seguimos las normativas internacionales reconocidas por BIMCO (Baltic and International Maritime Council) para garantizar que todos nuestros acuerdos sean claros, justos y transparentes."
+      }
+    },
+    "yachts": {
+      "brokerage": {
+        "title": "1. Servicios de Brokeraje de Yates",
+        "saleAndPurchase": {
+          "title": "Compra y Venta de Yates:",
+          "points": [
+            "Comisión del 5% sobre el precio de venta.",
+            "Comisión mínima de €2,000 para transacciones por debajo de €40,000.",
+            "El pago de la comisión se realiza al cierre de la transacción."
+          ]
+        },
+        "charter": {
+          "title": "Alquiler y Charter de Yates:",
+          "points": [
+            "Comisión del 10% sobre el precio de alquiler.",
+            "Condiciones específicas para alquileres de larga duración (más de 30 días)."
+          ]
+        }
+      },
+      "inspections": {
+        "title": "2. Inspecciones Marítimas",
+        "plans": [
+          {
+            "title": "Inspección básica",
+            "price": "500€",
+            "description": "Yate hasta 12 metros",
+            "features": [
+              "Inspección visual del casco",
+              "Revisión del motor",
+              "Sistema eléctrico",
+              "Sistema de navegación"
+            ]
+          },
+          {
+            "title": "Inspección avanzada",
+            "price": "1,000€",
+            "description": "Yate hasta 24 metros",
+            "features": [
+              "Todo lo de inspección básica",
+              "Sistemas de seguridad",
+              "Prueba de navegación",
+              "Evaluación completa"
+            ]
+          },
+          {
+            "title": "Inspección completa",
+            "price": "2,000€",
+            "description": "Yate superior a 24 metros",
+            "features": [
+              "Informe completo",
+              "Pruebas exhaustivas",
+              "Sistemas hidráulicos",
+              "Sistemas de propulsión"
+            ]
+          }
+        ]
+      },
+      "valuations": {
+        "title": "3. Tasaciones Marítimas",
+        "plans": [
+          {
+            "title": "Tasación básica",
+            "price": "300€",
+            "description": "Yate hasta 12 metros"
+          },
+          {
+            "title": "Tasación avanzada",
+            "price": "600€",
+            "description": "Yate hasta 24 metros"
+          },
+          {
+            "title": "Tasación completa",
+            "price": "1,200€",
+            "description": "Yate superior a 24 metros"
+          }
+        ]
+      },
+      "otherServices": {
+        "title": "4. Otros Servicios",
+        "services": [
+          {
+            "title": "Asesoría y Consultoría Náutica",
+            "price": "150€",
+            "unit": "/ hora"
+          },
+          {
+            "title": "Gestión de documentación",
+            "price": "300€",
+            "unit": "por transacción"
+          }
+        ]
+      },
+      "conditions": {
+        "title": "5. Condiciones Generales",
+        "items": [
+          {
+            "title": "Métodos de pago",
+            "description": "Aceptamos pagos por transferencia bancaria, tarjeta de crédito o PayPal. Los pagos deben realizarse antes de la entrega de los informes finales.",
+            "benefits": [
+              "Transferencia bancaria",
+              "Tarjeta de crédito",
+              "PayPal"
+            ]
+          },
+          {
+            "title": "Política de Cancelaciones",
+            "description": "En caso de cancelación con menos de 24 horas de antelación, se cobrará el 50% de la tarifa acordada.",
+            "benefits": ["Flexibilidad", "Transparencia", "Sin costes ocultos"]
+          },
+          {
+            "title": "Validez y Garantías",
+            "description": "Las tarifas están sujetas a cambios anuales según la revisión de precios del mercado.",
+            "benefits": [
+              "Precios competitivos",
+              "Revisión anual",
+              "Garantía de servicio"
+            ]
+          }
+        ]
+      }
+    },
+    "shipBrokerage": {
+      "commissions": {
+        "title": "1. Comisiones para Ship Broker",
+        "standard": {
+          "title": "Comisión Estándar:",
+          "description": "La comisión habitual es del 1.25% al 2.5% del flete bruto, precio de venta del buque o valor del contrato de fletamento."
+        },
+        "payment": {
+          "title": "Pago de la Comisión:",
+          "points": [
+            "Fletamento: Al cobro del primer flete o inicio del contrato.",
+            "Venta de Buques: Tras la firma del MOA y entrega del buque.",
+            "Renovaciones y Extensiones: Comisión adicional según acuerdo previo."
+          ]
+        }
+      },
+      "responsibilities": {
+        "title": "2. Responsabilidades del Ship Broker",
+        "intermediation": {
+          "title": "Intermediación",
+          "description": "Actuamos como intermediario imparcial entre las partes, facilitando la negociación."
+        },
+        "confidentiality": {
+          "title": "Confidencialidad",
+          "description": "Mantenemos la confidencialidad de toda la información sensible."
+        }
+      },
+      "chartererCommissions": {
+        "title": "3. Comisiones para Charterer",
+        "charter": {
+          "title": "Comisión de Fletamento:",
+          "description": "Varía entre 1% a 2% del valor total del fletamento acordado."
+        },
+        "additional": {
+          "title": "Compensación por Ingreso Adicional:",
+          "description": "Compensación adicional en caso de renovación o modificación del contrato."
+        }
+      },
+      "chartererResponsibilities": {
+        "title": "4. Responsabilidades del Charterer",
+        "negotiation": {
+          "title": "Negociación y Fletamento",
+          "description": "El Charterer se encarga de negociar las condiciones del contrato y asegurar el cumplimiento normativo."
+        },
+        "compliance": {
+          "title": "Cumplimiento de Contrato",
+          "description": "Garantizar el cumplimiento de las condiciones establecidas y gestionar posibles disputas."
+        }
+      },
+      "contractConditions": {
+        "title": "Condiciones del Contrato",
+        "subtitle": "Aspectos fundamentales que rigen nuestros acuerdos comerciales.",
+        "conditions": [
+          {
+            "title": "Duración del Contrato",
+            "description": "Vigente hasta la finalización del acuerdo comercial, salvo otro plazo establecido.",
+            "benefits": [
+              "Flexibilidad temporal",
+              "Adaptable a necesidades",
+              "Renovación automática opcional"
+            ]
+          },
+          {
+            "title": "Exclusividad",
+            "description": "Puede establecerse según los términos acordados en cada caso particular.",
+            "benefits": [
+              "Acuerdos personalizados",
+              "Términos negociables",
+              "Garantía de servicio"
+            ]
+          },
+          {
+            "title": "Modificaciones",
+            "description": "Cualquier modificación debe ser acordada por escrito entre las partes.",
+            "benefits": [
+              "Transparencia total",
+              "Documentación formal",
+              "Seguridad jurídica"
+            ]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "¿Tienes alguna pregunta?",
+      "description": "Nuestro equipo está disponible para resolver cualquier duda sobre nuestras condiciones y tarifas.",
+      "button": "Contactar"
+    }
+  },
+  "purchaseAndSale": {
+    "hero": {
+      "title": "Contratos de Compraventa de Yates",
+      "subtitle": "Página Informativa: Contratos MYBA en Menorca Brokers"
+    },
+    "introduction": {
+      "title": "¿Qué es un Contrato MYBA?",
+      "paragraph1": "En Menorca Brokers, nos aseguramos de que cada transacción de yates se realice bajo los más altos estándares de la industria. Para garantizar transparencia, seguridad y confianza, utilizamos los Contratos MYBA, una de las formas contractuales más reconocidas y aceptadas en el mundo del alquiler y la venta de yates.",
+      "paragraph2": "El contrato MYBA (Mediterranean Yacht Brokers Association) es un documento estándar que regula los términos y condiciones de las transacciones relacionadas con yates, como alquileres y ventas. Este contrato establece de manera clara los derechos y obligaciones tanto del propietario como del cliente, minimizando riesgos y posibles malentendidos."
+    },
+    "benefits": {
+      "title": "Principales Beneficios",
+      "items": [
+        {
+          "title": "Claridad y transparencia",
+          "description": "Los términos y condiciones están claramente definidos."
+        },
+        {
+          "title": "Protección legal",
+          "description": "Garantiza la protección de todas las partes involucradas en la transacción."
+        },
+        {
+          "title": "Flexibilidad",
+          "description": "Se adapta a diversas necesidades, desde alquileres de corta duración hasta acuerdos completos de compraventa."
+        },
+        {
+          "title": "Estándares internacionales",
+          "description": "Reconocido globalmente por brokers, operadores y propietarios de yates."
+        }
+      ]
+    },
+    "components": {
+      "title": "Componentes del Contrato MYBA",
+      "items": [
+        {
+          "title": "Detalles del yate",
+          "description": "Incluye especificaciones como nombre, eslora, tripulación y equipamiento."
+        },
+        {
+          "title": "Duración y términos del acuerdo",
+          "description": "Fechas específicas de alquiler o condiciones de compraventa."
+        },
+        {
+          "title": "Política de cancelaciones",
+          "description": "Establece las condiciones en caso de fuerza mayor o cancelación."
+        },
+        {
+          "title": "Costos y depósitos",
+          "description": "Define los precios, tarifas adicionales y pagos iniciales."
+        },
+        {
+          "title": "Términos de uso",
+          "description": "Describe cómo se utilizará el yate y las responsabilidades del cliente."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Por qué elegir Menorca Brokers",
+      "paragraph1": "Nuestra experiencia en el sector nos permite asesorarte en cada paso del proceso, garantizando que tu contrato MYBA esté adaptado a tus necesidades específicas. Ya sea que busques alquilar o adquirir un yate, trabajamos para que disfrutes de una experiencia sin preocupaciones.",
+      "paragraph2": "Contacta con nosotros para más información sobre cómo los contratos MYBA pueden respaldar tu próxima transacción náutica."
+    },
+    "cta": {
+      "title": "¿Interesado en nuestros servicios?",
+      "description": "Contáctanos para descubrir cómo podemos ayudarte a encontrar el yate perfecto para tus necesidades",
+      "button": "Contactar ahora"
+    }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "Quiénes Somos en Menorca Brokers",
+      "subtitle": "Estamos listos para ofrecerte la mejor asesoría y garantizar una experiencia de compra exitosa.",
+      "button": "¡Conócenos!"
+    },
+    "team": {
+      "title": "Nuestro equipo",
+      "description": "Nuestro equipo está formado por profesionales altamente cualificados y motivados, todos ellos expertos en su campo. Con muchos años de experiencia en la industria, tienen la experiencia para proporcionar servicios completos y de primera clase a nuestros clientes.",
+      "members": {
+        "andreuMartinez": {
+          "name": "Andreu Martinez",
+          "role": "Yacht Broker & Charterer",
+          "location": "España",
+          "email": "info@menorcabrokers.com",
+          "bio": [
+            "Andreu Martínez Parera es un broker con una sólida formación académica en el ámbito marítimo.",
+            "Formado en el Instituto Marítimo Español y en el Institute of Chartered Shipbrokers de Londres. Además, cuenta con una carrera en Náutica, habiendo obtenido su título en Ciencias Náuticas con especialización en Transporte Marítimo. Su educación se complementa con un Máster en Gestión del Transporte Marítimo y una formación de Postgrado en Logística y Supply Chain, lo que le ha permitido desarrollar una visión integral del sector.",
+            "Desde 2017, Andreu ha acumulado una experiencia significativa en el mundo marítimo y logístico. Su carrera comenzó en APM Terminals, parte del Grupo MAERSK, donde fue miembro del departamento de operaciones en Barcelona. En esta etapa, se involucró activamente en la optimización de procesos logísticos y la gestión de operaciones portuarias, lo que le brindó una comprensión profunda de la cadena de suministro global.",
+            "En 2019, Andreu asumió la responsabilidad de la gestión de operaciones en la naviera CMA CGM en Marsella. Durante más de 4 años y medio, optimizó la eficiencia de las operaciones así como la coordinación de las actividades de carga resultando en grandes resultados de productividad y stowage.",
+            "Simultáneamente a su carrera profesional, Andreu compartió su experiencia y conocimientos como profesor universitario en el área de Negocios Marítimos de la Universitat Politécnica de Catalunya. A lo largo de su trayectoria, formó a nuevas generaciones de profesionales del sector, transmitiendo sus conocimientos sobre logística y operaciones marítimas.",
+            "Actualmente, Andreu dirige Menorca Yacht Brokers, un proyecto que ofrece una amplia gama de servicios de ship brokerage, charter y asesoría náutica. Gracias a su formación académica y su experiencia práctica, Andreu ha desarrollado una comprensión profunda del sector marítimo y sus necesidades específicas."
+          ]
+        },
+        "danielOrtega": {
+          "name": "Daniel Ortega",
+          "role": "Freelance Yacht Broker & Event Planning",
+          "location": "Bélgica",
+          "email": "daniel@menorcabrokers.com"
+        },
+        "grigoris": {
+          "name": "Grigoris Psomas",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Países Bajos",
+          "email": "grigoris@menorcabrokers.com"
+        },
+        "christine": {
+          "name": "Christine Giannouli",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Grecia",
+          "email": "christine@menorcabrokers.com"
+        },
+        "david": {
+          "name": "David Freixes",
+          "role": "IT Developer & Co-Owner",
+          "location": "España"
+        }
+      },
+      "contactButton": "Contáctame"
+    },
+    "contact": {
+      "title": "¿Listo Para Empezar Tu Viaje?",
+      "subtitle": "Contáctanos Hoy",
+      "description": "Descubre cómo Menorca Brokers puede ayudarte a alcanzar tus objetivos en la compraventa de embarcaciones. Nuestro equipo está disponible para responder a tus preguntas y ofrecerte una consulta personalizada.",
+      "button": "Contáctanos"
+    }
+  },
+  "legalNotice": {
+    "hero": {
+      "title": "Aviso Legal"
+    },
+    "sections": {
+      "identification": {
+        "title": "1. Identificación del titular del sitio web",
+        "content": [
+          "El presente sitio web, MenorcaBrokers.com.",
+          "Menorca Yacht Brokers se identifica como la marca comercial de www.menorcabrokers.com",
+          "Domicilio social: Menorca, Islas Baleares, España."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "2. Propiedad intelectual e industrial",
+        "content": [
+          "Todos los contenidos del sitio web, incluyendo textos, imágenes, gráficos, logotipos, iconos, software y demás elementos de este sitio, son propiedad de Menorca Brokers o de sus licenciantes, y están protegidos por las leyes de propiedad intelectual e industrial. Queda prohibida la reproducción, distribución, modificación, transformación, comunicación pública o cualquier otra actividad similar sin la previa autorización expresa de Menorca Brokers.",
+          "La propiedad del dominio www.menorcabrokers.com así como de todos sus derivados y de la propia página web son de:",
+          "Andreu Martínez Parera.",
+          "Contactar mediante los canales oficiales para más información."
+        ]
+      },
+      "usage": {
+        "title": "3. Uso del sitio web",
+        "content": "El usuario se compromete a utilizar este sitio web conforme a la ley, el presente Aviso Legal y las condiciones que en su caso se establezcan para cada servicio. Asimismo, el usuario se compromete a no utilizar el sitio web para fines ilícitos o lesivos de los derechos e intereses de Menorca Brokers o de terceros."
+      },
+      "liability": {
+        "title": "4. Exoneración de responsabilidad",
+        "content": "Menorca Brokers no se hace responsable de los daños derivados del uso del sitio web o de sus contenidos. Asimismo, no garantiza la disponibilidad continua de los servicios del sitio web, pudiendo suspender temporalmente el acceso por tareas de mantenimiento o por causas ajenas a su control."
+      },
+      "privacy": {
+        "title": "5. Política de privacidad",
+        "content": "La información personal que se reciba a través de este sitio web será tratada conforme a nuestra Política de Privacidad, la cual está disponible en la página web."
+      },
+      "links": {
+        "title": "6. Enlaces a otros sitios web",
+        "content": "Este sitio web puede contener enlaces a otros sitios externos. Menorca Brokers S.L. no se responsabiliza de los contenidos, políticas de privacidad o prácticas de otros sitios web."
+      },
+      "jurisdiction": {
+        "title": "7. Ley aplicable y jurisdicción",
+        "content": "La relación entre Menorca Brokers y el usuario se regirá por la normativa española. En caso de disputa, las partes se someterán a los tribunales competentes de Menorca, Islas Baleares, España."
+      }
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Política de Privacidad"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "1. Información general",
+        "content": "En Menorca Brokers S.L., con domicilio en C/ Ramón y Cajal, 45, 07760, Menorca, Islas Baleares, España, somos responsables del tratamiento de los datos personales de nuestros usuarios, conforme a la normativa vigente sobre protección de datos personales, especialmente el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD)."
+      },
+      "personalData": {
+        "title": "2. Datos personales que recabamos",
+        "intro": "Recabamos los siguientes tipos de datos personales cuando los usuarios interactúan con nuestro sitio web:",
+        "items": [
+          "Datos identificativos (nombre, apellidos, correo electrónico, teléfono, dirección).",
+          "Datos relacionados con la actividad comercial y transacciones.",
+          "Información relacionada con la navegación web (dirección IP, cookies, etc.)."
+        ]
+      },
+      "purposes": {
+        "title": "3. Finalidades del tratamiento",
+        "intro": "Los datos personales que recogemos se utilizarán para las siguientes finalidades:",
+        "items": [
+          "Gestionar los servicios ofrecidos a través de nuestro sitio web.",
+          "Responder a consultas y solicitudes de información.",
+          "Enviar comunicaciones comerciales relacionadas con nuestros servicios (si el usuario ha dado su consentimiento para ello).",
+          "Realizar análisis estadísticos y mejorar la experiencia de navegación del sitio web.",
+          "Cumplir con las obligaciones legales y fiscales."
+        ]
+      },
+      "legalBasis": {
+        "title": "4. Base legal para el tratamiento",
+        "intro": "La base legal para el tratamiento de los datos personales es:",
+        "items": [
+          "El consentimiento del usuario, en los casos en que sea necesario.",
+          "La ejecución de un contrato o medidas precontractuales, en el caso de que el usuario haya solicitado algún servicio.",
+          "El cumplimiento de una obligación legal por parte de Menorca Brokers S.L.."
+        ]
+      },
+      "dataRecipients": {
+        "title": "5. Destinatarios de los datos",
+        "content": "Menorca Brokers S.L. no cederá los datos personales a terceros, salvo en los casos en que sea necesario para cumplir con la ley, o si el usuario ha dado su consentimiento para ello. Sin embargo, los datos podrán ser compartidos con proveedores de servicios que nos ayudan a operar nuestro negocio, como proveedores de alojamiento web o servicios de correo electrónico."
+      },
+      "internationalTransfers": {
+        "title": "6. Transferencias internacionales de datos",
+        "content": "En caso de que sea necesario, los datos personales pueden ser transferidos a países fuera del Espacio Económico Europeo (EEE), en cuyo caso se garantizarán las medidas de protección adecuadas conforme a la legislación aplicable."
+      },
+      "userRights": {
+        "title": "7. Derechos de los usuarios",
+        "intro": "Los usuarios tienen derecho a:",
+        "items": [
+          "Acceder a sus datos personales.",
+          "Rectificar sus datos si son incorrectos o incompletos.",
+          "Suprimir sus datos personales cuando ya no sean necesarios para los fines para los que fueron recogidos.",
+          "Limitar el tratamiento de sus datos en determinadas circunstancias.",
+          "Oponerse al tratamiento de sus datos por motivos relacionados con su situación particular.",
+          "Solicitar la portabilidad de sus datos en un formato estructurado y de uso común."
+        ],
+        "contact": "Para ejercer estos derechos, el usuario puede ponerse en contacto con nosotros a través del correo electrónico."
+      },
+      "dataRetention": {
+        "title": "8. Conservación de los datos",
+        "content": "Los datos personales serán conservados durante el tiempo necesario para cumplir con las finalidades para las que fueron recabados y conforme a los plazos establecidos por la legislación vigente."
+      },
+      "dataSecurity": {
+        "title": "9. Seguridad de los datos",
+        "content": "Menorca Brokers S.L. implementa medidas de seguridad técnicas y organizativas para proteger los datos personales frente a accesos no autorizados, alteraciones, pérdidas o destrucción de los mismos."
+      },
+      "policyChanges": {
+        "title": "10. Cambios en la Política de Privacidad",
+        "content": "Nos reservamos el derecho a modificar esta Política de Privacidad en cualquier momento, siendo cualquier cambio publicado en este sitio web. Recomendamos revisar esta política periódicamente para estar informado sobre cómo protegemos tus datos."
+      },
+      "contact": {
+        "title": "11. Contacto",
+        "content": "Si tienes alguna duda sobre nuestra Política de Privacidad o sobre el tratamiento de tus datos personales, puedes contactarnos."
+      }
+    }
+  }
+}

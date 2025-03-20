@@ -1,0 +1,94 @@
+{
+  "header": {
+    "navigation": {
+      "home": "HOME",
+      "services": "SERVICES",
+      "company": "COMPANY",
+      "contracting": "CONTRACTING",
+      "aboutUs": "ABOUT US",
+      "contact": "CONTACT"
+    },
+    "services": {
+      "yachtBroker": {
+        "label": "Yacht Broker",
+        "description": "Purchase and sale of boats"
+      },
+      "yachtCharter": {
+        "label": "Yacht Charter",
+        "description": "Boat rentals"
+      },
+      "bunkerSupply": {
+        "label": "Bunker Supply",
+        "description": "Intermediation services"
+      },
+      "inspections": {
+        "label": "Inspections and Appraisals",
+        "description": "Professional boat evaluation"
+      },
+      "logistics": {
+        "label": "Cargo & Logistics",
+        "description": "Transport and logistics services"
+      },
+      "nauticalAdvisory": {
+        "label": "Nautical Advisory",
+        "description": "Specialized consulting"
+      },
+      "valueAddedServices": {
+        "label": "Value-Added Services",
+        "description": "Complementary services"
+      }
+    },
+    "company": {
+      "suppliers": {
+        "label": "Suppliers and Distributors",
+        "description": "Network of partners and collaborators"
+      },
+      "news": {
+        "label": "Port of Mahón Daily",
+        "description": "News and port updates"
+      }
+    },
+    "contracting": {
+      "conditionsRates": {
+        "label": "Terms and Rates",
+        "description": "Detailed terms, conditions, and service rates"
+      },
+      "yachtContracts": {
+        "label": "Yacht Sale Contracts",
+        "description": "Official documents and MYBA contracts for secure transactions"
+      }
+    },
+    "languageSelector": {
+      "spanish": "Español",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "address": "07701 Maó, Balearic Islands",
+    "country": "Spain",
+    "services_nauticos": {
+      "title": "NAUTICAL SERVICES",
+      "yacht_broker": "Yacht Broker",
+      "yacht_charter": "Yacht Charter",
+      "inspecciones": "Inspections and Appraisals",
+      "asesoria_nautica": "Nautical Consulting"
+    },
+    "services": {
+      "title": "SERVICES",
+      "compra_yates": "Yacht Purchase",
+      "venta_yates": "Yacht Sale",
+      "alquiler_yates": "Yacht Rental",
+      "valor_añadido": "Added Value Services"
+    },
+    "empresa": {
+      "title": "COMPANY",
+      "aboutUs": "About Us",
+      "ourTeam": "Our Team",
+      "contact": "Contact"
+    },
+    "legal": {
+      "politica_privacidad": "Privacy Policy",
+      "aviso_legal": "Legal Notice"
+    }
+  }
+}
