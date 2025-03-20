@@ -37,11 +37,11 @@ const teamMembers = [
     image: "/img/team/grigoris-psomas.jpg",
   },
   {
-    name: "Christine Giannouli",
+    name: "Laura Simons",
     role: "Freelance Yacht & Charter Broker",
-    location: "Greece",
-    email: "christine@menorcabrokers.com",
-    image: "/img/team/christine-giannouli.jpg",
+    location: "US - Miami",
+    email: "contact@menorcabrokers.com",
+    image: "/img/team/laura-simons.jpg",
   },
   {
     name: "Adriano Enrique Medina",
@@ -51,7 +51,7 @@ const teamMembers = [
     image: "/img/team/adriano-enrique.png",
   },
   {
-    name: "Gurkan Gurun",
+    name: "Gürkan Gurun",
     role: "Freelance Yacht & Charter Broker",
     location: "Turkey",
     email: "gurkan@menorcabrokers.com",
