@@ -9,6 +9,10 @@ export async function getStaticProps(context) {
     await import(`../public/locales/services/${context.locale}.json`)
   ).default;
 
+  const quoteModal = (
+    await import(`../public/locales/services/quote/${context.locale}.json`)
+  ).default;
+
   const layoutMessages = (
     await import(`../public/locales/layout/${context.locale}.json`)
   ).default;
@@ -22,6 +26,7 @@ export async function getStaticProps(context) {
       messages: {
         ...layoutMessages,
         ...homeMessages,
+        ...quoteModal,
         ...contactMessages,
       },
     },

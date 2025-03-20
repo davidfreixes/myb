@@ -1,0 +1,52 @@
+{
+  "quoteModal": {
+    "title": "Request Quote",
+    "description": "Complete the form to request a quote",
+    "fields": {
+      "vesselName": {
+        "label": "Vessel Name",
+        "placeholder": "Ex: Wega Barcelona"
+      },
+      "imoNumber": {
+        "label": "IMO Number",
+        "placeholder": "Ex: 9141118"
+      },
+      "flag": {
+        "label": "Flag",
+        "placeholder": "Ex: Germany"
+      },
+      "portOfDelivery": {
+        "label": "Port of Delivery",
+        "placeholder": "Ex: Tenerife"
+      },
+      "deliveryDate": {
+        "label": "Delivery Date/Window"
+      },
+      "productRequired": {
+        "label": "Product Required",
+        "placeholder": "Ex: 400tn VLSO / 30 tn MGO"
+      },
+      "deliveryMethod": {
+        "label": "Delivery Method",
+        "options": {
+          "barge": "BARGE",
+          "truck": "TRUCK",
+          "pipeline": "PIPELINE"
+        }
+      },
+      "consigneeAgent": {
+        "label": "Consignee/Agent Name and Contact",
+        "placeholder": "Ex: DELFIN LINES"
+      }
+    },
+    "submitButton": "Submit Request",
+    "success": {
+      "title": "Thank you for contacting us!",
+      "message": "Your quote request has been successfully submitted.",
+      "closeButton": "Close"
+    }
+  },
+  "quoteButton": {
+    "label": "Request Quote"
+  }
+}

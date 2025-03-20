@@ -14,10 +14,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { Trans } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
+import QuoteModal from "../modals/quote-modal";
 
 export default function BunkerSupplyPage() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const [quoteModalOpened, setQuoteModalOpened] = useState(false);
+
   const t = useTranslations("bunkerSupply");
+  const q = useTranslations("quoteModal");
 
   const marketIndices = [
     {
@@ -148,11 +152,11 @@ export default function BunkerSupplyPage() {
                 </Button>
                 <Button
                   unstyled
-                  onClick={() => setContactModalOpened(true)}
+                  onClick={() => setQuoteModalOpened(true)}
                   className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
-                    Solicitar Cotización
+                    {q("title")}
                   </div>
                 </Button>
               </div>
@@ -456,6 +460,10 @@ export default function BunkerSupplyPage() {
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
+      />
+      <QuoteModal
+        opened={quoteModalOpened}
+        onClose={() => setQuoteModalOpened(false)}
       />
     </div>
   );
