@@ -19,11 +19,16 @@ export async function getStaticProps(context) {
     await import(`../public/locales/layout/${context.locale}.json`)
   ).default;
 
+  const contactMessages = (
+    await import(`../public/locales/contact/${context.locale}.json`)
+  ).default;
+
   return {
     props: {
       messages: {
         ...layoutMessages,
         ...homeMessages,
+        ...contactMessages,
       },
     },
   };

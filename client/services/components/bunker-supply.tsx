@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   Ship,
   Users,
-  Wheat
+  Wheat,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -22,25 +22,19 @@ export default function BunkerSupplyPage() {
   const marketIndices = [
     {
       title: t("marketIndices.providers.shipAndBunker.title"),
-      description: t(
-        "marketIndices.providers.shipAndBunker.description"
-      ),
+      description: t("marketIndices.providers.shipAndBunker.description"),
       image: "/img/bunker-supply/ship-bunker.png",
       link: "https://shipandbunker.com/prices",
     },
     {
       title: t("marketIndices.providers.balticExchange.title"),
-      description: t(
-        "marketIndices.providers.balticExchange.description"
-      ),
+      description: t("marketIndices.providers.balticExchange.description"),
       image: "/img/bunker-supply/baltic-exchange.png",
       link: "https://www.balticexchange.com/en/index.html",
     },
     {
       title: t("marketIndices.providers.cepsaMoeve.title"),
-      description: t(
-        "marketIndices.providers.cepsaMoeve.description"
-      ),
+      description: t("marketIndices.providers.cepsaMoeve.description"),
       images: [
         {
           src: "/img/bunker-supply/cepsa.jpg",
@@ -55,9 +49,7 @@ export default function BunkerSupplyPage() {
     },
     {
       title: t("marketIndices.providers.stabiaOil.title"),
-      description: t(
-        "marketIndices.providers.stabiaOil.description"
-      ),
+      description: t("marketIndices.providers.stabiaOil.description"),
       image: "/img/bunker-supply/stabia-oil.jpg",
       link: "http://www.stabiaoil.com/",
     },
@@ -65,18 +57,14 @@ export default function BunkerSupplyPage() {
 
   const features1 = [
     {
-      title: t(
-        "experience.globalExperience.features.globalCoverage.title"
-      ),
+      title: t("experience.globalExperience.features.globalCoverage.title"),
       description: t(
         "experience.globalExperience.features.globalCoverage.description"
       ),
       icon: <Globe2 className="w-6 h-6 text-primary" />,
     },
     {
-      title: t(
-        "experience.globalExperience.features.service247.title"
-      ),
+      title: t("experience.globalExperience.features.service247.title"),
       description: t(
         "experience.globalExperience.features.service247.description"
       ),
@@ -86,18 +74,14 @@ export default function BunkerSupplyPage() {
 
   const features2 = [
     {
-      title: t(
-        "experience.expertKnowledge.features.expertTeam.title"
-      ),
+      title: t("experience.expertKnowledge.features.expertTeam.title"),
       description: t(
         "experience.expertKnowledge.features.expertTeam.description"
       ),
       icon: <Users className="w-6 h-6 text-primary" />,
     },
     {
-      title: t(
-        "experience.expertKnowledge.features.qualityGuarantee.title"
-      ),
+      title: t("experience.expertKnowledge.features.qualityGuarantee.title"),
       description: t(
         "experience.expertKnowledge.features.qualityGuarantee.description"
       ),
@@ -107,9 +91,7 @@ export default function BunkerSupplyPage() {
 
   const services = [
     {
-      title: t(
-        "specializedServices.services.shipSalePurchase.title"
-      ),
+      title: t("specializedServices.services.shipSalePurchase.title"),
       description: t(
         "specializedServices.services.shipSalePurchase.description"
       ),
@@ -117,16 +99,12 @@ export default function BunkerSupplyPage() {
     },
     {
       title: t("specializedServices.services.dryBulk.title"),
-      description: t(
-        "specializedServices.services.dryBulk.description"
-      ),
+      description: t("specializedServices.services.dryBulk.description"),
       icon: <Wheat className="w-6 h-6 text-primary" />,
     },
     {
       title: t("specializedServices.services.liquidBulk.title"),
-      description: t(
-        "specializedServices.services.liquidBulk.description"
-      ),
+      description: t("specializedServices.services.liquidBulk.description"),
       icon: <BarChart2 className="w-6 h-6 text-primary" />,
     },
   ];
@@ -158,15 +136,26 @@ export default function BunkerSupplyPage() {
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
                 {t("hero.subtitle")}
               </h2>
-              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white max-w-4xl">
-                <Trans i18nKey="hero.subtitle2">
-                  Mediante nuestro partner{" "}
-                  <span className="text-primary">Stabia Oil</span> y{" "}
-                  <span className="text-primary">CEPSA</span>. Podemos
-                  subministrar todo tipo de combustible marino en la isla de
-                  Menorca.
-                </Trans>
-              </h2>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <Button
+                  unstyled
+                  onClick={() => setContactModalOpened(true)}
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    {t("dailyPosition.downloadButton")}
+                  </div>
+                </Button>
+                <Button
+                  unstyled
+                  onClick={() => setContactModalOpened(true)}
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    Solicitar Cotización
+                  </div>
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -203,19 +192,19 @@ export default function BunkerSupplyPage() {
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
               {t("dailyPosition.sectionTitle")}
             </h2>
-            <p className="text-base sm:text-lg text-gray-700">
+            {/* <p className="text-base sm:text-lg text-gray-700">
               {t("dailyPosition.description")}
-            </p>
+            </p> */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button
-                unstyled
-                onClick={() => setContactModalOpened(true)}
-                className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  {t("dailyPosition.downloadButton")}
-                </div>
-              </Button>
+              <p className="text-base sm:text-lg text-gray-700">
+                <Trans i18nKey="hero.subtitle2">
+                  Mediante nuestro partner{" "}
+                  <span className="text-primary">Stabia Oil</span> y{" "}
+                  <span className="text-primary">CEPSA</span>. Podemos
+                  subministrar todo tipo de combustible marino en la isla de
+                  Menorca.
+                </Trans>
+              </p>
               {/* <Button
                 unstyled
                 className="flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
