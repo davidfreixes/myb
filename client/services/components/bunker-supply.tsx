@@ -140,7 +140,7 @@ export default function BunkerSupplyPage() {
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
                 {t("hero.subtitle")}
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
                   unstyled
                   onClick={() => setContactModalOpened(true)}

@@ -64,11 +64,11 @@ export default function Hero() {
                   })}
                 </h2>
               </div>
-              <div className="sm:hidden mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+              <div className="sm:hidden mt-6 md:mt-8 flex flex-col sm:flex-row gap-4">
                 <Button
                   unstyled
                   onClick={scrollToServices}
-                  className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
+                  className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-md py-2 px-4"
                 >
                   {t("buttons.explore_services")}
                 </Button>
@@ -76,7 +76,7 @@ export default function Hero() {
                   component={Link}
                   href={`${NAVIGATION_LINKS.CONTACTO}`}
                   unstyled
-                  className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
+                  className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-base py-2 px-4"
                 >
                   {t("buttons.contact_us")}
                 </Button>
