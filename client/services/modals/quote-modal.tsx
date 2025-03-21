@@ -20,7 +20,7 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
     portOfDelivery: "",
     deliveryDate: "",
     productRequired: "",
-    deliveryMethod: "BARGE",
+    deliveryMethod: "",
     consigneeAgent: "",
   });
 
@@ -174,23 +174,15 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
                 >
                   {t("fields.deliveryMethod.label")}
                 </label>
-                <select
+                <input
                   id="deliveryMethod"
                   name="deliveryMethod"
                   value={formData.deliveryMethod}
                   onChange={handleChange}
+                  placeholder={t("fields.deliveryMethod.placeholder")}
+                  required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="BARGE">
-                    {t("fields.deliveryMethod.options.barge")}
-                  </option>
-                  <option value="TRUCK">
-                    {t("fields.deliveryMethod.options.truck")}
-                  </option>
-                  <option value="PIPELINE">
-                    {t("fields.deliveryMethod.options.pipeline")}
-                  </option>
-                </select>
+                />
               </div>
 
               <div className="space-y-2 md:col-span-2">

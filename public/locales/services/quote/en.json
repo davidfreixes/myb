@@ -5,38 +5,34 @@
     "fields": {
       "vesselName": {
         "label": "Vessel Name",
-        "placeholder": "Ex: Wega Barcelona"
+        "placeholder": "Enter vessel name"
       },
       "imoNumber": {
         "label": "IMO Number",
-        "placeholder": "Ex: 9141118"
+        "placeholder": "Enter IMO number"
       },
       "flag": {
         "label": "Flag",
-        "placeholder": "Ex: Germany"
+        "placeholder": "Enter flag country"
       },
       "portOfDelivery": {
         "label": "Port of Delivery",
-        "placeholder": "Ex: Tenerife"
+        "placeholder": "Enter port of delivery"
       },
       "deliveryDate": {
         "label": "Delivery Date/Window"
       },
       "productRequired": {
         "label": "Product Required",
-        "placeholder": "Ex: 400tn VLSO / 30 tn MGO"
+        "placeholder": "Enter product and quantity required"
       },
       "deliveryMethod": {
         "label": "Delivery Method",
-        "options": {
-          "barge": "BARGE",
-          "truck": "TRUCK",
-          "pipeline": "PIPELINE"
-        }
+        "placeholder": "Enter delivery method"
       },
       "consigneeAgent": {
         "label": "Consignee/Agent Name and Contact",
-        "placeholder": "Ex: DELFIN LINES"
+        "placeholder": "Enter consignee name and contact"
       }
     },
     "submitButton": "Submit Request",
