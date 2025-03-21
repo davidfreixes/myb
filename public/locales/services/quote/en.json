@@ -30,9 +30,17 @@
         "label": "Delivery Method",
         "placeholder": "Enter delivery method"
       },
-      "consigneeAgent": {
-        "label": "Consignee/Agent Name and Contact",
-        "placeholder": "Enter consignee name and contact"
+      "consigneeName": {
+        "label": "Consignee/Agent Name",
+        "placeholder": "Enter consignee or agent name"
+      },
+      "contactEmail": {
+        "label": "Email",
+        "placeholder": "Enter contact email"
+      },
+      "contactPhone": {
+        "label": "Phone (Optional)",
+        "placeholder": "Enter phone number"
       }
     },
     "submitButton": "Submit Request",

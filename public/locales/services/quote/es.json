@@ -30,9 +30,17 @@
         "label": "Método de Entrega",
         "placeholder": "Introduzca el método de entrega"
       },
-      "consigneeAgent": {
-        "label": "Nombre y Contacto del Consignatario/Agente",
-        "placeholder": "Introduzca el nombre y contacto del consignatario"
+      "consigneeName": {
+        "label": "Nombre del Consignatario/Agente",
+        "placeholder": "Introduzca el nombre del consignatario o agente"
+      },
+      "contactEmail": {
+        "label": "Correo Electrónico",
+        "placeholder": "Introduzca el correo electrónico"
+      },
+      "contactPhone": {
+        "label": "Teléfono (Opcional)",
+        "placeholder": "Introduzca el teléfono"
       }
     },
     "submitButton": "Enviar Solicitud",

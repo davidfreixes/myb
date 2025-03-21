@@ -21,7 +21,9 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
     deliveryDate: "",
     productRequired: "",
     deliveryMethod: "",
-    consigneeAgent: "",
+    consigneeName: "",
+    contactEmail: "",
+    contactPhone: "",
   });
 
   const handleChange = (
@@ -187,18 +189,55 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
 
               <div className="space-y-2 md:col-span-2">
                 <label
-                  htmlFor="consigneeAgent"
+                  htmlFor="consigneeName"
                   className="block text-sm font-medium"
                 >
-                  {t("fields.consigneeAgent.label")}
+                  {t("fields.consigneeName.label")}
                 </label>
                 <input
-                  id="consigneeAgent"
-                  name="consigneeAgent"
-                  value={formData.consigneeAgent}
+                  id="consigneeName"
+                  name="consigneeName"
+                  value={formData.consigneeName}
                   onChange={handleChange}
-                  placeholder={t("fields.consigneeAgent.placeholder")}
+                  placeholder={t("fields.consigneeName.placeholder")}
                   required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="contactEmail"
+                  className="block text-sm font-medium"
+                >
+                  {t("fields.contactEmail.label")}
+                </label>
+                <input
+                  id="contactEmail"
+                  name="contactEmail"
+                  type="email"
+                  value={formData.contactEmail}
+                  onChange={handleChange}
+                  placeholder={t("fields.contactEmail.placeholder")}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="contactPhone"
+                  className="block text-sm font-medium"
+                >
+                  {t("fields.contactPhone.label")}
+                </label>
+                <input
+                  id="contactPhone"
+                  name="contactPhone"
+                  type="tel"
+                  value={formData.contactPhone}
+                  onChange={handleChange}
+                  placeholder={t("fields.contactPhone.placeholder")}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -208,7 +247,7 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
               <Button
                 unstyled
                 type="submit"
-                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                className="mt-4 w-full sm:w-auto bg-primary hover:bg-transparent hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
               >
                 {t("submitButton")}
               </Button>
@@ -233,10 +272,9 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
             {t("success.message")}
           </Text>
           <Button
-            unstyled
             onClick={closeSuccessModal}
             fullWidth
-            className="mt-4 w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white"
           >
             {t("success.closeButton")}
           </Button>
