@@ -1,99 +1,56 @@
 {
-  "header": {
-    "navigation": {
-      "home": "INICI",
-      "services": "SERVEIS",
-      "company": "EMPRESA",
-      "contracting": "CONTRACTACIÓ",
-      "aboutUs": "QUI SOM",
-      "contact": "CONTACTE"
-    },
-    "languages": {
-      "spanish": "Espanyol",
-      "english": "Anglès",
-      "catalan": "Català"
-    },
-    "services": {
-      "yachtBroker": {
-        "label": "Yacht Broker",
-        "description": "Compra i venda d'embarcacions"
+  "quoteModal": {
+    "title": "Sol·licitar Pressupost",
+    "description": "Completa el formulari per sol·licitar un pressupost",
+    "fields": {
+      "vesselName": {
+        "label": "Nom del Vaixell",
+        "placeholder": "Introduïu el nom del vaixell"
       },
-      "yachtCharter": {
-        "label": "Yacht Charter",
-        "description": "Lloguer d'embarcacions"
+      "imoNumber": {
+        "label": "Número IMO",
+        "placeholder": "Introduïu el número IMO"
       },
-      "bunkerSupply": {
-        "label": "Bunker Supply",
-        "description": "Serveis d'intermediació"
+      "flag": {
+        "label": "Bandera",
+        "placeholder": "Introduïu el país de bandera"
       },
-      "inspections": {
-        "label": "Inspeccions i Taxacions",
-        "description": "Avaluació professional d'embarcacions"
+      "portOfDelivery": {
+        "label": "Port d'Entrega",
+        "placeholder": "Introduïu el port d'entrega"
       },
-      "logistics": {
-        "label": "Càrrega & Logística",
-        "description": "Serveis de transport i logística"
+      "deliveryDate": {
+        "label": "Data/Finestra d'Entrega"
       },
-      "nauticalAdvisory": {
-        "label": "Assessoria Nàutica",
-        "description": "Consultoria especialitzada"
+      "productRequired": {
+        "label": "Producte Requerit",
+        "placeholder": "Introduïu el producte i quantitat requerida"
       },
-      "valueAddedServices": {
-        "label": "Serveis de Valor Afegit",
-        "description": "Serveis complementaris"
+      "deliveryMethod": {
+        "label": "Mètode d'Entrega",
+        "placeholder": "Introduïu el mètode d'entrega"
+      },
+      "consigneeName": {
+        "label": "Nom del Consignatari/Agent",
+        "placeholder": "Introduïu el nom del consignatari o agent"
+      },
+      "contactEmail": {
+        "label": "Correu Electrònic",
+        "placeholder": "Introduïu el correu electrònic"
+      },
+      "contactPhone": {
+        "label": "Telèfon (Opcional)",
+        "placeholder": "Introduïu el telèfon"
       }
     },
-    "company": {
-      "suppliers": {
-        "label": "Proveïdors i distribuïdors",
-        "description": "Xarxa de col·laboradors i partners"
-      },
-      "news": {
-        "label": "Diari del Port de Maó",
-        "description": "Notícies i actualitat portuària"
-      }
-    },
-    "contracting": {
-      "conditionsRates": {
-        "label": "Condicions i Tarifes",
-        "description": "Termes, condicions i tarifes detallades dels nostres serveis"
-      },
-      "yachtContracts": {
-        "label": "Contractes de Compravenda de Iots",
-        "description": "Documentació oficial i contractes MYBA per a transaccions segures"
-      }
-    },
-    "languageSelector": {
-      "spanish": "Espanyol",
-      "english": "English"
+    "submitButton": "Enviar Sol·licitud",
+    "success": {
+      "title": "Gràcies per contactar!",
+      "message": "La teva sol·licitud de pressupost ha estat enviada correctament.",
+      "closeButton": "Tancar"
     }
   },
-  "footer": {
-    "address": "07701 Maó, Illes Balears",
-    "country": "Espanya",
-    "services_nauticos": {
-      "title": "SERVEIS NÀUTICS",
-      "yacht_broker": "Yacht Broker",
-      "yacht_charter": "Yacht Charter",
-      "inspecciones": "Inspeccions i Taxacions",
-      "asesoria_nautica": "Assessoria Nàutica"
-    },
-    "services": {
-      "title": "SERVEIS",
-      "compra_yates": "Compra de Iots",
-      "venta_yates": "Venda de Iots",
-      "alquiler_yates": "Lloguer de Iots",
-      "valor_añadido": "Serveis de Valor Afegit"
-    },
-    "empresa": {
-      "title": "EMPRESA",
-      "aboutUs": "Sobre nosaltres",
-      "ourTeam": "El Nostre Equip",
-      "contact": "Contacte"
-    },
-    "legal": {
-      "politica_privacidad": "Política de privacitat",
-      "aviso_legal": "Avís legal"
-    }
+  "quoteButton": {
+    "label": "Sol·licitar Pressupost"
   }
 }
