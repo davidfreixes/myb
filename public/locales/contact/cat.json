@@ -1,0 +1,195 @@
+{
+  "contact": {
+    "hero": {
+      "title": "Contacte",
+      "subtitle": "Som aquí per ajudar-te. Tria com prefereixes contactar amb nosaltres.",
+      "button": "Coneix-nos!"
+    },
+    "contactForm": {
+      "title": "Formulari de Contacte",
+      "form": {
+        "labels": {
+          "name": "Nom",
+          "email": "Email",
+          "country": "País",
+          "phone": "Telèfon",
+          "message": "Missatge"
+        },
+        "placeholders": {
+          "name": "El teu nom complet",
+          "email": "tu@email.com",
+          "country": "Seleccionar",
+          "phone": "El teu número de telèfon",
+          "message": "En què podem ajudar-te?"
+        },
+        "countries": {
+          "ES": "Espanya (+34)",
+          "UK": "Regne Unit (+44)",
+          "DE": "Alemanya (+49)",
+          "FR": "França (+33)"
+        },
+        "validation": {
+          "name": {
+            "required": "El nom és obligatori",
+            "minLength": "El nom ha de tenir almenys 2 caràcters"
+          },
+          "email": {
+            "required": "L'email és obligatori",
+            "invalid": "Si us plau, introdueix un email vàlid"
+          },
+          "phone": {
+            "required": "El telèfon és obligatori",
+            "invalid": "Si us plau, introdueix un número de telèfon vàlid"
+          },
+          "message": {
+            "required": "El missatge és obligatori",
+            "minLength": "El missatge ha de tenir almenys 4 caràcters"
+          }
+        },
+        "submit": {
+          "button": "Enviar Missatge",
+          "sending": "Enviant...",
+          "success": "Missatge enviat correctament! Ens posarem en contacte amb tu aviat.",
+          "error": "Ha ocorregut un error en enviar el missatge. Si us plau, intenta-ho de nou."
+        }
+      }
+    },
+    "appointment": {
+      "title": "Reserva una Cita",
+      "steps": {
+        "service": "Servei",
+        "datetime": "Data & Hora",
+        "details": "Detalls bàsics",
+        "summary": "Resum"
+      },
+      "categories": {
+        "title": "Selecciona la categoria",
+        "options": {
+          "all": "TOT",
+          "yachtBroker": "Yacht Broker",
+          "yachtCharter": "Yacht Charter",
+          "inspections": "Inspeccions i Taxacions",
+          "consulting": "Consultoria Nàutica",
+          "valueAdded": "Serveis de Valor Afegit",
+          "shipBroker": "Ship Sale & Purchase Broker",
+          "charterBroker": "Charter Broker"
+        }
+      },
+      "services": {
+        "title": "Selecciona el servei",
+        "duration": "Durada",
+        "price": "Preu",
+        "options": {
+          "meeting": {
+            "title": "Reunió Presencial",
+            "duration": "30 min"
+          },
+          "call": {
+            "title": "Trucada de presentació",
+            "duration": "30 min"
+          },
+          "marketAnalysis": {
+            "title": "Anàlisi de mercat de compravenda",
+            "duration": "1h",
+            "price": "€50.00"
+          },
+          "yachtSale": {
+            "title": "Oferta de venda d'un Iot o embarcació",
+            "duration": "30m"
+          },
+          "yachtPurchase": {
+            "title": "Compra de Iot o embarcació",
+            "duration": "30m"
+          },
+          "charterRequest": {
+            "title": "Sol·licitud de charter",
+            "duration": "30m"
+          },
+          "basicValuation": {
+            "title": "Taxació bàsica",
+            "duration": "2h",
+            "price": "€300.00"
+          },
+          "nauticalConsulting": {
+            "title": "Consultoria nàutica",
+            "duration": "1h"
+          },
+          "valueAddedServices": {
+            "title": "Sol·licitud de Serveis de Valor Afegit",
+            "duration": "30m"
+          },
+          "shipSalePurchase": {
+            "title": "Ship Sale & Purchase analysis and service request",
+            "duration": "1h"
+          },
+          "charterService": {
+            "title": "Charter service",
+            "duration": "30m"
+          }
+        }
+      },
+      "datetime": {
+        "date": {
+          "label": "Data"
+        },
+        "time": {
+          "label": "Hora",
+          "slots": {
+            "slot1": "13:15 - 14:15",
+            "slot2": "14:15 - 15:15",
+            "slot3": "15:15 - 16:15"
+          }
+        }
+      },
+      "contactDetails": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "El teu nom complet"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "tu@email.com"
+        },
+        "phone": {
+          "label": "Telèfon",
+          "placeholder": "El teu número de telèfon"
+        }
+      },
+      "summary": {
+        "title": "Resum de la reserva",
+        "fields": {
+          "service": "Servei",
+          "date": "Data",
+          "time": "Hora",
+          "name": "Nom",
+          "email": "Email",
+          "phone": "Telèfon"
+        }
+      },
+      "buttons": {
+        "next": "Següent",
+        "previous": "Anterior",
+        "confirm": "Confirmar Reserva",
+        "processing": "Processant..."
+      },
+      "validation": {
+        "required": {
+          "category": "Selecciona una categoria",
+          "service": "Selecciona un servei",
+          "date": "Selecciona una data",
+          "time": "Selecciona una hora",
+          "name": "Introdueix el teu nom",
+          "email": "Introdueix el teu email",
+          "phone": "Introdueix el teu telèfon"
+        },
+        "invalid": {
+          "email": "Introdueix un email vàlid"
+        }
+      },
+      "messages": {
+        "success": "Cita reservada correctament!",
+        "error": "Ha ocorregut un error en processar la reserva. Si us plau, intenta-ho de nou."
+      }
+    }
+  }
+}

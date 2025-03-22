@@ -1,56 +1,56 @@
 {
   "quoteModal": {
-    "title": "Solicitar Cotización",
-    "description": "Complete el formulario para solicitar una cotización",
+    "title": "Sol·licitar Pressupost",
+    "description": "Completa el formulari per sol·licitar un pressupost",
     "fields": {
       "vesselName": {
-        "label": "Nombre del Buque",
-        "placeholder": "Introduzca el nombre del buque"
+        "label": "Nom del Vaixell",
+        "placeholder": "Introduïu el nom del vaixell"
       },
       "imoNumber": {
         "label": "Número IMO",
-        "placeholder": "Introduzca el número IMO"
+        "placeholder": "Introduïu el número IMO"
       },
       "flag": {
         "label": "Bandera",
-        "placeholder": "Introduzca el país de bandera"
+        "placeholder": "Introduïu el país de bandera"
       },
       "portOfDelivery": {
-        "label": "Puerto de Entrega",
-        "placeholder": "Introduzca el puerto de entrega"
+        "label": "Port d'Entrega",
+        "placeholder": "Introduïu el port d'entrega"
       },
       "deliveryDate": {
-        "label": "Fecha/Ventana de Entrega"
+        "label": "Data/Finestra d'Entrega"
       },
       "productRequired": {
-        "label": "Producto Requerido",
-        "placeholder": "Introduzca el producto y cantidad requerida"
+        "label": "Producte Requerit",
+        "placeholder": "Introduïu el producte i quantitat requerida"
       },
       "deliveryMethod": {
-        "label": "Método de Entrega",
-        "placeholder": "Introduzca el método de entrega"
+        "label": "Mètode d'Entrega",
+        "placeholder": "Introduïu el mètode d'entrega"
       },
       "consigneeName": {
-        "label": "Nombre del Consignatario/Agente",
-        "placeholder": "Introduzca el nombre del consignatario o agente"
+        "label": "Nom del Consignatari/Agent",
+        "placeholder": "Introduïu el nom del consignatari o agent"
       },
       "contactEmail": {
-        "label": "Correo Electrónico",
-        "placeholder": "Introduzca el correo electrónico"
+        "label": "Correu Electrònic",
+        "placeholder": "Introduïu el correu electrònic"
       },
       "contactPhone": {
-        "label": "Teléfono (Opcional)",
-        "placeholder": "Introduzca el teléfono"
+        "label": "Telèfon (Opcional)",
+        "placeholder": "Introduïu el telèfon"
       }
     },
-    "submitButton": "Enviar Solicitud",
+    "submitButton": "Enviar Sol·licitud",
     "success": {
-      "title": "¡Gracias por contactar!",
-      "message": "Tu solicitud de cotización ha sido enviada correctamente.",
-      "closeButton": "Cerrar"
+      "title": "Gràcies per contactar!",
+      "message": "La teva sol·licitud de pressupost ha estat enviada correctament.",
+      "closeButton": "Tancar"
     }
   },
   "quoteButton": {
-    "label": "Solicitar Cotización"
+    "label": "Sol·licitar Pressupost"
   }
 }

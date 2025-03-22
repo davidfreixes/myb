@@ -1,0 +1,99 @@
+{
+  "header": {
+    "navigation": {
+      "home": "INICI",
+      "services": "SERVEIS",
+      "company": "EMPRESA",
+      "contracting": "CONTRACTACIÓ",
+      "aboutUs": "QUI SOM",
+      "contact": "CONTACTE"
+    },
+    "languages": {
+      "spanish": "Espanyol",
+      "english": "Anglès",
+      "catalan": "Català"
+    },
+    "services": {
+      "yachtBroker": {
+        "label": "Yacht Broker",
+        "description": "Compra i venda d'embarcacions"
+      },
+      "yachtCharter": {
+        "label": "Yacht Charter",
+        "description": "Lloguer d'embarcacions"
+      },
+      "bunkerSupply": {
+        "label": "Bunker Supply",
+        "description": "Serveis d'intermediació"
+      },
+      "inspections": {
+        "label": "Inspeccions i Taxacions",
+        "description": "Avaluació professional d'embarcacions"
+      },
+      "logistics": {
+        "label": "Càrrega & Logística",
+        "description": "Serveis de transport i logística"
+      },
+      "nauticalAdvisory": {
+        "label": "Assessoria Nàutica",
+        "description": "Consultoria especialitzada"
+      },
+      "valueAddedServices": {
+        "label": "Serveis de Valor Afegit",
+        "description": "Serveis complementaris"
+      }
+    },
+    "company": {
+      "suppliers": {
+        "label": "Proveïdors i distribuïdors",
+        "description": "Xarxa de col·laboradors i partners"
+      },
+      "news": {
+        "label": "Diari del Port de Maó",
+        "description": "Notícies i actualitat portuària"
+      }
+    },
+    "contracting": {
+      "conditionsRates": {
+        "label": "Condicions i Tarifes",
+        "description": "Termes, condicions i tarifes detallades dels nostres serveis"
+      },
+      "yachtContracts": {
+        "label": "Contractes de Compravenda de Iots",
+        "description": "Documentació oficial i contractes MYBA per a transaccions segures"
+      }
+    },
+    "languageSelector": {
+      "spanish": "Espanyol",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "address": "07701 Maó, Illes Balears",
+    "country": "Espanya",
+    "services_nauticos": {
+      "title": "SERVEIS NÀUTICS",
+      "yacht_broker": "Yacht Broker",
+      "yacht_charter": "Yacht Charter",
+      "inspecciones": "Inspeccions i Taxacions",
+      "asesoria_nautica": "Assessoria Nàutica"
+    },
+    "services": {
+      "title": "SERVEIS",
+      "compra_yates": "Compra de Iots",
+      "venta_yates": "Venda de Iots",
+      "alquiler_yates": "Lloguer de Iots",
+      "valor_añadido": "Serveis de Valor Afegit"
+    },
+    "empresa": {
+      "title": "EMPRESA",
+      "aboutUs": "Sobre nosaltres",
+      "ourTeam": "El Nostre Equip",
+      "contact": "Contacte"
+    },
+    "legal": {
+      "politica_privacidad": "Política de privacitat",
+      "aviso_legal": "Avís legal"
+    }
+  }
+}

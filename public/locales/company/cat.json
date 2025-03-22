@@ -1,0 +1,507 @@
+{
+  "partners": {
+    "hero": {
+      "title": "Empreses Nàutiques a Menorca: Proveïdors i Distribuïdors",
+      "subtitle": "Aquí trobaràs els nostres socis i proveïdors de productes. Si vols ser un d'ells contacta'ns.",
+      "contactButton": "Contacta'ns"
+    },
+    "cta": {
+      "title": "Vols formar part de la nostra Xarxa de Proveïdors?",
+      "description": "Uneix-te a la nostra xarxa de socis i proveïdors nàutics a Menorca. Contacta'ns per explorar oportunitats de col·laboració.",
+      "button": "Sol·licitar Informació"
+    }
+  },
+  "portDaily": {
+    "hero": {
+      "title": "Diari del Port de Maó",
+      "subtitle": "El diari de l'activitat diària marítima al Port de Maó."
+    },
+    "news": {
+      "articles": [
+        {
+          "title": "L'APB treu per a 20 anys la gestió dels llocs d'amarratge del moll de Ponent al port de Maó"
+        },
+        {
+          "title": "Els amarratges del Moll de Ponent de Maó surten a concessió per 6 milions d'euros per a 20 anys"
+        }
+      ],
+      "readMore": "Llegir més"
+    },
+    "submitNews": {
+      "title": "Vols enviar-nos la teva notícia?",
+      "description": "Comparteix amb nosaltres les últimes novetats del sector marítim a Maó.",
+      "submitButton": "Enviar Notícia",
+      "contactButton": "Contactar"
+    }
+  },
+  "conditionsAndRates": {
+    "hero": {
+      "title": "Condicions de Contractació i Tarifes",
+      "subtitle": "Informació detallada sobre els nostres serveis i tarifes"
+    },
+    "tabs": {
+      "yachts": {
+        "label": "Àmbit de Iots",
+        "intro": "A Menorca Yacht Brokers, oferim una àmplia gamma de serveis relacionats amb la compra, venda i lloguer de iots, incloent inspeccions i taxacions marítimes. A continuació, detallem les nostres tarifes i condicions per a cadascun dels serveis que oferim."
+      },
+      "brokerage": {
+        "label": "Ship Brokerage i Charterer",
+        "intro": "A Menorca Brokers, seguim les normatives internacionals reconegudes per BIMCO (Baltic and International Maritime Council) per garantir que tots els nostres acords siguin clars, justos i transparents."
+      }
+    },
+    "yachts": {
+      "brokerage": {
+        "title": "1. Serveis de Brokeratge de Iots",
+        "saleAndPurchase": {
+          "title": "Compra i Venda de Iots:",
+          "points": [
+            "Comissió del 5% sobre el preu de venda.",
+            "Comissió mínima de €2,000 per a transaccions per sota de €40,000.",
+            "El pagament de la comissió es realitza al tancament de la transacció."
+          ]
+        },
+        "charter": {
+          "title": "Lloguer i Charter de Iots:",
+          "points": [
+            "Comissió del 10% sobre el preu de lloguer.",
+            "Condicions específiques per a lloguers de llarga durada (més de 30 dies)."
+          ]
+        }
+      },
+      "inspections": {
+        "title": "2. Inspeccions Marítimes",
+        "plans": [
+          {
+            "title": "Inspecció bàsica",
+            "price": "500€",
+            "description": "Iot fins a 12 metres",
+            "features": [
+              "Inspecció visual del casc",
+              "Revisió del motor",
+              "Sistema elèctric",
+              "Sistema de navegació"
+            ]
+          },
+          {
+            "title": "Inspecció avançada",
+            "price": "1,000€",
+            "description": "Iot fins a 24 metres",
+            "features": [
+              "Tot el d'inspecció bàsica",
+              "Sistemes de seguretat",
+              "Prova de navegació",
+              "Avaluació completa"
+            ]
+          },
+          {
+            "title": "Inspecció completa",
+            "price": "2,000€",
+            "description": "Iot superior a 24 metres",
+            "features": [
+              "Informe complet",
+              "Proves exhaustives",
+              "Sistemes hidràulics",
+              "Sistemes de propulsió"
+            ]
+          }
+        ]
+      },
+      "valuations": {
+        "title": "3. Taxacions Marítimes",
+        "plans": [
+          {
+            "title": "Taxació bàsica",
+            "price": "300€",
+            "description": "Iot fins a 12 metres"
+          },
+          {
+            "title": "Taxació avançada",
+            "price": "600€",
+            "description": "Iot fins a 24 metres"
+          },
+          {
+            "title": "Taxació completa",
+            "price": "1,200€",
+            "description": "Iot superior a 24 metres"
+          }
+        ]
+      },
+      "otherServices": {
+        "title": "4. Altres Serveis",
+        "services": [
+          {
+            "title": "Assessoria i Consultoria Nàutica",
+            "price": "150€",
+            "unit": "/ hora"
+          },
+          {
+            "title": "Gestió de documentació",
+            "price": "300€",
+            "unit": "per transacció"
+          }
+        ]
+      },
+      "conditions": {
+        "title": "5. Condicions Generals",
+        "items": [
+          {
+            "title": "Mètodes de pagament",
+            "description": "Acceptem pagaments per transferència bancària, targeta de crèdit o PayPal. Els pagaments s'han de realitzar abans del lliurament dels informes finals.",
+            "benefits": [
+              "Transferència bancària",
+              "Targeta de crèdit",
+              "PayPal"
+            ]
+          },
+          {
+            "title": "Política de Cancel·lacions",
+            "description": "En cas de cancel·lació amb menys de 24 hores d'antelació, es cobrarà el 50% de la tarifa acordada.",
+            "benefits": ["Flexibilitat", "Transparència", "Sense costos ocults"]
+          },
+          {
+            "title": "Validesa i Garanties",
+            "description": "Les tarifes estan subjectes a canvis anuals segons la revisió de preus del mercat.",
+            "benefits": [
+              "Preus competitius",
+              "Revisió anual",
+              "Garantia de servei"
+            ]
+          }
+        ]
+      }
+    },
+    "shipBrokerage": {
+      "commissions": {
+        "title": "1. Comissions per a Ship Broker",
+        "standard": {
+          "title": "Comissió Estàndard:",
+          "description": "La comissió habitual és de l'1.25% al 2.5% del noli brut, preu de venda del vaixell o valor del contracte de noliejament."
+        },
+        "payment": {
+          "title": "Pagament de la Comissió:",
+          "points": [
+            "Noliejament: Al cobrament del primer noli o inici del contracte.",
+            "Venda de Vaixells: Després de la signatura del MOA i lliurament del vaixell.",
+            "Renovacions i Extensions: Comissió addicional segons acord previ."
+          ]
+        }
+      },
+      "responsibilities": {
+        "title": "2. Responsabilitats del Ship Broker",
+        "intermediation": {
+          "title": "Intermediació",
+          "description": "Actuem com a intermediari imparcial entre les parts, facilitant la negociació."
+        },
+        "confidentiality": {
+          "title": "Confidencialitat",
+          "description": "Mantenim la confidencialitat de tota la informació sensible."
+        }
+      },
+      "chartererCommissions": {
+        "title": "3. Comissions per a Charterer",
+        "charter": {
+          "title": "Comissió de Noliejament:",
+          "description": "Varia entre 1% a 2% del valor total del noliejament acordat."
+        },
+        "additional": {
+          "title": "Compensació per Ingrés Addicional:",
+          "description": "Compensació addicional en cas de renovació o modificació del contracte."
+        }
+      },
+      "chartererResponsibilities": {
+        "title": "4. Responsabilitats del Charterer",
+        "negotiation": {
+          "title": "Negociació i Noliejament",
+          "description": "El Charterer s'encarrega de negociar les condicions del contracte i assegurar el compliment normatiu."
+        },
+        "compliance": {
+          "title": "Compliment de Contracte",
+          "description": "Garantir el compliment de les condicions establertes i gestionar possibles disputes."
+        }
+      },
+      "contractConditions": {
+        "title": "Condicions del Contracte",
+        "subtitle": "Aspectes fonamentals que regeixen els nostres acords comercials.",
+        "conditions": [
+          {
+            "title": "Durada del Contracte",
+            "description": "Vigent fins a la finalització de l'acord comercial, excepte un altre termini establert.",
+            "benefits": [
+              "Flexibilitat temporal",
+              "Adaptable a necessitats",
+              "Renovació automàtica opcional"
+            ]
+          },
+          {
+            "title": "Exclusivitat",
+            "description": "Pot establir-se segons els termes acordats en cada cas particular.",
+            "benefits": [
+              "Acords personalitzats",
+              "Termes negociables",
+              "Garantia de servei"
+            ]
+          },
+          {
+            "title": "Modificacions",
+            "description": "Qualsevol modificació ha de ser acordada per escrit entre les parts.",
+            "benefits": [
+              "Transparència total",
+              "Documentació formal",
+              "Seguretat jurídica"
+            ]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Tens alguna pregunta?",
+      "description": "El nostre equip està disponible per resoldre qualsevol dubte sobre les nostres condicions i tarifes.",
+      "button": "Contactar"
+    }
+  },
+  "purchaseAndSale": {
+    "hero": {
+      "title": "Contractes de Compravenda de Iots",
+      "subtitle": "Pàgina Informativa: Contractes MYBA a Menorca Brokers"
+    },
+    "introduction": {
+      "title": "Què és un Contracte MYBA?",
+      "paragraph1": "A Menorca Brokers, ens assegurem que cada transacció de iots es realitzi sota els més alts estàndards de la indústria. Per garantir transparència, seguretat i confiança, utilitzem els Contractes MYBA, una de les formes contractuals més reconegudes i acceptades en el món del lloguer i la venda de iots.",
+      "paragraph2": "El contracte MYBA (Mediterranean Yacht Brokers Association) és un document estàndard que regula els termes i condicions de les transaccions relacionades amb iots, com lloguers i vendes. Aquest contracte estableix de manera clara els drets i obligacions tant del propietari com del client, minimitzant riscos i possibles malentesos."
+    },
+    "benefits": {
+      "title": "Principals Beneficis",
+      "items": [
+        {
+          "title": "Claredat i transparència",
+          "description": "Els termes i condicions estan clarament definits."
+        },
+        {
+          "title": "Protecció legal",
+          "description": "Garanteix la protecció de totes les parts involucrades en la transacció."
+        },
+        {
+          "title": "Flexibilitat",
+          "description": "S'adapta a diverses necessitats, des de lloguers de curta durada fins a acords complets de compravenda."
+        },
+        {
+          "title": "Estàndards internacionals",
+          "description": "Reconegut globalment per brokers, operadors i propietaris de iots."
+        }
+      ]
+    },
+    "components": {
+      "title": "Components del Contracte MYBA",
+      "items": [
+        {
+          "title": "Detalls del iot",
+          "description": "Inclou especificacions com nom, eslora, tripulació i equipament."
+        },
+        {
+          "title": "Durada i termes de l'acord",
+          "description": "Dates específiques de lloguer o condicions de compravenda."
+        },
+        {
+          "title": "Política de cancel·lacions",
+          "description": "Estableix les condicions en cas de força major o cancel·lació."
+        },
+        {
+          "title": "Costos i dipòsits",
+          "description": "Defineix els preus, tarifes addicionals i pagaments inicials."
+        },
+        {
+          "title": "Termes d'ús",
+          "description": "Descriu com s'utilitzarà el iot i les responsabilitats del client."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Per què triar Menorca Brokers",
+      "paragraph1": "La nostra experiència en el sector ens permet assessorar-te en cada pas del procés, garantint que el teu contracte MYBA estigui adaptat a les teves necessitats específiques. Ja sigui que busquis llogar o adquirir un iot, treballem perquè gaudeixis d'una experiència sense preocupacions.",
+      "paragraph2": "Contacta amb nosaltres per a més informació sobre com els contractes MYBA poden donar suport a la teva propera transacció nàutica."
+    },
+    "cta": {
+      "title": "Interessat en els nostres serveis?",
+      "description": "Contacta'ns per descobrir com podem ajudar-te a trobar el iot perfecte per a les teves necessitats",
+      "button": "Contactar ara"
+    }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "Qui Som a Menorca Brokers",
+      "subtitle": "Estem preparats per oferir-te la millor assessoria i garantir una experiència de compra exitosa.",
+      "button": "Coneix-nos!"
+    },
+    "team": {
+      "title": "El nostre equip",
+      "description": "El nostre equip està format per professionals altament qualificats i motivats, tots ells experts en el seu camp. Amb molts anys d'experiència en la indústria, tenen l'experiència per proporcionar serveis complets i de primera classe als nostres clients.",
+      "members": {
+        "andreuMartinez": {
+          "name": "Andreu Martinez",
+          "role": "Yacht Broker & Charterer",
+          "location": "Espanya",
+          "email": "info@menorcabrokers.com",
+          "bio": [
+            "Andreu Martínez Parera és un broker amb una sòlida formació acadèmica en l'àmbit marítim.",
+            "Format a l'Institut Marítim Espanyol i a l'Institute of Chartered Shipbrokers de Londres. A més, compta amb una carrera en Nàutica, havent obtingut el seu títol en Ciències Nàutiques amb especialització en Transport Marítim. La seva educació es complementa amb un Màster en Gestió del Transport Marítim i una formació de Postgrau en Logística i Supply Chain, el que li ha permès desenvolupar una visió integral del sector.",
+            "Des de 2017, Andreu ha acumulat una experiència significativa en el món marítim i logístic. La seva carrera va començar a APM Terminals, part del Grup MAERSK, on va ser membre del departament d'operacions a Barcelona. En aquesta etapa, es va involucrar activament en l'optimització de processos logístics i la gestió d'operacions portuàries, el que li va brindar una comprensió profunda de la cadena de subministrament global.",
+            "El 2019, Andreu va assumir la responsabilitat de la gestió d'operacions a la naviliera CMA CGM a Marsella. Durant més de 4 anys i mig, va optimitzar l'eficiència de les operacions així com la coordinació de les activitats de càrrega resultant en grans resultats de productivitat i stowage.",
+            "Simultàniament a la seva carrera professional, Andreu va compartir la seva experiència i coneixements com a professor universitari a l'àrea de Negocis Marítims de la Universitat Politècnica de Catalunya. Al llarg de la seva trajectòria, va formar noves generacions de professionals del sector, transmetent els seus coneixements sobre logística i operacions marítimes.",
+            "Actualment, Andreu dirigeix Menorca Yacht Brokers, un projecte que ofereix una àmplia gamma de serveis de ship brokerage, charter i assessoria nàutica. Gràcies a la seva formació acadèmica i la seva experiència pràctica, Andreu ha desenvolupat una comprensió profunda del sector marítim i les seves necessitats específiques."
+          ]
+        },
+        "danielOrtega": {
+          "name": "Daniel Ortega",
+          "role": "Freelance Yacht Broker & Event Planning",
+          "location": "Bèlgica",
+          "email": "daniel@menorcabrokers.com"
+        },
+        "grigoris": {
+          "name": "Grigoris Psomas",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Països Baixos",
+          "email": "grigoris@menorcabrokers.com"
+        },
+        "christine": {
+          "name": "Christine Giannouli",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Grècia",
+          "email": "christine@menorcabrokers.com"
+        },
+        "david": {
+          "name": "David Freixes",
+          "role": "IT Developer & Co-Owner",
+          "location": "Espanya"
+        }
+      },
+      "contactButton": "Contacta'm"
+    },
+    "contact": {
+      "title": "Preparat Per Començar El Teu Viatge?",
+      "subtitle": "Contacta'ns Avui",
+      "description": "Descobreix com Menorca Brokers pot ajudar-te a assolir els teus objectius en la compravenda d'embarcacions. El nostre equip està disponible per respondre a les teves preguntes i oferir-te una consulta personalitzada.",
+      "button": "Contacta'ns"
+    }
+  },
+  "legalNotice": {
+    "hero": {
+      "title": "Avís Legal"
+    },
+    "sections": {
+      "identification": {
+        "title": "1. Identificació del titular del lloc web",
+        "content": [
+          "El present lloc web, MenorcaBrokers.com.",
+          "Menorca Yacht Brokers s'identifica com la marca comercial de www.menorcabrokers.com",
+          "Domicili social: Menorca, Illes Balears, Espanya."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "2. Propietat intel·lectual i industrial",
+        "content": [
+          "Tots els continguts del lloc web, incloent textos, imatges, gràfics, logotips, icones, programari i altres elements d'aquest lloc, són propietat de Menorca Brokers o dels seus llicenciants, i estan protegits per les lleis de propietat intel·lectual i industrial. Queda prohibida la reproducció, distribució, modificació, transformació, comunicació pública o qualsevol altra activitat similar sense la prèvia autorització expressa de Menorca Brokers.",
+          "La propietat del domini www.menorcabrokers.com així com de tots els seus derivats i de la pròpia pàgina web són de:",
+          "Andreu Martínez Parera.",
+          "Contactar mitjançant els canals oficials per a més informació."
+        ]
+      },
+      "usage": {
+        "title": "3. Ús del lloc web",
+        "content": "L'usuari es compromet a utilitzar aquest lloc web conforme a la llei, el present Avís Legal i les condicions que en el seu cas s'estableixin per a cada servei. Així mateix, l'usuari es compromet a no utilitzar el lloc web per a fins il·lícits o lesius dels drets i interessos de Menorca Brokers o de tercers."
+      },
+      "liability": {
+        "title": "4. Exoneració de responsabilitat",
+        "content": "Menorca Brokers no es fa responsable dels danys derivats de l'ús del lloc web o dels seus continguts. Així mateix, no garanteix la disponibilitat contínua dels serveis del lloc web, podent suspendre temporalment l'accés per tasques de manteniment o per causes alienes al seu control."
+      },
+      "privacy": {
+        "title": "5. Política de privacitat",
+        "content": "La informació personal que es rebi a través d'aquest lloc web serà tractada conforme a la nostra Política de Privacitat, la qual està disponible a la pàgina web."
+      },
+      "links": {
+        "title": "6. Enllaços a altres llocs web",
+        "content": "Aquest lloc web pot contenir enllaços a altres llocs externs. Menorca Brokers S.L. no es responsabilitza dels continguts, polítiques de privacitat o pràctiques d'altres llocs web."
+      },
+      "jurisdiction": {
+        "title": "7. Llei aplicable i jurisdicció",
+        "content": "La relació entre Menorca Brokers i l'usuari es regirà per la normativa espanyola. En cas de disputa, les parts se sotmetran als tribunals competents de Menorca, Illes Balears, Espanya."
+      }
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Política de Privacitat"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "1. Informació general",
+        "content": "A Menorca Brokers S.L., amb domicili a C/ Ramón y Cajal, 45, 07760, Menorca, Illes Balears, Espanya, som responsables del tractament de les dades personals dels nostres usuaris, conforme a la normativa vigent sobre protecció de dades personals, especialment el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 d'abril de 2016, relatiu a la protecció de les persones físiques pel que fa al tractament de dades personals i a la lliure circulació d'aquestes dades (RGPD)."
+      },
+      "personalData": {
+        "title": "2. Dades personals que recollim",
+        "intro": "Recollim els següents tipus de dades personals quan els usuaris interactuen amb el nostre lloc web:",
+        "items": [
+          "Dades identificatives (nom, cognoms, correu electrònic, telèfon, adreça).",
+          "Dades relacionades amb l'activitat comercial i transaccions.",
+          "Informació relacionada amb la navegació web (adreça IP, cookies, etc.)."
+        ]
+      },
+      "purposes": {
+        "title": "3. Finalitats del tractament",
+        "intro": "Les dades personals que recollim s'utilitzaran per a les següents finalitats:",
+        "items": [
+          "Gestionar els serveis oferts a través del nostre lloc web.",
+          "Respondre a consultes i sol·licituds d'informació.",
+          "Enviar comunicacions comercials relacionades amb els nostres serveis (si l'usuari ha donat el seu consentiment per a això).",
+          "Realitzar anàlisis estadístiques i millorar l'experiència de navegació del lloc web.",
+          "Complir amb les obligacions legals i fiscals."
+        ]
+      },
+      "legalBasis": {
+        "title": "4. Base legal per al tractament",
+        "intro": "La base legal per al tractament de les dades personals és:",
+        "items": [
+          "El consentiment de l'usuari, en els casos en què sigui necessari.",
+          "L'execució d'un contracte o mesures precontractuals, en el cas que l'usuari hagi sol·licitat algun servei.",
+          "El compliment d'una obligació legal per part de Menorca Brokers S.L.."
+        ]
+      },
+      "dataRecipients": {
+        "title": "5. Destinataris de les dades",
+        "content": "Menorca Brokers S.L. no cedirà les dades personals a tercers, excepte en els casos en què sigui necessari per complir amb la llei, o si l'usuari ha donat el seu consentiment per a això. No obstant això, les dades podran ser compartides amb proveïdors de serveis que ens ajuden a operar el nostre negoci, com proveïdors d'allotjament web o serveis de correu electrònic."
+      },
+      "internationalTransfers": {
+        "title": "6. Transferències internacionals de dades",
+        "content": "En cas que sigui necessari, les dades personals poden ser transferides a països fora de l'Espai Econòmic Europeu (EEE), en aquest cas es garantiran les mesures de protecció adequades conforme a la legislació aplicable."
+      },
+      "userRights": {
+        "title": "7. Drets dels usuaris",
+        "intro": "Els usuaris tenen dret a:",
+        "items": [
+          "Accedir a les seves dades personals.",
+          "Rectificar les seves dades si són incorrectes o incompletes.",
+          "Suprimir les seves dades personals quan ja no siguin necessàries per a les finalitats per a les quals van ser recollides.",
+          "Limitar el tractament de les seves dades en determinades circumstàncies.",
+          "Oposar-se al tractament de les seves dades per motius relacionats amb la seva situació particular.",
+          "Sol·licitar la portabilitat de les seves dades en un format estructurat i d'ús comú."
+        ],
+        "contact": "Per exercir aquests drets, l'usuari pot posar-se en contacte amb nosaltres a través del correu electrònic."
+      },
+      "dataRetention": {
+        "title": "8. Conservació de les dades",
+        "content": "Les dades personals seran conservades durant el temps necessari per complir amb les finalitats per a les quals van ser recollides i conforme als terminis establerts per la legislació vigent."
+      },
+      "dataSecurity": {
+        "title": "9. Seguretat de les dades",
+        "content": "Menorca Brokers S.L. implementa mesures de seguretat tècniques i organitzatives per protegir les dades personals davant d'accessos no autoritzats, alteracions, pèrdues o destrucció d'aquestes."
+      },
+      "policyChanges": {
+        "title": "10. Canvis en la Política de Privacitat",
+        "content": "Ens reservem el dret a modificar aquesta Política de Privacitat en qualsevol moment, sent qualsevol canvi publicat en aquest lloc web. Recomanem revisar aquesta política periòdicament per estar informat sobre com protegim les teves dades."
+      },
+      "contact": {
+        "title": "11. Contacte",
+        "content": "Si tens algun dubte sobre la nostra Política de Privacitat o sobre el tractament de les teves dades personals, pots contactar-nos."
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   i18n: {
-    locales: ['es', 'en'],
+    locales: ['es', 'en', 'cat'],
     defaultLocale: 'es',
   },
 };

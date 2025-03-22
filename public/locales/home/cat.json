@@ -1,0 +1,180 @@
+{
+  "mainPage": {
+    "hero": {
+      "title": "Benvingut a Menorca Yacht Brokers",
+      "subtitle": {
+        "part1": "El teu Broker de Iots de confiança",
+        "part2": "<p>Compra</p>, <p> ven</p> o <p> lloga</p> el teu Iot amb Menorca Yacht Brokers"
+      },
+      "description": {
+        "part1": "A Menorca Yacht Brokers, t'oferim solucions completes per a la compravenda de iots a Menorca, charters, gestió de càrregues i assessoria nàutica.",
+        "part2": "Estem preparats per guiar-te en cada pas del procés amb professionalisme i dedicació."
+      },
+      "buttons": {
+        "explore_services": "Explora els Nostres Serveis",
+        "contact_us": "Contactar"
+      }
+    },
+    "servicesSection": {
+      "header": {
+        "title": "Els Nostres Serveis",
+        "description": "Descobreix la nostra àmplia gamma de serveis nàutics professionals"
+      },
+      "services": [
+        {
+          "title": "Yacht Broker",
+          "description": {
+            "parte1": "T'ajudem a trobar el millor Iot per a tu. Segons els teus gustos, et donarem les opcions més possibles de compra de Iots.",
+            "parte2": "Iots de nova construcció o de segona mà. Les dues opcions són bones i t'ajudem a descobrir-les."
+          }
+        },
+        {
+          "title": "Yacht Charter",
+          "description": {
+            "parte1": "Busques passar una setmana per les Balears?",
+            "parte2": "Contacta'ns i utilitzant tots els recursos al nostre abast podem organitzar-ho tot des de l'aeroport fins a la marxa de les teves vacances. Digues-nos què necessites i trobarem un vaixell (amb patró si cal) perquè les teves vacances siguin perfectes."
+          }
+        },
+        {
+          "title": "Bunker Supply",
+          "description": {
+            "parte1": "Oferim serveis de Ship Broker i Charterer per a subministraments de combustible marí.",
+            "parte2": "Consulta el nostre informe diari per obtenir informació actualitzada sobre preus i disponibilitat, i contacta'ns per gestionar les teves necessitats de búnquer."
+          }
+        },
+        {
+          "title": "Inspeccions i Taxacions de Iots",
+          "description": "Realitzem inspeccions de Iots prèvies a Ports State Control, vendes o proves de mar. També realitzem taxacions prèvies a compravendes per assegurar el valor de l'embarcació o vaixell."
+        },
+        {
+          "title": "Gestió de Càrrega i Logística",
+          "description": "En fusió amb On Line Traders & Shipping, gestionem càrregues amb les empreses de l'illa amb la finalitat d'ajudar i optimitzar els processos."
+        },
+        {
+          "title": "Assessoria Nàutica",
+          "description": "Gestió de documentació, matriculacions o dubtes. Els nostres assessors són aquí per ajudar qualsevol dubte o gestió del sector."
+        },
+        {
+          "title": "Serveis de Valor Afegit",
+          "description": "A part de tots els serveis, podem afegir recollides a l'aeroport o aeròdrom, al port o desplaçaments. També excursions, visites sofisticades o rutes per l'illa segons el gust del client."
+        }
+      ],
+      "button": "Accedeix al servei"
+    },
+    "aboutVideoSection": {
+      "title": "La Teva Consultora de Confiança",
+      "description": "A Menorca Brokers, ens dediquem a facilitar la compravenda de iots i vaixells mitjançant un servei de brokerage innovador i fiable. El nostre equip professional està preparat per oferir-te la millor assessoria i garantir una experiència de compra exitosa."
+    },
+    "featuresSection": {
+      "features": [
+        {
+          "title": "Navegant el teu èxit a Menorca",
+          "description": "Menorca Yacht Brokers no només se centra en connectar els seus clients amb oportunitats de qualitat en la compra, venda i gestió de iots, sinó que també es compromet a oferir un servei integral que destaca l'essència única de l'illa. L'empresa s'ha guanyat una reputació pel seu coneixement profund del mercat menorquí, permetent als seus clients trobar embarcacions que s'ajustin perfectament a les seves necessitats i gaudir d'una experiència de navegació excepcional.",
+          "imageAlt": "Navegar Menorca"
+        },
+        {
+          "title": "Connectant oportunitats al Mediterrani",
+          "description": "Un altre dels lemes que defineix a Menorca Yacht Brokers i reflecteix la seva missió d'unir persones i empreses amb una mateixa passió pel mar. Des de la primera consulta fins al tancament de cada operació, MenorcaBrokers.com acompanya els seus clients en cada pas, oferint un servei de qualitat amb un enfocament en el detall i la satisfacció total del client.",
+          "imageAlt": "Mediterrani"
+        },
+        {
+          "title": "Experiència local, abast global",
+          "description": "En el mercat de serveis nàutics al Mediterrani, Menorca Yacht Brokers s'està destacant com una empresa pionera amb una combinació única d'<p>Experiència local, abast global</p>. Aquesta innovadora companyia menorquina ha aconseguit establir una presència significativa en el sector.",
+          "imageAlt": "Gestió Marítima"
+        }
+      ]
+    },
+    "articlePerfectYacht": {
+      "hero": {
+        "alt": "Iot navegant a la posta de sol",
+        "title": "Com triar el iot perfecte: el somni de navegar fet realitat"
+      },
+      "author": {
+        "label": "Escrit per",
+        "name": "Martin Scholz"
+      },
+      "content": {
+        "intro": "La brisa marina acaricia el teu rostre mentre observes l'horitzó interminable, envoltat de blau i de calma. Tenir un iot propi és molt més que una qüestió de luxe: és un somni de llibertat, d'aventures compartides i d'una relació íntima amb el mar...",
+        "image1": {
+          "alt": "Iot en una cala de Menorca"
+        },
+        "section1": {
+          "title": "Una decisió personal",
+          "text": "Triar un iot és, abans de tot, una decisió profundament personal. Cada navegant té la seva pròpia visió del que significa solcar els mars: alguns busquen velocitat i adrenalina, mentre que altres anhelen la tranquil·litat de llargues jornades fondejats en cales amagades..."
+        },
+        "section2": {
+          "title": "Infinites opcions",
+          "text": "En el món dels iots, les opcions són infinites. Des dels estilitzats iots a motor que evoquen velocitat i sofisticació fins als clàssics velers que xiuxiuegen històries d'exploradors i navegants intrèpids, cada embarcació té la seva pròpia ànima..."
+        },
+        "image2": {
+          "alt": "Interior d'un iot de luxe"
+        },
+        "section3": {
+          "title": "Manteniment i cures",
+          "text": "Un aspecte clau en comprar un iot és considerar el seu manteniment. La vida al mar és tan meravellosa com desafiant, i cada embarcació requereix una cura constant per mantenir-se en òptimes condicions..."
+        },
+        "section4": {
+          "title": "La dimensió cultural de Menorca",
+          "text": "A Menorca, on el mar és part essencial de la identitat local, la selecció d'un iot adquireix una dimensió cultural. L'illa, amb les seves cales idíl·liques i les seves aigües cristal·lines, és l'escenari perfecte per gaudir d'una embarcació pròpia..."
+        },
+        "image3": {
+          "alt": "Vista aèria d'una cala de Menorca"
+        },
+        "section5": {
+          "title": "La importància de provar",
+          "text": "És també fonamental provar abans de decidir. Sovint, els compradors primerencs subestimen la importància d'experimentar el iot en acció."
+        },
+        "section6": {
+          "title": "Aprenentatge continu",
+          "text": "El moment de la compra és també una oportunitat per aprendre. Durant el procés, cada conversa amb un broker és una lliçó sobre tècnica, navegació i estil de vida..."
+        },
+        "section7": {
+          "title": "La dimensió emocional",
+          "text": "Comprar un iot és una inversió en somnis i en records futurs. És imaginar-se navegant a la posta de sol, compartint rialles amb amics o gaudint de la soledat del mar obert..."
+        },
+        "conclusion": "Triar el iot perfecte és un procés que combina raó i passió, pràctica i somni. A Menorca, el mar sempre ha estat un testimoni silenciós de grans aventures, i empreses com Menorca Yacht Brokers són allà per assegurar-se que cada navegant trobi el seu propi camí en el blau infinit..."
+      }
+    },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "description": "Resolem els teus dubtes sobre la compra, venda i gestió de iots a Menorca",
+      "bestTimeToBuy": {
+        "question": "Quin és el millor moment per comprar un iot a Menorca?",
+        "answer": "La temporada baixa (octubre a març) sol ser el millor moment per comprar, ja que els preus poden ser més competitius. No obstant això, a Menorca Yacht Brokers t'ajudem a trobar les millors oportunitats durant tot l'any, adaptant-nos a les teves necessitats i pressupost."
+      },
+      "servicesOffered": {
+        "question": "Quins serveis ofereix Menorca Yacht Brokers?",
+        "answer": "Oferim una gamma completa de serveis que inclouen: compravenda de iots, serveis de charter, inspeccions i taxacions, gestió de càrrega i logística, i assessoria nàutica integral. El nostre enfocament personalitzat garanteix que cada client rebi l'atenció i el servei que necessita."
+      },
+      "purchaseProcess": {
+        "question": "Com és el procés de compra d'un iot?",
+        "answer": "El procés comença amb una consulta inicial on entenem les teves necessitats, seguit per la cerca i selecció d'embarcacions, inspeccions, negociació, i finalment el tancament de la compra. T'acompanyem en cada pas, assegurant una transacció segura i satisfactòria."
+      },
+      "maintenanceCosts": {
+        "question": "Quins costos de manteniment he de considerar en comprar un iot?",
+        "answer": "Els principals costos inclouen: amarratge, assegurances, manteniment regular, combustible, i possibles reparacions. A Menorca Yacht Brokers t'assessorem sobre aquests aspectes perquè puguis planificar adequadament i gaudir de la teva embarcació sense preocupacions."
+      },
+      "financingOptions": {
+        "question": "Oferiu opcions de finançament per a la compra de iots?",
+        "answer": "Sí, treballem amb diferents entitats financeres i podem ajudar-te a trobar la millor opció de finançament que s'adapti a la teva situació. T'assessorem sobre les diferents alternatives disponibles i els requisits necessaris."
+      },
+      "requiredDocuments": {
+        "question": "Quina documentació necessito per comprar un iot a Menorca?",
+        "answer": "La documentació bàsica inclou identificació personal, documentació fiscal, i depenent del tipus d'embarcació, poden requerir-se llicències específiques. El nostre equip et guiarà en tot el procés de documentació per assegurar que tot estigui en ordre."
+      },
+      "prePurchaseInspection": {
+        "question": "Per què és important realitzar una inspecció abans de comprar?",
+        "answer": "La inspecció prèvia a la compra és fonamental per avaluar l'estat real de l'embarcació, identificar possibles problemes i verificar que la inversió sigui segura. Els nostres experts realitzen inspeccions detallades per garantir la teva tranquil·litat en la compra."
+      },
+      "charterService": {
+        "question": "Com funciona el servei de charter de iots?",
+        "answer": "El nostre servei de charter et permet llogar iots per dies o setmanes, amb o sense patró. Ens encarreguem de tota la logística, des de la selecció de l'embarcació ideal fins a la planificació de la teva ruta per les millors cales de Menorca."
+      }
+    },
+    "ctaSection": {
+      "title": "Tens alguna pregunta addicional?",
+      "description": "El nostre equip d'experts està preparat per ajudar-te a trobar la millor solució per a les teves necessitats nàutiques. Contacta'ns avui mateix i descobreix com podem ajudar-te.",
+      "button": "Contactar amb un expert"
+    }
+  }
+}

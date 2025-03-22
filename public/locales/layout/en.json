@@ -8,6 +8,11 @@
       "aboutUs": "ABOUT US",
       "contact": "CONTACT"
     },
+    "languages": {
+      "spanish": "Spanish",
+      "english": "English",
+      "catalan": "Catalan"
+    },
     "services": {
       "yachtBroker": {
         "label": "Yacht Broker",

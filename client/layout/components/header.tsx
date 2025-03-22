@@ -45,16 +45,6 @@ export interface Language {
   name: string;
   flag?: string;
 }
-export const LANGUAGES: Language[] = [
-  {
-    code: "es",
-    name: "Español",
-  },
-  {
-    code: "en",
-    name: "English",
-  },
-];
 
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const router = useRouter();
@@ -62,6 +52,21 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const t = useTranslations("header");
   const { locale, asPath } = router;
+
+  const LANGUAGES: Language[] = [
+    {
+      code: "es",
+      name: t("languages.spanish"),
+    },
+    {
+      code: "en",
+      name: t("languages.english"),
+    },
+    {
+      code: "cat",
+      name: t("languages.catalan"),
+    },
+  ];
 
   const navigation: NavItem[] = [
     { label: t("navigation.home"), href: "/" },

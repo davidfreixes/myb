@@ -1,0 +1,536 @@
+{
+  "yachtBroker": {
+    "hero": {
+      "title": "Compra i Venda de Vaixells a Menorca | Especialistes en Embarcacions",
+      "subtitle": "Especialistes en <p>compra</p> i <p>venda</p> de iots a Menorca. Àmplia gamma d'embarcacions de luxe i assessorament personalitzat."
+    },
+    "navigation": {
+      "newYachts": "Vaixells Nous",
+      "usedYachts": "Vaixells de Segona Mà"
+    },
+    "description": {
+      "intro": "Consulta el nostre estoc de Iots en venda a continuació o descobreix les nostres claus i contacta'ns més avall. Comptem amb Iots de <p>segona mà</p> o es poden realitzar contactes amb drassanes per entrar en contractes de <p>nova construcció</p>.",
+      "expertise": "El nostre equip d'experts et guiarà en tot el procés de compra o venda de la teva embarcació, garantint una experiència professional i transparent."
+    },
+    "yachtDetails": {
+      "viewDetails": "Veure Detalls",
+      "fields": {
+        "boatName": "Nom del vaixell",
+        "year": "Any",
+        "length": "Eslora",
+        "location": "Ubicació",
+        "displacement": "Desplaçament",
+        "hull": "Casc",
+        "keel": "Quilla",
+        "designer": "Dissenyador",
+        "category": "Categoria"
+      },
+      "units": {
+        "meters": "metres",
+        "kg": "kg"
+      }
+    },
+    "categories": {
+      "title": "Categories Populars",
+      "usedBoats": {
+        "title": "Vaixells de Segona Mà",
+        "description": "Àmplia selecció d'embarcacions verificades i en excel·lent estat. Troba vaixells de segona mà barats, des de barques open fins a velers usats. Totes les nostres embarcacions passen per un rigorós procés d'inspecció per garantir la seva qualitat."
+      },
+      "usedSailboats": {
+        "title": "Velers de Segona Mà",
+        "description": "Extensa gamma de velers de segona mà seleccionats i revisats per experts. Oferim les millors opcions per comprar veler usat, des d'embarcacions petites fins a velers de gran eslora, tots en excel·lents condicions."
+      },
+      "catamarans": {
+        "title": "Catamarans Nous i Usats",
+        "description": "Especialistes en compravenda de catamarans. Disposem d'una selecció premium de catamarans nous i de segona mà, ideals per a navegació familiar i charter. Assessorament personalitzat en la compra del teu catamarà."
+      },
+      "luxuryYachts": {
+        "title": "Iots de Luxe",
+        "description": "Les millors ofertes en iots de luxe nous i usats. Ampli catàleg de iots premium i embarcacions d'alta gamma. Servei exclusiu de compravenda de iots amb assessorament personalitzat."
+      },
+      "openBoats": {
+        "title": "Barques Open i Lleure",
+        "description": "Gran selecció de barques open segona mà i embarcacions de lleure. Disposem de marques premium com Quicksilver i altres líders del sector. Perfectes per gaudir de la navegació amb total seguretat."
+      },
+      "newBoats": {
+        "title": "Vaixells Nous",
+        "description": "Servei integral per comprar vaixell nou amb les millors garanties. Treballem amb les principals drassanes per oferir-te embarcacions noves de màxima qualitat i rendiment."
+      }
+    },
+    "advantages": {
+      "title": "Per Què Escollir-nos?",
+      "experience": "Experiència en Compravenda",
+      "experienceDesc": "Més de 15 anys navegant en vaixells i embarcacions. Especialistes en gestionar la compravenda de tot tipus d'embarcacions, des de vaixells de segona mà fins a iots de luxe.",
+      "selection": "Ampli Catàleg",
+      "selectionDesc": "Extensa selecció d'embarcacions que inclou velers de segona mà, iots de luxe, catamarans i barques open. Totes les nostres embarcacions estan verificades i en excel·lent estat.",
+      "support": "Assessorament Expert",
+      "supportDesc": "Et guiem en tot el procés de comprar vaixell segona mà o nou. Oferim assessorament personalitzat per trobar l'embarcació perfecta segons les teves necessitats i pressupost."
+    },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "description": "Resolem els teus dubtes sobre la compra i venda d'embarcacions",
+      "questions": {
+        "usedBoatConsiderations": {
+          "question": "Què he de considerar en comprar un vaixell de segona mà?",
+          "answer": "En comprar vaixells de segona mà és fonamental verificar el seu estat general, documentació i realitzar una inspecció tècnica. El nostre equip s'encarrega de totes aquestes verificacions, garantint una compra segura d'embarcacions usades. A més, oferim assessorament expert per trobar el vaixell que millor s'adapti a les teves necessitats i pressupost."
+        },
+        "usedSailboatProcess": {
+          "question": "Quin és el procés per comprar un veler usat?",
+          "answer": "El procés de comprar veler segona mà inclou la selecció del model adequat, inspecció tècnica, verificació de documentació i prova de navegació. Els nostres experts t'acompanyen en cada pas, des de la cerca inicial fins al tancament de la compra, assegurant que trobis el veler usat perfecte."
+        },
+        "availableBoats": {
+          "question": "Quins tipus d'embarcacions teniu disponibles?",
+          "answer": "Disposem d'una àmplia varietat que inclou vaixells de segona mà, velers usats, iots de luxe, catamarans, barques open i embarcacions de lleure. Treballem tant amb embarcacions noves com de segona mà, incloent marques premium com Quicksilver i altres líders del sector."
+        },
+        "sellBoat": {
+          "question": "Com puc vendre la meva embarcació?",
+          "answer": "Oferim un servei integral de compravenda de vaixells. Ens encarreguem de la valoració, màrqueting i gestió de la venda de la teva embarcació, ja sigui un veler, iot, catamarà o barca open. El nostre objectiu és aconseguir el millor preu de mercat per al teu vaixell."
+        },
+        "financing": {
+          "question": "Oferiu finançament per a la compra d'embarcacions?",
+          "answer": "Sí, facilitem opcions de finançament per a la compra de vaixells nous i de segona mà. Treballem amb diferents entitats financeres per trobar la millor solució que s'adapti al teu pressupost, ja sigui per comprar un iot de luxe o una embarcació més modesta."
+        }
+      }
+    },
+    "cta": {
+      "title": "Interessat en Comprar o Vendre una Embarcació?",
+      "description": "El nostre equip d'experts està preparat per ajudar-te",
+      "button": "Contactar Ara"
+    }
+  },
+  "yachtCharter": {
+    "hero": {
+      "title": "Yacht Charter | Lloguer de Vaixells i Iots a Menorca",
+      "subtitle": "Lloga iots, catamarans i llanxes a Menorca amb Menorca Yacht Brokers. Gaudeix de rutes personalitzades i serveis premium amb o sense patró."
+    },
+    "services": {
+      "title": "Els Nostres Serveis de Charter Nàutic a Menorca",
+      "list": {
+        "dailyRental": {
+          "title": "Lloguer per Dia, Setmana o Temporada",
+          "description": "Flexibilitat total per llogar un vaixell a Menorca, des d'escapades d'un dia a Cala Galdana fins a vacances completes al mar amb un iot de luxe."
+        },
+        "thematicExcursions": {
+          "title": "Excursions i Rutes Personalitzades",
+          "description": "Explora Menorca amb rutes exclusives: postes de sol en catamarà, excursions en llaüt tradicional, busseig en aigües cristal·lines i experiències gastronòmiques a bord."
+        },
+        "withoutLicense": {
+          "title": "Lloguer de Vaixells sense Llicència",
+          "description": "Si no tens llicència, no hi ha problema. Et trobem vaixells sense llicència a Menorca perquè naveguis lliurement per cales paradisíaques com Cala'n Bosch o Fornells."
+        },
+        "support": {
+          "title": "Suport 24/7 Durant El Teu Charter",
+          "description": "Garantim assistència en tot moment perquè gaudeixis d'una experiència nàutica sense preocupacions."
+        }
+      }
+    },
+    "discover": {
+      "title": "Descobreix el Luxe i la Llibertat al Mar",
+      "description": "Menorca Brokers t'ofereix una experiència única al mar amb lloguer de vaixells, llanxes i catamarans. Navega sense llicència, amb patró o en un iot de luxe, explorant cales verges i platges de somni com Cala Galdana i Ciutadella.",
+      "button": "Explorar Rutes"
+    },
+    "whyChooseUs": {
+      "title": "Per què triar Menorca Brokers per al teu lloguer de vaixells?",
+      "reasons": {
+        "fleet": {
+          "title": "Flota Variada: Iots, Catamarans i Llanxes",
+          "description": "Des de llaüts tradicionals fins a moderns catamarans, comptem amb opcions per a tots els gustos i necessitats."
+        },
+        "experience": {
+          "title": "Experiència Personalitzada",
+          "description": "Dissenyem cada lloguer a mida: excursions a Cala Galdana, navegació en veler per Fornells o rutes de snorkel a Menorca."
+        },
+        "crew": {
+          "title": "Tripulació Professional o Navegació sense Patró",
+          "description": "Tria entre llogar amb un patró expert o navegar tu mateix en un vaixell sense llicència."
+        },
+        "routes": {
+          "title": "Les Millors Rutes i Destinacions",
+          "description": "Des de Ciutadella fins a Maó, oferim itineraris únics per descobrir Menorca des del mar."
+        }
+      }
+    },
+    "faq": {
+      "title": "Tot el que Has de Saber Abans de Llogar un Vaixell a Menorca",
+      "description": "Resolem els teus dubtes sobre el lloguer de vaixells a Menorca.",
+      "licenseRequired": {
+        "question": "Necessito llicència per llogar un vaixell a Menorca?",
+        "answer": "No sempre. Disposem de vaixells sense llicència que pots manejar sense experiència prèvia. Per a embarcacions més grans, es requereix llicència de navegació."
+      },
+      "bestTimeToRent": {
+        "question": "Quina és la millor època per llogar un vaixell a Menorca?",
+        "answer": "La temporada alta és de juny a setembre, amb temperatures ideals i mar en calma. A la primavera i tardor, hi ha menys afluència i preus més competitius."
+      },
+      "boatTypes": {
+        "question": "Quins tipus d'embarcacions puc llogar?",
+        "answer": "Oferim llaüts tradicionals, llanxes, catamarans, velers i iots de luxe, amb o sense patró."
+      },
+      "rentalDuration": {
+        "question": "Puc llogar un vaixell per unes hores o només per dies complets?",
+        "answer": "Disposem de lloguers per hores, mig dia, dia complet i setmanes, segons la teva preferència."
+      },
+      "recommendedRoutes": {
+        "question": "Quines són les millors rutes en vaixell per Menorca?",
+        "answer": "Algunes de les millors rutes inclouen Cala Galdana, Cala'n Bosch, Fornells i la Badia de Maó."
+      },
+      "includedServices": {
+        "question": "Què inclou el lloguer d'un vaixell?",
+        "answer": "Depenent del vaixell, pot incloure combustible, equip de snorkel, begudes i patró opcional."
+      },
+      "howToBook": {
+        "question": "Com reservo un vaixell a Menorca?",
+        "answer": "Pots reservar directament al nostre web o contactar-nos per a assessorament personalitzat."
+      }
+    },
+    "cta": {
+      "title": "Viu una Experiència Inoblidable al Mar",
+      "description": "Reserva el teu vaixell a Menorca i navega per les seves cales més emblemàtiques. Gaudeix d'un lloguer sense llicència, excursions en catamarà o un iot de luxe amb serveis exclusius.",
+      "button": "Reserva Ara"
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Subministrament de Combustible Marí",
+      "subtitle": "Subministrem combustible per a vaixells a l'illa de Menorca, la resta d'Espanya i la majoria de ports comercials del món.",
+      "subtitle2": "Mitjançant el nostre partner <2>Stabia Oil</2>. Podem subministrar tot tipus de combustible marí a l'illa de Menorca."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Actualitzat diàriament",
+      "sectionTitle": "Menorca Brokers",
+      "description": "Contacta'ns per rebre informació dels nostres últims preus de subministrament.",
+      "downloadButton": "Contactar"
+    },
+    "marketIndices": {
+      "title": "Els nostres índexs i proveïdors del mercat marítim",
+      "subtitle": "Obtenim els últims preus utilitzant les dades proporcionades pels nostres partners.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Consulta els preus del mercat de combustibles marins als principals ports del món."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Consulta el mercat de la càrrega actualitzat diàriament amb el Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "Carreguem combustible CEPSA - MOEVE"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL és el nostre proveïdor de serveis."
+        }
+      },
+      "tooltip": "Visitar pàgina web"
+    },
+    "specializedServices": {
+      "title": "Serveis Especialitzats",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Ship Sale & Purchase",
+          "description": "Des de vaixells de càrrega fins a iots de luxe, et guiem en cada pas del procés, assegurant-nos que cada operació sigui fluida, rendible i satisfactòria."
+        },
+        "dryBulk": {
+          "title": "Dry Bulk Cargo",
+          "description": "Especialistes en el maneig i gestió de càrregues seques a granel."
+        },
+        "liquidBulk": {
+          "title": "Liquid Bulk Cargo",
+          "description": "Experts en el transport de càrregues líquides a granel, oferint solucions especialitzades i segures per a cada tipus de càrrega."
+        }
+      }
+    },
+    "experience": {
+      "title": "La Nostra Experiència",
+      "subtitle": "Més d'una dècada d'experiència en el sector marítim ens avala",
+      "globalExperience": {
+        "title": "Experiència Global",
+        "description": "A Menorca Brokers, som especialistes en connectar armadors i noliejadors, oferint solucions integrals per a la compra, venda i lloguer de vaixells o charter per temps.",
+        "features": {
+          "globalCoverage": {
+            "title": "Cobertura Global",
+            "description": "Operacions als principals ports internacionals"
+          },
+          "service247": {
+            "title": "Servei 24/7",
+            "description": "Suport continu per a totes les teves necessitats"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Coneixement Expert",
+        "description": "Combinem un profund coneixement del sector marítim amb una xarxa global de contactes, el que ens permet garantir acords eficients i personalitzats.",
+        "features": {
+          "expertTeam": {
+            "title": "Equip Expert",
+            "description": "Professionals altament qualificats"
+          },
+          "qualityGuarantee": {
+            "title": "Garantia de Qualitat",
+            "description": "Compliment d'estàndards internacionals"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Busques un Ship Broker?",
+      "description": "Contacta'ns per tancar fixtures o saber més sobre els nostres serveis. El nostre equip està preparat per ajudar-te.",
+      "button": "Contactar Ara"
+    }
+  },
+  "inspections": {
+    "hero": {
+      "title": "Inspeccions i Taxacions de Vaixells a Menorca",
+      "subtitle": "Serveis especialitzats d'<p>inspecció</p> i <p>taxació</p> marítima per a compradors i venedors"
+    },
+    "intro": "A Menorca Yacht Brokers, comptem amb una experiència sòlida en la realització d'<p>inspeccions</p> i <p>taxacions marítimes</p>. Com a part del nostre compromís amb la qualitat i la transparència, oferim serveis especialitzats tant per a compradors com per a venedors de iots i embarcacions.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Inspeccions Marítimes",
+        "description": "Les inspeccions marítimes són fonamentals per avaluar l'estat i la seguretat de qualsevol embarcació. Seguim rigorosos procediments tècnics amb estàndards internacionals.",
+        "process": {
+          "title": "Com realitzem les inspeccions?",
+          "items": [
+            "Revisió detallada del casc",
+            "Sistemes mecànics, elèctrics i de seguretat",
+            "Prova de navegació",
+            "Verificació de certificacions SOLAS i IMO"
+          ]
+        },
+        "conventions": {
+          "title": "Convenis Internacionals",
+          "description": "Treballem en compliment amb Lloyd's Register, garantint una avaluació precisa i fiable."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Taxacions Marítimes",
+        "description": "Realitzem taxacions precises i actualitzades basades en la nostra experiència i en les tendències actuals del mercat.",
+        "factors": {
+          "title": "Factors de Taxació",
+          "items": [
+            "Any de fabricació i model",
+            "Condicions del motor i sistemes",
+            "Estat del casc i sistemes de seguretat",
+            "Equipament addicional i personalització",
+            "Situació del mercat"
+          ]
+        },
+        "types": {
+          "title": "Tipus de Valoracions",
+          "items": [
+            "Valoracions per a Compra o Venda",
+            "Valoracions per a Assegurances",
+            "Informes Detallats d'Estat"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "Ens enorgulleix oferir un servei complet i professional d'inspeccions i taxacions marítimes. El nostre equip d'experts està disponible per assessorar-te en cada pas del procés, garantint que prenguis decisions informades i segures en comprar, vendre o assegurar el teu iot."
+    },
+    "cta": {
+      "title": "Necessites una Inspecció o Taxació a Menorca?",
+      "description": "Si desitges obtenir més informació sobre les nostres inspeccions o taxacions, o per sol·licitar els nostres serveis, no dubtis a contactar-nos directament a través del formulari a la nostra pàgina de contacte o trucar-nos al número indicat.",
+      "button": "Contactar"
+    }
+  },
+  "logistics": {
+    "hero": {
+      "title": "Logística Marítima a Menorca | Càrrega i Serveis Personalitzats",
+      "subtitle": {
+        "question": "Vols importar o exportar qualsevol tipus de càrrega?",
+        "answer": "Nosaltres t'ho gestionem!"
+      }
+    },
+    "intro": {
+      "text": "A Menorca Yacht Brokers, oferim un servei logístic complet i personalitzat per a la importació i exportació de qualsevol tipus de càrrega. Des de mercaderies generals fins a enviaments especialitzats, gestionem cada pas del procés amb precisió i professionalisme."
+    },
+    "doorToDoor": {
+      "title": "Serveis de Logística \"Door to Door\"",
+      "services": {
+        "pickup": {
+          "title": "Recollida en origen",
+          "description": "Coordinem el transport terrestre inicial per assegurar que la teva càrrega comenci el seu viatge de manera eficient."
+        },
+        "documentation": {
+          "title": "Gestió de documents",
+          "description": "Garantim que tots els permisos i tràmits duaners estiguin en regla per a un procés sense contratemps."
+        },
+        "international": {
+          "title": "Transport internacional",
+          "description": "Oferim solucions eficients per mar, terra o aire adaptades a les teves necessitats específiques."
+        },
+        "delivery": {
+          "title": "Lliurament en destinació",
+          "description": "Portem la teva càrrega directament a la porta del teu client, garantint un lliurament puntual i segur."
+        }
+      }
+    },
+    "incoterms": {
+      "title": "Incoterms: El Teu Transport, Les Teves Regles",
+      "terms": {
+        "exw": {
+          "title": "EXW (Ex Works)",
+          "description": "Coordinem tot el transport des de l'origen fins a la destinació."
+        },
+        "fob": {
+          "title": "FOB (Free On Board)",
+          "description": "Supervisem la càrrega al port d'origen."
+        },
+        "cif": {
+          "title": "CIF (Cost, Insurance, and Freight)",
+          "description": "Assegurem la protecció de la teva mercaderia."
+        },
+        "dap": {
+          "title": "DAP (Delivered at Place)",
+          "description": "Entreguem directament a la ubicació acordada."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Per Què Triar Menorca Brokers?",
+      "reasons": {
+        "globalCoverage": {
+          "title": "Cobertura global",
+          "description": "Una xarxa de socis estratègics que ens permet operar a tot el món."
+        },
+        "support": {
+          "title": "Suport 24/7",
+          "description": "Estem disponibles per resoldre qualsevol incidència durant el transport."
+        },
+        "costOptimization": {
+          "title": "Optimització de costos",
+          "description": "Dissenyem solucions logístiques que s'ajusten al teu pressupost i necessitats."
+        },
+        "personalizedAttention": {
+          "title": "Atenció personalitzada",
+          "description": "Adaptem cada enviament a les característiques específiques de la teva càrrega."
+        }
+      }
+    },
+    "cta": {
+      "title": "Necessites una solució logística personalitzada?",
+      "description": "Contacta'ns per dissenyar una solució logística feta a mida per a tu",
+      "button": "Contactar"
+    }
+  },
+  "nauticalConsulting": {
+    "hero": {
+      "title": "Assessoria Marítima i Nàutica: Experts al Teu Servei",
+      "subtitle": {
+        "text": "Solucions integrals i",
+        "highlight": "assessorament especialitzat",
+        "text2": "per al sector marítim i nàutic a Menorca"
+      }
+    },
+    "intro": {
+      "description": "A Menorca Yacht Brokers, oferim un servei integral d'assessoria marítima i nàutica dissenyat per ajudar-te a prendre decisions estratègiques en el món marítim. La nostra experiència i coneixement tècnic ens converteixen en el soci ideal per resoldre qualsevol desafiament relacionat amb la indústria naval i el transport marítim."
+    },
+    "services": {
+      "technicalConsulting": {
+        "title": "Consultoria Tècnica",
+        "description": "Avaluem i recomanem solucions personalitzades per optimitzar les teves operacions marítimes, des de la compra d'embarcacions fins a la implementació de tecnologies avançades."
+      },
+      "legalAssistance": {
+        "title": "Assistència Legal i Reglamentària",
+        "description": "Et guiem en el compliment de normatives internacionals, com el Conveni SOLAS, el Codi IMDG, i regulacions locals."
+      },
+      "feasibilityAnalysis": {
+        "title": "Anàlisi de Viabilitat",
+        "description": "Realitzem estudis econòmics i tècnics per a nous projectes marítims, assegurant que cada decisió estigui basada en dades sòlides."
+      },
+      "vesselValuation": {
+        "title": "Valoració d'Embarcacions",
+        "description": "Oferim taxacions precises i objectives per a compravenda, lloguer o finançament de iots i vaixells comercials."
+      },
+      "routePlanning": {
+        "title": "Planificació de Rutes i Logística",
+        "description": "Dissenyem estratègies per optimitzar el temps i costos en les teves operacions de transport marítim."
+      }
+    },
+    "cta": {
+      "title": "Necessites assessorament nàutic professional?",
+      "description": "Contacta amb el nostre equip d'experts per a una consulta personalitzada",
+      "button": "Contactar"
+    }
+  },
+  "valueAddedServices": {
+    "hero": {
+      "title": "Serveis de Valor Afegit | Més que Chartering a Menorca",
+      "subtitle": "Gaudeix de Menorca al màxim amb els nostres serveis addicionals: trasllats, càtering, rutes turístiques i planificació d'esdeveniments exclusius."
+    },
+    "services": {
+      "airportTransfer": {
+        "title": "Recollida i Trasllat a l'Aeroport",
+        "description": "Gaudeix d'un inici sense preocupacions. Oferim serveis de trasllat privats i puntuals des de l'aeroport fins a la teva embarcació, hotel o qualsevol destinació a Menorca.",
+        "features": [
+          "Flota de vehicles de luxe",
+          "Conductors multilingües i professionals",
+          "Opcions de trasllat d'anada i tornada"
+        ]
+      },
+      "touristRoutes": {
+        "title": "Rutes Turístiques Privades",
+        "description": "Descobreix Menorca des d'una nova perspectiva. Organitzem visites guiades exclusives a:",
+        "features": [
+          "Cales amagades i platges paradisíaques",
+          "Parapent",
+          "Monuments històrics i culturals",
+          "Experiències de senderisme i ciclisme guiat"
+        ]
+      },
+      "catering": {
+        "title": "Càtering Personalitzat a Bord",
+        "description": "Tasta Menorca des del mar amb menús personalitzats que s'adapten als teus gustos i necessitats.",
+        "features": [
+          "Xefs locals i cuina mediterrània",
+          "Opcions veganes, vegetarianes i sense gluten",
+          "Begudes premium i tastos de vins"
+        ]
+      },
+      "assistance": {
+        "title": "Assistència 24/7 Durant el teu Viatge",
+        "description": "El nostre equip està disponible en tot moment per garantir que la teva experiència sigui perfecta. T'ajudem amb:",
+        "features": [
+          "Reserves d'última hora",
+          "Resolució de qualsevol inconvenient durant el viatge"
+        ]
+      },
+      "events": {
+        "title": "Planificació d'Esdeveniments Exclusius",
+        "description": "Celebra moments especials a bord d'un iot o als llocs més emblemàtics de Menorca.",
+        "features": [
+          "Casaments, aniversaris i esdeveniments corporatius",
+          "Decoració temàtica i entreteniment en viu"
+        ]
+      }
+    },
+    "whyChooseUs": {
+      "title": "Per què triar Menorca Brokers.com?",
+      "points": [
+        {
+          "title": "Atenció al client excepcional:",
+          "description": "S'enfoquen en cada detall per garantir que gaudeixis d'un servei impecable."
+        },
+        {
+          "title": "Experiència local amb abast global:",
+          "description": "Són experts en Menorca i ofereixen connexions internacionals."
+        },
+        {
+          "title": "Flexibilitat i personalització:",
+          "description": "Adapten cada servei a les teves preferències."
+        }
+      ],
+      "testimonial": {
+        "quote": "Un servei excepcional que va superar totes les meves expectatives",
+        "author": "Charles Grange, 28 anys"
+      }
+    },
+    "cta": {
+      "title": "Interessat en els nostres serveis?",
+      "description": "Contacta'ns per personalitzar la teva experiència a Menorca",
+      "button": "Contactar"
+    }
+  }
+}
