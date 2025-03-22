@@ -134,16 +134,16 @@ export default function YachtBroker() {
     },
   ];
 
-  const scrollToSection = (type: "new" | "used") => {
-    setActiveTab(type);
-    setTimeout(() => {
-      const sectionRef =
-        type === "new" ? newBoatsSectionRef : usedBoatsSectionRef;
-      if (sectionRef.current) {
-        sectionRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
+  // const scrollToSection = (type: "new" | "used") => {
+  //   setActiveTab(type);
+  //   setTimeout(() => {
+  //     const sectionRef =
+  //       type === "new" ? newBoatsSectionRef : usedBoatsSectionRef;
+  //     if (sectionRef.current) {
+  //       sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }, 100);
+  // };
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -171,14 +171,26 @@ export default function YachtBroker() {
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl ">
                 {t.rich("hero.subtitle", {
-                  p: (chunks) => (
-                    <span className="text-primary">{chunks}</span>
-                  ),
+                  p: (chunks) => <span className="text-primary">{chunks}</span>,
                 })}
               </h2>
             </div>
             <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Button
+                unstyled
+                onClick={() => setContactModalOpened(true)}
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+              >
+                {t("cta.button")}
+              </Button>
+              <Button
+                unstyled
+                // onClick={() => scrollToSection("new")}
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+              >
+                Customized Boat
+              </Button>
+              {/* <Button
                 unstyled
                 onClick={() => scrollToSection("new")}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
@@ -191,7 +203,7 @@ export default function YachtBroker() {
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
               >
                 {t("navigation.usedYachts")}
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         </div>
