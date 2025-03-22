@@ -273,6 +273,26 @@
         }
       }
     },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "description": "Respostes a les preguntes més comunes sobre combustible marí",
+      "questions": {
+        "what": "Què és el combustible marí?",
+        "special": "Què té d'especial el combustible marí?",
+        "types": "Quins són els 3 tipus de combustibles marins?",
+        "name": "Com s'anomena el combustible que fan servir els vaixells?",
+        "price": "Quin és el preu del dièsel marí?",
+        "difference": "Quina és la diferència entre el combustible marí i el combustible regular?"
+      },
+      "answers": {
+        "what": "El combustible marí és un tipus de combustible específicament formulat per al seu ús en embarcacions marítimes i vaixells comercials. Està dissenyat per proporcionar l'energia necessària per als motors de propulsió i generadors auxiliars en entorns marins exigents. El combustible marí ha de complir amb estàndards internacionals establerts per l'Organització Marítima Internacional (OMI) i està subjecte a regulacions estrictes sobre el seu contingut de sofre i altres propietats per minimitzar l'impacte ambiental als oceans i zones costaneres.",
+        "special": "El combustible marí està especialment formulat per suportar les condicions extremes de l'entorn marítim. Les seves característiques especials inclouen una major densitat energètica, estabilitat en condicions d'alta humitat i salinitat, i formulacions específiques per complir amb les regulacions internacionals d'emissions com MARPOL Annex VI. Des de 2020, l'OMI ha implementat el límit global de sofre del 0.5% (conegut com IMO 2020), el que ha portat al desenvolupament de combustibles marins de molt baix contingut de sofre (VLSFO) per reduir la contaminació atmosfèrica i protegir la salut pública i els ecosistemes marins.",
+        "types": "Els tres tipus principals de combustible marí són: 1) Fuel Oil Pesat (HFO): També conegut com a búnquer C, és el més dens i econòmic, tradicionalment utilitzat en grans vaixells de càrrega i contenidors. Conté alt nivell de sofre i està sent gradualment eliminat a causa de regulacions ambientals. 2) Fuel Oil de Molt Baix Contingut de Sofre (VLSFO): Desenvolupat per complir amb el límit de sofre de 0.5% d'IMO 2020, és actualment el combustible marí més utilitzat globalment. 3) Gasoil Marí (MGO) i Dièsel Marí (MDO): Combustibles destil·lats més refinats i nets, utilitzats principalment en zones de control d'emissions (ECA) i per embarcacions més petites. El MGO conté menys de 0.1% de sofre, complint amb les regulacions més estrictes.",
+        "name": "El combustible que fan servir els vaixells es coneix comunament com a 'bunker fuel' o combustible de búnquer a la indústria marítima internacional. Aquest terme engloba diversos tipus de combustibles utilitzats en la navegació comercial. Depenent de les seves especificacions tècniques, es classifiquen com IFO (Intermediate Fuel Oil), VLSFO (Very Low Sulphur Fuel Oil), MGO (Marine Gas Oil) o MDO (Marine Diesel Oil). En les operacions de subministrament, s'utilitza el terme 'bunkering' per referir-se al procés de reabastiment de combustible de les embarcacions, un servei essencial en ports comercials d'arreu del món per mantenir la cadena logística global en funcionament.",
+        "price": "El preu del dièsel marí varia constantment segons factors com la ubicació geogràfica, les condicions del mercat petrolier global, les regulacions ambientals vigents i la disponibilitat a cada port. Els índexs de referència com el Platts Bunker Index o el Rotterdam Bunker Price són utilitzats internacionalment per establir preus base. Des de la implementació d'IMO 2020, s'ha observat una diferència de preu significativa entre els combustibles d'alt i baix contingut de sofre. Els preus actuals oscil·len entre 500-700 USD per tona mètrica per MGO i 400-600 USD per VLSFO, tot i que aquestes xifres fluctuen setmanalment. Per obtenir cotitzacions precises i actualitzades, recomanem contactar directament amb el nostre equip de subministrament de combustible marí.",
+        "difference": "La principal diferència entre el combustible marí i el combustible regular resideix en les seves especificacions tècniques i regulatòries. El combustible marí ha de complir amb estàndards internacionals més estrictes establerts per l'OMI, especialment pel que fa al contingut de sofre (màxim 0.5% globalment i 0.1% en zones ECA). A més, el combustible marí té major viscositat i densitat que els combustibles terrestres, està dissenyat per funcionar en motors de gran cilindrada que operen contínuament durant setmanes, i ha de mantenir la seva estabilitat en condicions marítimes adverses. Els combustibles marins també se sotmeten a controls de qualitat més rigorosos i han de complir amb el Conveni MARPOL per prevenir la contaminació marina. Aquestes diferències fan que el combustible marí sigui un producte especialitzat amb cadenes de subministrament i logística pròpies."
+      }
+    },
     "cta": {
       "title": "Busques un Ship Broker?",
       "description": "Contacta'ns per tancar fixtures o saber més sobre els nostres serveis. El nostre equip està preparat per ajudar-te.",

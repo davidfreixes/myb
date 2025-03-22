@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@mantine/core";
+import { Accordion, Button, Tooltip } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
   Anchor,
@@ -110,6 +110,39 @@ export default function BunkerSupplyPage() {
       title: t("specializedServices.services.liquidBulk.title"),
       description: t("specializedServices.services.liquidBulk.description"),
       icon: <BarChart2 className="w-6 h-6 text-primary" />,
+    },
+  ];
+
+  const faqs = [
+    {
+      id: "faq-1",
+      question: t("faq.questions.what"),
+      answer: t("faq.answers.what"),
+    },
+    {
+      id: "faq-2",
+      question: t("faq.questions.special"),
+      answer: t("faq.answers.special"),
+    },
+    {
+      id: "faq-3",
+      question: t("faq.questions.types"),
+      answer: t("faq.answers.types"),
+    },
+    {
+      id: "faq-4",
+      question: t("faq.questions.name"),
+      answer: t("faq.answers.name"),
+    },
+    {
+      id: "faq-5",
+      question: t("faq.questions.price"),
+      answer: t("faq.answers.price"),
+    },
+    {
+      id: "faq-6",
+      question: t("faq.questions.difference"),
+      answer: t("faq.answers.difference"),
     },
   ];
 
@@ -434,6 +467,56 @@ export default function BunkerSupplyPage() {
             </motion.div>
           </div>
         </div>
+      </motion.div>
+
+      {/* FAQ Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        className="container mx-auto px-4 pb-16 max-w-[1400px]"
+      >
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
+            {t("faq.title")}
+          </h2>
+          <p className="text-gray-600 text-lg">{t("faq.description")}</p>
+        </div>
+
+        <Accordion
+          className="max-w-5xl mx-auto"
+          styles={{
+            item: {
+              borderRadius: "8px",
+              marginBottom: "12px",
+              border: "1px solid #e5e7eb",
+              backgroundColor: "white",
+              borderBottom: "1px solid #FFB800",
+            },
+            control: {
+              padding: "10px",
+            },
+            content: {
+              padding: "0 20px 20px",
+            },
+          }}
+        >
+          {faqs.map((item, index) => (
+            <Accordion.Item key={item.id} value={item.id}>
+              <Accordion.Control>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#FFB800] font-mono text-lg">
+                    {String(index + 1).padStart(2, "0")}.
+                  </span>
+                  <h2 className="font-semibold">{item.question}</h2>
+                </div>
+              </Accordion.Control>
+              <Accordion.Panel>
+                <p className="text-gray-600">{item.answer}</p>
+              </Accordion.Panel>
+            </Accordion.Item>
+          ))}
+        </Accordion>
       </motion.div>
 
       {/* CTA Section */}

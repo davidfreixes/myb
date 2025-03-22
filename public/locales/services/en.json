@@ -190,7 +190,7 @@
   },
   "bunkerSupply": {
     "hero": {
-      "title": "Marine Fuel Supply",
+      "title": "Marine Bunker Supply",
       "subtitle": "We supply fuel for boats on Menorca island, the rest of Spain and most world comercial ports.",
       "subtitle2": "Through our partner <2>Stabia Oil</2>. We can supply all types of marine fuel on the island of Menorca."
     },
@@ -271,6 +271,26 @@
             "description": "Compliance with international standards"
           }
         }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Answers to the most common questions about marine fuel",
+      "questions": {
+        "what": "What is marine fuel?",
+        "special": "What makes marine fuel special?",
+        "types": "What are the 3 types of marine fuels?",
+        "name": "What is the fuel used by ships called?",
+        "price": "What is the price of marine diesel?",
+        "difference": "What is the difference between marine fuel and regular fuel?"
+      },
+      "answers": {
+        "what": "Marine fuel is a specialized type of fuel specifically formulated for use in maritime vessels and commercial ships. It is designed to provide the necessary energy for propulsion engines and auxiliary generators in demanding marine environments. Marine fuel must comply with international standards established by the International Maritime Organization (IMO) and is subject to strict regulations regarding its sulfur content and other properties to minimize environmental impact on oceans and coastal areas.",
+        "special": "Marine fuel is specially formulated to withstand the extreme conditions of the maritime environment. Its special characteristics include higher energy density, stability in high humidity and salinity conditions, and specific formulations to comply with international emissions regulations such as MARPOL Annex VI. Since 2020, the IMO has implemented the global sulfur cap of 0.5% (known as IMO 2020), which has led to the development of very low sulfur fuel oils (VLSFO) to reduce air pollution and protect public health and marine ecosystems.",
+        "types": "The three main types of marine fuel are: 1) Heavy Fuel Oil (HFO): Also known as bunker C, it is the densest and most economical, traditionally used in large cargo and container ships. It contains high levels of sulfur and is being gradually phased out due to environmental regulations. 2) Very Low Sulfur Fuel Oil (VLSFO): Developed to meet the IMO 2020 sulfur cap of 0.5%, it is currently the most widely used marine fuel globally. 3) Marine Gas Oil (MGO) and Marine Diesel Oil (MDO): More refined and cleaner distillate fuels, primarily used in Emission Control Areas (ECAs) and by smaller vessels. MGO contains less than 0.1% sulfur, meeting the strictest regulations.",
+        "name": "The fuel used by ships is commonly known as 'bunker fuel' in the international maritime industry. This term encompasses various types of fuels used in commercial navigation. Depending on their technical specifications, they are classified as IFO (Intermediate Fuel Oil), VLSFO (Very Low Sulphur Fuel Oil), MGO (Marine Gas Oil), or MDO (Marine Diesel Oil). In supply operations, the term 'bunkering' refers to the process of refueling vessels, an essential service in commercial ports worldwide to keep the global logistics chain functioning.",
+        "price": "Marine diesel prices vary constantly based on factors such as geographical location, global oil market conditions, current environmental regulations, and availability at each port. Reference indices such as the Platts Bunker Index or Rotterdam Bunker Price are used internationally to establish base prices. Since the implementation of IMO 2020, there has been a significant price difference between high and low sulfur content fuels. Current prices range between 500-700 USD per metric ton for MGO and 400-600 USD for VLSFO, although these figures fluctuate weekly. For accurate and updated quotations, we recommend contacting our marine fuel supply team directly.",
+        "difference": "The main difference between marine fuel and regular fuel lies in their technical and regulatory specifications. Marine fuel must comply with stricter international standards established by the IMO, especially regarding sulfur content (maximum 0.5% globally and 0.1% in ECA zones). Additionally, marine fuel has higher viscosity and density than land-based fuels, is designed to function in large displacement engines that operate continuously for weeks, and must maintain its stability in adverse maritime conditions. Marine fuels are also subject to more rigorous quality controls and must comply with the MARPOL Convention to prevent marine pollution. These differences make marine fuel a specialized product with its own supply chains and logistics."
       }
     },
     "cta": {
