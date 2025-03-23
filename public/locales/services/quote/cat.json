@@ -44,27 +44,21 @@
       }
     },
     "submitButton": "Enviar Sol·licitud",
+    "submitting": "Enviant...",
+    "validation": {
+      "required": "Aquest camp és obligatori",
+      "invalidEmail": "Si us plau, introduïu una adreça de correu electrònic vàlida"
+    },
+    "error": {
+      "default": "S'ha produït un error. Si us plau, torneu-ho a provar."
+    },
     "success": {
-      "title": "Gràcies per contactar!",
-      "message": "La teva sol·licitud de pressupost ha estat enviada correctament.",
+      "title": "Sol·licitud de Pressupost Enviada",
+      "message": "Gràcies per la vostra sol·licitud. Ens posarem en contacte amb vosaltres aviat.",
       "closeButton": "Tancar"
     }
   },
   "quoteButton": {
     "label": "Sol·licitar Pressupost"
-  },
-  "submitButton": "Enviar Sol·licitud",
-  "submitting": "Enviant...",
-  "validation": {
-    "required": "Aquest camp és obligatori",
-    "invalidEmail": "Si us plau, introduïu una adreça de correu electrònic vàlida"
-  },
-  "error": {
-    "default": "S'ha produït un error. Si us plau, torneu-ho a provar."
-  },
-  "success": {
-    "title": "Sol·licitud de Pressupost Enviada",
-    "message": "Gràcies per la vostra sol·licitud. Ens posarem en contacte amb vosaltres aviat.",
-    "closeButton": "Tancar"
   }
 }
