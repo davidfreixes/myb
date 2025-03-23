@@ -57,9 +57,12 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // Skip if the click is on a link or button inside the menu
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node)
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        !(event.target as HTMLElement).closest("a") && // Don't close if clicking on a link
+        !(event.target as HTMLElement).closest("button") // Don't close if clicking on a button
       ) {
         setIsMobileMenuOpen(false);
       }
