@@ -21,7 +21,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface NavItem {
   label: string;
@@ -52,6 +52,27 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const t = useTranslations("header");
   const { locale, asPath } = router;
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   const LANGUAGES: Language[] = [
     {
@@ -184,10 +205,11 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/img/logo-no-title.png"
+              src="/img/logo-no-title.webp"
               alt="Menorca Yacht Brokers"
               width={55}
               height={55}
+              className="w-auto h-auto"
             />
           </Link>
 
@@ -323,7 +345,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-black">
+          <div ref={mobileMenuRef} className="lg:hidden bg-black">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <div key={item.label} className="py-2">
