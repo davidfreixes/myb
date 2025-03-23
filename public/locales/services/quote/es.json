@@ -52,5 +52,19 @@
   },
   "quoteButton": {
     "label": "Solicitar Cotización"
+  },
+  "submitButton": "Enviar Solicitud",
+  "submitting": "Enviando...",
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Por favor, introduzca una dirección de correo electrónico válida"
+  },
+  "error": {
+    "default": "Ha ocurrido un error. Por favor, inténtelo de nuevo."
+  },
+  "success": {
+    "title": "Solicitud de Presupuesto Enviada",
+    "message": "Gracias por su solicitud. Nos pondremos en contacto con usted en breve.",
+    "closeButton": "Cerrar"
   }
 }

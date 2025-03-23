@@ -52,5 +52,19 @@
   },
   "quoteButton": {
     "label": "Request Quote"
+  },
+  "submitButton": "Submit Request",
+  "submitting": "Submitting...",
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "error": {
+    "default": "An error occurred. Please try again."
+  },
+  "success": {
+    "title": "Quote Request Submitted",
+    "message": "Thank you for your request. We will contact you shortly.",
+    "closeButton": "Close"
   }
 }

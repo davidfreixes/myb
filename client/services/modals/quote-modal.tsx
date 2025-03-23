@@ -1,7 +1,7 @@
 import type React from "react";
 
 import { Button, Modal, Text } from "@mantine/core";
-import { Check } from "lucide-react";
+import { AlertCircle, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -13,6 +13,13 @@ interface QuoteModalProps {
 export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
   const t = useTranslations("quoteModal");
   const [successModalOpened, setSuccessModalOpened] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+  // const [errors, setErrors] = useState<Record<string, string>>({})
+
   const [formData, setFormData] = useState({
     vesselName: "",
     imoNumber: "",
@@ -38,12 +45,72 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Aquí iría la lógica para enviar el correo con la información
-    console.log("Enviando datos:", formData);
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: "" });
 
-    // Mostrar modal de éxito
-    setSuccessModalOpened(true);
-    onClose();
+    try {
+      const submitFormData = new FormData();
+      submitFormData.append(
+        "access_key",
+        "ad8b8a66-1708-45fd-9f5d-68feae1da60e" // Replace with your actual access key or use environment variable
+      );
+
+      // Add all form fields to the FormData
+      Object.entries(formData).forEach(([key, value]) => {
+        submitFormData.append(key, value);
+      });
+
+      // Add a subject for the email
+      submitFormData.append(
+        "subject",
+        `Quote Request for ${formData.vesselName}`
+      );
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(submitFormData)),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: t("success.message"),
+        });
+
+        // Reset form data
+        setFormData({
+          vesselName: "",
+          imoNumber: "",
+          flag: "",
+          portOfDelivery: "",
+          deliveryDate: "",
+          productRequired: "",
+          deliveryMethod: "",
+          consigneeName: "",
+          contactEmail: "",
+          contactPhone: "",
+        });
+
+        // Show success modal
+        setSuccessModalOpened(true);
+        onClose();
+      } else {
+        throw new Error(result.message || t("error.default"));
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : t("error.default"),
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const closeSuccessModal = () => {
@@ -61,6 +128,13 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
         <div className="px-4 py-2 relative">
           <h2 className="text-xl font-bold mb-2">{t("title")}</h2>
           <p className="text-gray-600 mb-4">{t("description")}</p>
+
+          {submitStatus.type === "error" && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md flex items-start">
+              <AlertCircle className="text-red-500 mr-2 h-5 w-5 mt-0.5" />
+              <p className="text-red-700 text-sm">{submitStatus.message}</p>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -247,9 +321,16 @@ export default function QuoteModal({ opened, onClose }: QuoteModalProps) {
               <Button
                 unstyled
                 type="submit"
-                className="mt-4 w-full sm:w-auto bg-primary hover:bg-transparent hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300"
+                disabled={isLoading}
+                className={`mt-4 w-full sm:w-auto ${
+                  isLoading
+                    ? "bg-gray-400"
+                    : "bg-primary hover:bg-transparent hover:border-primary hover:border"
+                } border-primary border text-black py-2 px-3 sm:px-4 rounded text-sm sm:text-base transition duration-300`}
               >
-                {t("submitButton")}
+                {isLoading
+                  ? t("submitting") || "Submitting..."
+                  : t("submitButton")}
               </Button>
             </div>
           </form>
