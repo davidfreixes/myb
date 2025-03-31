@@ -1,14 +1,14 @@
 {
   "mainPage": {
     "hero": {
-      "title": "Benvingut a Menorca Yacht Brokers",
+      "title": "Lloguer de Vaixells a Menorca",
       "subtitle": {
-        "part1": "El teu Broker de Iots de confiança",
-        "part2": "<p>Compra</p>, <p> ven</p> o <p> lloga</p> el teu Iot amb Menorca Yacht Brokers"
+        "part1": "El teu Broker de Iots de confiança a Menorca",
+        "part2": "<p>Compra</p>, <p>ven</p> o <p>lloga</p> la teva embarcació amb Menorca Yacht Brokers"
       },
       "description": {
-        "part1": "A Menorca Yacht Brokers, t'oferim solucions completes per a la compravenda de iots a Menorca, charters, gestió de càrregues i assessoria nàutica.",
-        "part2": "Estem preparats per guiar-te en cada pas del procés amb professionalisme i dedicació."
+        "part1": "A Menorca Yacht Brokers, t'oferim solucions completes per al lloguer de vaixells a Menorca, lloguer de velers, llanxes i tot tipus d'embarcacions, a més de compravenda de iots i assessoria nàutica.",
+        "part2": "Estem preparats per guiar-te en cada pas del procés amb professionalitat i dedicació, ja sigui per a lloguer o compra."
       },
       "buttons": {
         "explore_services": "Explora els Nostres Serveis",
@@ -18,7 +18,7 @@
     "servicesSection": {
       "header": {
         "title": "Els Nostres Serveis",
-        "description": "Descobreix la nostra àmplia gamma de serveis nàutics professionals"
+        "description": "Descobreix la nostra àmplia gamma de serveis nàutics professionals a Menorca"
       },
       "services": [
         {
@@ -29,10 +29,10 @@
           }
         },
         {
-          "title": "Yacht Charter",
+          "title": "Lloguer de Vaixells a Menorca",
           "description": {
-            "parte1": "Busques passar una setmana per les Balears?",
-            "parte2": "Contacta'ns i utilitzant tots els recursos al nostre abast podem organitzar-ho tot des de l'aeroport fins a la marxa de les teves vacances. Digues-nos què necessites i trobarem un vaixell (amb patró si cal) perquè les teves vacances siguin perfectes."
+            "parte1": "Busques llogar un vaixell a Menorca per passar una setmana per les Balears?",
+            "parte2": "Oferim serveis de lloguer de velers, llanxes i tot tipus d'embarcacions a Menorca. Contacta'ns i utilitzant tots els recursos al nostre abast podem organitzar-ho tot des de l'aeroport fins a la marxa de les teves vacances. Digues-nos què necessites i trobarem un vaixell (amb patró si cal) perquè les teves vacances siguin perfectes."
           }
         },
         {
@@ -62,118 +62,118 @@
       "button": "Accedeix al servei"
     },
     "aboutVideoSection": {
-      "title": "La Teva Consultora de Confiança",
-      "description": "A Menorca Brokers, ens dediquem a facilitar la compravenda de iots i vaixells mitjançant un servei de brokerage innovador i fiable. El nostre equip professional està preparat per oferir-te la millor assessoria i garantir una experiència de compra exitosa."
+      "title": "La Teva Consultora de Confiança per a Lloguer d'Embarcacions",
+      "description": "A Menorca Brokers, ens dediquem a facilitar el lloguer de vaixells, velers i llanxes a Menorca mitjançant un servei innovador i fiable. El nostre equip professional està preparat per oferir-te la millor assessoria i garantir una experiència de navegació exitosa."
     },
     "featuresSection": {
       "features": [
         {
           "title": "Navegant el teu èxit a Menorca",
-          "description": "Menorca Yacht Brokers no només se centra en connectar els seus clients amb oportunitats de qualitat en la compra, venda i gestió de iots, sinó que també es compromet a oferir un servei integral que destaca l'essència única de l'illa. L'empresa s'ha guanyat una reputació pel seu coneixement profund del mercat menorquí, permetent als seus clients trobar embarcacions que s'ajustin perfectament a les seves necessitats i gaudir d'una experiència de navegació excepcional.",
-          "imageAlt": "Navegar Menorca"
+          "description": "Menorca Yacht Brokers no només se centra en connectar els seus clients amb oportunitats de qualitat en el lloguer de vaixells a Menorca, sinó que també es compromet a brindar un servei integral que destaca l'essència única de l'illa. L'empresa s'ha guanyat una reputació pel seu coneixement profund del mercat menorquí, permetent als seus clients trobar embarcacions que s'ajustin perfectament a les seves necessitats i gaudir d'una experiència de navegació excepcional.",
+          "imageAlt": "Lloguer de vaixells a Menorca"
         },
         {
           "title": "Connectant oportunitats al Mediterrani",
-          "description": "Un altre dels lemes que defineix a Menorca Yacht Brokers i reflecteix la seva missió d'unir persones i empreses amb una mateixa passió pel mar. Des de la primera consulta fins al tancament de cada operació, MenorcaBrokers.com acompanya els seus clients en cada pas, oferint un servei de qualitat amb un enfocament en el detall i la satisfacció total del client.",
-          "imageAlt": "Mediterrani"
+          "description": "Un altre dels lemes que defineix a Menorca Yacht Brokers i reflecteix la seva missió d'unir a persones i empreses amb una mateixa passió pel mar. Des de la primera consulta fins al tancament de cada operació, ja sigui per a lloguer de velers a Menorca o compra de iots, MenorcaBrokers.com acompanya els seus clients en cada pas, oferint un servei de qualitat amb un enfocament en el detall i la satisfacció total del client.",
+          "imageAlt": "Lloguer veler Menorca"
         },
         {
           "title": "Experiència local, abast global",
-          "description": "En el mercat de serveis nàutics al Mediterrani, Menorca Yacht Brokers s'està destacant com una empresa pionera amb una combinació única d'<p>Experiència local, abast global</p>. Aquesta innovadora companyia menorquina ha aconseguit establir una presència significativa en el sector.",
-          "imageAlt": "Gestió Marítima"
+          "description": "En el mercat de serveis nàutics al Mediterrani, Menorca Yacht Brokers s'està destacant com una empresa pionera amb una combinació única de <p>Experiència local, abast global</p>. Aquesta innovadora companyia menorquina ha aconseguit establir una presència significativa en el sector del lloguer de llanxes i embarcacions a Menorca.",
+          "imageAlt": "Lloguer llanxa Menorca"
         }
       ]
     },
     "articlePerfectYacht": {
       "hero": {
-        "alt": "Iot navegant a la posta de sol",
-        "title": "Com triar el iot perfecte: el somni de navegar fet realitat"
+        "alt": "Lloguer de vaixells a Menorca - Iot navegant a la posta de sol",
+        "title": "Com triar l'embarcació perfecta per llogar a Menorca: el somni de navegar fet realitat"
       },
       "author": {
         "label": "Escrit per",
         "name": "Martin Scholz"
       },
       "content": {
-        "intro": "La brisa marina acaricia el teu rostre mentre observes l'horitzó interminable, envoltat de blau i de calma. Tenir un iot propi és molt més que una qüestió de luxe: és un somni de llibertat, d'aventures compartides i d'una relació íntima amb el mar...",
+        "intro": "La brisa marina acaricia el teu rostre mentre observes l'horitzó interminable, envoltat de blau i de calma. Llogar un vaixell a Menorca és molt més que una qüestió de luxe: és un somni de llibertat, d'aventures compartides i d'una relació íntima amb el mar...",
         "image1": {
-          "alt": "Iot en una cala de Menorca"
+          "alt": "Lloguer veler Menorca - Iot en una cala"
         },
         "section1": {
           "title": "Una decisió personal",
-          "text": "Triar un iot és, abans de tot, una decisió profundament personal. Cada navegant té la seva pròpia visió del que significa solcar els mars: alguns busquen velocitat i adrenalina, mentre que altres anhelen la tranquil·litat de llargues jornades fondejats en cales amagades..."
+          "text": "Triar quin tipus d'embarcació llogar a Menorca és, abans de tot, una decisió profundament personal. Cada navegant té la seva pròpia visió del que significa solcar els mars: alguns busquen velocitat i adrenalina amb el lloguer de llanxes, mentre que altres anhelen la tranquil·litat de llargues jornades fondejats en cales amagades amb un veler..."
         },
         "section2": {
           "title": "Infinites opcions",
-          "text": "En el món dels iots, les opcions són infinites. Des dels estilitzats iots a motor que evoquen velocitat i sofisticació fins als clàssics velers que xiuxiuegen històries d'exploradors i navegants intrèpids, cada embarcació té la seva pròpia ànima..."
+          "text": "En el món del lloguer de vaixells a Menorca, les opcions són infinites. Des de les estilitzades llanxes que evoquen velocitat i sofisticació fins als clàssics velers que xiuxiuegen històries d'exploradors i navegants intrèpids, cada embarcació té la seva pròpia ànima..."
         },
         "image2": {
-          "alt": "Interior d'un iot de luxe"
+          "alt": "Interior d'un iot de luxe per a lloguer a Menorca"
         },
         "section3": {
           "title": "Manteniment i cures",
-          "text": "Un aspecte clau en comprar un iot és considerar el seu manteniment. La vida al mar és tan meravellosa com desafiant, i cada embarcació requereix una cura constant per mantenir-se en òptimes condicions..."
+          "text": "Un avantatge del lloguer d'embarcacions a Menorca és que no has de preocupar-te pel manteniment. La vida al mar és tan meravellosa com desafiant, i cada embarcació requereix una cura constant per mantenir-se en òptimes condicions, però amb el nostre servei de lloguer, nosaltres ens encarreguem de tot..."
         },
         "section4": {
           "title": "La dimensió cultural de Menorca",
-          "text": "A Menorca, on el mar és part essencial de la identitat local, la selecció d'un iot adquireix una dimensió cultural. L'illa, amb les seves cales idíl·liques i les seves aigües cristal·lines, és l'escenari perfecte per gaudir d'una embarcació pròpia..."
+          "text": "A Menorca, on el mar és part essencial de la identitat local, la selecció d'un vaixell per llogar adquireix una dimensió cultural. L'illa, amb les seves cales idíl·liques i les seves aigües cristal·lines, és l'escenari perfecte per gaudir d'una embarcació, ja sigui un veler, una llanxa o un iot de luxe..."
         },
         "image3": {
-          "alt": "Vista aèria d'una cala de Menorca"
+          "alt": "Vista aèria d'una cala de Menorca - Destinació perfecta per al lloguer de vaixells"
         },
         "section5": {
           "title": "La importància de provar",
-          "text": "És també fonamental provar abans de decidir. Sovint, els compradors primerencs subestimen la importància d'experimentar el iot en acció."
+          "text": "És també fonamental provar abans de decidir. Sovint, els clients principiants subestimen la importància d'experimentar diferents tipus d'embarcacions. El nostre servei de lloguer de vaixells a Menorca et permet provar diferents opcions abans de decidir-te per una compra."
         },
         "section6": {
           "title": "Aprenentatge continu",
-          "text": "El moment de la compra és també una oportunitat per aprendre. Durant el procés, cada conversa amb un broker és una lliçó sobre tècnica, navegació i estil de vida..."
+          "text": "El moment del lloguer és també una oportunitat per aprendre. Durant el procés, cada conversa amb els nostres experts és una lliçó sobre tècnica, navegació i estil de vida marítim a Menorca..."
         },
         "section7": {
           "title": "La dimensió emocional",
-          "text": "Comprar un iot és una inversió en somnis i en records futurs. És imaginar-se navegant a la posta de sol, compartint rialles amb amics o gaudint de la soledat del mar obert..."
+          "text": "Llogar un vaixell a Menorca és una inversió en somnis i en records futurs. És imaginar-se navegant a la posta de sol, compartint rialles amb amics o gaudint de la solitud del mar obert..."
         },
-        "conclusion": "Triar el iot perfecte és un procés que combina raó i passió, pràctica i somni. A Menorca, el mar sempre ha estat un testimoni silenciós de grans aventures, i empreses com Menorca Yacht Brokers són allà per assegurar-se que cada navegant trobi el seu propi camí en el blau infinit..."
+        "conclusion": "Triar l'embarcació perfecta per llogar a Menorca és un procés que combina raó i passió, pràctica i somni. A Menorca, el mar sempre ha estat un testimoni silenciós de grans aventures, i empreses com Menorca Yacht Brokers són allà per assegurar-se que cada navegant trobi el seu propi camí en el blau infinit, ja sigui amb el lloguer de velers, llanxes o qualsevol tipus d'embarcació..."
       }
     },
     "faq": {
-      "title": "Preguntes Freqüents",
-      "description": "Resolem els teus dubtes sobre la compra, venda i gestió de iots a Menorca",
+      "title": "Preguntes Freqüents sobre Lloguer de Vaixells a Menorca",
+      "description": "Resolem els teus dubtes sobre el lloguer, compra, venda i gestió d'embarcacions a Menorca",
       "bestTimeToBuy": {
-        "question": "Quin és el millor moment per comprar un iot a Menorca?",
-        "answer": "La temporada baixa (octubre a març) sol ser el millor moment per comprar, ja que els preus poden ser més competitius. No obstant això, a Menorca Yacht Brokers t'ajudem a trobar les millors oportunitats durant tot l'any, adaptant-nos a les teves necessitats i pressupost."
+        "question": "Quina és la millor temporada per llogar un vaixell a Menorca?",
+        "answer": "La temporada alta (juny a setembre) ofereix el millor clima per navegar, tot i que els preus són més elevats. La temporada mitjana (abril, maig i octubre) ofereix un bon equilibri entre clima i preu. A Menorca Yacht Brokers t'ajudem a trobar les millors opcions de lloguer d'embarcacions durant tot l'any, adaptant-nos a les teves necessitats i pressupost."
       },
       "servicesOffered": {
-        "question": "Quins serveis ofereix Menorca Yacht Brokers?",
-        "answer": "Oferim una gamma completa de serveis que inclouen: compravenda de iots, serveis de charter, inspeccions i taxacions, gestió de càrrega i logística, i assessoria nàutica integral. El nostre enfocament personalitzat garanteix que cada client rebi l'atenció i el servei que necessita."
+        "question": "Quins serveis de lloguer ofereix Menorca Yacht Brokers?",
+        "answer": "Oferim una gamma completa de serveis que inclouen: lloguer de velers a Menorca, lloguer de llanxes, lloguer de iots de luxe, serveis amb o sense patró, i assessoria nàutica integral. El nostre enfocament personalitzat garanteix que cada client rebi l'atenció i el servei que necessita per gaudir al màxim de la seva experiència de navegació a Menorca."
       },
       "purchaseProcess": {
-        "question": "Com és el procés de compra d'un iot?",
-        "answer": "El procés comença amb una consulta inicial on entenem les teves necessitats, seguit per la cerca i selecció d'embarcacions, inspeccions, negociació, i finalment el tancament de la compra. T'acompanyem en cada pas, assegurant una transacció segura i satisfactòria."
+        "question": "Com és el procés de lloguer d'un vaixell a Menorca?",
+        "answer": "El procés comença amb una consulta inicial on entenem les teves necessitats, seguit per la selecció de l'embarcació adequada, verificació de disponibilitat, reserva, i finalment el lliurament del vaixell. T'acompanyem en cada pas, assegurant una experiència satisfactòria des del primer moment fins a la devolució de l'embarcació."
       },
       "maintenanceCosts": {
-        "question": "Quins costos de manteniment he de considerar en comprar un iot?",
-        "answer": "Els principals costos inclouen: amarratge, assegurances, manteniment regular, combustible, i possibles reparacions. A Menorca Yacht Brokers t'assessorem sobre aquests aspectes perquè puguis planificar adequadament i gaudir de la teva embarcació sense preocupacions."
+        "question": "Què inclou el preu del lloguer d'una embarcació?",
+        "answer": "El preu del lloguer generalment inclou: l'ús de l'embarcació durant el període contractat, assegurança bàsica, i equipament estàndard. Serveis addicionals com patró, combustible, amarratge en ports diferents al base, o equipament especial poden tenir costos addicionals. A Menorca Yacht Brokers t'assessorem sobre tots aquests aspectes perquè puguis planificar adequadament."
       },
       "financingOptions": {
-        "question": "Oferiu opcions de finançament per a la compra de iots?",
-        "answer": "Sí, treballem amb diferents entitats financeres i podem ajudar-te a trobar la millor opció de finançament que s'adapti a la teva situació. T'assessorem sobre les diferents alternatives disponibles i els requisits necessaris."
+        "question": "Quins tipus d'embarcacions oferiu per a lloguer a Menorca?",
+        "answer": "Oferim una àmplia varietat d'opcions que inclouen velers de diferents mides, llanxes ràpides, iots a motor, catamarans i embarcacions de luxe. Cada tipus de vaixell ofereix una experiència única, i el nostre equip t'ajudarà a trobar l'opció que millor s'adapti a les teves preferències i necessitats."
       },
       "requiredDocuments": {
-        "question": "Quina documentació necessito per comprar un iot a Menorca?",
-        "answer": "La documentació bàsica inclou identificació personal, documentació fiscal, i depenent del tipus d'embarcació, poden requerir-se llicències específiques. El nostre equip et guiarà en tot el procés de documentació per assegurar que tot estigui en ordre."
+        "question": "Quina documentació necessito per llogar un vaixell a Menorca?",
+        "answer": "La documentació bàsica inclou identificació personal i, depenent del tipus d'embarcació, poden requerir-se llicències específiques de navegació. Per a embarcacions que no requereixen titulació o si contractes un patró, no necessitaràs llicència. El nostre equip et guiarà en tot el procés de documentació per assegurar que tot estigui en ordre."
       },
       "prePurchaseInspection": {
-        "question": "Per què és important realitzar una inspecció abans de comprar?",
-        "answer": "La inspecció prèvia a la compra és fonamental per avaluar l'estat real de l'embarcació, identificar possibles problemes i verificar que la inversió sigui segura. Els nostres experts realitzen inspeccions detallades per garantir la teva tranquil·litat en la compra."
+        "question": "És necessari tenir experiència per llogar un vaixell a Menorca?",
+        "answer": "No sempre. Oferim opcions amb patró per a aquells que no tenen experiència o prefereixen relaxar-se. Per llogar sense patró, es requereix la titulació adequada segons el tipus d'embarcació. També oferim embarcacions que no requereixen titulació, com petites llanxes a motor de baixa potència."
       },
       "charterService": {
-        "question": "Com funciona el servei de charter de iots?",
-        "answer": "El nostre servei de charter et permet llogar iots per dies o setmanes, amb o sense patró. Ens encarreguem de tota la logística, des de la selecció de l'embarcació ideal fins a la planificació de la teva ruta per les millors cales de Menorca."
+        "question": "Com funciona el servei de lloguer de vaixells a Menorca?",
+        "answer": "El nostre servei et permet llogar embarcacions per dies o setmanes, amb o sense patró. Ens encarreguem de tota la logística, des de la selecció del vaixell ideal fins a la planificació de la teva ruta per les millors cales de Menorca. Oferim lloguer de velers, llanxes, iots i tot tipus d'embarcacions adaptades a les teves necessitats."
       }
     },
     "ctaSection": {
-      "title": "Tens alguna pregunta addicional?",
-      "description": "El nostre equip d'experts està preparat per ajudar-te a trobar la millor solució per a les teves necessitats nàutiques. Contacta'ns avui mateix i descobreix com podem ajudar-te.",
+      "title": "Preparat per llogar el teu vaixell a Menorca?",
+      "description": "El nostre equip d'experts està preparat per ajudar-te a trobar la millor embarcació per a les teves vacances a Menorca. Contacta'ns avui mateix i descobreix com podem ajudar-te a viure una experiència nàutica inoblidable.",
       "button": "Contactar amb un expert"
     }
   }

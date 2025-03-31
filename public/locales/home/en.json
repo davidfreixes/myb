@@ -1,14 +1,14 @@
 {
   "mainPage": {
     "hero": {
-      "title": "Welcome to Menorca Yacht Brokers",
+      "title": "Boat Charter Menorca",
       "subtitle": {
-        "part1": "Your Trusted Yacht Broker",
-        "part2": "<p>Buy</p>, <p> sell</p> or <p> rent</p> your Yacht with Menorca Yacht Brokers"
+        "part1": "Your Trusted Yacht Broker in Menorca",
+        "part2": "<p>Buy</p>, <p>sell</p> or <p>charter</p> your vessel with Menorca Yacht Brokers"
       },
       "description": {
-        "part1": "At Menorca Yacht Brokers, we offer comprehensive solutions for yacht buying and selling in Menorca, charters, cargo management, and nautical consultancy.",
-        "part2": "We are ready to guide you every step of the way with professionalism and dedication."
+        "part1": "At Menorca Yacht Brokers, we offer complete solutions for boat charter in Menorca, sailboat rentals, speedboat rentals and all types of vessels, as well as yacht sales and nautical consultancy.",
+        "part2": "We are ready to guide you through every step of the process with professionalism and dedication, whether for charter or purchase."
       },
       "buttons": {
         "explore_services": "Explore Our Services",
@@ -18,163 +18,163 @@
     "servicesSection": {
       "header": {
         "title": "Our Services",
-        "description": "Discover our wide range of professional nautical services"
+        "description": "Discover our wide range of professional nautical services in Menorca"
       },
       "services": [
         {
           "title": "Yacht Broker",
           "description": {
-            "parte1": "We help you find the best Yacht for you. According to your preferences, we will provide you with the most possible purchase options.",
-            "parte2": "New or second-hand yachts. Both are good options, and we help you discover them."
+            "parte1": "We help you find the best yacht for you. Based on your preferences, we'll provide you with the best yacht purchase options.",
+            "parte2": "New construction or second-hand yachts. Both options are good, and we help you discover them."
           }
         },
         {
-          "title": "Yacht Charter",
+          "title": "Boat Charter Menorca",
           "description": {
-            "parte1": "Looking to spend a week in the Balearic Islands?",
-            "parte2": "Contact us, and using all the resources at our disposal, we can organize everything from the airport to the end of your vacation. Tell us what you need, and we will find a boat (with a skipper if needed) to make your vacation perfect."
+            "parte1": "Looking to charter a boat in Menorca to spend a week around the Balearic Islands?",
+            "parte2": "We offer sailboat charters, speedboat rentals, and all types of vessel rentals in Menorca. Contact us, and using all resources at our disposal, we can organize everything from the airport to the end of your vacation. Tell us what you need, and we'll find a boat (with a skipper if necessary) to make your vacation perfect."
           }
         },
         {
           "title": "Bunker Supply",
           "description": {
             "parte1": "We offer Ship Broker and Charterer services for marine fuel supplies.",
-            "parte2": "Check our daily report for updated pricing and availability information, and contact us to manage your bunker needs."
+            "parte2": "Check our daily report for updated information on prices and availability, and contact us to manage your bunker needs."
           }
         },
         {
           "title": "Yacht Inspections and Valuations",
-          "description": "We conduct pre-Port State Control, sale, or sea trial inspections. We also provide valuations before sales and purchases to ensure the value of the boat or vessel."
+          "description": "We conduct yacht inspections prior to Port State Control, sales, or sea trials. We also perform valuations prior to sales to ensure the value of the vessel or ship."
         },
         {
           "title": "Cargo Management and Logistics",
-          "description": "In collaboration with On Line Traders & Shipping, we manage cargo with local companies to help optimize processes."
+          "description": "In partnership with On Line Traders & Shipping, we manage cargo with island companies to help and optimize processes."
         },
         {
-          "title": "Nautical Consulting",
-          "description": "Documentation management, registrations, or inquiries. Our consultants are here to help with any doubts or needs in the sector."
+          "title": "Nautical Consultancy",
+          "description": "Documentation management, registrations, or inquiries. Our advisors are here to help with any questions or management in the sector."
         },
         {
           "title": "Value-Added Services",
-          "description": "In addition to all the services, we can include pickups at the airport or aerodrome, port transportation, and transfers. We also organize excursions, sophisticated visits, or island tours tailored to the client’s taste."
+          "description": "In addition to all services, we can add airport or aerodrome pickups, port transfers, or transportation. Also excursions, sophisticated visits, or island routes according to the client's taste."
         }
       ],
       "button": "Access the service"
     },
     "aboutVideoSection": {
-      "title": "Your Trusted Consultant",
-      "description": "At Menorca Brokers, we are dedicated to facilitating the purchase and sale of yachts and boats through an innovative and reliable brokerage service. Our professional team is ready to provide you with the best advice and ensure a successful buying experience."
+      "title": "Your Trusted Consultant for Boat Charters",
+      "description": "At Menorca Brokers, we are dedicated to facilitating boat, sailboat, and speedboat charters in Menorca through an innovative and reliable service. Our professional team is ready to offer you the best advice and ensure a successful sailing experience."
     },
     "featuresSection": {
       "features": [
         {
-          "title": "Navigating Your Success in Menorca",
-          "description": "Menorca Yacht Brokers not only focuses on connecting its clients with quality opportunities in the purchase, sale, and management of yachts, but it also commits to providing a comprehensive service that highlights the unique essence of the island. The company has earned a reputation for its deep knowledge of the Menorcan market, helping its clients find vessels perfectly tailored to their needs and enjoy an exceptional sailing experience.",
-          "imageAlt": "Sailing Menorca"
+          "title": "Navigating your success in Menorca",
+          "description": "Menorca Yacht Brokers not only focuses on connecting clients with quality opportunities in boat charter in Menorca but also commits to providing a comprehensive service that highlights the unique essence of the island. The company has earned a reputation for its deep knowledge of the Menorcan market, allowing clients to find vessels that perfectly fit their needs and enjoy an exceptional sailing experience.",
+          "imageAlt": "Boat Charter Menorca"
         },
         {
-          "title": "Connecting Opportunities in the Mediterranean",
-          "description": "One of the mottos that defines Menorca Yacht Brokers and reflects its mission to unite people and companies with the same passion for the sea. From the first consultation to the closing of each transaction, MenorcaBrokers.com accompanies its clients at every step, offering quality service with a focus on detail and total customer satisfaction.",
-          "imageAlt": "Mediterranean"
+          "title": "Connecting opportunities in the Mediterranean",
+          "description": "Another motto that defines Menorca Yacht Brokers and reflects its mission of uniting people and companies with a shared passion for the sea. From the first consultation to the closing of each operation, whether for sailboat charter in Menorca or yacht purchase, MenorcaBrokers.com accompanies its clients every step of the way, offering quality service with a focus on detail and total customer satisfaction.",
+          "imageAlt": "Sailboat Charter Menorca"
         },
         {
-          "title": "Local Expertise, Global Reach",
-          "description": "In the Mediterranean nautical services market, Menorca Yacht Brokers is emerging as a pioneering company with a unique combination of <p>Local Expertise, Global Reach</p>. This innovative Menorcan company has managed to establish a significant presence in the sector.",
-          "imageAlt": "Maritime Management"
+          "title": "Local expertise, global reach",
+          "description": "In the Mediterranean nautical services market, Menorca Yacht Brokers is standing out as a pioneering company with a unique combination of <p>Local expertise, global reach</p>. This innovative Menorcan company has established a significant presence in the speedboat and vessel charter sector in Menorca.",
+          "imageAlt": "Speedboat Rental Menorca"
         }
       ]
     },
     "articlePerfectYacht": {
       "hero": {
-        "alt": "Yacht sailing at sunset",
-        "title": "How to choose the perfect yacht: the dream of sailing made real"
+        "alt": "Boat Charter Menorca - Yacht sailing at sunset",
+        "title": "How to choose the perfect vessel to charter in Menorca: the dream of sailing made reality"
       },
       "author": {
         "label": "Written by",
         "name": "Martin Scholz"
       },
       "content": {
-        "intro": "The sea breeze brushes against your face as you gaze at the endless horizon, surrounded by blue and serenity. Owning a yacht is much more than a matter of luxury: it is a dream of freedom, of shared adventures, and an intimate relationship with the sea...",
+        "intro": "The sea breeze caresses your face as you observe the endless horizon, surrounded by blue and calm. Chartering a boat in Menorca is much more than a matter of luxury: it's a dream of freedom, shared adventures, and an intimate relationship with the sea...",
         "image1": {
-          "alt": "Yacht in a Menorca cove"
+          "alt": "Sailboat Charter Menorca - Yacht in a cove"
         },
         "section1": {
           "title": "A personal decision",
-          "text": "Choosing a yacht is, above all, a deeply personal decision. Every sailor has their own vision of what it means to navigate the seas: some seek speed and adrenaline, while others yearn for the tranquility of long days anchored in hidden coves..."
+          "text": "Choosing what type of vessel to charter in Menorca is, above all, a deeply personal decision. Each sailor has their own vision of what it means to sail the seas: some seek speed and adrenaline with speedboat rentals, while others yearn for the tranquility of long days anchored in hidden coves with a sailboat..."
         },
         "section2": {
           "title": "Endless options",
-          "text": "In the world of yachts, the options are endless. From sleek motor yachts that evoke speed and sophistication to classic sailboats whispering tales of explorers and daring sailors, each vessel has its own soul..."
+          "text": "In the world of boat charter in Menorca, the options are endless. From stylish speedboats that evoke speed and sophistication to classic sailboats that whisper stories of explorers and intrepid sailors, each vessel has its own soul..."
         },
         "image2": {
-          "alt": "Interior of a luxury yacht"
+          "alt": "Interior of a luxury yacht for charter in Menorca"
         },
         "section3": {
           "title": "Maintenance and care",
-          "text": "A key aspect when buying a yacht is considering its maintenance. Life at sea is as wonderful as it is challenging, and every vessel requires constant care to remain in optimal condition..."
+          "text": "An advantage of vessel charter in Menorca is that you don't have to worry about maintenance. Life at sea is as wonderful as it is challenging, and each vessel requires constant care to stay in optimal condition, but with our charter service, we take care of everything..."
         },
         "section4": {
           "title": "The cultural dimension of Menorca",
-          "text": "In Menorca, where the sea is an essential part of the local identity, selecting a yacht takes on a cultural dimension. The island, with its idyllic coves and crystal-clear waters, is the perfect setting to enjoy a yacht of your own..."
+          "text": "In Menorca, where the sea is an essential part of the local identity, selecting a boat to charter takes on a cultural dimension. The island, with its idyllic coves and crystal-clear waters, is the perfect setting to enjoy a vessel, whether a sailboat, speedboat, or luxury yacht..."
         },
         "image3": {
-          "alt": "Aerial view of a Menorca cove"
+          "alt": "Aerial view of a Menorca cove - Perfect destination for boat charter"
         },
         "section5": {
-          "title": "The importance of trying it out",
-          "text": "It is also essential to try it out before deciding. Often, first-time buyers underestimate the importance of experiencing the yacht in action."
+          "title": "The importance of trying",
+          "text": "It's also fundamental to try before deciding. Often, first-time clients underestimate the importance of experiencing different types of vessels. Our boat charter service in Menorca allows you to try different options before deciding on a purchase."
         },
         "section6": {
           "title": "Continuous learning",
-          "text": "The moment of purchase is also an opportunity to learn. During the process, every conversation with a broker is a lesson in technique, navigation, and lifestyle..."
+          "text": "The charter moment is also an opportunity to learn. During the process, each conversation with our experts is a lesson on technique, navigation, and maritime lifestyle in Menorca..."
         },
         "section7": {
           "title": "The emotional dimension",
-          "text": "Buying a yacht is an investment in dreams and future memories. It is imagining yourself sailing at sunset, sharing laughter with friends, or enjoying the solitude of the open sea..."
+          "text": "Chartering a boat in Menorca is an investment in dreams and future memories. It's imagining yourself sailing at sunset, sharing laughs with friends, or enjoying the solitude of the open sea..."
         },
-        "conclusion": "Choosing the perfect yacht is a process that combines reason and passion, practicality and dreams. In Menorca, the sea has always been a silent witness to great adventures, and companies like Menorca Yacht Brokers are there to ensure that every sailor finds their own path in the infinite blue..."
+        "conclusion": "Choosing the perfect vessel to charter in Menorca is a process that combines reason and passion, practicality and dreams. In Menorca, the sea has always been a silent witness to great adventures, and companies like Menorca Yacht Brokers are there to ensure that each sailor finds their own path in the infinite blue, whether with sailboat charters, speedboat rentals, or any type of vessel..."
       }
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "We answer your questions about buying, selling, and managing yachts in Menorca",
+      "title": "Frequently Asked Questions about Boat Charter in Menorca",
+      "description": "We resolve your doubts about charter, purchase, sale, and management of vessels in Menorca",
       "bestTimeToBuy": {
-        "question": "What is the best time to buy a yacht in Menorca?",
-        "answer": "The low season (October to March) is usually the best time to buy, as prices may be more competitive. However, at Menorca Yacht Brokers we help you find the best opportunities throughout the year, adapting to your needs and budget."
+        "question": "What is the best season to charter a boat in Menorca?",
+        "answer": "The high season (June to September) offers the best weather for sailing, although prices are higher. The mid-season (April, May, and October) offers a good balance between weather and price. At Menorca Yacht Brokers, we help you find the best vessel charter options throughout the year, adapting to your needs and budget."
       },
       "servicesOffered": {
-        "question": "What services does Menorca Yacht Brokers offer?",
-        "answer": "We offer a full range of services including: yacht sales and purchases, charter services, inspections and appraisals, cargo and logistics management, and comprehensive nautical advice. Our personalized approach ensures that every client gets the attention and service they need."
+        "question": "What charter services does Menorca Yacht Brokers offer?",
+        "answer": "We offer a complete range of services including: sailboat charter in Menorca, speedboat rental, luxury yacht charter, services with or without skipper, and comprehensive nautical advice. Our personalized approach ensures that each client receives the attention and service they need to fully enjoy their sailing experience in Menorca."
       },
       "purchaseProcess": {
-        "question": "What is the process for buying a yacht?",
-        "answer": "The process starts with an initial consultation to understand your needs, followed by the search and selection of vessels, inspections, negotiation, and finally closing the purchase. We assist you every step of the way to ensure a secure and satisfying transaction."
+        "question": "What is the process for chartering a boat in Menorca?",
+        "answer": "The process begins with an initial consultation where we understand your needs, followed by selecting the appropriate vessel, checking availability, booking, and finally delivering the boat. We accompany you every step of the way, ensuring a satisfactory experience from the first moment until the return of the vessel."
       },
       "maintenanceCosts": {
-        "question": "What maintenance costs should I consider when buying a yacht?",
-        "answer": "The main costs include: mooring, insurance, regular maintenance, fuel, and potential repairs. At Menorca Yacht Brokers, we advise you on these aspects so you can plan appropriately and enjoy your boat worry-free."
+        "question": "What does the charter price of a vessel include?",
+        "answer": "The charter price generally includes: the use of the vessel during the contracted period, basic insurance, and standard equipment. Additional services such as skipper, fuel, mooring in ports different from the base, or special equipment may have additional costs. At Menorca Yacht Brokers, we advise you on all these aspects so you can plan accordingly."
       },
       "financingOptions": {
-        "question": "Do you offer financing options for yacht purchases?",
-        "answer": "Yes, we work with various financial institutions and can help you find the best financing option to suit your situation. We provide advice on the different available alternatives and required documentation."
+        "question": "What types of vessels do you offer for charter in Menorca?",
+        "answer": "We offer a wide variety of options including sailboats of different sizes, speedboats, motor yachts, catamarans, and luxury vessels. Each type of boat offers a unique experience, and our team will help you find the option that best suits your preferences and needs."
       },
       "requiredDocuments": {
-        "question": "What documentation do I need to buy a yacht in Menorca?",
-        "answer": "Basic documentation includes personal identification, tax documentation, and depending on the type of vessel, specific licenses may be required. Our team will guide you through the entire documentation process to ensure everything is in order."
+        "question": "What documentation do I need to charter a boat in Menorca?",
+        "answer": "The basic documentation includes personal identification and, depending on the type of vessel, specific navigation licenses may be required. For vessels that don't require certification or if you hire a skipper, you won't need a license. Our team will guide you through the entire documentation process to ensure everything is in order."
       },
       "prePurchaseInspection": {
-        "question": "Why is it important to conduct an inspection before buying?",
-        "answer": "A pre-purchase inspection is crucial to evaluate the actual condition of the vessel, identify potential issues, and verify that the investment is safe. Our experts perform detailed inspections to ensure peace of mind in your purchase."
+        "question": "Is experience necessary to charter a boat in Menorca?",
+        "answer": "Not always. We offer options with a skipper for those who don't have experience or prefer to relax. To charter without a skipper, the appropriate certification is required according to the type of vessel. We also offer vessels that don't require certification, such as small low-power motorboats."
       },
       "charterService": {
-        "question": "How does the yacht charter service work?",
-        "answer": "Our charter service allows you to rent yachts by the day or week, with or without a captain. We take care of all logistics, from selecting the ideal vessel to planning your route through Menorca’s best coves."
+        "question": "How does the boat charter service in Menorca work?",
+        "answer": "Our service allows you to charter vessels by days or weeks, with or without a skipper. We take care of all the logistics, from selecting the ideal boat to planning your route through the best coves of Menorca. We offer sailboat charters, speedboat rentals, yachts, and all types of vessels adapted to your needs."
       }
     },
     "ctaSection": {
-      "title": "Do you have any additional questions?",
-      "description": "Our team of experts is ready to help you find the best solution for your nautical needs. Contact us today and discover how we can assist you.",
-      "button": "Contact an Expert"
+      "title": "Ready to charter your boat in Menorca?",
+      "description": "Our team of experts is ready to help you find the best vessel for your vacation in Menorca. Contact us today and discover how we can help you experience an unforgettable nautical adventure.",
+      "button": "Contact an expert"
     }
   }
 }
