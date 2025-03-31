@@ -304,7 +304,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               href={`${NAVIGATION_LINKS.CONTACTO}`}
               className="hidden lg:block bg-primary hover:bg-primary/90 text-black min-w-[48px] font-medium py-1 px-5 rounded-lg"
             >
-              CONTACTO
+              {t("navigation.contact")}
             </Button>
 
             {/* Language Selector */}
