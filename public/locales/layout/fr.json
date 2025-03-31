@@ -1,0 +1,100 @@
+{
+  "header": {
+    "navigation": {
+      "home": "ACCUEIL",
+      "services": "SERVICES",
+      "company": "ENTREPRISE",
+      "contracting": "CONTRATS",
+      "aboutUs": "QUI SOMMES-NOUS",
+      "contact": "CONTACT"
+    },
+    "languages": {
+      "spanish": "Espagnol",
+      "english": "Anglais",
+      "catalan": "Catalan",
+      "french": "Français"
+    },
+    "services": {
+      "yachtBroker": {
+        "label": "Yacht Broker",
+        "description": "Achat et vente d'embarcations"
+      },
+      "yachtCharter": {
+        "label": "Yacht Charter",
+        "description": "Location d'embarcations"
+      },
+      "bunkerSupply": {
+        "label": "Bunker Supply",
+        "description": "Services d'intermédiation"
+      },
+      "inspections": {
+        "label": "Inspections et Évaluations",
+        "description": "Évaluation professionnelle d'embarcations"
+      },
+      "logistics": {
+        "label": "Cargo & Logistique",
+        "description": "Services de transport et logistique"
+      },
+      "nauticalAdvisory": {
+        "label": "Conseil Nautique",
+        "description": "Consultation spécialisée"
+      },
+      "valueAddedServices": {
+        "label": "Services à Valeur Ajoutée",
+        "description": "Services complémentaires"
+      }
+    },
+    "company": {
+      "suppliers": {
+        "label": "Fournisseurs et distributeurs",
+        "description": "Réseau de collaborateurs et partenaires"
+      },
+      "news": {
+        "label": "Journal du Port de Mahón",
+        "description": "Actualités et informations portuaires"
+      }
+    },
+    "contracting": {
+      "conditionsRates": {
+        "label": "Conditions et Tarifs",
+        "description": "Termes, conditions et tarifs détaillés de nos services"
+      },
+      "yachtContracts": {
+        "label": "Contrats d'Achat-Vente de Yachts",
+        "description": "Documentation officielle et contrats MYBA pour des transactions sécurisées"
+      }
+    },
+    "languageSelector": {
+      "spanish": "Español",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "address": "07701 Maó, Îles Baléares",
+    "country": "Espagne",
+    "services_nauticos": {
+      "title": "SERVICES NAUTIQUES",
+      "yacht_broker": "Yacht Broker",
+      "yacht_charter": "Yacht Charter",
+      "inspecciones": "Inspections et Évaluations",
+      "asesoria_nautica": "Conseil Nautique"
+    },
+    "services": {
+      "title": "SERVICES",
+      "compra_yates": "Achat de Yachts",
+      "venta_yates": "Vente de Yachts",
+      "alquiler_yates": "Location de Yachts",
+      "valor_añadido": "Services à Valeur Ajoutée"
+    },
+    "empresa": {
+      "title": "ENTREPRISE",
+      "aboutUs": "À propos de nous",
+      "ourTeam": "Notre Équipe",
+      "contact": "Contact"
+    },
+    "legal": {
+      "politica_privacidad": "Politique de confidentialité",
+      "aviso_legal": "Mentions légales"
+    }
+  }
+}

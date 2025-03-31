@@ -1,0 +1,556 @@
+{
+  "yachtBroker": {
+    "hero": {
+      "title": "Achat et Vente de Bateaux à Minorque | Spécialistes en Embarcations",
+      "subtitle": "Spécialistes en <p>achat</p> et <p>vente</p> de yachts à Minorque. Large gamme d'embarcations de luxe et conseil personnalisé."
+    },
+    "navigation": {
+      "newYachts": "Bateaux Neufs",
+      "usedYachts": "Bateaux d'Occasion"
+    },
+    "description": {
+      "intro": "Consultez notre stock de Yachts à vendre ci-dessous ou découvrez nos points clés et contactez-nous plus bas. Nous disposons de Yachts <p>d'occasion</p> ou nous pouvons établir des contacts avec des chantiers navals pour entrer dans des contrats de <p>nouvelle construction</p>.",
+      "expertise": "Notre équipe d'experts vous guidera tout au long du processus d'achat ou de vente de votre embarcation, garantissant une expérience professionnelle et transparente."
+    },
+    "yachtDetails": {
+      "viewDetails": "Voir les Détails",
+      "fields": {
+        "boatName": "Nom du bateau",
+        "year": "Année",
+        "length": "Longueur",
+        "location": "Emplacement",
+        "displacement": "Déplacement",
+        "hull": "Coque",
+        "keel": "Quille",
+        "designer": "Concepteur",
+        "category": "Catégorie"
+      },
+      "units": {
+        "meters": "mètres",
+        "kg": "kg"
+      }
+    },
+    "categories": {
+      "title": "Catégories Populaires",
+      "usedBoats": {
+        "title": "Bateaux d'Occasion",
+        "description": "Large sélection d'embarcations vérifiées et en excellent état. Trouvez des bateaux d'occasion à prix abordable, des bateaux open aux voiliers d'occasion. Toutes nos embarcations passent par un processus d'inspection rigoureux pour garantir leur qualité."
+      },
+      "usedSailboats": {
+        "title": "Voiliers d'Occasion",
+        "description": "Vaste gamme de voiliers d'occasion sélectionnés et révisés par des experts. Nous proposons les meilleures options pour acheter un voilier d'occasion, des petites embarcations aux voiliers de grande taille, tous en excellent état."
+      },
+      "catamarans": {
+        "title": "Catamarans Neufs et d'Occasion",
+        "description": "Spécialistes dans l'achat et la vente de catamarans. Nous disposons d'une sélection premium de catamarans neufs et d'occasion, idéaux pour la navigation familiale et le charter. Conseil personnalisé pour l'achat de votre catamaran."
+      },
+      "luxuryYachts": {
+        "title": "Yachts de Luxe",
+        "description": "Les meilleures offres en yachts de luxe neufs et d'occasion. Large catalogue de yachts premium et d'embarcations haut de gamme. Service exclusif d'achat et de vente de yachts avec conseil personnalisé."
+      },
+      "openBoats": {
+        "title": "Bateaux Open et de Plaisance",
+        "description": "Grande sélection de bateaux open d'occasion et d'embarcations de plaisance. Nous disposons de marques premium comme Quicksilver et d'autres leaders du secteur. Parfaits pour profiter de la navigation en toute sécurité."
+      },
+      "newBoats": {
+        "title": "Bateaux Neufs",
+        "description": "Service intégral pour acheter un bateau neuf avec les meilleures garanties. Nous travaillons avec les principaux chantiers navals pour vous offrir des embarcations neuves de qualité et performance maximales."
+      }
+    },
+    "advantages": {
+      "title": "Pourquoi Nous Choisir?",
+      "experience": "Expérience en Achat-Vente",
+      "experienceDesc": "Plus de 15 ans de navigation sur bateaux et embarcations. Spécialistes dans la gestion de l'achat et de la vente de tout type d'embarcations, des bateaux d'occasion aux yachts de luxe.",
+      "selection": "Large Catalogue",
+      "selectionDesc": "Vaste sélection d'embarcations incluant des voiliers d'occasion, des yachts de luxe, des catamarans et des bateaux open. Toutes nos embarcations sont vérifiées et en excellent état.",
+      "support": "Conseil Expert",
+      "supportDesc": "Nous vous guidons tout au long du processus d'achat d'un bateau d'occasion ou neuf. Nous offrons un conseil personnalisé pour trouver l'embarcation parfaite selon vos besoins et votre budget."
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "description": "Nous répondons à vos questions sur l'achat et la vente d'embarcations",
+      "questions": {
+        "usedBoatConsiderations": {
+          "question": "Que dois-je considérer lors de l'achat d'un bateau d'occasion?",
+          "answer": "Lors de l'achat de bateaux d'occasion, il est fondamental de vérifier leur état général, la documentation et de réaliser une inspection technique. Notre équipe se charge de toutes ces vérifications, garantissant un achat sûr d'embarcations d'occasion. De plus, nous offrons un conseil expert pour trouver le bateau qui s'adapte le mieux à vos besoins et à votre budget."
+        },
+        "usedSailboatProcess": {
+          "question": "Quel est le processus pour acheter un voilier d'occasion?",
+          "answer": "Le processus d'achat d'un voilier d'occasion inclut la sélection du modèle adéquat, l'inspection technique, la vérification de la documentation et l'essai de navigation. Nos experts vous accompagnent à chaque étape, depuis la recherche initiale jusqu'à la finalisation de l'achat, en vous assurant de trouver le voilier d'occasion parfait."
+        },
+        "availableBoats": {
+          "question": "Quels types d'embarcations avez-vous disponibles?",
+          "answer": "Nous disposons d'une large variété incluant des bateaux d'occasion, des voiliers d'occasion, des yachts de luxe, des catamarans, des bateaux open et des embarcations de plaisance. Nous travaillons aussi bien avec des embarcations neuves que d'occasion, incluant des marques premium comme Quicksilver et d'autres leaders du secteur."
+        },
+        "sellBoat": {
+          "question": "Comment puis-je vendre mon embarcation?",
+          "answer": "Nous offrons un service intégral d'achat et de vente de bateaux. Nous nous chargeons de l'évaluation, du marketing et de la gestion de la vente de votre embarcation, qu'il s'agisse d'un voilier, d'un yacht, d'un catamaran ou d'un bateau open. Notre objectif est d'obtenir le meilleur prix du marché pour votre bateau."
+        },
+        "financing": {
+          "question": "Proposez-vous un financement pour l'achat d'embarcations?",
+          "answer": "Oui, nous facilitons des options de financement pour l'achat de bateaux neufs et d'occasion. Nous travaillons avec différentes entités financières pour trouver la meilleure solution adaptée à votre budget, que ce soit pour acheter un yacht de luxe ou une embarcation plus modeste."
+        }
+      }
+    },
+    "cta": {
+      "title": "Intéressé par l'Achat ou la Vente d'une Embarcation?",
+      "description": "Notre équipe d'experts est prête à vous aider",
+      "button": "Contacter Maintenant"
+    }
+  },
+  "yachtCharter": {
+    "hero": {
+      "title": "Yacht Charter | Location de Bateaux et Yachts à Minorque",
+      "subtitle": "Louez des yachts, catamarans et vedettes à Minorque avec Menorca Yacht Brokers. Profitez d'itinéraires personnalisés et de services premium avec ou sans skipper."
+    },
+    "services": {
+      "title": "Nos Services de Charter Nautique à Minorque",
+      "list": {
+        "dailyRental": {
+          "title": "Location à la Journée, à la Semaine ou à la Saison",
+          "description": "Flexibilité totale pour louer un bateau à Minorque, des escapades d'une journée à Cala Galdana aux vacances complètes en mer avec un yacht de luxe."
+        },
+        "thematicExcursions": {
+          "title": "Excursions et Itinéraires Personnalisés",
+          "description": "Explorez Minorque avec des itinéraires exclusifs: couchers de soleil en catamaran, excursions en llaut traditionnel, plongée dans des eaux cristallines et expériences gastronomiques à bord."
+        },
+        "withoutLicense": {
+          "title": "Location de Bateaux sans Permis",
+          "description": "Si vous n'avez pas de permis, pas de problème. Nous vous trouvons des bateaux sans permis à Minorque pour naviguer librement dans des criques paradisiaques comme Cala'n Bosch ou Fornells."
+        },
+        "support": {
+          "title": "Support 24/7 Pendant Votre Charter",
+          "description": "Nous garantissons une assistance à tout moment pour que vous profitiez d'une expérience nautique sans soucis."
+        }
+      }
+    },
+    "discover": {
+      "title": "Découvrez le Luxe et la Liberté en Mer",
+      "description": "Menorca Brokers vous offre une expérience unique en mer avec la location de bateaux, vedettes et catamarans. Naviguez sans permis, avec skipper ou sur un yacht de luxe, en explorant des criques vierges et des plages de rêve comme Cala Galdana et Ciudadela.",
+      "button": "Explorer les Itinéraires"
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir Menorca Brokers pour votre location de bateaux?",
+      "reasons": {
+        "fleet": {
+          "title": "Flotte Variée: Yachts, Catamarans et Vedettes",
+          "description": "Des llauts traditionnels aux catamarans modernes, nous disposons d'options pour tous les goûts et besoins."
+        },
+        "experience": {
+          "title": "Expérience Personnalisée",
+          "description": "Nous concevons chaque location sur mesure: excursions à Cala Galdana, navigation en voilier à Fornells ou itinéraires de snorkeling à Minorque."
+        },
+        "crew": {
+          "title": "Équipage Professionnel ou Navigation sans Skipper",
+          "description": "Choisissez entre louer avec un skipper expert ou naviguer vous-même sur un bateau sans permis."
+        },
+        "routes": {
+          "title": "Les Meilleurs Itinéraires et Destinations",
+          "description": "De Ciudadela à Mahón, nous proposons des itinéraires uniques pour découvrir Minorque depuis la mer."
+        }
+      }
+    },
+    "faq": {
+      "title": "Tout ce que Vous Devez Savoir Avant de Louer un Bateau à Minorque",
+      "description": "Nous répondons à vos questions sur la location de bateaux à Minorque.",
+      "licenseRequired": {
+        "question": "Ai-je besoin d'un permis pour louer un bateau à Minorque?",
+        "answer": "Pas toujours. Nous disposons de bateaux sans permis que vous pouvez manœuvrer sans expérience préalable. Pour les embarcations plus grandes, un permis de navigation est requis."
+      },
+      "bestTimeToRent": {
+        "question": "Quelle est la meilleure période pour louer un bateau à Minorque?",
+        "answer": "La haute saison est de juin à septembre, avec des températures idéales et une mer calme. Au printemps et en automne, il y a moins d'affluence et des prix plus compétitifs."
+      },
+      "boatTypes": {
+        "question": "Quels types d'embarcations puis-je louer?",
+        "answer": "Nous proposons des llauts traditionnels, des vedettes, des catamarans, des voiliers et des yachts de luxe, avec ou sans skipper."
+      },
+      "rentalDuration": {
+        "question": "Puis-je louer un bateau pour quelques heures ou seulement pour des journées complètes?",
+        "answer": "Nous disposons de locations à l'heure, à la demi-journée, à la journée complète et à la semaine, selon votre préférence."
+      },
+      "recommendedRoutes": {
+        "question": "Quels sont les meilleurs itinéraires en bateau à Minorque?",
+        "answer": "Certains des meilleurs itinéraires incluent Cala Galdana, Cala'n Bosch, Fornells et la Baie de Mahón."
+      },
+      "includedServices": {
+        "question": "Qu'inclut la location d'un bateau?",
+        "answer": "Selon le bateau, cela peut inclure le carburant, l'équipement de snorkeling, les boissons et un skipper optionnel."
+      },
+      "howToBook": {
+        "question": "Comment réserver un bateau à Minorque?",
+        "answer": "Vous pouvez réserver directement sur notre site web ou nous contacter pour un conseil personnalisé."
+      }
+    },
+    "cta": {
+      "title": "Vivez une Expérience Inoubliable en Mer",
+      "description": "Réservez votre bateau à Minorque et naviguez dans ses criques les plus emblématiques. Profitez d'une location sans permis, d'excursions en catamaran ou d'un yacht de luxe avec des services exclusifs.",
+      "button": "Réservez Maintenant"
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Fourniture de Carburant Marin",
+      "subtitle": "Nous fournissons du carburant marin pour les bateaux sur l'île de Minorque, le reste de l'Espagne et la majorité des ports commerciaux du monde.",
+      "subtitle2": "Grâce à notre partenaire <2>Stabia Oil</2>. Nous pouvons fournir tout type de carburant marin sur l'île de Minorque."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Mis à jour quotidiennement",
+      "sectionTitle": "Menorca Brokers",
+      "description": "Contactez-nous pour recevoir des informations sur nos derniers prix de fourniture.",
+      "downloadButton": "Contacter"
+    },
+    "marketIndices": {
+      "title": "Nos indices et fournisseurs du marché maritime",
+      "subtitle": "Nous obtenons les derniers prix en utilisant les données fournies par nos partenaires.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Consultez les prix du marché des carburants marins dans les principaux ports du monde."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Consultez le marché du fret mis à jour quotidiennement avec le Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "Nous chargeons du carburant marin CEPSA - MOEVE"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL est notre fournisseur de services."
+        }
+      },
+      "tooltip": "Visiter le site web"
+    },
+    "specializedServices": {
+      "title": "Services Spécialisés",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Vente & Achat de Navires",
+          "description": "Des navires de charge aux yachts de luxe, nous vous guidons à chaque étape du processus, en nous assurant que chaque opération soit fluide, rentable et satisfaisante."
+        },
+        "dryBulk": {
+          "title": "Cargaison Sèche en Vrac",
+          "description": "Spécialistes dans la manipulation et la gestion des cargaisons sèches en vrac."
+        },
+        "liquidBulk": {
+          "title": "Cargaison Liquide en Vrac",
+          "description": "Experts dans le transport de cargaisons liquides en vrac, offrant des solutions spécialisées et sûres pour chaque type de cargaison."
+        }
+      }
+    },
+    "experience": {
+      "title": "Notre Expérience",
+      "subtitle": "Plus d'une décennie d'expérience dans le secteur maritime nous soutient",
+      "globalExperience": {
+        "title": "Expérience Globale",
+        "description": "Chez Menorca Brokers, nous sommes spécialistes dans la connexion d'armateurs et d'affréteurs, offrant des solutions intégrales pour l'achat, la vente et la location de navires ou charter à temps.",
+        "features": {
+          "globalCoverage": {
+            "title": "Couverture Globale",
+            "description": "Opérations dans les principaux ports internationaux"
+          },
+          "service247": {
+            "title": "Service 24/7",
+            "description": "Support continu pour tous vos besoins"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Connaissance Expert",
+        "description": "Nous combinons une profonde connaissance du secteur maritime avec un réseau global de contacts, ce qui nous permet de garantir des accords efficaces et personnalisés.",
+        "features": {
+          "expertTeam": {
+            "title": "Équipe Expert",
+            "description": "Professionnels hautement qualifiés"
+          },
+          "qualityGuarantee": {
+            "title": "Garantie de Qualité",
+            "description": "Respect des standards internationaux"
+          }
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "description": "Réponses aux questions les plus courantes sur le carburant marin",
+      "questions": {
+        "what": "Qu'est-ce que le carburant marin?",
+        "special": "Qu'est-ce qui rend le carburant marin spécial?",
+        "types": "Quels sont les 3 types de carburants?",
+        "name": "Comment s'appelle le carburant utilisé par les bateaux?",
+        "price": "Quel est le prix du diesel marin?",
+        "difference": "Quelle est la différence entre le carburant marin et le carburant ordinaire?"
+      },
+      "answers": {
+        "what": "Le carburant marin est un type de carburant spécifiquement formulé pour son utilisation dans les embarcations maritimes et les navires commerciaux. Il est conçu pour fournir l'énergie nécessaire aux moteurs de propulsion et aux générateurs auxiliaires dans des environnements marins exigeants. Le carburant marin doit respecter des standards internationaux établis par l'Organisation Maritime Internationale (OMI) et est soumis à des réglementations strictes concernant sa teneur en soufre et autres propriétés pour minimiser l'impact environnemental sur les océans et les zones côtières.",
+        "special": "Le carburant marin est spécialement formulé pour supporter les conditions extrêmes de l'environnement maritime. Ses caractéristiques spéciales incluent une densité énergétique plus élevée, une stabilité dans des conditions de haute humidité et salinité, et des formulations spécifiques pour respecter les réglementations internationales d'émissions comme MARPOL Annexe VI. Depuis 2020, l'OMI a mis en œuvre la limite globale de soufre de 0.5% (connue sous le nom de IMO 2020), ce qui a conduit au développement de carburants marins à très faible teneur en soufre (VLSFO) pour réduire la pollution atmosphérique et protéger la santé publique et les écosystèmes marins.",
+        "types": "Les trois principaux types de carburant marin sont: 1) Fuel Oil Lourd (HFO): Aussi connu sous le nom de bunker C, c'est le plus dense et économique, traditionnellement utilisé dans les grands navires de charge et porte-conteneurs. Il contient un niveau élevé de soufre et est progressivement éliminé en raison des réglementations environnementales. 2) Fuel Oil à Très Faible Teneur en Soufre (VLSFO): Développé pour respecter la limite de soufre de 0.5% de l'IMO 2020, c'est actuellement le carburant marin le plus utilisé globalement. 3) Gazole Marin (MGO) et Diesel Marin (MDO): Carburants distillés plus raffinés et propres, utilisés principalement dans les zones de contrôle des émissions (ECA) et par des embarcations plus petites. Le MGO contient moins de 0.1% de soufre, respectant les réglementations les plus strictes.",
+        "name": "Le carburant utilisé par les bateaux est communément connu sous le nom de 'bunker fuel' ou carburant de soute dans l'industrie maritime internationale. Ce terme englobe plusieurs types de carburants utilisés dans la navigation commerciale. Selon leurs spécifications techniques, ils sont classés comme IFO (Intermediate Fuel Oil), VLSFO (Very Low Sulphur Fuel Oil), MGO (Marine Gas Oil) ou MDO (Marine Diesel Oil). Dans les opérations d'approvisionnement, le terme 'bunkering' est utilisé pour se référer au processus de ravitaillement en carburant des embarcations, un service essentiel dans les ports commerciaux du monde entier pour maintenir la chaîne logistique globale en fonctionnement.",
+        "price": "Le prix du diesel marin varie constamment selon des facteurs comme la localisation géographique, les conditions du marché pétrolier global, les réglementations environnementales en vigueur et la disponibilité dans chaque port. Les indices de référence comme le Platts Bunker Index ou le Rotterdam Bunker Price sont utilisés internationalement pour établir des prix de base. Depuis la mise en œuvre de l'IMO 2020, on a observé une différence de prix significative entre les carburants à haute et basse teneur en soufre. Les prix actuels oscillent entre 500-700 USD par tonne métrique pour le MGO et 400-600 USD pour le VLSFO, bien que ces chiffres fluctuent hebdomadairement. Pour obtenir des cotations précises et actualisées, nous recommandons de contacter directement notre équipe de fourniture de carburant marin.",
+        "difference": "La principale différence entre le carburant marin et le carburant ordinaire réside dans leurs spécifications techniques et réglementaires. Le carburant marin doit respecter des standards internationaux plus stricts établis par l'OMI, spécialement en ce qui concerne la teneur en soufre (maximum 0.5% globalement et 0.1% dans les zones ECA). De plus, le carburant marin a une viscosité et une densité plus élevées que les carburants terrestres, il est conçu pour fonctionner dans des moteurs de grande cylindrée qui opèrent continuellement pendant des semaines, et doit maintenir sa stabilité dans des conditions maritimes adverses. Les carburants marins sont également soumis à des contrôles de qualité plus rigoureux et doivent respecter la Convention MARPOL pour prévenir la pollution marine. Ces différences font que le carburant marin est un produit spécialisé avec des chaînes d'approvisionnement et une logistique propres."
+      }
+    },
+    "cta": {
+      "title": "Vous Cherchez un Ship Broker?",
+      "description": "Contactez-nous pour conclure des contrats ou en savoir plus sur nos services. Notre équipe est prête à vous aider.",
+      "button": "Contacter Maintenant"
+    }
+  },
+  "inspections": {
+    "hero": {
+      "title": "Inspections et Évaluations de Bateaux à Minorque",
+      "subtitle": "Services spécialisés <p>d'inspection</p> et <p>d'évaluation</p> maritime pour acheteurs et vendeurs"
+    },
+    "intro": "Chez Menorca Yacht Brokers, nous avons une solide expérience dans la réalisation <p>d'inspections</p> et <p>d'évaluations maritimes</p>. Dans le cadre de notre engagement envers la qualité et la transparence, nous offrons des services spécialisés tant pour les acheteurs que pour les vendeurs de yachts et d'embarcations.",
+    "services": {
+      "maritimeInspections": {
+        "title": "Inspections Maritimes",
+        "description": "Les inspections maritimes sont fondamentales pour évaluer l'état et la sécurité de toute embarcation. Nous suivons des procédures techniques rigoureuses avec des standards internationaux.",
+        "process": {
+          "title": "Comment réalisons-nous les inspections?",
+          "items": [
+            "Révision détaillée de la coque",
+            "Systèmes mécaniques, électriques et de sécurité",
+            "Essai de navigation",
+            "Vérification des certifications SOLAS et OMI"
+          ]
+        },
+        "conventions": {
+          "title": "Conventions Internationales",
+          "description": "Nous travaillons en conformité avec Lloyd's Register, garantissant une évaluation précise et fiable."
+        }
+      },
+      "maritimeValuations": {
+        "title": "Évaluations Maritimes",
+        "description": "Nous réalisons des évaluations précises et actualisées basées sur notre expérience et sur les tendances actuelles du marché.",
+        "factors": {
+          "title": "Facteurs d'Évaluation",
+          "items": [
+            "Année de fabrication et modèle",
+            "Conditions du moteur et des systèmes",
+            "État de la coque et des systèmes de sécurité",
+            "Équipement additionnel et personnalisation",
+            "Situation du marché"
+          ]
+        },
+        "types": {
+          "title": "Types d'Évaluations",
+          "items": [
+            "Évaluations pour Achat ou Vente",
+            "Évaluations pour Assurances",
+            "Rapports Détaillés d'État"
+          ]
+        }
+      }
+    },
+    "outro": {
+      "description": "Nous sommes fiers d'offrir un service complet et professionnel d'inspections et d'évaluations maritimes. Notre équipe d'experts est disponible pour vous conseiller à chaque étape du processus, garantissant que vous preniez des décisions informées et sûres lors de l'achat, la vente ou l'assurance de votre yacht."
+    },
+    "cta": {
+      "title": "Besoin d'une Inspection ou d'une Évaluation à Minorque?",
+      "description": "Si vous souhaitez obtenir plus d'informations sur nos inspections ou évaluations, ou pour solliciter nos services, n'hésitez pas à nous contacter directement via le formulaire sur notre page de contact ou à nous appeler au numéro indiqué.",
+      "button": "Contacter"
+    }
+  },
+  "logistics": {
+    "hero": {
+      "title": "Logistique Maritime à Minorque | Cargo et Services Personnalisés",
+      "subtitle": {
+        "question": "Vous voulez importer ou exporter tout type de cargaison?",
+        "answer": "Nous le gérons pour vous!"
+      }
+    },
+    "intro": {
+      "text": "Chez Menorca Yacht Brokers, nous offrons un service logistique complet et personnalisé pour l'importation et l'exportation de tout type de cargaison. Des marchandises générales aux envois spécialisés, nous gérons chaque étape du processus avec précision et professionnalisme."
+    },
+    "doorToDoor": {
+      "title": "Services de Logistique \"Door to Door\"",
+      "services": {
+        "pickup": {
+          "title": "Collecte à l'origine",
+          "description": "Nous coordonnons le transport terrestre initial pour assurer que votre cargaison commence son voyage de manière efficace."
+        },
+        "documentation": {
+          "title": "Gestion de documents",
+          "description": "Nous garantissons que tous les permis et formalités douanières sont en règle pour un processus sans contretemps."
+        },
+        "international": {
+          "title": "Transport international",
+          "description": "Nous offrons des solutions efficaces par mer, terre ou air adaptées à vos besoins spécifiques."
+        },
+        "delivery": {
+          "title": "Livraison à destination",
+          "description": "Nous amenons votre cargaison directement à la porte de votre client, garantissant une livraison ponctuelle et sûre."
+        }
+      }
+    },
+    "incoterms": {
+      "title": "Incoterms: Votre Transport, Vos Règles",
+      "terms": {
+        "exw": {
+          "title": "EXW (Ex Works)",
+          "description": "Nous coordonnons tout le transport depuis l'origine jusqu'à la destination."
+        },
+        "fob": {
+          "title": "FOB (Free On Board)",
+          "description": "Nous supervisons le chargement au port d'origine."
+        },
+        "cif": {
+          "title": "CIF (Cost, Insurance, and Freight)",
+          "description": "Nous assurons la protection de votre marchandise."
+        },
+        "dap": {
+          "title": "DAP (Delivered at Place)",
+          "description": "Nous livrons directement à l'emplacement convenu."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi Choisir Menorca Brokers?",
+      "reasons": {
+        "globalCoverage": {
+          "title": "Couverture globale",
+          "description": "Un réseau de partenaires stratégiques qui nous permet d'opérer dans le monde entier."
+        },
+        "support": {
+          "title": "Support 24/7",
+          "description": "Nous sommes disponibles pour résoudre tout incident pendant le transport."
+        },
+        "costOptimization": {
+          "title": "Optimisation des coûts",
+          "description": "Nous concevons des solutions logistiques qui s'adaptent à votre budget et à vos besoins."
+        },
+        "personalizedAttention": {
+          "title": "Attention personnalisée",
+          "description": "Nous adaptons chaque envoi aux caractéristiques spécifiques de votre cargaison."
+        }
+      }
+    },
+    "cta": {
+      "title": "Besoin d'une solution logistique personnalisée?",
+      "description": "Contactez-nous pour concevoir une solution logistique sur mesure pour vous",
+      "button": "Contacter"
+    }
+  },
+  "nauticalConsulting": {
+    "hero": {
+      "title": "Conseil Maritime et Nautique: Experts à Votre Service",
+      "subtitle": {
+        "text": "Solutions intégrales et",
+        "highlight": "conseil spécialisé",
+        "text2": "pour le secteur maritime et nautique à Minorque"
+      }
+    },
+    "intro": {
+      "description": "Chez Menorca Yacht Brokers, nous offrons un service intégral de conseil maritime et nautique conçu pour vous aider à prendre des décisions stratégiques dans le monde maritime. Notre expérience et notre connaissance technique font de nous le partenaire idéal pour résoudre tout défi lié à l'industrie navale et au transport maritime."
+    },
+    "services": {
+      "technicalConsulting": {
+        "title": "Consultation Technique",
+        "description": "Nous évaluons et recommandons des solutions personnalisées pour optimiser vos opérations maritimes, de l'achat d'embarcations à l'implémentation de technologies avancées."
+      },
+      "legalAssistance": {
+        "title": "Assistance Légale et Réglementaire",
+        "description": "Nous vous guidons dans le respect des normes internationales, comme la Convention SOLAS, le Code IMDG, et les réglementations locales."
+      },
+      "feasibilityAnalysis": {
+        "title": "Analyse de Faisabilité",
+        "description": "Nous réalisons des études économiques et techniques pour de nouveaux projets maritimes, assurant que chaque décision soit basée sur des données solides."
+      },
+      "vesselValuation": {
+        "title": "Évaluation d'Embarcations",
+        "description": "Nous offrons des évaluations précises et objectives pour l'achat, la vente, la location ou le financement de yachts et bateaux commerciaux."
+      },
+      "routePlanning": {
+        "title": "Planification d'Itinéraires et Logistique",
+        "description": "Nous concevons des stratégies pour optimiser le temps et les coûts dans vos opérations de transport maritime."
+      }
+    },
+    "cta": {
+      "title": "Besoin de conseil nautique professionnel?",
+      "description": "Contactez notre équipe d'experts pour une consultation personnalisée",
+      "button": "Contacter"
+    }
+  },
+  "valueAddedServices": {
+    "hero": {
+      "title": "Services à Valeur Ajoutée | Plus que du Chartering à Minorque",
+      "subtitle": "Profitez de Minorque au maximum avec nos services additionnels: transferts, restauration, itinéraires touristiques et planification d'événements exclusifs."
+    },
+    "services": {
+      "airportTransfer": {
+        "title": "Prise en Charge et Transfert à l'Aéroport",
+        "description": "Profitez d'un début sans préoccupations. Nous offrons des services de transfert privés et ponctuels depuis l'aéroport jusqu'à votre embarcation, hôtel ou toute destination à Minorque.",
+        "features": [
+          "Flotte de véhicules de luxe",
+          "Chauffeurs multilingues et professionnels",
+          "Options de transfert aller-retour"
+        ]
+      },
+      "touristRoutes": {
+        "title": "Itinéraires Touristiques Privés",
+        "description": "Découvrez Minorque sous une nouvelle perspective. Nous organisons des visites guidées exclusives à:",
+        "features": [
+          "Criques cachées et plages paradisiaques",
+          "Parapente",
+          "Monuments historiques et culturels",
+          "Expériences de randonnée et cyclisme guidé"
+        ]
+      },
+      "catering": {
+        "title": "Restauration Personnalisée à Bord",
+        "description": "Savourez Minorque depuis la mer avec des menus personnalisés qui s'adaptent à vos goûts et besoins.",
+        "features": [
+          "Chefs locaux et cuisine méditerranéenne",
+          "Options véganes, végétariennes et sans gluten",
+          "Boissons premium et dégustations de vins"
+        ]
+      },
+      "assistance": {
+        "title": "Assistance 24/7 Pendant votre Voyage",
+        "description": "Notre équipe est disponible à tout moment pour garantir que votre expérience soit parfaite. Nous vous aidons avec:",
+        "features": [
+          "Réservations de dernière minute",
+          "Résolution de tout inconvénient pendant le voyage"
+        ]
+      },
+      "events": {
+        "title": "Planification d'Événements Exclusifs",
+        "description": "Célébrez des moments spéciaux à bord d'un yacht ou dans les lieux les plus emblématiques de Minorque.",
+        "features": [
+          "Mariages, anniversaires et événements corporatifs",
+          "Décoration thématique et divertissement en direct"
+        ]
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir Menorca Brokers.com?",
+      "points": [
+        {
+          "title": "Service client exceptionnel:",
+          "description": "Nous nous concentrons sur chaque détail pour garantir que vous profitiez d'un service impeccable."
+        },
+        {
+          "title": "Expérience locale avec portée globale:",
+          "description": "Nous sommes experts de Minorque et offrons des connexions internationales."
+        },
+        {
+          "title": "Flexibilité et personnalisation:",
+          "description": "Nous adaptons chaque service à vos préférences."
+        }
+      ],
+      "testimonial": {
+        "quote": "Un service exceptionnel qui a dépassé toutes mes attentes",
+        "author": "Charles Grange, 28 ans"
+      }
+    },
+    "cta": {
+      "title": "Intéressé par nos services?",
+      "description": "Contactez-nous pour personnaliser votre expérience à Minorque",
+      "button": "Contacter"
+    }
+  }
+}

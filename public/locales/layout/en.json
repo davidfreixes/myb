@@ -11,7 +11,8 @@
     "languages": {
       "spanish": "Spanish",
       "english": "English",
-      "catalan": "Catalan"
+      "catalan": "Catalan",
+      "french": "French"
     },
     "services": {
       "yachtBroker": {

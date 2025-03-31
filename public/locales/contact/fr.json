@@ -1,0 +1,195 @@
+{
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Nous sommes là pour vous aider. Choisissez comment vous préférez nous contacter.",
+      "button": "Découvrez-nous !"
+    },
+    "contactForm": {
+      "title": "Formulaire de Contact",
+      "form": {
+        "labels": {
+          "name": "Nom",
+          "email": "Email",
+          "country": "Pays",
+          "phone": "Téléphone",
+          "message": "Message"
+        },
+        "placeholders": {
+          "name": "Votre nom complet",
+          "email": "votre@email.com",
+          "country": "Sélectionner",
+          "phone": "Votre numéro de téléphone",
+          "message": "Comment pouvons-nous vous aider ?"
+        },
+        "countries": {
+          "ES": "Espagne (+34)",
+          "UK": "Royaume-Uni (+44)",
+          "DE": "Allemagne (+49)",
+          "FR": "France (+33)"
+        },
+        "validation": {
+          "name": {
+            "required": "Le nom est requis",
+            "minLength": "Le nom doit comporter au moins 2 caractères"
+          },
+          "email": {
+            "required": "L'email est requis",
+            "invalid": "Veuillez saisir un email valide"
+          },
+          "phone": {
+            "required": "Le téléphone est requis",
+            "invalid": "Veuillez saisir un numéro de téléphone valide"
+          },
+          "message": {
+            "required": "Le message est requis",
+            "minLength": "Le message doit comporter au moins 4 caractères"
+          }
+        },
+        "submit": {
+          "button": "Envoyer le Message",
+          "sending": "Envoi en cours...",
+          "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+          "error": "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer."
+        }
+      }
+    },
+    "appointment": {
+      "title": "Réserver un Rendez-vous",
+      "steps": {
+        "service": "Service",
+        "datetime": "Date & Heure",
+        "details": "Détails de base",
+        "summary": "Résumé"
+      },
+      "categories": {
+        "title": "Sélectionnez la catégorie",
+        "options": {
+          "all": "TOUT",
+          "yachtBroker": "Yacht Broker",
+          "yachtCharter": "Yacht Charter",
+          "inspections": "Inspections et Évaluations",
+          "consulting": "Conseil Nautique",
+          "valueAdded": "Services à Valeur Ajoutée",
+          "shipBroker": "Ship Sale & Purchase Broker",
+          "charterBroker": "Charter Broker"
+        }
+      },
+      "services": {
+        "title": "Sélectionnez le service",
+        "duration": "Durée",
+        "price": "Prix",
+        "options": {
+          "meeting": {
+            "title": "Réunion en Personne",
+            "duration": "30 min"
+          },
+          "call": {
+            "title": "Appel de présentation",
+            "duration": "30 min"
+          },
+          "marketAnalysis": {
+            "title": "Analyse de marché d'achat-vente",
+            "duration": "1h",
+            "price": "€50.00"
+          },
+          "yachtSale": {
+            "title": "Offre de vente d'un Yacht ou embarcation",
+            "duration": "30m"
+          },
+          "yachtPurchase": {
+            "title": "Achat de Yacht ou embarcation",
+            "duration": "30m"
+          },
+          "charterRequest": {
+            "title": "Demande de charter",
+            "duration": "30m"
+          },
+          "basicValuation": {
+            "title": "Évaluation de base",
+            "duration": "2h",
+            "price": "€300.00"
+          },
+          "nauticalConsulting": {
+            "title": "Conseil nautique",
+            "duration": "1h"
+          },
+          "valueAddedServices": {
+            "title": "Demande de Services à Valeur Ajoutée",
+            "duration": "30m"
+          },
+          "shipSalePurchase": {
+            "title": "Analyse et demande de service Ship Sale & Purchase",
+            "duration": "1h"
+          },
+          "charterService": {
+            "title": "Service de charter",
+            "duration": "30m"
+          }
+        }
+      },
+      "datetime": {
+        "date": {
+          "label": "Date"
+        },
+        "time": {
+          "label": "Heure",
+          "slots": {
+            "slot1": "13:15 - 14:15",
+            "slot2": "14:15 - 15:15",
+            "slot3": "15:15 - 16:15"
+          }
+        }
+      },
+      "contactDetails": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Votre nom complet"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "votre@email.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "Votre numéro de téléphone"
+        }
+      },
+      "summary": {
+        "title": "Résumé de la réservation",
+        "fields": {
+          "service": "Service",
+          "date": "Date",
+          "time": "Heure",
+          "name": "Nom",
+          "email": "Email",
+          "phone": "Téléphone"
+        }
+      },
+      "buttons": {
+        "next": "Suivant",
+        "previous": "Précédent",
+        "confirm": "Confirmer la Réservation",
+        "processing": "Traitement en cours..."
+      },
+      "validation": {
+        "required": {
+          "category": "Sélectionnez une catégorie",
+          "service": "Sélectionnez un service",
+          "date": "Sélectionnez une date",
+          "time": "Sélectionnez une heure",
+          "name": "Saisissez votre nom",
+          "email": "Saisissez votre email",
+          "phone": "Saisissez votre téléphone"
+        },
+        "invalid": {
+          "email": "Saisissez un email valide"
+        }
+      },
+      "messages": {
+        "success": "Rendez-vous réservé avec succès !",
+        "error": "Une erreur s'est produite lors du traitement de la réservation. Veuillez réessayer."
+      }
+    }
+  }
+}

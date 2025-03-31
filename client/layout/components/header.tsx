@@ -90,6 +90,10 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
       code: "cat",
       name: t("languages.catalan"),
     },
+    {
+      code: "fr",
+      name: t("languages.french"),
+    },
   ];
 
   const navigation: NavItem[] = [

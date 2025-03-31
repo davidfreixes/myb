@@ -1,0 +1,503 @@
+{
+  "partners": {
+    "hero": {
+      "title": "Entreprises Nautiques à Minorque: Fournisseurs et Distributeurs",
+      "subtitle": "Vous trouverez ici nos partenaires et fournisseurs de produits. Si vous souhaitez en faire partie, contactez-nous.",
+      "contactButton": "Contactez-nous"
+    },
+    "cta": {
+      "title": "Vous voulez faire partie de notre Réseau de Fournisseurs?",
+      "description": "Rejoignez notre réseau de partenaires et fournisseurs nautiques à Minorque. Contactez-nous pour explorer les opportunités de collaboration.",
+      "button": "Demander des Informations"
+    }
+  },
+  "portDaily": {
+    "hero": {
+      "title": "Journal du Port de Mahón",
+      "subtitle": "Le journal de l'activité maritime quotidienne dans le Port de Mahón."
+    },
+    "news": {
+      "articles": [
+        {
+          "title": "L'APB met en concession pour 20 ans la gestion des postes d'amarrage du quai de Poniente dans le port de Maó"
+        },
+        {
+          "title": "Les amarrages du Moll de Ponent de Maó sont mis en concession pour 6 millions d'euros pour 20 ans"
+        }
+      ],
+      "readMore": "Lire plus"
+    },
+    "submitNews": {
+      "title": "Vous voulez nous envoyer votre actualité?",
+      "description": "Partagez avec nous les dernières nouveautés du secteur maritime à Mahón.",
+      "submitButton": "Envoyer une Actualité",
+      "contactButton": "Contacter"
+    }
+  },
+  "conditionsAndRates": {
+    "hero": {
+      "title": "Conditions de Contrat et Tarifs",
+      "subtitle": "Informations détaillées sur nos services et tarifs"
+    },
+    "tabs": {
+      "yachts": {
+        "label": "Domaine des Yachts",
+        "intro": "Chez Menorca Yacht Brokers, nous offrons une large gamme de services liés à l'achat, la vente et la location de yachts, y compris les inspections et évaluations maritimes. Ci-dessous, nous détaillons nos tarifs et conditions pour chacun des services que nous proposons."
+      },
+      "brokerage": {
+        "label": "Ship Brokerage et Charterer",
+        "intro": "Chez Menorca Brokers, nous suivons les réglementations internationales reconnues par BIMCO (Baltic and International Maritime Council) pour garantir que tous nos accords soient clairs, justes et transparents."
+      }
+    },
+    "yachts": {
+      "brokerage": {
+        "title": "1. Services de Courtage de Yachts",
+        "saleAndPurchase": {
+          "title": "Achat et Vente de Yachts:",
+          "points": [
+            "Commission de 5% sur le prix de vente.",
+            "Commission minimale de 2 000 € pour les transactions inférieures à 40 000 €.",
+            "Le paiement de la commission est effectué à la clôture de la transaction."
+          ]
+        },
+        "charter": {
+          "title": "Location et Charter de Yachts:",
+          "points": [
+            "Commission de 10% sur le prix de location.",
+            "Conditions spécifiques pour les locations de longue durée (plus de 30 jours)."
+          ]
+        }
+      },
+      "inspections": {
+        "title": "2. Inspections Maritimes",
+        "plans": [
+          {
+            "title": "Inspection basique",
+            "price": "500€",
+            "description": "Yacht jusqu'à 12 mètres",
+            "features": [
+              "Inspection visuelle de la coque",
+              "Révision du moteur",
+              "Système électrique",
+              "Système de navigation"
+            ]
+          },
+          {
+            "title": "Inspection avancée",
+            "price": "1 000€",
+            "description": "Yacht jusqu'à 24 mètres",
+            "features": [
+              "Tout ce qui est inclus dans l'inspection basique",
+              "Systèmes de sécurité",
+              "Essai de navigation",
+              "Évaluation complète"
+            ]
+          },
+          {
+            "title": "Inspection complète",
+            "price": "2 000€",
+            "description": "Yacht supérieur à 24 mètres",
+            "features": [
+              "Rapport complet",
+              "Tests exhaustifs",
+              "Systèmes hydrauliques",
+              "Systèmes de propulsion"
+            ]
+          }
+        ]
+      },
+      "valuations": {
+        "title": "3. Évaluations Maritimes",
+        "plans": [
+          {
+            "title": "Évaluation basique",
+            "price": "300€",
+            "description": "Yacht jusqu'à 12 mètres"
+          },
+          {
+            "title": "Évaluation avancée",
+            "price": "600€",
+            "description": "Yacht jusqu'à 24 mètres"
+          },
+          {
+            "title": "Évaluation complète",
+            "price": "1 200€",
+            "description": "Yacht supérieur à 24 mètres"
+          }
+        ]
+      },
+      "otherServices": {
+        "title": "4. Autres Services",
+        "services": [
+          {
+            "title": "Conseil et Consultation Nautique",
+            "price": "150€",
+            "unit": "/ heure"
+          },
+          {
+            "title": "Gestion de documentation",
+            "price": "300€",
+            "unit": "par transaction"
+          }
+        ]
+      },
+      "conditions": {
+        "title": "5. Conditions Générales",
+        "items": [
+          {
+            "title": "Méthodes de paiement",
+            "description": "Nous acceptons les paiements par virement bancaire, carte de crédit ou PayPal. Les paiements doivent être effectués avant la livraison des rapports finaux.",
+            "benefits": ["Virement bancaire", "Carte de crédit", "PayPal"]
+          },
+          {
+            "title": "Politique d'Annulations",
+            "description": "En cas d'annulation avec moins de 24 heures de préavis, 50% du tarif convenu sera facturé.",
+            "benefits": ["Flexibilité", "Transparence", "Sans coûts cachés"]
+          },
+          {
+            "title": "Validité et Garanties",
+            "description": "Les tarifs sont sujets à des changements annuels selon la révision des prix du marché.",
+            "benefits": [
+              "Prix compétitifs",
+              "Révision annuelle",
+              "Garantie de service"
+            ]
+          }
+        ]
+      }
+    },
+    "shipBrokerage": {
+      "commissions": {
+        "title": "1. Commissions pour Ship Broker",
+        "standard": {
+          "title": "Commission Standard:",
+          "description": "La commission habituelle est de 1.25% à 2.5% du fret brut, prix de vente du navire ou valeur du contrat d'affrètement."
+        },
+        "payment": {
+          "title": "Paiement de la Commission:",
+          "points": [
+            "Affrètement: À l'encaissement du premier fret ou au début du contrat.",
+            "Vente de Navires: Après la signature du MOA et la livraison du navire.",
+            "Renouvellements et Extensions: Commission additionnelle selon accord préalable."
+          ]
+        }
+      },
+      "responsibilities": {
+        "title": "2. Responsabilités du Ship Broker",
+        "intermediation": {
+          "title": "Intermédiation",
+          "description": "Nous agissons comme intermédiaire impartial entre les parties, facilitant la négociation."
+        },
+        "confidentiality": {
+          "title": "Confidentialité",
+          "description": "Nous maintenons la confidentialité de toutes les informations sensibles."
+        }
+      },
+      "chartererCommissions": {
+        "title": "3. Commissions pour Charterer",
+        "charter": {
+          "title": "Commission d'Affrètement:",
+          "description": "Varie entre 1% à 2% de la valeur totale de l'affrètement convenu."
+        },
+        "additional": {
+          "title": "Compensation pour Revenu Additionnel:",
+          "description": "Compensation additionnelle en cas de renouvellement ou modification du contrat."
+        }
+      },
+      "chartererResponsibilities": {
+        "title": "4. Responsabilités du Charterer",
+        "negotiation": {
+          "title": "Négociation et Affrètement",
+          "description": "Le Charterer se charge de négocier les conditions du contrat et d'assurer la conformité réglementaire."
+        },
+        "compliance": {
+          "title": "Respect du Contrat",
+          "description": "Garantir le respect des conditions établies et gérer les éventuels litiges."
+        }
+      },
+      "contractConditions": {
+        "title": "Conditions du Contrat",
+        "subtitle": "Aspects fondamentaux qui régissent nos accords commerciaux.",
+        "conditions": [
+          {
+            "title": "Durée du Contrat",
+            "description": "Valable jusqu'à la finalisation de l'accord commercial, sauf autre délai établi.",
+            "benefits": [
+              "Flexibilité temporelle",
+              "Adaptable aux besoins",
+              "Renouvellement automatique optionnel"
+            ]
+          },
+          {
+            "title": "Exclusivité",
+            "description": "Peut être établie selon les termes convenus dans chaque cas particulier.",
+            "benefits": [
+              "Accords personnalisés",
+              "Termes négociables",
+              "Garantie de service"
+            ]
+          },
+          {
+            "title": "Modifications",
+            "description": "Toute modification doit être convenue par écrit entre les parties.",
+            "benefits": [
+              "Transparence totale",
+              "Documentation formelle",
+              "Sécurité juridique"
+            ]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Vous avez des questions?",
+      "description": "Notre équipe est disponible pour résoudre tout doute concernant nos conditions et tarifs.",
+      "button": "Contacter"
+    }
+  },
+  "purchaseAndSale": {
+    "hero": {
+      "title": "Contrats d'Achat-Vente de Yachts",
+      "subtitle": "Page Informative: Contrats MYBA chez Menorca Brokers"
+    },
+    "introduction": {
+      "title": "Qu'est-ce qu'un Contrat MYBA?",
+      "paragraph1": "Chez Menorca Brokers, nous nous assurons que chaque transaction de yachts se réalise selon les plus hauts standards de l'industrie. Pour garantir transparence, sécurité et confiance, nous utilisons les Contrats MYBA, l'une des formes contractuelles les plus reconnues et acceptées dans le monde de la location et de la vente de yachts.",
+      "paragraph2": "Le contrat MYBA (Mediterranean Yacht Brokers Association) est un document standard qui régule les termes et conditions des transactions liées aux yachts, comme les locations et les ventes. Ce contrat établit clairement les droits et obligations tant du propriétaire que du client, minimisant les risques et les possibles malentendus."
+    },
+    "benefits": {
+      "title": "Principaux Avantages",
+      "items": [
+        {
+          "title": "Clarté et transparence",
+          "description": "Les termes et conditions sont clairement définis."
+        },
+        {
+          "title": "Protection légale",
+          "description": "Garantit la protection de toutes les parties impliquées dans la transaction."
+        },
+        {
+          "title": "Flexibilité",
+          "description": "S'adapte à diverses nécessités, des locations de courte durée aux accords complets d'achat-vente."
+        },
+        {
+          "title": "Standards internationaux",
+          "description": "Reconnu globalement par les courtiers, opérateurs et propriétaires de yachts."
+        }
+      ]
+    },
+    "components": {
+      "title": "Composants du Contrat MYBA",
+      "items": [
+        {
+          "title": "Détails du yacht",
+          "description": "Inclut des spécifications comme le nom, la longueur, l'équipage et l'équipement."
+        },
+        {
+          "title": "Durée et termes de l'accord",
+          "description": "Dates spécifiques de location ou conditions d'achat-vente."
+        },
+        {
+          "title": "Politique d'annulations",
+          "description": "Établit les conditions en cas de force majeure ou d'annulation."
+        },
+        {
+          "title": "Coûts et dépôts",
+          "description": "Définit les prix, tarifs additionnels et paiements initiaux."
+        },
+        {
+          "title": "Termes d'utilisation",
+          "description": "Décrit comment le yacht sera utilisé et les responsabilités du client."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir Menorca Brokers",
+      "paragraph1": "Notre expérience dans le secteur nous permet de vous conseiller à chaque étape du processus, garantissant que votre contrat MYBA soit adapté à vos besoins spécifiques. Que vous cherchiez à louer ou à acquérir un yacht, nous travaillons pour que vous profitiez d'une expérience sans préoccupations.",
+      "paragraph2": "Contactez-nous pour plus d'informations sur comment les contrats MYBA peuvent soutenir votre prochaine transaction nautique."
+    },
+    "cta": {
+      "title": "Intéressé par nos services?",
+      "description": "Contactez-nous pour découvrir comment nous pouvons vous aider à trouver le yacht parfait pour vos besoins",
+      "button": "Contacter maintenant"
+    }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "Qui Sommes-Nous chez Menorca Brokers",
+      "subtitle": "Nous sommes prêts à vous offrir les meilleurs conseils et à garantir une expérience d'achat réussie.",
+      "button": "Découvrez-nous!"
+    },
+    "team": {
+      "title": "Notre équipe",
+      "description": "Notre équipe est composée de professionnels hautement qualifiés et motivés, tous experts dans leur domaine. Avec de nombreuses années d'expérience dans l'industrie, ils ont l'expertise pour fournir des services complets et de première classe à nos clients.",
+      "members": {
+        "andreuMartinez": {
+          "name": "Andreu Martinez",
+          "role": "Yacht Broker & Charterer",
+          "location": "Espagne",
+          "email": "info@menorcabrokers.com",
+          "bio": [
+            "Andreu Martínez Parera est un courtier avec une solide formation académique dans le domaine maritime.",
+            "Formé à l'Institut Maritime Espagnol et à l'Institute of Chartered Shipbrokers de Londres. De plus, il possède une carrière en Nautique, ayant obtenu son diplôme en Sciences Nautiques avec une spécialisation en Transport Maritime. Son éducation est complétée par un Master en Gestion du Transport Maritime et une formation de Troisième Cycle en Logistique et Supply Chain, ce qui lui a permis de développer une vision intégrale du secteur.",
+            "Depuis 2017, Andreu a accumulé une expérience significative dans le monde maritime et logistique. Sa carrière a commencé chez APM Terminals, partie du Groupe MAERSK, où il a été membre du département des opérations à Barcelone. Durant cette étape, il s'est impliqué activement dans l'optimisation des processus logistiques et la gestion des opérations portuaires, ce qui lui a donné une compréhension profonde de la chaîne d'approvisionnement globale.",
+            "En 2019, Andreu a assumé la responsabilité de la gestion des opérations dans la compagnie maritime CMA CGM à Marseille. Pendant plus de 4 ans et demi, il a optimisé l'efficacité des opérations ainsi que la coordination des activités de chargement, résultant en d'excellents résultats de productivité et d'arrimage.",
+            "Simultanément à sa carrière professionnelle, Andreu a partagé son expérience et ses connaissances en tant que professeur universitaire dans le domaine des Affaires Maritimes à l'Universitat Politécnica de Catalunya. Tout au long de sa trajectoire, il a formé de nouvelles générations de professionnels du secteur, transmettant ses connaissances sur la logistique et les opérations maritimes.",
+            "Actuellement, Andreu dirige Menorca Yacht Brokers, un projet qui offre une large gamme de services de ship brokerage, charter et conseil nautique. Grâce à sa formation académique et son expérience pratique, Andreu a développé une compréhension profonde du secteur maritime et de ses besoins spécifiques."
+          ]
+        },
+        "danielOrtega": {
+          "name": "Daniel Ortega",
+          "role": "Freelance Yacht Broker & Event Planning",
+          "location": "Belgique",
+          "email": "daniel@menorcabrokers.com"
+        },
+        "grigoris": {
+          "name": "Grigoris Psomas",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Pays-Bas",
+          "email": "grigoris@menorcabrokers.com"
+        },
+        "christine": {
+          "name": "Christine Giannouli",
+          "role": "Freelance Yacht & Charter Broker",
+          "location": "Grèce",
+          "email": "christine@menorcabrokers.com"
+        },
+        "david": {
+          "name": "David Freixes",
+          "role": "IT Developer & Co-Owner",
+          "location": "Espagne"
+        }
+      },
+      "contactButton": "Contactez-moi"
+    },
+    "contact": {
+      "title": "Prêt à Commencer Votre Voyage?",
+      "subtitle": "Contactez-nous Aujourd'hui",
+      "description": "Découvrez comment Menorca Brokers peut vous aider à atteindre vos objectifs dans l'achat-vente d'embarcations. Notre équipe est disponible pour répondre à vos questions et vous offrir une consultation personnalisée.",
+      "button": "Contactez-nous"
+    }
+  },
+  "legalNotice": {
+    "hero": {
+      "title": "Mentions Légales"
+    },
+    "sections": {
+      "identification": {
+        "title": "1. Identification du titulaire du site web",
+        "content": [
+          "Le présent site web, MenorcaBrokers.com.",
+          "Menorca Yacht Brokers s'identifie comme la marque commerciale de www.menorcabrokers.com",
+          "Siège social: Minorque, Îles Baléares, Espagne."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "2. Propriété intellectuelle et industrielle",
+        "content": [
+          "Tous les contenus du site web, y compris textes, images, graphiques, logos, icônes, logiciels et autres éléments de ce site, sont la propriété de Menorca Brokers ou de ses concédants, et sont protégés par les lois de propriété intellectuelle et industrielle. La reproduction, distribution, modification, transformation, communication publique ou toute autre activité similaire sans l'autorisation préalable expresse de Menorca Brokers est interdite.",
+          "La propriété du domaine www.menorcabrokers.com ainsi que de tous ses dérivés et du site web lui-même appartient à:",
+          "Andreu Martínez Parera.",
+          "Contacter via les canaux officiels pour plus d'informations."
+        ]
+      },
+      "usage": {
+        "title": "3. Utilisation du site web",
+        "content": "L'utilisateur s'engage à utiliser ce site web conformément à la loi, au présent Avis Légal et aux conditions qui, le cas échéant, sont établies pour chaque service. De même, l'utilisateur s'engage à ne pas utiliser le site web à des fins illicites ou préjudiciables aux droits et intérêts de Menorca Brokers ou de tiers."
+      },
+      "liability": {
+        "title": "4. Exonération de responsabilité",
+        "content": "Menorca Brokers n'est pas responsable des dommages dérivés de l'utilisation du site web ou de ses contenus. De même, il ne garantit pas la disponibilité continue des services du site web, pouvant suspendre temporairement l'accès pour des tâches de maintenance ou pour des causes indépendantes de sa volonté."
+      },
+      "privacy": {
+        "title": "5. Politique de confidentialité",
+        "content": "Les informations personnelles reçues à travers ce site web seront traitées conformément à notre Politique de Confidentialité, qui est disponible sur le site web."
+      },
+      "links": {
+        "title": "6. Liens vers d'autres sites web",
+        "content": "Ce site web peut contenir des liens vers d'autres sites externes. Menorca Brokers S.L. n'est pas responsable des contenus, politiques de confidentialité ou pratiques d'autres sites web."
+      },
+      "jurisdiction": {
+        "title": "7. Loi applicable et juridiction",
+        "content": "La relation entre Menorca Brokers et l'utilisateur sera régie par la réglementation espagnole. En cas de litige, les parties se soumettront aux tribunaux compétents de Minorque, Îles Baléares, Espagne."
+      }
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Politique de Confidentialité"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "1. Information générale",
+        "content": "Chez Menorca Brokers S.L., domiciliée à C/ Ramón y Cajal, 45, 07760, Minorque, Îles Baléares, Espagne, nous sommes responsables du traitement des données personnelles de nos utilisateurs, conformément à la réglementation en vigueur sur la protection des données personnelles, notamment le Règlement (UE) 2016/679 du Parlement Européen et du Conseil, du 27 avril 2016, relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (RGPD)."
+      },
+      "personalData": {
+        "title": "2. Données personnelles que nous recueillons",
+        "intro": "Nous recueillons les types de données personnelles suivants lorsque les utilisateurs interagissent avec notre site web:",
+        "items": [
+          "Données d'identification (nom, prénom, email, téléphone, adresse).",
+          "Données liées à l'activité commerciale et aux transactions.",
+          "Informations liées à la navigation web (adresse IP, cookies, etc.)."
+        ]
+      },
+      "purposes": {
+        "title": "3. Finalités du traitement",
+        "intro": "Les données personnelles que nous recueillons seront utilisées aux fins suivantes:",
+        "items": [
+          "Gérer les services offerts à travers notre site web.",
+          "Répondre aux consultations et demandes d'information.",
+          "Envoyer des communications commerciales liées à nos services (si l'utilisateur a donné son consentement pour cela).",
+          "Réaliser des analyses statistiques et améliorer l'expérience de navigation du site web.",
+          "Respecter les obligations légales et fiscales."
+        ]
+      },
+      "legalBasis": {
+        "title": "4. Base légale pour le traitement",
+        "intro": "La base légale pour le traitement des données personnelles est:",
+        "items": [
+          "Le consentement de l'utilisateur, dans les cas où cela est nécessaire.",
+          "L'exécution d'un contrat ou de mesures précontractuelles, dans le cas où l'utilisateur a sollicité un service.",
+          "Le respect d'une obligation légale de la part de Menorca Brokers S.L.."
+        ]
+      },
+      "dataRecipients": {
+        "title": "5. Destinataires des données",
+        "content": "Menorca Brokers S.L. ne cédera pas les données personnelles à des tiers, sauf dans les cas où cela est nécessaire pour respecter la loi, ou si l'utilisateur a donné son consentement pour cela. Cependant, les données pourront être partagées avec des fournisseurs de services qui nous aident à opérer notre entreprise, comme des fournisseurs d'hébergement web ou des services de courrier électronique."
+      },
+      "internationalTransfers": {
+        "title": "6. Transferts internationaux de données",
+        "content": "Si nécessaire, les données personnelles peuvent être transférées à des pays en dehors de l'Espace Économique Européen (EEE), auquel cas les mesures de protection adéquates seront garanties conformément à la législation applicable."
+      },
+      "userRights": {
+        "title": "7. Droits des utilisateurs",
+        "intro": "Les utilisateurs ont le droit de:",
+        "items": [
+          "Accéder à leurs données personnelles.",
+          "Rectifier leurs données si elles sont incorrectes ou incomplètes.",
+          "Supprimer leurs données personnelles lorsqu'elles ne sont plus nécessaires aux fins pour lesquelles elles ont été recueillies.",
+          "Limiter le traitement de leurs données dans certaines circonstances.",
+          "S'opposer au traitement de leurs données pour des motifs liés à leur situation particulière.",
+          "Demander la portabilité de leurs données dans un format structuré et d'usage commun."
+        ],
+        "contact": "Pour exercer ces droits, l'utilisateur peut nous contacter via l'email."
+      },
+      "dataRetention": {
+        "title": "8. Conservation des données",
+        "content": "Les données personnelles seront conservées pendant le temps nécessaire pour remplir les finalités pour lesquelles elles ont été recueillies et conformément aux délais établis par la législation en vigueur."
+      },
+      "dataSecurity": {
+        "title": "9. Sécurité des données",
+        "content": "Menorca Brokers S.L. met en œuvre des mesures de sécurité techniques et organisationnelles pour protéger les données personnelles contre les accès non autorisés, altérations, pertes ou destruction de celles-ci."
+      },
+      "policyChanges": {
+        "title": "10. Changements dans la Politique de Confidentialité",
+        "content": "Nous nous réservons le droit de modifier cette Politique de Confidentialité à tout moment, tout changement étant publié sur ce site web. Nous recommandons de réviser cette politique périodiquement pour être informé sur la façon dont nous protégeons vos données."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "content": "Si vous avez des questions sur notre Politique de Confidentialité ou sur le traitement de vos données personnelles, vous pouvez nous contacter."
+      }
+    }
+  }
+}

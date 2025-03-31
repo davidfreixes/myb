@@ -1,0 +1,64 @@
+{
+  "quoteModal": {
+    "title": "Demander un Devis",
+    "description": "Remplissez le formulaire pour demander un devis",
+    "fields": {
+      "vesselName": {
+        "label": "Nom du Navire",
+        "placeholder": "Saisissez le nom du navire"
+      },
+      "imoNumber": {
+        "label": "Numéro IMO",
+        "placeholder": "Saisissez le numéro IMO"
+      },
+      "flag": {
+        "label": "Pavillon",
+        "placeholder": "Saisissez le pays du pavillon"
+      },
+      "portOfDelivery": {
+        "label": "Port de Livraison",
+        "placeholder": "Saisissez le port de livraison"
+      },
+      "deliveryDate": {
+        "label": "Date/Fenêtre de Livraison"
+      },
+      "productRequired": {
+        "label": "Produit Requis",
+        "placeholder": "Saisissez le produit et la quantité requise"
+      },
+      "deliveryMethod": {
+        "label": "Méthode de Livraison",
+        "placeholder": "Saisissez la méthode de livraison"
+      },
+      "consigneeName": {
+        "label": "Nom du Destinataire/Agent",
+        "placeholder": "Saisissez le nom du destinataire ou de l'agent"
+      },
+      "contactEmail": {
+        "label": "Email",
+        "placeholder": "Saisissez l'adresse email"
+      },
+      "contactPhone": {
+        "label": "Téléphone (Optionnel)",
+        "placeholder": "Saisissez le numéro de téléphone"
+      }
+    },
+    "submitButton": "Envoyer la Demande",
+    "submitting": "Envoi en cours...",
+    "validation": {
+      "required": "Ce champ est obligatoire",
+      "invalidEmail": "Veuillez saisir une adresse email valide"
+    },
+    "error": {
+      "default": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "success": {
+      "title": "Demande de Devis Envoyée",
+      "message": "Merci pour votre demande. Nous vous contacterons prochainement.",
+      "closeButton": "Fermer"
+    }
+  },
+  "quoteButton": {
+    "label": "Demander un Devis"
+  }
+}

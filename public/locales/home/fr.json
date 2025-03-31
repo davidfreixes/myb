@@ -1,0 +1,180 @@
+{
+  "mainPage": {
+    "hero": {
+      "title": "Location de Bateaux à Minorque",
+      "subtitle": {
+        "part1": "Votre Broker de Yachts de confiance à Minorque",
+        "part2": "<p>Achetez</p>, <p>vendez</p> ou <p>louez</p> votre embarcation avec Menorca Yacht Brokers"
+      },
+      "description": {
+        "part1": "Chez Menorca Yacht Brokers, nous vous offrons des solutions complètes pour la location de bateaux à Minorque, la location de voiliers, de vedettes et de tout type d'embarcations, en plus de l'achat et la vente de yachts et du conseil nautique.",
+        "part2": "Nous sommes prêts à vous guider à chaque étape du processus, que ce soit pour la location ou l'achat."
+      },
+      "buttons": {
+        "explore_services": "Explorez Nos Services",
+        "contact_us": "Contacter"
+      }
+    },
+    "servicesSection": {
+      "header": {
+        "title": "Nos Services",
+        "description": "Découvrez notre large gamme de services nautiques professionnels à Minorque"
+      },
+      "services": [
+        {
+          "title": "Yacht Broker",
+          "description": {
+            "parte1": "Nous vous aidons à trouver le meilleur Yacht pour vous. Selon vos goûts, nous vous donnerons le plus d'options possibles pour l'achat de Yachts.",
+            "parte2": "Yachts neufs ou d'occasion. Les deux options sont bonnes et nous vous aidons à les découvrir."
+          }
+        },
+        {
+          "title": "Location de Bateaux à Minorque",
+          "description": {
+            "parte1": "Vous cherchez à louer un bateau à Minorque pour passer une semaine aux Baléares?",
+            "parte2": "Nous offrons des services de location de voiliers, de vedettes et de tout type d'embarcations à Minorque. Contactez-nous et en utilisant toutes les ressources à notre disposition, nous pouvons tout organiser depuis l'aéroport jusqu'au départ de vos vacances. Dites-nous ce dont vous avez besoin et nous trouverons un bateau (avec skipper si nécessaire) pour que vos vacances soient parfaites."
+          }
+        },
+        {
+          "title": "Bunker Supply",
+          "description": {
+            "parte1": "Nous offrons des services de Ship Broker et Charterer pour les fournitures de carburant marin.",
+            "parte2": "Consultez notre rapport quotidien pour obtenir des informations actualisées sur les prix et la disponibilité, et contactez-nous pour gérer vos besoins en bunker."
+          }
+        },
+        {
+          "title": "Inspections et Évaluations de Yachts",
+          "description": "Nous réalisons des inspections de Yachts préalables au Ports State Control, aux ventes ou aux essais en mer. Nous réalisons également des évaluations préalables aux transactions pour assurer la valeur de l'embarcation ou du navire."
+        },
+        {
+          "title": "Gestion de Fret et Logistique",
+          "description": "En fusion avec On Line Traders & Shipping, nous gérons les cargaisons avec les entreprises de l'île afin d'aider et d'optimiser les processus."
+        },
+        {
+          "title": "Conseil Nautique",
+          "description": "Gestion de documentation, immatriculations ou questions. Nos conseillers sont là pour aider avec n'importe quelle question ou démarche du secteur."
+        },
+        {
+          "title": "Services à Valeur Ajoutée",
+          "description": "En plus de tous les services, nous pouvons ajouter des transferts depuis l'aéroport ou l'aérodrome, le port ou des déplacements. Également des excursions, des visites sophistiquées ou des itinéraires sur l'île selon les goûts du client."
+        }
+      ],
+      "button": "Accéder au service"
+    },
+    "aboutVideoSection": {
+      "title": "Votre Consultant de Confiance pour la Location d'Embarcations",
+      "description": "Chez Menorca Brokers, nous nous consacrons à faciliter la location de bateaux, voiliers et vedettes à Minorque grâce à un service innovant et fiable. Notre équipe professionnelle est prête à vous offrir les meilleurs conseils et à garantir une expérience de navigation réussie."
+    },
+    "featuresSection": {
+      "features": [
+        {
+          "title": "Naviguer vers votre succès à Minorque",
+          "description": "Menorca Yacht Brokers ne se concentre pas seulement sur la mise en relation de ses clients avec des opportunités de qualité dans la location de bateaux à Minorque, mais s'engage également à fournir un service intégral qui met en valeur l'essence unique de l'île. L'entreprise s'est forgée une réputation grâce à sa connaissance approfondie du marché minorquin, permettant à ses clients de trouver des embarcations qui répondent parfaitement à leurs besoins et de profiter d'une expérience de navigation exceptionnelle.",
+          "imageAlt": "Location de bateaux à Minorque"
+        },
+        {
+          "title": "Connecter les opportunités en Méditerranée",
+          "description": "Une autre devise qui définit Menorca Yacht Brokers et reflète sa mission d'unir les personnes et les entreprises partageant une même passion pour la mer. De la première consultation jusqu'à la conclusion de chaque opération, que ce soit pour la location de voiliers à Minorque ou l'achat de yachts, MenorcaBrokers.com accompagne ses clients à chaque étape, offrant un service de qualité avec une attention particulière aux détails et à la satisfaction totale du client.",
+          "imageAlt": "Location voilier Minorque"
+        },
+        {
+          "title": "Expérience locale, portée globale",
+          "description": "Sur le marché des services nautiques en Méditerranée, Menorca Yacht Brokers se distingue comme une entreprise pionnière avec une combinaison unique d'<p>Expérience locale, portée globale</p>. Cette entreprise innovante de Minorque a réussi à établir une présence significative dans le secteur de la location de vedettes et d'embarcations à Minorque.",
+          "imageAlt": "Location vedette Minorque"
+        }
+      ]
+    },
+    "articlePerfectYacht": {
+      "hero": {
+        "alt": "Location de bateaux à Minorque - Yacht naviguant au coucher du soleil",
+        "title": "Comment choisir l'embarcation parfaite à louer à Minorque: le rêve de naviguer devenu réalité"
+      },
+      "author": {
+        "label": "Écrit par",
+        "name": "Martin Scholz"
+      },
+      "content": {
+        "intro": "La brise marine caresse votre visage tandis que vous observez l'horizon infini, entouré de bleu et de calme. Louer un bateau à Minorque est bien plus qu'une question de luxe: c'est un rêve de liberté, d'aventures partagées et d'une relation intime avec la mer...",
+        "image1": {
+          "alt": "Location voilier Minorque - Yacht dans une crique"
+        },
+        "section1": {
+          "title": "Une décision personnelle",
+          "text": "Choisir quel type d'embarcation louer à Minorque est, avant tout, une décision profondément personnelle. Chaque navigateur a sa propre vision de ce que signifie sillonner les mers: certains recherchent la vitesse et l'adrénaline avec la location de vedettes, tandis que d'autres aspirent à la tranquillité de longues journées mouillées dans des criques cachées avec un voilier..."
+        },
+        "section2": {
+          "title": "Options infinies",
+          "text": "Dans le monde de la location de bateaux à Minorque, les options sont infinies. Des vedettes élégantes qui évoquent vitesse et sophistication aux voiliers classiques qui murmurent des histoires d'explorateurs et de navigateurs intrépides, chaque embarcation a sa propre âme..."
+        },
+        "image2": {
+          "alt": "Intérieur d'un yacht de luxe à louer à Minorque"
+        },
+        "section3": {
+          "title": "Entretien et soins",
+          "text": "Un avantage de la location d'embarcations à Minorque est que vous n'avez pas à vous soucier de l'entretien. La vie en mer est aussi merveilleuse que difficile, et chaque embarcation nécessite un soin constant pour rester en conditions optimales, mais avec notre service de location, nous nous chargeons de tout..."
+        },
+        "section4": {
+          "title": "La dimension culturelle de Minorque",
+          "text": "À Minorque, où la mer est une partie essentielle de l'identité locale, le choix d'un bateau à louer acquiert une dimension culturelle. L'île, avec ses criques idylliques et ses eaux cristallines, est le cadre parfait pour profiter d'une embarcation, qu'il s'agisse d'un voilier, d'une vedette ou d'un yacht de luxe..."
+        },
+        "image3": {
+          "alt": "Vue aérienne d'une crique de Minorque - Destination parfaite pour la location de bateaux"
+        },
+        "section5": {
+          "title": "L'importance d'essayer",
+          "text": "Il est également fondamental d'essayer avant de décider. Souvent, les clients novices sous-estiment l'importance d'expérimenter différents types d'embarcations. Notre service de location de bateaux à Minorque vous permet d'essayer différentes options avant de vous décider pour un achat."
+        },
+        "section6": {
+          "title": "Apprentissage continu",
+          "text": "Le moment de la location est aussi une opportunité pour apprendre. Durant le processus, chaque conversation avec nos experts est une leçon sur la technique, la navigation et le style de vie maritime à Minorque..."
+        },
+        "section7": {
+          "title": "La dimension émotionnelle",
+          "text": "Louer un bateau à Minorque est un investissement dans les rêves et dans les souvenirs futurs. C'est s'imaginer naviguer au coucher du soleil, partager des rires avec des amis ou profiter de la solitude de la haute mer..."
+        },
+        "conclusion": "Choisir l'embarcation parfaite à louer à Minorque est un processus qui combine raison et passion, pratique et rêve. À Minorque, la mer a toujours été un témoin silencieux de grandes aventures, et des entreprises comme Menorca Yacht Brokers sont là pour s'assurer que chaque navigateur trouve son propre chemin dans le bleu infini, que ce soit avec la location de voiliers, de vedettes ou de tout type d'embarcation..."
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes sur la Location de Bateaux à Minorque",
+      "description": "Nous répondons à vos questions sur la location, l'achat, la vente et la gestion d'embarcations à Minorque",
+      "bestTimeToBuy": {
+        "question": "Quelle est la meilleure saison pour louer un bateau à Minorque?",
+        "answer": "La haute saison (juin à septembre) offre le meilleur climat pour naviguer, bien que les prix soient plus élevés. La moyenne saison (avril, mai et octobre) offre un bon équilibre entre climat et prix. Chez Menorca Yacht Brokers, nous vous aidons à trouver les meilleures options de location d'embarcations tout au long de l'année, en nous adaptant à vos besoins et à votre budget."
+      },
+      "servicesOffered": {
+        "question": "Quels services de location propose Menorca Yacht Brokers?",
+        "answer": "Nous offrons une gamme complète de services qui incluent: location de voiliers à Minorque, location de vedettes, location de yachts de luxe, services avec ou sans skipper, et conseil nautique intégral. Notre approche personnalisée garantit que chaque client reçoive l'attention et le service dont il a besoin pour profiter au maximum de son expérience de navigation à Minorque."
+      },
+      "purchaseProcess": {
+        "question": "Comment se déroule le processus de location d'un bateau à Minorque?",
+        "answer": "Le processus commence par une consultation initiale où nous comprenons vos besoins, suivi par la sélection de l'embarcation adéquate, la vérification de la disponibilité, la réservation, et finalement la livraison du bateau. Nous vous accompagnons à chaque étape, assurant une expérience satisfaisante depuis le premier moment jusqu'à la restitution de l'embarcation."
+      },
+      "maintenanceCosts": {
+        "question": "Qu'inclut le prix de la location d'une embarcation?",
+        "answer": "Le prix de la location inclut généralement: l'utilisation de l'embarcation pendant la période contractée, l'assurance de base, et l'équipement standard. Des services additionnels comme le skipper, le carburant, l'amarrage dans des ports différents de la base, ou l'équipement spécial peuvent avoir des coûts supplémentaires. Chez Menorca Yacht Brokers, nous vous conseillons sur tous ces aspects pour que vous puissiez planifier adéquatement."
+      },
+      "financingOptions": {
+        "question": "Quels types d'embarcations proposez-vous à la location à Minorque?",
+        "answer": "Nous offrons une large variété d'options qui incluent des voiliers de différentes tailles, des vedettes rapides, des yachts à moteur, des catamarans et des embarcations de luxe. Chaque type de bateau offre une expérience unique, et notre équipe vous aidera à trouver l'option qui s'adapte le mieux à vos préférences et besoins."
+      },
+      "requiredDocuments": {
+        "question": "Quelle documentation est nécessaire pour louer un bateau à Minorque?",
+        "answer": "La documentation de base inclut une identification personnelle et, selon le type d'embarcation, des licences spécifiques de navigation peuvent être requises. Pour les embarcations qui ne nécessitent pas de qualification ou si vous engagez un skipper, vous n'aurez pas besoin de licence. Notre équipe vous guidera dans tout le processus de documentation pour s'assurer que tout soit en ordre."
+      },
+      "prePurchaseInspection": {
+        "question": "Est-il nécessaire d'avoir de l'expérience pour louer un bateau à Minorque?",
+        "answer": "Pas toujours. Nous proposons des options avec skipper pour ceux qui n'ont pas d'expérience ou préfèrent se détendre. Pour louer sans skipper, la qualification adéquate est requise selon le type d'embarcation. Nous proposons également des embarcations qui ne nécessitent pas de qualification, comme de petites vedettes à moteur de faible puissance."
+      },
+      "charterService": {
+        "question": "Comment fonctionne le service de location de bateaux à Minorque?",
+        "answer": "Notre service vous permet de louer des embarcations à la journée ou à la semaine, avec ou sans skipper. Nous nous chargeons de toute la logistique, depuis la sélection du bateau idéal jusqu'à la planification de votre itinéraire par les meilleures criques de Minorque. Nous proposons la location de voiliers, vedettes, yachts et tout type d'embarcations adaptées à vos besoins."
+      }
+    },
+    "ctaSection": {
+      "title": "Prêt à louer votre bateau à Minorque?",
+      "description": "Notre équipe d'experts est prête à vous aider à trouver la meilleure embarcation pour vos vacances à Minorque. Contactez-nous dès aujourd'hui et découvrez comment nous pouvons vous aider à vivre une expérience nautique inoubliable.",
+      "button": "Contacter un expert"
+    }
+  }
+}
