@@ -208,22 +208,30 @@ export default function BunkerSupplyPage() {
       >
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div className="relative h-[250px] sm:h-[300px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-            <Image
+            <video
+              src="/videos/bunker-supply.mp4"
+              className="w-full h-full object-cover z-0"
+              autoPlay
+              playsInline
+              muted
+              loop
+            />
+            {/* <Image
               src="/img/port-sunset.jpg"
               alt="Puerto al atardecer"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
-            />
+            /> */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6">
+            {/* <div className="absolute bottom-0 left-0 p-4 sm:p-6">
               <h3 className="text-white text-lg sm:text-xl font-montserrat mb-2">
                 {t("dailyPosition.title")}
               </h3>
               <p className="text-white/80 text-xs sm:text-sm">
                 {t("dailyPosition.updateStatus")}
               </p>
-            </div>
+            </div> */}
           </div>
           <div className="space-y-4 sm:space-y-6">
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
