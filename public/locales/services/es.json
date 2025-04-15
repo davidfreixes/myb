@@ -186,6 +186,185 @@
       "title": "Vive una Experiencia Inolvidable en el Mar",
       "description": "Reserva tu barco en Menorca y navega por sus calas más emblemáticas. Disfruta de un alquiler sin licencia, excursiones en catamarán o un yate de lujo con servicios exclusivos.",
       "button": "Reserva Ahora"
+    },
+    "romea": {
+      "hero": {
+        "exclusive": "EXCLUSIVO",
+        "available": "DISPONIBLE",
+        "title": "RoMEA",
+        "subtitle": "PARA ALQUILER",
+        "details": "81.8m (268.4ft) • Abeking & Rasmussen • 2015 / 2021",
+        "imageAlt": "Yate RoMEA"
+      },
+      "quickStats": {
+        "length": {
+          "label": "Longitud",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "builder": {
+          "label": "Constructor",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "cruisingArea": {
+          "label": "Área de Navegación",
+          "value": "Mediterráneo / Caribe"
+        },
+        "weeklyRate": {
+          "label": "Tarifa Semanal",
+          "value": "EUR1,100,000"
+        }
+      },
+      "about": {
+        "discover": "Descubrir",
+        "title": "SOBRE RoMEA",
+        "paragraph1": "Presentamos RoMEA, el epítome del lujo y la sofisticación en superyates. Esta magnífica embarcación, que mide 81,8 metros de longitud, fue meticulosamente elaborada en Alemania por el renombrado astillero Abeking & Rasmussen, conocido por su excepcional artesanía. Entregado en 2015 y reacondicionado en 2021, RoMEA irradia elegancia atemporal y ofrece una experiencia náutica incomparable.",
+        "paragraph2": "Con una velocidad máxima de 17 nudos y un notable alcance máximo de 4000 millas náuticas a velocidad económica, RoMEA combina sin esfuerzo potencia y eficiencia. Dos motores diésel Caterpillar proporcionan una impresionante propulsión, garantizando viajes suaves y fluidos a través de vastos océanos.",
+        "paragraph3": "Suba a bordo y descubrirá un mundo de opulencia y confort. Con capacidad para hasta 12 huéspedes en 7 camarotes, RoMEA ofrece la máxima privacidad y lujo. Impecablemente diseñado por el visionario Terence Disdale, quien también elaboró el impresionante interior, este superyate es una obra maestra en todos los sentidos.",
+        "paragraph4": "El excepcional diseño de RoMEA le valió el prestigioso Premio Mundial de Superyates 2018 para Yates a Motor de Desplazamiento por Debajo de 500GT. Su amplio club de playa, piscina con fondo de cristal e instalaciones de spa lujosas crean una experiencia sin igual para los huéspedes más exigentes."
+      },
+      "gallery": {
+        "experience": "Experiencia",
+        "title": "GALERÍA",
+        "image1Alt": "Vista exterior del yate RoMEA",
+        "image2Alt": "Suite principal del yate RoMEA",
+        "image3Alt": "Área de comedor del yate RoMEA",
+        "image4Alt": "Club de playa del yate RoMEA",
+        "image5Alt": "Cubierta superior del yate RoMEA",
+        "image6Alt": "Vista aérea del yate RoMEA",
+        "close": "Cerrar",
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "specs": {
+        "details": "Detalles",
+        "title": "ESPECIFICACIONES",
+        "tabs": {
+          "specifications": "Especificaciones",
+          "features": "Características",
+          "highlights": "Destacados"
+        }
+      },
+      "specifications": {
+        "length": {
+          "label": "Longitud",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "beam": {
+          "label": "Manga",
+          "value": "12.6 M (41.4 FT)"
+        },
+        "draft": {
+          "label": "Calado",
+          "value": "3.4M (11.4 FT)"
+        },
+        "grossTonnage": {
+          "label": "Tonelaje Bruto",
+          "value": "2312 GT"
+        },
+        "builder": {
+          "label": "Constructor",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "year": {
+          "label": "Año",
+          "value": "2015 / 2021"
+        },
+        "guests": {
+          "label": "Huéspedes",
+          "value": "12 EN 7 CABINAS"
+        },
+        "cabinConfiguration": {
+          "label": "Configuración de cabinas",
+          "value": "4 DOBLES, 3 GEMELAS"
+        },
+        "interiorDesigner": {
+          "label": "Diseñador de Interior",
+          "value": "TERENCE DISDALE"
+        },
+        "crew": {
+          "label": "Tripulación",
+          "value": "CAPITÁN + 24"
+        },
+        "engines": {
+          "label": "Motores",
+          "value": "2 X CAT 3516C DIÉSEL"
+        },
+        "cruisingSpeed": {
+          "label": "Velocidad de Crucero",
+          "value": "13 NUDOS"
+        },
+        "maxSpeed": {
+          "label": "Velocidad Máxima",
+          "value": "17 NUDOS"
+        },
+        "range": {
+          "label": "Autonomía",
+          "value": "4000 MN"
+        }
+      },
+      "features": {
+        "tenders": "Embarcación(es) auxiliar(es)",
+        "beachClub": "Club de playa",
+        "spa": "Spa",
+        "jetskis": "Moto(s) acuática(s)",
+        "paddleBoard": "Paddle board",
+        "gym": "Gimnasio",
+        "inflatableWaterToys": "Juguetes acuáticos inflables",
+        "seabobs": "Seabob(s)",
+        "divingSnorkelling": "Buceo / Snorkel",
+        "elevator": "Ascensor",
+        "stabilisers": "Estabilizadores",
+        "kayaks": "Kayak(s)",
+        "variousWatersport": "Varios deportes acuáticos",
+        "jacuzzi": "Jacuzzi",
+        "fishingEquipment": "Equipo de pesca"
+      },
+      "highlights": {
+        "award": "Premio Mundial de Superyates 2018 para Yates a Motor de Desplazamiento por Debajo de 500GT (40m y Superior)",
+        "glassUse": "Uso excepcional del vidrio en todo el yate con ventanas del suelo al techo que iluminan el interior con luz natural",
+        "beachClub": "Enorme club de playa con gimnasio completamente equipado, un spa totalmente dedicado y balcones plegables a nivel del océano",
+        "pool": "Piscina con fondo de cristal con corriente a contraflujo, iluminación de diseño y jacuzzi",
+        "tenderBay": "Lujosa bahía para embarcaciones auxiliares con acceso directo para facilitar los traslados a tierra",
+        "diningOptions": "Amplias opciones de comedor interior y exterior y asientos"
+      },
+      "awardSection": {
+        "excellence": "Excelencia",
+        "title": "Diseño Premiado",
+        "paragraph1": "RoMEA se erige como un testimonio de artesanía excepcional y excelencia en diseño. Su prestigioso Premio Mundial de Superyates 2018 reconoce la meticulosa atención al detalle y las características innovadoras que lo distinguen.",
+        "paragraph2": "El interior del yate, elaborado por el legendario Terence Disdale, crea una atmósfera de lujo refinado con materiales naturales, paletas de colores sofisticadas y un diseño espacial cuidadoso que maximiza tanto la comodidad como la elegancia.",
+        "imageAlt": "Interior del yate RoMEA"
+      },
+      "rates": {
+        "pricing": "Precios",
+        "title": "ÁREAS Y TARIFAS",
+        "highSeason": "Temporada Alta",
+        "lowSeason": "Temporada Baja",
+        "priceExcludes": "Precio excluye IVA + 30% de Gastos",
+        "disclaimer": "No se ofrece para venta o alquiler a residentes de EE.UU. mientras esté en aguas estadounidenses",
+        "summer": {
+          "season": "VERANO",
+          "area": "Mediterráneo",
+          "high": "EUR1,100,000/sem",
+          "low": "EUR1,100,000/sem"
+        },
+        "winter": {
+          "season": "INVIERNO",
+          "area": "Caribe",
+          "high": "EUR1,100,000/sem",
+          "low": "EUR1,100,000/sem"
+        }
+      },
+      "cta": {
+        "title": "Experimente un Lujo Sin Igual",
+        "description": "Alquile el magnífico RoMEA para sus próximas vacaciones de lujo. Nuestro equipo está listo para crear una experiencia a medida adaptada a sus preferencias, asegurando un viaje inolvidable a través de las aguas más hermosas del mundo.",
+        "yachtName": "RoMEA",
+        "availability": "Disponible para Alquiler",
+        "imageAlt": "Exterior del yate RoMEA"
+      },
+      "buttons": {
+        "inquireNow": "Consultar Ahora",
+        "downloadBrochure": "Descargar Folleto"
+      }
     }
   },
   "bunkerSupply": {

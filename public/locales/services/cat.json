@@ -186,6 +186,185 @@
       "title": "Viu una Experiència Inoblidable al Mar",
       "description": "Reserva el teu vaixell a Menorca i navega per les seves cales més emblemàtiques. Gaudeix d'un lloguer sense llicència, excursions en catamarà o un iot de luxe amb serveis exclusius.",
       "button": "Reserva Ara"
+    },
+    "romea": {
+      "hero": {
+        "exclusive": "EXCLUSIU",
+        "available": "DISPONIBLE",
+        "title": "RoMEA",
+        "subtitle": "PER A LLOGUER",
+        "details": "81.8m (268.4ft) • Abeking & Rasmussen • 2015 / 2021",
+        "imageAlt": "Iot RoMEA"
+      },
+      "quickStats": {
+        "length": {
+          "label": "Longitud",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "builder": {
+          "label": "Constructor",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "cruisingArea": {
+          "label": "Àrea de Navegació",
+          "value": "Mediterrani / Carib"
+        },
+        "weeklyRate": {
+          "label": "Tarifa Setmanal",
+          "value": "EUR1,100,000"
+        }
+      },
+      "about": {
+        "discover": "Descobreix",
+        "title": "SOBRE RoMEA",
+        "paragraph1": "Us presentem RoMEA, l'epítom del luxe i la sofisticació en superiots. Aquest magnífic vaixell, que mesura 81,8 metres de longitud, va ser meticulosament elaborat a Alemanya pel reconegut drassana Abeking & Rasmussen, conegut per la seva excepcional artesania. Lliurat el 2015 i reacondicionat el 2021, RoMEA irradia elegància atemporal i ofereix una experiència nàutica incomparable.",
+        "paragraph2": "Amb una velocitat màxima de 17 nusos i un notable abast màxim de 4000 milles nàutiques a velocitat econòmica, RoMEA combina sense esforç potència i eficiència. Dos motors dièsel Caterpillar proporcionen una impressionant propulsió, garantint viatges suaus i fluids a través de vastos oceans.",
+        "paragraph3": "Pugeu a bord i descobrireu un món d'opulència i confort. Amb capacitat per a fins a 12 hostes en 7 camarots, RoMEA ofereix la màxima privacitat i luxe. Impecablement dissenyat pel visionari Terence Disdale, qui també va elaborar l'impressionant interior, aquest superiot és una obra mestra en tots els sentits.",
+        "paragraph4": "L'excepcional disseny de RoMEA li va valer el prestigiós Premi Mundial de Superiots 2018 per a Iots a Motor de Desplaçament per Sota de 500GT. El seu ampli club de platja, piscina amb fons de vidre i instal·lacions de spa luxoses creen una experiència sense igual per als hostes més exigents."
+      },
+      "gallery": {
+        "experience": "Experiència",
+        "title": "GALERIA",
+        "image1Alt": "Vista exterior del iot RoMEA",
+        "image2Alt": "Suite principal del iot RoMEA",
+        "image3Alt": "Àrea de menjador del iot RoMEA",
+        "image4Alt": "Club de platja del iot RoMEA",
+        "image5Alt": "Coberta superior del iot RoMEA",
+        "image6Alt": "Vista aèria del iot RoMEA",
+        "close": "Tancar",
+        "previous": "Anterior",
+        "next": "Següent"
+      },
+      "specs": {
+        "details": "Detalls",
+        "title": "ESPECIFICACIONS",
+        "tabs": {
+          "specifications": "Especificacions",
+          "features": "Característiques",
+          "highlights": "Destacats"
+        }
+      },
+      "specifications": {
+        "length": {
+          "label": "Longitud",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "beam": {
+          "label": "Mànega",
+          "value": "12.6 M (41.4 FT)"
+        },
+        "draft": {
+          "label": "Calat",
+          "value": "3.4M (11.4 FT)"
+        },
+        "grossTonnage": {
+          "label": "Tonatge Brut",
+          "value": "2312 GT"
+        },
+        "builder": {
+          "label": "Constructor",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "year": {
+          "label": "Any",
+          "value": "2015 / 2021"
+        },
+        "guests": {
+          "label": "Hostes",
+          "value": "12 EN 7 CABINES"
+        },
+        "cabinConfiguration": {
+          "label": "Configuració de cabines",
+          "value": "4 DOBLES, 3 BESSONES"
+        },
+        "interiorDesigner": {
+          "label": "Dissenyador d'Interior",
+          "value": "TERENCE DISDALE"
+        },
+        "crew": {
+          "label": "Tripulació",
+          "value": "CAPITÀ + 24"
+        },
+        "engines": {
+          "label": "Motors",
+          "value": "2 X CAT 3516C DIÈSEL"
+        },
+        "cruisingSpeed": {
+          "label": "Velocitat de Creuer",
+          "value": "13 NUSOS"
+        },
+        "maxSpeed": {
+          "label": "Velocitat Màxima",
+          "value": "17 NUSOS"
+        },
+        "range": {
+          "label": "Autonomia",
+          "value": "4000 MN"
+        }
+      },
+      "features": {
+        "tenders": "Embarcació(ns) auxiliar(s)",
+        "beachClub": "Club de platja",
+        "spa": "Spa",
+        "jetskis": "Moto(s) aquàtica(ques)",
+        "paddleBoard": "Paddle board",
+        "gym": "Gimnàs",
+        "inflatableWaterToys": "Joguines aquàtiques inflables",
+        "seabobs": "Seabob(s)",
+        "divingSnorkelling": "Busseig / Snorkel",
+        "elevator": "Ascensor",
+        "stabilisers": "Estabilitzadors",
+        "kayaks": "Caiac(s)",
+        "variousWatersport": "Diversos esports aquàtics",
+        "jacuzzi": "Jacuzzi",
+        "fishingEquipment": "Equip de pesca"
+      },
+      "highlights": {
+        "award": "Premi Mundial de Superiots 2018 per a Iots a Motor de Desplaçament per Sota de 500GT (40m i Superior)",
+        "glassUse": "Ús excepcional del vidre a tot el iot amb finestres del terra al sostre que il·luminen l'interior amb llum natural",
+        "beachClub": "Enorme club de platja amb gimnàs completament equipat, un spa totalment dedicat i balcons plegables a nivell de l'oceà",
+        "pool": "Piscina amb fons de vidre amb corrent a contraflux, il·luminació de disseny i jacuzzi",
+        "tenderBay": "Luxosa badia per a embarcacions auxiliars amb accés directe per facilitar els trasllats a terra",
+        "diningOptions": "Àmplies opcions de menjador interior i exterior i seients"
+      },
+      "awardSection": {
+        "excellence": "Excel·lència",
+        "title": "Disseny Premiat",
+        "paragraph1": "RoMEA s'erigeix com un testimoni d'artesania excepcional i excel·lència en disseny. El seu prestigiós Premi Mundial de Superiots 2018 reconeix la meticulosa atenció al detall i les característiques innovadores que el distingeixen.",
+        "paragraph2": "L'interior del iot, elaborat pel llegendari Terence Disdale, crea una atmosfera de luxe refinat amb materials naturals, paletes de colors sofisticades i un disseny espacial acurat que maximitza tant la comoditat com l'elegància.",
+        "imageAlt": "Interior del iot RoMEA"
+      },
+      "rates": {
+        "pricing": "Preus",
+        "title": "ÀREES I TARIFES",
+        "highSeason": "Temporada Alta",
+        "lowSeason": "Temporada Baixa",
+        "priceExcludes": "Preu exclou IVA + 30% de Despeses",
+        "disclaimer": "No s'ofereix per a venda o lloguer a residents dels EUA mentre estigui en aigües estatunidenques",
+        "summer": {
+          "season": "ESTIU",
+          "area": "Mediterrani",
+          "high": "EUR1,100,000/setm",
+          "low": "EUR1,100,000/setm"
+        },
+        "winter": {
+          "season": "HIVERN",
+          "area": "Carib",
+          "high": "EUR1,100,000/setm",
+          "low": "EUR1,100,000/setm"
+        }
+      },
+      "cta": {
+        "title": "Experimenteu un Luxe Sense Igual",
+        "description": "Llogueu el magnífic RoMEA per a les vostres properes vacances de luxe. El nostre equip està preparat per crear una experiència a mida adaptada a les vostres preferències, assegurant un viatge inoblidable a través de les aigües més belles del món.",
+        "yachtName": "RoMEA",
+        "availability": "Disponible per a Lloguer",
+        "imageAlt": "Exterior del iot RoMEA"
+      },
+      "buttons": {
+        "inquireNow": "Consultar Ara",
+        "downloadBrochure": "Descarregar Fullet"
+      }
     }
   },
   "bunkerSupply": {
