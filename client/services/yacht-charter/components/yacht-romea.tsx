@@ -1,5 +1,3 @@
-"use client";
-
 import type React from "react";
 
 import { motion } from "framer-motion";
@@ -12,9 +10,11 @@ import {
   Waves,
   X,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
+import ContactModal from "@/client/general/contact/modal/contactModal";
 import { Badge, Button, Divider, Modal, Tabs } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -34,98 +34,117 @@ interface FeatureItemProps {
   name: string;
 }
 
-const FeatureItem = ({ name }: FeatureItemProps) => (
-  <Badge
-    variant="outline"
-    size="lg"
-    radius="xl"
-    px="md"
-    py="xs"
-    styles={{
-      root: {
-        backgroundColor: "white",
-        borderColor: "#e5e7eb",
-        cursor: "pointer",
-        "&:hover": { backgroundColor: "#f9fafb" },
-      },
-    }}
-    onClick={() => console.log(`Feature selected: ${name}`)}
-  >
-    {name}
-  </Badge>
-);
+const FeatureItem = ({ name }: FeatureItemProps) => {
+  const t = useTranslations("yachtCharter.romea.features");
+
+  return (
+    <Badge
+      variant="outline"
+      size="lg"
+      radius="xl"
+      px="md"
+      py="xs"
+      styles={{
+        root: {
+          backgroundColor: "white",
+          borderColor: "#e5e7eb",
+          cursor: "pointer",
+          "&:hover": { backgroundColor: "#f9fafb" },
+        },
+      }}
+      onClick={() => console.log(`Feature selected: ${name}`)}
+    >
+      {t(name)}
+    </Badge>
+  );
+};
 
 export default function YachtRomeaShowcase() {
+  const t = useTranslations("yachtCharter.romea");
+  const tSpec = useTranslations("yachtCharter.romea.specifications");
+  const tHighlights = useTranslations("yachtCharter.romea.highlights");
+  const tRates = useTranslations("yachtCharter.romea.rates");
+  const [contactModalOpened, setContactModalOpened] = useState(false);
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [modalOpened, { open: openModal, close: closeModal }] =
     useDisclosure(false);
 
   const specifications = [
-    { label: "Length", value: "81.8 M (268.4 FT)" },
-    { label: "Beam", value: "12.6 M (41.4 FT)" },
-    { label: "Draft", value: "3.4M (11.4 FT)" },
-    { label: "Gross Tonnage", value: "2312 GT" },
-    { label: "Builder", value: "ABEKING & RASMUSSEN" },
-    { label: "Year", value: "2015 / 2021" },
-    { label: "Guests", value: "12 IN 7 CABINS" },
-    { label: "Cabin configuration", value: "4 DOUBLE, 3 TWIN" },
-    { label: "Interior Designer", value: "TERENCE DISDALE" },
-    { label: "Crew", value: "CAPTAIN + 24" },
-    { label: "Engines", value: "2 X CAT 3516C DIESEL" },
-    { label: "Cruising Speed", value: "13 KTS" },
-    { label: "Max Speed", value: "17 KTS" },
-    { label: "Range", value: "4000 NM" },
+    { label: tSpec("length.label"), value: tSpec("length.value") },
+    { label: tSpec("beam.label"), value: tSpec("beam.value") },
+    { label: tSpec("draft.label"), value: tSpec("draft.value") },
+    { label: tSpec("grossTonnage.label"), value: tSpec("grossTonnage.value") },
+    { label: tSpec("builder.label"), value: tSpec("builder.value") },
+    { label: tSpec("year.label"), value: tSpec("year.value") },
+    { label: tSpec("guests.label"), value: tSpec("guests.value") },
+    {
+      label: tSpec("cabinConfiguration.label"),
+      value: tSpec("cabinConfiguration.value"),
+    },
+    {
+      label: tSpec("interiorDesigner.label"),
+      value: tSpec("interiorDesigner.value"),
+    },
+    { label: tSpec("crew.label"), value: tSpec("crew.value") },
+    { label: tSpec("engines.label"), value: tSpec("engines.value") },
+    {
+      label: tSpec("cruisingSpeed.label"),
+      value: tSpec("cruisingSpeed.value"),
+    },
+    { label: tSpec("maxSpeed.label"), value: tSpec("maxSpeed.value") },
+    { label: tSpec("range.label"), value: tSpec("range.value") },
   ];
 
   const features = [
-    "Tender(s)",
-    "Beach club",
-    "Spa",
-    "Jetski(s)",
-    "Paddle board",
-    "Gym",
-    "Inflatable Water Toys",
-    "Seabob(s)",
-    "Diving / Snorkelling",
-    "Elevator",
-    "Stabilisers",
-    "Kayak(s)",
-    "Various watersport",
-    "Jacuzzi",
-    "Fishing Equipment",
+    "tenders",
+    "beachClub",
+    "spa",
+    "jetskis",
+    "paddleBoard",
+    "gym",
+    "inflatableWaterToys",
+    "seabobs",
+    "divingSnorkelling",
+    "elevator",
+    "stabilisers",
+    "kayaks",
+    "variousWatersport",
+    "jacuzzi",
+    "fishingEquipment",
   ];
 
   const highlights = [
-    "2018 World Superyacht Award for Displacement Motor Yachts Below 500GT (40m & Above)",
-    "Exceptional use of glass throughout with floor-to-ceiling windows that illuminate the interior with natural sunlight",
-    "Massive beach club featuring a fully equipped gym, a fully dedicated spa and ocean-level fold-down balconies",
-    "Glass-bottomed pool with counterflow current, designer lighting and Jacuzzi",
-    "Luxurious drive-in tender bay for easy hop on/off transfers to shore",
-    "Extensive indoor and outdoor dining options and seatings",
+    "award",
+    "glassUse",
+    "beachClub",
+    "pool",
+    "tenderBay",
+    "diningOptions",
   ];
 
   const rates = [
     {
-      season: "SUMMER",
-      area: "Mediterranean",
-      high: "EUR1,100,000/wk",
-      low: "EUR1,100,000/wk",
+      season: tRates("summer.season"),
+      area: tRates("summer.area"),
+      high: tRates("summer.high"),
+      low: tRates("summer.low"),
     },
     {
-      season: "WINTER",
-      area: "Caribbean",
-      high: "EUR1,100,000/wk",
-      low: "EUR1,100,000/wk",
+      season: tRates("winter.season"),
+      area: tRates("winter.area"),
+      high: tRates("winter.high"),
+      low: tRates("winter.low"),
     },
   ];
 
   const galleryImages = [
-    { src: "/img/romea/gallery-1.webp", alt: "RoMEA yacht exterior view" },
-    { src: "/img/romea/gallery-2.webp", alt: "RoMEA yacht master suite" },
-    { src: "/img/romea/gallery-3.webp", alt: "RoMEA yacht dining area" },
-    { src: "/img/romea/gallery-4.webp", alt: "RoMEA yacht beach club" },
-    { src: "/img/romea/gallery-5.webp", alt: "RoMEA yacht sundeck" },
-    { src: "/img/romea/gallery-6.webp", alt: "RoMEA yacht aerial view" },
+    { src: "/img/romea/gallery-1.webp", alt: t("gallery.image1Alt") },
+    { src: "/img/romea/gallery-2.webp", alt: t("gallery.image2Alt") },
+    { src: "/img/romea/gallery-3.webp", alt: t("gallery.image3Alt") },
+    { src: "/img/romea/gallery-4.webp", alt: t("gallery.image4Alt") },
+    { src: "/img/romea/gallery-5.webp", alt: t("gallery.image5Alt") },
+    { src: "/img/romea/gallery-6.webp", alt: t("gallery.image6Alt") },
   ];
 
   const handleInquireNow = (e?: React.MouseEvent) => {
@@ -134,11 +153,11 @@ export default function YachtRomeaShowcase() {
     // Add your inquiry logic here
   };
 
-  const handleDownloadBrochure = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-    console.log("Downloading brochure");
-    // Add your download logic here
-  };
+  // const handleDownloadBrochure = (e?: React.MouseEvent) => {
+  //   if (e) e.stopPropagation();
+  //   console.log("Downloading brochure");
+  //   // Add your download logic here
+  // };
 
   const handleViewGalleryImage = (index: number, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -165,7 +184,7 @@ export default function YachtRomeaShowcase() {
                       className="border-primary bg-primary text-white border rounded-md px-4 py-0.5 font-medium text-xs"
                       radius="sm"
                     >
-                      EXCLUSIVE
+                      {t("hero.exclusive")}
                     </Badge>
 
                     <Badge
@@ -174,29 +193,27 @@ export default function YachtRomeaShowcase() {
                       className="border-primary text-primary border rounded-md px-4 py-0.5 font-medium text-xs"
                       radius="sm"
                     >
-                      AVAILABLE
+                      {t("hero.available")}
                     </Badge>
                   </div>
                   <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight text-[#0f172a]">
-                    RoMEA
+                    {t("hero.title")}
                   </h1>
                   <h2 className="font-sans text-lg sm:text-xl md:text-2xl text-gray-600 font-light">
-                    FOR CHARTER
+                    {t("hero.subtitle")}
                   </h2>
                   <div className="flex items-center space-x-2 text-gray-600">
                     <Anchor className="w-4 h-4" />
-                    <p className="text-sm sm:text-base">
-                      81.8m (268.4ft) • Abeking & Rasmussen • 2015 / 2021
-                    </p>
+                    <p className="text-sm sm:text-base">{t("hero.details")}</p>
                   </div>
                   <div className="pt-6 flex flex-col sm:flex-row gap-4">
                     <Button
                       unstyled
                       className="bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-base py-2 sm:py-3 px-4 sm:px-6 rounded flex items-center justify-center cursor-pointer transition-colors duration-200"
-                      onClick={handleInquireNow}
+                      onClick={() => setContactModalOpened(true)}
                     >
                       <div className="flex gap-2 items-center">
-                        Inquire Now
+                        {t("buttons.inquireNow")}
                         <ArrowRight size={16} />
                       </div>
                     </Button>
@@ -211,7 +228,7 @@ export default function YachtRomeaShowcase() {
               >
                 <Image
                   src="/img/romea/hero.jpg"
-                  alt="RoMEA Yacht"
+                  alt={t("hero.imageAlt")}
                   fill
                   priority
                   className="object-cover object-center hover:scale-105 transition-transform duration-500"
@@ -237,8 +254,10 @@ export default function YachtRomeaShowcase() {
             >
               <Anchor className="h-5 w-5 text-gray-500" />
               <div>
-                <p className="text-xs text-gray-500">Length</p>
-                <p className="font-medium">81.8 M (268.4 FT)</p>
+                <p className="text-xs text-gray-500">
+                  {t("quickStats.length.label")}
+                </p>
+                <p className="font-medium">{t("quickStats.length.value")}</p>
               </div>
             </div>
             <div
@@ -247,8 +266,10 @@ export default function YachtRomeaShowcase() {
             >
               <Award className="h-5 w-5 text-gray-500" />
               <div>
-                <p className="text-xs text-gray-500">Builder</p>
-                <p className="font-medium">ABEKING & RASMUSSEN</p>
+                <p className="text-xs text-gray-500">
+                  {t("quickStats.builder.label")}
+                </p>
+                <p className="font-medium">{t("quickStats.builder.value")}</p>
               </div>
             </div>
             <div
@@ -257,8 +278,12 @@ export default function YachtRomeaShowcase() {
             >
               <Compass className="h-5 w-5 text-gray-500" />
               <div>
-                <p className="text-xs text-gray-500">Cruising Area</p>
-                <p className="font-medium">Mediterranean / Caribbean</p>
+                <p className="text-xs text-gray-500">
+                  {t("quickStats.cruisingArea.label")}
+                </p>
+                <p className="font-medium">
+                  {t("quickStats.cruisingArea.value")}
+                </p>
               </div>
             </div>
             <div
@@ -267,8 +292,12 @@ export default function YachtRomeaShowcase() {
             >
               <Waves className="h-5 w-5 text-gray-500" />
               <div>
-                <p className="text-xs text-gray-500">Weekly Rate</p>
-                <p className="font-medium">EUR1,100,000</p>
+                <p className="text-xs text-gray-500">
+                  {t("quickStats.weeklyRate.label")}
+                </p>
+                <p className="font-medium">
+                  {t("quickStats.weeklyRate.value")}
+                </p>
               </div>
             </div>
           </div>
@@ -282,50 +311,31 @@ export default function YachtRomeaShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16"
         >
           <div className="flex items-center space-x-2 mb-2">
             <div className="w-10 h-0.5 bg-gray-300"></div>
             <span className="text-gray-500 uppercase text-sm tracking-wider">
-              Discover
+              {t("about.discover")}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-10">
-            ABOUT RoMEA
+            {t("about.title")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                Introducing RoMEA, the epitome of superyacht luxury and
-                sophistication. This magnificent vessel, measuring 81.8 metres
-                in length, was meticulously crafted in Germany by the renowned
-                shipyard Abeking & Rasmussen, known for their exceptional
-                craftsmanship. Delivered in 2015 and refitted in 2021, RoMEA
-                exudes timeless elegance and offers a peerless yachting
-                experience.
+                {t("about.paragraph1")}
               </p>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                With a top speed of 17 knots and a remarkable maximum range of
-                4000 nautical miles at economical speed, RoMEA effortlessly
-                combines power and efficiency. Two Caterpillar diesel engines
-                provide an impressive propulsion, ensuring smooth and seamless
-                voyages across vast oceans.
+                {t("about.paragraph2")}
               </p>
             </div>
             <div>
               <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                Step on board, and you&apos;ll discover a world of opulence and
-                comfort. Accommodating up to 12 guests in 7 staterooms, RoMEA
-                offers the utmost privacy and indulgence. Impeccably designed by
-                the visionary Terence Disdale, who also crafted the stunning
-                interior, this superyacht is a masterpiece in every sense.
+                {t("about.paragraph3")}
               </p>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                RoMEA&apos;s exceptional design earned her the prestigious 2018
-                World Superyacht Award for Displacement Motor Yachts Below
-                500GT. Her expansive beach club, glass-bottomed pool, and
-                luxurious spa facilities create an unparalleled experience for
-                the most discerning guests.
+                {t("about.paragraph4")}
               </p>
             </div>
           </div>
@@ -333,24 +343,23 @@ export default function YachtRomeaShowcase() {
       </div>
 
       {/* Gallery Preview Section */}
-      <div className="bg-white py-16 md:py-24">
+      <div className="bg-white py-8 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-16"
           >
             <div className="flex items-center space-x-2 mb-2">
               <div className="w-10 h-0.5 bg-gray-300"></div>
               <span className="text-gray-500 uppercase text-sm tracking-wider">
-                Experience
+                {t("gallery.experience")}
               </span>
             </div>
             <div className="mb-10">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900">
-                GALLERY
+                {t("gallery.title")}
               </h2>
             </div>
 
@@ -411,7 +420,7 @@ export default function YachtRomeaShowcase() {
               className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 cursor-pointer transition-colors duration-200 z-10"
               onClick={closeModal}
             >
-              <span className="sr-only">Close</span>
+              <span className="sr-only">{t("gallery.close")}</span>
               <X className="h-5 w-5" />
             </Button>
           </div>
@@ -436,7 +445,7 @@ export default function YachtRomeaShowcase() {
                 )
               }
             >
-              <span className="sr-only">Previous</span>
+              <span className="sr-only">{t("gallery.previous")}</span>
               <ChevronRight className="h-5 w-5 rotate-180" />
             </Button>
             <Button
@@ -448,7 +457,7 @@ export default function YachtRomeaShowcase() {
                 )
               }
             >
-              <span className="sr-only">Next</span>
+              <span className="sr-only">{t("gallery.next")}</span>
               <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
@@ -456,22 +465,21 @@ export default function YachtRomeaShowcase() {
       </Modal>
 
       {/* Specifications Section */}
-      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-24 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 py-16 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16"
         >
           <div className="flex items-center space-x-2 mb-2">
             <div className="w-10 h-0.5 bg-gray-300"></div>
             <span className="text-gray-500 uppercase text-sm tracking-wider">
-              Details
+              {t("specs.details")}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-10">
-            SPECIFICATIONS
+            {t("specs.title")}
           </h2>
 
           <Tabs defaultValue="specs">
@@ -480,19 +488,19 @@ export default function YachtRomeaShowcase() {
                 value="specs"
                 className="cursor-pointer hover:bg-gray-100 transition-colors duration-200"
               >
-                Specifications
+                {t("specs.tabs.specifications")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="features"
                 className="cursor-pointer hover:bg-gray-100 transition-colors duration-200"
               >
-                Features
+                {t("specs.tabs.features")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="highlights"
                 className="cursor-pointer hover:bg-gray-100 transition-colors duration-200"
               >
-                Highlights
+                {t("specs.tabs.highlights")}
               </Tabs.Tab>
             </Tabs.List>
 
@@ -527,7 +535,9 @@ export default function YachtRomeaShowcase() {
                     <div className="mt-1 flex-shrink-0">
                       <div className="text-lg">•</div>
                     </div>
-                    <p className="text-base text-gray-700">{highlight}</p>
+                    <p className="text-base text-gray-700">
+                      {tHighlights(highlight)}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -550,24 +560,18 @@ export default function YachtRomeaShowcase() {
               <div className="flex items-center space-x-2 mb-2">
                 <div className="w-10 h-0.5 bg-gray-400"></div>
                 <span className="text-gray-600 uppercase text-sm tracking-wider">
-                  Excellence
+                  {t("awardSection.excellence")}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif text-gray-900 mb-8">
-                Award-Winning Design
+                {t("awardSection.title")}
               </h2>
               <div className="space-y-6">
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                  RoMEA stands as a testament to exceptional craftsmanship and
-                  design excellence. Her prestigious 2018 World Superyacht Award
-                  recognizes the meticulous attention to detail and innovative
-                  features that set her apart.
+                  {t("awardSection.paragraph1")}
                 </p>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                  The yacht&apos;s interior, crafted by the legendary Terence
-                  Disdale, creates an atmosphere of refined luxury with natural
-                  materials, sophisticated color palettes, and thoughtful
-                  spatial design that maximizes both comfort and elegance.
+                  {t("awardSection.paragraph2")}
                 </p>
               </div>
             </motion.div>
@@ -584,7 +588,7 @@ export default function YachtRomeaShowcase() {
               >
                 <Image
                   src="/img/romea/interior.jpg"
-                  alt="RoMEA yacht interior"
+                  alt={t("awardSection.imageAlt")}
                   fill
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
@@ -606,76 +610,70 @@ export default function YachtRomeaShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16"
         >
           <div className="flex items-center space-x-2 mb-2">
             <div className="w-10 h-0.5 bg-gray-300"></div>
             <span className="text-gray-500 uppercase text-sm tracking-wider">
-              Pricing
+              {t("rates.pricing")}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-10">
-            AREAS & RATES
+            {t("rates.title")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {rates.map((rate, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 cursor-pointer"
-                onClick={() =>
-                  console.log(
-                    `Rate card clicked: ${rate.season} - ${rate.area}`
-                  )
-                }
+                className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                onClick={() => setContactModalOpened(true)}
               >
-                <div className="flex items-center space-x-3 mb-6">
+                <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
                   {index === 0 ? (
-                    <Waves className="h-6 w-6 text-amber-500" />
+                    <Waves className="h-5 w-5 sm:h-6 sm:w-6 text-amber-500" />
                   ) : (
-                    <Compass className="h-6 w-6 text-amber-500" />
+                    <Compass className="h-5 w-5 sm:h-6 sm:w-6 text-amber-500" />
                   )}
-                  <h3 className="text-2xl font-serif">
+                  <h3 className="text-xl sm:text-2xl font-serif">
                     {rate.season} - {rate.area}
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div
-                    className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+                    className="p-3 sm:p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
                     onClick={(e) => {
-                      e.stopPropagation();
-                      console.log(`High season rate clicked: ${rate.high}`);
+                      e.stopPropagation()
+                      setContactModalOpened(true)
                     }}
                   >
-                    <p className="text-sm text-gray-500 mb-1">High Season</p>
-                    <p className="text-xl font-medium">{rate.high}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">{t("rates.highSeason")}</p>
+                    <p className="text-base sm:text-xl font-medium">{rate.high}</p>
                   </div>
                   <div
-                    className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+                    className="p-3 sm:p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
                     onClick={(e) => {
-                      e.stopPropagation();
-                      console.log(`Low season rate clicked: ${rate.low}`);
+                      e.stopPropagation()
+                      setContactModalOpened(true)
                     }}
                   >
-                    <p className="text-sm text-gray-500 mb-1">Low Season</p>
-                    <p className="text-xl font-medium">{rate.low}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">{t("rates.lowSeason")}</p>
+                    <p className="text-base sm:text-xl font-medium">{rate.low}</p>
                   </div>
                 </div>
-                <Divider className="my-6" />
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-gray-500">
-                    Price excludes VAT + 30% Expenses
-                  </p>
+                <Divider className="my-4 sm:my-6" />
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
+                  <p className="text-xs sm:text-sm text-gray-500">{t("rates.priceExcludes")}</p>
                   <Button
                     unstyled
                     className="bg-transparent hover:bg-primary/10 text-primary border-primary font-normal py-1.5 px-3 rounded flex items-center cursor-pointer transition-colors duration-200"
                     onClick={(e) => {
-                      e.stopPropagation();
-                      handleInquireNow(e);
+                      e.stopPropagation()
+                      handleInquireNow(e)
+                      setContactModalOpened(true)
                     }}
                   >
                     <div className="flex gap-2 items-center">
-                      Inquire Now
-                      <ChevronRight size={14} />{" "}
+                      {t("buttons.inquireNow")}
+                      <ChevronRight size={16} className="sm:w-5 sm:h-5" />
                     </div>
                   </Button>
                 </div>
@@ -683,8 +681,7 @@ export default function YachtRomeaShowcase() {
             ))}
           </div>
           <p className="text-sm text-gray-500 mt-6 italic">
-            Not offered for sale or charter to U.S. residents while in U.S.
-            waters
+            {t("rates.disclaimer")}
           </p>
         </motion.div>
       </div>
@@ -695,30 +692,28 @@ export default function YachtRomeaShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-serif mb-6">
-                Experience Unparalleled Luxury
+                {t("cta.title")}
               </h2>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Charter the magnificent RoMEA for your next luxury vacation. Our
-                team is ready to create a bespoke experience tailored to your
-                preferences, ensuring an unforgettable journey across the
-                world&apos;s most beautiful waters.
+                {t("cta.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   unstyled
-                  className="bg-primary hover:bg-primary/75 text-white font-normal text-sm md:text-base py-2 sm:py-3 px-4 sm:px-6 rounded flex items-center justify-center cursor-pointer transition-colors duration-200"
-                  rightSection={<ArrowRight size={16} />}
-                  onClick={(e) => handleInquireNow(e)}
+                  className="bg-primary hover:bg-primary/75 text-white font-normal md:text-base py-3 px-4 sm:px-6 rounded flex items-center justify-center cursor-pointer transition-colors duration-200"
+                  onClick={() => setContactModalOpened(true)}
                 >
-                  Inquire Now
+                  <div className="flex gap-2 items-center">
+                    {t("buttons.inquireNow")}
+                    <ArrowRight size={16} />
+                  </div>
                 </Button>
-                <Button
+                {/* <Button
                   unstyled
-                  className="bg-transparent hover:bg-white/10 text-white border border-white/30 font-normal text-sm md:text-base py-2 sm:py-3 px-4 sm:px-6 rounded flex items-center justify-center cursor-pointer transition-colors duration-200"
-                  onClick={(e) => handleDownloadBrochure(e)}
+                  className="bg-transparent hover:bg-white/10 text-white border border-white/30 font-normal text-base py-2 sm:py-3 px-4 sm:px-6 rounded flex items-center justify-center cursor-pointer transition-colors duration-200"
                 >
-                  Download Brochure
-                </Button>
+                  {t("buttons.downloadBrochure")}
+                </Button> */}
               </div>
             </div>
             <div
@@ -727,20 +722,24 @@ export default function YachtRomeaShowcase() {
             >
               <Image
                 src="/img/romea/gallery-1.webp"
-                alt="RoMEA yacht exterior"
+                alt={t("cta.imageAlt")}
                 fill
                 className="object-cover object-center hover:scale-105 transition-transform duration-500"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent hover:from-black/70 transition-colors duration-300"></div>
               <div className="absolute bottom-0 left-0 p-6">
-                <p className="text-xl font-medium">RoMEA</p>
-                <p className="text-sm text-gray-200">Available for Charter</p>
+                <p className="text-xl font-medium">{t("cta.yachtName")}</p>
+                <p className="text-sm text-gray-200">{t("cta.availability")}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ContactModal
+        opened={contactModalOpened}
+        onClose={() => setContactModalOpened(false)}
+      />
     </div>
   );
 }

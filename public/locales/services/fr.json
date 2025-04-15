@@ -186,6 +186,185 @@
       "title": "Vivez une Expérience Inoubliable en Mer",
       "description": "Réservez votre bateau à Minorque et naviguez dans ses criques les plus emblématiques. Profitez d'une location sans permis, d'excursions en catamaran ou d'un yacht de luxe avec des services exclusifs.",
       "button": "Réservez Maintenant"
+    },
+    "romea": {
+      "hero": {
+        "exclusive": "EXCLUSIF",
+        "available": "DISPONIBLE",
+        "title": "RoMEA",
+        "subtitle": "À LOUER",
+        "details": "81.8m (268.4ft) • Abeking & Rasmussen • 2015 / 2021",
+        "imageAlt": "Yacht RoMEA"
+      },
+      "quickStats": {
+        "length": {
+          "label": "Longueur",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "builder": {
+          "label": "Constructeur",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "cruisingArea": {
+          "label": "Zone de Navigation",
+          "value": "Méditerranée / Caraïbes"
+        },
+        "weeklyRate": {
+          "label": "Tarif Hebdomadaire",
+          "value": "EUR1,100,000"
+        }
+      },
+      "about": {
+        "discover": "Découvrir",
+        "title": "À PROPOS DE RoMEA",
+        "paragraph1": "Voici RoMEA, l'incarnation du luxe et de la sophistication des superyachts. Ce magnifique navire, mesurant 81,8 mètres de long, a été méticuleusement conçu en Allemagne par le célèbre chantier naval Abeking & Rasmussen, connu pour son savoir-faire exceptionnel. Livré en 2015 et rénové en 2021, RoMEA dégage une élégance intemporelle et offre une expérience nautique incomparable.",
+        "paragraph2": "Avec une vitesse maximale de 17 nœuds et une autonomie maximale remarquable de 4000 milles nautiques à vitesse économique, RoMEA combine sans effort puissance et efficacité. Deux moteurs diesel Caterpillar fournissent une propulsion impressionnante, garantissant des voyages fluides et sans heurts à travers de vastes océans.",
+        "paragraph3": "Montez à bord et vous découvrirez un monde d'opulence et de confort. Pouvant accueillir jusqu'à 12 invités dans 7 cabines, RoMEA offre une intimité et une indulgence maximales. Impeccablement conçu par le visionnaire Terence Disdale, qui a également créé l'intérieur époustouflant, ce superyacht est un chef-d'œuvre à tous égards.",
+        "paragraph4": "La conception exceptionnelle de RoMEA lui a valu le prestigieux World Superyacht Award 2018 pour les yachts à moteur à déplacement de moins de 500 GT. Son vaste beach club, sa piscine à fond de verre et ses installations de spa luxueuses créent une expérience inégalée pour les clients les plus exigeants."
+      },
+      "gallery": {
+        "experience": "Expérience",
+        "title": "GALERIE",
+        "image1Alt": "Vue extérieure du yacht RoMEA",
+        "image2Alt": "Suite principale du yacht RoMEA",
+        "image3Alt": "Espace repas du yacht RoMEA",
+        "image4Alt": "Beach club du yacht RoMEA",
+        "image5Alt": "Pont supérieur du yacht RoMEA",
+        "image6Alt": "Vue aérienne du yacht RoMEA",
+        "close": "Fermer",
+        "previous": "Précédent",
+        "next": "Suivant"
+      },
+      "specs": {
+        "details": "Détails",
+        "title": "SPÉCIFICATIONS",
+        "tabs": {
+          "specifications": "Spécifications",
+          "features": "Caractéristiques",
+          "highlights": "Points forts"
+        }
+      },
+      "specifications": {
+        "length": {
+          "label": "Longueur",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "beam": {
+          "label": "Largeur",
+          "value": "12.6 M (41.4 FT)"
+        },
+        "draft": {
+          "label": "Tirant d'eau",
+          "value": "3.4M (11.4 FT)"
+        },
+        "grossTonnage": {
+          "label": "Tonnage Brut",
+          "value": "2312 GT"
+        },
+        "builder": {
+          "label": "Constructeur",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "year": {
+          "label": "Année",
+          "value": "2015 / 2021"
+        },
+        "guests": {
+          "label": "Invités",
+          "value": "12 DANS 7 CABINES"
+        },
+        "cabinConfiguration": {
+          "label": "Configuration des cabines",
+          "value": "4 DOUBLES, 3 TWINS"
+        },
+        "interiorDesigner": {
+          "label": "Designer d'Intérieur",
+          "value": "TERENCE DISDALE"
+        },
+        "crew": {
+          "label": "Équipage",
+          "value": "CAPITAINE + 24"
+        },
+        "engines": {
+          "label": "Moteurs",
+          "value": "2 X CAT 3516C DIESEL"
+        },
+        "cruisingSpeed": {
+          "label": "Vitesse de Croisière",
+          "value": "13 NŒUDS"
+        },
+        "maxSpeed": {
+          "label": "Vitesse Maximale",
+          "value": "17 NŒUDS"
+        },
+        "range": {
+          "label": "Autonomie",
+          "value": "4000 MN"
+        }
+      },
+      "features": {
+        "tenders": "Annexe(s)",
+        "beachClub": "Beach club",
+        "spa": "Spa",
+        "jetskis": "Jet-ski(s)",
+        "paddleBoard": "Paddle board",
+        "gym": "Salle de sport",
+        "inflatableWaterToys": "Jouets aquatiques gonflables",
+        "seabobs": "Seabob(s)",
+        "divingSnorkelling": "Plongée / Snorkeling",
+        "elevator": "Ascenseur",
+        "stabilisers": "Stabilisateurs",
+        "kayaks": "Kayak(s)",
+        "variousWatersport": "Divers sports nautiques",
+        "jacuzzi": "Jacuzzi",
+        "fishingEquipment": "Équipement de pêche"
+      },
+      "highlights": {
+        "award": "Prix World Superyacht 2018 pour les yachts à moteur à déplacement de moins de 500 GT (40m et plus)",
+        "glassUse": "Utilisation exceptionnelle du verre partout avec des fenêtres du sol au plafond qui illuminent l'intérieur avec la lumière naturelle du soleil",
+        "beachClub": "Beach club massif comprenant une salle de sport entièrement équipée, un spa entièrement dédié et des balcons rabattables au niveau de l'océan",
+        "pool": "Piscine à fond de verre avec courant à contre-courant, éclairage design et jacuzzi",
+        "tenderBay": "Baie d'annexe luxueuse avec accès direct pour faciliter les transferts vers la terre",
+        "diningOptions": "Vastes options de restauration intérieures et extérieures et places assises"
+      },
+      "awardSection": {
+        "excellence": "Excellence",
+        "title": "Design Primé",
+        "paragraph1": "RoMEA se présente comme un témoignage d'un savoir-faire exceptionnel et d'une excellence en matière de design. Son prestigieux Prix World Superyacht 2018 reconnaît l'attention méticuleuse aux détails et les caractéristiques innovantes qui le distinguent.",
+        "paragraph2": "L'intérieur du yacht, conçu par le légendaire Terence Disdale, crée une atmosphère de luxe raffiné avec des matériaux naturels, des palettes de couleurs sophistiquées et une conception spatiale réfléchie qui maximise à la fois le confort et l'élégance.",
+        "imageAlt": "Intérieur du yacht RoMEA"
+      },
+      "rates": {
+        "pricing": "Tarification",
+        "title": "ZONES & TARIFS",
+        "highSeason": "Haute Saison",
+        "lowSeason": "Basse Saison",
+        "priceExcludes": "Prix hors TVA + 30% de frais",
+        "disclaimer": "Non proposé à la vente ou à la location aux résidents américains dans les eaux américaines",
+        "summer": {
+          "season": "ÉTÉ",
+          "area": "Méditerranée",
+          "high": "EUR1,100,000/sem",
+          "low": "EUR1,100,000/sem"
+        },
+        "winter": {
+          "season": "HIVER",
+          "area": "Caraïbes",
+          "high": "EUR1,100,000/sem",
+          "low": "EUR1,100,000/sem"
+        }
+      },
+      "cta": {
+        "title": "Découvrez un Luxe Sans Pareil",
+        "description": "Louez le magnifique RoMEA pour vos prochaines vacances de luxe. Notre équipe est prête à créer une expérience sur mesure adaptée à vos préférences, garantissant un voyage inoubliable à travers les plus belles eaux du monde.",
+        "yachtName": "RoMEA",
+        "availability": "Disponible à la Location",
+        "imageAlt": "Extérieur du yacht RoMEA"
+      },
+      "buttons": {
+        "inquireNow": "Demander Maintenant",
+        "downloadBrochure": "Télécharger la Brochure"
+      }
     }
   },
   "bunkerSupply": {

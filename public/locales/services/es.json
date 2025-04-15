@@ -186,117 +186,6 @@
       "title": "Vive una Experiencia Inolvidable en el Mar",
       "description": "Reserva tu barco en Menorca y navega por sus calas más emblemáticas. Disfruta de un alquiler sin licencia, excursiones en catamarán o un yate de lujo con servicios exclusivos.",
       "button": "Reserva Ahora"
-    }
-  },
-  "bunkerSupply": {
-    "hero": {
-      "title": "Suministro de Combustible Marino",
-      "subtitle": "Suministramos combustible marino para barcos en la isla de Menorca, el resto de España y la mayoria de puertos comerciales del mundo.",
-      "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
-    },
-    "dailyPosition": {
-      "title": "Daily Position",
-      "updateStatus": "Actualizado diariamente",
-      "sectionTitle": "Menorca Brokers",
-      "description": "Contáctanos para recibir información de nuestros últimos precios de suministro.",
-      "downloadButton": "Contactar"
-    },
-    "marketIndices": {
-      "title": "Nuestros índices y proveedores del mercado marítimo",
-      "subtitle": "Obtenemos los últimos precios usando los datos proporcionados por nuestros partners.",
-      "providers": {
-        "shipAndBunker": {
-          "title": "Shipandbunker",
-          "description": "Consulta los precios del mercado de combustibles marinos en los principales puertos del mundo."
-        },
-        "balticExchange": {
-          "title": "Baltic Exchange",
-          "description": "Consulta el mercado de la carga actualizado a diario con el Baltic Exchange."
-        },
-        "cepsaMoeve": {
-          "title": "CEPSA & MOEVE",
-          "description": "Cargamos combustible marino CEPSA - MOEVE"
-        },
-        "stabiaOil": {
-          "title": "STABIAOIL",
-          "description": "STABIAOIL es nuestro proveedor de servicios."
-        }
-      },
-      "tooltip": "Visitar página web"
-    },
-    "specializedServices": {
-      "title": "Servicios Especializados",
-      "services": {
-        "shipSalePurchase": {
-          "title": "Ship Sale & Purchase",
-          "description": "Desde buques de carga hasta yates de lujo, te guiamos en cada paso del proceso, asegurándonos de que cada operación sea fluida, rentable y satisfactoria."
-        },
-        "dryBulk": {
-          "title": "Dry Bulk Cargo",
-          "description": "Especialistas en el manejo y gestión de cargas secas a granel."
-        },
-        "liquidBulk": {
-          "title": "Liquid Bulk Cargo",
-          "description": "Expertos en el transporte de cargas líquidas a granel, ofreciendo soluciones especializadas y seguras para cada tipo de carga."
-        }
-      }
-    },
-    "experience": {
-      "title": "Nuestra Experiencia",
-      "subtitle": "Más de una década de experiencia en el sector marítimo nos respalda",
-      "globalExperience": {
-        "title": "Experiencia Global",
-        "description": "En Menorca Brokers, somos especialistas en conectar armadores y fletadores, ofreciendo soluciones integrales para la compra, venta y alquiler de buques o charter por tiempo.",
-        "features": {
-          "globalCoverage": {
-            "title": "Cobertura Global",
-            "description": "Operaciones en los principales puertos internacionales"
-          },
-          "service247": {
-            "title": "Servicio 24/7",
-            "description": "Soporte continuo para todas tus necesidades"
-          }
-        }
-      },
-      "expertKnowledge": {
-        "title": "Conocimiento Experto",
-        "description": "Combinamos un profundo conocimiento del sector marítimo con una red global de contactos, lo que nos permite garantizar acuerdos eficientes y personalizados.",
-        "features": {
-          "expertTeam": {
-            "title": "Equipo Experto",
-            "description": "Profesionales altamente cualificados"
-          },
-          "qualityGuarantee": {
-            "title": "Garantía de Calidad",
-            "description": "Cumplimiento de estándares internacionales"
-          }
-        }
-      }
-    },
-    "faq": {
-      "title": "Preguntas Frecuentes",
-      "description": "Respuestas a las preguntas más comunes sobre combustible marino",
-      "questions": {
-        "what": "¿Qué es el combustible marino?",
-        "special": "¿Qué tiene de especial el combustible marino?",
-        "types": "¿Cuáles son los 3 tipos de combustibles?",
-        "name": "¿Cómo se llama el combustible que usan los barcos?",
-        "price": "¿Cuál es el precio del diésel marino?",
-        "difference": "¿Cuál es la diferencia entre el combustible marino y el combustible regular?"
-      },
-      "answers": {
-        "what": "El combustible marino es un tipo de combustible específicamente formulado para su uso en embarcaciones marítimas y buques comerciales. Está diseñado para proporcionar la energía necesaria para los motores de propulsión y generadores auxiliares en entornos marinos exigentes. El combustible marino debe cumplir con estándares internacionales establecidos por la Organización Marítima Internacional (OMI) y está sujeto a regulaciones estrictas sobre su contenido de azufre y otras propiedades para minimizar el impacto ambiental en los océanos y zonas costeras.",
-        "special": "El combustible marino está especialmente formulado para soportar las condiciones extremas del entorno marítimo. Sus características especiales incluyen una mayor densidad energética, estabilidad en condiciones de alta humedad y salinidad, y formulaciones específicas para cumplir con las regulaciones internacionales de emisiones como MARPOL Anexo VI. Desde 2020, la OMI ha implementado el límite global de azufre del 0.5% (conocido como IMO 2020), lo que ha llevado al desarrollo de combustibles marinos de muy bajo contenido de azufre (VLSFO) para reducir la contaminación atmosférica y proteger la salud pública y los ecosistemas marinos.",
-        "types": "Los tres tipos principales de combustible marino son: 1) Fuel Oil Pesado (HFO): También conocido como búnker C, es el más denso y económico, tradicionalmente usado en grandes buques de carga y contenedores. Contiene alto nivel de azufre y está siendo gradualmente eliminado debido a regulaciones ambientales. 2) Fuel Oil de Muy Bajo Contenido de Azufre (VLSFO): Desarrollado para cumplir con el límite de azufre de 0.5% de IMO 2020, es actualmente el combustible marino más utilizado globalmente. 3) Gasóleo Marino (MGO) y Diésel Marino (MDO): Combustibles destilados más refinados y limpios, utilizados principalmente en zonas de control de emisiones (ECA) y por embarcaciones más pequeñas. El MGO contiene menos de 0.1% de azufre, cumpliendo con las regulaciones más estrictas.",
-        "name": "El combustible que usan los barcos se conoce comúnmente como 'bunker fuel' o combustible de búnker en la industria marítima internacional. Este término engloba varios tipos de combustibles utilizados en la navegación comercial. Dependiendo de sus especificaciones técnicas, se clasifican como IFO (Intermediate Fuel Oil), VLSFO (Very Low Sulphur Fuel Oil), MGO (Marine Gas Oil) o MDO (Marine Diesel Oil). En las operaciones de suministro, se utiliza el término 'bunkering' para referirse al proceso de reabastecimiento de combustible de las embarcaciones, un servicio esencial en puertos comerciales de todo el mundo para mantener la cadena logística global en funcionamiento.",
-        "price": "El precio del diésel marino varía constantemente según factores como la ubicación geográfica, las condiciones del mercado petrolero global, las regulaciones ambientales vigentes y la disponibilidad en cada puerto. Los índices de referencia como el Platts Bunker Index o el Rotterdam Bunker Price son utilizados internacionalmente para establecer precios base. Desde la implementación de IMO 2020, se ha observado una diferencia de precio significativa entre los combustibles de alto y bajo contenido de azufre. Los precios actuales oscilan entre 500-700 USD por tonelada métrica para MGO y 400-600 USD para VLSFO, aunque estas cifras fluctúan semanalmente. Para obtener cotizaciones precisas y actualizadas, recomendamos contactar directamente con nuestro equipo de suministro de combustible marino.",
-        "difference": "La principal diferencia entre el combustible marino y el combustible regular reside en sus especificaciones técnicas y regulatorias. El combustible marino debe cumplir con estándares internacionales más estrictos establecidos por la OMI, especialmente en cuanto al contenido de azufre (máximo 0.5% globalmente y 0.1% en zonas ECA). Además, el combustible marino tiene mayor viscosidad y densidad que los combustibles terrestres, está diseñado para funcionar en motores de gran cilindrada que operan continuamente durante semanas, y debe mantener su estabilidad en condiciones marítimas adversas. Los combustibles marinos también se someten a controles de calidad más rigurosos y deben cumplir con el Convenio MARPOL para prevenir la contaminación marina. Estas diferencias hacen que el combustible marino sea un producto especializado con cadenas de suministro y logística propias."
-      }
-    },
-    "cta": {
-      "title": "¿Buscas un Ship Broker?",
-      "description": "Contáctanos para cerrar fixtures o saber más sobre nuestros servicios. Nuestro equipo está listo para ayudarte.",
-      "button": "Contactar Ahora"
     },
     "romea": {
       "hero": {
@@ -476,6 +365,117 @@
         "inquireNow": "Consultar Ahora",
         "downloadBrochure": "Descargar Folleto"
       }
+    }
+  },
+  "bunkerSupply": {
+    "hero": {
+      "title": "Suministro de Combustible Marino",
+      "subtitle": "Suministramos combustible marino para barcos en la isla de Menorca, el resto de España y la mayoria de puertos comerciales del mundo.",
+      "subtitle2": "Mediante nuestro partner <2>Stabia Oil</2>. Podemos subministrar todo tipo de combustible marino en la isla de Menorca."
+    },
+    "dailyPosition": {
+      "title": "Daily Position",
+      "updateStatus": "Actualizado diariamente",
+      "sectionTitle": "Menorca Brokers",
+      "description": "Contáctanos para recibir información de nuestros últimos precios de suministro.",
+      "downloadButton": "Contactar"
+    },
+    "marketIndices": {
+      "title": "Nuestros índices y proveedores del mercado marítimo",
+      "subtitle": "Obtenemos los últimos precios usando los datos proporcionados por nuestros partners.",
+      "providers": {
+        "shipAndBunker": {
+          "title": "Shipandbunker",
+          "description": "Consulta los precios del mercado de combustibles marinos en los principales puertos del mundo."
+        },
+        "balticExchange": {
+          "title": "Baltic Exchange",
+          "description": "Consulta el mercado de la carga actualizado a diario con el Baltic Exchange."
+        },
+        "cepsaMoeve": {
+          "title": "CEPSA & MOEVE",
+          "description": "Cargamos combustible marino CEPSA - MOEVE"
+        },
+        "stabiaOil": {
+          "title": "STABIAOIL",
+          "description": "STABIAOIL es nuestro proveedor de servicios."
+        }
+      },
+      "tooltip": "Visitar página web"
+    },
+    "specializedServices": {
+      "title": "Servicios Especializados",
+      "services": {
+        "shipSalePurchase": {
+          "title": "Ship Sale & Purchase",
+          "description": "Desde buques de carga hasta yates de lujo, te guiamos en cada paso del proceso, asegurándonos de que cada operación sea fluida, rentable y satisfactoria."
+        },
+        "dryBulk": {
+          "title": "Dry Bulk Cargo",
+          "description": "Especialistas en el manejo y gestión de cargas secas a granel."
+        },
+        "liquidBulk": {
+          "title": "Liquid Bulk Cargo",
+          "description": "Expertos en el transporte de cargas líquidas a granel, ofreciendo soluciones especializadas y seguras para cada tipo de carga."
+        }
+      }
+    },
+    "experience": {
+      "title": "Nuestra Experiencia",
+      "subtitle": "Más de una década de experiencia en el sector marítimo nos respalda",
+      "globalExperience": {
+        "title": "Experiencia Global",
+        "description": "En Menorca Brokers, somos especialistas en conectar armadores y fletadores, ofreciendo soluciones integrales para la compra, venta y alquiler de buques o charter por tiempo.",
+        "features": {
+          "globalCoverage": {
+            "title": "Cobertura Global",
+            "description": "Operaciones en los principales puertos internacionales"
+          },
+          "service247": {
+            "title": "Servicio 24/7",
+            "description": "Soporte continuo para todas tus necesidades"
+          }
+        }
+      },
+      "expertKnowledge": {
+        "title": "Conocimiento Experto",
+        "description": "Combinamos un profundo conocimiento del sector marítimo con una red global de contactos, lo que nos permite garantizar acuerdos eficientes y personalizados.",
+        "features": {
+          "expertTeam": {
+            "title": "Equipo Experto",
+            "description": "Profesionales altamente cualificados"
+          },
+          "qualityGuarantee": {
+            "title": "Garantía de Calidad",
+            "description": "Cumplimiento de estándares internacionales"
+          }
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Respuestas a las preguntas más comunes sobre combustible marino",
+      "questions": {
+        "what": "¿Qué es el combustible marino?",
+        "special": "¿Qué tiene de especial el combustible marino?",
+        "types": "¿Cuáles son los 3 tipos de combustibles?",
+        "name": "¿Cómo se llama el combustible que usan los barcos?",
+        "price": "¿Cuál es el precio del diésel marino?",
+        "difference": "¿Cuál es la diferencia entre el combustible marino y el combustible regular?"
+      },
+      "answers": {
+        "what": "El combustible marino es un tipo de combustible específicamente formulado para su uso en embarcaciones marítimas y buques comerciales. Está diseñado para proporcionar la energía necesaria para los motores de propulsión y generadores auxiliares en entornos marinos exigentes. El combustible marino debe cumplir con estándares internacionales establecidos por la Organización Marítima Internacional (OMI) y está sujeto a regulaciones estrictas sobre su contenido de azufre y otras propiedades para minimizar el impacto ambiental en los océanos y zonas costeras.",
+        "special": "El combustible marino está especialmente formulado para soportar las condiciones extremas del entorno marítimo. Sus características especiales incluyen una mayor densidad energética, estabilidad en condiciones de alta humedad y salinidad, y formulaciones específicas para cumplir con las regulaciones internacionales de emisiones como MARPOL Anexo VI. Desde 2020, la OMI ha implementado el límite global de azufre del 0.5% (conocido como IMO 2020), lo que ha llevado al desarrollo de combustibles marinos de muy bajo contenido de azufre (VLSFO) para reducir la contaminación atmosférica y proteger la salud pública y los ecosistemas marinos.",
+        "types": "Los tres tipos principales de combustible marino son: 1) Fuel Oil Pesado (HFO): También conocido como búnker C, es el más denso y económico, tradicionalmente usado en grandes buques de carga y contenedores. Contiene alto nivel de azufre y está siendo gradualmente eliminado debido a regulaciones ambientales. 2) Fuel Oil de Muy Bajo Contenido de Azufre (VLSFO): Desarrollado para cumplir con el límite de azufre de 0.5% de IMO 2020, es actualmente el combustible marino más utilizado globalmente. 3) Gasóleo Marino (MGO) y Diésel Marino (MDO): Combustibles destilados más refinados y limpios, utilizados principalmente en zonas de control de emisiones (ECA) y por embarcaciones más pequeñas. El MGO contiene menos de 0.1% de azufre, cumpliendo con las regulaciones más estrictas.",
+        "name": "El combustible que usan los barcos se conoce comúnmente como 'bunker fuel' o combustible de búnker en la industria marítima internacional. Este término engloba varios tipos de combustibles utilizados en la navegación comercial. Dependiendo de sus especificaciones técnicas, se clasifican como IFO (Intermediate Fuel Oil), VLSFO (Very Low Sulphur Fuel Oil), MGO (Marine Gas Oil) o MDO (Marine Diesel Oil). En las operaciones de suministro, se utiliza el término 'bunkering' para referirse al proceso de reabastecimiento de combustible de las embarcaciones, un servicio esencial en puertos comerciales de todo el mundo para mantener la cadena logística global en funcionamiento.",
+        "price": "El precio del diésel marino varía constantemente según factores como la ubicación geográfica, las condiciones del mercado petrolero global, las regulaciones ambientales vigentes y la disponibilidad en cada puerto. Los índices de referencia como el Platts Bunker Index o el Rotterdam Bunker Price son utilizados internacionalmente para establecer precios base. Desde la implementación de IMO 2020, se ha observado una diferencia de precio significativa entre los combustibles de alto y bajo contenido de azufre. Los precios actuales oscilan entre 500-700 USD por tonelada métrica para MGO y 400-600 USD para VLSFO, aunque estas cifras fluctúan semanalmente. Para obtener cotizaciones precisas y actualizadas, recomendamos contactar directamente con nuestro equipo de suministro de combustible marino.",
+        "difference": "La principal diferencia entre el combustible marino y el combustible regular reside en sus especificaciones técnicas y regulatorias. El combustible marino debe cumplir con estándares internacionales más estrictos establecidos por la OMI, especialmente en cuanto al contenido de azufre (máximo 0.5% globalmente y 0.1% en zonas ECA). Además, el combustible marino tiene mayor viscosidad y densidad que los combustibles terrestres, está diseñado para funcionar en motores de gran cilindrada que operan continuamente durante semanas, y debe mantener su estabilidad en condiciones marítimas adversas. Los combustibles marinos también se someten a controles de calidad más rigurosos y deben cumplir con el Convenio MARPOL para prevenir la contaminación marina. Estas diferencias hacen que el combustible marino sea un producto especializado con cadenas de suministro y logística propias."
+      }
+    },
+    "cta": {
+      "title": "¿Buscas un Ship Broker?",
+      "description": "Contáctanos para cerrar fixtures o saber más sobre nuestros servicios. Nuestro equipo está listo para ayudarte.",
+      "button": "Contactar Ahora"
     }
   },
   "inspections": {
