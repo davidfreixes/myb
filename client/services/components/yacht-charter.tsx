@@ -13,10 +13,11 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import ContactModal from "../../general/contact/modal/contactModal";
+import YachtRomeaShowcase from "../yacht-charter/components/yacht-romea";
 
 export default function YachtCharter() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const t = useTranslations('yachtCharter');
+  const t = useTranslations("yachtCharter");
 
   const whyChooseUs = [
     {
@@ -49,9 +50,7 @@ export default function YachtCharter() {
     },
     {
       title: t("services.list.thematicExcursions.title"),
-      description: t(
-        "services.list.thematicExcursions.description"
-      ),
+      description: t("services.list.thematicExcursions.description"),
       icon: <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
     },
     {
@@ -126,6 +125,13 @@ export default function YachtCharter() {
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
                 {t("hero.subtitle")}
               </h2>
+              <Button
+                unstyled
+                onClick={() => setContactModalOpened(true)}
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+              >
+                {t("cta.button")}
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -167,6 +173,7 @@ export default function YachtCharter() {
           ))}
         </div>
       </div>
+      <YachtRomeaShowcase />
 
       {/* Introduction Section with Image */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">

@@ -186,6 +186,185 @@
       "title": "Live an Unforgettable Experience at Sea",
       "description": "Book your boat in Menorca and sail through its most iconic coves. Enjoy a no-license rental, catamaran excursions, or a luxury yacht with exclusive services.",
       "button": "Book Now"
+    },
+    "romea": {
+      "hero": {
+        "exclusive": "EXCLUSIVE",
+        "available": "AVAILABLE",
+        "title": "RoMEA",
+        "subtitle": "FOR CHARTER",
+        "details": "81.8m (268.4ft) • Abeking & Rasmussen • 2015 / 2021",
+        "imageAlt": "RoMEA Yacht"
+      },
+      "quickStats": {
+        "length": {
+          "label": "Length",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "builder": {
+          "label": "Builder",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "cruisingArea": {
+          "label": "Cruising Area",
+          "value": "Mediterranean / Caribbean"
+        },
+        "weeklyRate": {
+          "label": "Weekly Rate",
+          "value": "EUR1,100,000"
+        }
+      },
+      "about": {
+        "discover": "Discover",
+        "title": "ABOUT RoMEA",
+        "paragraph1": "Introducing RoMEA, the epitome of superyacht luxury and sophistication. This magnificent vessel, measuring 81.8 metres in length, was meticulously crafted in Germany by the renowned shipyard Abeking & Rasmussen, known for their exceptional craftsmanship. Delivered in 2015 and refitted in 2021, RoMEA exudes timeless elegance and offers a peerless yachting experience.",
+        "paragraph2": "With a top speed of 17 knots and a remarkable maximum range of 4000 nautical miles at economical speed, RoMEA effortlessly combines power and efficiency. Two Caterpillar diesel engines provide an impressive propulsion, ensuring smooth and seamless voyages across vast oceans.",
+        "paragraph3": "Step on board, and you'll discover a world of opulence and comfort. Accommodating up to 12 guests in 7 staterooms, RoMEA offers the utmost privacy and indulgence. Impeccably designed by the visionary Terence Disdale, who also crafted the stunning interior, this superyacht is a masterpiece in every sense.",
+        "paragraph4": "RoMEA's exceptional design earned her the prestigious 2018 World Superyacht Award for Displacement Motor Yachts Below 500GT. Her expansive beach club, glass-bottomed pool, and luxurious spa facilities create an unparalleled experience for the most discerning guests."
+      },
+      "gallery": {
+        "experience": "Experience",
+        "title": "GALLERY",
+        "image1Alt": "RoMEA yacht exterior view",
+        "image2Alt": "RoMEA yacht master suite",
+        "image3Alt": "RoMEA yacht dining area",
+        "image4Alt": "RoMEA yacht beach club",
+        "image5Alt": "RoMEA yacht sundeck",
+        "image6Alt": "RoMEA yacht aerial view",
+        "close": "Close",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "specs": {
+        "details": "Details",
+        "title": "SPECIFICATIONS",
+        "tabs": {
+          "specifications": "Specifications",
+          "features": "Features",
+          "highlights": "Highlights"
+        }
+      },
+      "specifications": {
+        "length": {
+          "label": "Length",
+          "value": "81.8 M (268.4 FT)"
+        },
+        "beam": {
+          "label": "Beam",
+          "value": "12.6 M (41.4 FT)"
+        },
+        "draft": {
+          "label": "Draft",
+          "value": "3.4M (11.4 FT)"
+        },
+        "grossTonnage": {
+          "label": "Gross Tonnage",
+          "value": "2312 GT"
+        },
+        "builder": {
+          "label": "Builder",
+          "value": "ABEKING & RASMUSSEN"
+        },
+        "year": {
+          "label": "Year",
+          "value": "2015 / 2021"
+        },
+        "guests": {
+          "label": "Guests",
+          "value": "12 IN 7 CABINS"
+        },
+        "cabinConfiguration": {
+          "label": "Cabin configuration",
+          "value": "4 DOUBLE, 3 TWIN"
+        },
+        "interiorDesigner": {
+          "label": "Interior Designer",
+          "value": "TERENCE DISDALE"
+        },
+        "crew": {
+          "label": "Crew",
+          "value": "CAPTAIN + 24"
+        },
+        "engines": {
+          "label": "Engines",
+          "value": "2 X CAT 3516C DIESEL"
+        },
+        "cruisingSpeed": {
+          "label": "Cruising Speed",
+          "value": "13 KTS"
+        },
+        "maxSpeed": {
+          "label": "Max Speed",
+          "value": "17 KTS"
+        },
+        "range": {
+          "label": "Range",
+          "value": "4000 NM"
+        }
+      },
+      "features": {
+        "tenders": "Tender(s)",
+        "beachClub": "Beach club",
+        "spa": "Spa",
+        "jetskis": "Jetski(s)",
+        "paddleBoard": "Paddle board",
+        "gym": "Gym",
+        "inflatableWaterToys": "Inflatable Water Toys",
+        "seabobs": "Seabob(s)",
+        "divingSnorkelling": "Diving / Snorkelling",
+        "elevator": "Elevator",
+        "stabilisers": "Stabilisers",
+        "kayaks": "Kayak(s)",
+        "variousWatersport": "Various watersport",
+        "jacuzzi": "Jacuzzi",
+        "fishingEquipment": "Fishing Equipment"
+      },
+      "highlights": {
+        "award": "2018 World Superyacht Award for Displacement Motor Yachts Below 500GT (40m & Above)",
+        "glassUse": "Exceptional use of glass throughout with floor-to-ceiling windows that illuminate the interior with natural sunlight",
+        "beachClub": "Massive beach club featuring a fully equipped gym, a fully dedicated spa and ocean-level fold-down balconies",
+        "pool": "Glass-bottomed pool with counterflow current, designer lighting and Jacuzzi",
+        "tenderBay": "Luxurious drive-in tender bay for easy hop on/off transfers to shore",
+        "diningOptions": "Extensive indoor and outdoor dining options and seatings"
+      },
+      "awardSection": {
+        "excellence": "Excellence",
+        "title": "Award-Winning Design",
+        "paragraph1": "RoMEA stands as a testament to exceptional craftsmanship and design excellence. Her prestigious 2018 World Superyacht Award recognizes the meticulous attention to detail and innovative features that set her apart.",
+        "paragraph2": "The yacht's interior, crafted by the legendary Terence Disdale, creates an atmosphere of refined luxury with natural materials, sophisticated color palettes, and thoughtful spatial design that maximizes both comfort and elegance.",
+        "imageAlt": "RoMEA yacht interior"
+      },
+      "rates": {
+        "pricing": "Pricing",
+        "title": "AREAS & RATES",
+        "highSeason": "High Season",
+        "lowSeason": "Low Season",
+        "priceExcludes": "Price excludes VAT + 30% Expenses",
+        "disclaimer": "Not offered for sale or charter to U.S. residents while in U.S. waters",
+        "summer": {
+          "season": "SUMMER",
+          "area": "Mediterranean",
+          "high": "EUR1,100,000/wk",
+          "low": "EUR1,100,000/wk"
+        },
+        "winter": {
+          "season": "WINTER",
+          "area": "Caribbean",
+          "high": "EUR1,100,000/wk",
+          "low": "EUR1,100,000/wk"
+        }
+      },
+      "cta": {
+        "title": "Experience Unparalleled Luxury",
+        "description": "Charter the magnificent RoMEA for your next luxury vacation. Our team is ready to create a bespoke experience tailored to your preferences, ensuring an unforgettable journey across the world's most beautiful waters.",
+        "yachtName": "RoMEA",
+        "availability": "Available for Charter",
+        "imageAlt": "RoMEA yacht exterior"
+      },
+      "buttons": {
+        "inquireNow": "Inquire Now",
+        "downloadBrochure": "Download Brochure"
+      }
     }
   },
   "bunkerSupply": {
