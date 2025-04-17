@@ -13,7 +13,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import ContactModal from "../../general/contact/modal/contactModal";
-import YachtRomeaShowcase from "../yacht-charter/components/yacht-romea";
 
 export default function YachtCharter() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
@@ -173,7 +172,7 @@ export default function YachtCharter() {
           ))}
         </div>
       </div>
-      <YachtRomeaShowcase />
+      {/* <YachtRomeaShowcase /> */}
 
       {/* Introduction Section with Image */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
