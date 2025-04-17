@@ -18,6 +18,7 @@ export function Footer() {
               <Image
                 src="/img/logo.png"
                 alt="Menorca Yacht Brokers"
+                className="w-36 h-32"
                 width={140}
                 height={140}
               />

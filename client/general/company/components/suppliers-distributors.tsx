@@ -57,6 +57,7 @@ export default function Partners() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-8">
@@ -103,6 +104,7 @@ export default function Partners() {
                       alt={partner.name}
                       fill
                       className="object-contain p-2 sm:p-4 group-hover:scale-105 transition-transform duration-300"
+                      sizes="200px"
                     />
                   </div>
                   <div className="mt-3 sm:mt-4 text-center">

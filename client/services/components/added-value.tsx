@@ -135,6 +135,7 @@ export default function ValueAddedServices() {
                     alt={service.title}
                     fill
                     className="object-cover rounded-full"
+                    sizes="800px"
                   />
                 </div>
                 <div className="p-4 sm:p-6 text-white relative z-10">
@@ -220,6 +221,7 @@ export default function ValueAddedServices() {
                       alt="Charles Grange"
                       fill
                       className="object-cover rounded-full"
+                      sizes="500px"
                     />
                   </motion.div>
                 </div>

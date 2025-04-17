@@ -154,9 +154,8 @@ export default function BunkerSupplyPage() {
           src="/img/bunker-supply.jpg"
           alt="Ship broker service"
           fill
-          className="object-cover"
+          className="object-cover object-bottom"
           priority
-          objectPosition="bottom"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">

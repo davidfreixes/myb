@@ -79,6 +79,7 @@ export default function PortDaily() {
                       alt="Periódico del Puerto de Mahón"
                       fill
                       className="object-cover rounded-lg"
+                      sizes="500px"
                     />
                   </div>
                   <div className="space-y-4">
@@ -86,9 +87,7 @@ export default function PortDaily() {
                       {article.title}
                     </h2>
                     <div className="flex items-center text-primary">
-                      <span className="text-sm">
-                        {t("news.readMore")}
-                      </span>
+                      <span className="text-sm">{t("news.readMore")}</span>
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </div>
                   </div>

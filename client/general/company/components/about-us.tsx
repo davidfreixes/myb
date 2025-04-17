@@ -153,6 +153,7 @@ export default function AboutUs() {
                         alt={member.name}
                         fill
                         className="object-cover object-center rounded-full group-hover:scale-105 transition-transform duration-300"
+                        sizes="500px"
                       />
                     </div>
                   </div>

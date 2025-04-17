@@ -214,9 +214,9 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             <Image
               src="/img/logo-no-title.webp"
               alt="Menorca Yacht Brokers"
+              className="w-14 h-12"
               width={55}
               height={55}
-              className="w-auto h-auto"
             />
           </Link>
 
