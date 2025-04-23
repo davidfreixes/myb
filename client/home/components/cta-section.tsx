@@ -1,6 +1,5 @@
 import ContactModal from "@/client/general/contact/modal/contactModal";
 import { Button, Text } from "@mantine/core";
-import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -10,12 +9,7 @@ export default function CTASection() {
   const t = useTranslations("mainPage.ctaSection");
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.8 }}
-      className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12"
-    >
+    <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12">
       <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
         {t("title")}
       </h2>
@@ -39,6 +33,6 @@ export default function CTASection() {
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
       />
-    </motion.div>
+    </div>
   );
 }
