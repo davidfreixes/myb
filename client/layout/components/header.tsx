@@ -225,62 +225,86 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             {navigation.map((item) => (
               <div key={item.label}>
                 {item.items ? (
-                  <Menu
-                    trigger="hover"
-                    openDelay={100}
-                    closeDelay={100}
-                    shadow="md"
-                    width={item.width}
-                    onOpen={() => setActiveMenu(item.label)}
-                    onClose={() => setActiveMenu(null)}
-                  >
-                    <Menu.Target>
-                      <Button
-                        unstyled
-                        className={`hover:text-primary transition-colors py-2 ${
-                          activeMenu === item.label
-                            ? "underline text-primary"
-                            : "hover:underline text-white"
-                        }`}
-                      >
-                        {item.label}
-                      </Button>
-                    </Menu.Target>
-                    <Menu.Dropdown>
-                      <Menu.Label className="font-semibold text-lg">
-                        {item.label.toUpperCase()}
-                      </Menu.Label>
-                      <div className="grid grid-cols-2 gap-2 mb-2">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.label}
-                            href={subItem.href}
-                            passHref
-                          >
-                            <Menu.Item
-                              leftSection={
-                                <div className="text-primary">
-                                  {subItem.icon}
-                                </div>
-                              }
-                              className="hover:bg-primary/10"
+                  <>
+                    <Menu
+                      trigger="hover"
+                      openDelay={100}
+                      closeDelay={100}
+                      shadow="md"
+                      width={item.width}
+                      onOpen={() => setActiveMenu(item.label)}
+                      onClose={() => setActiveMenu(null)}
+                    >
+                      <Menu.Target>
+                        <Button
+                          unstyled
+                          className={`hover:text-primary transition-colors py-2 ${
+                            activeMenu === item.label
+                              ? "underline text-primary"
+                              : "hover:underline text-white"
+                          }`}
+                        >
+                          {item.label}
+                        </Button>
+                      </Menu.Target>
+                      <Menu.Dropdown>
+                        <Menu.Label className="font-semibold text-lg">
+                          {item.label.toUpperCase()}
+                        </Menu.Label>
+                        <div className="grid grid-cols-2 gap-2 mb-2">
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              href={subItem.href}
+                              passHref
                             >
-                              <div>
-                                <Text size="md" fw={450}>
-                                  {subItem.label}
-                                </Text>
-                                {subItem.description && (
-                                  <Text size="xs" c="dimmed">
-                                    {subItem.description}
+                              <Menu.Item
+                                leftSection={
+                                  <div className="text-primary">
+                                    {subItem.icon}
+                                  </div>
+                                }
+                                className="hover:bg-primary/10"
+                              >
+                                <div>
+                                  <Text size="md" fw={450}>
+                                    {subItem.label}
                                   </Text>
-                                )}
-                              </div>
-                            </Menu.Item>
-                          </Link>
-                        ))}
+                                  {subItem.description && (
+                                    <Text size="xs" c="dimmed">
+                                      {subItem.description}
+                                    </Text>
+                                  )}
+                                </div>
+                              </Menu.Item>
+                            </Link>
+                          ))}
+                        </div>
+                      </Menu.Dropdown>
+                    </Menu>
+                    <noscript>
+                      <div className="py-2">
+                        <a
+                          href={item.href}
+                          className="text-white hover:text-primary"
+                        >
+                          {item.label}
+                        </a>
+                        <ul className="pl-4">
+                          {item.items.map((subItem) => (
+                            <li key={subItem.label}>
+                              <a
+                                href={subItem.href}
+                                className="text-white text-sm py-1 block"
+                              >
+                                {subItem.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    </Menu.Dropdown>
-                  </Menu>
+                    </noscript>
+                  </>
                 ) : (
                   <Link href={item.href} passHref>
                     <Button
@@ -308,7 +332,6 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             </Button>
 
             {/* Language Selector */}
-
             <Menu>
               <Menu.Target>
                 <div className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1 cursor-pointer">
@@ -338,6 +361,21 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                 ))}
               </Menu.Dropdown>
             </Menu>
+
+            {/* Enlaces de idioma de respaldo para SEO y sin JS */}
+            <noscript>
+              <div className="hidden lg:flex gap-2">
+                {LANGUAGES.map((language) => (
+                  <a
+                    key={language.code}
+                    href={`/${language.code}${asPath}`}
+                    className="text-white px-2 text-sm"
+                  >
+                    {language.code.toUpperCase()}
+                  </a>
+                ))}
+              </div>
+            </noscript>
 
             {/* Mobile menu button */}
             <Button
@@ -427,6 +465,43 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             </div>
           </div>
         )}
+
+        <noscript>
+          <div className="lg:hidden bg-black">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <div key={item.label} className="py-2">
+                  <a href={item.href} className="text-white block px-3 py-2">
+                    {item.label}
+                  </a>
+                  {item.items && (
+                    <ul className="pl-4">
+                      {item.items.map((subItem) => (
+                        <li key={subItem.label}>
+                          <a
+                            href={subItem.href}
+                            className="text-white block px-3 py-2 text-sm"
+                          >
+                            {subItem.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+              {/* Contact button - mobile sin JS */}
+              <div className="py-2">
+                <a
+                  href={NAVIGATION_LINKS.CONTACTO}
+                  className="block w-full text-center bg-primary text-black font-medium py-2 px-3 rounded-md"
+                >
+                  {t("navigation.contact")}
+                </a>
+              </div>
+            </div>
+          </div>
+        </noscript>
       </div>
     </header>
   );
