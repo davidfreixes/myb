@@ -1,5 +1,5 @@
 import { Text } from "@mantine/core";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef } from "react";
@@ -33,18 +33,13 @@ export default function FeaturesSection() {
       imageAlt: t("features.2.imageAlt"),
     },
   ];
-  // const refs = features.map(() => useRef(null));
-  // const inViewStates = refs.map((ref) => useInView(ref, { amount: 0.3 }));
+
   // Create individual refs and inView states for each feature
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const refs = [ref1, ref2, ref3];
 
-  const isInView1 = useInView(ref1, { amount: 0.3 });
-  const isInView2 = useInView(ref2, { amount: 0.3 });
-  const isInView3 = useInView(ref3, { amount: 0.3 });
-  const inViewStates = [isInView1, isInView2, isInView3];
   return (
     <section className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,12 +48,11 @@ export default function FeaturesSection() {
             <motion.div
               ref={refs[index]}
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                inViewStates[index]
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 20 }
-              }
+              // Comienza visible por defecto (para SEO)
+              initial={{ opacity: 1, y: 0 }}
+              // Solo aplica animaciones si JavaScript está habilitado
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`flex flex-col justify-center gap-8 sm:gap-10 md:gap-24 ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
@@ -73,6 +67,7 @@ export default function FeaturesSection() {
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+                    priority={index === 0} // Carga prioritaria para la primera imagen
                   />
                 </div>
               </div>
