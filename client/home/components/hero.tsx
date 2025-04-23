@@ -1,28 +1,11 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
   const t = useTranslations("mainPage.hero");
-
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true); // Aseguramos que i18next esté cargado
-  }, []);
-  if (!isLoaded) return null;
-
-  const scrollToServices = () => {
-    // Navegar a la sección de servicios
-    const servicesSection = document.getElementById("services-section");
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="flex relative h-[100vh] max-h-[100vh] md:h-[500px] w-full">
@@ -43,12 +26,7 @@ export default function Hero() {
         <div className="flex h-[100vh] xs:h-[500px] flex-col py-8 md:py-12">
           <div className="grid md:grid-cols-2 gap-4 md:gap-2 lg:gap-10 mt-12">
             {/* Left Column */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col justify-center space-y-4 md:space-y-6 text-white order-1 pt-2 md:pt-0"
-            >
+            <div className="flex flex-col justify-center space-y-4 md:space-y-6 text-white order-1 pt-2 md:pt-0">
               <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-primary">
                 Menorca Yacht Brokers
               </h1>
@@ -67,8 +45,9 @@ export default function Hero() {
               <div className="sm:hidden mt-6 md:mt-8 flex flex-col sm:flex-row gap-4">
                 <Button
                   unstyled
-                  onClick={scrollToServices}
-                  className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-md py-2 px-4"
+                  component={Link}
+                  href="#services-section"
+                  className="w-full text-center rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-md py-2 px-4"
                 >
                   {t("buttons.explore_services")}
                 </Button>
@@ -81,15 +60,10 @@ export default function Hero() {
                   {t("buttons.contact_us")}
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden sm:flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2"
-            >
+            <div className="hidden sm:flex flex-col justify-center bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 lg:p-8 text-white order-2">
               <div className="space-y-4 md:space-y-6">
                 <h2 className="text-3xl font-light text-white">{t("title")}</h2>
                 <div className="space-y-3 md:space-y-4 text-gray-200">
@@ -102,9 +76,10 @@ export default function Hero() {
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
                   <Button
+                    component={Link}
+                    href="#services-section"
                     unstyled
-                    onClick={scrollToServices}
-                    className="w-full rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
+                    className="w-full flex items-center text-center rounded sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-md py-2 px-4"
                   >
                     {t("buttons.explore_services")}
                   </Button>
@@ -118,7 +93,7 @@ export default function Hero() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
