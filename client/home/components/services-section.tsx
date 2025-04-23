@@ -84,8 +84,8 @@ export default function ServicesSection() {
     <section id="services-section" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-0 sm:px-20">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-8 sm:mb-12 md:mb-12"
         >
@@ -106,7 +106,7 @@ export default function ServicesSection() {
               animate={
                 inViewStates[index]
                   ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 20 }
+                  : { opacity: 1, y: 0 }
               }
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="flex"
