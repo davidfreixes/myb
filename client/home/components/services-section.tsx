@@ -102,7 +102,7 @@ export default function ServicesSection() {
             <motion.div
               ref={refs[index]}
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={
                 inViewStates[index]
                   ? { opacity: 1, y: 0 }
