@@ -1,6 +1,5 @@
 import { sampleYachts } from "@/utils/yachts";
-import { Accordion, Button, Tabs } from "@mantine/core";
-import { AnimatePresence, motion } from "framer-motion";
+import { Accordion, Button } from "@mantine/core";
 import { Anchor, Ship, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -134,17 +133,6 @@ export default function YachtBroker() {
     },
   ];
 
-  // const scrollToSection = (type: "new" | "used") => {
-  //   setActiveTab(type);
-  //   setTimeout(() => {
-  //     const sectionRef =
-  //       type === "new" ? newBoatsSectionRef : usedBoatsSectionRef;
-  //     if (sectionRef.current) {
-  //       sectionRef.current.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }, 100);
-  // };
-
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section - Now more responsive */}
@@ -159,14 +147,9 @@ export default function YachtBroker() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center items-start md:max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-4 w-full"
-          >
+          <div className="space-y-4 w-full">
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary max-w-4xl">
                 {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl ">
@@ -185,138 +168,94 @@ export default function YachtBroker() {
               </Button>
               <Button
                 unstyled
-                // onClick={() => scrollToSection("new")}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
               >
                 Customized Boat
               </Button>
-              {/* <Button
-                unstyled
-                onClick={() => scrollToSection("new")}
-                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
-              >
-                {t("navigation.newYachts")}
-              </Button>
-              <Button
-                unstyled
-                onClick={() => scrollToSection("used")}
-                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
-              >
-                {t("navigation.usedYachts")}
-              </Button> */}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
       {/* Main Content - Improved spacing and responsiveness */}
       <div className="container mx-auto px-0 sm:px-6 py-6 sm:py-8 md:py-12 md:max-w-[1400px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="prose prose-sm sm:prose-base lg:prose-lg max-w-none"
-        >
+        <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
           <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
             {t.rich("description.intro", {
               p: (chunks) => <span className="text-primary">{chunks}</span>,
             })}
           </p>
 
-          {/* Yacht Catalog - Enhanced responsive design */}
           <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md">
-            <Tabs
-              value={activeTab}
-              onChange={setActiveTab}
-              className="mb-4 md:mb-6 lg:mb-8"
-              color="#f1c001"
-            >
-              <div className="w-full sticky top-0 z-10 bg-white">
-                <Tabs.List grow>
-                  <div className="flex w-full">
-                    <div
-                      className={`flex w-full ${
-                        activeTab === "new" && "bg-primary/10 rounded-tl-lg"
-                      }`}
-                    >
-                      <Tabs.Tab value="new">
-                        <h2 className="text-sm md:text-base lg:text-lg text-black">
-                          {t("navigation.newYachts")}
-                        </h2>
-                      </Tabs.Tab>
-                    </div>
-                    <div
-                      className={`flex w-full ${
-                        activeTab === "used" && "bg-primary/10 rounded-tr-lg"
-                      }`}
-                    >
-                      <Tabs.Tab value="used">
-                        <h2 className="text-sm md:text-base lg:text-lg">
-                          {t("navigation.usedYachts")}
-                        </h2>
-                      </Tabs.Tab>
-                    </div>
-                  </div>
-                </Tabs.List>
+            <div className="w-full sticky top-0 z-10 bg-white">
+              <div className="flex w-full border-b">
+                <button
+                  onClick={() => setActiveTab("new")}
+                  className={`flex-1 py-2 px-4 text-sm md:text-base lg:text-lg text-black ${
+                    activeTab === "new" ? "bg-primary/10 font-medium" : ""
+                  }`}
+                >
+                  {t("navigation.newYachts")}
+                </button>
+                <button
+                  onClick={() => setActiveTab("used")}
+                  className={`flex-1 py-2 px-4 text-sm md:text-base lg:text-lg text-black ${
+                    activeTab === "used" ? "bg-primary/10 font-medium" : ""
+                  }`}
+                >
+                  {t("navigation.usedYachts")}
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <div
+                id="new-yachts"
+                ref={newBoatsSectionRef}
+                className={activeTab === "new" ? "" : "hidden"}
+              >
+                <h2 className="sr-only">{t("navigation.newYachts")}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                  <YachtCards
+                    yachts={sampleYachts.filter(
+                      (yacht) => yacht.type === "new"
+                    )}
+                  />
+                </div>
               </div>
 
-              <AnimatePresence>
-                <Tabs.Panel value="new" ref={newBoatsSectionRef}>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 mt-3 md:mt-4 lg:mt-6"
-                  >
-                    <YachtCards
-                      yachts={sampleYachts.filter(
-                        (yacht) => yacht.type === "new"
-                      )}
-                    />
-                  </motion.div>
-                </Tabs.Panel>
-
-                <Tabs.Panel value="used" ref={usedBoatsSectionRef}>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 mt-3 md:mt-4 lg:mt-6"
-                  >
-                    <YachtCards
-                      yachts={sampleYachts.filter(
-                        (yacht) => yacht.type === "used"
-                      )}
-                    />
-                  </motion.div>
-                </Tabs.Panel>
-              </AnimatePresence>
-            </Tabs>
+              <div
+                id="used-yachts"
+                ref={usedBoatsSectionRef}
+                className={activeTab === "used" ? "" : "hidden"}
+              >
+                <h2 className="sr-only">{t("navigation.usedYachts")}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                  <YachtCards
+                    yachts={sampleYachts.filter(
+                      (yacht) => yacht.type === "used"
+                    )}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 sm:pt-4">
             {t("description.expertise")}
           </p>
-        </motion.div>
+        </div>
       </div>
-      {/* Nueva sección de categorías populares */}
+      {/* Categorías populares */}
       <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-14 md:max-w-[1400px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8 sm:mb-12"
-        >
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
             {t("categories.title")}
           </h2>
-        </motion.div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {popularCategories.map((category, index) => (
-            <motion.div
+            <div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 * index }}
               className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
@@ -325,7 +264,7 @@ export default function YachtBroker() {
                   alt={category.title}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px 100vw"
+                  sizes="(min-width: 1024px) 100vw"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
@@ -334,30 +273,24 @@ export default function YachtBroker() {
               <p className="text-sm sm:text-base text-gray-700">
                 {category.description}
               </p>
-            </motion.div>
+              {/* Añadimos keywords como texto oculto para SEO */}
+              <div className="sr-only">{category.keywords.join(", ")}</div>
+            </div>
           ))}
         </div>
       </div>
-      {/* Advantages Section */};
+      {/* Advantages Section */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <div className="container mx-auto px-0 sm:px-6 py-12 sm:py-16 md:py-20 md:max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-8 sm:mb-12"
-          >
+          <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-4">
               {t("advantages.title")}
             </h2>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {advantages.map((advantage, index) => (
-              <motion.div
+              <div
                 key={advantage.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
@@ -369,12 +302,12 @@ export default function YachtBroker() {
                 <p className="text-sm sm:text-base text-gray-700">
                   {advantage.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </div>
-      {/* FAQ Section */};
+      {/* FAQ Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
@@ -383,48 +316,66 @@ export default function YachtBroker() {
           <p className="text-gray-600 text-lg">{t("faq.description")}</p>
         </div>
 
-        <Accordion
-          className="max-w-5xl mx-auto"
-          styles={{
-            item: {
-              borderRadius: "8px",
-              marginBottom: "12px",
-              border: "1px solid #e5e7eb",
-              backgroundColor: "white",
-              borderBottom: "1px solid #FFB800",
-            },
-            control: {
-              padding: "10px",
-            },
-            content: {
-              padding: "0 20px 20px",
-            },
-          }}
-        >
+        {/* FAQs visibles sin JavaScript */}
+        <div className="max-w-5xl mx-auto">
           {faqs.map((item, index) => (
-            <Accordion.Item key={item.id} value={item.id}>
-              <Accordion.Control>
-                <div className="flex items-center gap-2">
-                  <span className="text-[#FFB800] font-mono text-lg">
-                    {String(index + 1).padStart(2, "0")}.
-                  </span>
-                  <h2 className="font-semibold">{item.question}</h2>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
+            <div
+              key={item.id}
+              className="mb-4 border border-b-[#FFB800] rounded-lg bg-white overflow-hidden"
+            >
+              <div className="p-4 flex items-center gap-2">
+                <span className="text-[#FFB800] font-mono text-lg">
+                  {String(index + 1).padStart(2, "0")}.
+                </span>
+                <h3 className="font-semibold">{item.question}</h3>
+              </div>
+              <div className="px-4 pb-4">
                 <p className="text-gray-600">{item.answer}</p>
-              </Accordion.Panel>
-            </Accordion.Item>
+              </div>
+            </div>
           ))}
-        </Accordion>
+        </div>
+
+        {/* Versión interactiva con JavaScript */}
+        <div className="hidden">
+          <Accordion
+            className="max-w-5xl mx-auto"
+            styles={{
+              item: {
+                borderRadius: "8px",
+                marginBottom: "12px",
+                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderBottom: "1px solid #FFB800",
+              },
+              control: {
+                padding: "10px",
+              },
+              content: {
+                padding: "0 20px 20px",
+              },
+            }}
+          >
+            {faqs.map((item, index) => (
+              <Accordion.Item key={item.id} value={item.id}>
+                <Accordion.Control>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#FFB800] font-mono text-lg">
+                      {String(index + 1).padStart(2, "0")}.
+                    </span>
+                    <h2 className="font-semibold">{item.question}</h2>
+                  </div>
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <p className="text-gray-600">{item.answer}</p>
+                </Accordion.Panel>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </div>
       </div>
       {/* CTA Section - Improved responsive design */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12"
-      >
+      <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12">
         <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
           {t("cta.title")}
         </h2>
@@ -438,7 +389,7 @@ export default function YachtBroker() {
         >
           {t("cta.button")}
         </Button>
-      </motion.div>
+      </div>
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
