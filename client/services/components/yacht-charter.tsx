@@ -130,7 +130,7 @@ export default function YachtCharter() {
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <div className="max-w-4xl">
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
