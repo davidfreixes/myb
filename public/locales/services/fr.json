@@ -401,7 +401,8 @@
           "description": "STABIAOIL est notre fournisseur de services."
         }
       },
-      "tooltip": "Visiter le site web"
+      "tooltip": "Visiter le site web",
+      "viewMore": "Voir plus"
     },
     "specializedServices": {
       "title": "Services Spécialisés",

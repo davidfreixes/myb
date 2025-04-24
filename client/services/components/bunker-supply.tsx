@@ -1,5 +1,4 @@
-import { Accordion, Button, Tooltip } from "@mantine/core";
-import { motion } from "framer-motion";
+import { Accordion, Button } from "@mantine/core";
 import {
   Anchor,
   BarChart2,
@@ -149,22 +148,17 @@ export default function BunkerSupplyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[50vh] md:h-[60vh] w-full">
+      <section className="relative h-[50vh] md:h-[60vh] w-full">
         <Image
           src="/img/bunker-supply.jpg"
-          alt="Ship broker service"
+          alt={t("hero.title")}
           fill
           className="object-cover object-bottom"
           priority
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
+          <div className="max-w-4xl">
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary max-w-4xl">
                 {t("hero.title")}
@@ -173,72 +167,89 @@ export default function BunkerSupplyPage() {
                 {t("hero.subtitle")}
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Button
-                  unstyled
-                  onClick={() => setContactModalOpened(true)}
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+                {/* Usar enlaces <a> para los botones para que funcionen sin JS */}
+                <a
+                  href="/contact"
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300 text-center"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {t("dailyPosition.downloadButton")}
                   </div>
-                </Button>
-                <Button
-                  unstyled
-                  onClick={() => setQuoteModalOpened(true)}
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+                </a>
+                <a
+                  href="/quote"
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300 text-center"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {q("title")}
                   </div>
-                </Button>
+                </a>
+                {/* Mantener los botones originales para la funcionalidad JS mejorada */}
+                <noscript>
+                  <style jsx>{`
+                    .js-only {
+                      display: none;
+                    }
+                  `}</style>
+                </noscript>
+                <div className="hidden js-only">
+                  <Button
+                    unstyled
+                    onClick={() => setContactModalOpened(true)}
+                    className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+                  >
+                    <div className="flex items-center justify-center gap-2">
+                      {t("dailyPosition.downloadButton")}
+                    </div>
+                  </Button>
+                  <Button
+                    unstyled
+                    onClick={() => setQuoteModalOpened(true)}
+                    className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+                  >
+                    <div className="flex items-center justify-center gap-2">
+                      {q("title")}
+                    </div>
+                  </Button>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Main Content */}
       {/* Daily Position Feature */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mb-12 sm:mb-16 mx-auto px-4 sm:px-6 max-w-[1400px] py-8 sm:py-10 md:py-12"
-      >
+      <section className="mb-12 sm:mb-16 mx-auto px-4 sm:px-6 max-w-[1400px] py-8 sm:py-10 md:py-12">
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div className="relative h-[250px] sm:h-[300px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-            <video
-              src="/videos/bunker-supply.mp4"
-              className="w-full h-full object-cover z-0"
-              autoPlay
-              playsInline
-              muted
-              loop
-            />
-            {/* <Image
-              src="/img/port-sunset.jpg"
-              alt="Puerto al atardecer"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
-            /> */}
+            {/* Imagen estática como fallback para cuando no hay JS - sin texto visible */}
+            <div className="relative w-full h-full">
+              <Image
+                src="/img/bunker-supply-fallback.jpg"
+                alt={t("dailyPosition.sectionTitle")}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+              />
+            </div>
+            {/* Video que se cargará con JS */}
+            <div className="js-only absolute inset-0">
+              <video
+                src="/videos/bunker-supply.mp4"
+                className="w-full h-full object-cover z-0"
+                autoPlay
+                playsInline
+                muted
+                loop
+              />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            {/* <div className="absolute bottom-0 left-0 p-4 sm:p-6">
-              <h3 className="text-white text-lg sm:text-xl font-montserrat mb-2">
-                {t("dailyPosition.title")}
-              </h3>
-              <p className="text-white/80 text-xs sm:text-sm">
-                {t("dailyPosition.updateStatus")}
-              </p>
-            </div> */}
           </div>
           <div className="space-y-4 sm:space-y-6">
             <h2 className="font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
               {t("dailyPosition.sectionTitle")}
             </h2>
-            {/* <p className="text-base sm:text-lg text-gray-700">
-              {t("dailyPosition.description")}
-            </p> */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <p className="text-base sm:text-lg text-gray-700">
                 <Trans i18nKey="hero.subtitle2">
@@ -249,27 +260,13 @@ export default function BunkerSupplyPage() {
                   Menorca.
                 </Trans>
               </p>
-              {/* <Button
-                unstyled
-                className="flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white font-normal text-sm md:text-base py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors w-full sm:w-auto"
-              >
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  Ver Contrato Tipo
-                </div>
-              </Button> */}
             </div>
           </div>
         </div>
-      </motion.div>
+      </section>
 
       {/* Market Indices Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="py-8 sm:py-10 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]"
-      >
+      <section className="py-8 sm:py-16 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] ">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-8 text-center">
             {t("marketIndices.title")}
@@ -278,211 +275,157 @@ export default function BunkerSupplyPage() {
             {t("marketIndices.subtitle")}
           </p>
 
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
-            {marketIndices.map((item, index) => (
-              <Tooltip.Floating
-                label={t("marketIndices.tooltip")}
-                position="right"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {marketIndices.map((item) => (
+              <div
                 key={item.title}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between"
               >
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  onClick={() => {
-                    if (item.link) {
-                      window.open(item.link, "_blank", "noopener noreferrer");
-                    }
-                  }}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between cursor-pointer"
+                <div className="relative h-32 mb-6">
+                  {item.image ? (
+                    <Image
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.title}
+                      fill
+                      className="object-contain"
+                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+                    />
+                  ) : item.images ? (
+                    <div className="flex gap-4 h-full">
+                      {item.images.map((img) => (
+                        <div key={img.alt} className="relative flex-1">
+                          <Image
+                            src={img.src || "/placeholder.svg"}
+                            alt={img.alt}
+                            fill
+                            className="object-contain"
+                            sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+                <h3 className="text-xl font-montserrat text-primary mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+                {/* Enlace accesible sin JS */}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
                 >
-                  <div className="relative h-32 mb-6">
-                    {item.image ? (
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-contain"
-                        sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
-                      />
-                    ) : item.images ? (
-                      <div className="flex gap-4 h-full">
-                        {item.images.map((img) => (
-                          <div key={img.alt} className="relative flex-1">
-                            <Image
-                              src={img.src}
-                              alt={img.alt}
-                              fill
-                              className="object-contain"
-                              sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
-                  <h3 className="text-xl font-montserrat text-primary mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                </motion.div>
-              </Tooltip.Floating>
+                  {t("marketIndices.viewMore")}
+                </a>
+              </div>
             ))}
           </div>
         </div>
-      </motion.div>
-
-      {/* Introduction with Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="mb-12 sm:mb-16"
-      ></motion.div>
+      </section>
 
       {/* Services */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="mb-12 sm:mb-16 md:mb-20 mx-auto px-4 sm:px-6 max-w-[1400px]"
-      >
-        <h3 className="font-montserrat text-xl sm:text-2xl md:text-4xl text-primary mb-6 sm:mb-8 text-center">
-          {t("specializedServices.title")}{" "}
-        </h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 * index }}
-              className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow border"
-            >
-              <div className="flex items-center gap-2">
-                <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
-                  {service.icon}
-                </div>
-                <h4 className="font-montserrat text-lg sm:text-xl font-medium text-black mb-2 sm:mb-3">
-                  {service.title}
-                </h4>
-              </div>
-              <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-                {service.description}
-              </p>
-              {/* <Button
-                component={Link}
-                href={service.link}
-                unstyled
-                className="inline-flex items-center text-primary hover:text-primary/75 font-medium text-sm sm:text-base"
-              >
-                Saber más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button> */}
-            </motion.div>
-          ))}
+
+      <section className="container mx-auto px-4 py-10 sm:py-12 lg:py-28 max-w-[1400px]">
+        <div className="text-center pb-12">
+          <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
+            {t("experience.title")}
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            {t("experience.subtitle")}
+          </p>
         </div>
-        <div className="container mx-auto px-4 py-10 sm:py-12 lg:py-14 max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl font-montserrat text-primary mb-4">
-              {t("experience.title")}
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {t("experience.subtitle")}
+
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          {/* Global Experience Card */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border">
+            <div className="flex items-center gap-4 mb-6">
+              <h3 className="font-montserrat text-2xl font-medium text-black">
+                {t("experience.globalExperience.title")}
+              </h3>
+            </div>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t("experience.globalExperience.description")}
             </p>
-          </motion.div>
+            <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+              {features1.map((feature, index) => (
+                <div
+                  key={index}
+                  className="backdrop-blur-sm rounded-xl p-6 text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+                    {feature.icon}
+                  </div>
+                  <h4 className="font-montserrat text-lg font-medium text-black mb-2">
+                    {feature.title}
+                  </h4>
+                  <p className="text-gray-600 text-md">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Global Experience Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <h3 className="font-montserrat text-2xl font-medium text-black">
-                  {t("experience.globalExperience.title")}
-                </h3>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t("experience.globalExperience.description")}
-              </p>
-              <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                {features1.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className=" backdrop-blur-sm rounded-xl p-6 text-center"
-                  >
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                      {feature.icon}
-                    </div>
-                    <h4 className="font-montserrat text-lg font-medium text-black mb-2">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-600 text-md">
-                      {feature.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Expert Knowledge Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <h3 className="font-montserrat text-2xl font-medium text-black">
-                  {t("experience.expertKnowledge.title")}
-                </h3>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t("experience.expertKnowledge.description")}
-              </p>
-              <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                {features2.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="backdrop-blur-sm rounded-xl p-6 text-center"
-                  >
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                      {feature.icon}
-                    </div>
-                    <h4 className="font-montserrat text-lg font-medium text-black mb-2">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-600 text-md">
-                      {feature.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+          {/* Expert Knowledge Card */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border">
+            <div className="flex items-center gap-4 mb-6">
+              <h3 className="font-montserrat text-2xl font-medium text-black">
+                {t("experience.expertKnowledge.title")}
+              </h3>
+            </div>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t("experience.expertKnowledge.description")}
+            </p>
+            <div className="w-full grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+              {features2.map((feature, index) => (
+                <div
+                  key={index}
+                  className="backdrop-blur-sm rounded-xl p-6 text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+                    {feature.icon}
+                  </div>
+                  <h4 className="font-montserrat text-lg font-medium text-black mb-2">
+                    {feature.title}
+                  </h4>
+                  <p className="text-gray-600 text-md">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </motion.div>
+      </section>
 
-      {/* FAQ Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
-        className="container mx-auto px-4 pb-16 max-w-[1400px]"
-      >
+      <section className="py-8 sm:py-16 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-darkTitle mb-8 text-center">
+            {t("specializedServices.title")}{" "}
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow border"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="bg-primary/10 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                    {service.icon}
+                  </div>
+                  <h4 className="font-montserrat text-lg sm:text-xl font-medium text-black mb-2 sm:mb-3">
+                    {service.title}
+                  </h4>
+                </div>
+                <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Versión optimizada para SEO con contenido visible */}
+      <section className="container mx-auto px-4 py-16 max-w-[1400px]">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
             {t("faq.title")}
@@ -490,63 +433,93 @@ export default function BunkerSupplyPage() {
           <p className="text-gray-600 text-lg">{t("faq.description")}</p>
         </div>
 
-        <Accordion
-          className="max-w-5xl mx-auto"
-          styles={{
-            item: {
-              borderRadius: "8px",
-              marginBottom: "12px",
-              border: "1px solid #e5e7eb",
-              backgroundColor: "white",
-              borderBottom: "1px solid #FFB800",
-            },
-            control: {
-              padding: "10px",
-            },
-            content: {
-              padding: "0 20px 20px",
-            },
-          }}
-        >
+        {/* Versión optimizada para SEO con todas las respuestas visibles */}
+        <div className="max-w-5xl mx-auto">
           {faqs.map((item, index) => (
-            <Accordion.Item key={item.id} value={item.id}>
-              <Accordion.Control>
-                <div className="flex items-center gap-2">
-                  <span className="text-[#FFB800] font-mono text-lg">
-                    {String(index + 1).padStart(2, "0")}.
-                  </span>
-                  <h2 className="font-semibold">{item.question}</h2>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
+            <div
+              key={item.id}
+              className="mb-6 border border-b-[#FFB800] rounded-lg bg-white overflow-hidden p-4"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-[#FFB800] font-mono text-lg">
+                  {String(index + 1).padStart(2, "0")}.
+                </span>
+                <h3 className="font-semibold text-lg">{item.question}</h3>
+              </div>
+              <div className="pl-8">
                 <p className="text-gray-600">{item.answer}</p>
-              </Accordion.Panel>
-            </Accordion.Item>
+              </div>
+            </div>
           ))}
-        </Accordion>
-      </motion.div>
+        </div>
+
+        {/* Versión interactiva con JS usando Accordion de Mantine (oculta por defecto) */}
+        <div className="hidden js-only">
+          <Accordion
+            className="max-w-5xl mx-auto"
+            styles={{
+              item: {
+                borderRadius: "8px",
+                marginBottom: "12px",
+                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderBottom: "1px solid #FFB800",
+              },
+              control: {
+                padding: "10px",
+              },
+              content: {
+                padding: "0 20px 20px",
+              },
+            }}
+          >
+            {faqs.map((item, index) => (
+              <Accordion.Item key={item.id} value={item.id}>
+                <Accordion.Control>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#FFB800] font-mono text-lg">
+                      {String(index + 1).padStart(2, "0")}.
+                    </span>
+                    <h2 className="font-semibold">{item.question}</h2>
+                  </div>
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <p className="text-gray-600">{item.answer}</p>
+                </Accordion.Panel>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-8 sm:p-8 md:py-20 text-center"
-      >
+      <section className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-8 sm:p-8 md:py-20 text-center">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-3 sm:mb-4 max-w-[1400px] lg:mx-auto">
           {t("cta.title")}
         </h2>
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto">
           {t("cta.description")}
         </p>
-        <Button
-          onClick={() => setContactModalOpened(true)}
-          unstyled
-          className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+        {/* Enlace accesible sin JS */}
+        <a
+          href="/contact"
+          className="inline-block bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
           {t("cta.button")}
-        </Button>
-      </motion.div>
+        </a>
+        {/* Botón para JS */}
+        <div className="hidden js-only">
+          <Button
+            onClick={() => setContactModalOpened(true)}
+            unstyled
+            className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+          >
+            {t("cta.button")}
+          </Button>
+        </div>
+      </section>
+
+      {/* Modales - Solo se cargan con JS */}
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
@@ -558,10 +531,3 @@ export default function BunkerSupplyPage() {
     </div>
   );
 }
-
-// const stats = [
-//   { value: "15+", label: "Años de Experiencia" },
-//   { value: "200+", label: "Operaciones Completadas" },
-//   { value: "50+", label: "Socios Globales" },
-//   { value: "24/7", label: "Soporte Disponible" },
-// ];

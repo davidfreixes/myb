@@ -401,7 +401,8 @@
           "description": "STABIAOIL és el nostre proveïdor de serveis."
         }
       },
-      "tooltip": "Visitar pàgina web"
+      "tooltip": "Visitar pàgina web",
+      "viewMore": "Veure més"
     },
     "specializedServices": {
       "title": "Serveis Especialitzats",
