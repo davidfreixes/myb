@@ -1,4 +1,4 @@
-import { Accordion, Container, Text } from "@mantine/core";
+import { Container, Text } from "@mantine/core";
 import { useTranslations } from "next-intl";
 
 export default function FAQSection() {
@@ -46,45 +46,28 @@ export default function FAQSection() {
           <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
             {t("title")}
           </h1>
-          <Text className="text-gray-600 text-lg">
-            {t("description")}
-          </Text>
+          <Text className="text-gray-600 text-lg">{t("description")}</Text>
         </div>
 
-        <Accordion
-          className="max-w-5xl mx-auto"
-          styles={{
-            item: {
-              borderRadius: "8px",
-              marginBottom: "12px",
-              border: "1px solid #e5e7eb",
-              backgroundColor: "white",
-              borderBottom: "1px solid #FFB800",
-            },
-            control: {
-              padding: "10px",
-            },
-            content: {
-              padding: "0 20px 20px",
-            },
-          }}
-        >
-          {questions.map((item, index) => (
-            <Accordion.Item key={`faq-${index}`} value={`question-${index}`}>
-              <Accordion.Control>
-                <div className="flex items-center gap-2">
-                  <span className="text-[#FFB800] font-mono text-lg">
+        <div className="max-w-5xl mx-auto">
+          {/* Versión estática visible para SEO y usuarios sin JavaScript */}
+          <div className="max-w-5xl mx-auto">
+            {questions.map((item, index) => (
+              <div
+                key={`faq-static-${index}`}
+                className="mb-6 p-4 border border-gray-200 rounded-lg"
+              >
+                <h3 className="font-semibold mb-2 flex items-center">
+                  <span className="text-[#FFB800] font-mono text-lg mr-2">
                     {String(index + 1).padStart(2, "0")}.
                   </span>
-                  <h2 className="font-semibold">{item.question}</h2>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <Text className="text-gray-600">{item.answer}</Text>
-              </Accordion.Panel>
-            </Accordion.Item>
-          ))}
-        </Accordion>
+                  {item.question}
+                </h3>
+                <p className="text-gray-600 pl-8">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );
