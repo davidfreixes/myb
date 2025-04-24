@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   Anchor,
   Building2,
@@ -14,40 +13,44 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function ConditionsAndRates() {
   const [activeTab, setActiveTab] = useState("yates");
   const [contactModalOpened, setContactModalOpened] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const t = useTranslations("conditionsAndRates");
+
+  // Hydration fix - solo ejecutar efectos de cliente después del montaje
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <div className="relative py-8 sm:py-12 md:py-16 lg:py-16">
-        <Image
-          src="/img/conditions-and-rates.jpg"
-          alt="Corporate building"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0">
+          <Image
+            src="/img/conditions-and-rates.jpg"
+            alt={t("hero.title")}
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center h-full mt-8 sm:mt-8 md:mt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center px-4"
-          >
+          <div className="max-w-4xl mx-auto text-center px-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
               {t("hero.title")}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8">
               {t("hero.subtitle")}
             </h2>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -59,7 +62,7 @@ export default function ConditionsAndRates() {
             unstyled
             onClick={() => setActiveTab("yates")}
             className={`px-4 sm:px-6 py-3 rounded-t-lg sm:rounded-l-lg sm:rounded-tr-none font-montserrat text-base sm:text-lg transition-colors ${
-              activeTab === "yates"
+              !isClient || activeTab === "yates"
                 ? "bg-primary text-black"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
@@ -71,7 +74,7 @@ export default function ConditionsAndRates() {
             unstyled
             onClick={() => setActiveTab("brokerage")}
             className={`px-4 sm:px-6 py-3 rounded-b-lg sm:rounded-r-lg sm:rounded-bl-none font-montserrat text-base sm:text-lg transition-colors ${
-              activeTab === "brokerage"
+              isClient && activeTab === "brokerage"
                 ? "bg-primary text-black"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-200"
             }`}
@@ -83,7 +86,15 @@ export default function ConditionsAndRates() {
 
         {/* Content */}
         <div className="max-w-4xl mx-auto">
-          {activeTab === "yates" ? <YatesContent /> : <BrokerageContent />}
+          {/* Renderizamos ambos contenidos pero ocultamos uno con CSS */}
+          <div className={isClient && activeTab !== "yates" ? "hidden" : ""}>
+            <YatesContent />
+          </div>
+          <div
+            className={!isClient || activeTab !== "brokerage" ? "hidden" : ""}
+          >
+            <BrokerageContent />
+          </div>
         </div>
       </div>
 
@@ -123,9 +134,7 @@ function YatesContent() {
     {
       title: t("yachts.inspections.plans.0.title"),
       price: t("yachts.inspections.plans.0.price"),
-      description: t(
-        "yachts.inspections.plans.0.description"
-      ),
+      description: t("yachts.inspections.plans.0.description"),
       features: [
         t("yachts.inspections.plans.0.features.0"),
         t("yachts.inspections.plans.0.features.1"),
@@ -136,9 +145,7 @@ function YatesContent() {
     {
       title: t("yachts.inspections.plans.1.title"),
       price: t("yachts.inspections.plans.1.price"),
-      description: t(
-        "yachts.inspections.plans.1.description"
-      ),
+      description: t("yachts.inspections.plans.1.description"),
       features: [
         t("yachts.inspections.plans.1.features.0"),
         t("yachts.inspections.plans.1.features.1"),
@@ -149,9 +156,7 @@ function YatesContent() {
     {
       title: t("yachts.inspections.plans.2.title"),
       price: t("yachts.inspections.plans.2.price"),
-      description: t(
-        "yachts.inspections.plans.2.description"
-      ),
+      description: t("yachts.inspections.plans.2.description"),
       features: [
         t("yachts.inspections.plans.2.features.0"),
         t("yachts.inspections.plans.2.features.1"),
@@ -165,23 +170,17 @@ function YatesContent() {
     {
       title: t("yachts.valuations.plans.0.title"),
       price: t("yachts.valuations.plans.0.price"),
-      description: t(
-        "yachts.valuations.plans.0.description"
-      ),
+      description: t("yachts.valuations.plans.0.description"),
     },
     {
       title: t("yachts.valuations.plans.1.title"),
       price: t("yachts.valuations.plans.1.price"),
-      description: t(
-        "yachts.valuations.plans.1.description"
-      ),
+      description: t("yachts.valuations.plans.1.description"),
     },
     {
       title: t("yachts.valuations.plans.2.title"),
       price: t("yachts.valuations.plans.2.price"),
-      description: t(
-        "yachts.valuations.plans.2.description"
-      ),
+      description: t("yachts.valuations.plans.2.description"),
     },
   ];
 
@@ -201,9 +200,7 @@ function YatesContent() {
   const conditions = [
     {
       title: t("yachts.conditions.items.0.title"),
-      description: t(
-        "yachts.conditions.items.0.description"
-      ),
+      description: t("yachts.conditions.items.0.description"),
       icon: <CreditCard className="w-6 h-6 text-primary" />,
       benefits: [
         t("yachts.conditions.items.0.benefits.0"),
@@ -213,9 +210,7 @@ function YatesContent() {
     },
     {
       title: t("yachts.conditions.items.1.title"),
-      description: t(
-        "yachts.conditions.items.1.description"
-      ),
+      description: t("yachts.conditions.items.1.description"),
       icon: <Info className="w-6 h-6 text-primary" />,
       benefits: [
         t("yachts.conditions.items.1.benefits.0"),
@@ -225,9 +220,7 @@ function YatesContent() {
     },
     {
       title: t("yachts.conditions.items.2.title"),
-      description: t(
-        "yachts.conditions.items.2.description"
-      ),
+      description: t("yachts.conditions.items.2.description"),
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
       benefits: [
         t("yachts.conditions.items.2.benefits.0"),
@@ -237,30 +230,17 @@ function YatesContent() {
     },
   ];
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="space-y-8 sm:space-y-12 max-w-8xl mx-auto px-2 sm:px-4"
-    >
+    <div className="space-y-8 sm:space-y-12 max-w-8xl mx-auto px-2 sm:px-4">
       <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <p className="text-base sm:text-lg text-gray-700">
             {t("tabs.yachts.intro")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Brokeraje Section */}
         <section className="mt-8 sm:mt-12 md:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
                 {t("yachts.brokerage.title")}
@@ -270,26 +250,12 @@ function YatesContent() {
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 flex items-center gap-2 font-medium">
                   <Anchor className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  {t(
-                    "yachts.brokerage.saleAndPurchase.title"
-                  )}
+                  {t("yachts.brokerage.saleAndPurchase.title")}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                  <li>
-                    {t(
-                      "yachts.brokerage.saleAndPurchase.points.0"
-                    )}
-                  </li>
-                  <li>
-                    {t(
-                      "yachts.brokerage.saleAndPurchase.points.1"
-                    )}
-                  </li>
-                  <li>
-                    {t(
-                      "yachts.brokerage.saleAndPurchase.points.2"
-                    )}
-                  </li>
+                  <li>{t("yachts.brokerage.saleAndPurchase.points.0")}</li>
+                  <li>{t("yachts.brokerage.saleAndPurchase.points.1")}</li>
+                  <li>{t("yachts.brokerage.saleAndPurchase.points.2")}</li>
                 </ul>
               </div>
               <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
@@ -298,39 +264,25 @@ function YatesContent() {
                   {t("yachts.brokerage.charter.title")}
                 </h3>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                  <li>
-                    {t("yachts.brokerage.charter.points.0")}
-                  </li>
-                  <li>
-                    {t("yachts.brokerage.charter.points.1")}
-                  </li>
+                  <li>{t("yachts.brokerage.charter.points.0")}</li>
+                  <li>{t("yachts.brokerage.charter.points.1")}</li>
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Inspecciones Section */}
         <section className="mt-8 sm:mt-12 md:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
                 {t("yachts.inspections.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-              {inspectionPlans.map((plan, index) => (
-                <motion.div
-                  key={plan.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
+              {inspectionPlans.map((plan) => (
+                <div key={plan.title} className="group">
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {plan.title}
@@ -353,33 +305,23 @@ function YatesContent() {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Tasaciones Section */}
         <section className="mt-8 sm:mt-12 md:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
                 {t("yachts.valuations.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-              {valuationPlans.map((plan, index) => (
-                <motion.div
-                  key={plan.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
+              {valuationPlans.map((plan) => (
+                <div key={plan.title} className="group">
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {plan.title}
@@ -391,33 +333,23 @@ function YatesContent() {
                       {plan.description}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Otros Servicios Section */}
         <section className="mt-8 sm:mt-12 md:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
                 {t("yachts.otherServices.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-              {otherServices.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
+              {otherServices.map((service) => (
+                <div key={service.title} className="group">
                   <div className="bg-primary/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border-2 border-primary/20 h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <h3 className="text-lg sm:text-xl font-montserrat mb-2 font-medium">
                       {service.title}
@@ -430,33 +362,23 @@ function YatesContent() {
                       </span>
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Condiciones Section */}
         <section className="mt-8 sm:mt-12 md:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary">
                 {t("yachts.conditions.title")}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {conditions.map((condition, index) => (
-                <motion.div
-                  key={condition.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
+              {conditions.map((condition) => (
+                <div key={condition.title} className="group">
                   <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
                     <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                       <div className="p-2 sm:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -481,13 +403,13 @@ function YatesContent() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -496,79 +418,44 @@ function BrokerageContent() {
 
   const conditions = [
     {
-      title: t(
-        "shipBrokerage.contractConditions.conditions.0.title"
-      ),
+      title: t("shipBrokerage.contractConditions.conditions.0.title"),
       description: t(
         "shipBrokerage.contractConditions.conditions.0.description"
       ),
       icon: <CalendarClock className="w-6 h-6 text-primary" />,
       benefits: [
-        t(
-          "shipBrokerage.contractConditions.conditions.0.benefits.0"
-        ),
-
-        t(
-          "shipBrokerage.contractConditions.conditions.0.benefits.1"
-        ),
-        ,
-        t(
-          "shipBrokerage.contractConditions.conditions.0.benefits.2"
-        ),
+        t("shipBrokerage.contractConditions.conditions.0.benefits.0"),
+        t("shipBrokerage.contractConditions.conditions.0.benefits.1"),
+        t("shipBrokerage.contractConditions.conditions.0.benefits.2"),
       ],
     },
     {
-      title: t(
-        "shipBrokerage.contractConditions.conditions.1.title"
-      ),
+      title: t("shipBrokerage.contractConditions.conditions.1.title"),
       description: t(
         "shipBrokerage.contractConditions.conditions.1.description"
       ),
       icon: <Star className="w-6 h-6 text-primary" />,
       benefits: [
-        t(
-          "shipBrokerage.contractConditions.conditions.1.benefits.0"
-        ),
-
-        t(
-          "shipBrokerage.contractConditions.conditions.1.benefits.1"
-        ),
-        ,
-        t(
-          "shipBrokerage.contractConditions.conditions.1.benefits.2"
-        ),
+        t("shipBrokerage.contractConditions.conditions.1.benefits.0"),
+        t("shipBrokerage.contractConditions.conditions.1.benefits.1"),
+        t("shipBrokerage.contractConditions.conditions.1.benefits.2"),
       ],
     },
     {
-      title: t(
-        "shipBrokerage.contractConditions.conditions.2.title"
-      ),
+      title: t("shipBrokerage.contractConditions.conditions.2.title"),
       description: t(
         "shipBrokerage.contractConditions.conditions.2.description"
       ),
       icon: <FileSignature className="w-6 h-6 text-primary" />,
       benefits: [
-        t(
-          "shipBrokerage.contractConditions.conditions.2.benefits.0"
-        ),
-
-        t(
-          "shipBrokerage.contractConditions.conditions.2.benefits.1"
-        ),
-        ,
-        t(
-          "shipBrokerage.contractConditions.conditions.2.benefits.2"
-        ),
+        t("shipBrokerage.contractConditions.conditions.2.benefits.0"),
+        t("shipBrokerage.contractConditions.conditions.2.benefits.1"),
+        t("shipBrokerage.contractConditions.conditions.2.benefits.2"),
       ],
     },
   ];
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="space-y-6 sm:space-y-8"
-    >
+    <div className="space-y-6 sm:space-y-8">
       <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
         <p className="text-base sm:text-lg text-gray-700 px-4 sm:px-0">
           {t("tabs.brokerage.intro")}
@@ -581,38 +468,20 @@ function BrokerageContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.commissions.standard.title"
-                )}
+                {t("shipBrokerage.commissions.standard.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
-                {t(
-                  "shipBrokerage.commissions.standard.description"
-                )}
+                {t("shipBrokerage.commissions.standard.description")}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.commissions.payment.title"
-                )}
+                {t("shipBrokerage.commissions.payment.title")}
               </h3>
               <ul className="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-                <li>
-                  {t(
-                    "shipBrokerage.commissions.payment.points.0"
-                  )}
-                </li>
-                <li>
-                  {t(
-                    "shipBrokerage.commissions.payment.points.1"
-                  )}
-                </li>
-                <li>
-                  {t(
-                    "shipBrokerage.commissions.payment.points.2"
-                  )}
-                </li>
+                <li>{t("shipBrokerage.commissions.payment.points.0")}</li>
+                <li>{t("shipBrokerage.commissions.payment.points.1")}</li>
+                <li>{t("shipBrokerage.commissions.payment.points.2")}</li>
               </ul>
             </div>
           </div>
@@ -625,21 +494,15 @@ function BrokerageContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.responsibilities.intermediation.title"
-                )}
+                {t("shipBrokerage.responsibilities.intermediation.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                {t(
-                  "shipBrokerage.responsibilities.intermediation.description"
-                )}
+                {t("shipBrokerage.responsibilities.intermediation.description")}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.responsibilities.confidentiality.title"
-                )}{" "}
+                {t("shipBrokerage.responsibilities.confidentiality.title")}{" "}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
@@ -657,26 +520,18 @@ function BrokerageContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.chartererCommissions.charter.title"
-                )}
+                {t("shipBrokerage.chartererCommissions.charter.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
-                {t(
-                  "shipBrokerage.chartererCommissions.charter.description"
-                )}
+                {t("shipBrokerage.chartererCommissions.charter.description")}
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.chartererCommissions.additional.title"
-                )}
+                {t("shipBrokerage.chartererCommissions.additional.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                {t(
-                  "shipBrokerage.chartererCommissions.additional.description"
-                )}
+                {t("shipBrokerage.chartererCommissions.additional.description")}
               </p>
             </div>
           </div>
@@ -684,16 +539,12 @@ function BrokerageContent() {
 
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-4 px-4 sm:px-0">
-            {t(
-              "shipBrokerage.chartererResponsibilities.title"
-            )}
+            {t("shipBrokerage.chartererResponsibilities.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-0">
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.chartererResponsibilities.negotiation.title"
-                )}
+                {t("shipBrokerage.chartererResponsibilities.negotiation.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
@@ -703,9 +554,7 @@ function BrokerageContent() {
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border-2 border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-lg sm:text-xl font-montserrat mb-3 sm:mb-4 font-medium">
-                {t(
-                  "shipBrokerage.chartererResponsibilities.compliance.title"
-                )}
+                {t("shipBrokerage.chartererResponsibilities.compliance.title")}
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
                 {t(
@@ -718,31 +567,18 @@ function BrokerageContent() {
 
         <section className="py-8 sm:py-12">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-8 sm:mb-12"
-            >
+            <div className="mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
                 {t("shipBrokerage.contractConditions.title")}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
-                {t(
-                  "shipBrokerage.contractConditions.subtitle"
-                )}
+                {t("shipBrokerage.contractConditions.subtitle")}
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-              {conditions.map((condition, index) => (
-                <motion.div
-                  key={condition.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
+              {conditions.map((condition) => (
+                <div key={condition.title} className="group">
                   <div className="bg-primary/10 p-6 sm:p-8 rounded-xl border-2 border-primary/20 h-full transition-all duration-300 hover:shadow-lg hover:bg-primary/15">
                     <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                       <div className="p-2 sm:p-3 bg-white rounded-lg group-hover:bg-primary/10 transition-colors">
@@ -769,12 +605,12 @@ function BrokerageContent() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
       </div>
-    </motion.div>
+    </div>
   );
 }

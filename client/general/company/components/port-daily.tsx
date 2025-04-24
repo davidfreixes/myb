@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -27,22 +26,20 @@ export default function PortDaily() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative py-12 sm:py-16 md:py-20 lg:py-24">
-        <Image
-          src="/img/port-of-mahon.jpg"
-          alt="Corporate building"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60" />
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="absolute inset-0">
+          <Image
+            src="/img/port-of-mahon.jpg"
+            alt="Puerto de Mahón"
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center h-full mt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
+          <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
@@ -51,20 +48,17 @@ export default function PortDaily() {
                 {t("hero.subtitle")}
               </h2>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* News Grid */}
-      <div className="py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-[1400px]">
-          <div className="grid md:grid-cols-4 gap-8 md:gap-12">
-            {newsArticles.map((article, index) => (
-              <motion.article
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+            {newsArticles.map((article) => (
+              <article
                 key={article.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <Link
@@ -75,11 +69,12 @@ export default function PortDaily() {
                 >
                   <div className="relative aspect-[3/2] w-full mb-6">
                     <Image
-                      src={article.image}
-                      alt="Periódico del Puerto de Mahón"
-                      fill
-                      className="object-cover rounded-lg"
-                      sizes="500px"
+                      src={article.image || "/placeholder.svg"}
+                      alt={article.title}
+                      width={500}
+                      height={333}
+                      className="object-cover rounded-lg w-full h-full"
+                      sizes="(max-width: 768px) 100vw, 500px"
                     />
                   </div>
                   <div className="space-y-4">
@@ -88,25 +83,24 @@ export default function PortDaily() {
                     </h2>
                     <div className="flex items-center text-primary">
                       <span className="text-sm">{t("news.readMore")}</span>
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      <ExternalLink
+                        className="ml-2 h-4 w-4"
+                        aria-hidden="true"
+                      />
+                      <span className="sr-only">Abrir enlace externo</span>
                     </div>
                   </div>
                 </Link>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Submit News Section */}
-      <div className="py-16 md:py-24 bg-white inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:py-16">
+      <section className="py-16 md:py-24 bg-white inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center "
-          >
+          <div className="max-w-3xl mx-auto text-center ">
             <h2 className="font-montserrat text-2xl md:text-3xl text-darkTitle mb-6">
               {t("submitNews.title")}
             </h2>
@@ -130,9 +124,9 @@ export default function PortDaily() {
                 {t("submitNews.contactButton")}
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
