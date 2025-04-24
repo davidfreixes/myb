@@ -1,7 +1,6 @@
 import Contact from "@/client/general/contact/contact";
 import { Footer } from "@/client/layout/components/footer";
 import { Header } from "@/client/layout/components/header";
-import { useEffect, useState } from "react";
 
 export async function getStaticProps(context) {
   const homeMessages = (
@@ -23,12 +22,6 @@ export async function getStaticProps(context) {
 }
 
 export default function ContactPage() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true); // Aseguramos que i18next esté cargado
-  }, []);
-
   // useEffect(() => {
   //   const script = document.createElement("script");
   //   script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_CLIENT}`;
@@ -41,7 +34,6 @@ export default function ContactPage() {
   //     document.body.removeChild(script);
   //   };
   // }, []);
-  if (!isLoaded) return null;
 
   return (
     <>
