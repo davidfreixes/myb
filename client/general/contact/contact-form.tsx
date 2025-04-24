@@ -1,5 +1,4 @@
 import { Button, Select, TextInput, Textarea } from "@mantine/core";
-import { motion } from "framer-motion";
 import { Mail, Phone, User } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -70,13 +69,9 @@ export default function ContactForm() {
 
     // Validación del mensaje
     if (!formData.message.trim()) {
-      newErrors.message = t(
-        "form.validation.message.required"
-      );
+      newErrors.message = t("form.validation.message.required");
     } else if (formData.message.length < 4) {
-      newErrors.message = t(
-        "form.validation.message.minLength"
-      );
+      newErrors.message = t("form.validation.message.minLength");
     }
 
     setErrors(newErrors);
@@ -148,17 +143,13 @@ export default function ContactForm() {
         });
         setErrors({});
       } else {
-        throw new Error(
-          result.message || t("form.submit.error")
-        );
+        throw new Error(result.message || t("form.submit.error"));
       }
     } catch (error) {
       setSubmitStatus({
         type: "error",
         message:
-          error instanceof Error
-            ? error.message
-            : t("form.submit.error"),
+          error instanceof Error ? error.message : t("form.submit.error"),
       });
     } finally {
       setIsLoading(false);
@@ -173,11 +164,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div>
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-4  ">
         {t("title")}
       </h2>
@@ -292,11 +279,9 @@ export default function ContactForm() {
              }`}
           disabled={isLoading}
         >
-          {isLoading
-            ? t("form.submit.sending")
-            : t("form.submit.button")}{" "}
+          {isLoading ? t("form.submit.sending") : t("form.submit.button")}{" "}
         </Button>
       </form>
-    </motion.div>
+    </div>
   );
 }

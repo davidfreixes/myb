@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Appointment from "./apointment";
@@ -20,18 +19,14 @@ export default function Contact() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center max-w-8xl mt-5">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-2 sm:mb-4 text-center">
               {t("hero.title")}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl text-center px-4">
               {t("hero.subtitle")}
             </h2>
-          </motion.div>
+          </div>
         </div>
       </div>
 

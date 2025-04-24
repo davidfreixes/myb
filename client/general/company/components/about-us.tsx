@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -93,12 +92,7 @@ export default function AboutUs() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-8xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl flex items-center justify-center mx-auto"
-          >
+          <div className="max-w-3xl flex items-center justify-center mx-auto">
             <div className="space-y-3 sm:space-y-4 flex flex-col items-center px-4 mt-12">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary mb-2 sm:mb-4 text-center">
                 {t("hero.title")}{" "}
@@ -114,37 +108,26 @@ export default function AboutUs() {
                 {t("hero.button")}
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
       <section className="py-12 sm:py-16 bg-white max-w-[1400px] mx-auto">
         <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16"
-          >
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-medium text-primary mb-4">
               {t("team.title")}
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg">
               {t("team.description")}
             </p>
-          </motion.div>
+          </div>
 
           <div
             ref={teamSectionRef}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-              >
+            {teamMembers.map((member) => (
+              <div key={member.name} className="group">
                 <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                   <div className="flex justify-center">
                     <div className="relative h-40 w-40">
@@ -188,7 +171,7 @@ export default function AboutUs() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -197,12 +180,7 @@ export default function AboutUs() {
       {/* Contact Section - Responsive adjustments */}
       <div className="relative bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-18 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="space-y-4 sm:space-y-6 flex flex-col justify-center items-center"
-          >
+          <div className="space-y-4 sm:space-y-6 flex flex-col justify-center items-center">
             <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-primary font-semibold text-center">
               {t("contact.title")}
             </h2>
@@ -219,7 +197,7 @@ export default function AboutUs() {
             >
               {t("contact.button")}{" "}
             </Button>
-          </motion.div>
+          </div>
           <ContactModal
             opened={contactModalOpened}
             onClose={() => setContactModalOpened(false)}

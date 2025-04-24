@@ -120,12 +120,12 @@ export default function Logistics() {
         </div>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl">
             <div className="space-y-2 md:space-y-4">
-              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
-              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
+              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white max-w-xl">
                 {t("hero.subtitle.question")}{" "}
                 <span className="text-primary">
                   {t("hero.subtitle.answer")}

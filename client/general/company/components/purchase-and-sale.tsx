@@ -1,5 +1,4 @@
 import { Button, Text } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   BookOpen,
   CheckCircle,
@@ -87,29 +86,19 @@ export default function PurchaseAndSale() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center h-full mt-4">
           {/* Header Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-4 sm:mb-6">
               {t("hero.title")}
             </h1>
             <p className="text-xl sm:text-2xl text-white">
               {t("hero.subtitle")}
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Introduction Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="max-w-4xl mx-auto mb-8 px-4 sm:px-6 py-6 sm:py-10"
-      >
+      <div className="max-w-4xl mx-auto mb-8 px-4 sm:px-6 py-6 sm:py-10">
         <div className="bg-primary/10 p-4 sm:p-8 rounded-xl border-2 border-primary/20">
           <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4">
             {t("introduction.title")}
@@ -121,26 +110,18 @@ export default function PurchaseAndSale() {
             {t("introduction.paragraph2")}
           </p>
         </div>
-      </motion.div>
+      </div>
 
       {/* Benefits Section */}
       <div className="bg-primary/10 py-6 sm:py-10 md:py-14">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6"
-        >
+        <div className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
             {t("benefits.title")}
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
+            {benefits.map((benefit) => (
+              <div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 * index }}
                 className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
@@ -154,29 +135,21 @@ export default function PurchaseAndSale() {
                 <p className="text-gray-700 text-sm sm:text-base">
                   {benefit.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Components Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6 py-6 sm:py-10"
-      >
+      <div className="mb-8 sm:mb-16 max-w-[1400px] mx-auto px-4 sm:px-6 py-6 sm:py-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-6 sm:mb-8 text-center">
           {t("components.title")}
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {components.map((component, index) => (
-            <motion.div
+          {components.map((component) => (
+            <div
               key={component.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 * index }}
               className="bg-primary/10 p-4 sm:p-6 rounded-xl border-2 border-primary/20 hover:bg-primary/15 transition-all duration-300 hover:shadow-md"
             >
               <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
@@ -190,10 +163,10 @@ export default function PurchaseAndSale() {
               <p className="text-gray-700 text-sm sm:text-base">
                 {component.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Why Choose Us Section */}
       <div className="relative py-12 sm:py-16 md:py-20">
@@ -206,12 +179,7 @@ export default function PurchaseAndSale() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center h-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="max-w-4xl mx-auto mb-8 sm:mb-16"
-          >
+          <div className="max-w-4xl mx-auto mb-8 sm:mb-16">
             <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg border border-gray-100">
               <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-6">
                 {t("whyChooseUs.title")}
@@ -223,18 +191,13 @@ export default function PurchaseAndSale() {
                 {t("whyChooseUs.paragraph2")}
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="bg-white py-8 sm:py-12 md:py-16 inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center "
-        >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 rounded-lg text-center ">
           <h2 className="text-lg sm:text-2xl md:text-3xl font-montserrat text-darkTitle mb-2 sm:mb-3 md:mb-4">
             {t("cta.title")}
           </h2>
@@ -256,7 +219,7 @@ export default function PurchaseAndSale() {
               </div>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
       <ContactModal
         opened={contactModalOpened}

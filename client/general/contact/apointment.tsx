@@ -1,5 +1,4 @@
 import { Button, Radio, TextInput } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   Anchor,
   Building2,
@@ -70,9 +69,7 @@ export default function Appointment() {
     {
       id: "Análisis de mercado de compraventa",
       title: t("services.options.marketAnalysis.title"),
-      duration: t(
-        "services.options.marketAnalysis.duration"
-      ),
+      duration: t("services.options.marketAnalysis.duration"),
       price: t("services.options.marketAnalysis.price"),
       category: "Yacht Broker",
     },
@@ -85,58 +82,44 @@ export default function Appointment() {
     {
       id: "Compra de Yate o embarcación",
       title: t("services.options.yachtPurchase.title"),
-      duration: t(
-        "services.options.yachtPurchase.duration"
-      ),
+      duration: t("services.options.yachtPurchase.duration"),
       category: "Yacht Broker",
     },
     {
       id: "Solicitud de charter",
       title: t("services.options.charterRequest.title"),
-      duration: t(
-        "services.options.charterRequest.duration"
-      ),
+      duration: t("services.options.charterRequest.duration"),
       category: "Yacht Charter",
     },
     {
       id: "Tasación básica",
       title: t("services.options.basicValuation.title"),
-      duration: t(
-        "services.options.basicValuation.duration"
-      ),
+      duration: t("services.options.basicValuation.duration"),
       price: t("services.options.basicValuation.price"),
       category: "Inspecciones y Tasaciones",
     },
     {
       id: "Consultoría náutica",
       title: t("services.options.nauticalConsulting.title"),
-      duration: t(
-        "services.options.nauticalConsulting.duration"
-      ),
+      duration: t("services.options.nauticalConsulting.duration"),
       category: "Consultoría náutica",
     },
     {
       id: "Solicitud de Servicios de Valor Añadido",
       title: t("services.options.valueAddedServices.title"),
-      duration: t(
-        "services.options.valueAddedServices.duration"
-      ),
+      duration: t("services.options.valueAddedServices.duration"),
       category: "Servicios de Valor Añadido",
     },
     {
       id: "Ship Sale & Purchase analysis and service request",
       title: t("services.options.shipSalePurchase.title"),
-      duration: t(
-        "services.options.shipSalePurchase.duration"
-      ),
+      duration: t("services.options.shipSalePurchase.duration"),
       category: "Ship broker",
     },
     {
       id: "Charter service",
       title: t("services.options.charterService.title"),
-      duration: t(
-        "services.options.charterService.duration"
-      ),
+      duration: t("services.options.charterService.duration"),
       category: "Charter broker",
     },
   ];
@@ -256,14 +239,10 @@ export default function Appointment() {
     switch (step) {
       case 0:
         if (!scheduleData.category) {
-          newErrors.category = t(
-            "validation.required.category"
-          );
+          newErrors.category = t("validation.required.category");
         }
         if (!scheduleData.service) {
-          newErrors.service = t(
-            "validation.required.service"
-          );
+          newErrors.service = t("validation.required.service");
         }
         break;
       case 1:
@@ -457,12 +436,9 @@ export default function Appointment() {
                           {service.title}
                         </h4>
                         <div className="text-xs sm:text-sm text-gray-500">
-                          {t("services.duration")}:{" "}
-                          {service.duration}
+                          {t("services.duration")}: {service.duration}
                           {service.price &&
-                            ` · ${t("services.price")}: ${
-                              service.price
-                            }`}
+                            ` · ${t("services.price")}: ${service.price}`}
                         </div>
                       </div>
                       <Radio
@@ -525,9 +501,7 @@ export default function Appointment() {
             <TextInput
               required
               label={t("contactDetails.name.label")}
-              placeholder={t(
-                "contactDetails.name.placeholder"
-              )}
+              placeholder={t("contactDetails.name.placeholder")}
               rightSection={<User size={16} />}
               value={scheduleData.name}
               onChange={(e) =>
@@ -538,9 +512,7 @@ export default function Appointment() {
             <TextInput
               required
               label={t("contactDetails.email.label")}
-              placeholder={t(
-                "contactDetails.email.placeholder"
-              )}
+              placeholder={t("contactDetails.email.placeholder")}
               rightSection={<Mail size={16} />}
               value={scheduleData.email}
               onChange={(e) =>
@@ -551,9 +523,7 @@ export default function Appointment() {
             <TextInput
               required
               label={t("contactDetails.phone.label")}
-              placeholder={t(
-                "contactDetails.phone.placeholder"
-              )}
+              placeholder={t("contactDetails.phone.placeholder")}
               rightSection={<Phone size={16} />}
               value={scheduleData.phone}
               onChange={(e) =>
@@ -580,21 +550,15 @@ export default function Appointment() {
                   </dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-gray-600">
-                    {t("summary.fields.date")}:
-                  </dt>
+                  <dt className="text-gray-600">{t("summary.fields.date")}:</dt>
                   <dd>{scheduleData.date}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-gray-600">
-                    {t("summary.fields.time")}:
-                  </dt>
+                  <dt className="text-gray-600">{t("summary.fields.time")}:</dt>
                   <dd>{scheduleData.time}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-gray-600">
-                    {t("summary.fields.name")}:
-                  </dt>
+                  <dt className="text-gray-600">{t("summary.fields.name")}:</dt>
                   <dd>{scheduleData.name}</dd>
                 </div>
                 <div className="flex justify-between">
@@ -619,11 +583,7 @@ export default function Appointment() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       <h2 className="text-xl sm:text-2xl font-montserrat text-primary mb-4 sm:mb-7">
         {t("title")}
       </h2>
@@ -716,6 +676,6 @@ export default function Appointment() {
           )}
         </div>
       </form>
-    </motion.div>
+    </div>
   );
 }
