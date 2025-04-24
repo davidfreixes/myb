@@ -167,51 +167,24 @@ export default function BunkerSupplyPage() {
                 {t("hero.subtitle")}
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                {/* Usar enlaces <a> para los botones para que funcionen sin JS */}
-                <a
-                  href="/contact"
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300 text-center"
+                <Button
+                  unstyled
+                  onClick={() => setContactModalOpened(true)}
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {t("dailyPosition.downloadButton")}
                   </div>
-                </a>
-                <a
-                  href="/quote"
-                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300 text-center"
+                </Button>
+                <Button
+                  unstyled
+                  onClick={() => setQuoteModalOpened(true)}
+                  className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {q("title")}
                   </div>
-                </a>
-                {/* Mantener los botones originales para la funcionalidad JS mejorada */}
-                <noscript>
-                  <style jsx>{`
-                    .js-only {
-                      display: none;
-                    }
-                  `}</style>
-                </noscript>
-                <div className="hidden js-only">
-                  <Button
-                    unstyled
-                    onClick={() => setContactModalOpened(true)}
-                    className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
-                  >
-                    <div className="flex items-center justify-center gap-2">
-                      {t("dailyPosition.downloadButton")}
-                    </div>
-                  </Button>
-                  <Button
-                    unstyled
-                    onClick={() => setQuoteModalOpened(true)}
-                    className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
-                  >
-                    <div className="flex items-center justify-center gap-2">
-                      {q("title")}
-                    </div>
-                  </Button>
-                </div>
+                </Button>
               </div>
             </div>
           </div>
@@ -223,16 +196,6 @@ export default function BunkerSupplyPage() {
       <section className="mb-12 sm:mb-16 mx-auto px-4 sm:px-6 max-w-[1400px] py-8 sm:py-10 md:py-12">
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div className="relative h-[250px] sm:h-[300px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-            {/* Imagen estática como fallback para cuando no hay JS - sin texto visible */}
-            <div className="relative w-full h-full">
-              <Image
-                src="/img/bunker-supply-fallback.jpg"
-                alt={t("dailyPosition.sectionTitle")}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
-              />
-            </div>
             {/* Video que se cargará con JS */}
             <div className="js-only absolute inset-0">
               <video
@@ -500,26 +463,16 @@ export default function BunkerSupplyPage() {
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto">
           {t("cta.description")}
         </p>
-        {/* Enlace accesible sin JS */}
-        <a
-          href="/contact"
-          className="inline-block bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+
+        <Button
+          onClick={() => setContactModalOpened(true)}
+          unstyled
+          className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
         >
           {t("cta.button")}
-        </a>
-        {/* Botón para JS */}
-        <div className="hidden js-only">
-          <Button
-            onClick={() => setContactModalOpened(true)}
-            unstyled
-            className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
-          >
-            {t("cta.button")}
-          </Button>
-        </div>
+        </Button>
       </section>
 
-      {/* Modales - Solo se cargan con JS */}
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}
