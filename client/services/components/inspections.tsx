@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
@@ -12,7 +11,7 @@ export default function Inspections() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[55vh] md:h-[60vh] w-full">
         <Image
           src="/img/inspections.jpg"
           alt="Inspecciones y tasaciones de barcos"
@@ -22,15 +21,10 @@ export default function Inspections() {
           sizes="(min-width: 1024px) 100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
+        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-3">
+          <div className="max-w-3xl">
             <div className="space-y-2 md:space-y-4">
-              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
@@ -38,19 +32,21 @@ export default function Inspections() {
                   p: (chunks) => <span className="text-primary">{chunks}</span>,
                 })}
               </h2>
+              <Button
+                onClick={() => setContactModalOpened(true)}
+                unstyled
+                className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
+              >
+                {t("cta.button")}
+              </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-0 sm:px-4 py-12 md:py-12 md:max-w-[1400px] ">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="prose prose-lg max-w-none"
-        >
+        <div className="prose prose-lg max-w-none">
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-12">
             {t.rich("intro", {
               p: (chunks) => <span className="text-primary">{chunks}</span>,
@@ -59,12 +55,7 @@ export default function Inspections() {
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
-            >
+            <div className="relative h-auto bg-white p-6 rounded-lg shadow-lg border">
               <h2 className="text-3xl text-primary font-montserrat mb-4">
                 {t("services.maritimeInspections.title")}
               </h2>
@@ -92,14 +83,9 @@ export default function Inspections() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="relative h-auto bg-white p-6 rounded-lg shadow-lg border"
-            >
+            <div className="relative h-auto bg-white p-6 rounded-lg shadow-lg border">
               <h2 className="text-3xl text-primary font-montserrat mb-4">
                 {t("services.maritimeValuations.title")}
               </h2>
@@ -130,22 +116,17 @@ export default function Inspections() {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <p className="font-montserrat text-lg md:text-xl text-gray-700 mb-8">
             {t("outro.description")}
           </p>
-        </motion.div>
+        </div>
       </div>
 
       {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="p-6 rounded-lg text-center inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:p-8 md:py-20"
-      >
+      <div className="p-6 rounded-lg text-center inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] sm:p-8 md:py-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-montserrat text-darkTitle mb-4">
             {t("cta.title")}
@@ -159,7 +140,7 @@ export default function Inspections() {
             {t("cta.button")}
           </Button>
         </div>
-      </motion.div>
+      </div>
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}

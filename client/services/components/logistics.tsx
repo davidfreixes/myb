@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   Box,
   CheckCircle,
@@ -98,22 +97,30 @@ export default function Logistics() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
-        <Image
-          src="/img/logistics.jpg"
-          alt="Logística marítima service"
-          fill
-          className="object-cover"
-          priority
-          sizes="(min-width: 1024px) 100vw"
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/img/logistics.jpg"
+            alt="Logística marítima service"
+            fill
+            className="object-cover"
+            priority
+            sizes="(min-width: 1024px) 100vw"
+          />
+          <noscript>
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage: "url(/img/logistics.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          </noscript>
+        </div>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
+          <div className="max-w-4xl">
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
@@ -125,43 +132,27 @@ export default function Logistics() {
                 </span>
               </h2>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8 sm:py-12 md:max-w-[1400px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="prose prose-lg max-w-none"
-        >
+        <div className="prose prose-lg max-w-none">
           <p className="font-montserrat text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12">
             {t("intro.text")}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-2xl sm:text-3xl font-montserrat font-medium text-primary text-center mb-8 sm:mb-8"
-              >
+              <h2 className="text-2xl sm:text-3xl font-montserrat font-medium text-primary text-center mb-8 sm:mb-8">
                 {t("doorToDoor.title")}
-              </motion.h2>
+              </h2>
 
               {/* Services Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 border p-4 sm:p-5 rounded-lg shadow-lg">
                 {doorToDoorServices.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                    className="flex gap-3 sm:gap-4 items-start"
-                  >
+                  <div key={index} className="flex gap-3 sm:gap-4 items-start">
                     <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
                       {service.icon}
                     </div>
@@ -173,31 +164,20 @@ export default function Logistics() {
                         {service.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Incoterms Section */}
             <div>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-2xl sm:text-3xl font-montserrat font-medium text-primary text-center mb-8 sm:mb-8"
-              >
+              <h2 className="text-2xl sm:text-3xl font-montserrat font-medium text-primary text-center mb-8 sm:mb-8">
                 {t("incoterms.title")}
-              </motion.h2>
+              </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 border p-4 sm:p-5 rounded-lg shadow-lg">
                 {incoterms.map((term, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                    className="flex gap-3 sm:gap-4 items-start"
-                  >
+                  <div key={index} className="flex gap-3 sm:gap-4 items-start">
                     <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 bg-opacity-20 flex items-center justify-center">
                       {term.icon}
                     </div>
@@ -209,21 +189,16 @@ export default function Logistics() {
                         {term.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Why Choose Us Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="py-8 sm:py-14 rounded-lg inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]"
-      >
+      <div className="py-8 sm:py-14 rounded-lg inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2]">
         <h3 className="text-2xl sm:text-3xl text-darkTitle font-montserrat mb-6 sm:mb-8 text-center px-4">
           {t("whyChooseUs.title")}
         </h3>
@@ -257,23 +232,31 @@ export default function Logistics() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA Section */}
       <div className="relative py-12 sm:py-16 md:py-24">
-        <Image
-          src="/img/CTA-logistics.jpg"
-          alt="Yacht at sunset"
-          fill
-          className="object-cover"
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/img/CTA-logistics.jpg"
+            alt="Yacht at sunset"
+            fill
+            className="object-cover"
+          />
+          <noscript>
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage: "url(/img/CTA-logistics.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          </noscript>
+        </div>
         <div className="absolute inset-0 bg-black/60" />
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="relative z-10 container mx-auto px-4 sm:px-6 text-center"
-        >
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat text-primary mb-3 sm:mb-4">
             {t("cta.title")}
           </h2>
@@ -287,7 +270,15 @@ export default function Logistics() {
           >
             {t("cta.button")}
           </Button>
-        </motion.div>
+          <noscript>
+            <a
+              href="/contact"
+              className="inline-block w-full sm:w-auto bg-primary text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+            >
+              {t("cta.button")}
+            </a>
+          </noscript>
+        </div>
         <ContactModal
           opened={contactModalOpened}
           onClose={() => setContactModalOpened(false)}
