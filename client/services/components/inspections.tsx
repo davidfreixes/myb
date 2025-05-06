@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -132,13 +133,19 @@ export default function Inspections() {
             {t("cta.title")}
           </h2>
           <p className="text-lg text-gray-700 mb-6">{t("cta.description")}</p>
-          <Button
-            onClick={() => setContactModalOpened(true)}
-            unstyled
-            className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+          <a
+            href={NAVIGATION_LINKS.CONTACTO}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {t("cta.button")}
-          </Button>
+            <Button
+              onClick={() => setContactModalOpened(true)}
+              unstyled
+              className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+            >
+              {t("cta.button")}
+            </Button>
+          </a>
         </div>
       </div>
       <ContactModal

@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { sampleYachts } from "@/utils/yachts";
 import { Accordion, Button } from "@mantine/core";
 import { Anchor, Ship, Users } from "lucide-react";
@@ -253,7 +254,7 @@ export default function YachtBroker() {
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {popularCategories.map((category, index) => (
+          {popularCategories.map((category) => (
             <div
               key={category.title}
               className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
@@ -288,7 +289,7 @@ export default function YachtBroker() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {advantages.map((advantage, index) => (
+            {advantages.map((advantage) => (
               <div
                 key={advantage.title}
                 className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
@@ -382,13 +383,18 @@ export default function YachtBroker() {
         <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-3 sm:mb-4 md:mb-6">
           {t("cta.description")}
         </p>
-        <Button
-          unstyled
-          onClick={() => setContactModalOpened(true)}
-          className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+        <a
+          href={NAVIGATION_LINKS.CONTACTO}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {t("cta.button")}
-        </Button>
+          <Button
+            unstyled
+            className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+          >
+            {t("cta.button")}
+          </Button>
+        </a>
       </div>
       <ContactModal
         opened={contactModalOpened}

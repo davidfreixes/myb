@@ -1,4 +1,5 @@
 import ContactModal from "@/client/general/contact/modal/contactModal";
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Text } from "@mantine/core";
 import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -18,17 +19,21 @@ export default function CTASection() {
           {t("description")}
         </Text>
       </div>
-      <Button
-        unstyled
-        onClick={() => setContactModalOpened(true)}
-        className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 rounded transition-colors duration-200"
+      <a
+        href={NAVIGATION_LINKS.CONTACTO}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <div className="flex gap-2 items-center">
-          <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-          {t("button")}
-        </div>
-      </Button>
-
+        <Button
+          unstyled
+          className="bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 sm:py-3 px-4 rounded transition-colors duration-200"
+        >
+          <div className="flex gap-2 items-center">
+            <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+            {t("button")}
+          </div>
+        </Button>
+      </a>
       <ContactModal
         opened={contactModalOpened}
         onClose={() => setContactModalOpened(false)}

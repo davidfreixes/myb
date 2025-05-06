@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Accordion, Button } from "@mantine/core";
 import {
   Anchor,
@@ -464,13 +465,18 @@ export default function BunkerSupplyPage() {
           {t("cta.description")}
         </p>
 
-        <Button
-          onClick={() => setContactModalOpened(true)}
-          unstyled
-          className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+        <a
+          href={NAVIGATION_LINKS.CONTACTO}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {t("cta.button")}
-        </Button>
+          <Button
+            unstyled
+            className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+          >
+            {t("cta.button")}
+          </Button>
+        </a>
       </section>
 
       <ContactModal

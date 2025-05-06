@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import {
   Box,
@@ -263,13 +264,18 @@ export default function Logistics() {
           <p className="text-base sm:text-lg text-white mb-4 sm:mb-6">
             {t("cta.description")}
           </p>
-          <Button
-            onClick={() => setContactModalOpened(true)}
-            unstyled
-            className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+          <a
+            href={NAVIGATION_LINKS.CONTACTO}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {t("cta.button")}
-          </Button>
+            <Button
+              unstyled
+              className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+            >
+              {t("cta.button")}
+            </Button>
+          </a>
           <noscript>
             <a
               href="/contact"

@@ -13,9 +13,8 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import ContactModal from "@/client/general/contact/modal/contactModal";
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
-import { useState } from "react";
 
 // Metadata para SEO
 export const metadata: Metadata = {
@@ -279,7 +278,7 @@ export default function YachtCharter() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4 sm:mb-6">
               {t("cta.title")}
             </h2>
-            <p className="text-base sm:text-lg text-white mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-white mb-4 sm:mb-6">
               {t("cta.description")}
             </p>
             <ContactButton text={t("cta.button")} />
@@ -292,21 +291,20 @@ export default function YachtCharter() {
 
 // Botón de contacto con modal
 export function ContactButton({ text }) {
-  const [contactModalOpened, setContactModalOpened] = useState(false);
-
   return (
     <>
-      <Button
-        unstyled
-        onClick={() => setContactModalOpened(true)}
-        className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+      <a
+        href={NAVIGATION_LINKS.CONTACTO}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {text}
-      </Button>
-      <ContactModal
-        opened={contactModalOpened}
-        onClose={() => setContactModalOpened(false)}
-      />
+        <Button
+          unstyled
+          className="mt-2 w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+        >
+          {text}
+        </Button>
+      </a>
     </>
   );
 }
