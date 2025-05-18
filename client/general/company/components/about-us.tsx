@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -25,35 +25,28 @@ const teamMembers = [
     name: "Daniel Ortega",
     role: "Freelance Yacht Broker & Event Planning",
     location: "Belgium",
-    email: "daniel@menorcabrokers.com",
+    email: "contact@menorcabrokers.com",
     image: "/img/team/daniel-ortega.jpg",
   },
   {
     name: "Grigoris Psomas",
     role: "Freelance Yacht & Charter Broker",
     location: "The Netherlands",
-    email: "grigoris@menorcabrokers.com",
-    image: "/img/team/grigoris-psomas.jpg",
-  },
-  {
-    name: "Laura Simons",
-    role: "Freelance Yacht & Charter Broker",
-    location: "US - Miami",
     email: "contact@menorcabrokers.com",
-    image: "/img/team/laura-simons.jpg",
+    image: "/img/team/grigoris-psomas.jpg",
   },
   {
     name: "Adriano Enrique Medina",
     role: "Freelance Yacht & Charter Broker",
     location: "Spain",
-    email: "adriano@menorcabrokers.com",
+    email: "contact@menorcabrokers.com",
     image: "/img/team/adriano-enrique.png",
   },
   {
     name: "Gürkan Gurun",
     role: "Freelance Yacht & Charter Broker",
     location: "Turkey",
-    email: "gurkan@menorcabrokers.com",
+    email: "contact@menorcabrokers.com",
     image: "/img/team/gurkan-gurun.jpeg",
   },
   {
@@ -152,12 +145,12 @@ export default function AboutUs() {
                         <MapPin className="w-4 h-4 mr-2" />
                         <span className="text-sm">{member.location}</span>
                       </div>
-                      {member.email && (
+                      {/* {member.email && (
                         <div className="flex items-center text-gray-600">
                           <Mail className="w-4 h-4 mr-2" />
                           <span className="text-sm">{member.email}</span>
                         </div>
-                      )}
+                      )} */}
                     </div>
                     {member.email && (
                       <Button
