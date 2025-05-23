@@ -87,7 +87,7 @@ export default function ValueAddedServices() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Contenido visible sin JavaScript */}
-      <section className="relative h-[55vh] md:h-[60vh] w-full">
+      <section className="relative h-[350px] sm:h-[50vh] w-full">
         <Image
           src="/img/value-added-services.jpg"
           alt="Servicios de valor añadido"
@@ -97,7 +97,7 @@ export default function ValueAddedServices() {
           sizes="(min-width: 1024px) 100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px] mt-2 md:mt-0">
           <div className="max-w-4xl">
             <div className="space-y-3 md:space-y-4 mt-3">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">

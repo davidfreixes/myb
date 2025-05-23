@@ -97,7 +97,7 @@ export default function Logistics() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[340px] sm:h-[50vh] md:h-[60vh] w-full">
         <div className="absolute inset-0">
           <Image
             src="/img/logistics.jpg"
@@ -120,7 +120,7 @@ export default function Logistics() {
           </noscript>
         </div>
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-2 md:mt-0">
           <div className="max-w-3xl">
             <div className="space-y-2 md:space-y-4">
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
@@ -132,6 +132,12 @@ export default function Logistics() {
                   {t("hero.subtitle.answer")}
                 </span>
               </h2>
+              <Button
+                unstyled
+                className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+              >
+                {t("cta.button")}
+              </Button>
             </div>
           </div>
         </div>

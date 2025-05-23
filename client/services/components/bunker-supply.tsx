@@ -149,7 +149,7 @@ export default function BunkerSupplyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] w-full">
+      <section className="relative h-[390px] md:h-[60vh] w-full">
         <Image
           src="/img/bunker-supply.jpg"
           alt={t("hero.title")}

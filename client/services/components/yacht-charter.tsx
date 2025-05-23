@@ -113,7 +113,7 @@ export default function YachtCharter() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[55vh] md:h-[60vh] w-full">
+      <div className="relative h-[330px] md:h-[60vh]  w-full">
         <div className="absolute inset-0">
           <video
             src="/videos/hero-video.mp4"

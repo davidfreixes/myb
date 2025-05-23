@@ -23,7 +23,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="flex relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-[100vh] xs:h-[500px] flex-col py-8 md:py-12">
+        <div className="flex h-[100dvh] xs:h-[500px] flex-col py-8 md:py-12">
           <div className="grid md:grid-cols-2 gap-4 md:gap-2 lg:gap-10 mt-12">
             {/* Left Column */}
             <div className="flex flex-col justify-center space-y-4 md:space-y-6 text-white order-1 pt-2 md:pt-0">

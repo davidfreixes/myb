@@ -12,7 +12,7 @@ export default function Inspections() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[55vh] md:h-[60vh] w-full">
+      <div className="relative h-[340px] md:h-[60vh] w-full">
         <Image
           src="/img/inspections.jpg"
           alt="Inspecciones y tasaciones de barcos"
@@ -24,8 +24,8 @@ export default function Inspections() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-3">
           <div className="max-w-3xl">
-            <div className="space-y-2 md:space-y-4">
-              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-primary">
+            <div className="space-y-3 md:space-y-4">
+              <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
               <h2 className="font-montserrat sm:text-lg md:text-xl text-white">
@@ -36,7 +36,7 @@ export default function Inspections() {
               <Button
                 onClick={() => setContactModalOpened(true)}
                 unstyled
-                className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
+                className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
               >
                 {t("cta.button")}
               </Button>
