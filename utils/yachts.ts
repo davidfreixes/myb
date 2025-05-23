@@ -41,7 +41,7 @@ export const sampleYachts: YachtDetails[] = [
     id: "3",
     type: "used",
     model: "BAVARIA 40 CRUISER",
-    price: 9984.2,
+    price: 119000,
     name: "Bavaria 40 Cruiser",
     year: 2008,
     length: 11.99,
