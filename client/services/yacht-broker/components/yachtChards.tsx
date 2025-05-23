@@ -1,41 +1,73 @@
-import { YachtDetails } from "@/utils/yachts";
+"use client";
+
+import type { YachtDetails } from "@/utils/yachts";
 import { Accordion } from "@mantine/core";
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { ContactSellerModal } from "./contact-seller-modal";
+import YachtModalGallery from "./yacht-modal-gallery";
 
-export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
+interface YachtCardsProps {
+  yachts: YachtDetails[];
+}
+
+export function YachtCards({ yachts }: YachtCardsProps) {
   const t = useTranslations("yachtBroker.yachtDetails");
   const [selectedYacht, setSelectedYacht] = useState<YachtDetails | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-  //   const [favorites, setFavorites] = useState<string[]>([]);
-  //   const toggleFavorite = (id: string) => {
-  //     setFavorites((prev) =>
-  //       prev.includes(id) ? prev.filter((fId) => fId !== id) : [...prev, id]
-  //     );
-  //   };
+  // Gallery modal state
+  const [modalOpen, setModalOpen] = useState(false);
+  const [galleryYacht, setGalleryYacht] = useState<YachtDetails | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Get images for a yacht - use images array if available, otherwise just the main imageUrl
+  const getYachtImages = (yacht: YachtDetails): string[] => {
+    if (yacht.images && yacht.images.length > 0) {
+      return yacht.images;
+    }
+    return [yacht.imageUrl];
+  };
+
+  const handleImageClick = (yacht: YachtDetails) => {
+    const images = getYachtImages(yacht);
+    // Only open gallery if there are images to show
+    if (images.length > 0) {
+      setGalleryYacht(yacht);
+      setCurrentImageIndex(0);
+      setModalOpen(true);
+    }
+  };
 
   const handleContactClick = (yacht: YachtDetails) => {
     setSelectedYacht(yacht);
     setIsContactModalOpen(true);
   };
 
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <>
-      {yachts.map((yacht) => (
-        <motion.div
-          key={yacht.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="group overflow-hidden border rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 bg-white p-6">
+      {yachts.map((yacht) => {
+        const images = getYachtImages(yacht);
+        const hasMultipleImages = images.length > 1;
+
+        return (
+          <div
+            key={yacht.id}
+            className="group overflow-hidden border rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 bg-white p-6"
+          >
             <div className="relative">
-              <div className="relative h-64 overflow-hidden rounded-lg">
+              <div
+                className={`relative h-64 overflow-hidden rounded-lg ${
+                  hasMultipleImages ? "cursor-pointer" : ""
+                }`}
+                onClick={() => handleImageClick(yacht)}
+              >
                 <Image
                   src={yacht.imageUrl || "/placeholder.svg"}
                   alt={yacht.model}
@@ -43,20 +75,23 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                   className="object-cover transform group-hover:scale-105 transition-transform duration-300"
                   sizes="(min-width: 1024px) 100vw"
                 />
-                {/* <button
-                  onClick={() => toggleFavorite(yacht.id)}
-                  className={`absolute top-4 right-4 z-10 rounded-full p-2 transition-colors ${
-                    favorites.includes(yacht.id)
-                      ? "bg-primary text-white"
-                      : "bg-white/80 text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  <Heart
-                    className={`w-5 h-5 ${
-                      favorites.includes(yacht.id) ? "fill-current" : ""
-                    }`}
-                  />
-                </button> */}
+
+                {/* Only show gallery overlay if there are multiple images */}
+                {hasMultipleImages && (
+                  <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                      View Gallery ({images.length} photos)
+                    </div>
+                  </div>
+                )}
+
+                {/* Image count indicator for multiple images */}
+                {hasMultipleImages && (
+                  <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
+                    1/{images.length}
+                  </div>
+                )}
+
                 <span
                   className={`absolute top-4 left-4 px-2 py-1 text-xs font-semibold rounded-full ${
                     yacht.type === "new"
@@ -89,9 +124,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
 
               <div className="grid grid-cols-2 gap-4 py-3 border-y">
                 <div className="text-center">
-                  <p className="text-sm text-gray-500">
-                    {t("fields.length")}
-                  </p>
+                  <p className="text-sm text-gray-500">{t("fields.length")}</p>
                   <p className="font-medium">{yacht.length} m</p>
                 </div>
                 <div className="text-center">
@@ -105,9 +138,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               <Accordion variant="separated">
                 <Accordion.Item value={`details-${yacht.id}`}>
                   <Accordion.Control icon={<ChevronDown className="w-4 h-4" />}>
-                    <span className="text-sm">
-                      {t("viewDetails")}
-                    </span>
+                    <span className="text-sm">{t("viewDetails")}</span>
                   </Accordion.Control>
                   <Accordion.Panel>
                     <div className="space-y-2 text-sm">
@@ -119,7 +150,6 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                           <span>{yacht.name}</span>
                         </div>
                       )}
-                      {/* Other yacht details remain the same, with text-xs sm:text-sm classes */}
                       {yacht.year && (
                         <div className="flex justify-between">
                           <span className="text-gray-600">
@@ -133,8 +163,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                           {t("fields.length")}:
                         </span>
                         <span>
-                          {yacht.length}{" "}
-                          {t("units.meters")}
+                          {yacht.length} {t("units.meters")}
                         </span>
                       </div>
                       <div className="flex justify-between">
@@ -149,8 +178,7 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
                             {t("fields.displacement")}:
                           </span>
                           <span>
-                            {yacht.displacement}{" "}
-                            {t("units.kg")}
+                            {yacht.displacement} {t("units.kg")}
                           </span>
                         </div>
                       )}
@@ -201,9 +229,10 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
               </div>
             </div>
           </div>
-        </motion.div>
-      ))}
+        );
+      })}
 
+      {/* Contact Seller Modal */}
       <ContactSellerModal
         yacht={selectedYacht}
         opened={isContactModalOpen}
@@ -212,6 +241,16 @@ export function YachtCards({ yachts }: { yachts: YachtDetails[] }) {
           setSelectedYacht(null);
         }}
       />
+
+      {/* Gallery Modal */}
+      {galleryYacht && (
+        <YachtModalGallery
+          isOpen={modalOpen}
+          onClose={closeModal}
+          images={getYachtImages(galleryYacht)}
+          currentIndex={currentImageIndex}
+        />
+      )}
     </>
   );
 }

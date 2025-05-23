@@ -23,10 +23,12 @@ interface FAQ {
 
 export default function YachtBroker() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
-  const [activeTab, setActiveTab] = useState<string | null>("new");
   const newBoatsSectionRef = useRef<HTMLDivElement>(null);
   const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("yachtBroker");
+
+  const newYachts = sampleYachts.filter((yacht) => yacht.type === "new");
+  const usedYachts = sampleYachts.filter((yacht) => yacht.type === "used");
 
   const popularCategories: Category[] = [
     {
@@ -186,62 +188,35 @@ export default function YachtBroker() {
             })}
           </p>
 
-          <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md">
-            <div className="w-full sticky top-0 z-10 bg-white">
-              <div className="flex w-full border-b">
-                <button
-                  onClick={() => setActiveTab("new")}
-                  className={`flex-1 py-2 px-4 text-sm md:text-base lg:text-lg text-black ${
-                    activeTab === "new" ? "bg-primary/10 font-medium" : ""
-                  }`}
-                >
-                  {t("navigation.newYachts")}
-                </button>
-                <button
-                  onClick={() => setActiveTab("used")}
-                  className={`flex-1 py-2 px-4 text-sm md:text-base lg:text-lg text-black ${
-                    activeTab === "used" ? "bg-primary/10 font-medium" : ""
-                  }`}
-                >
-                  {t("navigation.usedYachts")}
-                </button>
-              </div>
+          {/* New Yachts Section */}
+          <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md mb-8">
+            <div className="py-4 border-b">
+              <h2 className="text-xl md:text-2xl font-montserrat text-primary font-medium">
+                {t("navigation.newYachts")}
+              </h2>
             </div>
-
-            <div className="mt-6">
-              <div
-                id="new-yachts"
-                ref={newBoatsSectionRef}
-                className={activeTab === "new" ? "" : "hidden"}
-              >
-                <h2 className="sr-only">{t("navigation.newYachts")}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
-                  <YachtCards
-                    yachts={sampleYachts.filter(
-                      (yacht) => yacht.type === "new"
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div
-                id="used-yachts"
-                ref={usedBoatsSectionRef}
-                className={activeTab === "used" ? "" : "hidden"}
-              >
-                <h2 className="sr-only">{t("navigation.usedYachts")}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
-                  <YachtCards
-                    yachts={sampleYachts.filter(
-                      (yacht) => yacht.type === "used"
-                    )}
-                  />
-                </div>
+            <div className="mt-6" id="new-yachts" ref={newBoatsSectionRef}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                <YachtCards yachts={newYachts} />
               </div>
             </div>
           </div>
 
-          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 sm:pt-4">
+          {/* Used Yachts Section */}
+          <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md">
+            <div className="py-4 border-b">
+              <h2 className="text-xl md:text-2xl font-montserrat text-primary font-medium">
+                {t("navigation.usedYachts")}
+              </h2>
+            </div>
+            <div className="mt-6" id="used-yachts" ref={usedBoatsSectionRef}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                <YachtCards yachts={usedYachts} />
+              </div>
+            </div>
+          </div>
+
+          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 sm:pt-4 mt-6">
             {t("description.expertise")}
           </p>
         </div>
