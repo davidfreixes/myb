@@ -12,6 +12,10 @@
       "intro": "Consulta el nostre estoc de Iots en venda a continuació o descobreix les nostres claus i contacta'ns més avall. Comptem amb Iots de <p>segona mà</p> o es poden realitzar contactes amb drassanes per entrar en contractes de <p>nova construcció</p>.",
       "expertise": "El nostre equip d'experts et guiarà en tot el procés de compra o venda de la teva embarcació, garantint una experiència professional i transparent."
     },
+    "scroll": {
+      "newYachts": "Veure Vaixells Nous",
+      "usedYachts": "Veure Vaixells de Segona Mà"
+    },
     "yachtDetails": {
       "viewDetails": "Veure Detalls",
       "fields": {
@@ -28,7 +32,8 @@
       "units": {
         "meters": "metres",
         "kg": "kg"
-      }
+      },
+      "contactButton": "Contactar amb el venedor"
     },
     "categories": {
       "title": "Categories Populars",

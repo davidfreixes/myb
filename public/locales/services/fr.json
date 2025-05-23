@@ -12,6 +12,10 @@
       "intro": "Consultez notre stock de Yachts à vendre ci-dessous ou découvrez nos points clés et contactez-nous plus bas. Nous disposons de Yachts <p>d'occasion</p> ou nous pouvons établir des contacts avec des chantiers navals pour entrer dans des contrats de <p>nouvelle construction</p>.",
       "expertise": "Notre équipe d'experts vous guidera tout au long du processus d'achat ou de vente de votre embarcation, garantissant une expérience professionnelle et transparente."
     },
+    "scroll": {
+      "newYachts": "Veure Vaixells Nous",
+      "usedYachts": "Voir les bateaux neufs"
+    },
     "yachtDetails": {
       "viewDetails": "Voir les Détails",
       "fields": {
@@ -28,7 +32,8 @@
       "units": {
         "meters": "mètres",
         "kg": "kg"
-      }
+      },
+      "contactButton": "Contacter le vendeur"
     },
     "categories": {
       "title": "Catégories Populaires",

@@ -207,7 +207,7 @@ export default function YachtBroker() {
             >
               <div className="flex items-center">
                 <ArrowDown className="w-4 h-4 mr-2" />
-                Ver Barcos Nuevos
+                {t("scroll.newYachts")}
               </div>
             </Button>
             <Button
@@ -217,7 +217,7 @@ export default function YachtBroker() {
             >
               <div className="flex items-center">
                 <ArrowDown className="w-4 h-4 mr-2" />
-                Ver Barcos Segunda Mano
+                {t("scroll.usedYachts")}
               </div>
             </Button>
           </div>
@@ -271,6 +271,7 @@ export default function YachtBroker() {
                 <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.title}
+                  priority
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 100vw"

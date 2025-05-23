@@ -12,6 +12,10 @@
       "intro": "Consulta nuestro stock de Yates en venta a continuación o descubre nuestras claves y contáctarnos más abajo. Contamos con Yates de <p>segunda mano</p> o se pueden realizar contactos con astilleros para entrar en contratos de <p>nueva construcción</p>.",
       "expertise": "Nuestro equipo de expertos te guiará en todo el proceso de compra o venta de tu embarcación, garantizando una experiencia profesional y transparente."
     },
+    "scroll": {
+      "newYachts": "Ver Barcos Nuevos",
+      "usedYachts": "Ver Barcos Segunda Mano"
+    },
     "yachtDetails": {
       "viewDetails": "Ver Detalles",
       "fields": {
@@ -28,7 +32,8 @@
       "units": {
         "meters": "metros",
         "kg": "kg"
-      }
+      },
+      "contactButton": "Contactar con el vendedor"
     },
     "categories": {
       "title": "Categorías Populares",
@@ -402,7 +407,7 @@
         }
       },
       "tooltip": "Visitar página web",
-      "viewMore":"Ver más"
+      "viewMore": "Ver más"
     },
     "specializedServices": {
       "title": "Servicios Especializados",

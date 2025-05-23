@@ -205,7 +205,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
     <header
       className={`${sticky ? "fixed" : "absolute"} w-full ${
         isTransparent && !isMobileMenuOpen ? "bg-transparent" : "bg-black"
-      } z-50 transition-colors duration-300`}
+      } z-50`}
     >
       <div className="container mx-auto px-4 max-w-8xl lg:px-8">
         <div className="flex items-center justify-between h-20">
