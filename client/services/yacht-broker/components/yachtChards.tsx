@@ -99,7 +99,7 @@ export function YachtCards({ yachts }: YachtCardsProps) {
                       : "bg-blue-100 text-blue-800"
                   }`}
                 >
-                  {yacht.type === "new" ? "New" : "Used"}
+                  {yacht.type === "new" ? "New" : ""}
                 </span>
               </div>
             </div>
@@ -112,7 +112,7 @@ export function YachtCards({ yachts }: YachtCardsProps) {
                   </h3>
                   <p className="text-gray-600 text-sm">{yacht.location}</p>
                 </div>
-                <p className="text-xl font-semibold text-primary">
+                <p className="text-xl font-semibold text-primary min-w-[90px]">
                   {yacht.price.toLocaleString()} €
                   {yacht.model === "SPIRIT 1500" && (
                     <span className="text-xs block text-gray-500">
