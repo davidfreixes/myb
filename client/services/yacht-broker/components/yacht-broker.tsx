@@ -139,7 +139,7 @@ export default function YachtBroker() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section - Now more responsive */}
-      <div className="relative h-[50vh] md:h-[60vh] w-full">
+      <div className="relative h-[370px] md:h-[60vh] w-full">
         <Image
           src="/img/yacht-broker.jpg"
           alt="Yacht broker service"
@@ -171,7 +171,7 @@ export default function YachtBroker() {
               </Button>
               <Button
                 unstyled
-                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black py-2 px-3 sm:px-4 rounded text-base transition duration-300"
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black text-sm sm:text-base py-2 px-3 sm:px-4 rounded transition duration-300"
               >
                 Customized Boat
               </Button>
