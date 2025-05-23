@@ -1,7 +1,7 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { sampleYachts } from "@/utils/yachts";
 import { Accordion, Button } from "@mantine/core";
-import { Anchor, Ship, Users } from "lucide-react";
+import { Anchor, ArrowDown, Ship, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -29,6 +29,16 @@ export default function YachtBroker() {
 
   const newYachts = sampleYachts.filter((yacht) => yacht.type === "new");
   const usedYachts = sampleYachts.filter((yacht) => yacht.type === "used");
+
+  // Función para desplazarse a la sección de barcos nuevos
+  const scrollToNewBoats = () => {
+    newBoatsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Función para desplazarse a la sección de barcos de segunda mano
+  const scrollToUsedBoats = () => {
+    usedBoatsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const popularCategories: Category[] = [
     {
@@ -182,12 +192,35 @@ export default function YachtBroker() {
       {/* Main Content - Improved spacing and responsiveness */}
       <div className="container mx-auto px-0 sm:px-6 py-6 sm:py-8 md:py-12 md:max-w-[1400px]">
         <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
-          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
+          <p className="font-montserrat text-sm sm:text-base md:text-lg text-gray-700 mb-6">
             {t.rich("description.intro", {
               p: (chunks) => <span className="text-primary">{chunks}</span>,
             })}
           </p>
 
+          {/* Nuevos botones de navegación rápida */}
+          <div className="mb-4 flex flex-col sm:flex-row gap-3 w-full items-center">
+            <Button
+              unstyled
+              onClick={scrollToNewBoats}
+              className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+            >
+              <div className="flex items-center">
+                <ArrowDown className="w-4 h-4 mr-2" />
+                Ver Barcos Nuevos
+              </div>
+            </Button>
+            <Button
+              unstyled
+              onClick={scrollToUsedBoats}
+              className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+            >
+              <div className="flex items-center">
+                <ArrowDown className="w-4 h-4 mr-2" />
+                Ver Barcos Segunda Mano
+              </div>
+            </Button>
+          </div>
           {/* New Yachts Section */}
           <div className="container mx-auto border px-2 md:px-4 lg:px-6 rounded-md mb-8">
             <div className="py-4 border-b">
