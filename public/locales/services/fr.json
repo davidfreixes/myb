@@ -33,7 +33,7 @@
         "meters": "mètres",
         "kg": "kg"
       },
-      "contactButton": "Contacter le vendeur"
+      "contactButton": "Je suis intéressé"
     },
     "categories": {
       "title": "Catégories Populaires",
@@ -101,6 +101,46 @@
       "title": "Intéressé par l'Achat ou la Vente d'une Embarcation?",
       "description": "Notre équipe d'experts est prête à vous aider",
       "button": "Contacter Maintenant"
+    },
+    "contactSellerModal": {
+      "formType": "ACHAT DE YACHT",
+      "validation": {
+        "nameRequired": "Le nom est requis",
+        "emailRequired": "L'email est requis",
+        "emailInvalid": "Email invalide",
+        "phoneRequired": "Le téléphone est requis"
+      },
+      "status": {
+        "messageSent": "Message envoyé avec succès",
+        "errorSending": "Une erreur s'est produite lors de l'envoi du message"
+      },
+      "yachtDetails": {
+        "price": "Prix:",
+        "length": "Longueur:",
+        "location": "Emplacement:",
+        "year": "Année:"
+      },
+      "form": {
+        "title": "Intéressé par ce yacht?",
+        "description": "Complétez le formulaire et notre équipe de vente vous contactera dans les plus brefs délais pour vous fournir toutes les informations dont vous avez besoin sur le {yachtModel}.",
+        "fields": {
+          "fullName": "Nom complet *",
+          "namePlaceholder": "Entrez votre nom",
+          "email": "Email *",
+          "emailPlaceholder": "exemple@email.com",
+          "phone": "Téléphone *",
+          "phonePlaceholder": "+33 6 00 00 00 00",
+          "message": "Message",
+          "messagePlaceholder": "J'aimerais recevoir plus d'informations sur ce yacht, en particulier sur...",
+          "messageHelp": "Veuillez indiquer toute question spécifique ou information supplémentaire dont vous avez besoin."
+        },
+        "privacy": "En soumettant ce formulaire, vous acceptez que nous traitions vos données personnelles conformément à notre politique de confidentialité.",
+        "buttons": {
+          "cancel": "Annuler",
+          "sending": "Envoi en cours...",
+          "submit": "Envoyer la demande"
+        }
+      }
     }
   },
   "yachtCharter": {

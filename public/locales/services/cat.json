@@ -33,7 +33,7 @@
         "meters": "metres",
         "kg": "kg"
       },
-      "contactButton": "Contactar amb el venedor"
+      "contactButton": "M'interessa"
     },
     "categories": {
       "title": "Categories Populars",
@@ -101,6 +101,46 @@
       "title": "Interessat en Comprar o Vendre una Embarcació?",
       "description": "El nostre equip d'experts està preparat per ajudar-te",
       "button": "Contactar Ara"
+    },
+    "contactSellerModal": {
+      "formType": "COMPRA DE IOT",
+      "validation": {
+        "nameRequired": "El nom és obligatori",
+        "emailRequired": "L'email és obligatori",
+        "emailInvalid": "Email invàlid",
+        "phoneRequired": "El telèfon és obligatori"
+      },
+      "status": {
+        "messageSent": "Missatge enviat correctament",
+        "errorSending": "Ha ocorregut un error en enviar el missatge"
+      },
+      "yachtDetails": {
+        "price": "Preu:",
+        "length": "Eslora:",
+        "location": "Ubicació:",
+        "year": "Any:"
+      },
+      "form": {
+        "title": "Interessat en aquest iot?",
+        "description": "Completeu el formulari i el nostre equip de vendes es posarà en contacte amb vostè el més aviat possible per proporcionar-li tota la informació que necessiti sobre el {yachtModel}.",
+        "fields": {
+          "fullName": "Nom complet *",
+          "namePlaceholder": "Introduïu el vostre nom",
+          "email": "Email *",
+          "emailPlaceholder": "exemple@email.com",
+          "phone": "Telèfon *",
+          "phonePlaceholder": "+34 600 000 000",
+          "message": "Missatge",
+          "messagePlaceholder": "M'agradaria rebre més informació sobre aquest iot, especialment sobre...",
+          "messageHelp": "Indiqueu qualsevol pregunta específica o informació addicional que necessiteu."
+        },
+        "privacy": "En enviar aquest formulari, accepteu que processem les vostres dades personals d'acord amb la nostra política de privacitat.",
+        "buttons": {
+          "cancel": "Cancel·lar",
+          "sending": "Enviant...",
+          "submit": "Enviar sol·licitud"
+        }
+      }
     }
   },
   "yachtCharter": {

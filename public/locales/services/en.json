@@ -33,7 +33,7 @@
         "meters": "meters",
         "kg": "kg"
       },
-      "contactButton": "Contact Seller"
+      "contactButton": "I am interested"
     },
     "categories": {
       "title": "Popular Categories",
@@ -101,6 +101,46 @@
       "title": "Interested in Buying or Selling a Vessel?",
       "description": "Our team of experts is ready to help you",
       "button": "Contact Now"
+    },
+    "contactSellerModal": {
+      "formType": "YACHT PURCHASE",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "phoneRequired": "Phone is required"
+      },
+      "status": {
+        "messageSent": "Message sent successfully",
+        "errorSending": "An error occurred while sending the message"
+      },
+      "yachtDetails": {
+        "price": "Price:",
+        "length": "Length:",
+        "location": "Location:",
+        "year": "Year:"
+      },
+      "form": {
+        "title": "Interested in this yacht?",
+        "description": "Complete the form and our sales team will contact you as soon as possible to provide you with all the information you need about the {yachtModel}.",
+        "fields": {
+          "fullName": "Full name *",
+          "namePlaceholder": "Enter your name",
+          "email": "Email *",
+          "emailPlaceholder": "example@email.com",
+          "phone": "Phone *",
+          "phonePlaceholder": "+34 600 000 000",
+          "message": "Message",
+          "messagePlaceholder": "I would like to receive more information about this yacht, especially about...",
+          "messageHelp": "Please indicate any specific questions or additional information you need."
+        },
+        "privacy": "By submitting this form, you agree that we process your personal data in accordance with our privacy policy.",
+        "buttons": {
+          "cancel": "Cancel",
+          "sending": "Sending...",
+          "submit": "Send request"
+        }
+      }
     }
   },
   "yachtCharter": {

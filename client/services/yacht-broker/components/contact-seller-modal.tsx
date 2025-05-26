@@ -2,6 +2,7 @@ import type React from "react";
 
 import type { YachtDetails } from "@/utils/yachts";
 import { Modal } from "@mantine/core";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -21,8 +22,10 @@ export function ContactSellerModal({
   opened,
   onClose,
 }: ContactModalProps) {
+  const t = useTranslations("yachtBroker.contactSellerModal");
+
   const [formData, setFormData] = useState({
-    type: "COMPRA DE YATE",
+    type: t("formType"),
     name: "",
     email: "",
     phone: "",
@@ -39,17 +42,17 @@ export function ContactSellerModal({
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "El nombre es requerido";
+      newErrors.name = t("validation.nameRequired");
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "El email es requerido";
+      newErrors.email = t("validation.emailRequired");
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email inválido";
+      newErrors.email = t("validation.emailInvalid");
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "El teléfono es requerido";
+      newErrors.phone = t("validation.phoneRequired");
     }
 
     setErrors(newErrors);
@@ -101,10 +104,10 @@ export function ContactSellerModal({
       if (result.success) {
         setSubmitStatus({
           type: "success",
-          message: "Mensaje enviado correctamente",
+          message: t("status.messageSent"),
         });
         setFormData({
-          type: "COMPRA DE YATE",
+          type: t("formType"),
           name: "",
           email: "",
           phone: "",
@@ -112,17 +115,13 @@ export function ContactSellerModal({
         });
         setErrors({});
       } else {
-        throw new Error(
-          result.message || "Ha ocurrido un error al enviar el mensaje"
-        );
+        throw new Error(result.message || t("status.errorSending"));
       }
     } catch (error) {
       setSubmitStatus({
         type: "error",
         message:
-          error instanceof Error
-            ? error.message
-            : "Ha ocurrido un error al enviar el mensaje",
+          error instanceof Error ? error.message : t("status.errorSending"),
       });
     } finally {
       setIsSubmitting(false);
@@ -147,22 +146,24 @@ export function ContactSellerModal({
           <h3 className="font-semibold text-lg mb-2">{yacht.model}</h3>
           <div className="space-y-2 text-sm">
             <p className="flex justify-between">
-              <span className="text-gray-600">Precio:</span>
+              <span className="text-gray-600">{t("yachtDetails.price")}</span>
               <span className="font-medium">
                 {yacht.price.toLocaleString()}€
               </span>
             </p>
             <p className="flex justify-between">
-              <span className="text-gray-600">Eslora:</span>
+              <span className="text-gray-600">{t("yachtDetails.length")}</span>
               <span className="font-medium">{yacht.length}m</span>
             </p>
             <p className="flex justify-between">
-              <span className="text-gray-600">Ubicación:</span>
+              <span className="text-gray-600 mr-2">
+                {t("yachtDetails.location")}
+              </span>
               <span className="text-right font-medium">{yacht.location}</span>
             </p>
             {yacht.year && (
               <p className="flex justify-between">
-                <span className="text-gray-600">Año:</span>
+                <span className="text-gray-600">{t("yachtDetails.year")}</span>
                 <span className="font-medium">{yacht.year}</span>
               </p>
             )}
@@ -172,13 +173,9 @@ export function ContactSellerModal({
         {/* Formulario */}
         <div className="flex-1">
           <div className="mb-6">
-            <h3 className="text-lg font-medium mb-2">
-              ¿Interesado en este yate?
-            </h3>
+            <h3 className="text-lg font-medium mb-2">{t("form.title")}</h3>
             <p className="text-gray-600 text-sm">
-              Complete el formulario y nuestro equipo de ventas se pondrá en
-              contacto con usted a la mayor brevedad para proporcionarle toda la
-              información que necesite sobre el {yacht.model}.
+              {t("form.description", { yachtModel: yacht.model })}
             </p>
           </div>
 
@@ -188,7 +185,7 @@ export function ContactSellerModal({
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Nombre completo *
+                {t("form.fields.fullName")}
               </label>
               <input
                 type="text"
@@ -198,7 +195,7 @@ export function ContactSellerModal({
                 className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                   errors.name ? "border-red-500" : "border-gray-300"
                 }`}
-                placeholder="Introduzca su nombre"
+                placeholder={t("form.fields.namePlaceholder")}
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -214,7 +211,7 @@ export function ContactSellerModal({
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Email *
+                  {t("form.fields.email")}
                 </label>
                 <input
                   type="email"
@@ -224,7 +221,7 @@ export function ContactSellerModal({
                   className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   }`}
-                  placeholder="ejemplo@email.com"
+                  placeholder={t("form.fields.emailPlaceholder")}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -240,7 +237,7 @@ export function ContactSellerModal({
                   htmlFor="phone"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Teléfono *
+                  {t("form.fields.phone")}
                 </label>
                 <input
                   type="tel"
@@ -250,7 +247,7 @@ export function ContactSellerModal({
                   className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                     errors.phone ? "border-red-500" : "border-gray-300"
                   }`}
-                  placeholder="+34 600 000 000"
+                  placeholder={t("form.fields.phonePlaceholder")}
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -266,7 +263,7 @@ export function ContactSellerModal({
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Mensaje
+                {t("form.fields.message")}
               </label>
               <textarea
                 id="message"
@@ -275,7 +272,7 @@ export function ContactSellerModal({
                 className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                   errors.message ? "border-red-500" : "border-gray-300"
                 }`}
-                placeholder="Me gustaría recibir más información sobre este yate, especialmente sobre..."
+                placeholder={t("form.fields.messagePlaceholder")}
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -285,14 +282,12 @@ export function ContactSellerModal({
                 <p className="mt-1 text-xs text-red-500">{errors.message}</p>
               )}
               <p className="mt-1 text-xs text-gray-500">
-                Indique cualquier pregunta específica o información adicional
-                que necesite.
+                {t("form.fields.messageHelp")}
               </p>
             </div>
 
             <div className="text-xs text-gray-500 mt-4">
-              Al enviar este formulario, acepta que procesemos sus datos
-              personales de acuerdo con nuestra política de privacidad.
+              {t("form.privacy")}
             </div>
             {submitStatus.type && (
               <div
@@ -311,14 +306,16 @@ export function ContactSellerModal({
                 onClick={onClose}
                 className="px-4 py-2 text-gray-700 bg-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
               >
-                Cancelar
+                {t("form.buttons.cancel")}
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
               >
-                {isSubmitting ? "Enviando..." : "Enviar solicitud"}
+                {isSubmitting
+                  ? t("form.buttons.sending")
+                  : t("form.buttons.submit")}
               </button>
             </div>
           </form>
