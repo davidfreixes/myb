@@ -73,7 +73,9 @@ export const getSitemap = async (
 ): Promise<string[]> => {
   const env = process.env.NODE_ENV;
   const domain =
-    env === "production" ? DOMAIN_BY_LOCALE[locale] : "http://localhost:3000";
+    env === "production"
+      ? "https://menorcabrokers.com"
+      : "http://localhost:3000";
 
   const urls = collectStatic(structure, domain);
   const finalUrls = excludeUrls(urls);
