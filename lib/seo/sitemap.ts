@@ -3,9 +3,12 @@ import nodePath from "path";
 
 const currDate = new Date().toISOString();
 
-// const DOMAIN_BY_LOCALE = {
-//   es: "https://www.menorcabrokers.com",
-// };
+const DOMAIN_BY_LOCALE = {
+  es: "https://menorcabrokers.com",
+  en: "https://menorcabrokers.com",
+  cat: "https://menorcabrokers.com",
+  fr: "https://menorcabrokers.com",
+};
 
 // Lee las páginas del sistema de archivos
 type Page = {
@@ -68,14 +71,12 @@ const excludeUrls = (urls: string[]) =>
 
 // Genera bloques XML del sitemap
 export const getSitemap = async (
-  structure: Page[]
-  // locale: "es"
+  structure: Page[],
+  locale: "es"
 ): Promise<string[]> => {
   const env = process.env.NODE_ENV;
   const domain =
-    env === "production"
-      ? "https://menorcabrokers.com"
-      : "http://localhost:3000";
+    env === "production" ? DOMAIN_BY_LOCALE[locale] : "http://localhost:3000";
 
   const urls = collectStatic(structure, domain);
   const finalUrls = excludeUrls(urls);
