@@ -11,7 +11,7 @@ export function middleware(req: NextRequest) {
   for (const { default: def, en, cat, fr } of PAGE_ROUTES) {
     // Static routes
     if (
-      (host.includes("instantfreight.ai") || env === "development") &&
+      (host.includes("menorcabrokers.com") || env === "development") &&
       path === en
     ) {
       url.pathname = def;
