@@ -33,9 +33,9 @@ export default function YachtCharterPage() {
       <NextSeo
         title="Alquiler de Yates en Menorca | Yacht Charter de Lujo"
         description="Descubre el mejor alquiler de yates en Menorca con Menorca Brokers. Disfruta de un charter de lujo con rutas exclusivas, tripulación profesional y servicios VIP. Reserva ahora y vive una experiencia inolvidable."
-        canonical="https://www.menorcabrokers.com/yacht-charter"
+        canonical="https://www.menorcabrokers.com/alquiler-de-yates"
         openGraph={{
-          url: "https://www.menorcabrokers.com/yacht-charter",
+          url: "https://www.menorcabrokers.com/alquiler-de-yates",
           title: "Alquiler de Yates en Menorca | Yacht Charter de Lujo",
           description:
             "Explora Menorca desde el mar con nuestro servicio exclusivo de alquiler de yates. Disfruta de experiencias premium, tripulación experta y rutas personalizadas.",

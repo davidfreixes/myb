@@ -1,33 +1,61 @@
-export const NAVIGATION_LINKS = {
-  HOME: "/",
-  QUIENES_SOMOS: "/quienes-somos",
-  SERVICIOS: "/servicios",
-  CONTACTO: "/contacto",
-  BLOG: "/blog",
-  YACHT_BROKER: "/yacht-broker",
-  YACHT_CHARTER: "/yacht-charter",
-  INSPECCIONES: "/inspections",
-  LOGÍSTICA: "/logistics",
-  ASESORIA_NAUTICA: "nautical-consulting",
-  BUNKER_SUPPLY: "bunker-supply",
-  VALOR_AÑADIDO: "added-value-services",
-  PROVEEDORES_Y_DISTRIBUIDORES: "/proveedores-y-distribuidores",
-  DIARIO_PUERTO_MAHON: "/diario-del-puerto-de-mahon",
-  CONDICIONES_Y_TARIFAS: "/condiciones-y-tarifas",
-  CONTRATOS_DE_COMPRAVENTA: "/contratos-de-compraventa",
-  POLITICA_DE_PRIVACIDAD: "/politica-de-privacidad",
-  AVISO_LEGAL: "/aviso-legal",
+import { PAGE_ROUTES, translatePath } from "@/routes";
 
-  PUBLIC_INSTANT_RATE: "/my-rate?instantRate=true",
-  ENVIO_BY_ID: (id: string) => `/app/orders/${id}`,
-  ENVIO_NEW: (rateId: string) => `/app/rates?orderRateId=${rateId}`,
-  ENVIO_EDIT: (orderId: string) => `/app/orders/${orderId}/edit`,
-  RATE_EDIT: (id: string) => `/app/rates/${id}/edit`,
-  RATE_BY_ID: (rateId: string) => `/app/rates?rateId=${rateId}`,
-  ADDRESSES: "/app/addresses",
-  HOLDED_INVOICE: (id: string) =>
-    `${process.env.NEXT_PUBLIC_HOLDED_INVOICE + id}`,
-  API_LANDING: "/api-landing",
-  PUBLIC_TRACKING: (id: string) =>
-    process.env.NEXT_PUBLIC_APP_URL + `/tracking/${id}`,
+export const NAVIGATION_LINKS = {
+  HOME: (locale: string) => translatePath("/", locale),
+
+  YACHT_BROKER: (locale: string) => translatePath("/broker-de-yates", locale),
+  YACHT_CHARTER: (locale: string) =>
+    translatePath("/alquiler-de-yates", locale),
+  QUIENES_SOMOS: (locale: string) => translatePath("/quienes-somos", locale),
+  CONTACTO: (locale: string) => translatePath("/contacto", locale),
+  BLOG: (locale: string) => translatePath("/blog", locale),
+  INSPECCIONES: (locale: string) => translatePath("/inspecciones", locale),
+  LOGÍSTICA: (locale: string) => translatePath("/logistica", locale),
+  ASESORIA_NAUTICA: (locale: string) =>
+    translatePath("consultoria-nautica", locale),
+  BUNKER_SUPPLY: (locale: string) => translatePath("suministro-bunker", locale),
+  VALOR_AÑADIDO: (locale: string) =>
+    translatePath("servicios-valor-añadido", locale),
+  PROVEEDORES_Y_DISTRIBUIDORES: (locale: string) =>
+    translatePath("proveedores-y-distribuidores", locale),
+  DIARIO_PUERTO_MAHON: (locale: string) =>
+    translatePath("diario-del-puerto-de-mahon", locale),
+  CONDICIONES_Y_TARIFAS: (locale: string) =>
+    translatePath("condiciones-y-tarifas", locale),
+  CONTRATOS_DE_COMPRAVENTA: (locale: string) =>
+    translatePath("contratos-de-compraventa", locale),
+  POLITICA_DE_PRIVACIDAD: (locale: string) =>
+    translatePath("politica-de-privacidad", locale),
+  AVISO_LEGAL: (locale: string) => translatePath("aviso-legal", locale),
 };
+
+export function getNavKeyFromPath(path: string): string | null {
+  // Remove query and hash
+  const cleanPath = path.split("?")[0].split("#")[0];
+  // Normalize trailing slash
+  const normalized =
+    cleanPath.endsWith("/") && cleanPath.length > 1
+      ? cleanPath.slice(0, -1)
+      : cleanPath;
+
+  for (const [key, fn] of Object.entries(NAVIGATION_LINKS)) {
+    for (const route of PAGE_ROUTES) {
+      // Check all slugs for this route
+      if (
+        [route.default, route.en, route.cat, route.fr].some(
+          (slug) =>
+            slug === normalized ||
+            (slug !== "/" && normalized.startsWith(slug + "/"))
+        )
+      ) {
+        // Key in LOCALIZED_NAVIGATION_LINKS is the logical key
+        if (
+          fn.toString().includes(route.default) // crude check: function uses this default route
+        ) {
+          return key;
+        }
+      }
+    }
+  }
+  return null;
+}

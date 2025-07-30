@@ -2,7 +2,7 @@ import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { sampleYachts } from "@/utils/yachts";
 import { Accordion, Button } from "@mantine/core";
 import { Anchor, ArrowDown, Ship, Users } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ContactModal from "../../../general/contact/modal/contactModal";
@@ -26,6 +26,7 @@ export default function YachtBroker() {
   const newBoatsSectionRef = useRef<HTMLDivElement>(null);
   const usedBoatsSectionRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("yachtBroker");
+  const locale = useLocale();
 
   const newYachts = sampleYachts.filter((yacht) => yacht.type === "new");
   const usedYachts = sampleYachts.filter((yacht) => yacht.type === "used");
@@ -179,12 +180,12 @@ export default function YachtBroker() {
               >
                 {t("cta.button")}
               </Button>
-              <Button
+              {/* <Button
                 unstyled
                 className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black text-sm sm:text-base py-2 px-3 sm:px-4 rounded transition duration-300"
               >
                 Customized Boat
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -393,7 +394,7 @@ export default function YachtBroker() {
           {t("cta.description")}
         </p>
         <a
-          href={NAVIGATION_LINKS.CONTACTO}
+          href={NAVIGATION_LINKS.CONTACTO(locale)}
           target="_blank"
           rel="noopener noreferrer"
         >

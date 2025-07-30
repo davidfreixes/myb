@@ -3,257 +3,242 @@ export type PageRoute = {
   default: string;
   /** slug en inglés */
   en: string;
-  /** slug en portugués */
-  pt: string;
-  
-
+  /** slug en cattalán */
+  cat: string;
+  /** slug en francés */
+  fr: string;
 };
 
 export const PAGE_ROUTES: PageRoute[] = [
-  { default: '/', en: '/', pt: '/' },
-  { default: '/servicios', en: '/services', pt: '/servicos' },
-  { default: '/contacto', en: '/contact', pt: '/contacto' },
-  { default: '/blog', en: '/blog', pt: '/blog' },
+  { default: "/", en: "/", cat: "/", fr: "/" },
   {
-    default: '/terms-and-conditions-gdpr',
-    en: '/gdpr-terms-and-conditions',
-    pt: '/termos-e-condicoes-gdpr',
-  },
-  { default: '/api-docs', en: '/api-docs', pt: '/api-docs' },
-  { default: '/api-landing', en: '/api-landing', pt: '/api-landing' },
-  {
-    default: '/transporte-terrestre-mercancias',
-    en: '/road-freight-transport',
-    pt: '/transporte-terrestre-mercadorias',
+    default: "/servicios",
+    en: "/services",
+    cat: "/serveis",
+    fr: "/services",
   },
   {
-    default: '/transporte-terrestre-mercancias/adr',
-    en: '/road-freight-transport/adr',
-    pt: '/transporte-terrestre-mercadorias/adr',
+    default: "/contacto",
+    en: "/contact",
+    cat: "/contacte",
+    fr: "/contact",
   },
   {
-    default: '/transporte-terrestre-mercancias/adr/onu-etiquetas',
-    en: '/road-freight-transport/adr/un-labels',
-    pt: '/transporte-terrestre-mercadorias/adr/onu-etiquetas',
+    default: "/servicios-valor-añadido",
+    en: "/added-value-services",
+    cat: "/serveis-valor-afegit",
+    fr: "/services-ajoutés",
   },
   {
-    default: '/transporte-terrestre-mercancias/adr/9-clases',
-    en: '/road-freight-transport/adr/9-classes',
-    pt: '/transporte-terrestre-mercadorias/adr/9-clases',
+    default: "/aviso-legal",
+    en: "/legal-notice",
+    cat: "/avis-legal",
+    fr: "/avis-legal",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion',
-    en: '/road-freight-transport/documentation',
-    pt: '/transporte-terrestre-mercadorias/documentacao',
+    default: "/suministro-bunker",
+    en: "/bunker-supply",
+    cat: "/subministrament-bunker",
+    fr: "/approvisionnement-bunker",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/carta-porte',
-    en: '/road-freight-transport/documentation/waybill',
-    pt: '/transporte-terrestre-mercadorias/documentacao/carta-porte',
+    default: "/condiciones-y-tarifas",
+    en: "/terms-and-rates",
+    cat: "/condicions-i-tarifes",
+    fr: "/conditions-et-tarifs",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/cmr',
-    en: '/road-freight-transport/documentation/cmr',
-    pt: '/transporte-terrestre-mercadorias/documentacao/cmr',
+    default: "/contratos-de-compraventa",
+    en: "/sales-contracts",
+    cat: "/contractes-de-compravenda",
+    fr: "/contrats-de-vente",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/dua',
-    en: '/road-freight-transport/documentation/sad',
-    pt: '/transporte-terrestre-mercadorias/documentacao/declaracao-aduaneira',
+    default: "/diario-del-puerto-de-mahon",
+    en: "/port-of-mahon-daily",
+    cat: "/diari-del-port-de-mahon",
+    fr: "/journal-du-port-de-mahon",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/dae',
-    en: '/road-freight-transport/documentation/ead',
-    pt: '/transporte-terrestre-mercadorias/documentacao/dae',
+    default: "/inspecciones",
+    en: "/inspections",
+    cat: "/inspeccions",
+    fr: "/inspections",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/eur-1',
-    en: '/road-freight-transport/documentation/eur-1',
-    pt: '/transporte-terrestre-mercadorias/documentacao/eur-1',
+    default: "/logisticat",
+    en: "/logistics",
+    cat: "/logisticat",
+    fr: "/logistique",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/atr',
-    en: '/road-freight-transport/documentation/atr',
-    pt: '/transporte-terrestre-mercadorias/documentacao/atr',
+    default: "/consultoria-nauticat",
+    en: "/nauticatl-consulting",
+    cat: "/consultoria-nauticat",
+    fr: "/consultation-nautique",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/transito-t1-t2',
-    en: '/road-freight-transport/documentation/transit-t1-t2',
-    pt: '/transporte-terrestre-mercadorias/documentacao/transito-t1-t2',
+    default: "/politicat-de-privacidad",
+    en: "/privacy-policy",
+    cat: "/politicat-de-privacitat",
+    fr: "/politique-de-confidentialité",
   },
   {
-    default: '/transporte-terrestre-mercancias/documentacion/dgd',
-    en: '/road-freight-transport/documentation/dgd',
-    pt: '/transporte-terrestre-mercadorias/documentacao/dgd',
+    default: "/proveedores-y-distribuidores",
+    en: "/suppliers-and-distributors",
+    cat: "/proveidors-i-distribuidors",
+    fr: "/fournisseurs-et-distributeurs",
   },
   {
-    default:
-      '/transporte-terrestre-mercancias/documentacion/declaracion-sumaria',
-    en: '/road-freight-transport/documentation/ens',
-    pt: '/transporte-terrestre-mercadorias/documentacao/dse',
+    default: "/quienes-somos",
+    en: "/about-us",
+    cat: "/qui-som",
+    fr: "/qui-sommes-nous",
+  },
+
+  {
+    default: "/broker-de-yates",
+    en: "/yacht-broker",
+    cat: "/broker-de-iots",
+    fr: "/courtier-en-yachts",
   },
   {
-    default: '/transporte-terrestre-mercancias/seguros',
-    en: '/road-freight-transport/insurance',
-    pt: '/transporte-terrestre-mercadorias/seguros',
+    default: "/alquiler-de-yates",
+    en: "/yacht-charter",
+    cat: "/lloguer-de-iots",
+    fr: "/locattion-de-yachts",
   },
-  {
-    default: '/transporte-terrestre-mercancias/seguros/lott',
-    en: '/road-freight-transport/insurance/lott',
-    pt: '/transporte-terrestre-mercadorias/seguros/lott',
-  },
-  {
-    default: '/transporte-terrestre-mercancias/seguros/cmr',
-    en: '/road-freight-transport/insurance/cmr',
-    pt: '/transporte-terrestre-mercadorias/seguros/cmr',
-  },
-  {
-    default: '/transporte-terrestre-mercancias/seguros/todo-riesgo',
-    en: '/road-freight-transport/insurance/all-risk',
-    pt: '/transporte-terrestre-mercadorias/seguros/todo-riesgo',
-  },
-  {
-    default: '/aduanas',
-    en: '/customs',
-    pt: '/aduanas',
-  },
-  {
-    default: '/aduanas/inspeccion-canales',
-    en: '/customs/inspection-channels',
-    pt: '/aduanas/inspeccion-canales',
-  },
-  {
-    default: '/aduanas/pif',
-    en: '/customs/pif',
-    pt: '/aduanas/pif',
-  },
-  // …añade aquí cualquier otra ruta “estática” de tu CSV
+
+  // …añade aquí cualquier otra ruta “estáticat” de tu CSV
 ];
 
-// Reserved service slugs in all locales ( for not confound with cities)
+// Reserved service slugs in all locatles ( for not confound with cities)
 export const RESERVED_SERVICE_SLUGS = [
   // Spanish
-  'grupaje',
-  'carga-completa',
-  'express',
-  'adr',
-  'onu-etiquetas',
-  '9-clases',
+  "grupaje",
+  "catrga-completa",
+  "express",
+  "adr",
+  "onu-etiquetas",
+  "9-clases",
   // English
-  'groupage',
-  'full-load',
-  'express',
-  'adr',
-  'un-labels',
-  '9-classes',
+  "groupage",
+  "full-load",
+  "express",
+  "adr",
+  "un-labels",
+  "9-classes",
   // Portuguese
-  'grupagem',
-  'carga-completa',
-  'expresso',
-  'adr',
-  'onu-etiquetas',
-  '9-clases',
+  "grupagem",
+  "catrga-completa",
+  "expresso",
+  "adr",
+  "onu-etiquetas",
+  "9-clases",
 ];
 
 /**
- * Traduce un pathname “default” a su slug en el locale indicado.
+ * Traduce un pathname “default” a su slug en el locatle indicatdo.
  * Si la ruta no está en PAGE_ROUTES, la deja intacta.
  */
-export function translatePath(incomingPath: string, locale: string): string {
+export function translatePath(incomingPath: string, locatle: string): string {
   // Remove query/hash
-  const cleanPath = incomingPath.split('?')[0].split('#')[0];
+  const cleanPath = incomingPath.split("?")[0].split("#")[0];
 
   // Normalize trailing slash
   const normalizedPath =
-    cleanPath.endsWith('/') && cleanPath.length > 1
+    cleanPath.endsWith("/") && cleanPath.length > 1
       ? cleanPath.slice(0, -1)
       : cleanPath;
 
-  // 1.Buscar coincidencias exactas con rutas estáticas
-  // Ordenamos por longitud descendente para que las rutas más específicas tengan prioridad
+  // 1.Buscatr coincidencias exactas con rutas estáticats
+  // Ordenamos por longitud descendente para que las rutas más específicats tengan prioridad
   const staticRoutes = PAGE_ROUTES.filter(
-    (route) => !route.default.includes('[')
+    (route) => !route.default.includes("[")
   ).sort((a, b) => b.default.length - a.default.length);
 
   for (const route of staticRoutes) {
     if (
       route.default === normalizedPath ||
       route.en === normalizedPath ||
-      route.pt === normalizedPath
+      route.cat === normalizedPath ||
+      route.fr === normalizedPath
     ) {
-      return getLocalizedRoute(route, locale);
+      return getLocatlizedRoute(route, locatle);
     }
   }
 
-  // 2. Buscar coincidencias con rutas dinámicas
-  const dynamicRoutes = PAGE_ROUTES.filter((route) =>
-    route.default.includes('[')
-  ).sort((a, b) => b.default.length - a.default.length);
+  // 2. Buscatr coincidencias con rutas dinámicats
+  // const dynamicRoutes = PAGE_ROUTES.filter((route) =>
+  //   route.default.includes("[")
+  // ).sort((a, b) => b.default.length - a.default.length);
 
-  for (const route of dynamicRoutes) {
-    const match = matchDynamicRoute(normalizedPath, route, locale);
-    if (match) {
-      return match;
-    }
-  }
+  // for (const route of dynamicRoutes) {
+  //   const match = matchDynamicRoute(normalizedPath, route, locatle);
+  //   if (match) {
+  //     return match;
+  //   }
+  // }
 
   // 3. FALLBACK: Si no encuentra coincidencia, devolver la ruta original
   return normalizedPath;
 }
 
 /**
- * Obtiene la ruta localizada según el idioma
+ * Obtiene la ruta locatlizada según el idioma
  */
-function getLocalizedRoute(route: PageRoute, locale: string): string {
-  switch (locale) {
-    case 'en':
+function getLocatlizedRoute(route: PageRoute, locatle: string): string {
+  switch (locatle) {
+    case "en":
       return route.en;
-    case 'pt':
-      return route.pt;
+    case "cat":
+      return route.cat;
+    case "fr":
+      return route.fr;
     default:
       return route.default;
   }
 }
 
 /**
- * Intenta hacer match con una ruta dinámica y devuelve la versión traducida
+ * Intenta hacer match con una ruta dinámicat y devuelve la versión traducida
  */
-function matchDynamicRoute(
-  path: string,
-  route: PageRoute,
-  locale: string
-): string | null {
-  // Crear regex para el patrón dinámico
-  const pattern = route.default;
-  const paramMatches = [...pattern.matchAll(/\[([^/\]]+)\]/g)];
+// function matchDynamicRoute(
+//   path: string,
+//   route: PageRoute,
+//   locatle: string
+// ): string | null {
+//   // Crear regex para el patrón dinámico
+//   const pattern = route.default;
+//   const paramMatches = [...pattern.matchAll(/\[([^/\]]+)\]/g)];
 
-  if (paramMatches.length === 0) return null;
+//   if (paramMatches.length === 0) return null;
 
-  // Build regex: replace [param] with ([^/]+)
-  let regexPattern = pattern.replace(/\[([^/\]]+)\]/g, '([^/]+)');
-  regexPattern = '^' + regexPattern + '$';
+//   // Build regex: replace [param] with ([^/]+)
+//   let regexPattern = pattern.replace(/\[([^/\]]+)\]/g, "([^/]+)");
+//   regexPattern = "^" + regexPattern + "$";
 
-  const regex = new RegExp(regexPattern);
-  const match = path.match(regex);
+//   const regex = new RegExp(regexPattern);
+//   const match = path.match(regex);
 
-  if (!match) return null;
+//   if (!match) return null;
 
-  // Build the localized pattern
-  let localizedPattern = getLocalizedRoute(route, locale);
+//   // Build the locatlized pattern
+//   let locatlizedPattern = getLocatlizedRoute(route, locatle);
 
-  // Reemplazar parámetros con valores reales
-  paramMatches.forEach((paramMatch, index) => {
-    const paramValue = match[index + 1];
-    localizedPattern = localizedPattern.replace(
-      `[${paramMatch[1]}]`,
-      paramValue
-    );
-  });
+//   // Reemplazar parámetros con valores reales
+//   paramMatches.forEach((paramMatch, index) => {
+//     const paramValue = match[index + 1];
+//     locatlizedPattern = locatlizedPattern.replace(
+//       `[${paramMatch[1]}]`,
+//       paramValue
+//     );
+//   });
 
-  return localizedPattern;
-}
+//   return locatlizedPattern;
+// }
 export const ALL_SLUGS = [
-  ...PAGE_ROUTES.flatMap((r) => [r.default, r.en, r.pt]),
+  ...PAGE_ROUTES.flatMap((r) => [r.default, r.en, r.cat, r.fr]),
 ];
 
 /**

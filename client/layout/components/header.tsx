@@ -1,3 +1,4 @@
+import { PAGE_ROUTES } from "@/routes";
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Menu, Text } from "@mantine/core";
 import {
@@ -17,7 +18,7 @@ import {
   Truck,
   X,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -51,8 +52,9 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const t = useTranslations("header");
-  const { locale, asPath } = router;
+  const { asPath } = router;
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const locale = useLocale();
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -105,44 +107,44 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
       items: [
         {
           label: t("services.yachtBroker.label"),
-          href: `${NAVIGATION_LINKS.YACHT_BROKER}`,
+          href: `${NAVIGATION_LINKS.YACHT_BROKER(locale)}`,
           icon: <Ship size={20} />,
           description: t("services.yachtBroker.description"),
         },
         {
           label: t("services.yachtCharter.label"),
-          href: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
+          href: `${NAVIGATION_LINKS.YACHT_CHARTER(locale)}`,
           icon: <Anchor size={20} />,
           description: t("services.yachtCharter.description"),
         },
         {
           label: t("services.bunkerSupply.label"),
-          href: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+          href: `${NAVIGATION_LINKS.BUNKER_SUPPLY(locale)}`,
           icon: <Database size={20} />,
           description: t("services.bunkerSupply.description"),
         },
         {
           label: t("services.inspections.label"),
-          href: `${NAVIGATION_LINKS.INSPECCIONES}`,
+          href: `${NAVIGATION_LINKS.INSPECCIONES(locale)}`,
           icon: <Scale size={20} />,
           description: t("services.inspections.description"),
         },
         {
           label: t("services.logistics.label"),
-          href: `${NAVIGATION_LINKS.LOGÍSTICA}`,
+          href: `${NAVIGATION_LINKS.LOGÍSTICA(locale)}`,
           icon: <Truck size={20} />,
           description: t("services.logistics.description"),
         },
         {
           label: t("services.nauticalAdvisory.label"),
-          href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
+          href: `${NAVIGATION_LINKS.ASESORIA_NAUTICA(locale)}`,
           icon: <ShipWheel size={20} />,
           description: t("services.nauticalAdvisory.description"),
         },
 
         {
           label: t("services.valueAddedServices.label"),
-          href: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
+          href: `${NAVIGATION_LINKS.VALOR_AÑADIDO(locale)}`,
           icon: <Plus size={20} />,
           description: t("services.valueAddedServices.description"),
         },
@@ -155,13 +157,13 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
       items: [
         {
           label: t("company.suppliers.label"),
-          href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES}`,
+          href: `${NAVIGATION_LINKS.PROVEEDORES_Y_DISTRIBUIDORES(locale)}`,
           icon: <Building size={20} />,
           description: t("company.suppliers.description"),
         },
         {
           label: t("company.news.label"),
-          href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON}`,
+          href: `${NAVIGATION_LINKS.DIARIO_PUERTO_MAHON(locale)}`,
           icon: <Newspaper size={20} />,
           description: t("company.news.description"),
         },
@@ -174,13 +176,13 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
       items: [
         {
           label: t("contracting.conditionsRates.label"),
-          href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS}`,
+          href: `${NAVIGATION_LINKS.CONDICIONES_Y_TARIFAS(locale)}`,
           icon: <FileText size={20} />,
           description: t("contracting.conditionsRates.description"),
         },
         {
           label: t("contracting.yachtContracts.label"),
-          href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA}`,
+          href: `${NAVIGATION_LINKS.CONTRATOS_DE_COMPRAVENTA(locale)}`,
           icon: <ScrollText size={20} />,
           description: t("contracting.yachtContracts.description"),
         },
@@ -188,17 +190,40 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
     },
     {
       label: t("navigation.aboutUs"),
-      href: `${NAVIGATION_LINKS.QUIENES_SOMOS}`,
+      href: `${NAVIGATION_LINKS.QUIENES_SOMOS(locale)}`,
       width: "300",
     },
   ];
 
   const changeLanguage = (newLocale: string) => {
-    // Opcional: guardar preferencia en cookie
+    // Guardar preferencia en cookie
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${
       60 * 60 * 24 * 30
     }`;
-    router.push(asPath, asPath, { locale: newLocale });
+
+    // Obtener la ruta actual sin el locale actual
+    const pathWithoutLocale = asPath.replace(/^\/[a-z]{2}(\/|$)/, "/");
+
+    // Buscar si la ruta actual coincide con alguna ruta traducida
+    const currentRoute = PAGE_ROUTES.find((route) => {
+      // Comprobar si la ruta actual coincide con alguna ruta en cualquier idioma
+      return Object.values(route).some(
+        (url) =>
+          url === pathWithoutLocale ||
+          (pathWithoutLocale.endsWith("/") &&
+            url === pathWithoutLocale.slice(0, -1)) ||
+          (!pathWithoutLocale.endsWith("/") && url === `${pathWithoutLocale}/`)
+      );
+    });
+
+    // Si encontramos una ruta traducida, usarla, de lo contrario mantener la ruta actual
+    const newPath = currentRoute
+      ? currentRoute[newLocale as keyof typeof currentRoute] ||
+        currentRoute.default
+      : pathWithoutLocale;
+
+    // Navegar a la ruta traducida con el nuevo locale
+    router.push(newPath, undefined, { locale: newLocale });
   };
 
   return (
@@ -325,7 +350,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             <Button
               unstyled
               component={Link}
-              href={`${NAVIGATION_LINKS.CONTACTO}`}
+              href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
               className="hidden lg:block bg-primary hover:bg-primary/90 text-black min-w-[48px] font-medium py-1 px-5 rounded-lg"
             >
               {t("navigation.contact")}
@@ -456,7 +481,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                 <Button
                   unstyled
                   component={Link}
-                  href={`${NAVIGATION_LINKS.CONTACTO}`}
+                  href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
                   className="w-full text-center bg-primary hover:bg-primary/90 text-black font-medium py-2 px-3 rounded-md"
                 >
                   {t("navigation.contact")}
@@ -493,7 +518,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
               {/* Contact button - mobile sin JS */}
               <div className="py-2">
                 <a
-                  href={NAVIGATION_LINKS.CONTACTO}
+                  href={NAVIGATION_LINKS.CONTACTO(locale)}
                   className="block w-full text-center bg-primary text-black font-medium py-2 px-3 rounded-md"
                 >
                   {t("navigation.contact")}

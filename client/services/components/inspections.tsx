@@ -1,6 +1,6 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import ContactModal from "../../general/contact/modal/contactModal";
@@ -8,6 +8,7 @@ import ContactModal from "../../general/contact/modal/contactModal";
 export default function Inspections() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("inspections");
+  const locale = useLocale();
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -134,7 +135,7 @@ export default function Inspections() {
           </h2>
           <p className="text-lg text-gray-700 mb-6">{t("cta.description")}</p>
           <a
-            href={NAVIGATION_LINKS.CONTACTO}
+            href={NAVIGATION_LINKS.CONTACTO(locale)}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -9,7 +9,7 @@ import {
   Users,
   Wheat,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { Trans } from "react-i18next";
@@ -22,6 +22,7 @@ export default function BunkerSupplyPage() {
 
   const t = useTranslations("bunkerSupply");
   const q = useTranslations("quoteModal");
+  const locale = useLocale();
 
   const marketIndices = [
     {
@@ -466,7 +467,7 @@ export default function BunkerSupplyPage() {
         </p>
 
         <a
-          href={NAVIGATION_LINKS.CONTACTO}
+          href={NAVIGATION_LINKS.CONTACTO(locale)}
           target="_blank"
           rel="noopener noreferrer"
         >

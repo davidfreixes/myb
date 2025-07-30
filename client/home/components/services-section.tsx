@@ -1,14 +1,15 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Card } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
 export default function ServicesSection() {
   const t = useTranslations("mainPage.servicesSection");
-
+  const locale = useLocale();
+  
   const services = [
     {
       title: "Yacht Broker",
@@ -21,7 +22,7 @@ export default function ServicesSection() {
         </>
       ),
       image: "/img/yacht-broker.jpg",
-      link: `${NAVIGATION_LINKS.YACHT_BROKER}`,
+      link: `${NAVIGATION_LINKS.YACHT_BROKER(locale)}`,
     },
     {
       title: "Yacht Charter",
@@ -34,7 +35,7 @@ export default function ServicesSection() {
         </>
       ),
       image: "/img/yacht-charter.jpg",
-      link: `${NAVIGATION_LINKS.YACHT_CHARTER}`,
+      link: `${NAVIGATION_LINKS.YACHT_CHARTER(locale)}`,
     },
     {
       title: "Bunker Supply",
@@ -47,31 +48,31 @@ export default function ServicesSection() {
         </>
       ),
       image: "/img/bunker-supply.jpg",
-      link: `${NAVIGATION_LINKS.BUNKER_SUPPLY}`,
+      link: `${NAVIGATION_LINKS.BUNKER_SUPPLY(locale)}`,
     },
     {
       title: t("services.3.title"),
       description: t("services.3.description"),
       image: "/img/inspections.jpg",
-      link: `${NAVIGATION_LINKS.INSPECCIONES}`,
+      link: `${NAVIGATION_LINKS.INSPECCIONES(locale)}`,
     },
     {
       title: t("services.4.title"),
       description: t("services.4.description"),
       image: "/img/logistics.jpg",
-      link: `${NAVIGATION_LINKS.LOGÍSTICA}`,
+      link: `${NAVIGATION_LINKS.LOGÍSTICA(locale)}`,
     },
     {
       title: t("services.5.title"),
       description: t("services.5.description"),
       image: "/img/nautical-consulting.jpg",
-      link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA}`,
+      link: `${NAVIGATION_LINKS.ASESORIA_NAUTICA(locale)}`,
     },
     {
       title: t("services.6.title"),
       description: t("services.6.description"),
       image: "/img/value-added-services.jpg",
-      link: `${NAVIGATION_LINKS.VALOR_AÑADIDO}`,
+      link: `${NAVIGATION_LINKS.VALOR_AÑADIDO(locale)}`,
     },
   ];
 

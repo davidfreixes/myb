@@ -1,12 +1,13 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Text } from "@mantine/core";
 import { Instagram, Mail } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
 
   return (
     <footer className="bg-[#0B2847] text-white py-8 md:py-12 lg:py-16">
@@ -40,7 +41,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services_nauticos.yacht_broker")}
@@ -48,7 +49,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
+                    href={`${NAVIGATION_LINKS.YACHT_CHARTER(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services_nauticos.yacht_charter")}
@@ -56,7 +57,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.INSPECCIONES}`}
+                    href={`${NAVIGATION_LINKS.INSPECCIONES(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services_nauticos.inspecciones")}
@@ -64,7 +65,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.ASESORIA_NAUTICA}`}
+                    href={`${NAVIGATION_LINKS.ASESORIA_NAUTICA(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services_nauticos.asesoria_nautica")}
@@ -81,7 +82,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services.compra_yates")}
@@ -89,7 +90,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.YACHT_BROKER}`}
+                    href={`${NAVIGATION_LINKS.YACHT_BROKER(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services.venta_yates")}
@@ -97,7 +98,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.YACHT_CHARTER}`}
+                    href={`${NAVIGATION_LINKS.YACHT_CHARTER(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services.alquiler_yates")}
@@ -105,7 +106,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.VALOR_AÑADIDO}`}
+                    href={`${NAVIGATION_LINKS.VALOR_AÑADIDO(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("services.valor_añadido")}
@@ -123,7 +124,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
+                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("empresa.aboutUs")}
@@ -139,7 +140,7 @@ export function Footer() {
                 </li> */}
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS}`}
+                    href={`${NAVIGATION_LINKS.QUIENES_SOMOS(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("empresa.ourTeam")}
@@ -147,7 +148,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={`${NAVIGATION_LINKS.CONTACTO}`}
+                    href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
                     className="text-gray-300 hover:text-primary block"
                   >
                     {t("empresa.contact")}
@@ -175,13 +176,13 @@ export function Footer() {
                 Condiciones generales de uso
               </Link> */}
               <Link
-                href={`${NAVIGATION_LINKS.POLITICA_DE_PRIVACIDAD}`}
+                href={`${NAVIGATION_LINKS.POLITICA_DE_PRIVACIDAD(locale)  }`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
                 {t("legal.politica_privacidad")}
               </Link>
               <Link
-                href={`${NAVIGATION_LINKS.AVISO_LEGAL}`}
+                href={`${NAVIGATION_LINKS.AVISO_LEGAL(locale)}`}
                 className="text-sm text-gray-400 hover:text-primary"
               >
                 {t("legal.aviso_legal")}

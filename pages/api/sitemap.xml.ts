@@ -2,7 +2,7 @@ import { getPagesFromFolder, getSitemap } from "@/lib/seo/sitemap";
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 
-const DOMAIN_TO_LOCALE: Record<string, "es"> = {
+const DOMAIN_TO_LOCALE: Record<string, "es" | "en" | "cat" | "fr"> = {
   "www.menorcabrokers.com": "es",
 };
 

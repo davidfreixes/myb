@@ -12,7 +12,7 @@ import {
   Shield,
   User,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import ContactModal from "../../general/contact/modal/contactModal";
@@ -20,6 +20,7 @@ import ContactModal from "../../general/contact/modal/contactModal";
 export default function Logistics() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("logistics");
+  const locale = useLocale();
 
   const doorToDoorServices = [
     {
@@ -271,7 +272,7 @@ export default function Logistics() {
             {t("cta.description")}
           </p>
           <a
-            href={NAVIGATION_LINKS.CONTACTO}
+            href={NAVIGATION_LINKS.CONTACTO(locale)}
             target="_blank"
             rel="noopener noreferrer"
           >

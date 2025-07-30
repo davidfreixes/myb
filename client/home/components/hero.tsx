@@ -1,11 +1,12 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   const t = useTranslations("mainPage.hero");
+  const locale = useLocale();
 
   return (
     <div className="flex relative h-[100vh] max-h-[100vh] md:h-[500px] w-full">
@@ -53,7 +54,7 @@ export default function Hero() {
                 </Button>
                 <Button
                   component={Link}
-                  href={`${NAVIGATION_LINKS.CONTACTO}`}
+                  href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
                   unstyled
                   className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-base py-2 px-4"
                 >
@@ -85,7 +86,7 @@ export default function Hero() {
                   </Button>
                   <Button
                     component={Link}
-                    href={`${NAVIGATION_LINKS.CONTACTO}`}
+                    href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
                     unstyled
                     className="w-full text-center rounded sm:w-auto border-primary border-2 z-10 text-white hover:bg-white/10 hover:border-primary hover:text-primary text-sm md:text-base py-2 px-4"
                   >

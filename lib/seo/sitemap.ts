@@ -1,13 +1,14 @@
+import { PAGE_ROUTES, translatePath } from "@/routes";
 import * as fs from "fs";
 import nodePath from "path";
 
 const currDate = new Date().toISOString();
 
 const DOMAIN_BY_LOCALE = {
-  es: "https://menorcabrokers.com",
-  en: "https://menorcabrokers.com",
-  cat: "https://menorcabrokers.com",
-  fr: "https://menorcabrokers.com",
+  es: "https://www.menorcabrokers.com",
+  en: "https://www.menorcabrokers.com",
+  cat: "https://www.menorcabrokers.com",
+  fr: "https://www.menorcabrokers.com",
 };
 
 // Lee las páginas del sistema de archivos
@@ -72,13 +73,20 @@ const excludeUrls = (urls: string[]) =>
 // Genera bloques XML del sitemap
 export const getSitemap = async (
   structure: Page[],
-  locale: "es"
+  locale: "es" | "en" | "cat" | "fr"
 ): Promise<string[]> => {
   const env = process.env.NODE_ENV;
   const domain =
     env === "production" ? DOMAIN_BY_LOCALE[locale] : "http://localhost:3000";
 
-  const urls = collectStatic(structure, domain);
+  const urls: string[] = PAGE_ROUTES.map((r) => {
+    // Elige el path base correcto para el locale
+    const basePath = r[locale] || r.default;
+    return domain + translatePath(basePath, locale);
+  });
+
+  // 2️⃣ Añade todas las páginas estáticas (filesystem)
+  urls.push(...collectStatic(structure, domain));
   const finalUrls = excludeUrls(urls);
 
   return finalUrls.map((u) => {

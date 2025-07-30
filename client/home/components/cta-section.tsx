@@ -2,12 +2,13 @@ import ContactModal from "@/client/general/contact/modal/contactModal";
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Text } from "@mantine/core";
 import { Mail } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function CTASection() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("mainPage.ctaSection");
+  const locale = useLocale();
 
   return (
     <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12">
@@ -20,7 +21,7 @@ export default function CTASection() {
         </Text>
       </div>
       <a
-        href={NAVIGATION_LINKS.CONTACTO}
+        href={NAVIGATION_LINKS.CONTACTO(locale)}
         target="_blank"
         rel="noopener noreferrer"
       >

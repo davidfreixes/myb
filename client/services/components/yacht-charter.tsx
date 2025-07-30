@@ -10,7 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { NAVIGATION_LINKS } from "@/utils/navigation";
@@ -291,10 +291,12 @@ export default function YachtCharter() {
 
 // Botón de contacto con modal
 export function ContactButton({ text }) {
+  const locale = useLocale();
+
   return (
     <>
       <a
-        href={NAVIGATION_LINKS.CONTACTO}
+        href={NAVIGATION_LINKS.CONTACTO(locale)}
         target="_blank"
         rel="noopener noreferrer"
       >
