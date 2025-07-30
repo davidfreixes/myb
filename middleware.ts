@@ -17,11 +17,17 @@ export function middleware(req: NextRequest) {
       url.pathname = def;
       return NextResponse.rewrite(url);
     }
-    if (env === "development" && path === cat) {
+    if (
+      host.includes("menorcabrokers.com") ||
+      (env === "development" && path === cat)
+    ) {
       url.pathname = def;
       return NextResponse.rewrite(url);
     }
-    if (env === "development" && path === fr) {
+    if (
+      host.includes("menorcabrokers.com") ||
+      (env === "development" && path === fr)
+    ) {
       url.pathname = def;
       return NextResponse.rewrite(url);
     }

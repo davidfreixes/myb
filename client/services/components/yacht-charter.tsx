@@ -132,7 +132,7 @@ export default function YachtCharter() {
               <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
-              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white">
+              <h2 className="font-montserrat text-base sm:text-lg md:text-xl text-white sm:pb-2">
                 {t("hero.subtitle")}
               </h2>
               <ContactButton text={t("cta.button")} />
