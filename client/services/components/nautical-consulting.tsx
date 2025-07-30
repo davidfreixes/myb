@@ -52,7 +52,7 @@ export default function NauticalConsulting() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section - Contenido visible sin JS */}
-      <div className="relative h-[350px] sm:h-[50vh] w-full">
+      <div className="relative h-[330px] md:h-[60vh] w-full">
         <Image
           src="/img/nautical-consulting.jpg"
           alt="Asesoría náutica service"
@@ -65,7 +65,7 @@ export default function NauticalConsulting() {
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-2 md:mt-0">
           <div className={baseClasses.heroContent}>
             <div className="space-y-3 md:space-y-4">
-              <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight text-primary">
+              <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-primary">
                 {t("hero.title")}
               </h1>
               <h2 className="font-montserrat text-sm sm:text-lg md:text-xl text-white">
@@ -90,7 +90,7 @@ export default function NauticalConsulting() {
       {/* Main Content - Contenido visible sin JS */}
       <div className="container mx-auto px-4 py-7 md:py-7 md:max-w-[1400px]">
         <div className={baseClasses.mainContent}>
-          <p className="font-montserrat text-base md:text-xl text-gray-700 mb-7">
+          <p className="font-montserrat text-base md:text-lg text-gray-700 mb-7">
             {t("intro.description")}
           </p>
 
