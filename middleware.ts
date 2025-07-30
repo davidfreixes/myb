@@ -7,38 +7,32 @@ export function middleware(req: NextRequest) {
   const path = url.pathname;
   const env = process.env.NODE_ENV;
 
-  // 1. Handle static routes and service subpages BEFORE city dynamic routes
+  // Check if we're in production
+  const isProduction =
+    env === "production" || host.includes("menorcabrokers.com");
+
+  // Handle static routes and service subpages
   for (const { default: def, en, cat, fr } of PAGE_ROUTES) {
-    // Static routes
-    if (
-      (host.includes("menorcabrokers.com") || env === "development") &&
-      path === en
-    ) {
-      url.pathname = def;
-      return NextResponse.rewrite(url);
-    }
-    if (
-      host.includes("menorcabrokers.com") ||
-      (env === "development" && path === cat)
-    ) {
-      url.pathname = def;
-      return NextResponse.rewrite(url);
-    }
-    if (
-      host.includes("menorcabrokers.com") ||
-      (env === "development" && path === fr)
-    ) {
-      url.pathname = def;
-      return NextResponse.rewrite(url);
+    // In production, check the path directly
+    // In development, also check if the path matches the language version
+    if (isProduction || env === "development") {
+      // Check for English path
+      if (path === en || path === `/${en}`) {
+        url.pathname = def;
+        return NextResponse.rewrite(url);
+      }
+      // Check for Catalan path
+      if (path === cat || path === `/${cat}`) {
+        url.pathname = def;
+        return NextResponse.rewrite(url);
+      }
+      // Check for French path
+      if (path === fr || path === `/${fr}`) {
+        url.pathname = def;
+        return NextResponse.rewrite(url);
+      }
     }
   }
 
   return NextResponse.next();
 }
-
-export const config = {
-  // only run on those friendly public slugs
-  matcher: [
-    "/:path*", // (si quieres cubrir todo)
-  ],
-};
