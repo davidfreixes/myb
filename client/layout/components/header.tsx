@@ -131,7 +131,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
         },
         {
           label: t("services.logistics.label"),
-          href: `${NAVIGATION_LINKS.LOGÍSTICA(locale)}`,
+          href: `${NAVIGATION_LINKS.LOGISTICA(locale)}`,
           icon: <Truck size={20} />,
           description: t("services.logistics.description"),
         },

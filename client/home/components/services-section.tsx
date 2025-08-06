@@ -60,7 +60,7 @@ export default function ServicesSection() {
       title: t("services.4.title"),
       description: t("services.4.description"),
       image: "/img/logistics.jpg",
-      link: `${NAVIGATION_LINKS.LOGÍSTICA(locale)}`,
+      link: `${NAVIGATION_LINKS.LOGISTICA(locale)}`,
     },
     {
       title: t("services.5.title"),

@@ -10,7 +10,7 @@ export const NAVIGATION_LINKS = {
   CONTACTO: (locale: string) => translatePath("/contacto", locale),
   BLOG: (locale: string) => translatePath("/blog", locale),
   INSPECCIONES: (locale: string) => translatePath("/inspecciones", locale),
-  LOGÍSTICA: (locale: string) => translatePath("/logistica", locale),
+  LOGISTICA: (locale: string) => translatePath("/logistica", locale),
   ASESORIA_NAUTICA: (locale: string) =>
     translatePath("consultoria-nautica", locale),
   BUNKER_SUPPLY: (locale: string) => translatePath("suministro-bunker", locale),

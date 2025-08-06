@@ -66,7 +66,7 @@ export const PAGE_ROUTES: PageRoute[] = [
     fr: "/inspections",
   },
   {
-    default: "/logisticat",
+    default: "/logistica",
     en: "/logistics",
     cat: "/logisticat",
     fr: "/logistique",
