@@ -15,7 +15,7 @@ export const NAVIGATION_LINKS = {
     translatePath("consultoria-nautica", locale),
   BUNKER_SUPPLY: (locale: string) => translatePath("suministro-bunker", locale),
   VALOR_AÑADIDO: (locale: string) =>
-    translatePath("servicios-valor-añadido", locale),
+    translatePath("servicios-valor-anadido", locale),
   PROVEEDORES_Y_DISTRIBUIDORES: (locale: string) =>
     translatePath("proveedores-y-distribuidores", locale),
   DIARIO_PUERTO_MAHON: (locale: string) =>
