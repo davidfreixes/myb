@@ -1,7 +1,9 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
 import { MapPin } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import ContactModal from "../../contact/modal/contactModal";
 
@@ -21,45 +23,47 @@ const teamMembers = [
       "Actualmente, Andreu dirige Menorca Yacht Brokers, un proyecto que ofrece una amplia gama de servicios de ship brokerage, charter y asesoría náutica. Gracias a su formación académica y su experiencia práctica, Andreu ha desarrollado una comprensión profunda del sector marítimo y sus necesidades específicas.",
     ],
   },
-  {
-    name: "Daniel Ortega",
-    role: "Freelance Yacht Broker & Event Planning",
-    location: "Belgium",
-    email: "contact@menorcabrokers.com",
-    image: "/img/team/daniel-ortega.jpg",
-  },
-  {
-    name: "Grigoris Psomas",
-    role: "Freelance Yacht & Charter Broker",
-    location: "The Netherlands",
-    email: "contact@menorcabrokers.com",
-    image: "/img/team/grigoris-psomas.jpg",
-  },
-  {
-    name: "Adriano Enrique Medina",
-    role: "Freelance Yacht & Charter Broker",
-    location: "Spain",
-    email: "contact@menorcabrokers.com",
-    image: "/img/team/adriano-enrique.png",
-  },
-  {
-    name: "Gürkan Gurun",
-    role: "Freelance Yacht & Charter Broker",
-    location: "Turkey",
-    email: "contact@menorcabrokers.com",
-    image: "/img/team/gurkan-gurun.jpeg",
-  },
+  // {
+  //   name: "Daniel Ortega",
+  //   role: "Freelance Yacht Broker & Event Planning",
+  //   location: "Belgium",
+  //   email: "contact@menorcabrokers.com",
+  //   image: "/img/team/daniel-ortega.jpg",
+  // },
+  // {
+  //   name: "Grigoris Psomas",
+  //   role: "Freelance Yacht & Charter Broker",
+  //   location: "The Netherlands",
+  //   email: "contact@menorcabrokers.com",
+  //   image: "/img/team/grigoris-psomas.jpg",
+  // },
+  // {
+  //   name: "Adriano Enrique Medina",
+  //   role: "Freelance Yacht & Charter Broker",
+  //   location: "Spain",
+  //   email: "contact@menorcabrokers.com",
+  //   image: "/img/team/adriano-enrique.png",
+  // },
+  // {
+  //   name: "Gürkan Gurun",
+  //   role: "Freelance Yacht & Charter Broker",
+  //   location: "Turkey",
+  //   email: "contact@menorcabrokers.com",
+  //   image: "/img/team/gurkan-gurun.jpeg",
+  // },
   {
     name: "David Freixes",
-    role: "IT Developer & Co-Owner",
+    role: "Software Developer",
     location: "Spain",
     image: "/img/team/david-freixes.jpg",
+    email: "contact@menorcabrokers.com",
   },
 ];
 
 export default function AboutUs() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("aboutUs");
+  const locale = useLocale();
 
   const teamSectionRef = useRef<HTMLDivElement>(null);
 
@@ -155,7 +159,7 @@ export default function AboutUs() {
                     {member.email && (
                       <Button
                         component="a"
-                        href={`mailto:${member.email}`}
+                        onClick={() => setContactModalOpened(true)}
                         variant="outline"
                         color="#f1c001"
                       >
@@ -184,7 +188,8 @@ export default function AboutUs() {
               {t("contact.description")}
             </p>
             <Button
-              onClick={() => setContactModalOpened(true)}
+              component={Link}
+              href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
               unstyled
               className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
             >

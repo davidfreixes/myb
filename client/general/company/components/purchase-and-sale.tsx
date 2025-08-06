@@ -1,3 +1,4 @@
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button, Text } from "@mantine/core";
 import {
   BookOpen,
@@ -11,14 +12,16 @@ import {
   Scale,
   Shield,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import ContactModal from "../../contact/modal/contactModal";
 
 export default function PurchaseAndSale() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("purchaseAndSale");
+  const locale = useLocale();
 
   const benefits = [
     {
@@ -209,8 +212,9 @@ export default function PurchaseAndSale() {
 
           <div className="flex justify-center">
             <Button
+              component={Link}
+              href={`${NAVIGATION_LINKS.CONTACTO(locale)}`}
               unstyled
-              onClick={() => setContactModalOpened(true)}
               className="bg-primary hover:bg-primary/60 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 rounded-lg transition-colors"
             >
               <div className="flex gap-2 items-center">
