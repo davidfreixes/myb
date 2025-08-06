@@ -24,7 +24,7 @@ export const PAGE_ROUTES: PageRoute[] = [
     fr: "/contact",
   },
   {
-    default: "/servicios-valor-añadido",
+    default: "/servicios-valor-anadido",
     en: "/added-value-services",
     cat: "/serveis-valor-afegit",
     fr: "/services-ajoutés",
