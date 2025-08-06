@@ -35,9 +35,9 @@ export default function Inspections() {
                 })}
               </h2>
               <Button
-                onClick={() => setContactModalOpened(true)}
                 unstyled
-                className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2 px-4 sm:px-6 rounded-lg transition-colors"
+                onClick={() => setContactModalOpened(true)}
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
               >
                 {t("cta.button")}
               </Button>
@@ -140,9 +140,8 @@ export default function Inspections() {
             rel="noopener noreferrer"
           >
             <Button
-              onClick={() => setContactModalOpened(true)}
               unstyled
-              className="bg-primary hover:bg-primary/75 text-darkTitle font-normal text-sm sm:text-base md:text-lg py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors"
+              className="w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
             >
               {t("cta.button")}
             </Button>

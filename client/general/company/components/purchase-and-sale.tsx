@@ -78,24 +78,26 @@ export default function PurchaseAndSale() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="relative py-10 sm:py-14 md:py-20">
-        <Image
-          src="/img/purchase-and-sale.jpg"
-          alt="Corporate building"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center h-full mt-4">
-          {/* Header Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-montserrat text-primary mb-4 sm:mb-6">
+      <div className="relative py-8 sm:py-12 md:py-16 lg:py-16">
+        <div className="absolute inset-0">
+          <Image
+            src="/img/purchase-and-sale.jpg"
+            alt="Corporate building"
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center h-full mt-8 sm:mt-8 md:mt-10">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium text-primary mb-4 sm:mb-6">
               {t("hero.title")}
             </h1>
-            <p className="text-xl sm:text-2xl text-white">
+            <h2 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8">
               {t("hero.subtitle")}
-            </p>
+            </h2>
           </div>
         </div>
       </div>

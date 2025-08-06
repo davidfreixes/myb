@@ -400,7 +400,7 @@ export default function YachtBroker() {
         >
           <Button
             unstyled
-            className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+            className="w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
           >
             {t("cta.button")}
           </Button>

@@ -135,7 +135,8 @@ export default function Logistics() {
               </h2>
               <Button
                 unstyled
-                className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+                onClick={() => setContactModalOpened(true)}
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
               >
                 {t("cta.button")}
               </Button>
@@ -278,19 +279,11 @@ export default function Logistics() {
           >
             <Button
               unstyled
-              className="w-full sm:w-auto bg-primary hover:bg-primary/75 text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
+              className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
             >
               {t("cta.button")}
             </Button>
           </a>
-          <noscript>
-            <a
-              href="/contact"
-              className="inline-block w-full sm:w-auto bg-primary text-black font-normal text-sm md:text-lg py-2 px-4 rounded"
-            >
-              {t("cta.button")}
-            </a>
-          </noscript>
         </div>
         <ContactModal
           opened={contactModalOpened}

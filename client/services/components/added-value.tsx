@@ -1,7 +1,8 @@
 "use client";
 
+import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { Button } from "@mantine/core";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import ContactModal from "../../general/contact/modal/contactModal";
@@ -9,6 +10,7 @@ import ContactModal from "../../general/contact/modal/contactModal";
 export default function ValueAddedServices() {
   const [contactModalOpened, setContactModalOpened] = useState(false);
   const t = useTranslations("valueAddedServices");
+  const locale = useLocale();
 
   // Definir los servicios fuera del JSX para mejorar la legibilidad
   const services = [
@@ -87,7 +89,7 @@ export default function ValueAddedServices() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Contenido visible sin JavaScript */}
-      <section className="relative h-[350px] sm:h-[50vh] w-full">
+      <section className="relative h-[350px] sm:h-[60vh] w-full">
         <Image
           src="/img/value-added-services.jpg"
           alt="Servicios de valor añadido"
@@ -96,7 +98,7 @@ export default function ValueAddedServices() {
           priority
           sizes="(min-width: 1024px) 100vw"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px] mt-2 md:mt-0">
           <div className="max-w-4xl">
             <div className="space-y-3 md:space-y-4 mt-3">
@@ -109,7 +111,7 @@ export default function ValueAddedServices() {
               <Button
                 unstyled
                 onClick={() => setContactModalOpened(true)}
-                className="w-full sm:w-auto bg-primary hover:bg-transparent border hover:text-white border-primary hover:border-primary hover:border text-black font-medium text-base sm:text-lg py-2 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
               >
                 {t("cta.button")}
               </Button>
@@ -218,13 +220,18 @@ export default function ValueAddedServices() {
         <p className="text-lg sm:text-xl text-gray-800 mb-6 max-w-3xl mx-auto">
           {t("cta.description")}
         </p>
-        <Button
-          unstyled
-          onClick={() => setContactModalOpened(true)}
-          className="bg-primary hover:bg-transparent border border-primary hover:border-primary hover:border text-black font-medium text-base sm:text-lg py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+        <a
+          href={NAVIGATION_LINKS.CONTACTO(locale)}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {t("cta.button")}
-        </Button>
+          <Button
+            unstyled
+            className="w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
+          >
+            {t("cta.button")}
+          </Button>
+        </a>
       </section>
 
       {/* Modal de contacto */}
