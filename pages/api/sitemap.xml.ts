@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 
 const DOMAIN_TO_LOCALE: Record<string, "es" | "en" | "cat" | "fr"> = {
-  "www.menorcabrokers.com": "es",
+  "menorcabrokers.com": "es",
 };
 
 export default async function handler(
