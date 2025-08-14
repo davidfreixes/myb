@@ -36,7 +36,7 @@ export const PAGE_ROUTES: PageRoute[] = [
     fr: "/avis-legal",
   },
   {
-    default: "/suministro-bunker",
+    default: "/bunker-supply",
     en: "/bunker-supply",
     cat: "/subministrament-bunker",
     fr: "/approvisionnement-bunker",
@@ -72,8 +72,8 @@ export const PAGE_ROUTES: PageRoute[] = [
     fr: "/logistique",
   },
   {
-    default: "/consultoria-nauticat",
-    en: "/nauticatl-consulting",
+    default: "/consultoria-nautica",
+    en: "/nautical-consulting",
     cat: "/consultoria-nauticat",
     fr: "/consultation-nautique",
   },
@@ -97,13 +97,13 @@ export const PAGE_ROUTES: PageRoute[] = [
   },
 
   {
-    default: "/broker-de-yates",
+    default: "/yacht-broker",
     en: "/yacht-broker",
     cat: "/broker-de-iots",
     fr: "/courtier-en-yachts",
   },
   {
-    default: "/alquiler-de-yates",
+    default: "/yacht-charter",
     en: "/yacht-charter",
     cat: "/lloguer-de-iots",
     fr: "/locattion-de-yachts",

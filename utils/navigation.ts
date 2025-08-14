@@ -3,9 +3,8 @@ import { PAGE_ROUTES, translatePath } from "@/routes";
 export const NAVIGATION_LINKS = {
   HOME: (locale: string) => translatePath("/", locale),
 
-  YACHT_BROKER: (locale: string) => translatePath("/broker-de-yates", locale),
-  YACHT_CHARTER: (locale: string) =>
-    translatePath("/alquiler-de-yates", locale),
+  YACHT_BROKER: (locale: string) => translatePath("/yacht-broker", locale),
+  YACHT_CHARTER: (locale: string) => translatePath("/yacht-charter", locale),
   QUIENES_SOMOS: (locale: string) => translatePath("/quienes-somos", locale),
   CONTACTO: (locale: string) => translatePath("/contacto", locale),
   BLOG: (locale: string) => translatePath("/blog", locale),
@@ -13,7 +12,7 @@ export const NAVIGATION_LINKS = {
   LOGISTICA: (locale: string) => translatePath("/logistica", locale),
   ASESORIA_NAUTICA: (locale: string) =>
     translatePath("consultoria-nautica", locale),
-  BUNKER_SUPPLY: (locale: string) => translatePath("suministro-bunker", locale),
+  BUNKER_SUPPLY: (locale: string) => translatePath("bunker-supply", locale),
   VALOR_AÑADIDO: (locale: string) =>
     translatePath("servicios-valor-anadido", locale),
   PROVEEDORES_Y_DISTRIBUIDORES: (locale: string) =>
