@@ -16,8 +16,10 @@ export default function Hero() {
           src="/img/hero.jpg"
           alt="Luxury yacht background"
           fill
+          sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover"
           priority
+          quality={75}
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>

@@ -157,7 +157,8 @@ export default function YachtBroker() {
           fill
           className="object-cover"
           priority
-          sizes="(min-width: 1024px) 100vw"
+          quality={80}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center items-start md:max-w-[1400px]">
@@ -272,10 +273,10 @@ export default function YachtBroker() {
                 <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.title}
-                  priority
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 100vw"
+                  quality={75}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-montserrat font-medium text-black mb-2 sm:mb-4">
