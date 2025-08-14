@@ -1,5 +1,3 @@
-"use client";
-
 import type { YachtDetails } from "@/utils/yachts";
 import { Accordion } from "@mantine/core";
 import { ChevronDown } from "lucide-react";
@@ -73,7 +71,9 @@ export function YachtCards({ yachts }: YachtCardsProps) {
                   alt={yacht.model}
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  sizes="(min-width: 1024px) 100vw"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={yachts.indexOf(yacht) < 3} // Priorizar las primeras 3 imágenes
                 />
 
                 {/* Only show gallery overlay if there are multiple images */}

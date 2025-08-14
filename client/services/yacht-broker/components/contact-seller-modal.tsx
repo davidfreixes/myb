@@ -141,6 +141,11 @@ export function ContactSellerModal({
               alt={yacht.model}
               fill
               className="object-cover"
+              quality={80}
+              sizes="(max-width: 640px) 100vw, 33vw"
+              priority={false}
+              placeholder={yacht.imageUrl?.includes('data:image') ? 'blur' : 'empty'}
+              blurDataURL={yacht.imageUrl?.includes('data:image') ? yacht.imageUrl : undefined}
             />
           </div>
           <h3 className="font-semibold text-lg mb-2">{yacht.model}</h3>

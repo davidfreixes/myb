@@ -114,18 +114,16 @@ export default function YachtCharter() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[330px] md:h-[60vh]  w-full">
-        <div className="absolute inset-0">
-          <video
-            src="/videos/hero-video.mp4"
-            className="w-full h-full object-cover z-0"
-            autoPlay
-            playsInline
-            muted
-            loop
-            poster="/img/hero-poster.jpg" // Imagen de fallback para SEO
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+        <Image
+          src="/img/yacht-charter.jpg"
+          alt={t("hero.title")}
+          fill
+          className="object-cover object-bottom"
+          priority
+          quality={75}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-4 h-full flex flex-col justify-center md:max-w-[1400px]">
           <div className="max-w-4xl">
             <div className="space-y-3 sm:space-y-4 mt-10 md:mt-0">
@@ -181,7 +179,8 @@ export default function YachtCharter() {
                   alt="Luxury yacht interior"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   priority
                 />
               </div>
@@ -302,7 +301,7 @@ export function ContactButton({ text }) {
       >
         <Button
           unstyled
-          className="mt-2 w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
+          className="mt-2 w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 rounded transition-colors duration-200"
         >
           {text}
         </Button>

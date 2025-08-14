@@ -61,7 +61,8 @@ export default function NauticalConsulting() {
           fill
           className="object-cover"
           priority
-          sizes="(min-width: 1024px) 100vw"
+          quality={85}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:max-w-[1400px] mt-2 md:mt-0">
@@ -126,7 +127,7 @@ export default function NauticalConsulting() {
         >
           <Button
             unstyled
-            className="w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
+            className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
           >
             {t("cta.button")}
           </Button>

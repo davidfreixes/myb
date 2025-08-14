@@ -231,6 +231,8 @@ export default function YachtRomeaShowcase() {
                   alt={t("hero.imageAlt")}
                   fill
                   priority
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
@@ -374,6 +376,8 @@ export default function YachtRomeaShowcase() {
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
                     fill
+                    quality={75}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">

@@ -12,7 +12,6 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { Trans } from "react-i18next";
 import ContactModal from "../../general/contact/modal/contactModal";
 import QuoteModal from "../modals/quote-modal";
 
@@ -28,13 +27,23 @@ export default function BunkerSupplyPage() {
     {
       title: t("marketIndices.providers.shipAndBunker.title"),
       description: t("marketIndices.providers.shipAndBunker.description"),
-      image: "/img/bunker-supply/ship-bunker.png",
+      image: {
+        src: "/img/bunker-supply/ship-bunker.png",
+        alt: "Ship & Bunker",
+        width: 200,
+        height: 80,
+      },
       link: "https://shipandbunker.com/prices",
     },
     {
       title: t("marketIndices.providers.balticExchange.title"),
       description: t("marketIndices.providers.balticExchange.description"),
-      image: "/img/bunker-supply/baltic-exchange.png",
+      image: {
+        src: "/img/bunker-supply/baltic-exchange.png",
+        alt: "Baltic Exchange",
+        width: 200,
+        height: 80,
+      },
       link: "https://www.balticexchange.com/en/index.html",
     },
     {
@@ -44,10 +53,14 @@ export default function BunkerSupplyPage() {
         {
           src: "/img/bunker-supply/cepsa.jpg",
           alt: "CEPSA",
+          width: 100,
+          height: 80,
         },
         {
           src: "/img/bunker-supply/moeve.png",
           alt: "MOEVE",
+          width: 100,
+          height: 80,
         },
       ],
       link: "https://rafamoreno.es/rebranding-cepsa-moeve/",
@@ -55,7 +68,12 @@ export default function BunkerSupplyPage() {
     {
       title: t("marketIndices.providers.stabiaOil.title"),
       description: t("marketIndices.providers.stabiaOil.description"),
-      image: "/img/bunker-supply/stabia-oil.jpg",
+      image: {
+        src: "/img/bunker-supply/stabia-oil.jpg",
+        alt: "Stabia Oil",
+        width: 200,
+        height: 80,
+      },
       link: "http://www.stabiaoil.com/",
     },
   ];
@@ -157,6 +175,8 @@ export default function BunkerSupplyPage() {
           fill
           className="object-cover object-bottom"
           priority
+          quality={85}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-0 sm:px-6 h-full flex flex-col justify-center md:max-w-[1400px]">
@@ -217,13 +237,11 @@ export default function BunkerSupplyPage() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <p className="text-base sm:text-lg text-gray-700">
-                <Trans i18nKey="hero.subtitle2">
-                  Mediante nuestro partner{" "}
-                  <span className="text-primary">Stabia Oil</span> y{" "}
-                  <span className="text-primary">CEPSA</span>. Podemos
-                  subministrar todo tipo de combustible marino en la isla de
-                  Menorca.
-                </Trans>
+                {t.rich("hero.subtitle2", {
+                  p: (chunks) => (
+                    <span className="font-semibold">{chunks}</span>
+                  ),
+                })}
               </p>
             </div>
           </div>
@@ -246,25 +264,42 @@ export default function BunkerSupplyPage() {
                 key={item.title}
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between"
               >
-                <div className="relative h-32 mb-6">
+                <div className="relative mb-6">
                   {item.image ? (
                     <Image
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-contain"
-                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+                      src={item.image.src}
+                      alt={item.image.alt}
+                      width={item.image.width}
+                      height={item.image.height}
+                      className="object-contain mx-auto"
+                      quality={80}
+                      sizes="(max-width: 640px) 200px, 250px"
+                      style={{
+                        height: "auto",
+                        width: "auto",
+                        maxWidth: `${item.image.width}px`,
+                      }}
                     />
                   ) : item.images ? (
-                    <div className="flex gap-4 h-full">
-                      {item.images.map((img) => (
-                        <div key={img.alt} className="relative flex-1">
+                    <div className="flex gap-4 h-full justify-center">
+                      {item.images.map((img, idx) => (
+                        <div
+                          key={`${img.alt}-${idx}`}
+                          className={`relative w-[${img.width}px] h-[${img.height}px]`}
+                        >
                           <Image
-                            src={img.src || "/placeholder.svg"}
+                            src={img.src}
                             alt={img.alt}
-                            fill
+                            width={img.width}
+                            height={img.height}
                             className="object-contain"
-                            sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 200px"
+                            quality={80}
+                            sizes="(max-width: 640px) 100px, 120px"
+                            style={{
+                              height: "auto",
+                              width: "auto",
+                              maxWidth: `${img.width}px`,
+                            }}
                           />
                         </div>
                       ))}

@@ -106,7 +106,8 @@ export default function Logistics() {
             fill
             className="object-cover"
             priority
-            sizes="(min-width: 1024px) 100vw"
+            quality={85}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
           <noscript>
             <div
@@ -251,6 +252,9 @@ export default function Logistics() {
             alt="Yacht at sunset"
             fill
             className="object-cover"
+            priority
+            quality={85}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
           <noscript>
             <div
@@ -279,7 +283,7 @@ export default function Logistics() {
           >
             <Button
               unstyled
-              className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
+              className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
             >
               {t("cta.button")}
             </Button>

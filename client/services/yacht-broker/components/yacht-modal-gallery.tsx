@@ -77,10 +77,14 @@ export default function YachtModalGallery({
           <div className="relative w-full h-full">
             <Image
               src={images[activeIndex] || "/placeholder.svg"}
-              alt="Yacht image"
+              alt={`Yacht image ${activeIndex + 1} of ${images.length}`}
               fill
               className="object-contain"
-              sizes="(min-width: 1024px) 90vw, 100vw"
+              quality={85}
+              priority={activeIndex < 3} // Priorizar las primeras 3 imágenes
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 70vw"
+              placeholder={images[activeIndex]?.includes('data:image') ? 'blur' : 'empty'}
+              blurDataURL={images[activeIndex]?.includes('data:image') ? images[activeIndex] : undefined}
             />
           </div>
         </div>

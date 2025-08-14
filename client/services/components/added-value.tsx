@@ -16,7 +16,12 @@ export default function ValueAddedServices() {
   const services = [
     {
       title: t("services.airportTransfer.title"),
-      image: "/img/airport-transfer.jpg",
+      image: {
+        src: "/img/airport-transfer.jpg",
+        alt: "Traslado al aeropuerto",
+        width: 400,
+        height: 300,
+      },
       description: t("services.airportTransfer.description"),
       features: [
         t("services.airportTransfer.features.0"),
@@ -27,7 +32,12 @@ export default function ValueAddedServices() {
     },
     {
       title: t("services.touristRoutes.title"),
-      image: "/img/tourist-routes.jpg",
+      image: {
+        src: "/img/tourist-routes.jpg",
+        alt: "Rutas turísticas",
+        width: 400,
+        height: 300,
+      },
       description: t("services.touristRoutes.description"),
       features: [
         t("services.touristRoutes.features.0"),
@@ -39,7 +49,12 @@ export default function ValueAddedServices() {
     },
     {
       title: t("services.catering.title"),
-      image: "/img/catering.jpg",
+      image: {
+        src: "/img/catering.jpg",
+        alt: "Servicio de catering",
+        width: 400,
+        height: 300,
+      },
       description: t("services.catering.description"),
       features: [
         t("services.catering.features.0"),
@@ -50,7 +65,12 @@ export default function ValueAddedServices() {
     },
     {
       title: t("services.assistance.title"),
-      image: "/img/assistance.jpg",
+      image: {
+        src: "/img/assistance.jpg",
+        alt: "Asistencia personalizada",
+        width: 400,
+        height: 300,
+      },
       description: t("services.assistance.description"),
       features: [
         t("services.assistance.features.0"),
@@ -60,7 +80,12 @@ export default function ValueAddedServices() {
     },
     {
       title: t("services.events.title"),
-      image: "/img/events.jpg",
+      image: {
+        src: "/img/events.jpg",
+        alt: "Organización de eventos",
+        width: 400,
+        height: 300,
+      },
       description: t("services.events.description"),
       features: [
         t("services.events.features.0"),
@@ -96,7 +121,8 @@ export default function ValueAddedServices() {
           fill
           className="object-cover"
           priority
-          sizes="(min-width: 1024px) 100vw"
+          quality={85}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center max-w-[1400px] mt-2 md:mt-0">
@@ -133,11 +159,13 @@ export default function ValueAddedServices() {
                 {/* Contenedor de la imagen con borde superior redondeado */}
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
-                    src={service.image || "/placeholder.svg"}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-110"
-                    sizes="(min-width: 1280px) 384px, (min-width: 1024px) 341px, (min-width: 768px) 304px, (min-width: 640px) 284px, calc(100vw - 32px)"
+                    src={service.image.src}
+                    alt={service.image.alt}
+                    width={service.image.width}
+                    height={service.image.height}
+                    className="object-cover transition-transform duration-500 hover:scale-110 w-full h-full"
+                    quality={80}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-0 left-0 right-0 text-xl font-montserrat font-semibold text-white p-4 z-10">
@@ -194,15 +222,17 @@ export default function ValueAddedServices() {
                 </blockquote>
               </div>
               <div className="relative">
-                <div className="w-64 h-64 mx-auto relative">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto relative">
                   <div className="absolute inset-0 rounded-full border-4 border-primary/20" />
                   <div className="relative w-full h-full">
                     <Image
                       src="/img/testimonial-charles.jpg"
                       alt="Charles Grange"
-                      fill
-                      className="object-cover rounded-full"
-                      sizes="500px"
+                      width={256}
+                      height={256}
+                      className="absolute inset-0 object-cover rounded-full w-full h-full"
+                      quality={85}
+                      sizes="(max-width: 640px) 192px, 224px, 256px"
                     />
                   </div>
                 </div>
@@ -227,7 +257,7 @@ export default function ValueAddedServices() {
         >
           <Button
             unstyled
-            className="w-full sm:w-auto font-semibold bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
+            className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black font-normal text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded transition-colors duration-200"
           >
             {t("cta.button")}
           </Button>
