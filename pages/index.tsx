@@ -62,7 +62,7 @@ export default function Home() {
           cardType: "summary_large_image",
         }}
       />
-      <Header sticky={false} isTransparent={true} />
+      <Header sticky={true} isTransparent={true} />
       <Hero />
       <ServicesSection />
       <VideoSection />

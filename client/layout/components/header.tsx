@@ -231,11 +231,27 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
 
   const currentLanguage = LANGUAGES.find((lang) => lang.code === locale);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
-      className={`${sticky ? "fixed" : "absolute"} w-full ${
-        isTransparent && !isMobileMenuOpen ? "bg-transparent" : "bg-black"
-      } z-50`}
+      className={`fixed w-full z-50 transition-colors duration-300 ${
+        isMobileMenuOpen
+          ? "bg-black"
+          : isTransparent && !isScrolled
+          ? "bg-transparent"
+          : "bg-black/50 backdrop-blur-md"
+      }`}
     >
       <div className="container mx-auto px-4 max-w-8xl lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -364,8 +380,8 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             {/* Language Selector */}
             <Menu>
               <Menu.Target>
-                <div className="bg-primary hover:bg-primary/90 text-black min-w-[48px] rounded p-1 cursor-pointer">
-                  <div className="flex gap-2 px-2 items-center">
+                <div className=" hover:text-primary text-white font-semibold min-w-[48px] rounded p-1 cursor-pointer">
+                  <div className="flex gap-2 px-2 items-center text-base">
                     {currentLanguage?.flag && (
                       <Image
                         src={currentLanguage.flag}
@@ -385,11 +401,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                 {LANGUAGES.map((language) => (
                   <Menu.Item
                     key={language.code}
-                    className={`w-full text-left px-4 py-2 text-sm transition-colors ${
-                      locale === language.code
-                        ? "bg-darkBlue text-white rounded-none hover:bg-darkBlue"
-                        : "text-darkBlue hover:bg-gray-200"
-                    }`}
+                    className={`w-full text-left px-4 py-2 text-sm transition-colors hover:bg-primary/30`}
                     onClick={() => changeLanguage(language.code)}
                   >
                     <div className="flex items-center gap-3 sm:gap-2">
@@ -437,7 +449,7 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div ref={mobileMenuRef} className="lg:hidden bg-black">
+          <div ref={mobileMenuRef} className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <div key={item.label} className="py-2">
