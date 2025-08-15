@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
     locales: ["es", "en", "cat", "fr"],
     defaultLocale: "es",
   },
+  compress: true,
 };
 
 export default nextConfig;
