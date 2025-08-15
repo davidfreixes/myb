@@ -1,22 +1,13 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from 'next/document';
+import { montserrat, spaceGrotesk } from '@/utils/fonts';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="es" className={`${montserrat.variable} ${spaceGrotesk.variable}`}>
       <Head>
-        {/* Add Google Fonts */}
+        {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href={
-            "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk&display=swap"
-          }
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
       <body className="antialiased">
         <Main />

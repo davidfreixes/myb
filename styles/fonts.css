@@ -1,0 +1,22 @@
+/* 
+  Font variables are automatically injected by Next.js 
+  from the font configuration in utils/fonts.ts
+  
+  The following classes will be available:
+  - font-montserrat
+  - font-space-grotesk
+  
+  And CSS variables:
+  - --font-montserrat
+  - --font-space-grotesk
+*/
+
+/* Apply Montserrat as the default font */
+body {
+  font-family: var(--font-montserrat);
+}
+
+/* Apply Space Grotesk to specific elements as needed */
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk);
+}

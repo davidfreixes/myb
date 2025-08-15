@@ -6,6 +6,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { montserrat, spaceGrotesk } from "@/utils/fonts";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -16,6 +17,15 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#000000" />
+        <style jsx global>{`
+          :root {
+            --font-montserrat: ${montserrat.style.fontFamily};
+            --font-space-grotesk: ${spaceGrotesk.style.fontFamily};
+          }
+          body {
+            font-family: var(--font-montserrat);
+          }
+        `}</style>
       </Head>
       {/* <NextSeo {...SEO} /> */}
       {/* <GoogleReCaptchaProvider
