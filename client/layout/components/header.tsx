@@ -7,7 +7,6 @@ import {
   ChevronDown,
   Database,
   FileText,
-  Globe,
   MenuIcon,
   Newspaper,
   Plus,
@@ -47,6 +46,29 @@ export interface Language {
   flag?: string;
 }
 
+export const LANGUAGES: Language[] = [
+  {
+    code: "es",
+    name: "Español",
+    flag: "/img/flags/es.webp",
+  },
+  {
+    code: "en",
+    name: "English",
+    flag: "/img/flags/gb.webp",
+  },
+  {
+    code: "cat",
+    name: "Català",
+    flag: "/img/flags/cat.png",
+  },
+  {
+    code: "fr",
+    name: "Français",
+    flag: "/img/flags/fr.png",
+  },
+];
+
 export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,25 +100,6 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobileMenuOpen]);
-
-  const LANGUAGES: Language[] = [
-    {
-      code: "es",
-      name: t("languages.spanish"),
-    },
-    {
-      code: "en",
-      name: t("languages.english"),
-    },
-    {
-      code: "cat",
-      name: t("languages.catalan"),
-    },
-    {
-      code: "fr",
-      name: t("languages.french"),
-    },
-  ];
 
   const navigation: NavItem[] = [
     { label: t("navigation.home"), href: "/" },
@@ -225,6 +228,9 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
     // Navegar a la ruta traducida con el nuevo locale
     router.push(newPath, undefined, { locale: newLocale });
   };
+
+  const currentLanguage = LANGUAGES.find((lang) => lang.code === locale);
+  console.log(currentLanguage);
 
   return (
     <header
@@ -359,10 +365,19 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
             {/* Language Selector */}
             <Menu>
               <Menu.Target>
-                <div className="bg-primary hover:bg-primary/90 text-white min-w-[48px] rounded p-1 cursor-pointer">
+                <div className="bg-primary hover:bg-primary/90 text-black min-w-[48px] rounded p-1 cursor-pointer">
                   <div className="flex gap-2 px-2 items-center">
-                    <Globe size={20} />
-                    {(locale || "es").toLocaleUpperCase()}
+                    {currentLanguage?.flag && (
+                      <Image
+                        src={currentLanguage.flag}
+                        alt={currentLanguage.name}
+                        width={22}
+                        height={22}
+                        className="text-base font-semibold"
+                        style={{ width: "auto", height: "auto" }}
+                      />
+                    )}
+                    {locale?.toUpperCase()}
                     <ChevronDown size={16} />
                   </div>
                 </div>
@@ -378,9 +393,17 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
                     }`}
                     onClick={() => changeLanguage(language.code)}
                   >
-                    <div className="flex items-center gap-2">
-                      {language.flag && <span>{language.flag}</span>}
-                      <span>{language.name}</span>
+                    <div className="flex items-center gap-3 sm:gap-2">
+                      {language.flag && (
+                        <Image
+                          src={language.flag}
+                          alt={language.name}
+                          width={22}
+                          height={22}
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      )}
+                      <span className="font-medium">{language.name}</span>
                     </div>
                   </Menu.Item>
                 ))}

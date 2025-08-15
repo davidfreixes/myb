@@ -1,5 +1,5 @@
-import { Head, Html, Main, NextScript } from 'next/document';
 import { montserrat, spaceGrotesk } from '@/utils/fonts';
+import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
