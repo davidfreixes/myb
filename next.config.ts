@@ -32,6 +32,9 @@ const nextConfig: NextConfig = {
     defaultLocale: "es",
   },
   compress: true,
+  images: {
+    domains: ['img.youtube.com'],
+  },
 };
 
 export default nextConfig;

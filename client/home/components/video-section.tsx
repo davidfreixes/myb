@@ -1,6 +1,7 @@
+import { YouTubeFacade } from "@/components/youtube-facade";
 import { Text } from "@mantine/core";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
+import { useRef } from 'react';
 
 export default function AboutVideoSection() {
   const t = useTranslations("mainPage.aboutVideoSection");
@@ -25,13 +26,9 @@ export default function AboutVideoSection() {
                 ref={ref}
                 className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg bg-gray-900"
               >
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/HZGWb2684IM?si=qLrwDI4yFQ9VSDdo?autoplay=0"
+                <YouTubeFacade
+                  videoId="HZGWb2684IM"
                   title="Menorca Yacht Brokers"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
                   className="w-full h-full"
                 />
               </div>
