@@ -39,8 +39,22 @@ export default function FAQSection() {
     },
   ];
 
+  // Schema.org para SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer.replace(/<[^>]+>/g, ""),
+      },
+    })),
+  };
+
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <Container size="lg">
         <div className="text-center mb-12">
           <h1 className="text-primary text-3xl md:text-4xl font-bold mb-4">
@@ -49,26 +63,54 @@ export default function FAQSection() {
           <Text className="text-gray-600 text-lg">{t("description")}</Text>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          {/* Versión estática visible para SEO y usuarios sin JavaScript */}
-          <div className="max-w-5xl mx-auto">
-            {questions.map((item, index) => (
-              <div
-                key={`faq-static-${index}`}
-                className="mb-6 p-4 border border-gray-200 rounded-lg"
+        <div className="max-w-5xl mx-auto space-y-0" role="list">
+          {questions.map((faq, index) => (
+            <details
+              key={index}
+              className="group border-b border-gray-200"
+              open={index === 0}
+            >
+              <summary
+                className="flex justify-between items-center w-full py-5 text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-expanded="false"
+                role="button"
               >
-                <h3 className="font-semibold mb-2 flex items-center">
-                  <span className="text-[#FFB800] font-mono text-lg mr-2">
+                <div className="flex items-center">
+                  <span className="text-lg text-primary font-medium mr-3 w-8">
                     {String(index + 1).padStart(2, "0")}.
                   </span>
-                  {item.question}
-                </h3>
-                <p className="text-gray-600 pl-8">{item.answer}</p>
-              </div>
-            ))}
-          </div>
+                  <span className="text-lg font-semibold text-darkBlue">
+                    {faq.question}
+                  </span>
+                </div>
+                <svg
+                  className="w-5 h-5 text-darkBlue transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div
+                className="pl-11 pr-4 pb-5 text-darkBlue leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              />
+            </details>
+          ))}
         </div>
       </Container>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </section>
   );
 }

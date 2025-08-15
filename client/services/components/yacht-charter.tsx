@@ -1,5 +1,4 @@
 // YachtCharter.tsx (Server Component)
-import { Container, Text } from "@mantine/core";
 import {
   Anchor,
   Clock,
@@ -230,36 +229,70 @@ export default function YachtCharter() {
 
       {/*Faq Section */}
       <section className="py-16">
-        <Container>
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat text-primary mb-4">
               {t("faq.title")}
             </h2>
-            <Text className="text-gray-600 text-lg">
-              {t("faq.description")}
-            </Text>
+            <p className="text-gray-600 text-lg">{t("faq.description")}</p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            {/* Versión estática visible para SEO y usuarios sin JavaScript */}
-            <div className="max-w-5xl mx-auto">
-              {questions.map((item, index) => (
-                <div
-                  key={`faq-static-${index}`}
-                  className="mb-6 p-4 border border-gray-200 rounded-lg"
-                >
-                  <h3 className="font-semibold mb-2 flex items-center">
-                    <span className="text-[#FFB800] font-mono text-lg mr-2">
+          <div className="space-y-4">
+            {questions.map((item, index) => (
+              <details
+                key={`faq-${index}`}
+                className="group border border-gray-200 rounded-lg overflow-hidden"
+                {...(index === 0 ? { open: true } : {})}
+              >
+                <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors">
+                  <h3 className="font-semibold text-gray-900 flex items-center">
+                    <span className="text-[#FFB800] font-mono text-lg mr-3">
                       {String(index + 1).padStart(2, "0")}.
                     </span>
                     {item.question}
                   </h3>
-                  <p className="text-gray-600 pl-8">{item.answer}</p>
+                  <svg
+                    className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-600 leading-relaxed pl-8">
+                    {item.answer}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </details>
+            ))}
           </div>
-        </Container>
+
+          {/* Structured data for SEO */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: questions.map((item, index) => ({
+                  "@type": "Question",
+                  name: item.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                  },
+                })),
+              }),
+            }}
+          />
+        </div>
       </section>
 
       {/* Final CTA Section with Background Image */}

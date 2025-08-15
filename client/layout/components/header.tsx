@@ -230,7 +230,6 @@ export const Header = ({ sticky, isTransparent = false }: HeaderProps) => {
   };
 
   const currentLanguage = LANGUAGES.find((lang) => lang.code === locale);
-  console.log(currentLanguage);
 
   return (
     <header

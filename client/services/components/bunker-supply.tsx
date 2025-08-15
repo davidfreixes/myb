@@ -1,5 +1,5 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
-import { Accordion, Button } from "@mantine/core";
+import { Button } from "@mantine/core";
 import {
   Anchor,
   BarChart2,
@@ -267,7 +267,7 @@ export default function BunkerSupplyPage() {
                 <div className="relative mb-6">
                   {item.image ? (
                     <Image
-                      src={item.image.src}
+                      src={item.image.src || "/placeholder.svg"}
                       alt={item.image.alt}
                       width={item.image.width}
                       height={item.image.height}
@@ -288,7 +288,7 @@ export default function BunkerSupplyPage() {
                           className={`relative w-[${img.width}px] h-[${img.height}px]`}
                         >
                           <Image
-                            src={img.src}
+                            src={img.src || "/placeholder.svg"}
                             alt={img.alt}
                             width={img.width}
                             height={img.height}
@@ -433,63 +433,62 @@ export default function BunkerSupplyPage() {
           <p className="text-gray-600 text-lg">{t("faq.description")}</p>
         </div>
 
-        {/* Versión optimizada para SEO con todas las respuestas visibles */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto space-y-4">
           {faqs.map((item, index) => (
-            <div
+            <details
               key={item.id}
-              className="mb-6 border border-b-[#FFB800] rounded-lg bg-white overflow-hidden p-4"
+              className="group border border-gray-200 rounded-lg bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+              {...(index === 0 ? { open: true } : {})}
             >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-[#FFB800] font-mono text-lg">
-                  {String(index + 1).padStart(2, "0")}.
-                </span>
-                <h3 className="font-semibold text-lg">{item.question}</h3>
+              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#FFB800] font-mono text-lg font-semibold min-w-[2.5rem]">
+                    {String(index + 1).padStart(2, "0")}.
+                  </span>
+                  <h3 className="font-semibold text-lg text-gray-900 pr-4">
+                    {item.question}
+                  </h3>
+                </div>
+                <svg
+                  className="w-5 h-5 text-[#FFB800] transition-transform duration-200 group-open:rotate-180 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6">
+                <div className="pl-11">
+                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                </div>
               </div>
-              <div className="pl-8">
-                <p className="text-gray-600">{item.answer}</p>
-              </div>
-            </div>
+            </details>
           ))}
         </div>
 
-        {/* Versión interactiva con JS usando Accordion de Mantine (oculta por defecto) */}
-        <div className="hidden js-only">
-          <Accordion
-            className="max-w-5xl mx-auto"
-            styles={{
-              item: {
-                borderRadius: "8px",
-                marginBottom: "12px",
-                border: "1px solid #e5e7eb",
-                backgroundColor: "white",
-                borderBottom: "1px solid #FFB800",
-              },
-              control: {
-                padding: "10px",
-              },
-              content: {
-                padding: "0 20px 20px",
-              },
-            }}
-          >
-            {faqs.map((item, index) => (
-              <Accordion.Item key={item.id} value={item.id}>
-                <Accordion.Control>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[#FFB800] font-mono text-lg">
-                      {String(index + 1).padStart(2, "0")}.
-                    </span>
-                    <h2 className="font-semibold">{item.question}</h2>
-                  </div>
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <p className="text-gray-600">{item.answer}</p>
-                </Accordion.Panel>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* CTA Section */}

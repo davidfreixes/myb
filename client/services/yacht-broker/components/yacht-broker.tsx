@@ -1,6 +1,6 @@
 import { NAVIGATION_LINKS } from "@/utils/navigation";
 import { sampleYachts } from "@/utils/yachts";
-import { Accordion, Button } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { Anchor, ArrowDown, Ship, Users } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -183,7 +183,7 @@ export default function YachtBroker() {
               </Button>
               {/* <Button
                 unstyled
-                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-white hover:border-primary hover:border border-primary border text-black text-sm sm:text-base py-2 px-3 sm:px-4 rounded transition duration-300"
+                className="w-full sm:w-auto bg-primary hover:bg-transparent hover:text-black hover:border-primary hover:border border-primary border text-black text-sm sm:text-base py-2 px-3 sm:px-4 rounded transition duration-300"
               >
                 Customized Boat
               </Button> */}
@@ -329,62 +329,63 @@ export default function YachtBroker() {
         </div>
 
         {/* FAQs visibles sin JavaScript */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto space-y-4">
           {faqs.map((item, index) => (
-            <div
+            <details
               key={item.id}
-              className="mb-4 border border-b-[#FFB800] rounded-lg bg-white overflow-hidden"
+              className="group border border-gray-200 rounded-lg bg-white overflow-hidden border-b-2 border-b-[#FFB800] hover:shadow-md transition-shadow duration-200"
+              {...(index === 0 ? { open: true } : {})}
             >
-              <div className="p-4 flex items-center gap-2">
-                <span className="text-[#FFB800] font-mono text-lg">
-                  {String(index + 1).padStart(2, "0")}.
-                </span>
-                <h3 className="font-semibold">{item.question}</h3>
+              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#FFB800] font-mono text-lg font-semibold">
+                    {String(index + 1).padStart(2, "0")}.
+                  </span>
+                  <h3 className="font-semibold text-gray-900 text-left">
+                    {item.question}
+                  </h3>
+                </div>
+                <svg
+                  className="w-5 h-5 text-[#FFB800] transition-transform duration-200 group-open:rotate-180 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6">
+                <div className="pl-8">
+                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                </div>
               </div>
-              <div className="px-4 pb-4">
-                <p className="text-gray-600">{item.answer}</p>
-              </div>
-            </div>
+            </details>
           ))}
         </div>
 
-        {/* Versión interactiva con JavaScript */}
-        <div className="hidden">
-          <Accordion
-            className="max-w-5xl mx-auto"
-            styles={{
-              item: {
-                borderRadius: "8px",
-                marginBottom: "12px",
-                border: "1px solid #e5e7eb",
-                backgroundColor: "white",
-                borderBottom: "1px solid #FFB800",
-              },
-              control: {
-                padding: "10px",
-              },
-              content: {
-                padding: "0 20px 20px",
-              },
-            }}
-          >
-            {faqs.map((item, index) => (
-              <Accordion.Item key={item.id} value={item.id}>
-                <Accordion.Control>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[#FFB800] font-mono text-lg">
-                      {String(index + 1).padStart(2, "0")}.
-                    </span>
-                    <h2 className="font-semibold">{item.question}</h2>
-                  </div>
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <p className="text-gray-600">{item.answer}</p>
-                </Accordion.Panel>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </div>
+        {/* SEO-friendly structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
       </div>
       {/* CTA Section - Improved responsive design */}
       <div className="inset-0 bg-gradient-to-l from-[#fff6d399] via-[#ffe47acc] to-[#f8ce24c2] p-4 sm:p-6 md:p-8 rounded-lg text-center py-6 sm:py-8 md:py-12">
